@@ -109,7 +109,7 @@
     standard C++. Reducing boost dependencies helps us create more lightweight
     boost clang modules for upcoming c++20. This also reduces the amount of
     headers that we need to work on to be able to use c++20 clang modules.
-  past_proposal: <a href=" " target="_blank">URL</a>
+  past_proposal: /assets/docs/Purva_Chaudhari_presentation.pdf
   past_mentors: Vassil Vassilev, David Lange
 
 - name: "This could be you!"
