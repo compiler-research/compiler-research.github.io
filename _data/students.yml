@@ -99,7 +99,6 @@
     is used by the interactive C++ interpreter, Cling, initially developed to enable interactive high-energy physics 
     analysis in a C++ environment. Clang-repl is a new-tool incroporated in LLVM ecosystem by residesigning parts 
     of CLing in Clang mainline. The project aims at enhancing the error recovery when users type C++ at the prompt of clang-repl.
-  report: <a href=" " target="_blank">URL</a>
   mentors: Vassil Vassilev, David Lange
   past_projects: 1
   past_info: 'Reduce boost dependencies in CMSSW'
@@ -109,7 +108,7 @@
     standard C++. Reducing boost dependencies helps us create more lightweight
     boost clang modules for upcoming c++20. This also reduces the amount of
     headers that we need to work on to be able to use c++20 clang modules.
-  report: /assets/docs/Purva_Chaudhari_presentation.pdf
+  report: <a href="https://indico.cern.ch/event/1066812/contributions/4495290/attachments/2302817/3917355/Iris%20HeP.pdf" target="_blank">URL</a>
   past_mentors: Vassil Vassilev, David Lange
 
 - name: "This could be you!"
