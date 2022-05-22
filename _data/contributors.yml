@@ -19,7 +19,7 @@
   education: MPhil Advanced Computer Science, University of Cambridge (2018)
   active: 1
 
-- name: Rohit Singh Rathaur
+- name: <a href="https://www.linkedin.com/in/rohit-singh-rathaur/" target="_blank" >Rohit Singh Rathaur<a>
   photo: Rohit_Singh.png
   info: "Google Season of Docs 2022"
   email: rohitrathore.imh55@gmail.com
@@ -42,6 +42,7 @@
         most parts of Cling into LLVM. Since LLVM version 13 we have a version of Cling called
         Clang-Repl. As we advance the implementation and generalize its usage here we aim for
         improving the overall documentation experience in the area of interactive C++.
+      proposal: /assets/docs/Rohit_Singh_Rathaur_Proposal_2022.pdf
       mentors: Vassil Vassilev, David Lange
 
 - name: "Tapasweni Pathak"
