@@ -19,6 +19,43 @@
   education: MPhil Advanced Computer Science, University of Cambridge (2018)
   active: 1
 
+- name: Sunho Kim
+  photo: Sunho_Kim.jpeg
+  info: "Google Summer of Code 2022"
+  email: ksunhokim123@gmail.com
+  education: "Computer Science, De Anza College, Cupertino, California"
+  active: 1
+  projects:
+    - title: "Write JITLink support for a new format/architecture (ELF/AARCH64)"
+      status: Ongoing
+      description: |
+        JITLink is LLVM’s new JIT linker API -- the low-level API that transforms compiler output 
+        (relocatable object files) into ready-to-execute bytes in memory. With its new architecture, 
+        it is able to support a variety of new features, which includes static initializer, thread 
+        local storage, and small code model, that were not possible in RuntimeDyld, the old JIT API. 
+        JITLink’s generic linker algorithm needs to be specialized to support the target object format 
+        (COFF, ELF, MachO), and architecture (arm, arm64, i386, x86-64). This project aims to implement 
+        the JITLink specialization for ELF/aarch64 which is required to use JITLink in arm64 linux.
+      mentors: Vassil Vassilev, Stefan Gränitz, Lang Hames
+      proposal: /assets/docs/Sunho_Kim_Proposal_2022.pdf
+
+- name: Jun Zhang
+  photo: Jun_Zhang.png
+  info: "Google Summer of Code 2022"
+  email: jun@junz.org
+  education: "Software Engineering, Anhui Normal University, WuHu, China"
+  active: 1
+  projects:
+    - title: "Optimize ROOT use of modules for large codebases"
+      status: Ongoing
+      description: |
+        ROOT is a data analysis framework designed to handle large amounts of
+        data with high performance. This proposal aims at optimizing the
+        performance of ROOT by reducing unnecessary symbol lookup across the
+        very large set of C++ modules.
+      mentors: Vassil Vassilev, David Lange, Alexander Penev
+      proposal: /assets/docs/Jun_Zhang_Proposal_2022.pdf
+
 - name: <a href="https://www.linkedin.com/in/rohit-singh-rathaur/" target="_blank" >Rohit Singh Rathaur<a>
   photo: Rohit_Singh.png
   info: "Google Season of Docs 2022"
@@ -27,6 +64,7 @@
   active: 1
   projects:
     - title: "Improving Interactive Tool Analysis Documentation for the HSF"
+      status: Ongoing
       description: |
         HEP researchers have developed several unique software technologies in the area of
         data analysis. Over the last decade we developed an interactive, interpretative C++
