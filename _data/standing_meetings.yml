@@ -1,3 +1,15 @@
+- name: "Source Transformation AD Implementers' Bi-weekly Meeting"
+  date: Tuesdays (every second and fourth week of the month)
+  time_cest: "15:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/95343150679?pwd=OHFkR3FmUVNaV2V3MzVZeFJhbkJyZz09)"
+  agenda:
+    - title: Round Table
+      speaker: |
+        M Foco (NVIDIA), W Moses (MIT), A Penev (University of Plovdiv),
+        M Vassilev (University of Plovdiv), I Ifrim (Princeton),
+        Garima Singh (Manipal Institute of Tech)
+      link: "[Meeting Notes](https://docs.google.com/document/d/1qVKlF2FZCLd8wDIIQ4zz9ByF6PkEJYTORe9gcUW6mjE)"
+
 - name: "CaaS Weekly Meeting"
   date: Wednesdays
   time_cest: "14:00"
@@ -5,6 +17,18 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "cppyy Progress Update"
+      date: 2022-05-11 14:00:00 +0200
+      speaker: "Baidyanath Kundu"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_11_05_2022_Baidyanath-Progress_Report_may_2022.pdf)"
+    - title: "Utilizing Clad Derivatives in RooFit - Progress Update"
+      date: 2022-04-27 14:00:00 +0200
+      speaker: "Garima Singh"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_27_04_2022_Garima-Progress_Report_april_2022.pdf)"
+    - title: "The CaaS Project. Progress & Plans Q1, Q2"
+      date: 2022-04-20 14:00:00 +0200
+      speaker: "Vassil Vassilev"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_20_04_2022_Vassil-Q1_Project_Progress_and_Plans.pdf)"
     - title: "Differentiation of Eigen and Softsusy libraries by Clad - Project Progress"
       date: 2022-04-06 14:00:00 +0200
       speaker: "Parth Arora"
@@ -34,14 +58,3 @@
       speaker: "Parth Arora"
       link: "[Slides](/assets/presentations/CaaS_Weekly_05_01_2022_Parth-Add_Support_For_Differentiating_wrt_User_Defined_Types.pdf)"
     
-- name: "CLAD Bi-weekly Meeting"
-  date: Tuesdays (every second and fourth week of the month)
-  time_cest: "15:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/95343150679?pwd=OHFkR3FmUVNaV2V3MzVZeFJhbkJyZz09)"
-  agenda:
-    - title: Round Table
-      speaker: |
-        M Foco (NVIDIA), W Moses (MIT), A Penev (University of Plovdiv),
-        M Vassilev (University of Plovdiv), I Ifrim (Princeton),
-        Garima Singh (Manipal Institute of Tech)
-      link: "[Meeting Notes](https://docs.google.com/document/d/1qVKlF2FZCLd8wDIIQ4zz9ByF6PkEJYTORe9gcUW6mjE)"
