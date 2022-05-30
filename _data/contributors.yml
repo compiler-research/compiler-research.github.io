@@ -279,3 +279,16 @@
       report: |
         [Poster](/assets/presentations/LLVM2020_Clad.pdf){:target="_blank"}
       mentors: Vassil Vassilev, Alexander Penev
+
+- name: Sara Bellei
+  info: "Google Season of Docs 2022"
+  email: sara.bellei.87@gmail.com
+  education: "PhD in Physics, Politecnico University of Milan, Italy"
+  projects:
+    - title: "Improving the Clang-Repl documentation"
+      description: |
+         CLANG-REPL is the evolution of CLING, an interactive C++ interpreter based on LLVM and CLANG which was first developed as part of the high-energy physics (HEP) data analysis project – ROOT, and subsequently grew as a standalone tool outside the High Energy Physics Community. The main goal behind the CLANG-REPL project is to move most parts of CLING into LLVM. By doing so, the benefits of using the LLVM community standards for code reviews, release cycles and integration will ensure the software’s sustainability, and will enable it to reach a wider audience. My goal in the CLANG-REPL project is to establish a protocol for the CLANG-REPL’s documentation that will be easy to read for a wide audience, and easy to update as the codes continue to evolve.
+
+      report: |
+        [Poster](/assets/presentations/LLVM2020_Clad.pdf){:target="_blank"}
+      mentors: Vassil Vassilev, David Lange
