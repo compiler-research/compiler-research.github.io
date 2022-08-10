@@ -19,6 +19,10 @@
       date: 2022-08-31 14:00:00 +0200
       speaker: "Matheus Izvekov"
       link: "[Slides](/assets/presentations/M_Izvekov-GSoC_Roadmap_2.html)"
+    - title: "Improving the Cling Packaging Tool - Final Presentation"
+      date: 2022-08-10 14:00:00 +0200
+      speaker: "Surya Somayyajula"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_10_08_2022_Surya_Somayyajula_Improving_the_Cling_Packaging_Tool.pdf)"
     - title: "Add Initial Integration of Clad with Enzyme - Final Presentation"
       date: 2022-08-31 14:00:00 +0200
       speaker: "Manish Kausik H"
