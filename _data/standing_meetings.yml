@@ -19,6 +19,10 @@
       date: 2022-08-31 14:00:00 +0200
       speaker: "Matheus Izvekov"
       link: "[Slides](/assets/presentations/M_Izvekov-GSoC_Roadmap_2.html)"
+    - title: "Add Initial Integration of Clad with Enzyme - Final Presentation"
+      date: 2022-08-31 14:00:00 +0200
+      speaker: "Manish Kausik H"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_31_08_22_Manish-Integration_of_Enzyme_with_Clad_Final_Presentation.pdf)"
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
     - title: "Current working status of optmizing ROOT modules"
