@@ -25,6 +25,10 @@
       date: 2022-07-13 14:00:00 +0200
       speaker: "Vassil Vassilev"
       link: "[Slides](/assets/presentations/CaaS_Weekly_13_07_22_Vassil-Q2_Project_Progress_and_Plans.pdf)"
+    - title: "Improving the Clang-REPL documentation"
+      date: 2022-06-29 14:00:00 +0200
+      speaker: "Sara Bellei"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_29_06_2022_Sara-DocsPlan.pdf)"
     - title: "Clang-REPL Interactive Analysis - Roadmap"
       date: 2022-06-29 14:00:00 +0200
       speaker: "Rohit Singh Rathaur"
