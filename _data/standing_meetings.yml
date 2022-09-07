@@ -21,6 +21,10 @@
       link: "[Slides](/assets/presentations/M_Izvekov-GSoC_Roadmap_2.html)"
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Current working status of optmizing ROOT modules"
+      date: 2022-09-07 14:00:00 +0200
+      speaker: "Jun Zhang"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_07_09_2022_Jun_Zhang_Current_Working_Status_of_Optimize_Modules_Usage_For_ROOT.pdf)"
     - title: "Adding AD Support to RooFit"
       date: 2022-07-20 14:00:00 +0200
       speaker: "Garima Singh"
