@@ -386,6 +386,8 @@
         implementation works.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
+  status: ongoing
+  responsible: Jun Zhang
 
 - name: "Enhance the incremental compilation error recovery in clang and clang-repl"
   description: |
@@ -442,6 +444,8 @@
     may require several steps: start building and using the optimization pass of
     Enzyme as part of the Clad toolchain; use Enzyme for cross-validation
     derivative results; etc.
+  status: completed
+  responsible: Manish Kausik H
 
 - name: "Add numerical differentiation support in clad"
   description: |
@@ -657,6 +661,9 @@
       * Write a JITLinkMemoryManager that uses these generic APIs to allocate
         shared working-and-target memory.
       * Make an extensive performance study of the approach.
+  status: ongoing
+  responsible: Anubhab Ghosh
+
 
 - name: 'Modernize the LLVM "Building A JIT" tutorial series'
   description: |
@@ -728,6 +735,8 @@
     and the same template instantiation, but `T<unsigned long>::type` single-step
     desugars to 'unsigned long' and `T<size_t>::type` single-step desugars to
     'size_t'.
+  status: ongoing
+  responsible: Matheus Izvekov
 
 - name: "Infrastructure: Improve Cling's packaging system cpt"
   description: |
@@ -743,3 +752,6 @@
       * Minimize use of `subprocess`
       * Making cpt flake8 compliant (flexible error/violation codes)
       * Revamp argument parser (Examine possibility of dependent arguments)
+  status: completed
+  responsible: Surya Somayyajula
+
