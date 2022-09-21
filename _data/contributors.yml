@@ -69,10 +69,9 @@
   info: "Google Summer of Code 2022"
   email: ksunhokim123@gmail.com
   education: "Computer Science, De Anza College, Cupertino, California"
-  active: 1
   projects:
     - title: "Write JITLink support for a new format/architecture (ELF/AARCH64)"
-      status: Ongoing
+      status: Completed
       description: |
         JITLink is LLVM’s new JIT linker API -- the low-level API that transforms compiler output 
         (relocatable object files) into ready-to-execute bytes in memory. With its new architecture, 
@@ -83,6 +82,8 @@
         the JITLink specialization for ELF/aarch64 which is required to use JITLink in arm64 linux.
       mentors: Vassil Vassilev, Stefan Gränitz, Lang Hames
       proposal: /assets/docs/Sunho_Kim_Proposal_2022.pdf
+      report: |
+        [Final Report](/assets/docs/Sunho_Kim_GSoC22_Report.pdf)
 
 - name: Jun Zhang
   photo: Jun_Zhang.png
