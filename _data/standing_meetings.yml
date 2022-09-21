@@ -21,6 +21,10 @@
       date: 2022-09-21 14:00:00 +0200
       speaker: "Vassil Vassilev"
       link: "[Slides](/assets/presentations/CaaS_Weekly_21_09_2022_Vassil-Q3_Project_Progress_and_Plans.pdf)"
+    - title: "Shared Memory Based JITLink Memory Manager"
+      date: 2022-09-07 14:00:00 +0200
+      speaker: "Anubhab Ghosh"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_07_09_2022_Anubhab-Shared_Memory_Based_JITLink_Memory_Manager.pdf)"
     - title: "Current working status of optmizing ROOT modules"
       date: 2022-09-07 14:00:00 +0200
       speaker: "Jun Zhang"
