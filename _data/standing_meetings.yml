@@ -57,6 +57,10 @@
       date: 2022-06-15 14:00:00 +0200
       speaker: "Ioana Ifrim"
       link: "[Slides](/assets/presentations/CaaS_Weekly_15_06_2022_Ioana-Python_and_C++_clang-repl_integration.pdf)"
+    - title: "Shared Memory Based JITLink Memory Manager - Roadmap"
+      date: 2022-06-15 14:30:00 +0200
+      speaker: "Anubhab Ghosh"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_15_06_2022_Anubhab-Shared_Based_JITLink_Memory_Manager_Roadmap.pdf)"
     - title: "Write JITLink support for a new format/architecture - Roadmap"
       date: 2022-06-08 14:00:00 +0200
       speaker: "Sunho Kim"
