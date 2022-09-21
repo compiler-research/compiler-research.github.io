@@ -33,6 +33,10 @@
       date: 2022-08-10 14:00:00 +0200
       speaker: "Surya Somayyajula"
       link: "[Slides](/assets/presentations/CaaS_Weekly_10_08_2022_Surya_Somayyajula_Improving_the_Cling_Packaging_Tool.pdf)"
+    - title: "Write JITLink support for new format/architecture Current Progress"
+      date: 2022-08-10 14:30:00 +0200
+      speaker: "Sunho Kim"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_10_08_2022_Sunho-Write_JITLink_Support_Current_Progress.pdf)"
     - title: "Adding AD Support to RooFit"
       date: 2022-07-20 14:00:00 +0200
       speaker: "Garima Singh"
