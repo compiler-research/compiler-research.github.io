@@ -89,10 +89,9 @@
   info: "Google Summer of Code 2022"
   email: jun@junz.org
   education: "Software Engineering, Anhui Normal University, WuHu, China"
-  active: 1
   projects:
     - title: "Optimize ROOT use of modules for large codebases"
-      status: Ongoing
+      status: Completed
       description: |
         ROOT is a data analysis framework designed to handle large amounts of
         data with high performance. This proposal aims at optimizing the
@@ -100,6 +99,10 @@
         very large set of C++ modules.
       mentors: Vassil Vassilev, David Lange, Alexander Penev
       proposal: /assets/docs/Jun_Zhang_Proposal_2022.pdf
+      report: |
+        [Final Report](/assets/docs/Jun_Zhang_GSoC22_Report.pdf)
+        |
+        [Blog post](https://hepsoftwarefoundation.org/gsoc/blogs/2022/blog_ROOT_JunZhang.html)
 
 - name: Anubhab Ghosh
   photo: Anubhab_Ghosh.jpg
@@ -156,7 +159,7 @@
   education: "B.Tech and M.Tech in Computer Science and Engineering(Dual Degree), Indian Institute of Technology Bhubaneswar"
   projects:
     - title: "Add Initial Integration of Clad with Enzyme"
-      status: Complete
+      status: Completed
       description: |
         Clad is an open source plugin to the Clang compiler that detects from the parsed Abstract
         syntax tree, calls to differentiate a defined function, generates code that differentiates the

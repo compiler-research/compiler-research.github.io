@@ -386,7 +386,7 @@
         implementation works.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
-  status: ongoing
+  status: complete
   responsible: Jun Zhang
 
 - name: "Enhance the incremental compilation error recovery in clang and clang-repl"
