@@ -154,10 +154,9 @@
   info: "Google Summer of Code 2022"
   email: hmanishkausik@gmail.com
   education: "B.Tech and M.Tech in Computer Science and Engineering(Dual Degree), Indian Institute of Technology Bhubaneswar"
-  active: 1
   projects:
     - title: "Add Initial Integration of Clad with Enzyme"
-      status: Ongoing
+      status: Complete
       description: |
         Clad is an open source plugin to the Clang compiler that detects from the parsed Abstract
         syntax tree, calls to differentiate a defined function, generates code that differentiates the
@@ -173,6 +172,11 @@
 
       mentors: Vassil Vassilev, David Lange
       proposal: /assets/docs/Manish_Kausik_H_Proposal_2022.pdf
+      report: |
+        [Final Report](/assets/docs/Manish_Kausik_H_GSoC22_Report.pdf)
+        |
+        [Blog post](https://hepsoftwarefoundation.org/gsoc/blogs/2022/blog_CompilerResearch-ManishKausik.html)
+
 
 - name: "Tapasweni Pathak"
   info: "Principal Product Manager at Microsoft Azure Core Engineering"
