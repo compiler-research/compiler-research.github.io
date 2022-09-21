@@ -186,10 +186,9 @@
   photo: tapaswenipathak.png
   email: tapaswenipathak@gmail.com
   education: B.Tech in Computer Science, Indira Gandhi Delhi Technical University for Women, 2014
-  active: 1
   projects: 
     - title: "Improving performance of C++ modules in Clang"
-      status: Ongoing
+      status: Failed
       description: |
         The C++ modules technology aims to provide a scalable compilation model for the
         C++ language. The C++ Modules technology in Clang provides an io-efficient,
