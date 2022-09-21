@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "The CaaS Project. Progress & Plans Q3, Q4"
+      date: 2022-09-21 14:00:00 +0200
+      speaker: "Vassil Vassilev"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_21_09_2022_Vassil-Q3_Project_Progress_and_Plans.pdf)"
     - title: "Current working status of optmizing ROOT modules"
       date: 2022-09-07 14:00:00 +0200
       speaker: "Jun Zhang"
