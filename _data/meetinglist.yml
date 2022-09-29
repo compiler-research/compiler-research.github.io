@@ -1,4 +1,38 @@
 - name: "CaaS Monthly Meeting"
+  date: 2022-10-06 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
+  label: caas_06Oct2022
+  agenda:
+    - title: "jank: A Clojure dialect on LLVM with gradual typing, a native runtime, and C++ interop"
+      speaker: "Jeaye Wilkerson, Technical Director at Electronic Arts (EA)"
+      description: |
+        Following years of Lisp development, Clojure has entered the scene as a
+        practical Lisp for the JVM. It takes a functional-first approach to
+        designs and has extensive support for purely transforming persistent,
+        immutable data structures. The interactive programming experience
+        Clojure brings to the JVM is unmatched, built on both a JIT and
+        technology such as nREPL. Clojure developers use this interactive
+        programming to build their software from empty source files to working
+        servers, GUI applications, and more without restarting the process.
+
+        In the spirit of Clojure, I would like to present jank, a research
+        programming language which is a Clojure dialect built on native C++,
+        rather than the JVM, using Cling as its JIT compiler. jank aims to be
+        strongly compatible with Clojure while offering the same interactive
+        programming experience. Like Clojure, jank aims to provide seamless
+        interop with its host (meaning C++), allowing for easy consumption of
+        third-party libraries. On top of a native runtime, jank also aims to
+        provide gradual, structural typing, which will not be covered in this
+        presentation.
+    - title: Update
+      speaker: Vassil
+    - title: Round Table
+    - title: Next meeting
+      speaker: Vassil
+      link: 3 Nov 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2022-09-01 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97839750473?pwd=V3dVRTl6ekN5UEdURTRvTHZPQ25Wdz09)"
