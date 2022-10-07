@@ -1,3 +1,7 @@
+- date: 7 October 2022
+  headline: "Clad 1.0 released"
+  link: "https://github.com/vgvassilev/clad/releases/tag/v1.0"
+
 - date: 19 May 2022
   headline: "Recording from March discussion on ez-clang: experimental C++ REPL for bare metal"
   link: "https://youtu.be/gKNxTeDBczk"
