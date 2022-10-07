@@ -25,6 +25,7 @@
         third-party libraries. On top of a native runtime, jank also aims to
         provide gradual, structural typing, which will not be covered in this
         presentation.
+      slides: "/assets/presentations/J_Wilkerson-Caas_Jank.pdf"
     - title: Update
       speaker: Vassil
       slides: "/assets/presentations/CaaS_06_10_2022.pdf"
