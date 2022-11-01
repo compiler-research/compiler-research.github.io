@@ -1,4 +1,29 @@
 - name: "CaaS Monthly Meeting"
+  date: 2022-11-03 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
+  label: caas_03Nov2022
+  agenda:
+    - title: "JITLink: Native Windows JITing in LLVM"
+      speaker: "Sunho Kim, De Anza College, CA"
+      description: |
+        JITLink is a new JIT linker in LLVM developed to eliminate limitations
+        in LLVM's JIT implementation. With JITLink, it is not required to use
+        special compilation flags or workarounds to load code into the JIT,
+        since most of the object file features including small code model and
+        thread local storage are fully implemented. This tutorial will explain
+        how to use JITLink by working on a windows JIT application that
+        just-in-time links to third-party static libraries. The tutorial will
+        also dig into internals of JITLink by working on a JITLink plugin
+        managing SEH exception tables.
+    - title: Update
+      speaker: Vassil
+    - title: Round Table
+    - title: Next meeting
+      speaker: Vassil
+      link: 8 Dec 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2022-10-06 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
