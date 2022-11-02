@@ -1,31 +1,31 @@
 - title: "Using C++ From Numba, Fast and Automatic"
   description: |
-    The scientific community using Python has developed several ways to 
-    accelerate Python codes. One popular technology is Numba, a Just-in-time 
-    (JIT) compiler that translates a subset of Python and NumPy code into fast 
-    machine code using LLVM. We have extended Numba's integration with LLVM's 
-    intermediate representation (IR) to enable the use of C++ kernels and 
-    connect them to Numba accelerated codes. Such a multilanguage setup is also 
-    commonly used to achieve performance or to interface with external 
-    bare-metal libraries. In addition, Numba users will be able to write the 
+    The scientific community using Python has developed several ways to
+    accelerate Python codes. One popular technology is Numba, a Just-in-time
+    (JIT) compiler that translates a subset of Python and NumPy code into fast
+    machine code using LLVM. We have extended Numba's integration with LLVM's
+    intermediate representation (IR) to enable the use of C++ kernels and
+    connect them to Numba accelerated codes. Such a multilanguage setup is also
+    commonly used to achieve performance or to interface with external
+    bare-metal libraries. In addition, Numba users will be able to write the
     performance-critical codes in C++ and use them easily at native speed.
 
-    This work relies on high-performance, dynamic, bindings between Python and 
-    C++. Cppyy, which is the basis of PyROOT's interfaces to C++ libraries. 
-    Cppyy uses Cling, an incremental C++ interpreter, to generate on-demand 
-    bindings of required entities and connect them with the Python interpreter. 
-    This environment is uniquely positioned to enable the use of C++ from Numba 
+    This work relies on high-performance, dynamic, bindings between Python and
+    C++. Cppyy, which is the basis of PyROOT's interfaces to C++ libraries.
+    Cppyy uses Cling, an incremental C++ interpreter, to generate on-demand
+    bindings of required entities and connect them with the Python interpreter.
+    This environment is uniquely positioned to enable the use of C++ from Numba
     in a fast and automatic way.
 
-    In this talk, we demonstrate using C++ from Numba through Cppyy. We show 
-    our approach which extends Cppyy to match the object typing and lowering 
-    models of Numba and the necessary additions to the reflection layers to 
-    generate IR from Python objects. The uniform LLVM runtime allows 
-    optimizations such as inlining which can in the future remove the C++ 
-    function call overhead. We discuss other optimizations such as lazily 
-    instantiated C++ templates based on input data. The talk also briefly 
-    outlines the non-negligible, Numba-introduced JIT overhead and possible 
-    ways to optimize it. Since this is built as a Cppyy extension Numba 
+    In this talk, we demonstrate using C++ from Numba through Cppyy. We show
+    our approach which extends Cppyy to match the object typing and lowering
+    models of Numba and the necessary additions to the reflection layers to
+    generate IR from Python objects. The uniform LLVM runtime allows
+    optimizations such as inlining which can in the future remove the C++
+    function call overhead. We discuss other optimizations such as lazily
+    instantiated C++ templates based on input data. The talk also briefly
+    outlines the non-negligible, Numba-introduced JIT overhead and possible
+    ways to optimize it. Since this is built as a Cppyy extension Numba
     supports all bindings automatically without any user intervention.
 
   location: "[PyHEP 2022](https://indico.cern.ch/event/1150631/)"
@@ -35,6 +35,61 @@
   artifacts: |
     [Video](https://www.youtube.com/watch?v=RceFPtB4m1I),&nbsp;
     [Link to notebook](/assets/presentations/B_Kundu-PyHEP22_Cppyy_Numba.pdf)
+  highlight: 1
+
+- title: "Automatic Differentiation of Binned Likelihoods With RooFit and Clad"
+  description: |
+    RooFit is a toolkit for statistical modeling and fitting used by most
+    experiments in particle physics. Just as data sets from next-generation
+    experiments grow, processing requirements for physics analysis become more
+    computationally demanding, necessitating performance optimizations for
+    RooFit. One possibility to speed-up minimization and add stability is the
+    use of automatic differentiation (AD). Unlike for numerical differentiation,
+    the computation cost scales linearly with the number of parameters, making AD
+    particularly appealing for statistical models with many parameters. In this
+    talk, we report on one possible way to implement AD in RooFit. Our approach
+    is to add a facility to generate C++ code for a full RooFit model automatically.
+    Unlike the original RooFit model, this generated code is free of virtual
+    function calls and other RooFit-specific overhead. In particular, this code
+    is then used to produce the gradient automatically with Clad. Clad is a source
+    transformation AD tool implemented as a plugin to the clang compiler, which
+    automatically generates the derivative code for input C++ functions. We show
+    results demonstrating the improvements observed when applying this code
+    generation strategy to HistFactory and other commonly used RooFit models.
+
+    HistFactory is the subcomponent of RooFit that implements binned likelihood
+    models with probability densities based on histogram templates. These models
+    frequently have a very large number of free parameters, and are thus an
+    interesting first target for AD support in RooFit.
+
+  location: "[ACAT 2022](https://indico.cern.ch/event/1106990/)"
+  date: 2022-10-26
+  speaker: G Singh
+  id: "GSACAT2022"
+  artifacts: |
+    [Link to slides](/assets/presentations/GS-ACAT2022-AutomaticDifferentiationofBinnedLikelihoodswithRooFitandClad.pdf)
+  highlight: 1
+
+- title: "Automatic Differentiation in ROOT"
+  description: |
+    Automatic Differentiation is a powerful technique to evaluate the derivative of
+    a function specified by a computer program. Thanks to the ROOT interpreter, Cling,
+    this technique is available in ROOT for computing gradients and Hessian matrices of
+    multi-dimensional functions. We will present the current integration of this tool
+    in the ROOT Mathematical libraries for computing gradients of functions that can
+    then be used in numerical algorithms. For example, we demonstrate the correctness
+    and performance improvements in ROOT’s fitting algorithms. We will show also how
+    gradient and Hessian computation via AD is integrated in the main ROOT minimization
+    algorithm Minuit. We will show also the present plans to integrate the Automatic
+    Differentiation in the RooFit modelling package for obtaining gradients of the full
+    model that can be used for fitting and other statistical studies.
+
+  location: "[MODE AD Workshop 2022](https://indico.cern.ch/event/1145124/contributions/)"
+  date: 2022-09-14
+  speaker: G Singh
+  id: "GSModeAD2022"
+  artifacts: |
+    [Link to slides](/assets/presentations/GS-MODEAD2022-AutomaticDifferentiationinROOT.pdf)
   highlight: 1
 
 - title: "CSSI Element: C++ as a service - rapid software development and dynamic interoperability with Python and beyond"
@@ -47,28 +102,28 @@
   artifacts: |
     [Link to slides](/assets/presentations/CSSI_lange_poster_20202_printed.pdf)
   highlight: 0
-    
+
 - title: "Estimating Floating-Point Errors Using Automatic Differentiation"
   description: |
-    Floating-point errors are a testament to the finite nature of computing 
-    and if left uncontrolled they can have catastrophic results. As such, for 
-    high-precision computing applications, quantifying these uncertainties 
-    becomes imperative. There have been significant efforts to mitigate such 
-    errors by either extending the underlying floating-point precision, using 
-    alternate compensation algorithms or estimating them using a variety of 
-    statistical and non-statistical methods. A prominent method of dynamic 
+    Floating-point errors are a testament to the finite nature of computing
+    and if left uncontrolled they can have catastrophic results. As such, for
+    high-precision computing applications, quantifying these uncertainties
+    becomes imperative. There have been significant efforts to mitigate such
+    errors by either extending the underlying floating-point precision, using
+    alternate compensation algorithms or estimating them using a variety of
+    statistical and non-statistical methods. A prominent method of dynamic
     floating-point error estimation is using Automatic Differentiation (AD).
-    However, most state-of-the-art AD-based estimation software requires 
-    manually adapting or annotating the source code by some amount. Moreover, 
-    operator overloading AD based error estimation tools call for multiple 
+    However, most state-of-the-art AD-based estimation software requires
+    manually adapting or annotating the source code by some amount. Moreover,
+    operator overloading AD based error estimation tools call for multiple
     gradient recomputations to report errors over a large variety of inputs
-    and suffer from all the shortcomings of the underlying operator 
-    overloading strategy such as reduced efficiency. In this work, we propose 
-    a customizable way to use AD to synthesize source code for estimating 
-    uncertainties arising from floating-point arithmetic in C/C++ applications. 
-    
-    Our work presents an automatic error annotation framework that can be used 
-    in conjunction with custom user defined error models. We also present our 
+    and suffer from all the shortcomings of the underlying operator
+    overloading strategy such as reduced efficiency. In this work, we propose
+    a customizable way to use AD to synthesize source code for estimating
+    uncertainties arising from floating-point arithmetic in C/C++ applications.
+
+    Our work presents an automatic error annotation framework that can be used
+    in conjunction with custom user defined error models. We also present our
     progress with error estimation on GPU applications.
 
   location: "[SIAM UQ 2022](https://www.siam.org/conferences/cm/conference/uq22)"
@@ -313,10 +368,10 @@
   date: 2021-09-01
   speaker: B Kundu
   artifacts: "[Link to slides](https://indico.cern.ch/event/1066812/contributions/4509414/attachments/2301766/3915408/Utilize%20second%20order%20derivatives%20from%20Clad%20in%20ROOT.pdf)"
-  
+
 - title: "Add support for differentiating functors"
   description:
-  location: "[IRIS-HEP GSoC presentations meeting](https://indico.cern.ch/event/1066812/)" 
+  location: "[IRIS-HEP GSoC presentations meeting](https://indico.cern.ch/event/1066812/)"
   date: 2021-09-01
   speaker: P Arora
   artifacts:
@@ -334,9 +389,9 @@
   location: "Onboarding meetup"
   speaker: G Singh
   date: 2020-12-15
-  description: 
+  description:
   artifacts:
-    - "[pdf](/assets/presentations/ErrorEstimationWithClad_15_12_2020.pdf), " 
+    - "[pdf](/assets/presentations/ErrorEstimationWithClad_15_12_2020.pdf), "
     - "[pptx](/assets/presentations/ErrorEstimationWithClad_15_12_2020.pptx)"
 
 - title: "Adding CUDA® Support to Cling: JIT Compile to GPUs"
@@ -356,7 +411,7 @@
   description: My abstract
   location: "[2020 LLVM workshop](https://llvm.org/devmtg/2020-09/)"
   date: 2020-10-07
-  speaker: V Vassilev 
+  speaker: V Vassilev
   artifacts: "[Link to poster](/assets/presentations/LLVM2020_CaaS.pdf)"
 
 - title: "Modernizing Boost in CMSSW"
@@ -402,14 +457,14 @@
   artifacts: "[Link to slides](/assets/presentations/CladInROOT_15_02_2020.pdf)"
 
 - title: "C++ Modules in ROOT and Beyond"
-  description: 
+  description:
   location: "[2019 CHEP International Conference](chep2019.org)"
   date: 2019-11-07
   speaker: O Shadura
   artifacts: "[Link to slides](https://indico.cern.ch/event/773049/contributions/3473264/attachments/1937517/3215659/C_Modules_in_ROOT_and_Beyond4.pdf)"
 
 - title: "Clad: the automatic differentiation plugin for Clang"
-  description: 
+  description:
   location: "[IRIS-HEP topical meeting](https://indico.cern.ch/event/815976/)"
   date: 2019-05-29
   speaker: A Efremov
