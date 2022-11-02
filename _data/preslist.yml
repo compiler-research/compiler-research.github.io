@@ -1,3 +1,42 @@
+- title: "Using C++ From Numba, Fast and Automatic"
+  description: |
+    The scientific community using Python has developed several ways to 
+    accelerate Python codes. One popular technology is Numba, a Just-in-time 
+    (JIT) compiler that translates a subset of Python and NumPy code into fast 
+    machine code using LLVM. We have extended Numba's integration with LLVM's 
+    intermediate representation (IR) to enable the use of C++ kernels and 
+    connect them to Numba accelerated codes. Such a multilanguage setup is also 
+    commonly used to achieve performance or to interface with external 
+    bare-metal libraries. In addition, Numba users will be able to write the 
+    performance-critical codes in C++ and use them easily at native speed.
+
+    This work relies on high-performance, dynamic, bindings between Python and 
+    C++. Cppyy, which is the basis of PyROOT's interfaces to C++ libraries. 
+    Cppyy uses Cling, an incremental C++ interpreter, to generate on-demand 
+    bindings of required entities and connect them with the Python interpreter. 
+    This environment is uniquely positioned to enable the use of C++ from Numba 
+    in a fast and automatic way.
+
+    In this talk, we demonstrate using C++ from Numba through Cppyy. We show 
+    our approach which extends Cppyy to match the object typing and lowering 
+    models of Numba and the necessary additions to the reflection layers to 
+    generate IR from Python objects. The uniform LLVM runtime allows 
+    optimizations such as inlining which can in the future remove the C++ 
+    function call overhead. We discuss other optimizations such as lazily 
+    instantiated C++ templates based on input data. The talk also briefly 
+    outlines the non-negligible, Numba-introduced JIT overhead and possible 
+    ways to optimize it. Since this is built as a Cppyy extension Numba 
+    supports all bindings automatically without any user intervention.
+
+  location: "[PyHEP 2022](https://indico.cern.ch/event/1150631/)"
+  date: 2022-09-16
+  speaker: B Kundu
+  id: "CppyyNumbaPyHEP2022"
+  artifacts: |
+    [Video](https://www.youtube.com/watch?v=RceFPtB4m1I),&nbsp;
+    [Link to notebook](/assets/presentations/B_Kundu-PyHEP22_Cppyy_Numba.pdf)
+  highlight: 1
+
 - title: "CSSI Element: C++ as a service - rapid software development and dynamic interoperability with Python and beyond"
   description: |
     Poster presented at the 2022 PI meeting for the CSSI program of the National Science Foundation.
