@@ -417,6 +417,15 @@
     [Link to slides](/assets/presentations/W_Moses_V_Vassilev-CppCon21_DifferentiableProgrammingInCpp.pdf)
   highlight: 1
 
+- title: "A numba extension for cppyy / PyROOT"
+  description:
+  location: "[Parallelism, Performance and Programming model meeting](https://indico.cern.ch/e/PPP140)"
+  date: 2022-09-01
+  speaker: B Kundu
+  artifacts:
+    - "[Slides](https://indico.cern.ch/event/1196174/contributions/5028203/attachments/2501253/4296778/PPP.pdf), "
+    - "[Notebook](https://indico.cern.ch/event/1196174/contributions/5028203/attachments/2501253/4296735/PPP.ipynb)"
+
 - title: "Add Numerical Differentiation Support To Clad"
   description:
   location: "[IRIS-HEP GSoC presentations meeting](https://indico.cern.ch/event/1066812/)"
