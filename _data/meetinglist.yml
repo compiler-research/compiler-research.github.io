@@ -368,6 +368,7 @@
         will explore the design and featureset of Cxx.jl, and what limitations
         in Clang and Julia prevented its full adoption in the Julia world.
       slides: "/assets/presentations/K_Fischer_Cxx_jl.pdf"
+      video: "https://youtu.be/bJiwjKIWgjM"
     - title: "Calling ROOT from Julia in practice"
       speaker: "Oliver Schulz, Max-Planck-Institut für Physik"
       description: |
