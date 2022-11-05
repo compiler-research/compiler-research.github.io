@@ -19,6 +19,7 @@
     - title: Update
       speaker: Vassil
       slides: "/assets/presentations/CaaS_03_11_2022.pdf"
+      video: "https://youtu.be/_5_gm58sQIg"
     - title: Round Table
     - title: Next meeting
       speaker: Vassil
@@ -341,6 +342,7 @@
         bindings and give a bird's eye overview of the implementation
         underpinning cppyy.
       slides: "/assets/presentations/W_Lavrijsen-CaaS_Cppyy.pdf"
+      video: "https://youtu.be/stMD7VDWlVU"
     - title: Update
       speaker: Vassil
       slides: "/assets/presentations/CaaS_02_09_2021.pdf"
@@ -439,6 +441,7 @@
     - title: "GPU Acceleration of Automatic Differentiation in C++ with Clad"
       speaker: "Ioana Ifrim, Princeton"
       slides: "/assets/presentations/I_Ifrim-GPU_AD.pdf"
+      video: "https://youtu.be/wberEoq-m38"
     - title: Update
       speaker: Vassil
       slides: "/assets/presentations/CaaS_06_05_2021.pdf"
