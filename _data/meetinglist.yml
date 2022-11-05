@@ -16,10 +16,11 @@
         just-in-time links to third-party static libraries. The tutorial will
         also dig into internals of JITLink by working on a JITLink plugin
         managing SEH exception tables.
+      slides: "/assets/presentations/S_Kim-Jitlink_Coff.pdf"
+      video: "https://youtu.be/_5_gm58sQIg"
     - title: Update
       speaker: Vassil
       slides: "/assets/presentations/CaaS_03_11_2022.pdf"
-      video: "https://youtu.be/_5_gm58sQIg"
     - title: Round Table
     - title: Next meeting
       speaker: Vassil
