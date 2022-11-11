@@ -54,6 +54,7 @@
         provide gradual, structural typing, which will not be covered in this
         presentation.
       slides: "/assets/presentations/J_Wilkerson-Caas_Jank.pdf"
+      video: "https://youtu.be/l7KXd76ymVk"
     - title: Update
       speaker: Vassil
       slides: "/assets/presentations/CaaS_06_10_2022.pdf"
