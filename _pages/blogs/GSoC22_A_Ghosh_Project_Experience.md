@@ -24,9 +24,9 @@ Email: anubhabghosh.me@gmail.com
 
 Github Username: [argentite](https://github.com/argentite)
 
-**Link to my GSoC project proposal:** [Anubhab_Ghosh_Proposal_GSoC_2022](https://compiler-research.org/assets/docs/Anubhab_Ghosh_Proposal_2022.pdf)
+**Link to GSoC project proposal:** [Anubhab_Ghosh_Proposal_GSoC_2022](https://compiler-research.org/assets/docs/Anubhab_Ghosh_Proposal_2022.pdf)
 
-**Link to my GSoC project proposal:** [Anubhab_Ghosh_Final_Report_GSoC_2022](https://compiler-research.org/assets/docs/Anubhab_Ghosh_GSoC2022_Report.pdf)
+**Link to GSoC project proposal:** [Anubhab_Ghosh_Final_Report_GSoC_2022](https://compiler-research.org/assets/docs/Anubhab_Ghosh_GSoC2022_Report.pdf)
 
 ---
 

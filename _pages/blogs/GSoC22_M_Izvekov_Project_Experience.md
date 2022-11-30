@@ -22,7 +22,7 @@ Email: mizvekov@gmail.com
 
 Github Username: [mizvekov](https://github.com/mizvekov)
 
-**Link to my GSoC project proposal:** [Matheus_Izvekov_Proposal_2022](https://compiler-research.org/assets/docs/Matheus_Izvekov_Proposal_2022.pdf)
+**Link GSoC project proposal:** [Matheus_Izvekov_Proposal_2022](https://compiler-research.org/assets/docs/Matheus_Izvekov_Proposal_2022.pdf)
 
 
 ---
