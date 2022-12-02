@@ -132,3 +132,12 @@ int __attribute__((weak)) bar() { return 42; }
 auto r4 = printf("bar() = %d\n", bar()); // This fails before my patch. Note this is not supported in Windows yet.
 ```
 5. We fixed some issues in lambda usage in Clang-Repl.
+
+## Conclusion
+
+During this summer, I not only improved my technical skills but also enhanced my ability to work with others and
+appreciate the charm of open source. I would like to thank all the people who helped me, especially my mentor Vassil,
+who is not only an experienced programmer but also a respected life teacher. I'm also pretty happy working with my
+partner Purva, who made a great effort when preparing our LLVM Dev lightning talk this year.
+
+In the future, I'll continue my journey into the world of open source, and bring the code and love to all!
