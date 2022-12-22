@@ -362,10 +362,9 @@
   photo: mizvekov.jpg
   email: mizvekov@gmail.com
   education: Computer Science
-  active: 1
   projects:
     - title: Preserve type sugar for member access on template specializations
-      status: Ongoing
+      status: Complete
       description: |
         In C++, it's often useful to write wrappers that abstract or extend some
         underlying type passed as a template argument. But templates are only
@@ -386,6 +385,10 @@
         those member accesses.
       proposal: /assets/docs/Matheus_Izvekov_Proposal_2022.pdf
       mentors: Vassil Vassilev, Richard Smith
+      report: |
+        [Final Report](/assets/docs/Matheus_Izvekov_GSoC22_Report.pdf)
+        |
+        [Blog post](https://compiler-research.org/blogs/gsoc22_izvekov_experience_blog/)
 
 - name: "This could be you!"
   photo: rock.jpg
