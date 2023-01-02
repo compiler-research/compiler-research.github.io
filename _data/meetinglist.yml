@@ -1,4 +1,29 @@
 - name: "CaaS Monthly Meeting"
+  date: 2023-01-12 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
+  label: caas_12Jan2023
+  agenda:
+    - title: "Finding the Higgs on RISC-V"
+      speaker: "Jonas Hahnfeld, CERN"
+      description: |
+        Abstract: RISC-V is a new computer architecture. It currently receives a
+        lot of attention from open source developers because the ISA itself is
+        royalty free and vendors can create hardware without paying licensing
+        fees. As with any new architecture, the software ecosystem has to catch
+        up once actual hardware is available. In this talk, I will present the
+        current status of Just-In-Time-Compilation support for RISC-V in LLVM,
+        how I made clang-repl work on RISC-V to interpret C++ code and
+        eventually bring up the whole of Cling and ROOT to run a first physics
+        analysis on this new architecture.
+    - title: Update
+      speaker: Vassil
+    - title: Round Table
+    - title: Next meeting
+      speaker: Vassil
+      link: 2 Feb 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2022-11-03 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
