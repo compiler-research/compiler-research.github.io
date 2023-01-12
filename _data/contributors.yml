@@ -87,10 +87,19 @@
 
 - name: Jun Zhang
   photo: Jun_Zhang.png
-  info: "Google Summer of Code 2022"
+  info: "Research Intern, Google Summer of Code 2022 former contributor"
   email: jun@junz.org
   education: "Software Engineering, Anhui Normal University, WuHu, China"
+  active: 1
   projects:
+    - title: "Implement value printing in clang-repl"
+      status: Ongoing
+      description: |
+        clang-repl is the upstream version of Cling Interpreter, which only implements a subset of features
+        in Cling. In this proposal, we try to bring value printing, a very useful feature that enables users
+        to know the detailed information of the expressions that users have inputted
+      mentors: Vassil Vassilev, David Lange
+      proposal: /assets/docs/Jun_Zhang_Proposal_2023.pdf
     - title: "Optimize ROOT use of modules for large codebases"
       status: Completed
       description: |
