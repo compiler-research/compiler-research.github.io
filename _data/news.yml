@@ -1,3 +1,7 @@
+- date: 05 January 2023
+  headline: "LLVM Blog Post On Group's Work"
+  link: https://blog.llvm.org/posts/2022-12-21-compiler-research-internships/
+
 - date: 30 November 2022
   headline: "GSoC 2022 Experience of Matheus Izvekov"
   link: "/blogs/gsoc22_izvekov_experience_blog/"
