@@ -116,10 +116,20 @@
 
 - name: Anubhab Ghosh
   photo: Anubhab_Ghosh.jpg
-  info: "Google Summer of Code 2022"
+  info: "Research Intern, Google Summer of Code 2022 former contributor"
   email: anubhabghosh.me@gmail.com
   education: "Computer Science and Engineering, Indian Institute of Information Technology, Kalyani, India"
   projects:
+    - title: "Design and Develop a CUDA engine for clang-repl"
+      status: Ongoing
+      description: |
+        CUDA is a GPGPU platform and API targeted towards NVIDIA GPUs that gives access to compute
+        elements of the GPU through standard programming languages like C++. The goal of the project
+        is to implement CUDA support for clang-repl that will be useful for interpreting CUDA C++
+        code. This would possibly require clang-repl to distinguish between host and device code
+        and separately compile device code to PTX.
+      mentors: Vassil Vassilev, David Lange
+      proposal: /assets/docs/Anubhab_Ghosh_Proposal_2023_CUDA.pdf
     - title: "Shared Memory Based JITLink Memory Manager"
       status: Completed
       description: |
@@ -135,6 +145,8 @@
       proposal: /assets/docs/Anubhab_Ghosh_Proposal_2022.pdf
       report: |
         [Final Report](/assets/docs/Anubhab_Ghosh_GSoC2022_Report.pdf)
+        |
+        [Blog post](/blogs/gsoc22_ghosh_experience_blog)
 
 - name: <a href="https://www.linkedin.com/in/rohit-singh-rathaur/" target="_blank" >Rohit Singh Rathaur<a>
   photo: Rohit_Singh.png
