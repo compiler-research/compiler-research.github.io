@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Implement value printing in clang-repl - Roadmap"
+      date: 2023-01-25 14:00:00 +0200
+      speaker: "Jun Zhang"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_25_01_2023_Jun_Zhang_Implement_value_printing_in_clang-repl_Roadmap.pdf)"
     - title: "The CaaS Project. Progress & Plans Q3, Q4"
       date: 2022-09-21 14:00:00 +0200
       speaker: "Vassil Vassilev"
