@@ -1,4 +1,33 @@
 - name: "CaaS Monthly Meeting"
+  date: 2023-02-02 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
+  label: caas_02Feb2023
+  agenda:
+    - title: "Multiline input and Windows support in clang-repl"
+      speaker: "Sunho Kim, De Anza College, CA"
+      description: |
+        Efficient multiline input support in clang-repl has been worked on over
+        the last months. We formulated a RFC to extend the clang Lexer to
+        receive incremental in LLVM community and implemented it with received
+        feedbacks considered. Clang Lexer is now capable of lexing buffer
+        growing line by line while handling all complicated preprocessor
+        expressions correctly. Based on this groundwork, an efficient
+        incremental input support was added to clang-repl.
+
+        I will demonstrate these new additions to clang-repl with demoes, talk
+        about how do they work under the good, and talk about the future
+        direction. I will also briefly show demos of enhanced Windows support
+        in clang-repl featuring native static library and SEH exception
+        handling.
+    - title: Update
+      speaker: Vassil
+    - title: Round Table
+    - title: Next meeting
+      speaker: Vassil
+      link: 2 Mar 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2023-01-12 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
