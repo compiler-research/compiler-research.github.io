@@ -17,6 +17,7 @@
         eventually bring up the whole of Cling and ROOT to run a first physics
         analysis on this new architecture.
       slides: "/assets/presentations/J_Hahnfeld-HiggsRISC-V.pdf"
+      video: "https://youtu.be/3PWeLGrF41g"
     - title: Update
       speaker: Vassil
       slides: "/assets/presentations/CaaS_12_01_2023.pdf"
