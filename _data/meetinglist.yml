@@ -20,6 +20,7 @@
         direction. I will also briefly show demos of enhanced Windows support
         in clang-repl featuring native static library and SEH exception
         handling.
+        video: "https://youtu.be/jc5oj8ooG7s"
     - title: Update
       speaker: Vassil
       slides: "/assets/presentations/CaaS_02_02_2023.pdf"
