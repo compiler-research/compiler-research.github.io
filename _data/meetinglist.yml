@@ -1,4 +1,17 @@
 - name: "CaaS Monthly Meeting"
+  date: 2023-03-02 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
+  label: caas_02Mar2023
+  agenda:
+    - title: Update
+      speaker: Vassil
+    - title: Round Table
+    - title: Next meeting
+      speaker: Vassil
+      link: 6 Apr 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2023-02-02 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
