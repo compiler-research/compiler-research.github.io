@@ -1,4 +1,42 @@
 - name: "CaaS Monthly Meeting"
+  date: 2023-04-06 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
+  label: caas_06Apr2023
+  agenda:
+    - title: "Numba 2023 and beyond. PIXIE and RVSDG"
+      speaker: "Siu Kwan Lam, Stuart Archibald"
+      description: |
+        The Numba project engineers are undertaking research into some new
+        technology in 2023, in this talk two of the larger areas of this
+        research will be presented. One part of this research aims to alter the
+        typical view of the compilation space as neither being JIT nor AOT, but
+        as a user defined continuum of options. A new AOT output format is being
+        developed, PIXIE, which helps to provide higher performance runtime
+        execution and also allows for cross library/whole program optimisation,
+        along with AOT re-specialisation. This talk will present the Numba 2023
+        target MVP, it will be able to combine AOT compiled C/C++ libraries from
+        Clang based toolchains with JIT compiled Python code to present a
+        continuum of compilation options to users based on their desired
+        compilation and runtime performance characteristics.
+
+        Another part of the research being undertaken is into Regionalise Value
+        State Dependence Graphs (RVSDGs). Its initial use will be to isolate the
+        Numba compiler frontend from the ever changing semantics of Python byte
+        code (Numba uses this as its input source, it’s a CPython implementation
+        detail). It will do this by transforming the CFGs derived from the byte
+        code into a structured form, that of the RVSDG. This talk will note some
+        of the numerous research opportunities anticipated as a result of using
+        this form, particularly with respect to IR design and the expected ease
+        with which new compiler passes can be written.
+    - title: Update
+      speaker: Vassil
+    - title: Round Table
+    - title: Next meeting
+      speaker: Vassil
+      link: 4 May 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2023-03-02 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
