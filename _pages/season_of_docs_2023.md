@@ -32,4 +32,5 @@ Work that is out-of-scope for this project:
   * Candidates are not required to have past experience with a particular set of documentation tools.
 
 ## Contact us
+Send email to <a href="mailto:David.Lange@princeton.edu,vvasilev@cern.ch">David Lange and Vassil Vassilev</a> with some background information on yourself and your interests.
 
