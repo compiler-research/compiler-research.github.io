@@ -30,10 +30,11 @@
         this form, particularly with respect to IR design and the expected ease
         with which new compiler passes can be written.
     - title: Update
-      speaker: Vassil
+      speaker: Garima Singh
+      slides: "/assets/presentations/CaaS_06_04_2023.pdf"
     - title: Round Table
     - title: Next meeting
-      speaker: Vassil
+      speaker: Garima Singh
       link: 4 May 1700
 
 - name: "CaaS Monthly Meeting"
