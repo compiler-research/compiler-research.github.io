@@ -374,3 +374,46 @@
   eprint: http://www.llvm.org/devmtg/2013-11/slides/Vassilev-Poster.pdf
   url: http://www.llvm.org/devmtg/2013-11/slides/Vassilev-Poster.pdf
   year: '2013'
+
+- title: Automatic Differentiation of Binned Likelihoods With Roofit and Clad
+  author: Garima Singh, Jonas Rembser, Lorenzo Moneta, David Lange, Vassil Vassilev
+  abstract: |
+    RooFit is a toolkit for statistical modeling and fitting used by most experiments
+    in particle physics. Just as data sets from next-generation experiments grow,
+    processing requirements for physics analysis become more computationally demanding,
+    necessitating performance optimizations for RooFit. One possibility to speed-up
+    minimization and add stability is the use of Automatic Differentiation (AD). Unlike
+    for numerical differentiation, the computation cost scales linearly with the number
+    of parameters, making AD particularly appealing for statistical models with many
+    parameters. In this paper, we report on one possible way to implement AD in RooFit.
+    Our approach is to add a facility to generate C++ code for a full RooFit model
+    automatically. Unlike the original RooFit model, this generated code is free of virtual
+    function calls and other RooFit-specific overhead. In particular, this code is then
+    used to produce the gradient automatically with Clad. Clad is a source transformation
+    AD tool implemented as a plugin to the clang compiler, which automatically generates
+    the derivative code for input C++ functions. We show results demonstrating the
+    improvements observed when applying this code generation strategy to HistFactory and
+    other commonly used RooFit models.
+  cites: '0'
+  eprint: https://arxiv.org/abs/2304.02650
+  url: https://arxiv.org/abs/2304.02650
+  year: '2023'
+
+- title: Fast And Automatic Floating Point Error Analysis With CHEF-FP
+  author: Garima Singh, Baidyanath Kundu, Harshitha Menon, Alexander Penev, David J. Lange,
+    Vassil Vassilev
+  abstract: |
+    As we reach the limit of Moore's Law, researchers are exploring different paradigms to
+    achieve unprecedented performance. Approximate Computing (AC), which relies on the ability
+    of applications to tolerate some error in the results to trade-off accuracy for performance,
+    has shown significant promise. Despite the success of AC in domains such as Machine Learning,
+    its acceptance in High-Performance Computing (HPC) is limited due to stringent requirements
+    for accuracy. We need tools and techniques to identify regions of code that are amenable to
+    approximations and their impact on the application output quality to guide developers to employ
+    selective approximation. To this end, we propose CHEF-FP, a flexible, scalable, and easy-to-use
+    source-code transformation tool based on Automatic Differentiation (AD) for analyzing
+    approximation errors in HPC applications. CHEF-FP uses ...
+  cites: '0'
+  eprint: https://arxiv.org/abs/2304.06441
+  url: https://arxiv.org/abs/2304.06441
+  year: '2023'
