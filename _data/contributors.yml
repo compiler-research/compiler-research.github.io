@@ -24,7 +24,7 @@
   photo: Sara-Bellei.jpg
   email: sara.bellei.87@gmail.com
   education: "PhD in Physics, Politecnico University of Milan, Italy (2017)"
-  active: 1
+  active: 0
   projects:
     - title: "Improving the Clang-REPL documentation"
       status: Ongoing
@@ -350,7 +350,7 @@
   photo: Purva.jpg
   email: purva.chaudhari02@gmail.com
   education: "Computer Science, Vishwakarma Institute of Technology"
-  active: 1
+  active: 0
   projects:
     - title: "Enhance the incremental compilation error recovery in clang and clang-repl"
       status: Ongoing
