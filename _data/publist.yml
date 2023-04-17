@@ -417,3 +417,31 @@
   eprint: https://arxiv.org/abs/2304.06441
   url: https://arxiv.org/abs/2304.06441
   year: '2023'
+
+- title: Efficient and Accurate Automatic Python Bindings with cppyy & Cling
+  author: Baidyanath Kundu, Vassil Vassilev, Wim Lavrijsen
+  abstract: |
+    The simplicity of Python and the power of C++ force stark choices on a scientific software
+    stack. There have been multiple developments to mitigate language boundaries by implementing
+    language bindings, but the impedance mismatch between the static nature of C++ and the
+    dynamic one of Python hinders their implementation; examples include the use of user-defined
+    Python types with templated C++ and advanced memory management.
+    The development of the C++ interpreter Cling has changed the way we can think of language
+    bindings as it provides an incremental compilation infrastructure available at runtime.
+    That is, Python can interrogate C++ on demand, and bindings can be lazily constructed at
+    runtime. This automatic binding provision requires no direct support from library authors
+    and offers better performance than alternative solutions, such as PyBind11. ROOT pioneered
+    this approach with PyROOT, which was later enhanced with its successor, cppyy. However,
+    until now, cppyy relied on the reflection layer of ROOT, which is limited in terms of
+    provided features and performance.
+    This paper presents the next step for language interoperability with cppyy, enabling
+    research into uniform cross-language execution environments and boosting optimization
+    opportunities across language boundaries. We illustrate the use of advanced C++ in
+    Numba-accelerated Python through cppyy. We outline a path forward for re-engineering
+    parts of cppyy to use upstream LLVM components to improve performance and sustainability.
+    We demonstrate cppyy purely based on a C++ reflection library, InterOp, which offers
+    interoperability primitives based on Cling and Clang-Repl.
+  cites: '0'
+  eprint: https://arxiv.org/abs/2304.02712
+  url: https://arxiv.org/abs/2304.02712
+  year: '2023'
