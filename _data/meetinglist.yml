@@ -29,6 +29,7 @@
         of the numerous research opportunities anticipated as a result of using
         this form, particularly with respect to IR design and the expected ease
         with which new compiler passes can be written.
+      slides: "/assets/presentations/S_Lam_S_Archibald-CaaS_Numba_PIXIE.pdf"
     - title: Update
       speaker: Garima Singh
       slides: "/assets/presentations/CaaS_06_04_2023.pdf"
