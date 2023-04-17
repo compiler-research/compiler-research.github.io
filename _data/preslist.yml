@@ -417,6 +417,13 @@
     [Link to slides](/assets/presentations/W_Moses_V_Vassilev-CppCon21_DifferentiableProgrammingInCpp.pdf)
   highlight: 1
 
+- title: "RooFit-AD Plan of Work"
+  description:
+  location: "Weekly Compiler Research Meetings"
+  date: 2023-02-01
+  speaker: G Singh
+  artifacts: "[Link to slides](/assets/presentations/RooFitADPlanofWork_01_02_23.pdf)"
+
 - title: "A numba extension for cppyy / PyROOT"
   description:
   location: "[Parallelism, Performance and Programming model meeting](https://indico.cern.ch/e/PPP140)"
