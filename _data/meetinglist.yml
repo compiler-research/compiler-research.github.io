@@ -1,4 +1,17 @@
 - name: "CaaS Monthly Meeting"
+  date: 2023-05-04 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
+  label: caas_04May2023
+  agenda:
+    - title: Update
+      speaker: Vassil Vassilev
+    - title: Round Table
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 1 Jun 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2023-04-06 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/92890799462?pwd=Tlp0MGJYRHZld05acWhOK0Vwa0YvZz09)"
