@@ -110,6 +110,25 @@
       mentors: Baidyanath Kundu, Vassil Vassilev, Wim Lavrijsen
       proposal: /assets/docs/Aaron_Jomy_Proposal_2023.pdf
 
+- name: Krishna Narayanan
+  photo: Krishna.jpg
+  info: "Google Summer of Code 2023 Contributor"
+  email: krishnanarayanan132002@gmail.com
+  education: "B.Tech in Electronics and Telecommunications, Veermata Jijabai Technological Institute, Mumbai, India"
+  active: 1
+  projects:
+    - title: "Tutorial development with clang-repl"
+      status: Ongoing
+      description: |
+        This project aims to develop tutorials demostrating the current capabilities of clang-repl.
+        It also aims to investigate and research the requirements for adding clang-repl as a backend to xeus-cling.
+        Add support for Xeus with the newly added clang-repl which is inspired from cling. The need for clang-repl
+        is that it presents opportunities for rigorous open source development.However even though it is inspired by
+        cling, not all of clang-repl and cling are same i.e. they are similar but work needs to be done to add xeus
+        protocol support for clang-repl.
+      mentors:  Vassil Vassilev, David Lange
+      proposal: /assets/docs/Krishna_Proposal_2023.pdf
+
 - name: Jun Zhang
   photo: Jun_Zhang.png
   info: "Research Intern, Google Summer of Code 2022 former contributor"
