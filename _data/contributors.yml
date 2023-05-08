@@ -84,6 +84,32 @@
       report: |
         [Final Report](/assets/docs/Sunho_Kim_GSoC22_Report.pdf)
 
+- name: Aaron Jomy
+  photo: Aaron.jpg
+  info: "Google Summer of Code 2023 Contributer"
+  email: aaronjomyjoseph@gmail.com
+  education: "B. Tech in Computer Science, Manipal Institute of Technology, Manipal, India"
+  active: 1
+  projects:
+    - title: "Extend the Cppyy support in Numba"
+      status: Ongoing
+      description: |
+        Numba is a JIT compiler that translates a subset of Python and NumPy code into fast machine
+        code. Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from
+        Python and Python from C++.
+        Cppyy has to pay a time penalty each time it needs to switch between languages which can
+        multiply into large slowdowns when using loops with cppyy objects. This is where Numba can
+        help. Since Numba compiles the code in loops into machine code it only has to cross the
+        language barrier once and the loops thus run faster.
+        Initial support for Cppyy objects in Numba enabled the use of builtin types and classes, but
+        some essential C++ features, such as references and STL classes, are not yet supported.
+        The project aims to add support for C++ reference types in Numba through Cppyy and improve
+        the existing numba extension implementation to provide general support for C++ templates.
+        This added support will allow cppyy users to define a wider array of standard and templated
+        functions that can leverage reference types to the C++ code defined in python.
+      mentors: Baidyanath Kundu, Vassil Vassilev, Wim Lavrijsen
+      proposal: /assets/docs/Aaron_Jomy_Proposal_2023.pdf
+
 - name: Jun Zhang
   photo: Jun_Zhang.png
   info: "Research Intern, Google Summer of Code 2022 former contributor"
