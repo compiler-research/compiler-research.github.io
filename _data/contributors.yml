@@ -129,6 +129,30 @@
       mentors:  Vassil Vassilev, David Lange
       proposal: /assets/docs/Krishna_Proposal_2023.pdf
 
+- name: Vaibhav Thakkar
+  photo: Vaibhav.jpg
+  info: "Google Summer of Code 2023 Contributor"
+  email: vaibhav.thakkar.22.12.99@gmail.com
+  education: "Electrical Engineering and Computer Science, Indian Institute of Technology, Kanpur, India"
+  active: 1
+  projects:
+    - title: "Implement vector mode in forward mode automatic differentiation in Clad"
+      status: Ongoing
+      description: |
+        Clad is an automatic differentiation library based on Clang which provides the 
+        necessary facilities for code transformation.
+        Automatic Differentiation (AD) is a set of techniques to numerically evaluate the
+        derivative of a function specified by a computer program.
+        Automatic differentiation is an alternative technique to Symbolic differentiation and
+        Numerical differentiation (the method of finite differences).
+        Vector mode support will facilitate the computation of gradients using the forward 
+        mode AD in a single pass and thus without explicitly performing differentiation n times 
+        for n function arguments.
+        The major benefit of using vector mode is that computationally expensive operations 
+        do not need to be recomputed n times for n function arguments.
+      mentors:  Parth Arora, Vassil Vassilev, David Lange, Alexander Penev
+      proposal: /assets/docs/Vaibhav_Thakkar_Proposal_2023.pdf
+
 - name: Jun Zhang
   photo: Jun_Zhang.png
   info: "Research Intern, Google Summer of Code 2022 former contributor"
