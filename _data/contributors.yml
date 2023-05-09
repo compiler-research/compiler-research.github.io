@@ -153,6 +153,23 @@
       mentors:  Parth Arora, Vassil Vassilev, David Lange, Alexander Penev
       proposal: /assets/docs/Vaibhav_Thakkar_Proposal_2023.pdf
 
+- name: Rishabh Bali
+  photo: Rishabh.jpg
+  info: "Open Source Contributor"
+  email: rishabhsbali@gmail.com
+  education: "B.Tech in Computer Engineering, Veermata Jijabai Technological Institute, Mumbai, India"
+  active: 1
+  projects:
+    - title: "Add support for differentiating with respect to multidimensional arrays (or pointers) in Clad"
+      status: Ongoing
+      description: |
+        Clad is an open-source clang plugin that enables the automatic differentiation of mathematical functions for C++. 
+        Currently clad supports differentiation w.r.t single dimensional arrays only; support for differentiation w.r.t 
+        pointers is also limited. This proposal aims to add support for differentiation w.r.t multi-dimensional 
+        arrays and pointers in clad.
+      mentors:  Vassil Vassilev, Parth Arora
+      proposal: /assets/docs/Rishabh_Bali_Proposal_2023.pdf      
+
 - name: Jun Zhang
   photo: Jun_Zhang.png
   info: "Research Intern, Google Summer of Code 2022 former contributor"
