@@ -24,7 +24,10 @@ permalink: /team/
 <div class="col-sm-6 clearfix">
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}<br>email: <{{ member.email }}></i>
+  <i>{{ member.info }}<br>
+{% if member.email and member.email.size>3 %}
+  email: <{{ member.email }}></i>
+{% endif %}
   {% if member.photo == "rock.jpg" %}
   </div>
      {% continue %}
@@ -39,10 +42,12 @@ permalink: /team/
     <strong>Project Proposal:</strong>
     <a href="{{ project.proposal }}" target=_blank >URL</a>
   </p>
+{% if project.report and project.report.size>3 %}
   <p>
     <strong>Project Reports:</strong>
     {{ project.report | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines}}
   </p>
+{% endif %}  
   <p> <strong>Mentors:</strong> {{ project.mentors }} </p> 
   {% endfor %}
 </div>
