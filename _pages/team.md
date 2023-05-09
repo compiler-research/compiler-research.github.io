@@ -76,8 +76,11 @@ permalink: /team/
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   {% endif %}
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}<br>email: <{{ member.email }}></i>
-  <p> <strong>Education:</strong> {{ member.education }} </p>
+  <i>{{ member.info }}<br>
+{% if member.email %}
+  email: <{{ member.email }}></i>
+{% endif %}
+<p> <strong>Education:</strong> {{ member.education }} </p>
   {% for project in member.projects %}
   <p class="text-justify">
     <strong> {{ project.status }} project:</strong>
@@ -87,10 +90,12 @@ permalink: /team/
     <strong>Project Proposal:</strong>
     <a href="{{ project.proposal }}" target=_blank >URL</a>
   </p>
+{% if project.report %}
   <p>
     <strong>Project Reports:</strong>
     {{ project.report | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines}}
   </p>
+{% endif %}
   <p> <strong>Mentors:</strong> {{ project.mentors }} </p> 
   {% endfor %}
 </div>
