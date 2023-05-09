@@ -22,7 +22,13 @@ permalink: /team/
 {% endif %}
 
 <div class="col-sm-6 clearfix">
+
+
+{% if member.photo and member.photo.size>3 %}
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
+{% else %}  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Comingsoon.png" class="img-responsive" width="25%" style="float: left" />
+{% endif %}  
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}<br>
 {% if member.email and member.email.size>3 %}
@@ -79,9 +85,11 @@ permalink: /team/
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-  {% if member.photo %}
+{% if member.photo and member.photo.size>3 %}
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  {% endif %}
+{% else %}  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Comingsoon.png" class="img-responsive" width="25%" style="float: left" />
+{% endif %}  
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}<br>
 {% if member.email and member.email.size>3 %}
