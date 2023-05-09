@@ -170,6 +170,24 @@
       mentors:  Vassil Vassilev, Parth Arora
       proposal: /assets/docs/Rishabh_Bali_Proposal_2023.pdf      
 
+
+- name: Daemond Zhang
+  info: "Open Source Contributor"
+  email: daemondzh@gmail.com
+  education: "Computer Sciences B.E, Tsinghua University"
+  active: 1
+  projects:
+    - title: "Improve automatic differentiation of object-oriented paradigms using Clad"
+      status: Ongoing
+      description: |
+        I would like to apply for the Improve automatic differentiation of object-oriented paradigms using Clad project. 
+        This project is mainly focused on supporting object-oriented programming features in clad, 
+        including several milestones such as differentiation of constructors, differentiation of operator overloads, 
+        reference class members, and custom derivatives for object-oriented constructs. 
+        It's valuable as no other AD system has done this before, and thus is experimental.
+      mentors:  Vassil Vassilev, Parth Arora, Alexander Penev
+      proposal: /assets/docs/Daemond_Zhang_Proposal_2023.pdf   
+
 - name: Jun Zhang
   photo: Jun_Zhang.png
   info: "Research Intern, Google Summer of Code 2022 former contributor"
