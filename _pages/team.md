@@ -26,8 +26,6 @@ permalink: /team/
 
 {% if member.photo and member.photo.size>3 %}
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-{% else %}  
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Comingsoon.png" class="img-responsive" width="25%" style="float: left" />
 {% endif %}  
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}<br>
@@ -87,8 +85,6 @@ permalink: /team/
 <div class="col-sm-6 clearfix">
 {% if member.photo and member.photo.size>3 %}
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-{% else %}  
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Comingsoon.png" class="img-responsive" width="25%" style="float: left" />
 {% endif %}  
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}<br>
