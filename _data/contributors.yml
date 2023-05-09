@@ -581,3 +581,13 @@
         [Poster](/assets/presentations/LLVM2020_Clad.pdf){:target="_blank"}
       mentors: Vassil Vassilev, Alexander Penev
 
+
+- name: <a href="https://github.com/QuillPusher" target="_blank" >QuillPusher<a>
+  info: "Technical Writer, Google Season of Docs 2023 contributor"
+  active: 1
+  projects:
+    - title: "Interactive Programming Documentation for  Data Science"
+      status: Ongoing
+      description: |
+        Revamp the documentation for the Clang-Repl, Xeus-Clang-Repl and libInterOp.
+      mentors: Vassil Vassilev, David Lange
