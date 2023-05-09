@@ -32,7 +32,9 @@ permalink: /team/
   </div>
      {% continue %}
   {% endif %}
+{% if member.education and member.education.size>3 %}
   <p> <strong>Education:</strong> {{ member.education }} </p>
+{% endif %}  
   {% for project in member.projects %}
   <p class="text-justify">
     <strong> {{ project.status }} project:</strong>
@@ -85,7 +87,9 @@ permalink: /team/
 {% if member.email and member.email.size>3 %}
   email: <{{ member.email }}></i>
 {% endif %}
+{% if member.education and member.education.size>3 %}
 <p> <strong>Education:</strong> {{ member.education }} </p>
+{% endif %}
   {% for project in member.projects %}
   <p class="text-justify">
     <strong> {{ project.status }} project:</strong>
