@@ -65,10 +65,26 @@
 
 - name: Sunho Kim
   photo: Sunho_Kim.jpeg
-  info: "Google Summer of Code 2022"
+  info: "Google Summer of Code 2023"
   email: ksunhokim123@gmail.com
-  education: "Computer Science, De Anza College, Cupertino, California"
+  education: "B.S. in Computer Science, University of California San Diego"
+  active: 1
   projects:
+    - title: "Re-optimization using JITLink"
+      status: Ongoing
+      description: |
+        In Just-In-Time compilers we often choose a low optimization level to minimize compile time and improve 
+        launch times and latencies, however some functions (which we call hot functions) are used very frequently 
+        and for these functions it is worth optimizing more heavily. In general hot functions can only be identified
+        at runtime (different inputs will cause different functions to become hot), so the aim of the reoptimization 
+        project is to build infrastructure to (1) detect hot functions at runtime and (2) compile them a second time at
+        a higher optimization level, hence the name "re-optimization". There are many possible approaches to both parts 
+        of this problem. E.g. hot functions could be identified by sampling, or using existing profiling infrastructure, 
+        or by implementing custom instrumentation. Reoptimization could be applied to whole functions, or outlining 
+        could be used to enable optimization of portions of functions. Re-entry into the JIT infrastructure from JIT’d 
+        code might be implemented on top of existing lazy compilation, or via a custom path.
+      mentors: Vassil Vassilev, Stefan Gränitz, Lang Hames
+      proposal: /assets/docs/Sunho_Kim_Proposal_2023.pdf
     - title: "Write JITLink support for a new format/architecture (ELF/AARCH64)"
       status: Completed
       description: |
