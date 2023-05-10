@@ -530,11 +530,6 @@
         |
         [Blog post](https://compiler-research.org/blogs/gsoc22_izvekov_experience_blog/)
 
-- name: "This could be you!"
-  photo: rock.jpg
-  info: See <a href="/vacancies">openings</a> for more info
-  email: vvasilev@cern.ch
-  active: 1
 
 - name: "Ajay Uppili Arasanipalai"
   photo: Ajay.png
@@ -625,3 +620,10 @@
       description: |
         Revamp the documentation for the Clang-Repl, Xeus-Clang-Repl and libInterOp.
       mentors: Vassil Vassilev, David Lange
+
+
+- name: "This could be you!"
+  photo: rock.jpg
+  info: See <a href="/vacancies">openings</a> for more info
+  email: vvasilev@cern.ch
+  active: 1
