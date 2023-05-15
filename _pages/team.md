@@ -92,9 +92,9 @@ permalink: /team/
 {% endif %}
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member_photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}<br>
+  <i>{{ member.info }}</i><br>
 {% if member.email %}
-  email: <{{ member.email }}></i>
+  <i>email: <{{ member.email }}></i>
 {% endif %}
 {% if member.education %}
 <p> <strong>Education:</strong> {{ member.education }} </p>
