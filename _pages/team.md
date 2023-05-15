@@ -23,20 +23,22 @@ permalink: /team/
 
 <div class="col-sm-6 clearfix">
 
-
-{% if member.photo and member.photo.size>3 %}
-  <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-{% endif %}  
+{% if member.photo %}
+  {% assign member_photo = member.photo %}
+{% else %}
+  {% assign member_photo = "defaultDP.png" %}
+{% endif %}
+  <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member_photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}<br>
-{% if member.email and member.email.size>3 %}
-  email: <{{ member.email }}></i>
+  <i>{{ member.info }}</i><br>
+{% if member.email %}
+  <i>email: <{{ member.email }}></i>
 {% endif %}
   {% if member.photo == "rock.jpg" %}
   </div>
      {% continue %}
   {% endif %}
-{% if member.education and member.education.size>3 %}
+{% if member.education %}
   <p> <strong>Education:</strong> {{ member.education }} </p>
 {% endif %}  
   {% for project in member.projects %}
@@ -83,15 +85,18 @@ permalink: /team/
 {% endif %}
 
 <div class="col-sm-6 clearfix">
-{% if member.photo and member.photo.size>3 %}
-  <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-{% endif %}  
+{% if member.photo %}
+  {% assign member_photo = member.photo %}
+{% else %}
+  {% assign member_photo = "defaultDP.png" %}
+{% endif %}
+  <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member_photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}<br>
-{% if member.email and member.email.size>3 %}
+{% if member.email %}
   email: <{{ member.email }}></i>
 {% endif %}
-{% if member.education and member.education.size>3 %}
+{% if member.education %}
 <p> <strong>Education:</strong> {{ member.education }} </p>
 {% endif %}
   {% for project in member.projects %}
@@ -103,7 +108,7 @@ permalink: /team/
     <strong>Project Proposal:</strong>
     <a href="{{ project.proposal }}" target=_blank >URL</a>
   </p>
-{% if project.report and project.report.size>3 %}
+{% if project.report %}
   <p>
     <strong>Project Reports:</strong>
     {{ project.report | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines}}

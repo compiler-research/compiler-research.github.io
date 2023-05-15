@@ -189,7 +189,6 @@
 
 - name: Daemond Zhang
   info: "Open Source Contributor"
-  photo: defaultDP.png
   email: daemondzh@gmail.com
   education: "Computer Sciences B.E, Tsinghua University"
   active: 1
@@ -550,7 +549,6 @@
 
 - name: Vaibhav Garg
   info: "Google Summer of Code Student 2020"
-  photo: defaultDP.png
   email: gargvaibhav64@gmail.com
   education: "Computer Science, Birla Institute of Technology and Science, Pilani, India"
   projects:
@@ -577,7 +575,6 @@
 
 - name: Lucas Camolezi
   info: "Google Summer of Code Student 2020"
-  photo: defaultDP.png
   email: camolezi@usp.br
   education: "Computer Engineering, University of São Paulo, Brazil"
   projects:
@@ -595,7 +592,6 @@
 
 - name: Roman Shakhov
   info: "Google Summer of Code Student 2020"
-  photo: defaultDP.png
   email: r.intval@gmail.com
   education: "Mathematics and Computer Science, Voronezh State University, Russia"
   projects:
@@ -617,7 +613,6 @@
 
 - name: <a href="https://github.com/QuillPusher" target="_blank" >QuillPusher<a>
   info: "Technical Writer, Google Season of Docs 2023 contributor"
-  photo: defaultDP.png
   active: 1
   email: 9x3qly27@anonaddy.me
   education: "Bachelors Degree in Science (BS)"
