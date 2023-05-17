@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Extending the Cppyy support in Numba"
+      date: 2023-05-17 14:00:00 +0200
+      speaker: "Aaron Jomy"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_17_05_2023_Aaron-Extending_the_Cppyy_Support_in_Numba.pdf)"
     - title: "Vectorized forward mode automatic differentiation in clad"
       date: 2023-05-17 14:00:00 +0200
       speaker: "Vaibhav Thakkar"
