@@ -209,7 +209,7 @@
   info: "Research Intern, Google Summer of Code 2022 former contributor"
   email: jun@junz.org
   education: "Software Engineering, Anhui Normal University, WuHu, China"
-  active: 1
+  active: 0
   projects:
     - title: "Handle Execution Results in clang-repl"
       status: Completed
