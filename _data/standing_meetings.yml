@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Handle Execution Results in clang-repl"
+      date: 2023-05-31 14:00:00 +0200
+      speaker: "Jun Zhang"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_31_05_2023_Jun-Handle_Execution_Results_in_Clang-REPL.pdf)"
     - title: "Extending the Cppyy support in Numba"
       date: 2023-05-17 14:00:00 +0200
       speaker: "Aaron Jomy"

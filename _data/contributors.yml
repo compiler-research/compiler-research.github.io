@@ -211,8 +211,8 @@
   education: "Software Engineering, Anhui Normal University, WuHu, China"
   active: 1
   projects:
-    - title: "Implement value printing in clang-repl"
-      status: Ongoing
+    - title: "Handle Execution Results in clang-repl"
+      status: Completed
       description: |
         clang-repl is the upstream version of Cling Interpreter, which only implements a subset of features
         in Cling. In this proposal, we try to bring value printing, a very useful feature that enables users
