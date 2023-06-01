@@ -238,8 +238,17 @@
   education: "Computer Science and Engineering, Indian Institute of Information Technology, Kalyani, India"
   active: 1
   projects:
-    - title: "Design and Develop a CUDA engine for clang-repl"
+    - title: "WebAssembly Support for clang-repl"
       status: Ongoing
+      description: |
+        WebAssembly is a technology that allows Javascript engines to execute compiled bytecode at
+        close to native performance. The goal of the project is to add WebAssembly output support to
+        clang-repl, a C++ interpreter so it can run and execute code inside a web browser. This can
+        be used through a tool like JupyterLite to provide in-browser C++ notebooks.
+      mentors: Vassil Vassilev, Alexander Penev
+      proposal: /assets/docs/Anubhab_Ghosh_Proposal_2023_WASM.pdf
+    - title: "Design and Develop a CUDA engine for clang-repl"
+      status: Completed
       description: |
         CUDA is a GPGPU platform and API targeted towards NVIDIA GPUs that gives access to compute
         elements of the GPU through standard programming languages like C++. The goal of the project
