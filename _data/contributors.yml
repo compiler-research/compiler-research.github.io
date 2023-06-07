@@ -168,6 +168,20 @@
       mentors:  Parth Arora, Vassil Vassilev, David Lange, Alexander Penev
       proposal: /assets/docs/Vaibhav_Thakkar_Proposal_2023.pdf
 
+- name: Smit Shah
+  photo: Smit.jpeg
+  info: "Google Summer of Code 2023 Contributor"
+  email: ssmit1607@gmail.com
+  education: "B.Tech in Computer Engineering, Veermata Jijabai Technological Institute, Mumbai, India"
+  active: 1
+  projects:
+    - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
+      status: Ongoing
+      description: |
+         xeus-clang-REPL is a C++ kernel for Jupyter notebooks using clang-REPL as its C++ Interpreter. Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from Python and Python from C++. Allowing C++ and Python to talk between themselves in a Jupyter notebook will allow users to switch between Python and C++ at will. This means that data analysts can set up their analysis in Python while running the actual analysis in C++. Thus reducing the time to write and debug their analysis pipeline. Initial support of cross talk between the two kernels has been implemented but this only supports passing primitive data types. This project aims to use Cppyy to extend this to support classes and functions.
+      mentors:  Vassil Vassilev, Baidyanath Kundu
+      proposal: /assets/docs/Smit_Proposal_2023.pdf
+
 - name: Rishabh Bali
   photo: Rishabh.jpg
   info: "Open Source Contributor"
