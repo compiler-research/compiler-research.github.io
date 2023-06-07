@@ -37,6 +37,10 @@
       date: 2023-05-24 14:00:00 +0200
       speaker: "Krishna Narayanan"
       link: "[Slides](/assets/presentations/CaaS_Weekly_24_05_2023_Krishna-Tutorial-Development-with-Clang-REPL.pdf)"
+    - title: "Add support for differentiating w.r.t multi-dimensional arrays (or pointers) in reverse mode of clad"
+      date: 2023-06-07 14:00:00 +0200
+      speaker: "Rishabh Bali"
+      link: "[Slides](/assets/presentations/Caas_Weekly_07_06_2023_Rishabh-Support_for_differentiating_w.r.t_multi_dimensional_array_and_pointer_in_reverse_mode_of_clad.pdf)"      
     - title: "Improving Automatic Differentiation of Object Oriented Paradigms Using Clad"
       date: 2023-05-24 14:00:00 +0200
       speaker: "Daemond Zhang"
