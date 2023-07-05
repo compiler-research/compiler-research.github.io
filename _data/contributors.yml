@@ -665,7 +665,7 @@
   photo: Petro.jpg
   email: petro.zarytskyi@gmail.com
   education: Applied Mathematics, Taras Shevchenko National University of Kyiv, Ukraine, 2021-present
-  current: 1
+  active: 1
   projects:
     - title: "Optimizing reverse-mode automatic differentiation with advanced activity-analysis"
       status: Ongoing
