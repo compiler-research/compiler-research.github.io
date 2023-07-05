@@ -660,6 +660,29 @@
       proposal: /assets/docs/QuillPusher_GSoD2023.pdf
       mentors: Vassil Vassilev, David Lange
 
+- name: Petro Zarytskyi
+  info: "IRIS-HEP Fellow"
+  photo: Petro.png
+  email: petro.zarytskyi@gmail.com
+  education: Applied Mathematics, Taras Shevchenko National University of Kyiv, Ukraine, 2021-present
+  current: 1
+  projects:
+    - title: "Optimizing reverse-mode automatic differentiation with advanced activity-analysis"
+      status: Ongoing
+      description: |
+        Clad is an automatic differentiation clang plugin for C++. It automatically 
+        generates code that computes derivatives of functions given by the user. 
+        Clad can work in two main modes: forward and reverse. The reverse mode involves 
+        computing the derivative by applying the chain rule to all the elementary operations
+        from the result to the argument. It turns out to be more
+        efficient when there are more dependent output variables than independent 
+        input variables (e.g. calculating a gradient). However, the approach to blindly
+        compute the derivatives of all the intermediate variables obviously produces 
+        code that does a lot of unnecessary calculations. With advanced activity analysis,
+        the variables which are not used to compute the result can be found and removed, 
+        increasing the time- and memory- efficiency of the output code.
+      proposal: /assets/docs/Petro_Zarytskyi_Proposal.pdf
+      mentors: Vassil Vassilev, David Lange
 
 - name: "This could be you!"
   photo: rock.jpg
