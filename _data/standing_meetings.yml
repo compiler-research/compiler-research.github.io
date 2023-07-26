@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "TBR (To-Be-Recorded) Analysis Strategy Report"
+      date: 2023-07-26 14:00:00 +0200
+      speaker: "Petro Zarytskyi"
+      link: "[Slides](/assets/presentations/Petro_Zarystkyi_TBR_analysis_26_07_23.pdf)"
     - title: "Making Compilation Faster when using Clang Header Modules"
       date: 2023-06-14 14:00:00 +0200
       speaker: "Shreyas Atre"
