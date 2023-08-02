@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "WebAssembly Support for ClangREPL"
+      date: 2023-08-02 14:00:00 +0200
+      speaker: "Anubhab Ghosh"
+      link: "[Slides](/assets/presentations/Anubhab_Ghosh_wasm_clangrepl.pdf"
     - title: "Re-optimization using JITLink"
       date: 2023-07-26 14:00:00 +0200
       speaker: "Sunho Kim"
