@@ -20,11 +20,11 @@
     - title: "WebAssembly Support for ClangREPL"
       date: 2023-08-02 14:00:00 +0200
       speaker: "Anubhab Ghosh"
-      link: "[Slides](/assets/presentations/Anubhab_Ghosh_wasm_clangrepl.pdf"
+      link: "[Slides](/assets/presentations/Anubhab_Ghosh_wasm_clangrepl.pdf)"
     - title: "Re-optimization using JITLink"
       date: 2023-07-26 14:00:00 +0200
       speaker: "Sunho Kim"
-      link: "[Slides](/assets/presentations/Sunho_Kim_Re-optimization_using_JITLink.pdf"
+      link: "[Slides](/assets/presentations/Sunho_Kim_Re-optimization_using_JITLink.pdf)"
     - title: "TBR (To-Be-Recorded) Analysis Strategy Report"
       date: 2023-07-26 14:00:00 +0200
       speaker: "Petro Zarytskyi"
