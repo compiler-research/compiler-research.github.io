@@ -41,6 +41,10 @@
       date: 2023-06-14 14:00:00 +0200
       speaker: "Shreyas Atre"
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Shreyas_Make_Compilation_Faster_-_ft._Modules.pdf)"
+    - title: "Code Completion in ClangRepl"
+      date: 2023-06-14 14:00:00 +0200
+      speaker: "Fred Fu"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)"
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
       date: 2023-06-07 14:00:00 +0200
       speaker: "Smit Shah"
