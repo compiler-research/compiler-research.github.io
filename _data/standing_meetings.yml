@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Code Completion in ClangRepl - GSoC Report"
+      date: 2023-08-30 14:00:00 +0200
+      speaker: "Fred Fu"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_30_08_2023_Fred-Code_Completion_in_ClangRepl_GSoC.pdf)"
     - title: "Extending the Cppyy support in Numba - Progress Update"
       date: 2023-08-16 14:00:00 +0200
       speaker: "Aaron Jomy"
