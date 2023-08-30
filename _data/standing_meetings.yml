@@ -47,6 +47,10 @@
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)"
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
       date: 2023-06-07 14:00:00 +0200
+      speaker: "Krishna Narayanan"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_30_08_2023_Krishna_GSoC.pdf)"
+    - title: "Tutorial Development with Clang-Repl"
+      date: 2023-06-07 14:00:00 +0200      
       speaker: "Smit Shah"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_06_2023_Smit_Cross_Talk_Between_C++_Python_Using_cppyy.pdf)"
     - title: "WebAssembly Support for clang-repl"
