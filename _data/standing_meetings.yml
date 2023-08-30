@@ -33,6 +33,10 @@
       date: 2023-08-02 14:00:00 +0200
       speaker: "Anubhab Ghosh"
       link: "[Slides](/assets/presentations/Anubhab_Ghosh_wasm_clangrepl.pdf)"
+    - title: "Tutorial Development with Clang-Repl"
+      date: 2023-08-30 14:00:00 +0200
+      speaker: "Krishna Narayanan"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_30_08_2023_Krishna_GSoC.pdf)"
     - title: "Re-optimization using JITLink"
       date: 2023-07-26 14:00:00 +0200
       speaker: "Sunho Kim"
@@ -50,10 +54,6 @@
       speaker: "Fred Fu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)"
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
-      date: 2023-06-07 14:00:00 +0200
-      speaker: "Krishna Narayanan"
-      link: "[Slides](/assets/presentations/CaaS_Weekly_30_08_2023_Krishna_GSoC.pdf)"
-    - title: "Tutorial Development with Clang-Repl"
       date: 2023-06-07 14:00:00 +0200      
       speaker: "Smit Shah"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_06_2023_Smit_Cross_Talk_Between_C++_Python_Using_cppyy.pdf)"
