@@ -3,22 +3,23 @@
 
 ## Setup for local development
 
-#### Docker setup
+#### Running locally
 
-If you use docker, the following line will build and serve the site locally:
+The site is built with Jekyll, and is easy to run locally if you have Ruby.
 
-```bash
-docker run --rm -v "$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:3.8 jekyll serve
-```
-
-If you want to enable LiveReload (pages automatically reload when jekyll rebuilds after detecting changes), then use this instead:
+To set up a "bundle" (local virtual environment in Python terms):
 
 ```bash
-docker run --rm -v "$PWD:/srv/jekyll" \
-           -p 4000:4000 -p 35729:35729 \
-           -it jekyll/jekyll:3.8 \
-           jekyll serve --livereload
+bundle install
 ```
+
+Now, you can use `bundle exec` to run a command in the new environment you just created, such as:
+
+```bash
+bundle exec jekyll serve
+```
+
+This will incrementally rebuild if anything changes in your directory. Exit with Control-C.
 
 #### Standard setup
 
@@ -58,24 +59,22 @@ gem install bundle
 you don't have permission to install, and you are using rbenv, this means you
 forgot to set it up with `rbenv init`.)
 
+#### Docker setup
 
-### Running locally
-
-The site is built with Jekyll, and is easy to run locally if you have Ruby.
-
-To set up a "bundle" (local virtual environment in Python terms):
+If you use docker, the following line will build and serve the site locally:
 
 ```bash
-bundle install
+docker run --rm -v "$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:3.8 jekyll serve
 ```
 
-Now, you can use `bundle exec` to run a command in the new environment you just created, such as:
+If you want to enable LiveReload (pages automatically reload when jekyll rebuilds after detecting changes), then use this instead:
 
 ```bash
-bundle exec jekyll serve
+docker run --rm -v "$PWD:/srv/jekyll" \
+           -p 4000:4000 -p 35729:35729 \
+           -it jekyll/jekyll:3.8 \
+           jekyll serve --livereload
 ```
-
-This will incrementally rebuild if anything changes in your directory. Exit with Control-C.
 
 
 
