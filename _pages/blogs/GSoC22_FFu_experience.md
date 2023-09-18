@@ -3,8 +3,8 @@ title: "GSoC 2022 Experience of Fred Fu"
 layout: gridlay
 excerpt: "GSoC 2022 Experience of Fred Fu"
 sitemap: false
-permalink: blogs/gsoc23_ffu_experience_blog/
-----
+permalink: "blogs/gsoc23_ffu_experience_blog/"
+---
 
 # Code Completion in Clang Repl
 
