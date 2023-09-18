@@ -19,8 +19,9 @@
         just-in-time compilation technology (JIT), dynamic optimizations, and
         large scale software development to greatly reduce the impedance
         mismatch between C++ and Python. We show how clang-repl generalizes
-        Cling to offer a robust, sustainable and omnidisciplinary solution for
-        C++ language interoperability. The demonstrate how we have:
+        Cling in LLVM upstream to offer a robust, sustainable and
+        omnidisciplinary solution for C++ language interoperability. The
+        demonstrate how we have:
           * advanced the interpretative technology to provide a state-of-the-art
             C++ execution environment;
           * enabled functionality which can provide native-like, dynamic runtime
