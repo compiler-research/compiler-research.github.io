@@ -1,4 +1,40 @@
 - name: "CaaS Monthly Meeting"
+  date: 2023-09-20 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/96468729098?pwd=bkpCVHVXRmdMNzE4Y3BKSWZLZVNqUT09)"
+  label: caas_20Sep2023
+  agenda:
+    - title: "C++ as a service - rapid software development and dynamic interoperability with python and beyond"
+      speaker: "Dr. Vassil Vassilev"
+      description: |
+        The C++ programming language is used for many numerically intensive
+        scientific applications. A combination of performance and solid backward
+        compatibility has led to its use for many research software codes over
+        the past 20 years. Despite its power, C++ is often seen as difficult to
+        learn and inconsistent with rapid application development. Exploration
+        and prototyping is slowed down by the long edit-compile-run cycles
+        during development.
+
+        In this talk we show how to leverage our experience in interactive C++,
+        just-in-time compilation technology (JIT), dynamic optimizations, and
+        large scale software development to greatly reduce the impedance
+        mismatch between C++ and Python. We show how clang-repl generalizes
+        Cling to offer a robust, sustainable and omnidisciplinary solution for
+        C++ language interoperability. The demonstrate how we have:
+          * advanced the interpretative technology to provide a state-of-the-art
+            C++ execution environment;
+          * enabled functionality which can provide native-like, dynamic runtime
+            interoperability between C++ and Python; and
+          * allowed utilization of heterogeneous hardware.
+
+        The presentation includes interactive session where we demonstrate some
+        of the capabilities of our system via the Jupyter interactive
+        environment.
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 5 Oct 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2023-07-06 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/95701425283?pwd=TmJsV3FyK3kvU1Y3ZU81)"
