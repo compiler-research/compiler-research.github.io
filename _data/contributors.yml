@@ -705,6 +705,29 @@
       proposal: /assets/docs/Abhigyan_Acherjee-Proposal_2023.pdf
       mentors: Vassil Vassilev, David Lange  
 
+- name: Yuquan (Fred) Fu
+  info: "GSoC student 2023"
+  photo: FF.jpg
+  email: me@syntaxforge.net
+  education: PhD Student in Computer Science, Indiana Unveristy
+  active: 1
+  projects:
+    - title: "Code Completion in ClangRepl"
+      status: Ongoing
+      description: |
+          Clang-REPL enables developers to program in C++ in an exploratory
+          manner via a read-eval-print-loop. Developers, however, have to type
+          each letter or symbol in the REPL, which likely causes typos. The
+          auto-completion we are proposing aims to assist developers in avoiding
+          that laborious typing, and it is also type-directed in that completion
+          candidates are well-typed with respect to cursor positions. The
+          project incorporates the completion infrastructure of Cling into
+          Clang-REPL. Next, we build components that handle type contexts and
+          subtyping. Lastly, we combine the completion and type-related
+          components to deliver the type-directed auto-completion in Clang-REPL.
+      proposal: /assets/docs/FredFu_Proposal.pdf
+      mentors: Vassil Vassilev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/vacancies">openings</a> for more info
