@@ -28,9 +28,10 @@ permalink: /tutorials/
 {% assign pubinfo = "" %}
 
 
-<em>{{ author_list }}, </em> <a href="{{ tutorial.url }}">{{ tutorial.title}}</a> {{pubinfo}} ({{tutorial.date}}).
+<em>{{ author_list }}, </em> <a href="{{ tutorial.url }}">{{ tutorial.title}}</a>
+{{pubinfo}} ({{tutorial.date}}).
 {% if  tutorial.abstract.size  > 7 %}
-  * {{tutorial.abstract}}
+* {{ tutorial.abstract | markdownify }}
 {% endif %}
 {% endfor %}
 </div>
