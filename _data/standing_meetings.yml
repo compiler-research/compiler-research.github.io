@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "To-Be-Recorded Analysis in Clad. Summary"
+      date: 2023-09-20 14:00:00 +0200
+      speaker: "Petro Zarytskyi"
+      link: "[Slides](/assets/presentations/Petro_Zarytskyi_TBR_Analysis_In_Clad_Summary_2023_09_20.pdf)"
     - title: "Extending Automatic Differentiation Support in RooFit. Roadmap"
       date: 2023-09-06 14:00:00 +0200
       speaker: "Abhi Acherjee"
