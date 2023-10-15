@@ -1,3 +1,47 @@
+- title: "Fast and Automatic Floating Point Error Analysis With CHEF-FP"
+  description: |
+    As we reach the limit of Moore's Law, researchers are exploring different 
+    paradigms to achieve unprecedented performance. Approximate Computing (AC), 
+    which relies on the ability of applications to tolerate some error in the 
+    results to trade-off accuracy for performance, has shown significant promise. 
+    Despite the success of AC in domains such as Machine Learning, its acceptance 
+    in High-Performance Computing (HPC) is limited due to its stringent 
+    requirement of accuracy. We need tools and techniques to identify regions of 
+    the code that are amenable to approximations and their impact on the 
+    application output quality so as to guide developers to employ selective 
+    approximation. To this end, we propose CHEF-FP, a flexible, scalable, and 
+    easy-to-use source-code transformation tool based on Automatic 
+    Differentiation (AD) for analysing approximation errors in HPC applications.
+    
+    CHEF-FP uses Clad,  an efficient AD tool built as a plugin to the Clang 
+    compiler and based on the LLVM compiler infrastructure, as a backend and 
+    utilizes its AD abilities to evaluate approximation errors in C++ code. 
+    CHEF-FP works at the source level by injecting error estimation code 
+    into the generated adjoints. This enables the error-estimation code to 
+    undergo compiler optimizations resulting in improved analysis time and 
+    reduced memory usage. We also provide theoretical and architectural 
+    augmentations to source code transformation-based AD tools to perform FP 
+    error analysis.
+    
+    In this talk, we primarily focus on analyzing errors introduced by 
+    mixed-precision AC techniques, the most popular approximate technique in HPC. 
+    We also show the applicability of our tool in estimating other kinds of 
+    errors by evaluating our tool on codes that use approximate functions. 
+    Moreover, we demonstrate the speedups achieved by CHEF-FP during analysis 
+    time as compared to the existing state-of-the-art tool as a result of its 
+    ability to generate and insert approximation error estimate code directly 
+    into the derivative source. The generated code also becomes a candidate for 
+    better compiler optimizations contributing to lesser runtime performance 
+    overhead.
+
+  location: "[IPDPS 2023](https://www.ipdps.org/ipdps2023/)"
+  date: 2023-05-18
+  speaker: B Kundu
+  id: "IPDPS2023"
+  artifacts: |
+    [Link to Slides](/assets/presentations/IPDPS23-Estimating_Floating_Point_Errors.pdf)
+  highlight: 1
+
 - title: "Making Likelihood Calculations Fast: Automatic Differentiation Applied to RooFit"
   description: |
     With the growing datasets of current and next-generation High-Energy and
