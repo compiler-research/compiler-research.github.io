@@ -728,6 +728,14 @@
       proposal: /assets/docs/FredFu_Proposal.pdf
       mentors: Vassil Vassilev
 
+
+- name: "Pavlo Svirin"
+  info: "Senior research engineer at the Barcelona Supercomputing Center"
+  photo: pavlo_svirin.png
+  email: pavlo.svirin@cern.ch
+  education: PhD Computer Science, National Technical University of Ukraine, 2014
+  active: 1
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/vacancies">openings</a> for more info
