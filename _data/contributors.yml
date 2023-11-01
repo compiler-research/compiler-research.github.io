@@ -46,7 +46,7 @@
   education: "Computer Sciences B.S., University of Wisconsin-Madison"
   projects:
     - title: "Improve Cling's packaging system: Cling Packaging Tool"
-      status: Ongoing
+      status: Completed
       description: |
         Cling is an interactive C++ interpreter/compiler that utilizes the REPL
         (read-evaluate-print-loop) paradigm for fast development and testing as
@@ -60,6 +60,8 @@
         improvements that can be made to make the user’s experience with the CPT
         even more seamless. 
       proposal: /assets/docs/Surya_Somayyajula_Proposal.pdf
+      report: |
+        [Final Report](/assets/presentations/CaaS_Weekly_10_08_2022_Surya_Somayyajula_Improving_the_Cling_Packaging_Tool.pdf)
       mentors: Vassil Vassilev, David Lange
 
 - name: Sunho Kim
@@ -711,10 +713,9 @@
   photo: FF.jpg
   email: me@syntaxforge.net
   education: PhD Student in Computer Science, Indiana Unveristy
-  active: 1
   projects:
     - title: "Code Completion in ClangRepl"
-      status: Ongoing
+      status: Completed
       description: |
           Clang-REPL enables developers to program in C++ in an exploratory
           manner via a read-eval-print-loop. Developers, however, have to type
@@ -728,6 +729,9 @@
           components to deliver the type-directed auto-completion in Clang-REPL.
       proposal: /assets/docs/FredFu_Proposal.pdf
       mentors: Vassil Vassilev
+      report: |
+        [Final Report](/assets/docs/Fred_Fu_GSoC23_Report.pdf)
+
 
 
 - name: "Pavlo Svirin"
