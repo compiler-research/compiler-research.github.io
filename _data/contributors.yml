@@ -689,6 +689,7 @@
   photo: Abhi.jpg
   email: acherjan@mail.uc.edu
   education: "Computer Sciences B.S. + M.S , University of Cincinnati, OH"
+  active: 1
   projects:
     - title: "Extend the Automatic Differentiation Support in RooFit"
       status: Ongoing
