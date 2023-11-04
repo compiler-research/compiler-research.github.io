@@ -69,10 +69,9 @@
   info: "Google Summer of Code 2023"
   email: ksunhokim123@gmail.com
   education: "B.S. in Computer Science, University of California San Diego"
-  active: 1
   projects:
     - title: "Re-optimization using JITLink"
-      status: Ongoing
+      status: Completed
       description: |
         In Just-In-Time compilers we often choose a low optimization level to minimize compile time and improve 
         launch times and latencies, however some functions (which we call hot functions) are used very frequently 
@@ -86,6 +85,8 @@
         code might be implemented on top of existing lazy compilation, or via a custom path.
       mentors: Vassil Vassilev, Stefan Gränitz, Lang Hames
       proposal: /assets/docs/Sunho_Kim_Proposal_2023.pdf
+      report: |
+        [Final Report](/assets/docs/Sunho_Kim_GSoC23_Report.pdf)
     - title: "Write JITLink support for a new format/architecture (ELF/AARCH64)"
       status: Completed
       description: |
@@ -109,7 +110,7 @@
   active: 1
   projects:
     - title: "Extend the Cppyy support in Numba"
-      status: Ongoing
+      status: Completed
       description: |
         Numba is a JIT compiler that translates a subset of Python and NumPy code into fast machine
         code. Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from
@@ -126,16 +127,18 @@
         functions that can leverage reference types to the C++ code defined in python.
       mentors: Baidyanath Kundu, Vassil Vassilev, Wim Lavrijsen
       proposal: /assets/docs/Aaron_Jomy_Proposal_2023.pdf
+      report: |
+        [Final Report](/assets/docs/Aaron_Jomy_GSoC23_Report.pdf)
+
 
 - name: Krishna Narayanan
   photo: Krishna.jpg
   info: "Google Summer of Code 2023 Contributor"
   email: krishnanarayanan132002@gmail.com
   education: "B.Tech in Electronics and Telecommunications, Veermata Jijabai Technological Institute, Mumbai, India"
-  active: 1
   projects:
     - title: "Tutorial development with clang-repl"
-      status: Ongoing
+      status: Completed
       description: |
         This project aims to develop tutorials demostrating the current capabilities of clang-repl.
         It also aims to investigate and research the requirements for adding clang-repl as a backend to xeus-cling.
@@ -145,6 +148,8 @@
         protocol support for clang-repl.
       mentors:  Vassil Vassilev, David Lange
       proposal: /assets/docs/Krishna_Proposal_2023.pdf
+      report: |
+        [Final Report](/assets/docs/Krishna_Narayanan_GSoC23_Report.pdf)
 
 - name: Vaibhav Thakkar
   photo: Vaibhav.jpg
@@ -154,7 +159,7 @@
   active: 1
   projects:
     - title: "Implement vector mode in forward mode automatic differentiation in Clad"
-      status: Ongoing
+      status: Completed
       description: |
         Clad is an automatic differentiation library based on Clang which provides the 
         necessary facilities for code transformation.
@@ -169,6 +174,8 @@
         do not need to be recomputed n times for n function arguments.
       mentors:  Parth Arora, Vassil Vassilev, David Lange, Alexander Penev
       proposal: /assets/docs/Vaibhav_Thakkar_Proposal_2023.pdf
+      report: |
+        [Final Report](/assets/docs/Vaibhav_Thakkar_GSoC23_Report.pdf)
 
 - name: Smit Shah
   photo: Smit.jpeg
@@ -189,10 +196,9 @@
   info: "Open Source Contributor"
   email: rishabhsbali@gmail.com
   education: "B.Tech in Computer Engineering, Veermata Jijabai Technological Institute, Mumbai, India"
-  active: 1
   projects:
     - title: "Add support for differentiating with respect to multidimensional arrays (or pointers) in Clad"
-      status: Ongoing
+      status: Incomplete
       description: |
         Clad is an open-source clang plugin that enables the automatic differentiation of mathematical functions for C++. 
         Currently clad supports differentiation w.r.t single dimensional arrays only; support for differentiation w.r.t 
@@ -206,10 +212,9 @@
   info: "Open Source Contributor"
   email: daemondzh@gmail.com
   education: "Computer Sciences B.E, Tsinghua University"
-  active: 1
   projects:
     - title: "Improve automatic differentiation of object-oriented paradigms using Clad"
-      status: Ongoing
+      status: Completed
       description: |
         I would like to apply for the Improve automatic differentiation of object-oriented paradigms using Clad project. 
         This project is mainly focused on supporting object-oriented programming features in clad, 
@@ -217,7 +222,9 @@
         reference class members, and custom derivatives for object-oriented constructs. 
         It's valuable as no other AD system has done this before, and thus is experimental.
       mentors:  Vassil Vassilev, Parth Arora, Alexander Penev
-      proposal: /assets/docs/Daemond_Zhang_Proposal_2023.pdf   
+      proposal: /assets/docs/Daemond_Zhang_Proposal_2023.pdf
+      report: |
+        [Final Report](/assets/docs/Daemond_Zhang_GSoC23_Report.pdf)
 
 - name: Jun Zhang
   photo: Jun_Zhang.png
@@ -255,7 +262,7 @@
   active: 1
   projects:
     - title: "WebAssembly Support for clang-repl"
-      status: Ongoing
+      status: Completed
       description: |
         WebAssembly is a technology that allows Javascript engines to execute compiled bytecode at
         close to native performance. The goal of the project is to add WebAssembly output support to
@@ -263,6 +270,9 @@
         be used through a tool like JupyterLite to provide in-browser C++ notebooks.
       mentors: Vassil Vassilev, Alexander Penev
       proposal: /assets/docs/Anubhab_Ghosh_Proposal_2023_WASM.pdf
+      report: |
+        [Final Report](/assets/docs/Anubhab_Ghosh_GSoC2023_Report.pdf)
+
     - title: "Design and Develop a CUDA engine for clang-repl"
       status: Completed
       description: |
@@ -298,7 +308,7 @@
   education: "Mathematics & Computing, Birla Institute of Technology, Mesra, India"
   projects:
     - title: "Improving Interactive Tool Analysis Documentation for the HSF"
-      status: Ongoing
+      status: Failed
       description: |
         HEP researchers have developed several unique software technologies in the area of
         data analysis. Over the last decade we developed an interactive, interpretative C++
@@ -353,7 +363,7 @@
   education: B.Tech in Computer Science, Indira Gandhi Delhi Technical University for Women, 2014
   projects: 
     - title: "Improving performance of C++ modules in Clang"
-      status: Failed
+      status: Incomplete
       description: |
         The C++ modules technology aims to provide a scalable compilation model for the
         C++ language. The C++ Modules technology in Clang provides an io-efficient,
@@ -379,10 +389,9 @@
   info: "Research Intern at CERN"
   email: garimasingh0028@gmail.com
   education: "B. Tech in Information Technology, Manipal Institute of Technology, Manipal, India"
-  active: 1
   projects:
     - title: "Add Automatic Differentiation to RooFit"
-      status: Ongoing
+      status: Complete
       description: |
         RooFit is a toolkit for statistical modeling and fitting used by most
         experiments in particle physics. Just as data sets from next-generation
@@ -413,6 +422,8 @@
         clad should fall back to its future numerical differentiation facilities.
       proposal: /assets/docs/Garima_Singh_Proposal_2021.pdf
       mentors:  Vassil Vassilev, Alexander Penev
+      report: |
+        [Final Report](/assets/docs/Garima_Singh_GSoC21_Report.pdf)
 
     - title: "Floating point error evaluation with Clad"
       status: Completed
@@ -433,6 +444,8 @@
         for the specified error estimator.
       proposal: /assets/docs/Garima_Singh_Proposal_2020.pdf
       mentors: Vassil Vassilev, David Lange
+      report: |
+        [GSoC 2020 Archive](https://summerofcode.withgoogle.com/archive/2020/projects/6406031539699712/){:target="_blank"}
 
 - name: "Parth Arora"
   photo: Parth.jpg
@@ -441,7 +454,7 @@
   info: "IRIS-HEP Fellow"
   projects:
     - title: "Add support for custom types in Clad with a focus on the Softsusy library"
-      status: Ongoing
+      status: Complete
       description: |
         User-defined types in C++ helps to make code more readable and maintainable.
         Many user-defined programs and almost every major library uses user-defined 
@@ -455,6 +468,8 @@
         support for differentiating function calls.
       proposal: /assets/docs/Parth_Arora_Proposal_2022.pdf
       mentors: Vassil Vassilev, David Lange
+      report: |
+        [Final Report](/assets/presentations/CaaS_Weekly_06_04_22_Parth-Differentiation_of_Eigen_and_Softsusy_libraries_by_Clad_Progress.pdf)
 
     - title : 'Add support for differentiating functor objects in clad'
       status: Completed
@@ -466,17 +481,18 @@
         functors and lambda expressions in clad.
       proposal: /assets/docs/Parth_Arora_Proposal_2021.pdf
       mentors: Vassil Vassilev, David Lange
+      report: |
+        [Final Report](/assets/docs/Parth_Arora_GSoC21_Report.pdf)
 
 - name: "Baidyanath Kundu"
   photo: Baidyanath.png
   info: 'Utilize second order derivatives from Clad in ROOT'
   email: kundubaidya99@gmail.com
   education: "B. Tech in Computer Science and Engg., Manipal Institute of Technology, Manipal, India"
-  active: 1
   info: "Research Intern at CERN"
   projects:
     - title: "Improving Cling Reflection for Scripting Languages"
-      status: Ongoing
+      status: Completed
       description: |
         Cling has basic facilities to make queries about the C++ code that it has seen/collected so far.
         These lookups assume, however, that the caller knows what it is looking for and the information 
@@ -503,6 +519,9 @@
         The PR that added support for gradients in ROOT is taken as a reference and can be accessed here.
       proposal: /assets/docs/Baidyanath_Kundu_Proposal_2021.pdf
       mentors: Vassil Vassilev, Ioana Ifrim
+      report: |
+        [Final Report](/assets/docs/Garima_Singh_GSoC21_Report.pdf)
+
 
 - name: Purva Chaudhari
   info: "Research Intern"
@@ -511,7 +530,7 @@
   education: "Computer Science, Vishwakarma Institute of Technology"
   projects:
     - title: "Enhance the incremental compilation error recovery in clang and clang-repl"
-      status: Ongoing
+      status: Completed
       description: |
         The Clang compiler is part of the LLVM compiler infrastructure and supports various languages such as C, 
         C++, ObjC and ObjC++. Advancements in JIT infstructure and usability of Clang libriries in LLVM has 
@@ -523,6 +542,7 @@
         analysis in a C++ environment. Clang-repl is a new-tool incroporated in LLVM ecosystem by residesigning parts 
         of Cling in Clang mainline. The project aims at enhancing the error recovery when users type C++ at the prompt of clang-repl.
       mentors: Vassil Vassilev, David Lange
+      
     - title: 'Reduce boost dependencies in CMSSW'
       status: Completed
       description: |
@@ -731,8 +751,6 @@
       mentors: Vassil Vassilev
       report: |
         [Final Report](/assets/docs/Fred_Fu_GSoC23_Report.pdf)
-
-
 
 - name: "Pavlo Svirin"
   info: "Senior research engineer at the Barcelona Supercomputing Center"
