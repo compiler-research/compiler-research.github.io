@@ -77,6 +77,10 @@
       date: 2023-05-17 14:00:00 +0200
       speaker: "Aaron Jomy"
       link: "[Slides](/assets/presentations/CaaS_Weekly_17_05_2023_Aaron-Extending_the_Cppyy_Support_in_Numba.pdf)"
+    - title: "GSoD 2023 Documentation Progress"
+      date: 2023-11-02 17:00:00 +0200
+      speaker: "QuillPusher"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_02_11_2023_QuillPusher_GSoD_Progress.pdf)"
     - title: "Tutorial Development with clang-REPL. Roadmap"
       date: 2023-05-24 14:00:00 +0200
       speaker: "Krishna Narayanan"
