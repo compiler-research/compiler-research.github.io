@@ -42,6 +42,8 @@
       * Add support for C++ reference types in Numba through Cppyy
       * Add general support for C++ templates in Numba through Cppyy
       * Add tests and documentation
+  status: completed
+  responsible: Aaron Jomy
     
 - name: "Explore advanced activity-analysis and optimizations in reverse-mode automatic differentiation"
   description: |
@@ -70,6 +72,8 @@
         solutions.
       * Implement the proposed activity analysis mode.
       * Add tests and documentation.
+  status: ongoing
+  responsible: Petro Zarytskyi
 
 - name: "Improve automatic differentiation of object-oriented paradigms using Clad"
   description: |
@@ -148,6 +152,8 @@
       * Demonstrate a CUDA-executed gradient computed by the Clad automatic
         differentiation plugin.
       * Present the work at the relevant meetings and conferences.
+  status: completed
+  responsible: Anubhab Ghosh
 
 - name: "Implement libInterOp API exposing memory, ownership and thread safety information"
   description: |
@@ -205,6 +211,8 @@
       * Implement the xeus kernel protocol for clang-repl.
       * Complete a blog post about clang-repl and possibly Jupyter.
       * Present the work at the relevant meetings and conferences.
+  status: completed
+  responsible: Krishna Narayanan
 
 - name: "Implement autocompletion in clang-repl"
   description: |
@@ -249,6 +257,8 @@
         [clang-repl] v = a + <tab> // shows b as the only acceptable choice here.
         ```
       * Present the work at the relevant meetings and conferences
+  status: completed
+  responsible: Yuquan (Fred) Fu
 
 - name: "Implement vector mode in forward mode automatic differentiation in Clad"
   description: |
@@ -306,6 +316,8 @@
       * Extend the unit test coverage.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
+  status: completed
+  responsible: Vaibhav Thakkar
 
 - name: "Add support for differentiating with respect to multidimensional arrays
          (or pointers) in Clad."
@@ -511,7 +523,7 @@
         implementation works.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
-  status: complete
+  status: completed
   responsible: Jun Zhang
 
 - name: "Enhance the incremental compilation error recovery in clang and clang-repl"
@@ -734,7 +746,7 @@
 
     This design is then to be implemented, using test-driven development. As a
     stretch goal, the cppyy-backend should be modified to use the new API.
-  status: ongoing
+  status: completed
   responsible: Baidyanath Kundu
 
 - name: "Developing C++ modules support in CMSSW and Boost"
@@ -860,7 +872,7 @@
     and the same template instantiation, but `T<unsigned long>::type` single-step
     desugars to 'unsigned long' and `T<size_t>::type` single-step desugars to
     'size_t'.
-  status: ongoing
+  status: completed
   responsible: Matheus Izvekov
 
 - name: "Infrastructure: Improve Cling's packaging system cpt"
