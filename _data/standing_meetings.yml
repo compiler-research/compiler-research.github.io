@@ -17,6 +17,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Extending Automatic Differentiation Support in RooFit. Roadmap"
+      date: 2023-09-06 14:00:00 +0200
+      speaker: "Abhi Acherjee"
+      link: "[Slides](/assets/presentations/Extending_ADSupport_In_RooFit-Abhi_Acherjee.pdf)"
     - title: "Code Completion in ClangRepl - GSoC Report"
       date: 2023-08-30 14:00:00 +0200
       speaker: "Fred Fu"
