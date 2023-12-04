@@ -1,7 +1,7 @@
 - name: "CaaS Monthly Meeting"
   date: 2023-12-07 17:00:00 +0200
   time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/96034182995?pwd=QjFwaDVqazdFVGhvOHhy)"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/96034182995?pwd=QjFwaDVqazdFVGhvOHhyOFc1OVRZdz09)"
   label: caas_07Dec2023
   agenda:
     - title: "Compiler-Research.org Status and Plans"
