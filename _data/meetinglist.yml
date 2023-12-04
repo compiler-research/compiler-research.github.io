@@ -1,4 +1,51 @@
 - name: "CaaS Monthly Meeting"
+  date: 2023-12-07 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/96034182995?pwd=QjFwaDVqazdFVGhvOHhy)"
+  label: caas_07Dec2023
+  agenda:
+    - title: "Compiler-Research.org Status and Plans"
+      speaker: "Dr. Vassil Vassilev"
+      description: |
+        We will describe some of the past, ongoing and future activities of the
+        compiler-research group.
+    - title: "Algorithmic Differentiation in Monte-Carlo Particle Simulations"
+      speaker: "Max Aehle"
+      description: |
+        Monte-Carlo simulators like Geant4 are heavily used in High Energy
+        Physics to simulate the interaction between particles and the detector
+        matter. Integrating algorithmic differentiation (AD) into such codes,
+        e.g. in order to obtain gradients for design optimization, comes with a
+        couple of technical and mathematical challenges.
+
+        On the technical side, most AD tools are not fully automatic for the
+        entire language standard, but require certain manual interventions or
+        exclude certain language constructs. The size and complexity of Geant4
+        with about one million lines of C++ code can turn seemingly little
+        restrictions into a massive amount of effort required before being able
+        to obtain algorithmic derivatives. In the first part of this talk, we
+        will give a brief description of our novel AD tool Derivgrind, which
+        brings the development efforts close to the possible minimum because it
+        operates on the machine code of the compiled primal program. We will
+        then demonstrate how it allows to compute correct algorithmic
+        derivatives in a very artificial setup using Geant4 code.
+
+        On the mathematical side, stochasticity and the frequent use of
+        non-differentiable operations like comparisons constitute severe
+        challenges. While AD allows us to obtain floating-point-accurate
+        derivatives of the precise sequence of real-arithmetic operations
+        conducted by the primal program, they may come with very large
+        variances, and their expected values may disagree with the derivative
+        of the function represented by the Monte-Carlo simulation in the limit
+        where the number of samples goes to infinity. These challenges need to
+        be assessed and attacked based on a mathematical understanding of the
+        computations performed by the Monte-Carlo simulation. In the second part
+        of this talk, we will report on recent progress in this area.
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 11 Jan 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2023-09-20 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/96468729098?pwd=bkpCVHVXRmdMNzE4Y3BKSWZLZVNqUT09)"
