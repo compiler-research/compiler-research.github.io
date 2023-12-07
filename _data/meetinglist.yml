@@ -9,6 +9,7 @@
       description: |
         We will describe some of the past, ongoing and future activities of the
         compiler-research group.
+      slides: "/assets/presentations/CaaS_07_12_2023.pdf"
     - title: "Algorithmic Differentiation in Monte-Carlo Particle Simulations"
       speaker: "Max Aehle"
       description: |
