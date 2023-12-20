@@ -21,6 +21,10 @@
       link: "[Slides](/assets/presentations/Sunho_Kim_Reopt.pdf)"
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy - Progress Update"
+      date: 2023-11-08 14:00:00 +0200
+      speaker: "Smit Shah"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_08_11_2023_Smit_GSoC_Progress_Update.pdf)"
     - title: "To-Be-Recorded Analysis in Clad. Summary"
       date: 2023-09-20 14:00:00 +0200
       speaker: "Petro Zarytskyi"
