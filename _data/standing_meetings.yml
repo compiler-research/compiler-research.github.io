@@ -15,12 +15,16 @@
   time_cest: "14:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: Updates
+      link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
     - title: "Re-optimization using JITLink"
       date: 2023-09-27 14:00:00 +0200
       speaker: "Sunho Kim"
       link: "[Slides](/assets/presentations/Sunho_Kim_Reopt.pdf)"
-    - title: Updates
-      link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Extending Automatic Differentiation Support in RooFit. Roadmap"
+      date: 2023-09-06 14:00:00 +0200
+      speaker: "Abhi Acherjee"
+      link: "[Slides](/assets/presentations/Extending_ADSupport_In_RooFit-Abhi_Acherjee.pdf)"
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy - Progress Update"
       date: 2023-11-08 14:00:00 +0200
       speaker: "Smit Shah"

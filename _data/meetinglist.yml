@@ -1,4 +1,32 @@
 - name: "CaaS Monthly Meeting"
+  date: 2024-01-10 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/96034182995?pwd=QjFwaDVqazdFVGhvOHhyOFc1OVRZdz09)"
+  label: caas_10Jan2024
+  agenda:
+    - title: "Open Source Software For The Win"
+      speaker: "Saqib A (QuillPusher)"
+      description: |
+        This talk will cover notable OSS achievements, especially those that are
+        in contrast to big tech, striving to protect the consumers and their
+        data.
+
+        We'll start with GrapheneOS, a hardened fork of Android AOSP. Notably,
+        GrapheneOS makes upstream contributions to the Android Open Source
+        Project (AOSP) and other upstream projects, and many of its features
+        were implemented in AOSP, Linux, LLVM, and other projects that
+        GrapheneOS is based on.
+
+        GrapheneOS substantially expands the standard mitigations for memory
+        corruption vulnerabilities, and some of these features are designed to
+        directly catch the memory corruption bugs either via an explicit check
+        or memory protection and abort the program to prevent them from being
+        exploited.
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 1 Feb 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2023-12-07 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/96034182995?pwd=QjFwaDVqazdFVGhvOHhyOFc1OVRZdz09)"
