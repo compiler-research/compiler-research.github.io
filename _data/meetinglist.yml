@@ -22,8 +22,10 @@
         directly catch the memory corruption bugs either via an explicit check
         or memory protection and abort the program to prevent them from being
         exploited.
+      slides: "/assets/presentations/Saqib-OSSFTW.pdf"
     - title: Next meeting
       speaker: Vassil Vassilev
+      slides: "/assets/presentations/CR_11_01_2024.pdf"
       link: 1 Feb 1700
 
 - name: "CaaS Monthly Meeting"
