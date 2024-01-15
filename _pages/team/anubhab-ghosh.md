@@ -1,10 +1,10 @@
 ---
-title: "Compiler Research - Team - Smit Shah"
+title: "Compiler Research - Team - Anubhab Ghosh"
 layout: gridlay
 excerpt: "Compiler Research: Team members"
 sitemap: false
-permalink: /team/SmitShah
-email: ssmit1607@gmail.com
+permalink: /team/AnubhabGhosh
+email: anubhabghosh.me@gmail.com
 ---
 
 {% include team-profile.html %}
