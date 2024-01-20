@@ -19,6 +19,8 @@
     * Automate the creation of equivalent C++ objects in the xeus-clang-REPL
       kernel when Python objects are created
     * Add documentation
+  status: ongoing
+  responsible: Aaron Jomy, Smit Shah
 
 - name: "Extend the Cppyy support in Numba"
   description: |
@@ -370,6 +372,8 @@
       * Extend the unit test coverage.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
+  status: ongoing
+  responsible: Vaibhav Thakkar
 
 - name: "Broaden the Scope for the Floating-Point Error Estimation Framework in Clad"
 
@@ -556,8 +560,6 @@
       * Find and fix cases where there are bugs
       * Implement template instantiation error recovery support
       * Implement argument-dependent lookup (ADL) recovery support
-  status: ongoing
-  responsible: Purva Chaudhari
 
 - name: "Add initial integration of Clad with Enzyme"
   description: |
@@ -801,7 +803,6 @@
   status: completed
   responsible: Anubhab Ghosh
 
-
 - name: 'Modernize the LLVM "Building A JIT" tutorial series'
   description: |
     The LLVM BuildingAJIT tutorial series teaches readers to build their own JIT
@@ -835,6 +836,8 @@
     code for your chosen architecture.
   tasks: |
     Write a JITLink specialization for a not-yet-supported format/architecture.
+  status: completed
+  responsible: Various Contributors
 
 - name: "Extend clang AST to provide information for the type as written in template instantiations"
   description: |
