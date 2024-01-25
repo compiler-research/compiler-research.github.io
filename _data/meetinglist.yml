@@ -112,6 +112,7 @@
         of the capabilities of our system via the Jupyter interactive
         environment.
       video: "https://youtu.be/be89sF0WLrc"
+      slides: "/assets/presentations/V_Vassilev-CaaS_ShowCase.pdf"
     - title: Next meeting
       speaker: Vassil Vassilev
       link: 5 Oct 1700
