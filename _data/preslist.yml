@@ -1,3 +1,30 @@
+- title: "Making Likelihood Calculations Fast Using Automatic Differentiation in RooFit¶"
+  description: |
+    In this talk, we present our efforts in supporting Automatic Differentiation
+    (AD) in RooFit, a toolkit for statistical modeling and fitting used by many
+    HEP/NP experiments that is part of ROOT. The new AD backend improves both
+    the performance and numeric stability of likelihood minimizations, for which
+    we will provide several examples in this contribution. Our approach is to
+    extend RooFit with a tool that generates overhead-free C++ code for a full
+    likelihood function built from RooFit functional models. Gradients are then
+    generated using Clad, a compiler-based source-code-transformation AD tool,
+    using this C++ code. After presenting promising results from a
+    proof-of-concept with this pipeline applied to a HistFactory model at the
+    ACAT 2022 conference, we showcased more general benchmarks on the full
+    minimization pipeline at CHEP 2023. In this workshop, we present how AD can
+    be applied to production workflows in the field of HEP/NP. We also
+    demonstrate that AD is the prime choice for workflows with many parameters,
+    yielding lower minimization times and faster overall fit convergence due to
+    lesser fit iterations and improved accuracy of the calculated gradients.
+
+  location: "[MODE 2023](https://indico.cern.ch/event/1242538/)"
+  date: 2023-07-25
+  speaker: G Singh
+  id: "GSMODE2023"
+  artifacts: |
+    [Link to Slides](/assets/presentations/G_Singh-MODE3_Fast_Likelyhood_Calculations_RooFit.pdf)
+  highlight: 1
+
 - title: "Automatic Interoperability Between C++ and Python"
   description: |
     The simplicity of Python and the power of C++ force stark choices on a
@@ -35,7 +62,7 @@
   location: "[PyHEP.Dev 2023](https://indico.cern.ch/event/1234156/contributions/5504654/)"
   date: 2023-07-25
   speaker: B Kundu
-  id: "PyHEPDev2023"
+  id: "BKPyHEPDev2023"
   artifacts: |
     [Link to Slides](/assets/presentations/B_Kundu-PyHEP23_Cppyy_CppInterOp.pdf)
   highlight: 1
