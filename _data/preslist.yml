@@ -1,4 +1,28 @@
-- title: "Making Likelihood Calculations Fast Using Automatic Differentiation in RooFit¶"
+- title: "Efficient C++ Derivatives Through Source Transformation AD With Clad"
+  description: |
+    Clad enables automatic differentiation (AD) for C++. It is based on LLVM
+    compiler infrastructure and is a plugin for Clang compiler. Clad is based
+    on source code transformation. Given C++ source code of a mathematical
+    function, it can automatically generate C++ code for computing derivatives
+    of the function. Clad supports a large set of C++ features including control
+    flow statements and function calls. It supports reverse-mode AD
+    (a.k.a backpropagation) as well as forward-mode AD. It also facilitates
+    computation of hessian matrix and jacobian matrix of any arbitrary function.
+
+    In this talk we describe the programming model that Clad enables. We explain
+    what are the benefits of using transformation-based automatic
+    differentiation in high-performance static languages such as C++. We show
+    examples of how to use the tool at scale.
+
+  location: "[MODE 2023](https://indico.cern.ch/event/1242538/)"
+  date: 2023-07-25
+  speaker: V Vassilev
+  id: "VVMODE2023"
+  artifacts: |
+    [Link to Slides](/assets/presentations/V_Vassilev-MODE2023_Efficient_Cpp_Derivatives_Clad.pdf)
+  highlight: 1
+
+- title: "Making Likelihood Calculations Fast Using Automatic Differentiation in RooFit"
   description: |
     In this talk, we present our efforts in supporting Automatic Differentiation
     (AD) in RooFit, a toolkit for statistical modeling and fitting used by many
