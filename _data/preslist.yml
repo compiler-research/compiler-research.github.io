@@ -1,3 +1,37 @@
+- title: "Accelerating Large Scientific Workflows Using Source Transformation Automatic Differentiation"
+  description: |
+    In this presentation, we will delve into the innovative world of Clad, an
+    automatic differentiation (AD) tool designed for C++. We introduce the Clad
+    programming model and highlight the advantages of employing
+    transformation-based automatic differentiation within high-performance
+    static languages like C++. Through practical examples, we demonstrate how
+    Clad can be leveraged at scale.
+
+    Our discussion will also focus on the integration of AD into RooFit, a
+    toolkit extensively utilized in high-energy physics and nuclear physics
+    experiments for statistical modeling. We showcase how the new AD backend
+    effectively extracts differentiable properties from decades-old
+    infrastructure, resulting in enhanced performance and numeric stability
+    during likelihood minimizations.
+
+    One of the key aspects of our approach is the development of a generic
+    methodology to transform the object-oriented compute graph within RooFit
+    into overhead-free C++ code, making it amenable to AD. This transformation
+    enables us to apply AD to large production workflows consisting of hundreds
+    of thousands of lines of scientific codes. Furthermore, we will illustrate
+    that AD emerges as the preferred choice for workflows involving numerous
+    parameters. It leads to reduced minimization times, faster overall fit
+    convergence by minimizing fit iterations, and improved accuracy in gradient
+    calculations.
+
+  location: "SNL"
+  date: 2023-10-16
+  speaker: V Vassilev
+  id: "VVSNL2023"
+  artifacts: |
+    [Link to Slides](/assets/presentations/V_Vassilev-SNL_Accelerating_Large_Workflows_Clad.pdf)
+  highlight: 1
+
 - title: "Unlocking the Power of C++ as a Service: Uniting Python's Usability with C++'s Performance"
   description: |
     In many ways Python and C++ represent the two ends in the spectrum of
