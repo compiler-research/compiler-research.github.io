@@ -66,6 +66,28 @@
     [Link to Slides](/assets/presentations/V_Vassilev-LLVMDev23_CppPython.pdf)
   highlight: 1
 
+- title: "Code-Completion in Clang-Repl"
+  description: |
+    Built upon Clang and LLVM incremental compilation pipelines, Clang-Repl is
+    a C++ interpreter featuring a REPL that enables C++ users to develop
+    programs in an exploratory fashion. Autocompletion in Clang-Repl is a
+    significant leap forward in this direction. The feature empowers Clang-Repl
+    to accelerate their input and prevent typos. Inspired by the counterpart
+    feature in Cling, a downstream project of Clang-Repl, our auto-completion
+    feature leverages existing components of Clang/LLVM, and provides
+    context-aware semantic completion suggestions. In this talk, we will present
+    how autocompletion works at REPL and how it interacts with other Clang/LLVM
+    infrastructure.
+    <br/><br/>
+
+  location: "[LLVM 2023](https://llvm.swoogo.com/2023devmtg/agenda)"
+  date: 2023-10-12
+  speaker: F Fu
+  id: "FFLLVM2023"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Y_Fu-LLVMDev23_ClangReplAutoComplete.pdf)
+  highlight: 1
+
 - title: "Automatic program reoptimization support in LLVM ORC JIT"
   description: |
     One of the prominent applications of the JIT compiler is the ability to
