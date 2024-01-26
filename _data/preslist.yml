@@ -57,6 +57,40 @@
     [Link to Slides](/assets/presentations/S_Kim-LLVMDev23_Automatic_Program_Reopt.pdf)
   highlight: 1
 
+- title: "C++ as a service - rapid software development and dynamic interoperability with python and beyond"
+  description: |
+    The C++ programming language is used for many numerically intensive
+    scientific applications. A combination of performance and solid backward
+    compatibility has led to its use for many research software codes over the
+    past 20 years. Despite its power, C++ is often seen as difficult to learn
+    and inconsistent with rapid application development. Exploration and
+    prototyping is slowed down by the long edit-compile-run cycles during
+    development.
+
+    In this talk we show how to leverage our experience in interactive C++,
+    just-in-time compilation technology (JIT), dynamic optimizations, and large
+    scale software development to greatly reduce the impedance mismatch between
+    C++ and Python. We show how clang-repl generalizes Cling in LLVM upstream to
+    offer a robust, sustainable and omnidisciplinary solution for C++ language
+    interoperability. The demonstrate how we have:
+      * advanced the interpretative technology to provide a state-of-the-art
+        C++ execution environment;
+      * enabled functionality which can provide native-like, dynamic runtime
+        interoperability between C++ and Python; and
+      * allowed utilization of heterogeneous hardware.
+
+    The presentation includes interactive session where we demonstrate some of
+    the capabilities of our system via the Jupyter interactive environment.
+
+  location: "[Compiler-Research Monthly 2023](https://compiler-research.org/meetings/#caas_20Sep2023)"
+  date: 2023-09-20
+  speaker: V Vassilev
+  id: "VVCRSep2023"
+  artifacts: |
+    [Video](https://youtu.be/be89sF0WLrc),&nbsp;
+    [Link to Slides](/assets/presentations/V_Vassilev-CaaS_ShowCase.pdf)
+  highlight: 1
+
 - title: "Efficient C++ Derivatives Through Source Transformation AD With Clad"
   description: |
     Clad enables automatic differentiation (AD) for C++. It is based on LLVM
