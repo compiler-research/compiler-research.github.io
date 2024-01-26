@@ -14,7 +14,7 @@ WORK_DIR=$(mktemp -d)
 gs -dSAFER -dQUIET -dNOPLATFONTS -dNOPAUSE -dBATCH \
    -sOutputFile="$WORK_DIR/%d.png" \
    -sDEVICE=pngalpha \
-   -r72 \
+   -r48 \
    -dTextAlphaBits=4 \
    -dGraphicsAlphaBits=4 \
    -dUseCIEColor \

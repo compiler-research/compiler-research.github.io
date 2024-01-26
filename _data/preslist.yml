@@ -1,3 +1,37 @@
+- title: "Unlocking the Power of C++ as a Service: Uniting Python's Usability with C++'s Performance"
+  description: |
+    In many ways Python and C++ represent the two ends in the spectrum of
+    programming languages. C++ has an important role in the field of computing
+    as the language design principles promote efficiency, reliability and
+    backward compatibility – a vital tripod for any long-lived codebase. Python
+    has prioritized better usability and safety while making some tradeoffs on
+    efficiency and backward compatibility. That has led developers to believe
+    that there is a binary choice between performance and usability.
+
+    Python has become the language of data science and machine learning in
+    particular while C++ still is the language of voice for performance-critical
+    software. The C++ and Python ecosystems are vast and achieving seamless
+    interoperability between them is essential to avoid risky software rewrites.
+
+    In this talk we leverage our decade-old experience in writing automatic
+    Python to C++ bindings. We demonstrate how we could connect the Python
+    interpreter to the new in-tree C++ interpreter called Clang-Repl. We show
+    how we can build a uniform execution environment between both languages
+    using the new compiler-as-a-service (CaaS) API available in Clang. The
+    execution environment enables advanced interoperability such as the ability
+    for Python to instantiate C++ templates on demand, inherit from C++ classes
+    or catch std::exception. We show how CaaS can be connected to external
+    services such as Jupyter and execute code written in both languages.
+
+  location: "[LLVM 2023](https://llvm.swoogo.com/2023devmtg/agenda)"
+  date: 2023-10-12
+  speaker: V Vassilev
+  id: "VVLLVM2023"
+  artifacts: |
+    [Link to Slides](/assets/presentations/V_Vassilev-LLVMDev23_CppPython.pdf)
+    [Video](https://youtu.be/rdfBnGjyFrc)
+  highlight: 1
+
 - title: "Efficient C++ Derivatives Through Source Transformation AD With Clad"
   description: |
     Clad enables automatic differentiation (AD) for C++. It is based on LLVM
@@ -506,7 +540,7 @@
     locations.
 
     In this talk, we showcase the above mentioned advantages through examples
-    and outline Clad&#8217;s features, applications and support extensions. We
+    and outline Clad's features, applications and support extensions. We
     describe the challenges coming from supporting automatic differentiation of
     broader C++ and present how Clad can compute derivatives of functions,
     member functions, functors and lambda expressions. We show the newly added
