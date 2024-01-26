@@ -117,12 +117,12 @@
     times one order of magnitude below RooFits other backends and improving the
     fit convergence rate.
 
-  location: "[MODE 2023](https://indico.cern.ch/event/1242538/)"
+  location: "[The Road to Differentiable and Probabilistic Programming in Fundamental Physics 2023](https://indico.ph.tum.de/event/7113)"
   date: 2023-06-27
   speaker: G Singh
   id: "GSMiapbTUM2023"
   artifacts: |
-    [Link to Slides](/assets/presentations/assets/presentations/G_Singh-MiapbTUM_AD_RooFit.pdf)
+    [Link to Slides](/assets/presentations/G_Singh-MiapbTUM_AD_RooFit.pdf)
   highlight: 1
 
 - title: "Fast and Automatic Floating Point Error Analysis With CHEF-FP"
