@@ -19,6 +19,13 @@
   education: MPhil Advanced Computer Science, University of Cambridge (2018)
   active: 1
 
+- name: Alexander Penev
+  info: Assoc. Prof.
+  photo: Penev.png
+  email: apenev@uni-plovdiv.bg
+  education:  PhD Computer Science, University of Plovdiv “Paisii Hilendarski”, Plovdiv, Bulgaria (2013)
+  active: 1
+
 - name: Aaron Jomy
   photo: Aaron.jpg
   info: "Google Summer of Code 2023 Contributor"
