@@ -1,3 +1,45 @@
+- title: "Automatic Interoperability Between C++ and Python"
+  description: |
+    The simplicity of Python and the power of C++ force stark choices on a
+    scientific software stack. There have been multiple developments to mitigate
+    language boundaries by implementing language bindings, but the impedance
+    mismatch between the static nature of C++ and the dynamic one of Python
+    hinders their implementation; examples include the use of user-defined
+    Python types with templated C++ and advanced memory management.
+
+    The development of the C++ interpreter Cling has changed the way we can
+    think of language bindings as it provides an incremental compilation
+    infrastructure available at runtime. That is, Python can interrogate C++ on
+    demand, and bindings can be lazily constructed at runtime. This automatic
+    binding provision requires no direct support from library authors and offers
+    better performance than alternative solutions, such as PyBind11. ROOT
+    pioneered this approach with PyROOT, which was later enhanced with its
+    successor, cppyy. However, until now, cppyy relied on the reflection layer
+    of ROOT, which is limited in terms of provided features and performance.
+
+    The next step for language interoperability with cppyy, enabling research
+    into uniform cross-language execution environments and boosting optimization
+    opportunities across language boundaries. We illustrate the use of advanced
+    C++ in Numba-accelerated Python through cppyy. We outline a path forward for
+    re-engineering parts of cppyy to use upstream LLVM components to improve
+    performance and sustainability. We demonstrate cppyy purely based on a C++
+    reflection library, InterOp, which offers interoperability primitives based
+    on Cling and Clang-Repl.
+
+    Based on our recent publication: https://arxiv.org/abs/2304.02712
+
+    We can share more details about the efforts done within the
+    compiler-research project in the area of mixing python and C++ in a single
+    jupyter notebook via technologies such as xeus-clang-repl.
+
+  location: "[PyHEP.Dev 2023](https://indico.cern.ch/event/1234156/contributions/5504654/)"
+  date: 2023-07-25
+  speaker: B Kundu
+  id: "PyHEPDev2023"
+  artifacts: |
+    [Link to Slides](/assets/presentations/B_Kundu-PyHEP23_Cppyy_CppInterOp.pdf)
+  highlight: 1
+
 - title: "Fast and Automatic Floating Point Error Analysis With CHEF-FP"
   description: |
     As we reach the limit of Moore's Law, researchers are exploring different 
