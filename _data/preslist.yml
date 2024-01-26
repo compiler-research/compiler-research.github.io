@@ -28,8 +28,33 @@
   speaker: V Vassilev
   id: "VVLLVM2023"
   artifacts: |
+    [Video](https://youtu.be/rdfBnGjyFrc),&nbsp;
     [Link to Slides](/assets/presentations/V_Vassilev-LLVMDev23_CppPython.pdf)
-    [Video](https://youtu.be/rdfBnGjyFrc)
+  highlight: 1
+
+- title: "Automatic program reoptimization support in LLVM ORC JIT"
+  description: |
+    One of the prominent applications of the JIT compiler is the ability to
+    compile “hot” functions utilizing various runtime profiling metrics gathered
+    by slow versions of functions. The ORC API can be generalized further to
+    make use of the profiling metrics and “reoptimize” the function hiding the
+    reoptimization latency. For instance, one of the many applications of this
+    technique is to compile functions at a lower optimization level for faster
+    compilation speed and then reoptimize them to a higher level when those
+    functions are frequently executed. This talk we demonstrate how we can
+    express lazy JIT, speculative compilation, and re-optimization as "symbol
+    redirection" problems. We demonstrate the improved ORC API for redirecting
+    symbols. In addition, this technical talk will peek at internal details of
+    how we implemented re-optimization support and showcase the demos such as
+    real time clang-repl re-optimization from -O0 to -O3 or real time virtual
+    call optimization through de-virtualization.
+  location: "[LLVM 2023](https://llvm.swoogo.com/2023devmtg/agenda)"
+  date: 2023-10-11
+  speaker: S Kim
+  id: "SKLLVM2023"
+  artifacts: |
+    [Video](https://youtu.be/2ST0Rz_pC58),&nbsp;
+    [Link to Slides](/assets/presentations/S_Kim-LLVMDev23_Automatic_Program_Reopt.pdf)
   highlight: 1
 
 - title: "Efficient C++ Derivatives Through Source Transformation AD With Clad"
