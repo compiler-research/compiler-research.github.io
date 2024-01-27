@@ -1,15 +1,3 @@
-- name: "Source Transformation AD Implementers' Bi-weekly Meeting"
-  date: Tuesdays (every second and fourth week of the month)
-  time_cest: "15:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/95343150679?pwd=OHFkR3FmUVNaV2V3MzVZeFJhbkJyZz09)"
-  agenda:
-    - title: Round Table
-      speaker: |
-        M Foco (NVIDIA), W Moses (MIT), A Penev (University of Plovdiv),
-        M Vassilev (University of Plovdiv), I Ifrim (Princeton),
-        Garima Singh (Manipal Institute of Tech)
-      link: "[Meeting Notes](https://docs.google.com/document/d/1qVKlF2FZCLd8wDIIQ4zz9ByF6PkEJYTORe9gcUW6mjE)"
-
 - name: "CaaS Weekly Meeting"
   date: Wednesdays
   time_cest: "14:00"
@@ -100,7 +88,7 @@
     - title: "Add support for differentiating w.r.t multi-dimensional arrays (or pointers) in reverse mode of clad"
       date: 2023-06-07 14:00:00 +0200
       speaker: "Rishabh Bali"
-      link: "[Slides](/assets/presentations/Caas_Weekly_07_06_2023_Rishabh-Support_for_differentiating_w.r.t_multi_dimensional_array_and_pointer_in_reverse_mode_of_clad.pdf)"      
+      link: "[Slides](/assets/presentations/Caas_Weekly_07_06_2023_Rishabh-Support_for_differentiating_w.r.t_multi_dimensional_array_and_pointer_in_reverse_mode_of_clad.pdf)"
     - title: "Improving Automatic Differentiation of Object Oriented Paradigms Using Clad"
       date: 2023-05-24 14:00:00 +0200
       speaker: "Daemond Zhang"
@@ -222,7 +210,7 @@
       speaker: "Garima Singh"
       link: "[Slides](/assets/presentations/CaaS_Weekly_16_02_2022_Garima-Utilizing_Clad_Derivatives_in_RooFit.pdf)"
     - title: "Add support for differentiating with respect to user-defined types -- Progress Update"
-      date: 2022-01-05 14:00:00 +
+      date: 2022-01-05 14:00:00 +0200
       speaker: "Parth Arora"
       link: "[Slides](/assets/presentations/CaaS_Weekly_05_01_2022_Parth-Add_Support_For_Differentiating_wrt_User_Defined_Types.pdf)"
     
