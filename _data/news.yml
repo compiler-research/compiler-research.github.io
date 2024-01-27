@@ -2,6 +2,10 @@
   headline: "Xeus-Cpp 0.3 released"
   link: "https://github.com/compiler-research/xeus-cpp/releases/tag/0.3.0"
 
+- date: 31 December 2023
+  headline: "Google Season of Docs 2023 Concluded Successfully"
+  link: "/blogs/gsod23_quillpusher_experience_blog/"
+  
 - date: 11 November 2023
   headline: "CppInterOp 1.1.0 released"
   link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.1.0"
