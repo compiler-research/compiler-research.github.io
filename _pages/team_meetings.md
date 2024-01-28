@@ -8,6 +8,14 @@ permalink: /team_meetings/
 
 # Team Meetings
 
+The team meetings are used to discuss ongoing implementation challenges and
+reporting progress on the group's projects. The team is geographically
+distributed and comprises contributors actively involved in the implementation
+of specific projects the group is focused on. These virtual meetings are
+scheduled once a week on Wednesdays, serving as a collaborative space where team
+members often initiate discussions or share presentations to inform the group
+about ongoing plans and results.
+
 {% assign standing_meetings = site.data.standing_meetings %}
 
 {% for smeeting in standing_meetings %}
@@ -40,4 +48,4 @@ permalink: /team_meetings/
 
 </div>
 
-{% endfor %} 
+{% endfor %}

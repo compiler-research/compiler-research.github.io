@@ -33,13 +33,13 @@ Compiler-research.org provides a platform where researchers from Princeton
 University and CERN, as well as contributors from around the world, can come
 together to exchange ideas, share insights, and engage in interdisciplinary
 collaborations. By focusing on interpretative C/C++/CUDA, automatic
-differentiation tools, and C++ language interoperability with Python and D,
-our goal is to revolutionize scientific software development and contribute
-to the evolution of programming languages.
+differentiation tools, and C++ language interoperability with Python, our goal
+is to revolutionize scientific software development and contribute to the
+evolution of programming languages.
 
 <i>If you are interested in our work you can join our
 [compiler-research-announce google groups forum](https://groups.google.com/g/compiler-research-announce)
-or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/)</i>
+or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
 
 ## Recent Content
 
