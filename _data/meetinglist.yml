@@ -5,7 +5,17 @@
   label: caas_01Feb2024
   agenda:
     - title: "Exocompilation for productive programming of hardware accelerators"
-      speaker: "Yuka Ikarashi"
+      speaker:
+        image: "https://media.licdn.com/dms/image/C5603AQHzxnclCX9tEw/profile-displayphoto-shrink_800_800/0/1597949617547?e=1712188800&v=beta&t=-vVNhjYV5MvUcua07Go3u6nPi43NVmPwnaIyULx8IOI"
+        name: "Yuka Ikarashi"
+        bio: |
+          Yuka Ikarashi is a fourth-year PhD candidate at MIT CSAIL, advised
+          by Jonathan Ragan-Kelley. She is interested in creating compiler
+          systems and programming languages for real-world applications. She
+          is a co-creator of the Exo programming language and has been a
+          developer for other compiler frameworks such as Clang/LLVM and ROOT.
+          She previously worked at Apple, Amazon, and CERN. She received
+          Masason Foundation Fellowship and Funai Foundation Fellowship awards.
       description: |
         High-performance kernel libraries are critical to exploiting
         accelerators and specialized instructions in many applications. Because
