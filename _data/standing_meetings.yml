@@ -1,6 +1,6 @@
 - name: "CaaS Weekly Meeting"
   date: Wednesdays
-  time_cest: "14:00"
+  time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
     - title: Updates
