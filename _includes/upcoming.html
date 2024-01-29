@@ -7,7 +7,7 @@
 
 {% for event in sorted_meetings limit:3 %}
 <p future-date="{{ event.date | date_to_rfc822 }}">
-  <b>{{ event.agenda[0].title}}</b>, <i>{{ event.agenda[0].speaker }}</i>
+  <b>{{ event.agenda[0].title}}</b>, <i>{{ event.agenda[0].speaker.name }}</i>
   <a href="meetings#{{ event.label }}">({{ event.name }} {{event.date}})</a>
 </p>
 {% endfor %}
