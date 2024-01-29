@@ -5,6 +5,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "ROOT: superbuilds"
+      date: 2023-12-06 14:00:00 +0200
+      speaker: "Pavlo Svrin"
+      link: "[Slides](/assets/presentations/Pavlo_Svirin_ROOT_superbuilds_06.12.2023.pdf)"
     - title: "Re-optimization using JITLink"
       date: 2023-09-27 14:00:00 +0200
       speaker: "Sunho Kim"
