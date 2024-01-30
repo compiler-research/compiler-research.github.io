@@ -26,7 +26,7 @@
 
   location: "SNL"
   date: 2023-10-16
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   id: "VVSNL2023"
   artifacts: |
     [Link to Slides](/assets/presentations/V_Vassilev-SNL_Accelerating_Large_Workflows_Clad.pdf)
@@ -59,7 +59,7 @@
 
   location: "[LLVM 2023](https://llvm.swoogo.com/2023devmtg/agenda)"
   date: 2023-10-12
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   id: "VVLLVM2023"
   artifacts: |
     [Video](https://youtu.be/rdfBnGjyFrc),&nbsp;
@@ -82,7 +82,7 @@
 
   location: "[LLVM 2023](https://llvm.swoogo.com/2023devmtg/agenda)"
   date: 2023-10-12
-  speaker: F Fu
+  speaker: Yuquan (Fred) Fu
   id: "FFLLVM2023"
   artifacts: |
     [Link to Slides](/assets/presentations/Y_Fu-LLVMDev23_ClangReplAutoComplete.pdf)
@@ -106,7 +106,7 @@
     call optimization through de-virtualization.
   location: "[LLVM 2023](https://llvm.swoogo.com/2023devmtg/agenda)"
   date: 2023-10-11
-  speaker: S Kim
+  speaker: Sunho Kim
   id: "SKLLVM2023"
   artifacts: |
     [Video](https://youtu.be/2ST0Rz_pC58),&nbsp;
@@ -140,7 +140,7 @@
 
   location: "[Compiler-Research Monthly 2023](https://compiler-research.org/meetings/#caas_20Sep2023)"
   date: 2023-09-20
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   id: "VVCRSep2023"
   artifacts: |
     [Video](https://youtu.be/be89sF0WLrc),&nbsp;
@@ -165,7 +165,7 @@
 
   location: "[MODE 2023](https://indico.cern.ch/event/1242538/)"
   date: 2023-07-25
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   id: "VVMODE2023"
   artifacts: |
     [Link to Slides](/assets/presentations/V_Vassilev-MODE2023_Efficient_Cpp_Derivatives_Clad.pdf)
@@ -192,7 +192,7 @@
 
   location: "[MODE 2023](https://indico.cern.ch/event/1242538/)"
   date: 2023-07-25
-  speaker: G Singh
+  speaker: Garima Singh
   id: "GSMODE2023"
   artifacts: |
     [Link to Slides](/assets/presentations/G_Singh-MODE3_Fast_Likelyhood_Calculations_RooFit.pdf)
@@ -234,7 +234,7 @@
 
   location: "[PyHEP.Dev 2023](https://indico.cern.ch/event/1234156/contributions/5504654/)"
   date: 2023-07-25
-  speaker: B Kundu
+  speaker: Baidyanath Kundu
   id: "BKPyHEPDev2023"
   artifacts: |
     [Link to Slides](/assets/presentations/B_Kundu-PyHEP23_Cppyy_CppInterOp.pdf)
@@ -268,7 +268,7 @@
 
   location: "[The Road to Differentiable and Probabilistic Programming in Fundamental Physics 2023](https://indico.ph.tum.de/event/7113)"
   date: 2023-06-27
-  speaker: G Singh
+  speaker: Garima Singh
   id: "GSMiapbTUM2023"
   artifacts: |
     [Link to Slides](/assets/presentations/G_Singh-MiapbTUM_AD_RooFit.pdf)
@@ -312,7 +312,7 @@
 
   location: "[IPDPS 2023](https://www.ipdps.org/ipdps2023/)"
   date: 2023-05-18
-  speaker: B Kundu
+  speaker: Baidyanath Kundu
   id: "IPDPS2023"
   artifacts: |
     [Link to Slides](/assets/presentations/IPDPS23-Estimating_Floating_Point_Errors.pdf)
@@ -346,7 +346,7 @@
 
   location: "[CHEP 2023](https://indico.jlab.org/event/459/)"
   date: 2023-05-08
-  speaker: G Singh
+  speaker: Garima Singh
   id: "GSCHEP2023"
   artifacts: |
     [Link to Slides](/assets/presentations/Garima_Singh_AD_RooFIt_CHEP_2023.pdf)
@@ -384,7 +384,7 @@
 
   location: "[PyHEP 2022](https://indico.cern.ch/event/1150631/)"
   date: 2022-09-16
-  speaker: B Kundu
+  speaker: Baidyanath Kundu
   id: "CppyyNumbaPyHEP2022"
   artifacts: |
     [Video](https://www.youtube.com/watch?v=RceFPtB4m1I),&nbsp;
@@ -418,7 +418,7 @@
 
   location: "[ACAT 2022](https://indico.cern.ch/event/1106990/)"
   date: 2022-10-26
-  speaker: G Singh
+  speaker: Garima Singh
   id: "GSACAT2022"
   artifacts: |
     [Link to slides](/assets/presentations/GS-ACAT2022-AutomaticDifferentiationofBinnedLikelihoodswithRooFitandClad.pdf)
@@ -452,7 +452,7 @@
 
   location: "[ACAT 2022](https://indico.cern.ch/event/1106990/)"
   date: 2022-10-28
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   id: "VVACAT2022"
   artifacts: |
     [Link to slides](/assets/presentations/VV-ACAT2022-AdaptingCppforDataScience.pdf)
@@ -487,7 +487,7 @@
 
   location: "[ACAT 2022](https://indico.cern.ch/event/1106990/)"
   date: 2022-10-25
-  speaker: B Kundu
+  speaker: Baidyanath Kundu
   id: "BKACAT2022"
   artifacts: |
     [Link to slides](/assets/presentations/BK-ACAT2022-AutomaticPythonBindingswithCppyyandCling.pdf)
@@ -509,7 +509,7 @@
 
   location: "[MODE AD Workshop 2022](https://indico.cern.ch/event/1145124/contributions/)"
   date: 2022-09-14
-  speaker: G Singh
+  speaker: Garima Singh
   id: "GSModeAD2022"
   artifacts: |
     [Link to slides](/assets/presentations/GS-MODEAD2022-AutomaticDifferentiationinROOT.pdf)
@@ -520,7 +520,7 @@
     Poster presented at the 2022 PI meeting for the CSSI program of the National Science Foundation.
   location: "[2022 NSF CSSI PI meeting](https://cssi-pi-community.github.io/2022-meeting)"
   date: 2022-07-26
-  speaker: D Lange
+  speaker: David Lange
   id: "CaaSNSFPI2022"
   artifacts: |
     [Link to slides](/assets/presentations/CSSI_lange_poster_20202_printed.pdf)
@@ -551,7 +551,7 @@
 
   location: "[SIAM UQ 2022](https://www.siam.org/conferences/cm/conference/uq22)"
   date: 2022-04-14
-  speaker: V Vassilev, G Singh
+  speaker: Vassil Vassilev, Garima Singh
   id: "FPErrorEstADSIAMUQ2022"
   artifacts: |
     [Video](https://www.youtube.com/watch?v=pndnawFPKHA&list=PLeZvkLnDkqbS8yQZ6VprODLKQVdL7vlTO&index=8),&nbsp;
@@ -593,7 +593,7 @@
 
   location: "[ACAT 2021](https://indico.cern.ch/event/855454)"
   date: 2021-11-30
-  speaker: I Ifrim
+  speaker: Ioana Ifrim
   id: "CppADCudaACAT21"
   artifacts: |
     [Video](https://videos.cern.ch/record/2295042),&nbsp;
@@ -631,7 +631,7 @@
     language interoperability for Python and beyond.
   location: "[LLVM Developers' Meeting 2021](https://llvm.swoogo.com/2021devmtg/)"
   date: 2021-11-17
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   id: "InteractiveCppLLVMDev21"
   artifacts: |
     [Video](https://youtu.be/33ncbIQoa4c),&nbsp;
@@ -668,7 +668,7 @@
 
   location: "[24th EuroAD Workshop 2021](http://www.autodiff.org/?module=Workshops&submenu=EuroAD%2F24%2Fprogramme)"
   date: 2021-11-04
-  speaker: I Ifrim
+  speaker: Ioana Ifrim
   id: "CppADCudaEuroAD21"
   artifacts: "[Link to slides](/assets/presentations/I_Ifrim-EuroAD21_GPU_AD.pdf)"
   highlight: 1
@@ -710,7 +710,7 @@
     for C++ and CUDA.
   location: "[CppCon21](https://cppcon.org/program2021/)"
   date: 2021-10-27
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   id: "InteractiveCppCppCon21"
   artifacts: |
     [Video](https://youtu.be/23E0S3miWB0),&nbsp;
@@ -764,7 +764,7 @@
     feature.
   location: "[CppCon21](https://cppcon.org/program2021/)"
   date: 2021-10-26
-  speaker: "W Moses, V Vassilev"
+  speaker: "William Moses, Vassil Vassilev"
   id: DifferentiableProgrammingInCppCppCon21
   artifacts: |
     [Video](https://youtu.be/1QQj1mAV-eY),&nbsp;
@@ -775,14 +775,14 @@
   description:
   location: "Weekly Compiler Research Meetings"
   date: 2023-02-01
-  speaker: G Singh
+  speaker: Garima Singh
   artifacts: "[Link to slides](/assets/presentations/RooFitADPlanofWork_01_02_23.pdf)"
 
 - title: "A numba extension for cppyy / PyROOT"
   description:
   location: "[Parallelism, Performance and Programming model meeting](https://indico.cern.ch/e/PPP140)"
   date: 2022-09-01
-  speaker: B Kundu
+  speaker: Baidyanath Kundu
   artifacts:
     - "[Slides](https://indico.cern.ch/event/1196174/contributions/5028203/attachments/2501253/4296778/PPP.pdf), "
     - "[Notebook](https://indico.cern.ch/event/1196174/contributions/5028203/attachments/2501253/4296735/PPP.ipynb)"
@@ -791,28 +791,28 @@
   description:
   location: "[IRIS-HEP GSoC presentations meeting](https://indico.cern.ch/event/1066812/)"
   date: 2021-09-01
-  speaker: G Singh
+  speaker: Garima Singh
   artifacts: "[Link to slides](https://indico.cern.ch/event/1066812/contributions/4495279/attachments/2301763/3915404/Numerical%20Differentiaition%20.pdf)"
 
 - title: "Floating point error estimation using Clad -- Final Report"
   description:
   location: "[IRIS-HEP topical meeting](https://indico.cern.ch/event/1040761/)"
   date: 2021-06-21
-  speaker: G Singh
+  speaker: Garima Singh
   artifacts: "[Link to slides](https://indico.cern.ch/event/1040761/contributions/4371613/attachments/2268248/3851583/floating_point_error_est.pdf)"
 
 - title: "Utilise Second Order Derivatives from Clad in ROOT"
   description:
   location: "[IRIS-HEP GSoC presentations meeting](https://indico.cern.ch/event/1066812/)"
   date: 2021-09-01
-  speaker: B Kundu
+  speaker: Baidyanath Kundu
   artifacts: "[Link to slides](https://indico.cern.ch/event/1066812/contributions/4509414/attachments/2301766/3915408/Utilize%20second%20order%20derivatives%20from%20Clad%20in%20ROOT.pdf)"
 
 - title: "Add support for differentiating functors"
   description:
   location: "[IRIS-HEP GSoC presentations meeting](https://indico.cern.ch/event/1066812/)"
   date: 2021-09-01
-  speaker: P Arora
+  speaker: Parth Arora
   artifacts:
     - "[presentation](https://indico.cern.ch/event/1066812/contributions/4485920/attachments/2301761/3915402/IRIS-HEP-Add-support-for-differentiating-functors-presentation.pdf), "
     - "[Poster](/assets/presentations/add-support-for-differentiating-functors-poster.pdf)"
@@ -821,12 +821,12 @@
   description:
   location: "[IRIS-HEP topical meeting](https://indico.cern.ch/event/1040761/)"
   date: 2021-06-21
-  speaker: I Ifrim
+  speaker: Ioana Ifrim
   artifacts: "[Link to slides](https://indico.cern.ch/event/1040761/contributions/4400258/attachments/2268253/3851595/Ioana%20Ifrim%20-%20GPU%20Acceleration%20of%20Automatic%20Differentiation%20in%20C%2B%2B%20with%20Clad.pdf)"
 
 - title: "Floating point error estimation using Clad -- Project Roadmap"
   location: "Onboarding meetup"
-  speaker: G Singh
+  speaker: Garima Singh
   date: 2020-12-15
   description:
   artifacts:
@@ -836,13 +836,13 @@
 - title: "Adding CUDA® Support to Cling: JIT Compile to GPUs"
   description: My abstract
   location: "[2020 LLVM workshop](https://llvm.org/devmtg/2020-09/)"
-  speaker: S Ehrig
+  speaker: Simeon Ehrig
   date: 2020-10-08
   artifacts: "[Link to slides and video](https://zenodo.org/record/4021877)"
 
 - title: "Error estimates of floating-point numbers and Jacobian matrix computation in Clad"
   location: "[2020 LLVM workshop](https://llvm.org/devmtg/2020-09/)"
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   date: 2020-10-07
   artifacts: "[Link to poster](/assets/presentations/LLVM2020_Clad.pdf)"
 
@@ -850,97 +850,97 @@
   description: My abstract
   location: "[2020 LLVM workshop](https://llvm.org/devmtg/2020-09/)"
   date: 2020-10-07
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   artifacts: "[Link to poster](/assets/presentations/LLVM2020_CaaS.pdf)"
 
 - title: "Modernizing Boost in CMSSW"
   description:
   location: "[IRIS-HEP topical meeting](https://indico.cern.ch/event/945364)"
   date: 2020-09-02
-  speaker: L Camolezi
+  speaker: Lukas Camolezi
   artifacts: "[Link to slides](https://indico.cern.ch/event/945364/contributions/3992254/attachments/2095731/3522488/cmssw-finalpresentation.pdf)"
 
 - title: "Enabling C++ Modules for ROOT on Windows"
   description:
   location: "[IRIS-HEP topical meeting](https://indico.cern.ch/event/950229/)"
   date: 2020-09-08
-  speaker: V Garg
+  speaker: Vaibhav Garg
   artifacts: "[Link to slides](/assets/presentations/WinCXXModules_31_08_2020.pdf)"
 
 - title: "Clad -- Automatic Differentiation in C++ and Clang"
   description:
   location: "[23rd Euro AD workshop](http://www.autodiff.org/?module=Workshops&submenu=EuroAD/23/main)"
   date: 2020-08-11
-  speaker: V Vassilev
+  speaker: Vassil Vassilev
   artifacts: "[Link to talk](http://www.autodiff.org/Docs/euroad/23rd%20EuroAd%20Workshop%20-%20Vassil%20Vassilev%20-%20Clad%20--%20Automatic%20Differentiation%20in%20C++%20and%20Clang.pdf)"
 
 - title: "CaaS poster for 2020 NSF CSSI PI meeting"
   description: Our compiler as a service project contribution to the 2020 NSF CSSI PI meeting.
   location: "[2020 NSF CSSI meeting, Seattle, WA](https://cssi-pi-community.github.io/2020-meeting)"
   date: 2020-02-13
-  speaker: D Lange
+  speaker: David Lange
   artifacts: "[Link to poster](/assets/presentations/CSSI2020_poster.pdf)"
 
 - title: "CaaS slide for 2020 NSF CSSI PI meeting"
   description: Our compiler as a service project contribution to the 2020 NSF CSSI PI meeting.
   location: "[2020 NSF CSSI meeting, Seattle, WA](https://cssi-pi-community.github.io/2020-meeting)"
   date: 2020-02-13
-  speaker: D Lange
+  speaker: David Lange
   artifacts: "[Link to slides](/assets/presentations/CSSI2020_slide.pdf)"
 
 - title: "Automatic Differentiation in C++"
   description:
   location: Prague 2020 ISO C++ WG21 meeting
   date: 2020-02-10
-  speaker: V Vassilev and M Foco (NVIDIA)
+  speaker: Vassil Vassilev and Marco Foco (NVIDIA)
   artifacts: "[Link to slides](/assets/presentations/CladInROOT_15_02_2020.pdf)"
 
 - title: "C++ Modules in ROOT and Beyond"
   description:
   location: "[2019 CHEP International Conference](chep2019.org)"
   date: 2019-11-07
-  speaker: O Shadura
+  speaker: Oksana Shadura
   artifacts: "[Link to slides](https://indico.cern.ch/event/773049/contributions/3473264/attachments/1937517/3215659/C_Modules_in_ROOT_and_Beyond4.pdf)"
 
 - title: "Clad: the automatic differentiation plugin for Clang"
   description:
   location: "[IRIS-HEP topical meeting](https://indico.cern.ch/event/815976/)"
   date: 2019-05-29
-  speaker: A Efremov
+  speaker: Aleksandr Efremov
   artifacts: "[Link to slides](https://indico.cern.ch/event/815976/contributions/3405951/attachments/1853315/3043286/CladIRIS.pdf)"
 
 - title: "Future of ROOT runtime C++ modules"
   description:
   location: "[ROOT Users Workshop (Sarajevo)](https://indico.cern.ch/event/697389/)"
   date: 2018-09-12
-  speaker: Y Takahashi
+  speaker: Yuka Takahashi
   artifacts: "[Link to slides](https://indico.cern.ch/event/697389/contributions/3062026/attachments/1714046/2764895/Future_of_ROOT_runtime_C_modules.pdf)"
 
 - title: "Optimizing Frameworks Performance Using C++ Modules-Aware ROOT"
   description:
   location: "[Computing in High Energy Physics (CHEP 2018, Sofia)](https://indico.cern.ch/event/587955/)"
   date: 2018-07-10
-  speaker: Y Takahashi
+  speaker: Yuka Takahashi
   artifacts: "[Link to poster](https://indico.cern.ch/event/587955/contributions/2937639/attachments/1679562/2697775/CHEP_poster_third.pdf)"
 
 - title: "Migrating large codebases to C++ Modules"
   description:
   location: "[19th International Workshop on Advanced Computing and Analysis Techniques in Physics Research (ACAT 2019 Saas-Fee)](https://indico.cern.ch/event/708041/)"
   date: 2019-03-13
-  speaker: Y Takahashi
+  speaker: Yuka Takahashi
   artifacts: "[Link to slides](https://indico.cern.ch/event/708041/contributions/3276196/attachments/1810525/3007180/ACAT_CModules.pdf)"
 
 - title: "DIANA-HEP Final Presentation Runtime C++ modules"
   description:
   location: "[DIANA-HEP Topical meeting](https://indico.cern.ch/event/798499)"
   date: 2019-02-18
-  speaker: Y Takahashi
+  speaker: Yuka Takahashi
   artifacts: "[Link to slides](https://indico.cern.ch/event/798499/contributions/3318311/attachments/1797966/2931691/DIANA_Yuka_final.pdf)"
 
 - title: "Implementation of GlobalModuleIndex in ROOT and Cling"
   description:
   location: "[IRIS-HEP Topical meeting](https://indico.cern.ch/event/840376)"
-  speaker: A Raghunandan
+  speaker: Arpitha Raghunandan
   date: 2019-08-21
   artifacts: "[Link to slides](https://indico.cern.ch/event/840376/contributions/3525646/attachments/1895398/3127159/GSoC_Presentation__GMI.pdf)"
 
@@ -955,19 +955,19 @@
   description:
   location: "[Computing in High Energy Physics (CHEP 2019, Adeliade)](http://chep2019.org)"
   date: 2019-11-05
-  speaker: O Shadura
+  speaker: Oksana Shadura
   artifacts: "[Link to slides](https://indico.cern.ch/event/773049/contributions/3474747/attachments/1935465/3212004/Automatic_Differentiation_in_ROOT3.pdf)"
 
 - title: "C++ Modules in ROOT"
   description:
   location: "[DIANA-HEP topical meeting](https://indico.cern.ch/event/682267/)"
   date: 2017-12-04
-  speaker: R Isemann
+  speaker: Raphael Isemann
   artifacts: "[Link to slides](https://indico.cern.ch/event/682267/contributions/2795954/attachments/1569847/2475832/Runtime_C_Modules_presentation.pdf)"
 
 - title: "ROOT C++ Modules"
   description:
   location: "[DIANA-HEP topical meeting](https://indico.cern.ch/event/643728/)"
   date: 2017-07-17
-  speaker: R Isemann
+  speaker: Raphael Isemann
   artifacts: "[Link to slides](https://indico.cern.ch/event/643728/contributions/2612822/attachments/1494074/2323893/ROOTs_C_modules_status_report.pdf)"

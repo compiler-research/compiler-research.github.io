@@ -31,7 +31,7 @@
       link: "[Slides](/assets/presentations/Extending_ADSupport_In_RooFit-Abhi_Acherjee.pdf)"
     - title: "Code Completion in ClangRepl - GSoC Report"
       date: 2023-08-30 14:00:00 +0200
-      speaker: "Fred Fu"
+      speaker: "Yuquan (Fred) Fu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_30_08_2023_Fred-Code_Completion_in_ClangRepl_GSoC.pdf)"
     - title: "Extending the Cppyy support in Numba - Progress Update"
       date: 2023-08-16 14:00:00 +0200
@@ -63,7 +63,7 @@
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Shreyas_Make_Compilation_Faster_-_ft._Modules.pdf)"
     - title: "Code Completion in ClangRepl"
       date: 2023-06-14 14:00:00 +0200
-      speaker: "Fred Fu"
+      speaker: "Yuquan (Fred) Fu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)"
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
       date: 2023-06-07 14:00:00 +0200      

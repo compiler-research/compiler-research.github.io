@@ -5,7 +5,7 @@
 
 <div class="row">
 
-<div class="col-sm-8 clearfix">
+<div class="col-sm-6">
 <h1>{{ member.name }}</h1>
 {% if member.photo %}
   {% assign member_photo = member.photo %}
@@ -45,5 +45,59 @@
 </div>
 
 {% endif %}
+
+
+<div class="col-sm-6">
+  <h3>Presentations</h3>
+  {% assign presentations = site.data.preslist | where_exp: "item", "item.speaker contains member.name" %}
+  {% for presentation in presentations %}
+  <div class="well text-justify">
+  <pubtit>
+    <a style="text-decoration:none;" href="/presentations#{{ presentation.id }}">
+      {{ presentation.title }},
+    </a>
+    <i>{{ presentation.location | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</i>,
+    {{ presentation.date | date: "%-d %B %Y" }}
+  </pubtit>
+  </div>
+  {% endfor %}
+
+  <hr />
+
+  {% for meeting in site.data.meetinglist %}
+  {% for entry in meeting.agenda %}
+  {% unless entry.speaker contains member.name %}
+    {% continue %}
+  {% endunless %}
+  {% assign speaker = entry.speaker %}
+  {% if speaker and speaker.size != 0 %}
+  <div class="well text-justify">
+  <pubtit>
+    <a style="text-decoration:none;" href="/meetings#{{ meeting.label }}">
+      {{ entry.title }},
+    </a>
+    <i>{{ meeting.name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</i>,
+    {{ meeting.date | date: "%-d %B %Y" }}
+  </pubtit>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+
+  <hr />
+
+  {% assign team_meeting = site.data.standing_meetings %}
+  {% assign presentations = team_meeting.first.agenda | where_exp: "item", "item.speaker contains member.name" %}
+  {% for presentation in presentations %}
+  <div class="well text-justify">
+  <pubtit>
+    {{ presentation.title }},
+    {{ presentation.link | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }},
+    <i>Team Meeting</i>, {{ presentation.date | date: "%-d %B %Y" }}
+  </pubtit>
+  </div>
+  {% endfor %}
+
+</div>
 
 </div>
