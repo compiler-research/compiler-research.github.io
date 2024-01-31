@@ -13,9 +13,8 @@ permalink: /team/
 {% assign active_contrib = site.data.contributors | where: "active", "1" %}
 {% assign past_contrib = site.data.contributors | where_exp: "item", "item.active == nil" %}
 
-{% assign number_printed = 0 %}
 {% for member in active_contrib %}
-{% assign even_odd = number_printed | modulo: 2 %}
+{% assign even_odd = forloop.index0 | modulo: 2 %}
 
 {% if even_odd == 0 %}
 <div class="row">
@@ -60,8 +59,6 @@ permalink: /team/
   {% endfor %}
 </div>
 
-{% assign number_printed = number_printed | plus: 1 %}
-
 {% if even_odd == 1 %}
 </div>
 {% endif %}
@@ -76,9 +73,8 @@ permalink: /team/
 <div class="clearfix">
 
 
-{% assign number_printed = 0 %}
 {% for member in past_contrib %}
-{% assign even_odd = number_printed | modulo: 2 %}
+{% assign even_odd = forloop.index0 | modulo: 2 %}
 
 {% if even_odd == 0 %}
 <div class="row">
@@ -100,8 +96,6 @@ permalink: /team/
 <p> <strong>Education:</strong> {{ member.education }} </p>
 {% endif %}
 </div>
-
-{% assign number_printed = number_printed | plus: 1 %}
 
 {% if even_odd == 1 %}
 </div>
