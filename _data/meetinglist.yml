@@ -4,7 +4,7 @@
   connect: "[Link to zoom](https://princeton.zoom.us/j/92811687505?pwd=Zk13akpuUlowbjhqK0t1TDVPbS9Ydz09)"
   label: caas_01Feb2024
   agenda:
-    - title: "Exocompilation for productive programming of hardware accelerators"
+    - title: "User-Schedulable Languages: Exo and Beyond"
       speaker:
         image: "https://media.licdn.com/dms/image/C5603AQHzxnclCX9tEw/profile-displayphoto-shrink_800_800/0/1597949617547?e=1712188800&v=beta&t=-vVNhjYV5MvUcua07Go3u6nPi43NVmPwnaIyULx8IOI"
         name: "Yuka Ikarashi"
@@ -17,26 +17,22 @@
           She previously worked at Apple, Amazon, and CERN. She received
           Masason Foundation Fellowship and Funai Foundation Fellowship awards.
       description: |
-        High-performance kernel libraries are critical to exploiting
-        accelerators and specialized instructions in many applications. Because
-        compilers are difficult to extend to support diverse and
-        rapidly-evolving hardware targets, and automatic optimization is often
-        insufficient to guarantee state-of-the-art performance, these libraries
-        are commonly still coded and optimized by hand, at great expense, in
-        low-level C and assembly. To better support development of
-        high-performance libraries for specialized hardware, we propose a new
-        programming language, Exo, based on the principle of exocompilation:
-        externalizing target-specific code generation support and optimization
-        policies to user-level code. Exo allows custom hardware instructions,
-        specialized memories, and accelerator configuration state to be defined
-        in user libraries. It builds on the idea of user scheduling to
-        externalize hardware mapping and optimization decisions. Schedules are
-        defined as composable rewrites within the language, and we develop a
-        set of effect analyses which guarantee program equivalence and memory
-        safety through these transformations. We show that Exo enables rapid
-        development of state-of-the-art matrix-matrix multiply and convolutional
-        neural network kernels, for both an embedded neural accelerator and x86
-        with AVX-512 extensions, in a few dozen lines of code each.
+        Single-core performance has long been saturated, and it is critical to
+        exploit the peak performance of heterogeneous accelerators and
+        specialized instructions in many applications. Because compilers are
+        difficult to extend to support diverse and rapidly evolving hardware
+        targets, and automatic optimization is often insufficient to guarantee
+        state-of-the-art performance, high-performance libraries are commonly
+        still coded and optimized by hand, at great expense, in low-level C and
+        assembly. User schedulable languages, or USLs in short, have been
+        proposed to address the challenge by decoupling algorithms and
+        scheduling. In this talk, I will focus on one such USL, Exo, based on
+        the principle of exocompilation: externalizing target-specific code
+        generation support and optimization policies to user-level code. Exo
+        allows custom hardware instructions, specialized memories, and
+        accelerator configuration states to be defined in user libraries.
+        I will also talk about other projects that borrow the idea from USLs
+        and lessons we learned from the industry adoption of Exo.
     - title: Update
       speaker: Vassil Vassilev
     - title: Next meeting
