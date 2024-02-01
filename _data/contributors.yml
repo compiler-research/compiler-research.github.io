@@ -5,11 +5,14 @@
   education: PhD Physics, University of California, Santa Barbara (1999).
   active: 1
 
-- name: <a href="https://vassil.vassilev.info" target="_blank" >Vassil Vassilev</a>
+- name: Vassil Vassilev
   info: Research Staff
   photo: Vassilev.jpg
   email: vvasilev@cern.ch
   education: PhD Computer Science, University of Plovdiv "Paisii Hilendarski", Plovdiv, Bulgaria (2015).
+  www: "https://vassil.vassilev.info"
+  github: ""
+  linkedin: ""
   active: 1
 
 - name: Ioana Ifrim
@@ -95,11 +98,12 @@
       report: |
         [Final Report](/assets/docs/Vaibhav_Thakkar_GSoC23_Report.pdf)
 
-- name: <a href="https://github.com/QuillPusher" target="_blank" >QuillPusher<a>
+- name: QuillPusher
   info: "Technical Writer, Google Season of Docs 2023 contributor"
   active: 1
   email: 9x3qly27@anonaddy.me
   education: "Bachelors Degree in Science (BS)"
+  github: "https://github.com/QuillPusher"
   projects:
     - title: "Interactive Programming Documentation for  Data Science"
       status: Ongoing

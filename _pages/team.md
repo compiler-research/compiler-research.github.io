@@ -10,71 +10,26 @@ permalink: /team/
 
 <div class="clearfix">
 
-{% assign active_contrib = site.data.contributors | where: "active", "1" %}
-{% assign past_contrib = site.data.contributors | where_exp: "item", "item.active == nil" %}
+{% assign members = site.data.contributors %}
 
-{% for member in active_contrib %}
-{% assign even_odd = forloop.index0 | modulo: 2 %}
 
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
+{% assign even_odd = -1 %}
+{% for member in members %}
+{% assign even_odd = even_odd | plus: 1 | modulo: 2 %}
+{% assign previndex0 = forloop.index0 | minus: 1 %}
 
-<div class="col-sm-6 clearfix">
+{% if member.active == nil and members[previndex0].active == 1 %}
 
-{% if member.photo %}
-  {% assign member_photo = member.photo %}
-{% else %}
-  {% assign member_photo = "defaultDP.png" %}
-{% endif %}
-  <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member_photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}</i><br>
-{% if member.email %}
-  <i>email: <{{ member.email }}></i>
-{% endif %}
-  {% if member.photo == "rock.jpg" %}
-  </div>
-     {% continue %}
-  {% endif %}
-{% if member.education %}
-  <p> <strong>Education:</strong> {{ member.education }} </p>
-{% endif %}  
-  {% for project in member.projects %}
-  <p class="text-justify">
-    <strong> {{ project.status }} project:</strong>
-    <i>{{ project.title }}</i><br/>{{ project.description }}
-  </p>
-  <p>
-    <strong>Project Proposal:</strong>
-    <a href="{{ project.proposal }}" target=_blank >URL</a>
-  </p>
-{% if project.report and project.report.size>3 %}
-  <p>
-    <strong>Project Reports:</strong>
-    {{ project.report | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines}}
-  </p>
-{% endif %}  
-  <p> <strong>Mentors:</strong> {{ project.mentors }} </p> 
-  {% endfor %}
 </div>
 
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endfor %}
-</div>
+{% assign even_odd = 0 %}
 
 <hr />
 
 ### Alumni
 
-<div class="clearfix">
+{% endif %}
 
-
-{% for member in past_contrib %}
-{% assign even_odd = forloop.index0 | modulo: 2 %}
 
 {% if even_odd == 0 %}
 <div class="row">
@@ -87,7 +42,13 @@ permalink: /team/
   {% assign member_photo = "defaultDP.png" %}
 {% endif %}
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member_photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4><a href="{{ site.url }}{{ site.baseurl }}/team/{{ member.name | remove: " " }}">{{ member.name }}</a></h4>
+  <h4>
+  {% if member.photo == "rock.jpg" %}
+  {{ member.name }}
+  {% else %}
+  <a href="{{ site.url }}{{ site.baseurl }}/team/{{ member.name | remove: " " }}">{{ member.name }}</a>
+  {% endif %}
+  </h4>
   <i>{{ member.info }}</i><br>
 {% if member.email %}
   <i>email: <{{ member.email }}></i>
