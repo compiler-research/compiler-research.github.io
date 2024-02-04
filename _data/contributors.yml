@@ -165,6 +165,35 @@
   education: PhD Computer Science, National Technical University of Ukraine, 2014
   active: 1
 
+- name: Shreyas Atre
+  photo: Shreyas.jpg
+  info: "Open Source Contributor"
+  email: shreyasatre16@gmail.com
+  education: "B.Tech in Electronics and Telecommunications Engineering, Veermata Jijabai Technological Institute, Mumbai, India | Masters in Computer Science, Louisiana State University, Baton Rouge, United States"
+  github: "https://github.com/SAtacker"
+  www: "https://satacker.github.io"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/atreshreyas/"
+  projects:
+    - title: "Improve the test coverage for CppInterOp"
+      status: Ongoing
+      description: |
+        This project aims to enhance the reliability and robustness of
+        CppInterOp, a library facilitating language interoperability by
+        exposing APIs from Clang and LLVM. Focusing on backward
+        compatibility and minimalistic design, CppInterOp is instrumental
+        in enabling downstream tools to embed Clang and LLVM in their
+        codebases for dynamic interaction with C++. The project's primary
+        objective is to improve the test coverage of CppInterOp by
+        identifying and addressing potential edge cases, especially
+        scenarios involving language interoperability and
+        compiler-as-a-service functionalities. The outcome is expected to
+        increase the overall reliability of the library, providing
+        developers with a more stable foundation for utilizing CppInterOp
+        in diverse scenarios. Previously I worked on improving the lookup
+        of template specialization decls in clang modules.
+      mentors:  Vassil Vassilev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/vacancies">openings</a> for more info
@@ -202,33 +231,6 @@
         arrays and pointers in clad.
       mentors:  Vassil Vassilev, Parth Arora
       proposal: /assets/docs/Rishabh_Bali_Proposal_2023.pdf
-
-- name: Shreyas Atre
-  photo: Shreyas.jpg
-  info: "Open Source Contributor"
-  email: shreyasatre16@gmail.com
-  education: "B.Tech in Electronics and Telecommunications Engineering, Veermata Jijabai Technological Institute, Mumbai, India | Masters in Computer Science, Louisiana State University, Baton Rouge, United States"
-  github: "https://github.com/SAtacker"
-  www: "https://satacker.github.io"
-  projects:
-    - title: "Improve the test coverage for CppInterOp"
-      status: Incomplete
-      description: |
-        This project aims to enhance the reliability and robustness of
-        CppInterOp, a library facilitating language interoperability by
-        exposing APIs from Clang and LLVM. Focusing on backward
-        compatibility and minimalistic design, CppInterOp is instrumental
-        in enabling downstream tools to embed Clang and LLVM in their
-        codebases for dynamic interaction with C++. The project's primary
-        objective is to improve the test coverage of CppInterOp by
-        identifying and addressing potential edge cases, especially
-        scenarios involving language interoperability and
-        compiler-as-a-service functionalities. The outcome is expected to
-        increase the overall reliability of the library, providing
-        developers with a more stable foundation for utilizing CppInterOp
-        in diverse scenarios. Previously I worked on improving the lookup
-        of template specialization decls in clang modules.
-      mentors:  Vassil Vassilev
 
 - name: Anubhab Ghosh
   photo: Anubhab_Ghosh.jpg
