@@ -31,11 +31,22 @@
 
 - name: Aaron Jomy
   photo: Aaron.jpg
-  info: "Google Summer of Code 2023 Contributor"
+  info: "Research Intern at CERN"
   email: aaronjomyjoseph@gmail.com
   education: "B. Tech in Computer Science, Manipal Institute of Technology, Manipal, India"
   active: 1
   projects:
+    - title: "Improve robustness and performance of Cppyy by bringing it closer to LLVM"
+        status: Ongoing
+        description: |
+          Developing CppInterOp, an interoperability mechanism between Python and C++ based on the interactive C++ technologies available in Clang and LLVM.
+          This involves modernizing Cppyy, to use upstream LLVM’s Clang-REPL component as a runtime compiler.
+          We also explore the added performance gain due to fewer dependencies, faster lookups as well as the expanded feature set that can be made available to Cppyy users on schedule with upstream Clang-REPL releases.
+          The project aims to stabilize CppInterop with Clang-REPL and Cling, as well as develop its capabilities with template instantiation and lookups.
+          Another aspect is exploring the optimizations of the current Python-C++ interoperability framework utilizing Numba.
+          Numba allows Python users to Just-In-Time compile subsets of mixed Python-C++ code into machine code which can accelerate codebases that use cppyy by 20 times.
+          Current research aims to expand capabilities to enable users to leverage CUDA C++ code in Python and subsequently utilize Numba for its JIT compilation.
+        mentors: Vassil Vassilev, Wim Lavrijsen(LBNL)
     - title: "Extend the Cppyy support in Numba"
       status: Completed
       description: |
@@ -52,7 +63,7 @@
         the existing numba extension implementation to provide general support for C++ templates.
         This added support will allow cppyy users to define a wider array of standard and templated
         functions that can leverage reference types to the C++ code defined in python.
-      mentors: Baidyanath Kundu, Vassil Vassilev, Wim Lavrijsen
+      mentors: Baidyanath Kundu, Vassil Vassilev, Wim Lavrijsen(LBNL)
       proposal: /assets/docs/Aaron_Jomy_Proposal_2023.pdf
       report: |
         [Final Report](/assets/docs/Aaron_Jomy_GSoC23_Report.pdf)
