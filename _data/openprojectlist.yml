@@ -62,9 +62,14 @@
   high-performance library primitives that are unavailable in Python.
   
   tasks: |
-     * Add support for declaration and parsing of Cppyy-defined CUDA code on the Numba extension.
-     * Design and develop a CUDA compilation and execution mechanism.
-     * Prepare proper tests and documentation.
+    * Extend STL support for std::vectors of arbitrary dimensions
+    * Improve the initialization approach for Eigen classes
+    * Develop a streamlined interconversion mechanism between Python
+    builtin-types, numpy.ndarray, and STL/Eigen data structures
+    * Implement experimental plugins that perform basic computational  
+    operations in frameworks like JAX
+    * Work on integrating these plugins with toolkits like CUTLASS that
+    utilise the bindings to provide a Python API
 
 - name: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
   description: |
