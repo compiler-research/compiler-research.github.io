@@ -1,66 +1,143 @@
-- name: "Enable CUDA compilation on Cppyy-Numba generated IR"
+- name: "Implement CppInterOp API exposing memory, ownership and thread safety information "
   description: |
-  Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling
-  C++ from Python and Python from C++. Initial support has been added that
-  allows Cppyy to hook into the high-performance Python compiler,
-  Numba which compiles looped code containing C++ objects/methods/functions
-  defined via Cppyy into fast machine code. Since Numba compiles the code in
-  loops into machine code it crosses the language barrier just once and avoids
-  large slowdowns accumulating from repeated calls between the two languages.
-  Numba uses its own lightweight version of the LLVM compiler toolkit (llvmlite) 
-  that generates an intermediate code representation (LLVM IR) which is also
-  supported by the Clang compiler capable of compiling CUDA C++ code.
-  
-  The project aims to demonstrate Cppyy's capability to provide CUDA paradigms to
-  Python users without any compromise in performance. Upon successful completion
-  a possible proof-of-concept can be expected in the below code snippet -
+    Incremental compilation pipelines process code chunk-by-chunk by building
+    an ever-growing translation unit. Code is then lowered into the LLVM IR
+    and subsequently run by the LLVM JIT. Such a pipeline allows creation of
+    efficient interpreters. The interpreter enables interactive exploration
+    and makes the C++ language more user friendly. The incremental compilation
+    mode is used by the interactive C++ interpreter, Cling, initially developed
+    to enable interactive high-energy physics analysis in a C++ environment.
 
-  ```python
-  import cppyy
-  import cppyy.numba_ext
-  
-  cppyy.cppdef('''
-  __global__ void MatrixMul(float* A, float* B, float* out) {
-      // kernel logic for matrix multiplication
-  }
-  ''')
+    Clang and LLVM provide access to C++ from other programming languages,
+    but currently only exposes the declared public interfaces of such C++
+    code even when it has parsed implementation details directly. Both the
+    high-level and the low-level program representation has enough information
+    to capture and expose more of such details to improve language
+    interoperability. Examples include details of memory management, ownership
+    transfer, thread safety, externalized side-effects, etc. For example, if
+    memory is allocated and returned, the caller needs to take ownership; if a
+    function is pure, it can be elided; if a call provides access to a data member,
+    it can be reduced to an address lookup.
+    
+    The goal of this project is to develop API for CppInterOp which are capable of
+    extracting and exposing such information AST or from JIT-ed code and use it in
+    cppyy (Python-C++ language bindings) as an exemplar. If time permits, extend
+    the work to persistify this information across translation units and use it on
+    code compiled with Clang.
 
-  @numba.njit
-  def run_cuda_mul(A, B, out):
-      # Allocate memory for input and output arrays on GPU
-      # Define grid and block dimensions
-      # Launch the kernel
-      MatrixMul[griddim, blockdim](d_A, d_B, d_out)	
-  ```
   tasks: |
-     * Add support for declaration and parsing of Cppyy-defined CUDA code on
-     the Numba extension.
-     * Design and develop a CUDA compilation and execution mechanism.
-     * Prepare proper tests and documentation.
+    * Collect and categorize possible exposed interop information kinds
+    * Write one or more facilities to extract necessary implementation details
+    * Design a language-independent interface to expose this information
+    * Integrate the work in clang-repl and Cling
+    * Implement and demonstrate its use in cppyy as an exemplar
+    * Present the work at the relevant meetings and conferences.
+
+- name: "Implement and improve an efficient, layered tape with prefetching capabilities"
+  description: |
+    In mathematics and computer algebra, automatic differentiation (AD) is a set
+    of techniques to numerically evaluate the derivative of a function specified
+    by a computer program. Automatic differentiation is an alternative technique
+    to Symbolic differentiation and Numerical differentiation (the  method of
+    finite differences). Clad is based on Clang which provides the necessary
+    facilities for code transformation. The AD library can differentiate
+    non-trivial functions, to find a partial derivative for trivial cases and has
+    good unit test coverage.
+
+    The most heavily used entity in AD is a stack-like data structure called a
+    tape. For example, the first-in last-out access pattern, which naturally
+    occurs in the storage of intermediate values for reverse mode AD, lends
+    itself towards asynchronous storage. Asynchronous prefetching of values
+    during the reverse pass allows checkpoints deeper in the stack to be stored
+    furthest away in the memory hierarchy. Checkpointing provides a mechanism to
+    parallelize segments of a function that can be executed on independent cores.
+    Inserting checkpoints in these segments using separate tapes enables keeping
+    the memory local and not sharing memory between cores. We will research
+    techniques for local parallelization of the gradient reverse pass, and extend
+    it to achieve better scalability and/or lower constant overheads on CPUs and
+    potentially accelerators. We will evaluate techniques for efficient memory
+    use, such as multi-level checkpointing support. Combining already developed
+    techniques will allow executing gradient segments across different cores or
+    in heterogeneous computing systems. These techniques must be robust and
+    user-friendly, and minimize required application code and build system changes.
+
+    This project aims to improve the efficiency of the clad tape and generalize
+    it into a tool-agnostic facility that could be used outside of clad as well.
+
+  tasks: |
+    * Optimize the current tape by avoiding re-allocating on resize in favor of using connected slabs of array
+    * Enhance existing benchmarks demonstrating the efficiency of the new tape
+    * Add the tape thread safety
+    * Implement multilayer tape being stored in memory and on disk
+    * [Stretch goal] Support cpu-gpu transfer of the tape
+    * [Stretch goal] Add infrastructure to enable checkpointing offload to the new tape
+    * [Stretch goal] Performance benchmarks
+    
+    
+    
+- name: "Enabling CUDA compilation on Cppyy-Numba generated IR"
+  description: |
+    Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling
+    C++ from Python and Python from C++. Initial support has been added that
+    allows Cppyy to hook into the high-performance Python compiler,
+    Numba which compiles looped code containing C++ objects/methods/functions
+    defined via Cppyy into fast machine code. Since Numba compiles the code in
+    loops into machine code it crosses the language barrier just once and avoids
+    large slowdowns accumulating from repeated calls between the two languages.
+    Numba uses its own lightweight version of the LLVM compiler toolkit (llvmlite) 
+    that generates an intermediate code representation (LLVM IR) which is also
+    supported by the Clang compiler capable of compiling CUDA C++ code.
+    
+    The project aims to demonstrate Cppyy's capability to provide CUDA paradigms to
+    Python users without any compromise in performance. Upon successful completion
+    a possible proof-of-concept can be expected in the below code snippet -
+
+    ```python
+    import cppyy
+    import cppyy.numba_ext
+    
+    cppyy.cppdef('''
+    __global__ void MatrixMul(float* A, float* B, float* out) {
+        // kernel logic for matrix multiplication
+    }
+    ''')
+
+    @numba.njit
+    def run_cuda_mul(A, B, out):
+        # Allocate memory for input and output arrays on GPU
+        # Define grid and block dimensions
+        # Launch the kernel
+        MatrixMul[griddim, blockdim](d_A, d_B, d_out)	
+    ```
+  tasks: |
+    * Add support for declaration and parsing of Cppyy-defined CUDA code on
+    the Numba extension.
+    * Design and develop a CUDA compilation and execution mechanism.
+    * Prepare proper tests and documentation.
 
 - name: "Cppyy STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
   description: |
-  Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling 
-  C++ from Python and Python from C++. Cppyy uses pythonized wrappers of useful
-  classes from libraries like STL and Eigen that allow the user to utilize them
-  on the Python side. Current support follows container types in STL like
-  std::vector, std::map, and std::tuple and the Matrix-based classes in
-  Eigen/Dense. These cppyy objects can be plugged into idiomatic expressions
-  that expect Python builtin-types. This behaviour is achieved by growing
-  pythonistic methods like `__len__` while also retaining its C++ methods
-  like `size`.
+    Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling 
+    C++ from Python and Python from C++. Cppyy uses pythonized wrappers of useful
+    classes from libraries like STL and Eigen that allow the user to utilize them
+    on the Python side. Current support follows container types in STL like
+    std::vector, std::map, and std::tuple and the Matrix-based classes in
+    Eigen/Dense. These cppyy objects can be plugged into idiomatic expressions
+    that expect Python builtin-types. This behaviour is achieved by growing
+    pythonistic methods like `__len__` while also retaining its C++ methods
+    like `size`.
 
-  Efficient and automatic conversion between C++ and Python is essential
-  towards high-performance cross-language support. This approach eliminates
-  overheads arising from iterative initialization such as comma insertion in
-  Eigen. This opens up new avenues for the utilization of Cppyy’s bindings in
-  tools that perform numerical operations for transformations, or optimization.
+    Efficient and automatic conversion between C++ and Python is essential
+    towards high-performance cross-language support. This approach eliminates
+    overheads arising from iterative initialization such as comma insertion in
+    Eigen. This opens up new avenues for the utilization of Cppyy’s bindings in
+    tools that perform numerical operations for transformations, or optimization.
 
-  The on-demand C++ infrastructure wrapped by idiomatic Python enables new
-  techniques in ML tools like JAX/CUTLASS. This project allows the C++
-  infrastructure to be plugged into at service to the users seeking
-  high-performance library primitives that are unavailable in Python.
-  
+    The on-demand C++ infrastructure wrapped by idiomatic Python enables new
+    techniques in ML tools like JAX/CUTLASS. This project allows the C++
+    infrastructure to be plugged into at service to the users seeking
+    high-performance library primitives that are unavailable in Python.
+    
   tasks: |
     * Extend STL support for std::vectors of arbitrary dimensions
     * Improve the initialization approach for Eigen classes
@@ -147,7 +224,7 @@
         solutions.
       * Implement the proposed activity analysis mode.
       * Add tests and documentation.
-  status: ongoing
+  status: ongoing 
   responsible: Petro Zarytskyi
 
 - name: "Improve automatic differentiation of object-oriented paradigms using Clad"
@@ -229,39 +306,6 @@
       * Present the work at the relevant meetings and conferences.
   status: completed
   responsible: Anubhab Ghosh
-
-- name: "Implement libInterOp API exposing memory, ownership and thread safety information"
-  description: |
-    Incremental compilation pipelines process code chunk-by-chunk by building an
-    ever-growing translation unit. Code is then lowered into the LLVM IR and
-    subsequently run by the LLVM JIT. Such a pipeline allows creation of
-    efficient interpreters. The interpreter enables interactive exploration and
-    makes the C++ language more user friendly. The incremental compilation mode
-    is used by the interactive C++ interpreter, Cling, initially developed to
-    enable interactive high-energy physics analysis in a C++ environment.
-
-    Clang and LLVM provide access to C++ from other programming languages, but
-    currently only exposes the declared public interfaces of such C++ code
-    even when it has parsed implementation details directly. Both the high-level
-    and the low-level program representation has enough information to capture
-    and expose more of such details to improve language interoperability.
-    Examples include details of memory management, ownership transfer, thread
-    safety, externalized side-effects, etc. For example, if memory is allocated
-    and returned, the caller needs to take ownership; if a function is pure, it
-    can be elided; if a call provides access to a data member, it can be reduced
-    to an address lookup. The goal of this project is to develop API for
-    libInterOp which are capable of extracting and exposing such information AST
-    or from JIT-ed code and use it in cppyy (Python-C++ language bindings) as an
-    exemplar. If time permits, extend the work to persistify this information
-    across translation units and use it on code compiled with Clang.
-  tasks: |
-    There are several foreseen tasks:
-      * Collect and categorize possible exposed interop information kinds
-      * Write one or more facilities to extract necessary implementation details
-      * Design a language-independent interface to expose this information
-      * Integrate the work in clang-repl and Cling
-      * Implement and demonstrate its use in cppyy as an exemplar
-      * Present the work at the relevant meetings and conferences.
 
 - name: "Tutorial development with clang-repl"
   description: |
