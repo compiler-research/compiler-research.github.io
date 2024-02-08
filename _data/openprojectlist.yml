@@ -222,7 +222,7 @@
         solutions.
       * Implement the proposed activity analysis mode.
       * Add tests and documentation.
-  status: ongoing 
+  status: ongoing
   responsible: Petro Zarytskyi
 
 - name: "Improve automatic differentiation of object-oriented paradigms using Clad"
