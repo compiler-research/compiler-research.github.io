@@ -72,9 +72,7 @@
     * [Stretch goal] Support cpu-gpu transfer of the tape
     * [Stretch goal] Add infrastructure to enable checkpointing offload to the new tape
     * [Stretch goal] Performance benchmarks
-    
-    
-    
+
 - name: "Enabling CUDA compilation on Cppyy-Numba generated IR"
   description: |
     Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling
