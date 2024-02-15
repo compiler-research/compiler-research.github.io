@@ -1,3 +1,86 @@
+- name: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
+  description: |
+    xeus-cpp is a Jupyter kernel for cpp based on the native implementation
+    of the Jupyter protocol xeus. This enables users to write and execute
+    C++ code interactively, seeing the results immediately. This REPL
+    (read-eval-print-loop) nature allows rapid prototyping and iterations
+    without the overhead of compiling and running separate C++ programs.
+    This also achieves C++ and Python integration within a single Jupyter
+    environment.
+
+    This project aims to integrate a large language model, such as Bard/Gemini,
+    with the xeus-cpp Jupyter kernel. This integration will enable users to
+    interactively generate and execute code in C++ leveraging the assistance
+    of the language model. Upon successful integration, users will have access
+    to features such as code autocompletion, syntax checking, semantic
+    understanding, and even code generation based on natural language prompts.
+
+  tasks: |
+    * Design and implement mechanisms to interface the large language model with the xeus-cpp kernel. Jupyter-AI might be used as a motivating example
+    * Develop functionalities within the kernel to utilize the language model for code generation based on natural language descriptions and suggestions for autocompletion.
+    * Comprehensive documentation and thorough testing/CI additions to ensure reliability.
+    * [Stretch Goal] After achieving the previous milestones, the student can work on specializing the model for enhanced syntax and semantic understanding capabilities by using xeus notebooks as datasets.
+
+
+- name: "Implementing missing features in xeus-cpp"
+  description: |
+    xeus-cpp is a Jupyter kernel for cpp based on the native implementation
+    of the Jupyter protocol xeus. This enables users to write and execute
+    C++ code interactively, seeing the results immediately. This REPL
+    (read-eval-print-loop) nature allows rapid prototyping and iterations
+    without the overhead of compiling and running separate C++ programs.
+    This also achieves C++ and Python integration within a single Jupyter
+    environment.
+
+    The xeus-cpp is a successor of xeus-clang-repl and xeus-cling. The project
+    goal is to advance the project feature support to the extent of what’s
+    supported in xeus-clang-repl and xeus-cling.
+
+  tasks: |
+    * Fix occasional bugs in clang-repl directly in llvm upstream
+    * Implement the value printing logic
+    * Advance the wasm infrastructure
+    * Write tutorials and demonstrators
+    * Complete the transition of xeus-clang-repl to xeus-cpp
+
+
+- name: "Adoption of CppInterOp in ROOT"
+  description: |
+    Incremental compilation pipelines process code chunk-by-chunk by building
+    an ever-growing translation unit. Code is then lowered into the LLVM IR
+    and subsequently run by the LLVM JIT. Such a pipeline allows creation of
+    efficient interpreters. The interpreter enables interactive exploration
+    and makes the C++ language more user friendly. The incremental compilation
+    mode is used by the interactive C++ interpreter, Cling, initially developed
+    to enable interactive high-energy physics analysis in a C++ environment.
+    The CppInterOp library provides a minimalist approach for other languages
+    to identify C++ entities (variables, classes, etc.). This enables
+    interoperability with C++ code, bringing the speed and efficiency of C++
+    to simpler, more interactive languages like Python. CppInterOp provides
+    primitives that are good for providing reflection information.
+
+    The ROOT is an open-source data analysis framework used by high energy
+    physics and others to analyze petabytes of data, scientifically. The
+    framework provides support for data storage and processing by relying
+    on Cling, Clang, LLVM for building automatically efficient I/O
+    representation of the necessary C++ objects. The I/O properties of each
+    object is described in a compilable C++ file called a /dictionary/.
+    ROOT’s I/O dictionary system relies on reflection information provided
+    by Cling and Clang. However, the reflection information system has grown
+    organically and now ROOT’s core/metacling system has been hard to maintain
+    and integrate.
+
+    The goal of this project is to integrate CppInterOp in ROOT where possible.
+
+  tasks: |
+    * To achieve this goal we expect several infrastructure items to be completed such as Windows support, WASM support
+    * Make reusable github actions across multiple repositories
+    * Sync the state of the dynamic library manager with the one in ROOT
+    * Sync the state of callfunc/jitcall with the one in ROOT
+    * Prepare the infrastructure for upstreaming to llvm
+    * Propose an RFC and make a presentation to the ROOT development team
+
+
 - name: "Implement CppInterOp API exposing memory, ownership and thread safety information "
   description: |
     Incremental compilation pipelines process code chunk-by-chunk by building
@@ -82,7 +165,7 @@
     defined via Cppyy into fast machine code. Since Numba compiles the code in
     loops into machine code it crosses the language barrier just once and avoids
     large slowdowns accumulating from repeated calls between the two languages.
-    Numba uses its own lightweight version of the LLVM compiler toolkit (llvmlite) 
+    Numba uses its own lightweight version of the LLVM compiler toolkit ([llvmlite](https://github.com/numba/llvmlite)) 
     that generates an intermediate code representation (LLVM IR) which is also
     supported by the Clang compiler capable of compiling CUDA C++ code.
     
@@ -145,6 +228,211 @@
     operations in frameworks like JAX
     * Work on integrating these plugins with toolkits like CUTLASS that
     utilise the bindings to provide a Python API
+
+- name: "Improve the LLVM.org Website Look and Feel"
+  description: |
+    The llvm.org website serves as the central hub for information about the
+    LLVM project, encompassing project details, current events, and relevant
+    resources. Over time, the website has evolved organically, prompting the
+    need for a redesign to enhance its modernity, structure, and ease of
+    maintenance.
+    
+    The goal of this project is to create a contemporary and coherent static
+    website that reflects the essence of LLVM.org. This redesign aims to improve
+    navigation, taxonomy, content discoverability, and overall usability. Given
+    the critical role of the website in the community, efforts will be made to
+    engage with community members, seeking consensus on the proposed changes.
+
+    LLVM's [current website](https://llvm.org) is a complicated mesh of uncoordinated pages with
+    inconsistent, static links pointing to both internal and external sources.
+    The website has grown substantially and haphazardly since its inception. 
+
+    It requires a major UI and UX overhaul to be able to better serve the LLVM
+    community. 
+
+    Based on a preliminary site audit, following are some of the problem areas
+    that need to be addressed.
+
+    **Sub-Sites**: Many of the sections/sub-sites have a completely different UI/UX
+    (e.g., [main](https://llvm.org), [clang](https://clang.llvm.org),
+    [lists](https://lists.llvm.org/cgi-bin/mailman/listinfo),
+    [foundation](https://foundation.llvm.org),
+    [circt](https://circt.llvm.org/docs/GettingStarted/),
+    [lnt](http://lnt.llvm.org), and [docs](https://llvm.org/docs)).
+    Sub-sites are divided into 8 separate repos and use different technologies
+    including [Hugo](https://github.com/llvm/circt-www/blob/main/website/config.toml),
+    [Jekyll](https://github.com/llvm/clangd-www/blob/main/_config.yml), etc.
+
+    **Navigation**: On-page navigation is inconsistent and confusing. Cross-sub-site
+    navigation is inconsistent, unintuitive, and sometimes non-existent. Important
+    subsections often depend on static links within (seemingly random) pages.
+    Multi-word menu items are center-aligned and flow out of margins.
+    
+    **Pages**: Many [large write-ups](https://clang.llvm.org/docs/UsersManual.html)
+    lack pagination, section boundaries, etc., making
+    them seem more intimidating than they really are. Several placeholder pages
+    re-route to [3rd party services](https://llvm.swoogo.com/2023devmtg),
+    adding bloat and inconsistency.
+
+    **Search**: Search options are placed in unintuitive locations, like the bottom
+    of the side panel, or from [static links](https://llvm.org/docs/) to
+    [redundant pages](https://llvm.org/docs/search.html). Some pages have
+    no search options at all. With multiple sections of the website hosted in
+    separate projects/repos, cross-sub-site search doesn't seem possible.
+        
+    **Expected results**: A modern, coherent-looking website that attracts new
+    prospect users and empowers the existing community with better navigation,
+    taxonomy, content discoverability, and overall usability. It should also
+    include a more descriptive Contribution Guide ([example](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/layouts)) to help novice
+    contributors, as well as to help maintain a coherent site structure.
+
+    Since the website is a critical infrastructure and most of the community
+    will have an opinion this project should try to engage with the community
+    building community consensus on the steps being taken. 
+
+  tasks: |
+    * Conduct a comprehensive content audit of the existing website.
+    * Select appropriate technologies, preferably static site generators like
+    Hugo or Jekyll.
+    * Advocate for a separation of data and visualization, utilizing formats such
+    as YAML and Markdown to facilitate content management without direct HTML
+    coding.
+    * Present three design mockups for the new website, fostering open discussions
+    and allowing time for alternative proposals from interested parties.
+    * Implement the chosen design, incorporating valuable feedback from the
+    community.
+    * Collaborate with content creators to integrate or update content as needed.
+    
+    The successful candidate should commit to regular participation in weekly
+    meetings, deliver presentations, and contribute blog posts as requested.
+    Additionally, they should demonstrate the ability to navigate the community
+    process with patience and understanding.
+
+
+- name: "On Demand Parsing in Clang"
+  description: |
+    Clang, like any C++ compiler, parses a sequence of characters as they appear,
+    linearly. The linear character sequence is then turned into tokens and AST
+    before lowering to machine code. In many cases the end-user code uses a small
+    portion of the C++ entities from the entire translation unit but the user
+    still pays the price for compiling all of the redundancies.
+
+    This project proposes to process the heavy compiling C++ entities upon using
+    them rather than eagerly. This approach is already adopted in Clang’s CodeGen
+    where it allows Clang to produce code only for what is being used. On demand
+    compilation is expected to significantly reduce the compilation peak memory
+    and improve the compile time for translation units which sparsely use their
+    contents. In addition, that would have a significant impact on interactive
+    C++ where header inclusion essentially becomes a no-op and entities will be
+    only parsed on demand.
+
+    The Cling interpreter implements a very naive but efficient cross-translation
+    unit lazy compilation optimization which scales across hundreds of libraries
+    in the field of high-energy physics.
+
+      ```cpp
+      // A.h
+      #include <string>
+      #include <vector>
+      template <class T, class U = int> struct AStruct {
+        void doIt() { /*...*/ }
+        const char* data;
+        // ...
+      };
+
+      template<class T, class U = AStruct<T>>
+      inline void freeFunction() { /* ... */ }
+      inline void doit(unsigned N = 1) { /* ... */ }
+
+      // Main.cpp
+      #include "A.h"
+      int main() {
+        doit();
+        return 0;
+      }
+      ```
+
+      This pathological example expands to 37253 lines of code to process. Cling
+      builds an index (it calls it an autoloading map) where it contains only
+      forward declarations of these C++ entities. Their size is 3000 lines of code.
+      
+      The index looks like:
+
+      ```cpp
+      // A.h.index
+      namespace std{inline namespace __1{template <class _Tp, class _Allocator> class __attribute__((annotate("$clingAutoload$vector")))  __attribute__((annotate("$clingAutoload$A.h")))  __vector_base;
+        }}
+      ...
+      template <class T, class U = int> struct __attribute__((annotate("$clingAutoload$A.h"))) AStruct;
+      ```
+
+      Upon requiring the complete type of an entity, Cling includes the relevant
+      header file to get it. There are several trivial workarounds to deal with
+      default arguments and default template arguments as they now appear on the
+      forward declaration and then the definition. You can read more [here](https://github.com/root-project/root/blob/master/README/README.CXXMODULES.md#header-parsing-in-root). 
+
+      Although the implementation could not be called a reference implementation,
+      it shows that the Parser and the Preprocessor of Clang are relatively stateless
+      and can be used to process character sequences which are not linear in their
+      nature. In particular namespace-scope definitions are relatively easy to handle
+      and it is not very difficult to return to namespace-scope when we lazily parse
+      something. For other contexts such as local classes we will have lost some
+      essential information such as name lookup tables for local entities. However,
+      these cases are probably not very interesting as the lazy parsing granularity
+      is probably worth doing only for top-level entities.
+
+      Such implementation can help with already existing issues in the standard such
+      as CWG2335, under which the delayed portions of classes get parsed immediately
+      when they're first needed, if that first usage precedes the end of the class.
+      That should give good motivation to upstream all the operations needed to
+      return to an enclosing scope and parse something.
+
+      **Implementation approach**:
+
+      Upon seeing a tag definition during parsing we could create a forward declaration,
+      record the token sequence and mark it as a lazy definition. Later upon complete
+      type request, we could re-position the parser to parse the definition body.
+      We already skip some of the template specializations in a similar way [[commit](https://github.com/llvm/llvm-project/commit/b9fa99649bc99), [commit](https://github.com/llvm/llvm-project/commit/0f192e89405ce)].
+
+      Another approach is every lazy parsed entity to record its token stream and change
+      the Toks stored on LateParsedDeclarations to optionally refer to a subsequence of
+      the externally-stored token sequence instead of storing its own sequence
+      (or maybe change CachedTokens so it can do that transparently). One of the
+      challenges would be that we currently modify the cached tokens list to append
+      an "eof" token, but it should be possible to handle that in a different way.
+
+      In some cases, a class definition can affect its surrounding context in a few
+      ways you'll need to be careful about here:
+
+      1) `struct X` appearing inside the class can introduce the name `X` into the enclosing context.
+
+      2) `static inline` declarations can introduce global variables with non-constant initializers
+      that may have arbitrary side-effects.
+
+      For point (2), there's a more general problem: parsing any expression can trigger
+      a template instantiation of a class template that has a static data member with
+      an initializer that has side-effects. Unlike the above two cases, I don't think
+      there's any way we can correctly detect and handle such cases by some simple analysis
+      of the token stream; actual semantic analysis is required to detect such cases. But
+      perhaps if they happen only in code that is itself unused, it wouldn't be terrible
+      for Clang to have a language mode that doesn't guarantee that such instantiations
+      actually happen.
+
+      Alternative and more efficient implementation could be to make the lookup tables
+      range based but we do not have even a prototype proving this could be a feasible
+      approach.   
+
+  tasks: |
+    * Design and implementation of on-demand compilation for non-templated functions
+    * Support non-templated structs and classes
+    * Run performance benchmarks on relevant codebases and prepare report
+    * Prepare a community RFC document
+    * [Stretch goal] Support templates
+
+    The successful candidate should commit to regular participation in weekly
+    meetings, deliver presentations, and contribute blog posts as requested.
+    Additionally, they should demonstrate the ability to navigate the
+    community process with patience and understanding.
 
 - name: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
   description: |
