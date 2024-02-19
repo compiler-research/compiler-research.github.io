@@ -1,17 +1,33 @@
 ---
 layout: default
 ---
+<div id=left class="col-sm-8">
+	<div>
+	  <div id="jumbo" class="col-sm-12">
+		{% include jumbotron.html %}
+	  </div>
 
-  <div id="homeid" class="col-sm-8">
-    {{ content }}
-  </div>
-  <div id="upcomingid" class="col-sm-4" >
+	</div>
+
+	  <div id="thumbs" class="col-sm-12">
+		{% include thumbnails.html %}
+	  </div>
+	  <div id="homeid" class="col-sm-12">
+		{{ content }}
+	  </div>
+</div>
+
+<div id=left class="col-sm-4">
+
+  <div id="upcomingid" class="col-sm-12" >
     <div style="width: 300px">
       {% include upcoming.html %}
     </div>
   </div>
-  <div id="newsid" class="col-sm-4" >
+
+  <div id="newsid" class="col-sm-12" >
     <div style="width: 300px">
       {% include news.html %}
     </div>
-  </div>
+  </div>  
+</div>

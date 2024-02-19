@@ -33,6 +33,24 @@ figcaption {
 
 /* Top navigation bar */
 
+.navbar-default {
+    background-color: #292929;
+
+    .navbar-brand,
+    .navbar-nav > li > a {
+        color: rgb(236, 236, 236);
+    }
+	
+
+    .dropdown-menu {
+        background-color: #292929; /* Background color for the dropdown menu */
+    }
+
+    .dropdown-menu > li > a {
+        color: rgb(236, 236, 236); /* Font color for the dropdown menu items */
+    }
+
+}
 
 p.byline {
 	text-align: center;
@@ -154,3 +172,20 @@ firstp {
   color: #fff;
   border: 1px solid #fff;
 }
+
+// _styles.scss
+.jumbotron {
+    background-color: rgb(255, 255, 255);
+    color: rgb(41, 41, 41);
+  }
+  
+// custom button style for Front Page, etc.
+
+.custom-btn {
+    background-color: #292929; /* Custom Button Color */
+    color: #fff; /* Custom Button text color */
+  }
+   // hover color for the custom button for Front Page, etc. 
+  .btn-primary:hover {
+    background-color: #292929c7 !important; /* Custom Button hover color */
+  }
