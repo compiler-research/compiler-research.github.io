@@ -1,0 +1,74 @@
+- name: "C++ Language Interoperability Layer"
+  description: |
+    In the CppInterOp (previously LibInterOp) project, we explore the key aspects
+    of language interoperability with C++ using an automated binding approach,
+    focusing on automatic binding to and from Python, but also applicable to other
+    languages like D and Julia. 
+
+  category: "Language Interoperability"
+  link: |
+      https://compiler-research.org/libinterop/
+
+- name: "Clad"
+  description: |
+    Clad is a plugin for the Clang compiler that enables automatic differentiation
+    capabilities for C/C++ codebases. It is a valuable tool for developers seeking
+    to streamline complex mathematical computations and optimize their codebase
+    efficiently.
+
+    Clad facilitates the generation of derivatives, gradients, Hessians, and
+    Jacobians (in forward and/or reverse mode), enhancing the efficiency and
+    versatility of numerical computations.
+
+    Clad not only supports partial and higher-order derivatives but also
+    integrates seamlessly with frameworks like ROOT, providing a comprehensive
+    solution for automatic differentiation needs in C++ applications.
+  category: "Automatic Differentiation"
+  link: |
+    https://compiler-research.org/clad/
+
+- name: "Vectorized Automatic Differentiation (Clad Use Case)"
+  description: |
+    Vectorized Automatic Differentiation in C++ is a powerful technique that
+    enables the automatic computation of derivatives for mathematical functions.
+  category: "Automatic Differentiation"
+  link: |
+    https://compiler-research.org/vectorautodiff/
+
+- name: "Cling"
+  description: |
+    Cling is an interactive C++ interpreter that operates on top of the Clang and
+    LLVM libraries, utilizing LLVM's Just-In-Time (JIT) compiler for fast and
+    optimized compilation processes. 
+
+    By adopting a read-eval-print-loop (REPL) approach, Cling is helping C++
+    development evolve by enabling rapid application development without the need
+    for the traditional edit-compile-run-debug cycle, thus facilitating quick
+    prototyping and exploration in C++.
+
+    By providing support for advanced C++ features like templates, lambdas, and
+    virtual inheritance, Cling empowers developers in exploratory programming with
+    interactive, dynamic language interoperability and rapid prototyping.
+  category: "Interactive C++"
+  link: |
+    https://rawgit.com/root-project/cling/master/www/index.html
+
+- name: "Interactive C++ (Cling Use Case)"
+  description: |
+    Researchers heavily rely on tools that minimize the "time to insight" to
+    enhance productivity. However, the escalating data volumes and computational
+    demands necessitate a constant emphasis on optimizing code performance. This
+    is where interactive capabilities of tools like Cling are useful, enabling
+    navigation through a diverse set of programming languages, development tools,
+    and hardware.
+  category: "Interactive C++"
+  link: |
+    https://compiler-research.org/interactive_cpp
+
+- name: "Incremental Compilation Support in Clang (CaaS) Project"
+  description: |
+    Incremental compilation aims to support clients that need to keep a single 
+    compiler instance active across multiple compile requests. 
+  category: "Compiler-As-A-Service"
+  link: |
+    https://compiler-research.org/caas/

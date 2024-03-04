@@ -133,6 +133,58 @@ docker run --rm -v "$PWD:/srv/jekyll" \
            jekyll serve --livereload
 ```
 
+## Guide to Making Changes to the Website
+
+### Adding a Project to /projects/ directory on the Website
+
+It is possible to 
+
+- add a new page with a lot of project details (e.g.,
+`\_pages\testproject.md`) and then add the project excerpt to the projects
+directory `_data\projects.yml`, or 
+
+- you can simply add the project excerpt to the projects directory
+`_data\projects.yml` if there aren't enough details available for the project.
+
+Next, use the `link` attribute in the `projects.yml` file to define the link
+to the detailed project page (if you created this in the previous step).
+
+Next, look at the values in the `category` field in the `_data\projects.yml`
+file. This represents the "Areas of Research", that are also explained on the
+`/research/` page. If the category you're looking for already exists, then use
+the respective value in the category field. If not, there is one additional
+step that is required for the projects belonging to this category to show up
+on the Projects page:
+
+To populate a new category on the projects page, enter the following snippet
+using your new Research Area's name instead of 'LOREM_IPSUM':
+
+```
+## Research Area: LOREM_IPSUM
+
+{% for project in site.data.projects %}
+  {% if project.category == "LOREM_IPSUM" %}
+
+### {{ project.name }}
+
+{{ project.description | markdownify }}
+
+For more details, please browse to this <a href="{{ project.link }}">link to the project</a>
+
+{% endif %}
+{% endfor %}
+```
+
+The project excerpt should now automatically show up on the '/Projects/' page
+along with the link to the detailed project page.
+
+To change the layout of the Projects page itself, you can browse to
+`_pages\projects.md` and edit the Liquid code as needed.
+
+> Please note that the Projects page exists in parallel to the Open Projects
+> page (`_pages\open_projects.md`), and you should add your project details
+> where it makes more sense.
+
 
 [installation]: https://jekyllrb.com/docs/installation/windows/
 [RubyInstaller Downloads]: https://rubyinstaller.org/downloads/
