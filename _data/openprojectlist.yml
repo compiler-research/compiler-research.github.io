@@ -1,3 +1,116 @@
+- name: "ROOT Superbuilds"
+  description: |
+    [ROOT](https://root.cern/) is a framework for data processing,
+    born at CERN, at the heart of the research on high-energy physics.
+    Every day, thousands of physicists use ROOT applications to analyze their
+    data or to perform simulations. The ROOT software framework is
+    foundational for the HEP ecosystem, providing capabilities such
+    as IO, a C++ interpreter, GUI, and math libraries. It uses
+    object-oriented concepts and build-time modules to layer between
+    components. We believe additional layering formalisms will benefit
+    ROOT and its users.
+
+    Currently, ROOT is built as all-in-one package. We are working to create
+    a modular version of ROOT that provides a minimal base install of core
+    features, then later add functionality via incremental builds. This
+    requires introducing new layering mechanisms and extending the functionality
+    of the existing ROOT package manager prototype.
+  
+  tasks: |
+    * Enhance the existing CMake build system rules to enable lazy building of packages
+    * Bootstrap “RootBase”
+    * Demonstrate “layered” lazy builds
+
+- name: "Improving performance of BioDynaMo using ROOT C++ Modules"
+  description: |
+    [ROOT](https://root.cern/) is a framework for data processing,
+    born at CERN, at the heart of the research on high-energy physics.
+    Every day, thousands of physicists use ROOT applications to analyze their
+    data or to perform simulations. The ROOT software framework is
+    foundational for the HEP ecosystem, providing capabilities such
+    as IO, a C++ interpreter, GUI, and math libraries. It uses
+    object-oriented concepts and build-time modules to layer between
+    components. We believe additional layering formalisms will benefit
+    ROOT and its users.
+
+    BioDynaMo is an agent-based simulation platform that enables users
+    to perform simulations of previously unachievable scale and complexity,
+    making it possible to tackle challenging scientific research questions.
+    The project has a wide range of applications in cancer research,
+    epidemiology, and social sciences.
+
+    BioDynaMo incorporates ROOT for several crucial functionalities such
+    as statistical analysis, random number generation, C++-based Jupyter
+    notebooks, and IO. Some features rely on efficient reflection
+    information about BioDynaMo’s and user-defined C++ classes. This project
+    is about improving the performance of the reflection system by upgrading
+    to C++ modules.
+
+  tasks: |
+    * Rework the cmake rules to incorporate efficiently ROOT via `FetchContent`
+    * Replace invocations of `genreflex` in favor of `rootcling`
+    * Enable C++ modules in `rootcling`
+    * Produce a comparison report
+
+- name: "Using ROOT in the field of genome sequencing"
+  description: |
+    [ROOT](https://root.cern/) is a framework for data processing,
+    born at CERN, at the heart of the research on high-energy physics.
+    Every day, thousands of physicists use ROOT applications to analyze their
+    data or to perform simulations. The ROOT software framework is
+    foundational for the HEP ecosystem, providing capabilities such
+    as IO, a C++ interpreter, GUI, and math libraries. It uses
+    object-oriented concepts and build-time modules to layer between
+    components. We believe additional layering formalisms will benefit
+    ROOT and its users.
+
+    ROOT has broader scientific uses than the field of high energy
+    physics. Several studies have shown promising applications of
+    the ROOT I/O system in the field of genome sequencing. This
+    project is about extending the developed capability in
+    [GeneROOT](https://github.com/GeneROOT) and understanding better
+    the requirements of the field.
+
+  tasks: |
+    * Reproduce the results from previous comparisons against the ROOT master
+    * Investigate changing the compression strategies
+    * Investigate different ROOT file splitting techniques
+    * Produce a comparison report
+    
+- name: "Implement Differentiating of the Kokkos Framework"
+  description: |
+    In mathematics and computer algebra, automatic differentiation (AD) is
+    a set of techniques to numerically evaluate the derivative of a function
+    specified by a computer program. Automatic differentiation is an
+    alternative technique to Symbolic differentiation and Numerical
+    differentiation (the method of finite differences). Clad is based on
+    Clang which provides the necessary facilities for code transformation.
+    The AD library can differentiate non-trivial functions, to find a partial
+    derivative for trivial cases and has good unit test coverage.
+
+    The Kokkos C++ Performance Portability Ecosystem is a production level
+    solution for writing modern C++ applications in a hardware agnostic way.
+    It is part of the US Department of Energies Exascale Project – the leading
+    effort in the US to prepare the HPC community for the next generation of
+    super computing platforms. The Ecosystem consists of multiple libraries
+    addressing the primary concerns for developing and maintaining applications
+    in a portable way. The three main components are the Kokkos Core Programming
+    Model, the Kokkos Kernels Math Libraries and the Kokkos Profiling and
+    Debugging Tools.
+
+    The Kokkos framework is used in several domains including climate modeling
+    where gradients are important part of the simulation process. This project
+    aims at teaching Clad to differentiate Kokkos entities in a performance
+    portable way
+
+  tasks: |
+    * Implement common test cases for Kokkos in Clad
+    * Add support for Kokkos functors
+    * Add support for Kokkos lambdas
+    * Incorporate the changes from the [initial Kokkos PR](https://github.com/vgvassilev/clad/pull/783)
+    * Enhance existing benchmarks demonstrating effectiveness of Clad for Kokkos
+    * [Stretch goal] Performance benchmarks
+
 - name: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
   description: |
     xeus-cpp is a Jupyter kernel for cpp based on the native implementation
