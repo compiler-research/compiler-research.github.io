@@ -1,35 +1,25 @@
 ---
-title: "Summer 2022 Experience of Jun Zhang and Purva Chaudhari"
-layout: gridlay
-excerpt: "Summer 2022 Experience of Jun Zhang and Purva Chaudhari"
+title: "Recovering from Errors in Clang-Repl and Code Undo"
+layout: post
+excerpt: "Incremental C++ enables exploratory programming by considering the 
+translation unit to be an ever-growing entity. This allows implementation of 
+interpreter-like tools such as Cling and Clang-Repl, which consume C++ code 
+piece by piece and use the JIT infrastructure to run each piecewise.  One of 
+the challenges of Incremental C++ is the reliable recovery from errors which 
+allows the session to continue after faulty user code. Supporting reliable 
+error recovery requires splitting the translation unit into a sequence of 
+Partial Translation Units (PTUs). Each declaration is associated with a 
+unique PTU that owns it. Owning PTU isn’t always the “active” (most recent) 
+PTU and it isn’t always the PTU that the declaration comes from. Even a new 
+declaration that isn’t a declaration or or specialization of anything 
+belongs to the active PTU. However, in case of a template specialization, 
+it can be pulled into a more recent PTU by its template arguments."
 sitemap: false
 permalink: blogs/gsoc22_zhang_chaudhari_experience_blog/
+date: 2022-12-02
 ---
 
-# Recovering from Errors in Clang-Repl and Code Undo
-
-**Developers:** Jun Zhang (Software Engineering, Anhui Normal University, WuHu,
-  China) and Purva Chaudhari (California State University Northridge, Northridge
-  CA, USA)
-
-**Mentor:** Vassil Vassilev (Princeton University/CERN)
-
----
-
-**Contact us!**
-
-Jun: jun@junz.org
-
-GitHub username: [junaire](https://github.com/junaire)
-
-
-Purva: [Webpage](https://purva-chaudhari.github.io/My-Portfolio/)
-
-GitHub username: [Purva-Chaudhari](https://github.com/Purva-Chaudhari)
-
----
-
-## Overview of the Project
+### Overview of the Project
 
 Incremental C++ enables exploratory programming by considering the translation
 unit to be an ever-growing entity. This allows implementation of
@@ -82,7 +72,7 @@ clang-repl> float x = 24 // not an error
 ```
 
 
-## Contributions
+### Contributions
 
 The main contributions to this project are listed here.
 
@@ -102,7 +92,7 @@ Pull Requests:
 11. [D130831 - Track DeferredDecls that have been emitted](https://reviews.llvm.org/D130831)
 12. [Code gen passing](https://gist.github.com/Purva-Chaudhari/1555b887618cec569b638e96056d9679)
 
-## Results
+### Results
 
 1. We implemented the initial code undo for Clang-Repl, the patch we submitted
 extends the functionality used to recover from errors and adds functionality to
@@ -133,7 +123,7 @@ auto r4 = printf("bar() = %d\n", bar()); // This fails before my patch. Note thi
 ```
 5. We fixed some issues in lambda usage in Clang-Repl.
 
-## Conclusion
+### Conclusion
 
 During this summer, I not only improved my technical skills but also enhanced my ability to work with others and
 appreciate the charm of open source. I would like to thank all the people who helped me, especially my mentor Vassil,
@@ -141,3 +131,26 @@ who is not only an experienced programmer but also a respected life teacher. I'm
 partner Purva, who made a great effort when preparing our LLVM Dev lightning talk this year.
 
 In the future, I'll continue my journey into the world of open source, and bring the code and love to all!
+
+---
+
+### Credits
+
+**Developers:** Jun Zhang (Software Engineering, Anhui Normal University, WuHu,
+  China) and Purva Chaudhari (California State University Northridge, Northridge
+  CA, USA)
+
+**Mentor:** Vassil Vassilev (Princeton University/CERN)
+
+---
+
+**Contact us!**
+
+Jun: jun@junz.org
+
+GitHub username: [junaire](https://github.com/junaire)
+
+
+Purva: [Webpage](https://purva-chaudhari.github.io/My-Portfolio/)
+
+GitHub username: [Purva-Chaudhari](https://github.com/Purva-Chaudhari)
