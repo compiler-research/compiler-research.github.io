@@ -1,4 +1,44 @@
 - name: "CaaS Monthly Meeting"
+  date: 2024-03-07 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/99894195259?pwd=S1BRclMyY0NlQUx6bjBadldaU2t0UT09)"
+  label: caas_07Mar2024
+  agenda:
+    - title: "IDD – A Platform Enabling Differential Debugging"
+      speaker:
+        image: "https://media.licdn.com/dms/image/C4E03AQHhvshc5Qb0ow/profile-displayphoto-shrink_800_800/0/1517263864752?e=1715212800&v=beta&t=6GUx6zvVq4rz1Va5rXGnla4LfH6b8Sd6rVWt-UYgAHM"
+        name: "Martin Vasilev"
+        bio: |
+          Martin Vassilev has research interest in the area of the compiler
+          construction and analysis of complex software systems. He has obtained
+          his PhD in 2020 in the University of Plovdiv "Paisii Hilendarski"
+          where he continued to develop his academic career. He is now senior
+          assistant professor in the Faculty of Mathematics and Informatics. He
+          continues to participate into the development of open source systems
+          like IDD and others.
+      description: |
+        Debugging is a very time consuming task which is not well supported by
+        existing tools. The existing methods do not provide tools enabling
+        optimal developers’ productivity when debugging regressions in complex
+        systems. It is described in this presentation a possible solution aiding
+        differential debugging. The differential debugging technique performs
+        analysis of the regressed system and identifying the cause of the
+        unexpected behavior by comparing to a previous version of the same
+        system. The prototype, idd, inspects two versions of the executable – a
+        baseline and a regressed version. The interactive debugging session runs
+        side by side both executables and allows to examine and to compare
+        various internal states. The architecture can work with multiple
+        information sources comparing data from different tools. Also it will be
+        shown how idd can detect performance regressions using information from
+        third-party performance facilities.
+    - title: Update
+      speaker: Vassil Vassilev
+      slides: "/assets/presentations/CR_07_03_2024.pdf"
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 4 Apr 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2024-02-01 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/92811687505?pwd=Zk13akpuUlowbjhqK0t1TDVPbS9Ydz09)"
