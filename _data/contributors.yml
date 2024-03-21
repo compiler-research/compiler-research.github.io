@@ -15,13 +15,6 @@
   linkedin: ""
   active: 1
 
-- name: Ioana Ifrim
-  info: Research Staff
-  photo: Ifrim.jpg
-  email: ioana.ifrim@cern.ch
-  education: MPhil Advanced Computer Science, University of Cambridge (2018)
-  active: 1
-
 - name: Alexander Penev
   info: Assoc. Prof.
   photo: Penev.png
@@ -210,6 +203,17 @@
   info: See <a href="/vacancies">openings</a> for more info
   email: vvasilev@cern.ch
   active: 1
+
+################################################################################
+#                                     2024                                     #
+################################################################################
+
+- name: Ioana Ifrim
+  info: Research Staff
+  photo: Ifrim.jpg
+  email: ioana.ifrim@cern.ch
+  education: MPhil Advanced Computer Science, University of Cambridge (2018)
+
 
 ################################################################################
 #                                     2023                                     #
