@@ -1,0 +1,16 @@
+
+<div class="well">
+<h4><b>Open Projects</b></h4>
+  <div style="height: 300px">
+
+    {% assign top_articles = site.data.openprojectlist %}
+    {% for article in top_articles limit:4 %}
+      <p>
+        - <a href="{{ site.url }}{{ site.baseurl }}/open_projects">{{ article.name }}</a>
+      </p>
+    {% endfor %}
+
+
+</div>
+<h4><a href="{{ site.url }}{{ site.baseurl }}/open_projects">... see details</a></h4>
+</div>

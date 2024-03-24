@@ -1,12 +1,14 @@
 
 <div class="well">
-<h4>Timeline</h4>
-  <div class="pre-scrollable" style="max-height: 455px">
+<h4><b>Recent News</b></h4>
+<div style="height: 300px">
 
-{% for article in site.data.news %}
-<p>
-<b>{{ article.date }}</b><br /> <a href="{{article.link}}">{{article.headline}}</a></p>
-{% endfor %}
+  {% assign sorted_news = site.data.news | sort: 'date' | reverse %}
+  {% for article in sorted_news limit:3 %}
+  <p>
+  <b>{{ article.date }}</b><br /> <a href="{{article.link}}">{{article.headline}}</a></p>
+  {% endfor %}
+    
 
 
 </div>

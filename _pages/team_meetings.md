@@ -16,12 +16,14 @@ scheduled once a week on Wednesdays, serving as a collaborative space where team
 members often initiate discussions or share presentations to inform the group
 about ongoing plans and results.
 
+<br>
+
 {% assign standing_meetings = site.data.standing_meetings %}
 
 {% for smeeting in standing_meetings %}
 
 <div class="row">
-<span id="{{meeting.label}}">&nbsp;</span>
+
 
 <div class="clearfix">
 <div class="well" style="padding-left: 20px; padding-right: 20px">
@@ -30,13 +32,17 @@ about ongoing plans and results.
   </a>
 <div>
   Connection information: {{smeeting.connect}} <br />
-</div><div>
+</div>
+<div>
+  Meeting Updates: {{smeeting.updates}} <br />
+</div>
+<div>
   Agenda:
   <ul>
     {% for item in smeeting.agenda %}
     <li><strong>{{item.title}}</strong>
       {% if item.speaker %}
-        ({{item.speaker}}) [{{item.date|date: "%b %-d, %Y"}}]
+        ({{item.speaker}}) [{{smeeting.date|date: "%b %-d, %Y"}}]
       {% endif %}
       {{item.link | markdownify}}
     </li>
