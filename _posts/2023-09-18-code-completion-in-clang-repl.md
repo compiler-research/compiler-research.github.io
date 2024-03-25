@@ -1,30 +1,19 @@
 ---
-title: "GSoC 2022 Experience of Fred Fu"
-layout: gridlay
-excerpt: "GSoC 2022 Experience of Fred Fu"
+title: "Code Completion in Clang Repl"
+layout: post
+excerpt: "Clang-Repl, featuring a REPL(Read-Eval-Print-Loop) environment, allows
+developers to program in C++ interactively. It is a C++ interpreter built upon
+the Clang and LLVM incremental compilation pipeline. One of the missing upstream
+features in Clang-Repl is the ability to propose options for automatically
+completing user input or code completion. Sometimes, C++ can be quite wordy,
+requiring users to type every character of an expression or
+statement. Consequently, this causes typos or syntactic errors."
 sitemap: false
-permalink: "blogs/gsoc23_ffu_experience_blog/"
+permalink: blogs/gsoc23_ffu_experience_blog/
+date: 2023-09-18
 ---
 
-# Code Completion in Clang Repl
-
-**Developers** : Yuquan (Fred) Fu (Computer Science, Indiana University)
-
-**Mentor** : Vassil Vassilev (Princeton University/CERN)
-
-[**GSoC Project Proposal**](https://summerofcode.withgoogle.com/proposals/details/fvAuNKTx)
-
-[**Slides of the First Talk @ CaaS Meeting**](https://compiler-research.org/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)
-
-[**Slides of the Second Talk @ CaaS Meeting**](https://compiler-research.org/assets/presentations/CaaS_Weekly_30_08_2023_Fred-Code_Completion_in_ClangRepl_GSoC.pdf)
-
-**Github** : [capfredf](https://github.com/capfredf)
-
-I will give a [**talk**](https://discourse.llvm.org/t/2023-us-llvm-dev-mtg-progam/73029) on this topic at LLVM Developers' meeting 2023.
-
----
-
-## Overview of the Project
+### Overview of the Project
 
 Clang-Repl, featuring a REPL(Read-Eval-Print-Loop) environment, allows
 developers to program in C++ interactively. It is a C++ interpreter built upon
@@ -67,7 +56,7 @@ The project leverages existing components of Clang/LLVM and aims to provides
 context-aware semantic completion suggestions.
 
 
-## My Approach
+### My Approach
 
 The project mainly consists of two patches. The first patch involves building
 syntactic code completion based on Clang/LLVM infrastruture. The second patch
@@ -75,7 +64,7 @@ goes one step further by implementing type directed code completion.
 
 **Pull Request** : [D154382](https://reviews.llvm.org/D154382)
 
-### Highlights
+#### Highlights
 
 1. In the submitted patch, we have multiple iterations to integrate the new
 components with the existing infrastructure while not reinventing the wheel. For
@@ -102,14 +91,14 @@ external source of the code completion's `ASTContext`. Code completion invokes
 `ExternalASTSource::completeVisibleDeclsMap`, where we import decls from the
 main `ASTContext` to the code completion `ASTContext`.
 
-## Demo
+### Demo
 
-![Demo1](cc1.gif)
+<img src="/images/blog/cc1.gif" width="600" />
 
-![Demo2](cc2.gif)
+<img src="/images/blog/cc2.gif" width="600" />
 
 
-## Future Work
+### Future Work
 
 **Pull Request** : [D159128](https://reviews.llvm.org/D159128)
 
@@ -118,10 +107,9 @@ based on an early version of the patch submitted. With this feature, code
 completion results are further narrowed down to well-typed candidates with
 respect to completion points. Here is a screecast:
 
-![Demo3](tcc.gif)
+<img src="/images/blog/tcc.gif" width="600" />
 
-
-## Conclusion & Acknowledgments
+### Conclusion & Acknowledgments
 
 The journey has been incredibly thrilling. I have honed my C++ skills and delved
 into Clang/LLVM with a focus on interactions of components responsible for
@@ -133,4 +121,20 @@ for his many valuable discussions and feedback regarding the patch. His guidance
 ensured the project procceeded smoothly. Without him, I would have not been able
 to complete the project in a timely manner.
 
+---
 
+### Credits
+
+**Developers** : Yuquan (Fred) Fu (Computer Science, Indiana University)
+
+**Mentor** : Vassil Vassilev (Princeton University/CERN)
+
+[**GSoC Project Proposal**](https://summerofcode.withgoogle.com/proposals/details/fvAuNKTx)
+
+[**Slides of the First Talk @ CaaS Meeting**](https://compiler-research.org/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)
+
+[**Slides of the Second Talk @ CaaS Meeting**](https://compiler-research.org/assets/presentations/CaaS_Weekly_30_08_2023_Fred-Code_Completion_in_ClangRepl_GSoC.pdf)
+
+**Github** : [capfredf](https://github.com/capfredf)
+
+I will give a [**talk**](https://discourse.llvm.org/t/2023-us-llvm-dev-mtg-progam/73029) on this topic at LLVM Developers' meeting 2023.

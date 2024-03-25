@@ -1,0 +1,15 @@
+---
+layout: default
+title: Blog
+---
+<h3>Latest Posts</h3>
+
+<div>
+  {% for post in site.posts %}
+    <div class="well">
+      <h3>{{ post.title }}</h3>
+      {{ post.excerpt }}
+      <p>Read more <a href="{{ post.url }}">here</a></p>
+    </div>
+  {% endfor %}
+  </div>

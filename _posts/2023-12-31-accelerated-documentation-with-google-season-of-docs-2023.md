@@ -1,15 +1,18 @@
 ---
-title: "Recap of Compiler Research Organization’s participation in Google’s Season of Docs 2023"
-layout: gridlay
-excerpt: "A review of the documentation efforts in 2023."
+title: "Driving Collaboration in Documentation: Google Season of Docs 2023"
+layout: post
+excerpt: "A review of the documentation efforts in 2023, powered by Google's 
+Season of Docs initiative. An audit of the existing documentation was done to 
+identify gaps and potential areas of improvement. Our main areas of focus were: 
+Automatic Differentiation applications (using Clad, e.g. in RooFit and 
+Floating-Point Error Estimation), and Python-C++ Interoperability (Clang-Repl 
+(LLVM), CppInterOp, cppyy, Numba, etc.)."
 sitemap: false
 permalink: blogs/gsod23_quillpusher_experience_blog/
+date: 2023-12-31
 ---
 
-
-# Recap of Compiler Research Organization’s participation in Google’s Season of Docs 2023
-
-## How we got started
+### How we got started
 
 An audit of the existing documentation was done to identify gaps and potential
 areas of improvement. Our main areas of focus were (these evolved over time,
@@ -25,7 +28,7 @@ We also wanted to capture the [Student Success Stories], including milestones
 achieved by student developers under the banner of Compiler Research
 Organization’s guidance and mentorship programs.
 
-## What we accomplished
+### What we accomplished
 
 Following are the major documentation areas that we worked on.
 
@@ -40,7 +43,7 @@ Following are the major documentation areas that we worked on.
 These were concluded based on expected timeline. A detailed report with
 relevant PRs can be found in the [GSoD 2023 Case Study].
 
-## Our overall experience
+### Our overall experience
 
 We would consider the project successful, on account of the major documentation
 contributions in upstream LLVM, ROOT, and other repositories, where our
@@ -51,7 +54,7 @@ several brainstorming sessions, we identified several areas that we thought
 needed improvement. Due to the limited time frame that we were working with, we
 prioritised the tasks based on what was urgent and what was important.
 
-## GSoD contributor’s experience
+### GSoD contributor’s experience
 
 “I came into this project without much experience with compiler-related
 technologies. I had technical writing experience, but in a different domain.

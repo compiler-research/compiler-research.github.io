@@ -1,37 +1,21 @@
 ---
-title: "GSoC 2022 Experience of Anubhab Ghosh"
-layout: gridlay
-excerpt: "GSoC 2022 Experience of Anubhab Ghosh"
+title: "Shared Memory Based JITLink Memory Manager"
+layout: post
+excerpt: "LLVM JIT APIs include JITLink, a just-in-time linker that links 
+together objects code units directly in memory and executes them. It uses the
+JITLinkMemoryManager interface to allocate and manage memory for the generated
+code. When the generated code is run in the same process as the linker, memory
+is directly allocated using OS APIs. But for code that runs in a separate
+executor process, an RPC scheme Executor Process Control (EPC) is used. The
+controller process invokes RPCs in the target or executor process to allocate
+memory and then when the code is generated, all the section contents are
+transferred through finalize calls."
 sitemap: false
 permalink: blogs/gsoc22_ghosh_experience_blog/
+date: 2022-12-07
 ---
 
-# Shared Memory Based JITLink Memory Manager
-
-**Developer:** Anubhab Ghosh (Computer Science and Engineering, Indian Institute
-  of Information Technology, Kalyani, India)
-
-**Mentors:** Stefan Gränitz (Freelance Compiler Developer, Berlin, Deutschland),
-  Lang Hames (Apple), Vassil Vassilev (Princeton University/CERN)
-
-**Funding:** [Google Summer of Code 2022](https://summerofcode.withgoogle.com/)
-
----
-
-**Contact me!**
-
-Email: anubhabghosh.me@gmail.com
-
-Github Username: [argentite](https://github.com/argentite)
-
-**Link to GSoC project proposal:** [Anubhab_Ghosh_Proposal_GSoC_2022](https://compiler-research.org/assets/docs/Anubhab_Ghosh_Proposal_2022.pdf)
-
-**Link to GSoC project proposal:** [Anubhab_Ghosh_Final_Report_GSoC_2022](https://compiler-research.org/assets/docs/Anubhab_Ghosh_GSoC2022_Report.pdf)
-
----
-
-
-## Overview of the Project
+### Overview of the Project
 LLVM JIT APIs include JITLink, a just-in-time linker that links together objects
 code units directly in memory and executes them. It uses the
 JITLinkMemoryManager interface to allocate and manage memory for the generated
@@ -42,14 +26,14 @@ controller process invokes RPCs in the target or executor process to allocate
 memory and then when the code is generated, all the section contents are
 transferred through finalize calls.
 
-### Shared Memory
+#### Shared Memory
 The main problem was that EPC runs on top of file descriptor streams like Unix
 pipes or TCP sockets. As all the generated code and data bytes are transferred
 over the EPC this has some overhead that could be avoided by using shared
 memory. If the two processes share the same physical memory pages then we can
 completely avoid extra memory copying.
 
-### Small code model
+#### Small code model
 While we are at it, another goal was to introduce a simple slab-based memory
 manager. It would allocate a large chunk of memory in the beginning from the
 executor process and allocate smaller blocks from that entirely at the
@@ -97,9 +81,9 @@ Small code model is the default for most compilations so this is actually
 required to load ordinary precompiled code, e.g., from existing static archives.
 
 
-## My Approach
+### My Approach
 
-### Memory Mappers
+#### Memory Mappers
 I introduced a new `MemoryMapper` abstraction for interacting with OS APIs at
 different situations. It has separate implementations based on whether the code
 will be executed in the same or different process. The `InProcessMemoryMapper`
@@ -116,7 +100,7 @@ address. Once JITLink has written the code to those mapped addresses, they are
 now already in place in the executor processes so finalization is just a matter
 of sending the memory protections.
 
-### Slab-based allocator
+#### Slab-based allocator
 Furthermore, I developed a slab-based memory allocator for JITLink, reserving a
 large region of memory in the address space of the target process on the first
 allocation. All subsequent allocations result in sub-regions of that to be
@@ -125,7 +109,7 @@ involvement. Furthermore as our all the allocation are from a contiguous memory
 region, it also guarantees that JIT’d memory satisfies the layout constraints
 required by the small code model.
 
-### Concurrency problems
+#### Concurrency problems
 After the implmentation, I tried JIT linking the CPython interpreter to
 benchmark the implementation. We discovered that our overall CPU execution time
 decreased by 45% but somewhat paradoxically clock time increased by 45%. In
@@ -149,9 +133,33 @@ For a more detailed description and all the patches, please consult my
 [GSoC final report](https://compiler-research.org/assets/docs/Anubhab_Ghosh_GSoC2022_Report.pdf).
 
 
-## Acknowledgements
+### Acknowledgements
 
 I would like to share my gratitude for the LLVM community members and my mentors
 Stefan Gränitz, Lang Hames, and Vassil Vassilev, who shared their suggestions
 during the project development. I hope that this project will find its place in
 many applications.
+
+---
+
+### Credits
+
+**Developer:** Anubhab Ghosh (Computer Science and Engineering, Indian Institute
+  of Information Technology, Kalyani, India)
+
+**Mentors:** Stefan Gränitz (Freelance Compiler Developer, Berlin, Deutschland),
+  Lang Hames (Apple), Vassil Vassilev (Princeton University/CERN)
+
+**Funding:** [Google Summer of Code 2022](https://summerofcode.withgoogle.com/)
+
+---
+
+**Contact me!**
+
+Email: anubhabghosh.me@gmail.com
+
+Github Username: [argentite](https://github.com/argentite)
+
+**Link to GSoC project proposal:** [Anubhab_Ghosh_Proposal_GSoC_2022](https://compiler-research.org/assets/docs/Anubhab_Ghosh_Proposal_2022.pdf)
+
+**Link to GSoC project proposal:** [Anubhab_Ghosh_Final_Report_GSoC_2022](https://compiler-research.org/assets/docs/Anubhab_Ghosh_GSoC2022_Report.pdf)

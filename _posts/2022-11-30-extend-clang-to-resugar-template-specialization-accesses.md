@@ -1,34 +1,23 @@
 ---
-title: "GSoC 2022 Experience of Matheus Izvekov"
-layout: gridlay
-excerpt: "GSoC 2022 Experience of Matheus Izvekov"
+title: "Extend Clang to Resugar Template Specialization Accesses"
+layout: post
+excerpt: "Clang is an LLVM native C/C++/Objective-C compiler, which aims to
+ deliver amazingly fast compiles, extremely useful error and warning messages
+  and to provide a platform for building great source level tools. The Clang
+   Static Analyzer and clang-tidy are tools that automatically find bugs in 
+   your code, and are great examples of the sort of tools that can be built 
+   using the Clang frontend as a library to parse C/C++ code. When 
+   instantiating a template, the template arguments are canonicalized 
+   before being substituted into the template pattern. Clang does not 
+   preserve type sugar when subsequently accessing members of the instantiation. 
+   This leads to many infamous pathological errors which have haunted C++ 
+   developers for decades."
 sitemap: false
 permalink: blogs/gsoc22_izvekov_experience_blog/
+date: 2022-11-30
 ---
 
-# Extend Clang to resugar template specialization accesses
-
-**Developer:** Matheus Izvekov
-
-**Mentors:** Richard Smith (Google), Vassil Vassilev (Princeton University/CERN)
-
-**Funding:** [Google Summer of Code 2022](https://summerofcode.withgoogle.com/)
-
----
-
-**Contact me!**
-
-Email: mizvekov@gmail.com
-
-Github Username: [mizvekov](https://github.com/mizvekov)
-
-**Link GSoC project proposal:** [Matheus_Izvekov_Proposal_2022](https://compiler-research.org/assets/docs/Matheus_Izvekov_Proposal_2022.pdf)
-
-
----
-
-
-## Overview of the Project
+### Overview of the Project
 
 Clang is an "LLVM native" C/C++/Objective-C compiler, which aims to deliver
 amazingly fast compiles, extremely useful error and warning messages and to
@@ -56,7 +45,7 @@ Clang has the
 [clang::preferred_name](https://clang.llvm.org/docs/AttributeReference.html#preferred-name)
 attribute to improve the situation but with limited success.
 
-## My approach
+### My approach
 
 To further enhance Clang’s expressive error diagnostics system, I implemented an
 eager approach to syntactic resugaring in Clang. The novel approach does not
@@ -72,7 +61,7 @@ approach, although more efficient, required some intrusive modifications on the
 way substitutions are represented in the AST.
 
 
-## Contributions
+### Contributions
 
 The main contributions to this project are listed here.
 
@@ -90,7 +79,7 @@ Pull Requests:
 8. [D127695 - Implement Template Specialization Resugaring](https://reviews.llvm.org/D127695)
 
 
-## Contributions
+### Contributions
 
 1. Syntactic resugar of Non Type Template Parameters (NTTPs) is still under
 development. When checking template arguments, we perform substitutions on NTTPs
@@ -110,8 +99,28 @@ terms of desugared code, improving the relationship between the user's source
 program and the program evaluation.
 
 
-## Acknowledgements
+### Acknowledgements
 
 I thank my mentors Richard Smith and Vassil Vasilev for their excellent
 support, their welcoming behavior motivated me and gave me the opportunity to
 increase my confidence as a developer in the LLVM open community!
+
+---
+
+### Credits
+
+**Developer:** Matheus Izvekov
+
+**Mentors:** Richard Smith (Google), Vassil Vassilev (Princeton University/CERN)
+
+**Funding:** [Google Summer of Code 2022](https://summerofcode.withgoogle.com/)
+
+---
+
+**Contact me!**
+
+Email: mizvekov@gmail.com
+
+Github Username: [mizvekov](https://github.com/mizvekov)
+
+**Link GSoC project proposal:** [Matheus_Izvekov_Proposal_2022](https://compiler-research.org/assets/docs/Matheus_Izvekov_Proposal_2022.pdf)
