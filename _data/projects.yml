@@ -1,0 +1,84 @@
+- name: "Xeus-CPP - a Jupyter Kernel for C++"
+  description: |
+    Xeus-CPP is a product of OAC-1931408 in collaboration with the QuantStack
+    company. It is a Jupyter kernel for C++ based on the native implementation
+    of the Jupyter protocol xeus. It is supports the Wasm version of Jupyter
+    (JupyterLite). It is a generalization of the Xeus-Clang-Repl (a Jupyter
+    plugin supporting C++ development based on ClangRepl).
+
+    With Xeus-CPP, you can write and execute C++ code interactively, seeing
+    the results immediately. This REPL nature allows you to iterate quickly
+    without the overhead of compiling and running separate C++ programs.
+  link: |
+    https://github.com/compiler-research/xeus-cpp
+
+- name: "Clang-REPL - an Interactive C++ Interpreter"
+  description: |
+    Clang-Repl is an interactive C++ interpreter that allows for incremental
+    compilation. It supports interactive programming for C++ in a
+    read-evaluate-print-loop (REPL) style.
+
+    Clang-Repl is suitable for exploratory programming and in places where
+    time to insight is important. Clang-Repl is a project inspired by the work
+    in Cling, a LLVM-based C/C++ interpreter developed by the field of high
+    energy physics and used by the scientific data analysis framework ROOT.
+    Clang-Repl allows to move parts of Cling upstream, making them useful and
+    available to a broader audience.
+  link: |
+    https://clang.llvm.org/docs/ClangRepl.html
+
+- name: "CppInterOp - a C++ Language Interoperability Layer"
+  description: |
+    CppInterOp (previously LibInterOp) is a product of OAC-1931408 and exposes
+    APIs from Clang and LLVM in a mostly backward compatibe way. The APIs
+    support downstream tools that utilize interactive C++ by using the
+    compiler as a service. That is, embed Clang and LLVM as a libraries in
+    their codebases. 
+    
+    The APIs are designed to be minimalistic and aid non-trivial tasks such as
+    language interoperability on the fly. In such scenarios CppInterOp can be
+    used to provide the necessary introspection information to the other side
+    helping the language cross talk. The package makes it easy to deploy as it
+    ships Clang as a service without any dependencies. 
+  link: |
+    https://github.com/compiler-research/CppInterOp
+
+- name: "Cling - an Interactive C++ Interpreter"
+  description: |
+    Cling is an interactive C++ interpreter that operates on top of the Clang and
+    LLVM libraries, utilizing LLVM's Just-In-Time (JIT) compiler for fast and
+    optimized compilation processes. 
+
+    By adopting a read-eval-print-loop (REPL) approach, Cling is helping C++
+    development evolve by enabling rapid application development without the need
+    for the traditional edit-compile-run-debug cycle, thus facilitating quick
+    prototyping and exploration in C++.
+
+    By providing support for advanced C++ features like templates, lambdas, and
+    virtual inheritance, Cling empowers developers in exploratory programming with
+    interactive, dynamic language interoperability and rapid prototyping.
+  link: |
+    https://github.com/root-project/cling
+
+- name: "Clad - an Automatic Differentiation Tool"
+  description: |
+    Clad is a plugin for the Clang compiler that enables automatic differentiation
+    capabilities for C/C++ codebases. It is a valuable tool for developers seeking
+    to streamline complex mathematical computations and optimize their codebase
+    efficiently.
+
+    Clad facilitates the generation of derivatives, gradients, Hessians, and
+    Jacobians (in forward and/or reverse mode), enhancing the efficiency and
+    versatility of numerical computations.
+
+    Clad not only supports partial and higher-order derivatives but also
+    integrates seamlessly with frameworks like ROOT, providing a comprehensive
+    solution for automatic differentiation needs in C++ applications.
+  link: |
+    https://github.com/vgvassilev/clad
+
+
+
+
+
+
