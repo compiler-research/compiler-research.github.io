@@ -1,14 +1,14 @@
 ---
-title: "News"
+title: "Releases"
 layout: textlay
-excerpt: "Compiler Research"
+excerpt: "Recent Releases from Compiler Research Group"
 sitemap: false
-permalink: /allnews
+permalink: /releases
 ---
 
-# News
+# Releases
 
-{% for article in site.data.news %}
+{% for article in site.data.releases %}
 <p>{{ article.date }} <br>
 <em><a href='{{article.link}}'>{{ article.headline }}</a></em></p>
 {% endfor %}

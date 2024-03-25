@@ -1,478 +1,220 @@
 - name: "CaaS Weekly Meeting"
-  date: 2023-12-06 14:30:00 +0200
+  date: Wednesdays
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
   agenda:
+    - title: Updates
+      link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
     - title: "ROOT: superbuilds"
+      date: 2023-12-06 14:00:00 +0200
       speaker: "Pavlo Svrin"
       link: "[Slides](/assets/presentations/Pavlo_Svirin_ROOT_superbuilds_06.12.2023.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-09-27 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Re-optimization using JITLink"
+      date: 2023-09-27 14:00:00 +0200
       speaker: "Sunho Kim"
       link: "[Slides](/assets/presentations/Sunho_Kim_Reopt.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-09-06 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Extending Automatic Differentiation Support in RooFit. Roadmap"
+      date: 2023-09-06 14:00:00 +0200
       speaker: "Abhi Acherjee"
       link: "[Slides](/assets/presentations/Extending_ADSupport_In_RooFit-Abhi_Acherjee.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-11-08 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy - Progress Update"
+      date: 2023-11-08 14:00:00 +0200
       speaker: "Smit Shah"
       link: "[Slides](/assets/presentations/CaaS_Weekly_08_11_2023_Smit_GSoC_Progress_Update.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-09-20 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "To-Be-Recorded Analysis in Clad. Summary"
+      date: 2023-09-20 14:00:00 +0200
       speaker: "Petro Zarytskyi"
       link: "[Slides](/assets/presentations/Petro_Zarytskyi_TBR_Analysis_In_Clad_Summary_2023_09_20.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-09-06 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Extending Automatic Differentiation Support in RooFit. Roadmap"
+      date: 2023-09-06 14:00:00 +0200
       speaker: "Abhi Acherjee"
       link: "[Slides](/assets/presentations/Extending_ADSupport_In_RooFit-Abhi_Acherjee.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-08-30 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Code Completion in ClangRepl - GSoC Report"
+      date: 2023-08-30 14:00:00 +0200
       speaker: "Yuquan (Fred) Fu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_30_08_2023_Fred-Code_Completion_in_ClangRepl_GSoC.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-08-16 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Extending the Cppyy support in Numba - Progress Update"
+      date: 2023-08-16 14:00:00 +0200
       speaker: "Aaron Jomy"
       link: "[Slides](/assets/presentations/CaaS_Weekly_16_08_2023_Aaron-Extending_the_Cppyy_Support_in_Numba_Progress_Update.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-08-09 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Vectorized Forward Mode Automatic Differentiation in clad - Progress Update"
+      date: 2023-08-09 14:00:00 +0200
       speaker: "Vaibhav Thakkar"
       link: "[Slides](/assets/presentations/CaaS_Weekly_09_08_2023_Vaibhav_Thakkar-vectorized-forward-mode-AD_progress.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-08-02 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "WebAssembly Support for ClangREPL"
+      date: 2023-08-02 14:00:00 +0200
       speaker: "Anubhab Ghosh"
       link: "[Slides](/assets/presentations/Anubhab_Ghosh_wasm_clangrepl.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-08-30 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Tutorial Development with Clang-Repl"
+      date: 2023-08-30 14:00:00 +0200
       speaker: "Krishna Narayanan"
       link: "[Slides](/assets/presentations/CaaS_Weekly_30_08_2023_Krishna_GSoC.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-07-26 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Re-optimization using JITLink"
+      date: 2023-07-26 14:00:00 +0200
       speaker: "Sunho Kim"
       link: "[Slides](/assets/presentations/Sunho_Kim_Re-optimization_using_JITLink.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-07-26 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "TBR (To-Be-Recorded) Analysis Strategy Report"
+      date: 2023-07-26 14:00:00 +0200
       speaker: "Petro Zarytskyi"
       link: "[Slides](/assets/presentations/Petro_Zarystkyi_TBR_analysis_26_07_23.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-06-14 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Making Compilation Faster when using Clang Header Modules"
+      date: 2023-06-14 14:00:00 +0200
       speaker: "Shreyas Atre"
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Shreyas_Make_Compilation_Faster_-_ft._Modules.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-06-14 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Code Completion in ClangRepl"
+      date: 2023-06-14 14:00:00 +0200
       speaker: "Yuquan (Fred) Fu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-06-07 14:30:00 +0200 
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
+      date: 2023-06-07 14:00:00 +0200      
       speaker: "Smit Shah"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_06_2023_Smit_Cross_Talk_Between_C++_Python_Using_cppyy.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-05-31 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "WebAssembly Support for clang-repl"
+      date: 2023-05-31 14:00:00 +0200
       speaker: "Anubhab Ghosh"
       link: "[Slides](/assets/presentations/CaaS_Weekly_25_01_2023_Anubhab_Ghosh_WebAssembly_Support_for_clang-repl.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-05-31 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Handle Execution Results in clang-repl"
+      date: 2023-05-31 14:00:00 +0200
       speaker: "Jun Zhang"
       link: "[Slides](/assets/presentations/CaaS_Weekly_31_05_2023_Jun-Handle_Execution_Results_in_Clang-REPL.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-05-17 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Extending the Cppyy support in Numba"
+      date: 2023-05-17 14:00:00 +0200
       speaker: "Aaron Jomy"
       link: "[Slides](/assets/presentations/CaaS_Weekly_17_05_2023_Aaron-Extending_the_Cppyy_Support_in_Numba.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-11-02 17:00:00 +0200 
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "GSoD 2023 Documentation Progress"
+      date: 2023-11-02 17:00:00 +0200
       speaker: "QuillPusher"
       link: "[Slides](/assets/presentations/CaaS_Weekly_02_11_2023_QuillPusher_GSoD_Progress.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-05-24 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Tutorial Development with clang-REPL. Roadmap"
+      date: 2023-05-24 14:00:00 +0200
       speaker: "Krishna Narayanan"
       link: "[Slides](/assets/presentations/CaaS_Weekly_24_05_2023_Krishna-Tutorial-Development-with-Clang-REPL.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-06-07 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Add support for differentiating w.r.t multi-dimensional arrays (or pointers) in reverse mode of clad"
+      date: 2023-06-07 14:00:00 +0200
       speaker: "Rishabh Bali"
       link: "[Slides](/assets/presentations/Caas_Weekly_07_06_2023_Rishabh-Support_for_differentiating_w.r.t_multi_dimensional_array_and_pointer_in_reverse_mode_of_clad.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-05-24 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Improving Automatic Differentiation of Object Oriented Paradigms Using Clad"
+      date: 2023-05-24 14:00:00 +0200
       speaker: "Daemond Zhang"
       link: "[Slides](/assets/presentations/CaaS_Weekly_24_05_2023_Daemond_Improving_Automatic_Differentiation_of_Object_Oriented_Paradigms_Using_Clad.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-05-17 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Vectorized forward mode automatic differentiation in clad"
+      date: 2023-05-17 14:00:00 +0200
       speaker: "Vaibhav Thakkar"
       link: "[Slides](/assets/presentations/CaaS_Weekly_17_05_2023_Vaibhav_Thakkar-vectorized-forward-mode-AD.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2023-01-25 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Implement value printing in clang-repl - Roadmap"
+      date: 2023-01-25 14:00:00 +0200
       speaker: "Jun Zhang"
       link: "[Slides](/assets/presentations/CaaS_Weekly_25_01_2023_Jun_Zhang_Implement_value_printing_in_clang-repl_Roadmap.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-09-21 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "The CaaS Project. Progress & Plans Q3, Q4"
+      date: 2022-09-21 14:00:00 +0200
       speaker: "Vassil Vassilev"
       link: "[Slides](/assets/presentations/CaaS_Weekly_21_09_2022_Vassil-Q3_Project_Progress_and_Plans.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-09-07 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Shared Memory Based JITLink Memory Manager"
+      date: 2022-09-07 14:00:00 +0200
       speaker: "Anubhab Ghosh"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_09_2022_Anubhab-Shared_Memory_Based_JITLink_Memory_Manager.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-09-07 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Current working status of optmizing ROOT modules"
+      date: 2022-09-07 14:00:00 +0200
       speaker: "Jun Zhang"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_09_2022_Jun_Zhang_Current_Working_Status_of_Optimize_Modules_Usage_For_ROOT.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-08-31 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Clang Template Specialization Resugaring - Roadmap Part 2"
+      date: 2022-08-31 14:00:00 +0200
       speaker: "Matheus Izvekov"
       link: "[Slides](/assets/presentations/M_Izvekov-GSoC_Roadmap_2.html)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-08-31 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Add Initial Integration of Clad with Enzyme - Final Presentation"
+      date: 2022-08-31 14:00:00 +0200
       speaker: "Manish Kausik H"
       link: "[Slides](/assets/presentations/CaaS_Weekly_31_08_22_Manish-Integration_of_Enzyme_with_Clad_Final_Presentation.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-08-10 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Improving the Cling Packaging Tool - Final Presentation"
+      date: 2022-08-10 14:00:00 +0200
       speaker: "Surya Somayyajula"
       link: "[Slides](/assets/presentations/CaaS_Weekly_10_08_2022_Surya_Somayyajula_Improving_the_Cling_Packaging_Tool.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-08-10 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Write JITLink support for new format/architecture Current Progress"
+      date: 2022-08-10 14:30:00 +0200
       speaker: "Sunho Kim"
       link: "[Slides](/assets/presentations/CaaS_Weekly_10_08_2022_Sunho-Write_JITLink_Support_Current_Progress.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-07-20 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Adding AD Support to RooFit"
+      date: 2022-07-20 14:00:00 +0200
       speaker: "Garima Singh"
       link: "[Slides](/assets/presentations/CaaS_Weekly_20_07_22_Garima-Adding_AD_to_RooFit.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-07-13 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "The CaaS Project. Progress & Plans Q2, Q3"
+      date: 2022-07-13 14:00:00 +0200
       speaker: "Vassil Vassilev"
       link: "[Slides](/assets/presentations/CaaS_Weekly_13_07_22_Vassil-Q2_Project_Progress_and_Plans.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-06-29 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Improving the Clang-REPL documentation"
+      date: 2022-06-29 14:00:00 +0200
       speaker: "Sara Bellei"
       link: "[Slides](/assets/presentations/CaaS_Weekly_29_06_2022_Sara-DocsPlan.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-06-29 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Clang-REPL Interactive Analysis - Roadmap"
+      date: 2022-06-29 14:00:00 +0200
       speaker: "Rohit Singh Rathaur"
       link: "[Slides](/assets/presentations/CaaS_Weekly_29_06_22_Rohit-Clang_REPL_Interactive_Analysis.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-06-15 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Python and C++ clang-repl Integration - Progress Update"
+      date: 2022-06-15 14:00:00 +0200
       speaker: "Ioana Ifrim"
       link: "[Slides](/assets/presentations/CaaS_Weekly_15_06_2022_Ioana-Python_and_C++_clang-repl_integration.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-06-15 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Shared Memory Based JITLink Memory Manager - Roadmap"
+      date: 2022-06-15 14:30:00 +0200
       speaker: "Anubhab Ghosh"
       link: "[Slides](/assets/presentations/CaaS_Weekly_15_06_2022_Anubhab-Shared_Based_JITLink_Memory_Manager_Roadmap.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-06-08 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Write JITLink support for a new format/architecture - Roadmap"
+      date: 2022-06-08 14:00:00 +0200
       speaker: "Sunho Kim"
       link: "[Slides](/assets/presentations/CaaS_Weekly_08_06_2022_Sunho_Write_JITLink_support_for_a_new format_architecture.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-06-08 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Optimize ROOT use of modules for large codebases - Roadmap"
+      date: 2022-06-08 14:00:00 +0200
       speaker: "Jun Zhang"
       link: "[Slides](/assets/presentations/CaaS_Weekly_08_06_2022_Jun_Zhang_Optimize_ROOT_Use_Of_Modules_For_Large_Codebases.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-06-01 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Add Initial Integration of Clad with Enzyme - Roadmap"
+      date: 2022-06-01 14:00:00 +0200
       speaker: "Manish Kausik H"
       link: "[Slides](/assets/presentations/CaaS_Weekly_01_06_2022_Manish_Add_Initial_Integration_of_Clad_with_Enzyme.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-06-01 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Clang Template Specialization Resugaring - Roadmap Part 1"
+      date: 2022-06-01 14:00:00 +0200
       speaker: "Matheus Izvekov"
       link: "[Slides](/assets/presentations/M_Izvekov-GSoC_Roadmap_1.html)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-05-25 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Improving performance of C++ modules in Clang-Project - Roadmap"
+      date: 2022-05-25 14:00:00 +0200
       speaker: "Tapasweni Pathak"
       link: "[Slides](/assets/presentations/CaaS_Weekly_25_05_2022_Tapasweni-Improving-performance-of-c++-modules-in-clang-project.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-05-11 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "cppyy Progress Update"
+      date: 2022-05-11 14:00:00 +0200
       speaker: "Baidyanath Kundu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_11_05_2022_Baidyanath-Progress_Report_may_2022.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-04-27 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Utilizing Clad Derivatives in RooFit - Progress Update"
+      date: 2022-04-27 14:00:00 +0200
       speaker: "Garima Singh"
       link: "[Slides](/assets/presentations/CaaS_Weekly_27_04_2022_Garima-Progress_Report_april_2022.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-04-20 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "The CaaS Project.Progress & Plans Q1, Q2"
+      date: 2022-04-20 14:00:00 +0200
       speaker: "Vassil Vassilev"
       link: "[Slides](/assets/presentations/CaaS_Weekly_20_04_2022_Vassil-Q1_Project_Progress_and_Plans.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-04-06 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Differentiation of Eigen and Softsusy libraries by Clad - Project Progress"
+      date: 2022-04-06 14:00:00 +0200
       speaker: "Parth Arora"
       link: "[Slides](/assets/presentations/CaaS_Weekly_06_04_22_Parth-Differentiation_of_Eigen_and_Softsusy_libraries_by_Clad_Progress.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-03-30 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Enhance the incremental compilation error recovery in clang and clang-repl - Project Roadmap and Updates"
+      date: 2022-03-30 14:00:00 +0200
       speaker: "Purva Chaudhari"
       link: "[Slides](/assets/presentations/CaaS_Weekly_30_03_2022_Purva-Enhance_incremental_compilation_error_recovery_in_clang_and_clang-repl.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-03-23 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Heterogenous AD with Clad - CUDA kernels diff support - Project Roadmap"
+      date: 2022-03-23 14:00:00 +0200
       speaker: "Ioana Ifrim"
       link: "[Slides](/assets/presentations/CaaS_Weekly_23_03_2022_Ioana-Heterogenous_AD_with_Clad_CUDA_kernels_differentiation_support.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-03-09 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Improving the reflection layer in cppyy using Cling - Project Roadmap"
+      date: 2022-03-09 14:00:00 +0200
       speaker: "Baidyanath Kundu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_09_03_2022_Baidyanath-Improving_the_reflection_layer_in_cppyy_using_Cling.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-02-16 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "The CaaS Project. Plans Q1, Q2"
+      date: 2022-02-16 14:00:00 +0200
       speaker: "Vassil Vassilev"
       link: "[Slides](/assets/presentations/CaaS_Weekly_16_02_2020-V_Vassilev-Q1_Q2_Project_Plans.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-02-16 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Utilizing Clad Derivatives in RooFit - Preliminary Project Roadmap"
+      date: 2022-02-16 14:00:00 +0200
       speaker: "Garima Singh"
       link: "[Slides](/assets/presentations/CaaS_Weekly_16_02_2022_Garima-Utilizing_Clad_Derivatives_in_RooFit.pdf)"
-- name: "CaaS Weekly Meeting"
-  date: 2022-01-05 14:30:00 +0200
-  time_cest: "17:00"
-  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  updates: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
-  agenda:
     - title: "Add support for differentiating with respect to user-defined types -- Progress Update"
+      date: 2022-01-05 14:00:00 +0200
       speaker: "Parth Arora"
       link: "[Slides](/assets/presentations/CaaS_Weekly_05_01_2022_Parth-Add_Support_For_Differentiating_wrt_User_Defined_Types.pdf)"
     

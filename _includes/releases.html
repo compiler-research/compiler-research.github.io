@@ -1,10 +1,10 @@
 
 <div class="well">
-<h4><b>Recent News</b></h4>
+<h4><b>Releases</b></h4>
 <div style="height: 300px">
 
 
-  {% assign top_articles = site.data.news | slice: 0, 3 %}
+  {% assign top_articles = site.data.releases | slice: 0, 5 %}
   {% for article in top_articles %}
   <p>
   <b>{{ article.date }}</b><br /> <a href="{{article.link}}">{{article.headline}}</a></p>
@@ -13,5 +13,5 @@
 
 
 </div>
-<h4><a href="{{ site.url }}{{ site.baseurl }}/allnews">... see details</a></h4>
+<h4><a href="{{ site.url }}{{ site.baseurl }}/releases">... see details</a></h4>
 </div>
