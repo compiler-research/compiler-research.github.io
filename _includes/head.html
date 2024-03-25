@@ -22,10 +22,8 @@
   {% endfor %}
   {% endif %}
 
-  <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-  <!-- Bootstrap JS -->
   {% if layout.custom_js %}
   {% for javascript in layout.custom_js %}
   <script src="/js/{{ javascript }}.js" />
