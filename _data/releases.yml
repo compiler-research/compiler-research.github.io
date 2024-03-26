@@ -1,75 +1,89 @@
-- date: 1 March 2024
-  headline: "CppInterOp 1.2.0 released"
+- date: 2024-03-01
+  codebase: "CppInterOp"
+  version: "v1.2.0"
   link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.2.0"
 
-- date: 29 February 2024
-  headline: "Clad 1.4 released"
+- date: 2024-02-29
+  codebase: "Clad"
+  version: "v1.4"
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.4"
 
-- date: 11 February 2024
-  headline: "Clad 1.3 released"
+- date: 2024-02-11
+  codebase: "Clad"
+  version: "v1.3"
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.3"
 
-- date: 09 January 2024
-  headline: "Xeus-Cpp 0.3 released"
+- date: 2024-01-09
+  codebase: "Xeus-Cpp"
+  version: "v0.3"
   link: "https://github.com/compiler-research/xeus-cpp/releases/tag/0.3.0"
   
-- date: 11 November 2023
-  headline: "CppInterOp 1.1.0 released"
+- date: 2023-11-11
+  codebase: "CppInterOp"
+  version: "v1.1.0"
   link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.1.0"
 
-- date: 14 August 2023
-  headline: "CppInterOp 1.0 released"
+- date: 2023-08-14
+  codebase: "CppInterOp"
+  version: "v1.0"
   link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.0"
 
-- date: 18 July 2023
-  headline: "Clad 1.2 released"
+- date: 2023-06-18
+  codebase: "Clad"
+  version: "v1.2"
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.2"
   
-- date: 2 April 2023
-  headline: "Initial work Xeus-Cpp in collaboration with QuantStack"
+- date: 2023-04-02
+  codebase: "Initial work Xeus-Cpp in collaboration with QuantStack"
+  version: "v1.0"
   link: "https://github.com/compiler-research/xeus-cpp"
 
-- date: 20 January 2023
-  headline: "Clad 1.1 released"
+- date: 2023-01-20
+  codebase: "Clad"
+  version: "v1.1"
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.1"
 
-- date: 7 October 2022
-  headline: "Clad 1.0 released"
+- date: 2022-10-07
+  codebase: "Clad"
+  version: "v1.0"
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.0"
 
-- date: 11 August 2022
-  headline: "Initial version of xeus-clang-repl"
+- date: 2022-08-11
+  codebase: "Initial version of xeus-clang-repl"
+  version: " "
   link: "https://github.com/compiler-research/xeus-clang-repl"
 
-- date: 25 March 2022
-  headline: "Clang-Repl released in LLVM 14"
+- date: 2022-03-25
+  codebase: "Clang-Repl released in LLVM 14"
+  version: " "
   link: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-14.0.0"
 
-- date: 14 December 2021
-  headline: "Technical Specification for libInterOp released"
-  link: "https://compiler-research.org/libinterop/"
-
-- date: 4 October 2021
-  headline: "Clang-Repl released in LLVM 13"
+- date: 2021-10-04
+  codebase: "Clang-Repl released in LLVM 13"
+  version: " "
   link: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-13.0.0"
 
-- date: 16 August 2021
-  headline: "Clad 0.9 released"
+- date: 2021-08-16
+  codebase: "Clad"
+  version: "v0.9"
   link: "https://github.com/vgvassilev/clad/releases/tag/v0.9"
 
-- date: 28 May 2021
-  headline: "Clad 0.8 released"
+- date: 2021-05-28
+  codebase: "Clad"
+  version: "v0.8"
   link: "https://github.com/vgvassilev/clad/releases/tag/v0.8"
 
-- date: 5 May 2021
-  headline: "Cling 0.9 released"
+- date: 2021-05-05
+  codebase: "Cling"
+  version: "v0.9"
   link: "https://github.com/vgvassilev/cling/releases/tag/v0.9"
   
-- date: 11 January 2021
-  headline: "Cling 0.8 released"
+- date: 2021-01-11
+  codebase: "Cling"
+  version: "v0.8"
   link: "https://github.com/vgvassilev/cling/releases/tag/v0.8"
 
-- date: 21 August 2020
-  headline: "Cling 0.7 released"
+- date: 2020-08-21
+  codebase: "Cling"
+  version: "v0.7"
   link: "https://github.com/vgvassilev/cling/releases/tag/v0.7"

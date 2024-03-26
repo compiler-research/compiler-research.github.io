@@ -10,5 +10,5 @@ permalink: /releases
 
 {% for article in site.data.releases %}
 <p>{{ article.date }} <br>
-<em><a href='{{article.link}}'>{{ article.headline }}</a></em></p>
+<em><a href='{{article.link}}'>{{article.codebase}} - {{article.version}}</a></em></p>
 {% endfor %}
