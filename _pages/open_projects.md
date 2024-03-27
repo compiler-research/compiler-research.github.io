@@ -21,8 +21,6 @@ permalink: /open_projects
 
 ## {{ project.name }}
 
-### Description
-
 {{ project.description | markdownify }}
 
 ### Task ideas and expected results
