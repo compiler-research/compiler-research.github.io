@@ -1,38 +1,10 @@
-- date: 1 March 2024
-  headline: "CppInterOp 1.2.0 released"
-  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.2.0"
-
-- date: 29 February 2024
-  headline: "Clad 1.4 released"
-  link: "https://github.com/vgvassilev/clad/releases/tag/v1.4"
-
-- date: 11 February 2024
-  headline: "Clad 1.3 released"
-  link: "https://github.com/vgvassilev/clad/releases/tag/v1.3"
-
-- date: 09 January 2024
-  headline: "Xeus-Cpp 0.3 released"
-  link: "https://github.com/compiler-research/xeus-cpp/releases/tag/0.3.0"
-
 - date: 31 December 2023
   headline: "Google Season of Docs 2023 Concluded Successfully"
   link: "/blogs/gsod23_quillpusher_experience_blog/"
-  
-- date: 11 November 2023
-  headline: "CppInterOp 1.1.0 released"
-  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.1.0"
 
 - date: 27 September 2023
   headline: "Try xeus-clang-repl in docker"
   link: "https://github.com/compiler-research/xeus-clang-repl/"
-
-- date: 14 August 2023
-  headline: "CppInterOp 1.0 released"
-  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.0"
-
-- date: 18 July 2023
-  headline: "Clad 1.2 released"
-  link: "https://github.com/vgvassilev/clad/releases/tag/v1.2"
 
 - date: 9 May 2023
   headline: Welcome to QuillPusher who has joined for Google Season of Docs
@@ -53,10 +25,6 @@
 - date: 29 January 2023
   headline: "Work on the InterOp library open sourced"
   link: "https://github.com/compiler-research/InterOp"
-
-- date: 20 January 2023
-  headline: "Clad 1.1 released"
-  link: "https://github.com/vgvassilev/clad/releases/tag/v1.1"
 
 - date: 11 January 2023
   headline: "Xeus-Clang-Repl builds against vanilla LLVM and Clang"
@@ -102,10 +70,6 @@
   headline: "Start reworking cppyy to use the InterOp library"
   link: "https://github.com/compiler-research/cppyy-backend"
 
-- date: 11 August 2022
-  headline: "Initial version of xeus-clang-repl"
-  link: "https://github.com/compiler-research/xeus-clang-repl"
-
 - date: 05 August 2022
   headline: "RFC: Improving Diagnostics with Template Specialization Resugaring"
   link: "https://discourse.llvm.org/t/rfc-improving-diagnostics-with-template-specialization-resugaring/64294/1"
@@ -118,33 +82,13 @@
   headline: "Recording from March discussion on ez-clang: experimental C++ REPL for bare metal"
   link: "https://youtu.be/gKNxTeDBczk"
 
-- date: 25 March 2022
-  headline: "Clang-Repl released in LLVM 14"
-  link: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-14.0.0"
-
 - date: 14 December 2021
   headline: "Technical Specification for libInterOp released"
   link: "https://compiler-research.org/libinterop/"
 
-- date: 4 October 2021
-  headline: "Clang-Repl released in LLVM 13"
-  link: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-13.0.0"
-
-- date: 16 August 2021
-  headline: "Clad 0.9 released"
-  link: "https://github.com/vgvassilev/clad/releases/tag/v0.9"
-
 - date: 30 June 2021
   headline: "Cling Transitions to LLVM's Clang-Repl"
   link: "https://root.cern/blog/cling-in-llvm/"
-
-- date: 28 May 2021
-  headline: "Clad 0.8 released"
-  link: "https://github.com/vgvassilev/clad/releases/tag/v0.8"
-
-- date: 5 May 2021
-  headline: "Cling 0.9 released"
-  link: "https://github.com/vgvassilev/cling/releases/tag/v0.9"
 
 - date: 27 April 2021
   headline: "Recording from April discussion on Deep dive into the Xeus-based Cling kernel for Jupyter"
@@ -165,10 +109,6 @@
 - date: 19 February 2021
   headline: "GSoC projects posted"
   link: "https://compiler-research.org/vacancies"
-  
-- date: 11 January 2021
-  headline: "Cling 0.8 released"
-  link: "https://github.com/vgvassilev/cling/releases/tag/v0.8"
 
 - date: 21 December 2020
   headline: "Interactive C++ for Data Science with Cling"
@@ -193,10 +133,6 @@
 - date: 17 September 2020
   headline: "CaaS meeting 18:00"
   link: "/meetings#17Sept2020"
-
-- date: 21 August 2020
-  headline: "Cling 0.7 released"
-  link: "https://github.com/vgvassilev/cling/releases/tag/v0.7"
   
 - date: 9. July 2020
   headline: "RFC on Clang-Repl on LLVM-Dev list"

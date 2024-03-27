@@ -27,8 +27,7 @@
         <p style="margin:0">{{ pres.video }}</p>
       {% endif %}
       <div class="carousel-caption d-none d-md-block">
-        <h4>{{ pres.title }}</h4>
-        <p style="text-align:justify"><small>{{ pres.description | markdownify | remove: '<p>' | remove: '</p>' }}</small></p>
+        <p style="text-align:justify"><small>{{ pres.title }}</small></p>
       </div>
     </div>
     {% endfor %}
