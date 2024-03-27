@@ -140,28 +140,6 @@
       proposal: /assets/docs/Petro_Zarytskyi_Proposal.pdf
       mentors: Vassil Vassilev, David Lange
 
-- name: Abhi Acherjee
-  info: "IRIS-HEP Fellow"
-  photo: Abhi.jpg
-  email: acherjan@mail.uc.edu
-  education: "Computer Sciences B.S. + M.S , University of Cincinnati, OH"
-  active: 1
-  projects:
-    - title: "Extend the Automatic Differentiation Support in RooFit"
-      status: Ongoing
-      description: |
-        In terms of minimization time, Roofit offers faster results even with numerical
-        differentiation techniques as compared to minimizing a likelihood function that
-        is written by hand in C++, due its complex caching logic. Automatic differentiation
-        gives an additional speedup and more accuracy and scalability for problems with large
-        number of parameters. The purpose of this project will be to firstly use Minuit as
-        an optimization algorithm with externally provided gradients, extend support to cover
-        HistFactory and other parts of RooFit, and finally to optimize Clad generated derivatives a
-        nd further explore how they can be parallelized (OpenMP or CUDA).
-
-      proposal: /assets/docs/Abhigyan_Acherjee-Proposal_2023.pdf
-      mentors: Vassil Vassilev, David Lange
-
 - name: "Pavlo Svirin"
   info: "Senior research engineer at the Barcelona Supercomputing Center"
   photo: pavlo_svirin.png
@@ -207,6 +185,28 @@
 ################################################################################
 #                                     2024                                     #
 ################################################################################
+
+- name: Abhi Acherjee
+  info: "IRIS-HEP Fellow"
+  photo: Abhi.jpg
+  email: acherjan@mail.uc.edu
+  education: "Computer Sciences B.S. + M.S , University of Cincinnati, OH"
+  projects:
+    - title: "Extend the Automatic Differentiation Support in RooFit"
+      status: Ongoing
+      description: |
+        In terms of minimization time, Roofit offers faster results even with numerical
+        differentiation techniques as compared to minimizing a likelihood function that
+        is written by hand in C++, due its complex caching logic. Automatic differentiation
+        gives an additional speedup and more accuracy and scalability for problems with large
+        number of parameters. The purpose of this project will be to firstly use Minuit as
+        an optimization algorithm with externally provided gradients, extend support to cover
+        HistFactory and other parts of RooFit, and finally to optimize Clad generated derivatives a
+        nd further explore how they can be parallelized (OpenMP or CUDA).
+
+      proposal: /assets/docs/Abhigyan_Acherjee-Proposal_2023.pdf
+      mentors: Vassil Vassilev, David Lange
+
 
 - name: Ioana Ifrim
   info: Research Staff
