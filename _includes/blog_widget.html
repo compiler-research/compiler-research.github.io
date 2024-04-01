@@ -1,0 +1,16 @@
+
+<div>
+<h4><b>Latest Blog</b></h4>
+<div style="max-height: 500px">
+
+
+  {% assign top_articles = site.posts | slice: 0, 1 %}
+  {% for article in top_articles %}
+  <p><a href="{{ site.url }}{{ site.baseurl }}/{{article.permalink}}">{{article.title}}</a> <br />({{ article.excerpt }})</p>
+  {% endfor %}
+    
+
+
+</div>
+<h4><a href="{{ site.url }}{{ site.baseurl }}/blog">... see more posts</a></h4>
+</div>

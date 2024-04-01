@@ -8,38 +8,41 @@ layout: default
 
 </div>
 
-<div>
-
   <div id="thumbs" class="col-sm-12">
     {% include thumbnails.html %}
   </div>
 
   <div id="newsid" class="col-sm-3" >
-    <div style="width: 265px">
+    <div>
       {% include open-projects.html %}
     </div>
   </div>
 
   <div id="newsid" class="col-sm-3" >
-    <div style="width: 265px">
+    <div>
       {% include project-meetings.html %}
     </div>
   </div> 
 
   <div id="newsid" class="col-sm-3" >
-    <div style="width: 265px">
+    <div>
       {% include releases.html %}
     </div>
   </div>  
 
   <div id="newsid" class="col-sm-3" >
-    <div style="width: 265px">
+    <div>
       {% include news.html %}
     </div>
   </div> 
 
-  <div id="homeid" class="col-sm-12">
+  <div id="homeid" class="col-sm-9">
     {{ content }}
   </div>
 
-</div>
+  <div id="newsid" class="col-sm-3" >
+    <div>
+      <br><br>
+      {% include blog_widget.html %}
+    </div>
+  </div> 
