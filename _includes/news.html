@@ -6,7 +6,7 @@
 
   {% assign top_articles = site.data.news | slice: 0, 3 %}
   {% for article in top_articles %}
-  <p><a href="{{article.link}}">{{article.headline}}</a> <br />({{ article.date  | date: "%Y-%m-%d" }})</p>
+  <p><a href="{{article.link}}">{{article.headline}}</a> <br />{% include date.html %}</p>
   {% endfor %}
     
 

@@ -1,100 +1,136 @@
 - date: 2024-03-01
   codebase: "CppInterOp"
   version: "v1.2.0"
-  description: "This release includes some improvements and bug fixes."
+  description: |
+    This release includes some improvements and bug fixes.
   link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.2.0"
 
 - date: 2024-02-29
   codebase: "Clad"
   version: "v1.4"
-  description: "Forward Mode & Reverse Mode: Improve handling of char and string literals. Reverse Mode: Add support for differentiating switch statements, supportpassing pointers as call arguments, and Fix pointer arithmetic for array types."
+  description: |
+    **Forward Mode & Reverse Mode**: Improve handling of char and string
+    literals. <br />**Reverse Mode**: Add support for differentiating switch
+    statements, supportpassing pointers as call arguments, and Fix pointer
+    arithmetic for array types. <br />This release also includes **major
+    performance enhancements**. Add support for differentiating switch stmt in
+    the reverse mode AD. Make the compilation of gtest parallel. Schedule the
+    builds with debug clang earlier. Support BUILD_SHARED_LIBS=On flags.
+    Kokkos always requires rtti. 
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.4"
 
 - date: 2024-02-11
   codebase: "Clad"
   version: "v1.3"
-  description: "Forward Mode:  Make forward vector mode more robust (Implement dedicated clad::matrix class, Add support for array arguments, and Add support for call expressions). Add support for the 'non_differentiable' attribute."
+  description: |
+    **Forward Mode**:  Make forward vector mode more robust (Implement
+    dedicated clad::matrix class, Add support for array arguments, and Add
+    support for call expressions). Add support for the 'non_differentiable'
+    attribute.
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.3"
 
 - date: 2024-01-09
   codebase: "Xeus-Cpp"
   version: "v0.3"
-  description: "This release includes some improvements and bug fixes."
+  description: |
+    This release includes some improvements and bug fixes.
   link: "https://github.com/compiler-research/xeus-cpp/releases/tag/0.3.0"
   
 - date: 2023-11-11
   codebase: "CppInterOp"
   version: "v1.1.0"
-  description: "Incremental C++: Support clang plugins. Incremental CUDA: Support incremental compilation of CUDA."
+  description: |
+    Incremental C++: Support clang plugins. Incremental CUDA: Support
+    incremental compilation of CUDA.
   link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.1.0"
 
 - date: 2023-08-14
   codebase: "CppInterOp"
   version: "v1.0"
-  description: "This is the first major release of CppInterOp. Incremental C++: Facilities for setting up the infrastructure such as CreateInterpreter, GetInterpreter, AddSearchPath, and AddIncludePath. Facilities for consuming incremental input such as Declare, Process and Evaluate."
+  description: |
+    This is the first major release of CppInterOp. Incremental C++: Facilities
+    for setting up the infrastructure such as CreateInterpreter,
+    GetInterpreter, AddSearchPath, and AddIncludePath. Facilities for
+    consuming incremental input such as Declare, Process and Evaluate.
   link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.0"
 
 - date: 2023-06-18
   codebase: "Clad"
   version: "v1.2"
-  description: "Forward Mode: Add experimental support for forward vector mode and improve support of comma expressions. Reverse Mode: Add pushforwards for std::floor and std::ceil."
+  description: |
+    **Forward Mode**: Add experimental support for forward vector mode and
+    improve support of comma expressions. <br />**Reverse Mode**: Add
+    pushforwards for std::floor and std::ceil.
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.2"
 
 - date: 2023-01-20
   codebase: "Clad"
   version: "v1.1"
-  description: "Forward Mode: Fix a bug in pow pushforward. Reverse Mode: Improve for-loop conditions."
+  description: |
+    **Forward Mode**: Fix a bug in pow pushforward. <br />**Reverse Mode**:
+    Improve for-loop conditions.
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.1"
 
 - date: 2022-10-07
   codebase: "Clad"
   version: "v1.0"
-  description: "This is the first major release of Clad"
+  description: |
+    This is the first major release of Clad
   link: "https://github.com/vgvassilev/clad/releases/tag/v1.0"
 
 - date: 2022-08-11
   codebase: "Initial version of xeus-clang-repl"
   version: "v0.2.0"
-  description: "This is the initial release of xeus-clang-repl."
+  description: |
+    This is the initial release of xeus-clang-repl.
   link: "https://github.com/compiler-research/xeus-clang-repl/releases/tag/v0.2.0"
 
 - date: 2022-03-25
   codebase: "Clang-Repl released in LLVM 14"
   version: " "
-  description: "This release includes some improvements and bug fixes"
+  description: |
+    This release includes some improvements and bug fixes.
   link: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-14.0.0"
 
 - date: 2021-10-04
   codebase: "Clang-Repl released in LLVM 13"
   version: " "
-  description: "This release includes some improvements and bug fixes"
+  description: |
+    This release includes some improvements and bug fixes.
   link: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-13.0.0"
 
 - date: 2021-08-16
   codebase: "Clad"
   version: "v0.9"
+  description: |
+    This release includes some improvements and bug fixes.
   link: "https://github.com/vgvassilev/clad/releases/tag/v0.9"
 
 - date: 2021-05-28
   codebase: "Clad"
   version: "v0.8"
-  description: "This release includes some improvements and bug fixes"
+  description: |
+    This release includes some improvements and bug fixes.
   link: "https://github.com/vgvassilev/clad/releases/tag/v0.8"
 
 - date: 2021-05-05
   codebase: "Cling"
   version: "v0.9"
-  description: "This release includes some improvements and bug fixes"
+  description: |
+    This release includes some improvements and bug fixes.
   link: "https://github.com/vgvassilev/cling/releases/tag/v0.9"
   
 - date: 2021-01-11
   codebase: "Cling"
   version: "v0.8"
-  description: "Improve in the C++ modules support.Fix issues in the definition shadowing.Improve the integration with clad."
+  description: |
+    Improve in the C++ modules support. Fix issues in the definition
+    shadowing.Improve the integration with clad.
   link: "https://github.com/vgvassilev/cling/releases/tag/v0.8"
 
 - date: 2020-08-21
   codebase: "Cling"
   version: "v0.7"
-  description: "This release includes some improvements and bug fixes"
+  description: |
+    This release includes some improvements and bug fixes.
   link: "https://github.com/vgvassilev/cling/releases/tag/v0.7"
