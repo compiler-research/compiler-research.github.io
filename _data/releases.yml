@@ -1,3 +1,8 @@
+- date: 2024-04-04
+  codebase: "Xeus-Cpp"
+  version: "v0.4"
+  link: "https://github.com/compiler-research/xeus-cpp/releases/tag/0.4.0"
+
 - date: 2024-03-01
   codebase: "CppInterOp"
   version: "v1.2.0"
