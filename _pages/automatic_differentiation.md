@@ -53,17 +53,23 @@ expressions; that is, it cannot process the control flow.
 
 ### Automatic Differentiation in C++
 
-Automated Differentiation implementations are based on Operator Overloading or
-Source Code Transformation. C++ allows operator overloading, making it
-possible to implement Automatic Differentiation. The derivative of a function
-can be evaluated at the same time as the function itself. Automatic
-Differentiation exploits the fact that every computer calculation consists of
-elementary mathematical operations and functions, and by applying the chain
-rule recurrently, partial derivatives of arbitrary order can be computed
-accurately. Following are some of its highlights:
+Automated Differentiation implementations are based on [two major techniques]:
+Operator Overloading and Source Code Transformation. Compiler Research Group's
+focus has been on exploring the [Source Code Transformation] technique, which
+involves  constructing the computation graph and producing a derivative at
+compile time. 
 
-- Automatic Differentiation can calculate derivatives without any additional
-  precision loss. 
+[The source code transformation approach] enables optimization by retaining
+all the complex knowledge of the original source code. The compute graph is
+constructed before compilation and then transformed and compiled. It typically
+uses a custom parser to build code representation and produce the transformed
+code. It is difficult to implement (especially in C++), but it is very
+efficient, since many computations and optimizations are done ahead of time.
+
+### Advantages of using Automatic Differentiation
+
+- Automatic Differentiation can calculate derivatives without any [additional
+  precision loss]. 
 
 - It is not confined to closed-form expressions. 
 
@@ -104,22 +110,7 @@ place.
 
 - Integration with Cling and ROOT for high-energy physics data analysis.
 
-### Basics of using Clad
-
-Clad provides five API functions:
-
-- `clad::differentiate` to use Forward Mode Automatic Differentiation.
-- `clad::gradient` to use Reverse Mode Automatic Differentiation.
-- `clad::hessian` to construct a Hessian matrix using a combination of Forward
-  Mode and Reverse Mode Automatic Differentiation.
-- `clad::jacobian` to construct a Jacobian matrix using Reverse Mode Automatic
-  Differentiation.
-- `clad::estimate-error` to calculate the Floating-Point Error of the
-  requested program using Reverse Mode Automatic Differentiation.
-
-These API functions label an existing function for differentiation and return
-a functor object that contains the generated derivative, which can be called
-by using the `.execute` method.
+### Clad Benchmarks (while using Automatic Differentiation)
 
 [Benchmarks] show that Clad is numerically faster than the conventional
 Numerical Differentiation methods, providing Hessians that are 450x (~dim/25
@@ -149,5 +140,10 @@ For more information on Clad, please view:
 
 [General benchmarks]: https://indico.cern.ch/event/1005849/contributions/4227031/attachments/2221814/3762784/Clad%20--%20Automatic%20Differentiation%20in%20C%2B%2B%20and%20Clang%20.pdf
 
+[additional precision loss]: https://compiler-research.org/assets/presentations/CladInROOT_15_02_2020.pdf
 
+[Source Code Transformation]: https://compiler-research.org/assets/presentations/V_Vassilev-SNL_Accelerating_Large_Workflows_Clad.pdf
 
+[two major techniques]: https://compiler-research.org/assets/presentations/G_Singh-MODE3_Fast_Likelyhood_Calculations_RooFit.pdf
+
+[The source code transformation approach]: https://compiler-research.org/assets/presentations/I_Ifrim-EuroAD21_GPU_AD.pdf
