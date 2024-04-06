@@ -95,13 +95,12 @@ CHEF-FP's implementation involves registering an API in Clad for calculating
 the floating-point errors in desired functions using the default error
 estimation models. 
 
-While CHEF-FP provides an API that is useful for building simple expressions,
-it becomes challenging to implement complex models based on just a single
-expression. Therefore, calls to external functions are built as a valid error
-model, as long as the function has a compatible return type for the variable
-being assigned the error. This means that users can define their error models
-as regular C++ functions, enabling the implementation of more computationally
-complex models.
+CHEF_FP not only serves as a proof-of-concept, but it also provides APIs for
+building common expressions. For more complex expressions, custom calls to
+external functions can be built as a valid [custom error model], as long as the
+function has a compatible return type for the variable being assigned the
+error. This means that users can define their error models as regular C++
+functions, enabling the implementation of more computationally complex models.
 
 ### Conclusion
 
@@ -110,7 +109,11 @@ Error Analysis, guiding developers in optimizing various precision
 configurations for enhanced performance. By utilizing AD techniques and
 source-level insights, CHEF-FP presents a scalable and efficient solution for
 error estimation in HPC applications, paving the way for better computational
-efficiency.
+efficiency. To explore this research, please view the [CHEF-FP examples repository].
 
 
 [Fast And Automatic Floating Point Error Analysis With CHEF-FP]: https://arxiv.org/abs/2304.06441
+
+[custom error model]: https://github.com/vgvassilev/clad/blob/v1.1/demos/ErrorEstimation/CustomModel/README.md
+
+[CHEF-FP examples repository]: https://github.com/grimmmyshini/chef-fp-examples
