@@ -4,7 +4,7 @@
   
       {% assign top_articles = site.data.meetinglist | slice: 0, 3 %}
       {% for article in top_articles %}
-      <p><a href="{{ site.url }}{{ site.baseurl }}/meetings/#{{ article.label }}">{{ article.agenda[0].title }}</a><br /> {% include date.html %}</p>
+      <p><a href="{{ site.url }}{{ site.baseurl }}/meetings/#{{ article.label }}">{{ article.agenda[0].title }}</a><br />{% include date.html date=article.date %}</p>
       {% endfor %}
   
   </div>
