@@ -5,6 +5,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Differentiating integral type variables in Clad"
+      date: 2024-04-17 17:00:00 +0200
+      speaker: "Petro Zarytskyi"
+      link: "[Slides](/assets/presentations/Petro_Zarytskyi_Integral_type_vars_17_04_24.pdf)"
     - title: "ROOT: superbuilds"
       date: 2023-12-06 14:00:00 +0200
       speaker: "Pavlo Svrin"
