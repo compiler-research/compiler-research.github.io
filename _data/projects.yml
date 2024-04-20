@@ -1,3 +1,20 @@
+- name: "Clad - an Automatic Differentiation Tool"
+  description: |
+    Clad is a plugin for the Clang compiler that enables automatic differentiation
+    capabilities for C/C++ codebases. It is a valuable tool for developers seeking
+    to streamline complex mathematical computations and optimize their codebase
+    efficiently.
+
+    Clad facilitates the generation of derivatives, gradients, Hessians, and
+    Jacobians (in forward and/or reverse mode), enhancing the efficiency and
+    versatility of numerical computations.
+
+    Clad not only supports partial and higher-order derivatives but also
+    integrates seamlessly with frameworks like ROOT, providing a comprehensive
+    solution for automatic differentiation needs in C++ applications.
+  link: |
+    https://github.com/vgvassilev/clad
+    
 - name: "Xeus-CPP - a Jupyter Kernel for C++"
   description: |
     Xeus-CPP is a product of OAC-1931408 in collaboration with the QuantStack
@@ -60,22 +77,6 @@
   link: |
     https://github.com/root-project/cling
 
-- name: "Clad - an Automatic Differentiation Tool"
-  description: |
-    Clad is a plugin for the Clang compiler that enables automatic differentiation
-    capabilities for C/C++ codebases. It is a valuable tool for developers seeking
-    to streamline complex mathematical computations and optimize their codebase
-    efficiently.
-
-    Clad facilitates the generation of derivatives, gradients, Hessians, and
-    Jacobians (in forward and/or reverse mode), enhancing the efficiency and
-    versatility of numerical computations.
-
-    Clad not only supports partial and higher-order derivatives but also
-    integrates seamlessly with frameworks like ROOT, providing a comprehensive
-    solution for automatic differentiation needs in C++ applications.
-  link: |
-    https://github.com/vgvassilev/clad
 
 
 

@@ -9,7 +9,7 @@ Floating-Point Error Estimation), and Python-C++ Interoperability (Clang-Repl
 (LLVM), CppInterOp, cppyy, Numba, etc.)."
 sitemap: false
 permalink: blogs/gsod23_quillpusher_experience_blog/
-date: 2023-12-31
+date: 2023-05-10
 ---
 
 ### How we got started
