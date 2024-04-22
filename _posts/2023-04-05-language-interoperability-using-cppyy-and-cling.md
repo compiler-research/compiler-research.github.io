@@ -40,24 +40,24 @@ C++ gained early adoption in scientific research fields due to its high
 performance capabilities. But the interactive nature of Python and the gentler
 learning curve led to higher adoption rates elsewhere, and as a result, it saw
 exponential advancements in capabilities that were ideal for data science
-research. A lot of research infrastructure is still rooted in C++ and benefits
+research. However, this does not discredit the usefulness of C++ in data
+science. A lot of research infrastructure is still rooted in C++ and benefits
 from some of its unique features (e.g., access to accelerators in
-heterogeneous computing environments), making it impossible, or at least
-undesirable to abandon it for the exciting new features that the world of
-Python has to offer. 
+heterogeneous computing environments). 
 
 This is where the usefulness of language interoperability becomes evident.
 However, this requires an advanced integration solution, especially for high
 performance code that is executed in diverse environments. 
 
-This is where Numba, a just-in-time (JIT) compiler for Python comes in. It is
-capable of compiling Python code, while targeting either the CPU or the GPU,
-and providing interfaces to use the JITed closures from low-level libraries.
-Numba helps lower Python to machine code level and minimizes costly language
-crossings. However, Numba has some limitations in this context that are
-remediated with cppyy (an automatic runtime bindings generator).
+Numba, a just-in-time (JIT) compiler for Python, is a tool that is ideal for
+this task (with some enhancements). Numba is capable of compiling Python code
+while targeting either the CPU or the GPU, and providing interfaces to use the
+JITed closures from low-level libraries. Numba helps lower Python to machine
+code level and minimizes costly language crossings. In order to provide the
+missing links for this research, Numba was also integrated with cppyy (an
+automatic runtime bindings generator).
 
-The target of this research is to demonstrate a generic prototype that
+The target of this research was to demonstrate a generic prototype that
 automatically brings advanced C++ features (e.g., highly optimized numeric
 libraries) to Numba-accelerated Python, with help from cppyy. This required
 re-engineering of the cppyy back-end to directly use LLVM components. A new
@@ -65,11 +65,35 @@ CppInterOp library was also introduced to implement interoperability
 primitives based on Cling and Clang-Repl (also an interactive interpreter, a
 progression on Cling).
 
+### Merits of using Python
+
+Rather than writing all performance-critical code in a lower-level language
+(e.g., C), and then interpret it back to Python (using extensions), we wanted
+to lower the Python code itself to native level using JIT. This would enable
+the developer to stay in Python and write and debug the code in a single
+environment. We also needed this JIT code to work well with bound C++ code.
+Therefore, we used Numba as a Python JIT and integrated it with C++ using
+cppyy.
+
+Interestingly, this approach makes it easy to use Python kernels in C++,
+without losing performance, enabling continued use of an existing C++
+codebase.
+
+### Merits of using C++
+
+C++ is evolving rapidly, enabling automation and a more expressive approach
+for better code quality and compiler optimization. Consecutively, cppyy (which
+is based on Cling, a C++ interpreter based on Clang/LLVM) helps bring better
+interactivity and runtime experiences to C++, and is able to evolve
+side-by-side, thanks to its roots in LLVM infrastructure. Together, these
+tools help address even the previously unresolved corner cases at runtime in
+either C++ or Python, as appropriate.
+
 ### Prototype Overview
 
 To bring C++ to Numba, a reflection interface was developed on top of cppyy.
 This enables Python programmers to develop and debug their code in Python and
-only switching on the Numba JIT for selected performance-critical tasks.
+selectively switching on the Numba JIT for performance-critical tasks.
 
 Python is a dynamically typed language. It wraps and later unwraps objects
 (referred to as boxing/unboxing). This is a costly operation that can be
@@ -94,7 +118,13 @@ call to LLVM IR.
 ### Benchmarks
 
 The following benchmarks were executed on a 3.1GHz Intel NUC Core i7-8809G CPU
-with 32G RAM.
+with 32G RAM. 
+
+For each benchmark case in the following table, a Numpy array of size 100 ×
+100 was passed to the function. The times indicated in the table are averages
+of 3000 runs. The Numba JITed functions achieve a minimum speedup of **2.3
+times** in the case of methods and a maximum speedup of nearly **21 times** in
+the case of templated free functions.
 
 <br />
 
@@ -117,6 +147,22 @@ Where,
 
 For more technical details, please view the paper: [Efficient and Accurate Automatic Python Bindings with cppyy & Cling]
 
+### Summary
 
+In this research, we presented a new reflection interface developed for Numba
+and cppyy (an automatic runtime bindings generator based on Cling), in order
+to facilitate integration with C++. This also required enhancements to cppyy
+to provide a fully automatic and transparent process for integration, without
+loss in performance.
+
+This opens up several possibilities for developers. For example, they can
+develop and debug their code in Python, while using C++ libraries, and
+switching on the Numba JIT for selected performance-critical closures. 
+
+The results are promising, with 2-20 times speedup when using Numba to
+accelerate cppyy through our extension. Further gains were demonstrated using
+the Clang-Repl component of LLVM and the newly developed library CppInterOp.
+Preliminary results show 1.4 to 144 times faster handling of templated code in
+cppyy, which will indirectly improve the Numba-accelerated Python as well.
 
 [Efficient and Accurate Automatic Python Bindings with cppyy & Cling]: https://arxiv.org/abs/2304.02712
