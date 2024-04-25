@@ -1,29 +1,32 @@
 ---
 title: "Compiler Research Research Areas"
 layout: gridlay
-excerpt: "Automatic differentiation (AD) is a powerful technique for evaluating the
-derivatives of mathematical functions in C++, offering significant advantages
-over traditional differentiation methods."
+excerpt: "Automatic Differentiation (AD) is a general and powerful technique
+of computing partial derivatives (or the complete gradient) of a function inputted as a
+computer program."
 sitemap: true
 permalink: /automatic_differentiation
 ---
 
 ## Automatic differentiation
 
-Automatic differentiation (AD) is a technique for evaluating the derivatives
-of mathematical functions in C++, offering a number of advantages over
-traditional differentiation methods. By leveraging the principles of Automatic
-Differentiation, programmers can efficiently calculate partial derivatives of
-functions, opening up a range of applications in scientific computing and
-machine learning.
+Automatic Differentiation (AD) is a general and powerful technique
+of computing partial derivatives (or the complete gradient) of a function inputted as a
+computer program.
+
+Automatic Differentiation takes advantage of the fact that any computation can
+be represented as a composition of simple operations / functions - this is
+generally represented in a graphical format and referred to as the [compuation
+graph](https://colah.github.io/posts/2015-08-Backprop/). AD works by repeated
+application of chain rule over this graph.
 
 ### Understanding Differentiation in Computing
 
-Differentiation in calculus is the process of finding the rate of change of
-one quantity with respect to another. There are several principles and
-formulas for differentiation, such as Sum Rule, Product Rule, Quotient Rule,
-Constant Rule, and Chain Rule. For Automatic Differentiation, the Chain Rule
-of differential calculus is of special interest.
+Efficient computation of gradients is a crucial requirement in the fields of
+scientific computing and machine learning, where approaches like
+[Gradient Descent](https://en.wikipedia.org/wiki/Gradient_descent)
+are used to iteratively converge over the optimum parameters of a mathematical
+model.
 
 Within the context of computing, there are various methods for
 differentiation:
@@ -34,22 +37,34 @@ differentiation:
 
 - **Numerical Differentiation**: This method approximates the derivatives
   using finite differences. It is relatively simple to implement, but can
-  suffer from numerical instability and inaccuracy in its results.
+  suffer from numerical instability and inaccuracy in its results. It doesn't
+  scale well with the number of inputs of the function.
 
 - **Symbolic Differentiation**: This approach uses symbolic manipulation to
 compute derivatives analytically. It provides accurate results but can lead to
-lengthy expressions for large computations. It is limited to closed-form
-expressions; that is, it cannot process the control flow.
+lengthy expressions for large computations. It requires the computer program to
+be representable in a closed form mathematical expression, and thus doesn't work
+well with control flow scenarios (if conditions and loops) in the program.
 
-- **Automatic Differentiation (AD)**: Automatic Differentiation is a highly
-  efficient technique that computes derivatives of mathematical functions by
-  applying differentiation rules to every arithmetic operation in the code.
-  Automatic Differentiation can be used in two modes: 
+- **Automatic Differentiation (AD)**: Automatic Differentiation is a general and
+  efficient technique that works by repeated application of chain rule over the
+  computation graph of the program. Given its composable nature, it can easily scale
+  for computing gradients over a very large number of inputs.
+  
+### Forward and Reverse mode AD
+Automatic Differentiation works by applying chain rule and merging the derivatives
+at each node of the computation graph. The direction of this graph traversal and
+derivative accumulation results in two modes of operation:
 
-    - Forward Mode: calculates derivatives with respect to a single variable, and 
-    
-    - Reverse Mode: calculates gradients with respect to all inputs
-    simultaneously.
+  - Forward Mode: starts at an input to the graph and moves towards all the output nodes. 
+  For every node, it sums all the paths feeding in. By adding them up, we get the total
+  way in which the node is affected by the input. Hence, it calculates derivatives of output(s)
+  with respect to a single input variable.
+  
+  - Reverse Mode: starts at the output node of graph and moves backward towards all
+  the input nodes. For every node, it merges all paths which originated at that node.
+  It tracks how every node affects one output. Hence, it calculates derivative of a single
+  output with respect to all inputs simultaneously - the gradient.
 
 ### Automatic Differentiation in C++
 
@@ -61,10 +76,10 @@ compile time.
 
 [The source code transformation approach] enables optimization by retaining
 all the complex knowledge of the original source code. The compute graph is
-constructed before compilation and then transformed and compiled. It typically
-uses a custom parser to build code representation and produce the transformed
-code. It is difficult to implement (especially in C++), but it is very
-efficient, since many computations and optimizations are done ahead of time.
+constructed during compilation and then transformed to generate the derivative 
+code. It typically uses a custom parser to build code representation and produce
+the transformed code. It is difficult to implement (especially in C++), but it is
+very efficient, since many computations and optimizations are done ahead of time.
 
 ### Advantages of using Automatic Differentiation
 
@@ -76,7 +91,7 @@ efficient, since many computations and optimizations are done ahead of time.
 - It can take derivatives of algorithms involving conditionals, loops, and
   recursion. 
 
-- It works without generating inefficiently long expressions. 
+- It can be easily scaled for functions with very large number of inputs.
 
 ### Automatic Differentiation Implementation with Clad - a Clang Plugin
 
@@ -88,7 +103,7 @@ It is implemented as a plugin for the Clang compiler.
 
 [Clad] operates on Clang AST (Abstract Syntax Tree) and is capable of
 performing C++ Source Code Transformation. When Clad is given the C++ source
-code of a mathematical function, it can automatically generate C++ code for
+code of a mathematical function, it can algorithmically generate C++ code for
 the computing derivatives of that function. Clad has comprehensive coverage of
 the latest C++ features and a well-rounded fallback and recovery system in
 place.
