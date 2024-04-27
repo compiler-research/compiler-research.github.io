@@ -10,23 +10,22 @@ permalink: /automatic_differentiation
 
 ## Automatic differentiation
 
-Automatic Differentiation (AD) is a general and powerful technique
-of computing partial derivatives (or the complete gradient) of a function inputted as a
-computer program.
+Automatic Differentiation (AD) is a general and powerful technique for
+computing partial derivatives (or the complete gradient) of a function
+inputted as a computer program.
 
-Automatic Differentiation takes advantage of the fact that any computation can
-be represented as a composition of simple operations / functions - this is
-generally represented in a graphical format and referred to as the [compuation
-graph](https://colah.github.io/posts/2015-08-Backprop/). AD works by repeated
-application of chain rule over this graph.
+It takes advantage of the fact that any computation can be represented as a
+composition of simple operations / functions - this is generally represented
+in a graphical format and referred to as the [computation
+graph](https://colah.github.io/posts/2015-08-Backprop/). AD works by
+repeatedly applying the chain rule over this graph.
 
 ### Understanding Differentiation in Computing
 
 Efficient computation of gradients is a crucial requirement in the fields of
-scientific computing and machine learning, where approaches like
-[Gradient Descent](https://en.wikipedia.org/wiki/Gradient_descent)
-are used to iteratively converge over the optimum parameters of a mathematical
-model.
+scientific computing and machine learning, where approaches like [Gradient
+Descent](https://en.wikipedia.org/wiki/Gradient_descent) are used to
+iteratively converge over the optimum parameters of a mathematical model.
 
 Within the context of computing, there are various methods for
 differentiation:
@@ -36,35 +35,42 @@ differentiation:
   tedious and error-prone, especially for complex functions.
 
 - **Numerical Differentiation**: This method approximates the derivatives
-  using finite differences. It is relatively simple to implement, but can
+  using finite differences. It is relatively simple to implement but can
   suffer from numerical instability and inaccuracy in its results. It doesn't
-  scale well with the number of inputs of the function.
+  scale well with the number of inputs in the function.
 
 - **Symbolic Differentiation**: This approach uses symbolic manipulation to
 compute derivatives analytically. It provides accurate results but can lead to
-lengthy expressions for large computations. It requires the computer program to
-be representable in a closed form mathematical expression, and thus doesn't work
-well with control flow scenarios (if conditions and loops) in the program.
+lengthy expressions for large computations. It requires the computer program
+to be representable in a closed-form mathematical expression, and thus doesn't
+work well with control flow scenarios (if conditions and loops) in the
+program.
 
-- **Automatic Differentiation (AD)**: Automatic Differentiation is a general and
-  efficient technique that works by repeated application of chain rule over the
-  computation graph of the program. Given its composable nature, it can easily scale
-  for computing gradients over a very large number of inputs.
+- **Automatic Differentiation (AD)**: Automatic Differentiation is a general
+  and efficient technique that works by repeated application of the chain rule
+  over the computation graph of the program. Given its composable nature, it
+  can easily scale for computing gradients over a very large number of inputs.
   
 ### Forward and Reverse mode AD
-Automatic Differentiation works by applying chain rule and merging the derivatives
-at each node of the computation graph. The direction of this graph traversal and
-derivative accumulation results in two modes of operation:
+Automatic Differentiation works by applying the chain rule and merging the
+derivatives at each node of the computation graph. The direction of this graph
+traversal and derivative accumulation results in two modes of operation:
 
-  - Forward Mode: starts at an input to the graph and moves towards all the output nodes. 
-  For every node, it sums all the paths feeding in. By adding them up, we get the total
-  way in which the node is affected by the input. Hence, it calculates derivatives of output(s)
-  with respect to a single input variable.
+  - Forward Mode: starts at an input to the graph and moves towards all the
+  output nodes. For every node, it adds up all the paths feeding in. By adding
+  them up, we get the total way in which the node is affected by the input.
+  Hence, it calculates derivatives of output(s) with respect to a single input
+  variable.
+
+   ![Forward Mode](/images/ForwardAccumulationAutomaticDifferentiation.png)
   
-  - Reverse Mode: starts at the output node of graph and moves backward towards all
-  the input nodes. For every node, it merges all paths which originated at that node.
-  It tracks how every node affects one output. Hence, it calculates derivative of a single
-  output with respect to all inputs simultaneously - the gradient.
+  - Reverse Mode: starts at the output node of the graph and moves backward
+  towards all the input nodes. For every node, it merges all paths that
+  originated at that node. It tracks how every node affects one output. Hence,
+  it calculates the derivative of a single output with respect to all inputs
+  simultaneously - the gradient.
+
+  ![Reverse Mode](/images/ReverseAccumulationAutomaticDifferentiation.png)
 
 ### Automatic Differentiation in C++
 
@@ -76,10 +82,11 @@ compile time.
 
 [The source code transformation approach] enables optimization by retaining
 all the complex knowledge of the original source code. The compute graph is
-constructed during compilation and then transformed to generate the derivative 
-code. It typically uses a custom parser to build code representation and produce
-the transformed code. It is difficult to implement (especially in C++), but it is
-very efficient, since many computations and optimizations are done ahead of time.
+constructed during compilation and then transformed to generate the derivative
+code. It typically uses a custom parser to build code representation and
+produce the transformed code. It is difficult to implement (especially in
+C++), but it is very efficient, since many computations and optimizations are
+done ahead of time.
 
 ### Advantages of using Automatic Differentiation
 
