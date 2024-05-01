@@ -1,7 +1,7 @@
 ---
-title: "Compiler Research Research Areas"
+title: "Automatic Differentiation"
 layout: gridlay
-excerpt: "Automatic Differentiation (AD) is a general and powerful technique
+excerpt: "Automatic Differentiation is a general and powerful technique
 of computing partial derivatives (or the complete gradient) of a function inputted as a
 computer program."
 sitemap: true
@@ -40,27 +40,28 @@ differentiation:
   scale well with the number of inputs in the function.
 
 - **Symbolic Differentiation**: This approach uses symbolic manipulation to
-compute derivatives analytically. It provides accurate results but can lead to
-lengthy expressions for large computations. It requires the computer program
-to be representable in a closed-form mathematical expression, and thus doesn't
-work well with control flow scenarios (if conditions and loops) in the
-program.
+  compute derivatives analytically. It provides accurate results but can lead
+  to lengthy expressions for large computations. It requires the computer
+  program to be representable in a closed-form mathematical expression, and
+  thus doesn't work well with control flow scenarios (if conditions and loops)
+  in the program.
 
 - **Automatic Differentiation (AD)**: Automatic Differentiation is a general
-  and efficient technique that works by repeated application of the chain rule
-  over the computation graph of the program. Given its composable nature, it
-  can easily scale for computing gradients over a very large number of inputs.
+  and an efficient technique that works by repeated application of the chain
+  rule over the computation graph of the program. Given its composable nature,
+  it can easily scale for computing gradients over a very large number of
+  inputs.
   
 ### Forward and Reverse mode AD
 Automatic Differentiation works by applying the chain rule and merging the
 derivatives at each node of the computation graph. The direction of this graph
-traversal and derivative accumulation results in two modes of operation:
+traversal and derivative accumulation results in two approaches:
 
-  - Forward Mode: starts at an input to the graph and moves towards all the
-  output nodes. For every node, it adds up all the paths feeding in. By adding
-  them up, we get the total way in which the node is affected by the input.
-  Hence, it calculates derivatives of output(s) with respect to a single input
-  variable.
+  - Forward Mode, Tangent Mode: starts the accumulation from the input
+    parameters towards the output parameters in the graph. This means that we
+    apply the chain rule to the inner functions first. That approach
+    calculates derivatives of output(s) with respect to a single input
+    variable.
 
    ![Forward Mode](/images/ForwardAccumulationAutomaticDifferentiation.png)
   
@@ -77,16 +78,17 @@ traversal and derivative accumulation results in two modes of operation:
 Automated Differentiation implementations are based on [two major techniques]:
 Operator Overloading and Source Code Transformation. Compiler Research Group's
 focus has been on exploring the [Source Code Transformation] technique, which
-involves  constructing the computation graph and producing a derivative at
+involves constructing the computation graph and producing a derivative at
 compile time. 
 
 [The source code transformation approach] enables optimization by retaining
 all the complex knowledge of the original source code. The compute graph is
 constructed during compilation and then transformed to generate the derivative
-code. It typically uses a custom parser to build code representation and
-produce the transformed code. It is difficult to implement (especially in
-C++), but it is very efficient, since many computations and optimizations are
-done ahead of time.
+code. The drawback of that approach in many implementations is that, it
+typically uses a custom parser to build code representation and produce the
+transformed code. It is difficult to implement (especially in C++), but it is
+very efficient, since many computations and optimizations can be done ahead of
+time.
 
 ### Advantages of using Automatic Differentiation
 
@@ -98,7 +100,7 @@ done ahead of time.
 - It can take derivatives of algorithms involving conditionals, loops, and
   recursion. 
 
-- It can be easily scaled for functions with very large number of inputs.
+- It can be easily scaled for functions with a very large number of inputs.
 
 ### Automatic Differentiation Implementation with Clad - a Clang Plugin
 
