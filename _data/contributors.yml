@@ -218,6 +218,9 @@
   info: "GSoC 2024 Contributor"
   photo: Isaac.jpg
   email: isaacmoralessantana@gmail.com
+  github: "https://github.com/imorlxs"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/isaac-morales-santana-724280203/"
   education: "Computer Engineering, University of Granada, Spain"
   projects:
     - title: "Improving performance of BioDynaMo using ROOT C++ Modules"
