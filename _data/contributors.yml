@@ -214,6 +214,26 @@
   email: ioana.ifrim@cern.ch
   education: MPhil Advanced Computer Science, University of Cambridge (2018)
 
+- name: Isaac Morales Santana
+  info: "GSoC 2024 Contributor"
+  photo: Isaac.jpg
+  email: isaacmoralessantana@gmail.com
+  education: "Computer Engineering, University of Granada, Spain"
+  projects:
+    - title: "Improving performance of BioDynaMo using ROOT C++ Modules"
+      status: Ongoing
+      description: |
+        The ROOT is a framework for data processing, born at CERN, at the heart of the research on high-energy physics. Every day, thousands of physicists use ROOT applications to analyze their data or to perform simulations. The ROOT software framework is foundational for the HEP ecosystem, providing capabilities such as IO, a C++ interpreter, GUI, and math libraries. It uses object-oriented concepts and build-time modules to layer between components. We believe additional layering formalisms will benefit ROOT and its users.
+
+        BioDynaMo is an agent-based simulation platform that enables users to perform simulations of previously unachievable scale and complexity, making it possible to tackle challenging scientific research questions. The project has a wide range of applications in cancer research, epidemiology, and social sciences.
+
+        BioDynaMo incorporates ROOT for several crucial functionalities such as statistical analysis, random number generation, C++-based Jupyter notebooks, and IO. Some features rely on efficient reflection information about BioDynaMo’s and user-defined C++ classes. This project is about improving the performance of the reflection system by upgrading to C++ modules.
+
+      proposal: /assets/docs/Isaac_Morales-Proposal_2024.pdf
+      mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswal and Fons Rademakers
+
+
+
 
 ################################################################################
 #                                     2023                                     #
