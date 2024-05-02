@@ -146,36 +146,6 @@
   email: pavlo.svirin@cern.ch
   education: PhD Computer Science, National Technical University of Ukraine, 2014
   active: 1
-
-- name: Shreyas Atre
-  photo: Shreyas.jpg
-  info: "Open Source Contributor"
-  email: shreyasatre16@gmail.com
-  education: "B.Tech in Electronics and Telecommunications Engineering, Veermata Jijabai Technological Institute, Mumbai, India | Masters in Computer Science, Louisiana State University, Baton Rouge, United States"
-  github: "https://github.com/SAtacker"
-  www: "https://satacker.github.io"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/atreshreyas/"
-  projects:
-    - title: "Improve the test coverage for CppInterOp"
-      status: Ongoing
-      description: |
-        This project aims to enhance the reliability and robustness of
-        CppInterOp, a library facilitating language interoperability by
-        exposing APIs from Clang and LLVM. Focusing on backward
-        compatibility and minimalistic design, CppInterOp is instrumental
-        in enabling downstream tools to embed Clang and LLVM in their
-        codebases for dynamic interaction with C++. The project's primary
-        objective is to improve the test coverage of CppInterOp by
-        identifying and addressing potential edge cases, especially
-        scenarios involving language interoperability and
-        compiler-as-a-service functionalities. The outcome is expected to
-        increase the overall reliability of the library, providing
-        developers with a more stable foundation for utilizing CppInterOp
-        in diverse scenarios. Previously I worked on improving the lookup
-        of template specialization decls in clang modules.
-      mentors:  Vassil Vassilev
-      
       
 - name: Isaac Morales Santana
   info: "GSoC 2024 Contributor"
@@ -209,6 +179,35 @@
 #                                     2024                                     #
 ################################################################################
 
+- name: Shreyas Atre
+  photo: Shreyas.jpg
+  info: "Open Source Contributor"
+  email: shreyasatre16@gmail.com
+  education: "B.Tech in Electronics and Telecommunications Engineering, Veermata Jijabai Technological Institute, Mumbai, India | Masters in Computer Science, Louisiana State University, Baton Rouge, United States"
+  github: "https://github.com/SAtacker"
+  www: "https://satacker.github.io"
+  linkedin: "https://www.linkedin.com/in/atreshreyas/"
+  projects:
+    - title: "Improve the test coverage for CppInterOp"
+      status: Completed
+      description: |
+        This project aims to enhance the reliability and robustness of
+        CppInterOp, a library facilitating language interoperability by
+        exposing APIs from Clang and LLVM. Focusing on backward
+        compatibility and minimalistic design, CppInterOp is instrumental
+        in enabling downstream tools to embed Clang and LLVM in their
+        codebases for dynamic interaction with C++. The project's primary
+        objective is to improve the test coverage of CppInterOp by
+        identifying and addressing potential edge cases, especially
+        scenarios involving language interoperability and
+        compiler-as-a-service functionalities. The outcome is expected to
+        increase the overall reliability of the library, providing
+        developers with a more stable foundation for utilizing CppInterOp
+        in diverse scenarios. Previously I worked on improving the lookup
+        of template specialization decls in clang modules.
+      mentors:  Vassil Vassilev
+
+
 - name: Abhi Acherjee
   info: "IRIS-HEP Fellow"
   photo: Abhi.jpg
@@ -216,7 +215,7 @@
   education: "Computer Sciences B.S. + M.S , University of Cincinnati, OH"
   projects:
     - title: "Extend the Automatic Differentiation Support in RooFit"
-      status: Ongoing
+      status: Completed
       description: |
         In terms of minimization time, Roofit offers faster results even with numerical
         differentiation techniques as compared to minimizing a likelihood function that
