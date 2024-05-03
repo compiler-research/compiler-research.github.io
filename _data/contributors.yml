@@ -230,10 +230,9 @@
       proposal: /assets/docs/Atell_Krasnopolsky_Proposal_2024.pdf
       mentors: Vassil Vassilev, Vaibhav Thakkar, Petro Zarytskyi
 
-
 - name: Khushiyant
   photo: Khushiyant.jpg
-  info: "Research Intern ,GSoC 2024 Contributor"
+  info: "Research Intern, GSoC 2024 Contributor"
   email: khushiyant2002@gmail.com
   education: "B.Tech in Computer Science and Engineering, G.G.S.I.P.U, India"
   github: "https://github.com/Khushiyant"
@@ -242,8 +241,8 @@
   active: 1
   projects:
     - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
-    status: Ongoing
-    description: |
+      status: Ongoing
+      description: |
             Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from Python and Python from C++. 
             Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side. 
             Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense. 
@@ -255,8 +254,8 @@
             The on-demand C++ infrastructure wrapped by idiomatic Python enables new techniques in ML tools like JAX/CUTLASS. 
             This project allows the C++ infrastructure to be plugged into at service to the users seeking high-performance library primitives that are unavailable in Python.
 
-    mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
-    proposal: /assets/docs/Khushiyant_Proposal_2024.pdf
+      mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
+      proposal: /assets/docs/Khushiyant_Proposal_2024.pdf
 
 - name: "Tharun Anandh"
   photo: tharun_a.jpg
