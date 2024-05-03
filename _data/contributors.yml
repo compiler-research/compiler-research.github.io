@@ -168,6 +168,27 @@
       proposal: /assets/docs/Isaac_Morales-Proposal_2024.pdf
       mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswal and Fons Rademakers
 
+- name: "Chaitanya Shahare"
+  photo: Chaitanya-Shahare.jpeg
+  info: "GSoC 2024 Contributor"
+  email: shaharechaitanya3@gmail.com
+  education: "B.Tech in Mechanical Engineering, National Institute of Technology Srinagar, India"
+  github: "https://github.com/Chaitanya-Shahare"
+  www: "https://chaitanyashahare.com"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/cs03"
+  projects:
+    - title: "LLVM.org website redesign"
+      status: Ongoing
+      description: |
+        Revamping the LLVM.org Website: Modernizing the central hub for LLVM project
+        information. Enhancing navigation, content discoverability, and usability for
+        both new users and existing community members. Utilizing static site
+        generators, like Hugo, for efficiency and scalability. Separating data and
+        visualization using YAML and Markdown for easier content management. Engaging
+        the community for feedback and collaboration throughout the redesign process.
+      proposal: /assets/docs/Chaitanya_Shahare_Proposal_2024.pdf
+      mentors: Tanya Lattner, Vassil Vassilev
 
 - name: "This could be you!"
   photo: rock.jpg
