@@ -65,7 +65,7 @@ traversal and derivative accumulation results in two approaches:
 
    ![Forward Mode](/images/ForwardAccumulationAutomaticDifferentiation.png)
   
-  - Reverse Mode: starts at the output node of the graph and moves backward
+  - Reverse Mode, Adjoint Mode: starts at the output node of the graph and moves backward
   towards all the input nodes. For every node, it merges all paths that
   originated at that node. It tracks how every node affects one output. Hence,
   it calculates the derivative of a single output with respect to all inputs
