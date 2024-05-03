@@ -230,16 +230,6 @@
       proposal: /assets/docs/Atell_Krasnopolsky_Proposal_2024.pdf
       mentors: Vassil Vassilev, Vaibhav Thakkar, Petro Zarytskyi
 
-- name: "This could be you!"
-  photo: rock.jpg
-  info: See <a href="/vacancies">openings</a> for more info
-  email: vvasilev@cern.ch
-  active: 1
-
-################################################################################
-#                                     2024                                     #
-################################################################################
-
 - name: Khushiyant
   photo: Khushiyant.jpg
   info: "Research Intern ,GSoC 2024 Contributor"
@@ -267,6 +257,15 @@
     mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
     proposal: /assets/docs/Khushiyant_Proposal_2024.pdf
 
+- name: "This could be you!"
+  photo: rock.jpg
+  info: See <a href="/vacancies">openings</a> for more info
+  email: vvasilev@cern.ch
+  active: 1
+
+################################################################################
+#                                     2024                                     #
+################################################################################
 
 - name: Shreyas Atre
   photo: Shreyas.jpg
