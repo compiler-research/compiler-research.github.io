@@ -230,6 +230,22 @@
       proposal: /assets/docs/Atell_Krasnopolsky_Proposal_2024.pdf
       mentors: Vassil Vassilev, Vaibhav Thakkar, Petro Zarytskyi
 
+- name: "Tharun Anandh"
+  photo: tharun_a.jpg
+  info: "GSoC 2024 Contributor"
+  email: atharun05@gmail.com
+  education: "B.Tech in Computer Science and Engineering, National Institute of Technology, Tiruchirapalli, Tamil Nadu, India"
+  github: "https://github.com/tharun571"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/tharun-anandh-8b624b199/"
+  projects:
+    - title: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
+      status: Ongoing
+      description: |
+        Xeus-cpp, a Jupyter kernel for C++, is built upon the native implementation of the Jupyter protocol, xeus. This setup empowers users to interactively write and execute C++ code, providing immediate visibility into the results.With its REPL (read-eval-print-loop) functionality, users can rapidly prototype and iterate without the need to compile and run separate C++ programs. Additionally, this integration facilitates seamless interaction between C++ and Python within the same Jupyter environment. With the ever growing popularity of large language models, this project aims to integrate a large language model with the xeus-cpp Jupyter kernel. This integration will enable users to interactively generate and execute code in C++ leveraging the assistance of the language model.
+      proposal: /assets/docs/TharunA_GSoC_Proposal_2024-Xeus-Cpp.pdf
+      mentors: Anutosh Bhat, Johan Mabille, Aaron Jomy, David Lange, Vassil Vassilev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/vacancies">openings</a> for more info
