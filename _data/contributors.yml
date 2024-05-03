@@ -214,6 +214,22 @@
       proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
       mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
 
+- name: "Atell Yehor Krasnopolski"
+  photo: Atell.jpeg
+  info: "GSoC 2024 Contributor"
+  email: delta_atell@protonmail.com
+  education: "Mathematics, University of Wuerzburg, Germany"
+  github: "https://github.com/gojakuch"
+  www: "https://atell.neocities.org/"
+  active: 1
+  projects:
+    - title: "Implement Differentiating of the Kokkos Framework in Clad"
+      status: Ongoing
+      description: |
+        The goal is to implement the differentiation of the Kokkos framework including the support of Kokkos functors, lambdas, methods such as parallel_for, parallel_reduce, and deep_copy, as well as the general support for Kokkos view data structures. The set-off points for the project should be the existing "Kokkos-aware Clad" PR and the test cases I have developed. The additional aim of the project is to implement a generic approach to support any C++ library (starting with Kokkos) in such a way that the core of Clad is invariant to the internals of the library, but any Clad user can add it in a pluggable format for individual use cases.
+      proposal: /assets/docs/Atell_Krasnopolsky_Proposal_2024.pdf
+      mentors: Vassil Vassilev, Vaibhav Thakkar, Petro Zarytskyi
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/vacancies">openings</a> for more info
