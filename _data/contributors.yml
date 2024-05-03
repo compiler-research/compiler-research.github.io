@@ -211,7 +211,7 @@
         The objectives includes adding support for Cppyy-defined CUDA Code i.e. implementing support for declaration and 
         parsing of CUDA code defined in Cppyy within the Numba extension. Designing and developing a CUDA compilation 
         mechanism and execution within the Cppyy-Numba environment.
-      proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal_2024.pdf
+      proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
       mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
 
 - name: "This could be you!"
