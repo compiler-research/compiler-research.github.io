@@ -214,6 +214,29 @@
   email: ioana.ifrim@cern.ch
   education: MPhil Advanced Computer Science, University of Cambridge (2018)
 
+- name: Sahil Patidar
+  info: "Google Summer of Code 2024 Contributor"
+  email: sahilpatidar60@gmail.com
+  education: "Computer Science and Engineering, Vindhya Institute of Technology, India"
+  github: "https://github.com/SahilPatidar"
+  active: 1
+  projects:
+    - title: "On Demand Parsing in Clang"
+      status: Ongoing
+      description: |
+        Current C++ compilers, including Clang, process all code upfront,
+        regardless of usage. This proposal introduces on-demand compilation for Clang.
+        Inspired by CodeGen's selective code generation, this approach tackles the
+        inefficiency of compiling rarely used code. By deferring processing of unused
+        entities until they are actually needed, we expect significant benefits:
+        Reduced Compilation Memory: Peak memory usage during compilation will drop dramatically.
+        Faster Compile Times: Especially for large codebases with low entity utilization,
+        compilation times will see a marked improvement.
+        Interactive C++ Boost: Header inclusions become virtually cost-free,
+        as entities are parsed only on demand, greatly enhancing the interactive C++ experience.
+        This project has the potential to transform C++ compilation, making it faster and more resource-efficient.
+      mentors: Vassil Vassilev, Matheus Izvekov
+      proposal: /assets/docs/Sahil_Patidar_Proposal_2024_Clang.pdf
 
 ################################################################################
 #                                     2023                                     #
