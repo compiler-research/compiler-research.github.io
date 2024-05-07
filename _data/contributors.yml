@@ -273,6 +273,21 @@
       proposal: /assets/docs/TharunA_GSoC_Proposal_2024-Xeus-Cpp.pdf
       mentors: Anutosh Bhat, Johan Mabille, Aaron Jomy, David Lange, Vassil Vassilev
 
+- name: Thomas Fransham
+  info: "GSoC 2024 Contributor"
+  email: tfransham@gmail.com
+  github: "https://github.com/fsfod"
+  projects:
+    - title: "Support clang plugins on Windows"
+      status: Ongoing
+      description: |
+        This project aims to allow using dynamically loaded Clang plugins on windows by adding 
+        support for building LLVM and Clang as shared libraries on Windows with all the 
+        public c++ API exported and dynamically linking to them. Part of the process will be 
+        automated with a tool built using the Clang tooling API to automatically add export macros
+        on the appropriate class and functions declarations in llvm public headers.
+      proposal: /assets/docs/Thomas_Fransham_GSoC24_Proposal.pdf
+      mentors: Vassil Vassilev, Saleem Abdulrasool
 
 - name: "This could be you!"
   photo: rock.jpg
@@ -1022,4 +1037,4 @@
         compute Jacobians.
       report: |
         [Poster](/assets/presentations/LLVM2020_Clad.pdf){:target="_blank"}
-      mentors: Vassil Vassilev, Alexander Penev
+      mentors: Vassil Vassilev, Alexander Penev   
