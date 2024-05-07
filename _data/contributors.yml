@@ -277,6 +277,7 @@
   info: "GSoC 2024 Contributor"
   email: tfransham@gmail.com
   github: "https://github.com/fsfod"
+  active: 1
   projects:
     - title: "Support clang plugins on Windows"
       status: Ongoing
