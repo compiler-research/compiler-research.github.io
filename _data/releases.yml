@@ -1,3 +1,11 @@
+- date: 2024-05-09
+  codebase: "CppInterOp"
+  version: "v1.3.0"
+  description: |
+    This release includes improved support on Windows, code completion support
+    and bug fixes.
+  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.3.0"
+
 - date: 2024-04-04
   codebase: "Xeus-Cpp"
   version: "v0.4"
