@@ -290,6 +290,26 @@
       proposal: /assets/docs/Thomas_Fransham_GSoC24_Proposal.pdf
       mentors: Vassil Vassilev, Saleem Abdulrasool
 
+- name: Mihail Mihov
+  photo: mihail-mihov.jpg
+  info: "GSoC 2024 Contributor"
+  email: mihovmihailp@gmail.com
+  github: "https://github.com/mihailmihov"
+  active: 1
+  projects:
+    - title: "Add support for consteval and constexpr functions in clad"
+      status: Ongoing
+      description: |
+        In mathematics and computer algebra, automatic differentiation (AD) is a set of techniques to numerically evaluate the derivative of a function specified by a computer program. Automatic differentiation is an alternative technique to Symbolic differentiation and Numerical differentiation (the method of finite differences). Clad is based on Clang which provides the necessary facilities for code transformation. The AD library can differentiate non-trivial functions, to find a partial derivative for trivial cases and has good unit test coverage.
+
+        C++ provides the specifiers consteval and constexpr to allow compile time evaluation of functions. constexpr declares a possibility, i.e the function will be evaluated at compile time if possible, else at runtime; whereas consteval makes it mandatory, i.e every call to the function must produce a compile-time constant.
+
+        The aim of this project is to ensure that same semantics are followed by the generated derivative function, i.e if the primal function is evaluated at compile time (because of constexpr or consteval specifier), then the generated derivative code should also have the same specifier to be evaluatable at compile time.
+
+        This will enable clad to demonstrate the benefits of doing automatic differentiation directly on C++ frontend to utilize the benefits of clang’s infrastructure.
+      proposal: /assets/docs/Mihail_Mihov_GSoC24_Proposal.pdf
+      mentors: Vaibhav Thakkar, Petro Zaritskyi, Vassil Vassilev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/vacancies">openings</a> for more info
