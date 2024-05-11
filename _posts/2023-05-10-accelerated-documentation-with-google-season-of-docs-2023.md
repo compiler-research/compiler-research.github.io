@@ -8,6 +8,7 @@ Automatic Differentiation applications (using Clad, e.g. in RooFit and
 Floating-Point Error Estimation), and Python-C++ Interoperability (Clang-Repl 
 (LLVM), CppInterOp, cppyy, Numba, etc.)."
 sitemap: false
+author: QuillPusher (Saqib)
 permalink: blogs/gsod23_quillpusher_experience_blog/
 date: 2023-05-10
 ---

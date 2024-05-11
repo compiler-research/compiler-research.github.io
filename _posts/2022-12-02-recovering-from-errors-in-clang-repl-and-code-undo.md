@@ -15,6 +15,7 @@ declaration that isn’t a declaration or or specialization of anything
 belongs to the active PTU. However, in case of a template specialization, 
 it can be pulled into a more recent PTU by its template arguments."
 sitemap: false
+author: "Jun Zhang, Purva Chaudhari"
 permalink: blogs/gsoc22_zhang_chaudhari_experience_blog/
 date: 2022-12-02
 ---

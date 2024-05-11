@@ -9,6 +9,7 @@ completing user input or code completion. Sometimes, C++ can be quite wordy,
 requiring users to type every character of an expression or
 statement. Consequently, this causes typos or syntactic errors."
 sitemap: false
+author: Yuquan (Fred) Fu
 permalink: blogs/gsoc23_ffu_experience_blog/
 date: 2023-09-18
 ---
