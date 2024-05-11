@@ -13,6 +13,7 @@ excerpt: "Clang is an LLVM native C/C++/Objective-C compiler, which aims to
    This leads to many infamous pathological errors which have haunted C++ 
    developers for decades."
 sitemap: false
+author: Matheus Izvekov
 permalink: blogs/gsoc22_izvekov_experience_blog/
 date: 2022-11-30
 ---

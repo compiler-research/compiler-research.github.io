@@ -11,6 +11,7 @@ controller process invokes RPCs in the target or executor process to allocate
 memory and then when the code is generated, all the section contents are
 transferred through finalize calls."
 sitemap: false
+author: Anubhab Ghosh
 permalink: blogs/gsoc22_ghosh_experience_blog/
 date: 2022-12-07
 ---
