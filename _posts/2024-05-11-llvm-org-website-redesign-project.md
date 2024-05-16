@@ -49,13 +49,14 @@ transform it into a hub that not only serves its purpose efficiently but also
 delights its users with its simplicity and elegance. Here’s a step-by-step
 breakdown of how I plan to achieve this:
 
-1. **Comprehensive Content Audit**: The first order of business is to dive
-   deep into the current content of the LLVM.org website. This means going
-   through each page, evaluating what information is available, and determining
-   its relevance and usefulness. This audit will help us identify any outdated
-   information, redundant pages, or missing pieces that are crucial for users. 
-   This step will involve working closely with the LLVM community through feedback, 
-   surveys, and discussions to understand their needs and expectations from the website.
+1. **Comprehensive Content Audit**: The first order of business is to dive deep
+   into the current content of the LLVM.org website. This involves evaluating
+   each page to determine its relevance and usefulness. A significant focus
+   will be on enhancing the site's navigation to ensure that it is intuitive
+   and user-friendly. This audit will help us identify any outdated
+   information, redundant pages, or missing pieces that are crucial for users.
+   This step will involve working closely with the LLVM community through
+   feedback, surveys, and discussions.
 
 2. **Selecting the Right Building Blocks**: For the technical platform, I’ll be
    using Hugo, a powerful tool known for building fast and reliable websites.
@@ -63,7 +64,8 @@ breakdown of how I plan to achieve this:
    which is essential for a website like LLVM.org that is frequently updated
    with new information. This choice ensures that the website can be easily
    maintained and updated by the community, long after the project's
-   completion.
+   completion also ensuring that this project is reusable for other sub-projects 
+   websites in the LLVM ecosystem.
 
 3. **Interactive Design Process**: Designing an engaging and user-friendly
    website is not a solo task. I plan to create several design prototypes, each
