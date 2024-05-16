@@ -5,6 +5,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "LLVM.org Website Redesign"
+      date: 2024-05-15 17:00:00 +0200
+      speaker: "Chaitanya Shahare"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_15_05_2024_Chaitanya_Shahare_llvm_org_website_redesign.pdf)"
     - title: "Differentiating integral type variables in Clad"
       date: 2024-04-17 17:00:00 +0200
       speaker: "Petro Zarytskyi"
@@ -70,7 +74,7 @@
       speaker: "Yuquan (Fred) Fu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)"
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
-      date: 2023-06-07 14:00:00 +0200      
+      date: 2023-06-07 14:00:00 +0200
       speaker: "Smit Shah"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_06_2023_Smit_Cross_Talk_Between_C++_Python_Using_cppyy.pdf)"
     - title: "WebAssembly Support for clang-repl"
@@ -221,4 +225,3 @@
       date: 2022-01-05 14:00:00 +0200
       speaker: "Parth Arora"
       link: "[Slides](/assets/presentations/CaaS_Weekly_05_01_2022_Parth-Add_Support_For_Differentiating_wrt_User_Defined_Types.pdf)"
-    
