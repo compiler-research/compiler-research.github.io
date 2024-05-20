@@ -310,6 +310,12 @@
       proposal: /assets/docs/Mihail_Mihov_GSoC24_Proposal.pdf
       mentors: Vaibhav Thakkar, Petro Zaritskyi, Vassil Vassilev
 
+- name: Matthew Barton
+  info: "Open Source Contributor"
+  photo: Matthew.jpg
+  education: PhD Theoretical Nuclear Physics, University of Surrey (2018)
+  active: 1
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/vacancies">openings</a> for more info
