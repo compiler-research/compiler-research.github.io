@@ -1,3 +1,13 @@
+- date: 2024-05-21
+  codebase: "Clad"
+  version: "v1.5"
+  description: |
+    This release enables Clang-18. Includes reduced size of the generated code.
+    It integrates Clad better with Clang by moving the differentiation process
+    at the end of the translation unit. Improves the error estimation
+    infrastructure and has many bug fixes.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v1.5"
+
 - date: 2024-05-09
   codebase: "CppInterOp"
   version: "v1.3.0"
