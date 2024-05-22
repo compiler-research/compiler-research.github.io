@@ -18,13 +18,12 @@ layout: default
         first %} {% assign author_link = author.name | replace: " ", "" |
         prepend: "/team/" %}
         <a href="{{ author_link }}" itemprop="url">
-          {% if author.photo %}
           <img
-            src="{{ site.baseurl }}/images/team/{{ author.photo }}"
+            src="{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}"
             alt="{{ author_name }}"
             class="author-image"
+            style="margin: 0"
           />
-          {% endif %}
           <span itemprop="name">{{ author_name }}</span>
         </a>
         {% if forloop.last == false %} , {% endif %}
