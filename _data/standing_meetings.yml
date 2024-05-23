@@ -5,6 +5,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Enabling reverse-mode automatic differentiation of GPU (CUDA) kernels using Clad"
+      date: 2024-05-15 17:00:00 +0200
+      speaker: "Christina Koutsou"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_15_05_2024_Christina_Enbale_reverse_mode_autodiff_for_kernels_first_presentation.pdf)"
     - title: "Implementing Differentiation of the Kokkos Framework in Clad"
       date: 2024-05-15 17:00:00 +0200
       speaker: "Atell Yehor Krasnopolski"
