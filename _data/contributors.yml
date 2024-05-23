@@ -273,7 +273,6 @@
       proposal: /assets/docs/TharunA_GSoC_Proposal_2024-Xeus-Cpp.pdf
       mentors: Anutosh Bhat, Johan Mabille, Aaron Jomy, David Lange, Vassil Vassilev
 
-<<<<<<< HEAD
 - name: Thomas Fransham
   info: "GSoC 2024 Contributor"
   email: tfransham@gmail.com
@@ -316,7 +315,7 @@
   photo: Matthew.jpg
   education: PhD Theoretical Nuclear Physics, University of Surrey (2018)
   active: 1
-=======
+
 - name: "Christina Koutsou"
   photo: 
   info: "Google Summer of Code 2024 Contributor"
@@ -341,7 +340,6 @@
         of their choosing. In addition, the user must be able to call these kernels with a custom grid configuration. 
       proposal: /assets/docs/Christina_Koutsou_GSoC_2024.pdf
       mentors: Vassil Vassilev, Parth Arora, Alexander Penev
->>>>>>> 2c416f3 (Add Christina Koutsou to contributors list)
 
 - name: "This could be you!"
   photo: rock.jpg
