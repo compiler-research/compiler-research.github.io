@@ -33,4 +33,21 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">{{ content }}</div>
+
+  {% if page.tags and page.tags.size > 0 %}
+  <hr />
+  <footer class="post-footer">
+    <p>
+      <h4>Tags:</h4>
+      {% for tag in page.tags %}
+      <a
+        href="{{ site.baseurl }}/tag#{{ tag | downcase | slugify }}"
+        class="badge badge-secondary"
+        style="background-color: #999999; padding: 0.5rem"
+        >{{ tag }}</a
+      >
+      {% endfor %}
+    </p>
+  </footer>
+  {% endif %}
 </article>
