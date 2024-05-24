@@ -1,18 +1,25 @@
 ---
 layout: default
-title: Blog
+title: Tags
 ---
 
-<h2>Latest Posts</h2>
+<h2>Tags</h2>
 
 <div>
-  {% for post in site.posts %}
+  {% for tag in site.tags %} {% assign t = tag | first %} {% assign posts = tag
+  | last %} 
+
+  <h3 id={{t | downcase}}>
+    {{ t | downcase }}
+  </h3>
+  <div>
+    {% for post in posts %} {% if post.tags contains t %}
   <div class="well">
     <h3>{{ post.title }}</h3>
     <p>
       {% assign author = site.data.contributors | where: "name", post.author | first %}
       {% if author %}
-      <a href="{{ author.name | replace: " ", "" | prepend: "/team/" }}">
+      <a href="{{ author.name | replace: " ", "" | prepend: " /team/" }}">
         <img
           src="{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}"
           alt="{{ author.name }}" style="
@@ -20,9 +27,9 @@ title: Blog
             height: 30px;
             border-radius: 50%;
             /* vertical-align: middle; */
-            margin: 0;
-            margin-top: 4px;
-            margin-bottom: 4px;
+	    margin: 0;
+	    margin-top: 4px;
+	    margin-bottom: 4px;
           " />
         {{ author.name }}
       </a>
@@ -35,7 +42,6 @@ title: Blog
     </p>
     <p>{{ post.excerpt | truncatewords: 50 }}</p>
 
-
     {% if post.tags and post.tags.size > 0 %}
     <p>
       {% for tag in post.tags %}
@@ -44,9 +50,12 @@ title: Blog
     </p>
     {% endif %}
 
+
     <p>
       <button class="btn btn-primary" onclick="window.location.href='{{ post.url }}'">Read More</button>
     </p>
+  </div>
+    {% endif %} {% endfor %}
   </div>
   {% endfor %}
 </div>

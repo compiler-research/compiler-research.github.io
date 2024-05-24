@@ -9,13 +9,14 @@ sitemap: false
 author: Chaitanya Shahare
 permalink: blogs/gsoc24_chaitanya_shahare_introduction_blog/
 date: 2024-05-11
+tags: gsoc llvm website
 ---
 
 ### Introduction
 
 I’m Chaitanya Shahare, a passionate full-stack web developer and a pre-final-year
 Mechanical Engineering student at the National Institute of Technology
-Srinagar, India. This summer, I'm delighted to embark on an exciting journey with LLVM as 
+Srinagar, India. This summer, I'm delighted to embark on an exciting journey with LLVM as
 Google Summer of Code 2024 contributor, where I'll be contributing to the LLVM project by
 improving the look and feel of its central hub, the LLVM.org website.
 
@@ -64,7 +65,7 @@ breakdown of how I plan to achieve this:
    which is essential for a website like LLVM.org that is frequently updated
    with new information. This choice ensures that the website can be easily
    maintained and updated by the community, long after the project's
-   completion also ensuring that this project is reusable for other sub-projects 
+   completion also ensuring that this project is reusable for other sub-projects
    websites in the LLVM ecosystem.
 
 3. **Interactive Design Process**: Designing an engaging and user-friendly
@@ -93,13 +94,13 @@ breakdown of how I plan to achieve this:
 
 Through detailed planning, collaborative design, and careful execution, this
 project aims to not only revamp the LLVM.org website but also enhance how the
-LLVM community interacts with it. 
+LLVM community interacts with it.
 
 ### Conclusion
 
 As we start this journey to improve the LLVM.org website, I am excited and
 ready for the challenges ahead. I'm confident we can create a website that
-everyone will find easy to use and helpful. 
+everyone will find easy to use and helpful.
 
 ### Related Links
 
