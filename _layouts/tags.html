@@ -7,55 +7,13 @@ title: Tags
 
 <div>
   {% for tag in site.tags %} {% assign t = tag | first %} {% assign posts = tag
-  | last %} 
+  | last %}
 
-  <h3 id={{t | downcase}}>
-    {{ t | downcase }}
-  </h3>
+  <h3 id="{{ t | downcase }}">{{ t | downcase }}</h3>
   <div>
-    {% for post in posts %} {% if post.tags contains t %}
-  <div class="well">
-    <h3>{{ post.title }}</h3>
-    <p>
-      {% assign author = site.data.contributors | where: "name", post.author | first %}
-      {% if author %}
-      <a href="{{ author.name | replace: " ", "" | prepend: " /team/" }}">
-        <img
-          src="{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}"
-          alt="{{ author.name }}" style="
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            /* vertical-align: middle; */
-	    margin: 0;
-	    margin-top: 4px;
-	    margin-bottom: 4px;
-          " />
-        {{ author.name }}
-      </a>
-      {% else %}
-      {{ post.author }}
-      {% endif %}
-      <span class="text-muted">
-        • {{ post.date | date: "%b %d, %Y" }} • {{ post.content | number_of_words | divided_by: 200 | ceil }} min read
-      </span>
-    </p>
-    <p>{{ post.excerpt | truncatewords: 50 }}</p>
-
-    {% if post.tags and post.tags.size > 0 %}
-    <p>
-      {% for tag in post.tags %}
-      <a href="{{ site.baseurl }}/tags#{{ tag | downcase | slugify }}" class="badge" style="background-color: #999999; padding: 0.5rem">{{ tag }}</a>
-      {% endfor %}
-    </p>
-    {% endif %}
-
-
-    <p>
-      <button class="btn btn-primary" onclick="window.location.href='{{ post.url }}'">Read More</button>
-    </p>
+    {% for post in posts %} {% if post.tags contains t %} {% include
+    blog-post-card.html post=post %} {% endif %} {% endfor %}
   </div>
-    {% endif %} {% endfor %}
-  </div>
+  <hr />
   {% endfor %}
 </div>
