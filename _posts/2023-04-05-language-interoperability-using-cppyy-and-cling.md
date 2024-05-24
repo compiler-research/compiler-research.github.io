@@ -47,7 +47,9 @@ heterogeneous computing environments).
 
 This is where the usefulness of language interoperability becomes evident.
 However, this requires an advanced integration solution, especially for high
-performance code that is executed in diverse environments. 
+performance code that can suffer from penalties crossing the language barrier.
+
+![numba extension](/images/blog/cppyy-numba-1.png){: style="{{ image_style }}"}
 
 Numba, a just-in-time (JIT) compiler for Python, is a tool that is ideal for
 this task (with some enhancements). Numba is capable of compiling Python code
@@ -60,7 +62,7 @@ automatic runtime bindings generator).
 The target of this research was to demonstrate a generic prototype that
 automatically brings advanced C++ features (e.g., highly optimized numeric
 libraries) to Numba-accelerated Python, with help from cppyy. This required
-re-engineering of the cppyy back-end to directly use LLVM components. A new
+re-engineering of the cppyy-backend to directly use LLVM components. A new
 CppInterOp library was also introduced to implement interoperability
 primitives based on Cling and Clang-Repl (also an interactive interpreter, a
 progression on Cling).
@@ -91,20 +93,24 @@ either C++ or Python, as appropriate.
 
 ### Prototype Overview
 
-To bring C++ to Numba, a reflection interface was developed on top of cppyy.
-This enables Python programmers to develop and debug their code in Python and
-selectively switching on the Numba JIT for performance-critical tasks.
+The primary motivation behind the addition of Numba support in cppyy is the elimination of the overhead that arises from crossing the languiage barrier, which can multiply into large slowdowns when using loops with cppyy objects. Since Numba compiles Python code into machine code it only crosses the language barrier once and the loops thus run faster
 
-Python is a dynamically typed language. It wraps and later unwraps objects
-(referred to as boxing/unboxing). This is a costly operation that can be
-eliminated with Numba, while using the new Reflection API. The Reflection API
-uses a function called `__cpp_reflex__` that takes the reflection type and
-format as parameters and returns the requested information (e.g., an object’s
-C++ type).
+![numba extension](/images/blog/cppyy-numba-2.png){: style="{{ image_style }}"}
 
-Let's look at the  interaction between Numba, numba extention and cppyy.  
+Python is a dynamically typed language. It wraps and later unwraps objects (referred to as boxing/unboxing). These costly operations are eliminated with Numba, which unboxes the inputs of a function and converts it to machine code. This improves the performance of heavily looped code that perform certain operations. At the end, the output is boxed so that Python can use it. For this to work, Numba needs to infer the types of not only the input and output but the intermediate variables as well.
 
-![numba extension](/images/blog/2023-04-05-numba-ext.png){: style="{{ image_style }}"}
+To bring C++ to Numba, a custom module was developed on top of cppyy using the Numba low level extension API.
+This enables Python programmers to selectively enable Numba acceleration for performance-critical tasks by importing `cppyy.numba_ext`
+
+![numba extension](/images/blog/cppyy-numba-3.png){: style="{{ image_style }}"}
+
+The extension aids Numba's three phases which are- Typing, Lowering(to LLVM IR) and Boxing/Unboxing which process all (or most) C++ proxies held by the Python interpreter in the form of cppyy objects.
+
+The biggest challenge while integrating cppyy support in Numba is to teach Numba what cppyy types and data mean. We approach this by utilising an improved reflection API within cppyy (`__cpp_reflex__`). Reflex returns information about cppyy objects within the scope of the Numba accelerated function. This allows us to inherit Numba's typing classes and populate them with more information without which we cannot box/unbox and lower to LLVM IR.
+
+Let's look at the  interaction between Cppyy, Numba and the Numba extension:
+
+![numba extension](/images/blog/cppyy-numba-4.png){: style="{{ image_style }}"}
 
 Numba analyzes a Python code and when it encounters cppyy types, it queries
 the cppyy’s pre-registered `numba_ext` module for the type information. If
