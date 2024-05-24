@@ -12,6 +12,7 @@ sitemap: false
 author: Yuquan (Fred) Fu
 permalink: blogs/gsoc23_ffu_experience_blog/
 date: 2023-09-18
+tags: gsoc clang llvm
 ---
 
 ### Overview of the Project
@@ -51,11 +52,10 @@ clang-repl> c.move(<tab>
 If users hit the `<tab`> key at the indicated position, listing all symbols
 would be distracting. It is easy to find out that among all declarations, only
 `c1`, `c2` and `s` are well-typed candidates. So an ideal code completion system
-should be able to filter out results using type information. 
+should be able to filter out results using type information.
 
 The project leverages existing components of Clang/LLVM and aims to provides
 context-aware semantic completion suggestions.
-
 
 ### My Approach
 
@@ -97,7 +97,6 @@ main `ASTContext` to the code completion `ASTContext`.
 <img src="/images/blog/cc1.gif" width="600" />
 
 <img src="/images/blog/cc2.gif" width="600" />
-
 
 ### Future Work
 

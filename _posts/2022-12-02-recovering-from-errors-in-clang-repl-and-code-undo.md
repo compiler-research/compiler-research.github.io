@@ -20,6 +20,7 @@ author:
 - Purva Chaudhari
 permalink: blogs/gsoc22_zhang_chaudhari_experience_blog/
 date: 2022-12-02
+tags: gsoc clang llvm
 ---
 
 ### Overview of the Project
@@ -57,6 +58,7 @@ clang-repl: /home/purva/llvm-project/clang/include/clang/Sema/Sema.h:9406: clang
 Aborted
  (core dumped)
 ```
+
 and
 
 ```cpp
@@ -74,11 +76,9 @@ clang-repl> %undo
 clang-repl> float x = 24 // not an error
 ```
 
-
 ### Contributions
 
 The main contributions to this project are listed here.
-
 
 Pull Requests:
 
@@ -101,29 +101,37 @@ Pull Requests:
 extends the functionality used to recover from errors and adds functionality to
 recover the low-level execution infrastructure. Now you can do below in
 clang-repl:
+
 ```cpp
 clang-repl> int x = 42;
 clang-repl> %undo
 clang-repl> float x = 24; // not an error
 ```
+
 2. We fixed a bunch of bugs in Clang-Repl, by upstreamed ready-made patches in
 cling: Fix inline function in Clang-Repl. Take the example below:
+
 ```cpp
 inline int foo() { return 42; }
 int r3 = foo(); // This fails before my fix.
 ```
+
 More context: [cd64a427](https://github.com/llvm/llvm-project/commit/cd64a427efa0baaf1bb7ae624d4301908afc07f7)
 3. Partially fix incorrect return code in Clang-Repl. Take the example below:
+
 ```cpp
 clang-repl> BOOM!
 clang-repl> int x = 42;
 // This previously passed in the LLVM lit tests incorrectly
 ```
+
 4. Partially fix weak attribute usage in Clang-Repl. Take the example below:
+
 ```cpp
 int __attribute__((weak)) bar() { return 42; }
 auto r4 = printf("bar() = %d\n", bar()); // This fails before my patch. Note this is not supported in Windows yet.
 ```
+
 5. We fixed some issues in lambda usage in Clang-Repl.
 
 ### Conclusion
@@ -149,10 +157,9 @@ In the future, I'll continue my journey into the world of open source, and bring
 
 **Contact us!**
 
-Jun: jun@junz.org
+Jun: <jun@junz.org>
 
 GitHub username: [junaire](https://github.com/junaire)
-
 
 Purva: [Webpage](https://purva-chaudhari.github.io/My-Portfolio/)
 
