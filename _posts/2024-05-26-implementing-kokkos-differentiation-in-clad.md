@@ -6,6 +6,7 @@ sitemap: false
 author: Atell Yehor Krasnopolski
 permalink: blogs/gsoc24_atell_krasnopolsky_introduction_blog/
 date: 2024-05-26
+tags: gsoc clang llvm clad
 ---
 
 ### Introduction
