@@ -157,7 +157,7 @@ In the future, I'll continue my journey into the world of open source, and bring
 
 **Contact us!**
 
-Jun: <jun@junz.org>
+Jun: [jun@junz.org](/team/JunZhang/)
 
 GitHub username: [junaire](https://github.com/junaire)
 
