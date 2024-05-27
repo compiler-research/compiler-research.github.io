@@ -5,6 +5,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "ROOT: superbuilds"
+      date: 2024-05-15 17:00:00 +0200
+      speaker: "Pavlo Svirin"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_15_05_2024_Pavlo_Svirin_RootSuperBuildsGSoC.pdf)"
     - title: "Implementing Differentiation of the Kokkos Framework in Clad"
       date: 2024-05-15 17:00:00 +0200
       speaker: "Atell Yehor Krasnopolski"
