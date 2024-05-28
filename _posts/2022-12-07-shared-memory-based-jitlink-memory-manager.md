@@ -166,7 +166,7 @@ many applications.
 
 **Contact me!**
 
-Email: [anubhabghosh.me@gmail.com](/team/AnubhabGhosh)
+Email: anubhabghosh.me@gmail.com
 
 Github Username: [argentite](https://github.com/argentite)
 
