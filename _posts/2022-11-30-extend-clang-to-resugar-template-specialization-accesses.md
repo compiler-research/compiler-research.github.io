@@ -118,7 +118,7 @@ increase my confidence as a developer in the LLVM open community!
 
 **Contact me!**
 
-Email: [mizvekov@gmail.com](/team/MatheusIzvekov)
+Email: mizvekov@gmail.com
 
 Github Username: [mizvekov](https://github.com/mizvekov)
 
