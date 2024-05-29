@@ -318,7 +318,7 @@
 
 - name: "This could be you!"
   photo: rock.jpg
-  info: See <a href="/vacancies">openings</a> for more info
+  info: See <a href="/careers">openings</a> for more info
   email: vvasilev@cern.ch
   active: 1
 
