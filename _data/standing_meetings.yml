@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Enable CUDA Compilation on Cppyy-Numba generated IR"
+      date: 2024-05-29 17:00:00 +0200
+      speaker: "Riya Bisht"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_29_05_2024_Riya_Bisht_enable_CUDA_support_Cppyy_Numba_GSoC2024.pdf)"
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
     - title: "ROOT: superbuilds"
