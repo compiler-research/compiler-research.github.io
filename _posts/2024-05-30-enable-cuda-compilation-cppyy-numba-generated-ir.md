@@ -21,11 +21,11 @@ I got introduced to this project while researching on my personal research proje
 
 ### Introduction to Cppyy and the problem statement
 
-Cppyy is an automatic python-C++ runtime binding generator that helps to call C++ code from Python and vice-versa. This enables interoperability between different language ecosystems, avoids the cross-language overhead, and promotes heterogeneous computing. The initial support for Numba, a Python JIT Compiler has been added which compiles looped code containing C++ objects/methods/functions defined via Cppyy into fast machine code. This proposed project seeks to leverage Cppyy's integration with Numba, a high-performance Python compiler, to enable the compilation of CUDA C++ code defined via Cppyy into efficient machine code. 
+Cppyy is an automatic python-C++ runtime binding generator that helps to call C++ code from Python and vice-versa. This enables interoperability between two different language ecosystems, avoids the cross-language overhead, and promotes heterogeneous computing. The initial support for Numba, a Python JIT Compiler has been added which compiles looped code containing C++ objects/methods/functions defined via Cppyy into fast machine code. This proposed project seeks to leverage Cppyy's integration with Numba, a high-performance Python compiler, to enable the compilation of CUDA C++ code defined via Cppyy into efficient machine code. 
 
 ### Importance of this project
 
-As we know, heterogeneous computing is the future. The scientific community is heavily relying on GPGPU(General-Purpose Graphics Processing Unit)computations, that incorporate CPUs as well as GPUs for running workloads based on their requirements. This architecture of GPGPUs generates a need for scientists to understand the low-level graphics APIs like CUDA(Compute Unified Device Architecture) which comes with a whole new learning curve, instead, we can use Python language which is more familiar to the scientific ecosystem. Cppyy can help provide efficient Python-CUDA C++ bindings during runtime. This enables scientists to leverage GPU acceleration in a much more user-friendly language with rich ecosystems like Python without compromising on performance. Based on research, python can be slow as compared to other performant systems programming languages like C++ so we will use Numba, a high-performance Python JIT compiler that will produce fast machine code out of our Python code.
+As we know, heterogeneous computing is the future. The scientific community heavily rely on GPGPU(General-Purpose Graphics Processing Unit)computations, that incorporate CPUs as well as GPUs for running workloads based on their requirements. This architecture of GPGPUs generates a need for scientists to understand the low-level graphics APIs like CUDA(Compute Unified Device Architecture) which comes with a whole new learning curve, instead, we can use Python language which is more familiar to the scientific ecosystem. Cppyy can help provide efficient Python-CUDA C++ bindings during runtime. This enables scientists to leverage GPU acceleration in a much more user-friendly language, Python, with a rich ecosystem without compromising on performance. Based on research, Python can be slow as compared to other performant systems programming languages like C++ so we will use Numba, a high-performance Python JIT compiler that will produce fast machine code out of Python code.
 
 ### Implementation Approach and Plans
 
@@ -34,14 +34,12 @@ Milestones of this project include:
 By separating the CUDA and C++ code execution paths, cppyy can provide a more stable and efficient environment for integrating CUDA functionality into Python.
 
 2. **Designing and developing CUDA compilation pipeline**: At present, the CUDA compilation is supported by adding CUDA headers to PCH(Pre-compiled headers) during runtime but this provides control to Cling, which is an interactive C++ interpreter. We want to take control from Cling and provide it to Numba using numba decorators while it invokes GPU kernels from Cppyy. Numba uses the proxies to obtain function pointers and then runs the LLVM compilation passes using `llvmlite`. That's why the scope of the project is to utilize numba so we don’t have to deal with Cling. This can include adding:
-- Support of helpers in `numba_ext.py` to simplify the process of launching CUDA kernels directly from Python.
-- Support of CUDA-specific data types in `LLVM IR`.
-
-The research is still ongoing for this part of the project. 
+    - Support of helpers in `numba_ext.py` to simplify the process of launching CUDA kernels directly from Python.
+    - Support of CUDA-specific data types in `LLVM IR`. [The research is still ongoing for this part of the project.]
 
 3. **Testing and Documentation support**: Prepare comprehensive tests to ensure functionality and robustness. Create detailed documentation including debugging guides for users and developers.
 
-4. **Future scope**: To provide further optimization techniques for extracting more performance out of GPUs
+4. **Future scope**: To provide further optimization techniques for extracting more performance out of GPUs.
 
 Upon successful completion, a possible proof-of-concept can be expected in the below code snippet: 
 
@@ -66,7 +64,9 @@ This would allow Python users to utilize CUDA for parallel computing on GPUs whi
 
 ### Conclusion
 
-The impact of this project extends far beyond Cppyy itself, as it empowers the scientific community by providing Python users with direct access to the performance and capabilities of C++ libraries. The CUDA support in the Python ecosystem through Cppyy and Numba can help accelerate the research and development in Scientific Computing domains like Data analysis(ROOT), Machine Learning, and computational sciences like simulating genetic code, protein structures, etc that rely on both languages. 
+The impact of this project extends far beyond Cppyy itself, as it empowers the scientific community by providing Python users with direct access to the performance and capabilities of C++ libraries. The CUDA support in the Python ecosystem through Cppyy and Numba can help accelerate the research and development in Scientific Computing domains like Data analysis(ROOT), Machine Learning, and computational sciences like simulating genetic code, protein structures, etc that rely on both languages. The following papers shows the importance of CUDA and GPU acceleration in scientific community:
+    - Simulations use GPUs to run the world's largest simulations on the world's largest supercomputer: [Link](https://escholarship.org/content/qt5q63r9ph/qt5q63r9ph_noSplash_29f23cdb21b554ab0457d33f14e9d6e0.pdf)
+    - This enables to perform GPU-accelerated modeling and seamless GPU-accelerated, zero-copy extensions of the fast codes from Python. Useful for rapid prototyping of new physics modules, development of in situ analysis as well as coupling multiple codes and codes with ML frameworks and the data science ecosystem: [Link]( https://arxiv.org/abs/2402.17248)
 
 ### Related Links
 
