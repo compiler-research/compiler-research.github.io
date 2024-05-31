@@ -7,6 +7,10 @@
       date: 2024-05-29 17:00:00 +0200
       speaker: "Riya Bisht"
       link: "[Slides](/assets/presentations/CaaS_Weekly_29_05_2024_Riya_Bisht_enable_CUDA_support_Cppyy_Numba_GSoC2024.pdf)"
+    - title: "Clad Constexpr Consteval Support Project Introduction"
+      date: 2024-05-22 17:00:00 +0200
+      speaker: "Mihail Mihov"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_22_05_2024_Mihail_Mihov_Clad_Constexpr_Consteval_GSoC2024.pdf)"
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
     - title: "ROOT: superbuilds"
