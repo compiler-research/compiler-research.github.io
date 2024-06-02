@@ -5,6 +5,7 @@ excerpt: "Enable CUDA Compilation on Cppyy-Numba generated IR project, part of G
 sitemap: false
 author: Riya Bisht
 permalink: blogs/gsoc24_riya_bisht_introduction_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2024-05-30
 tags: gsoc cuda numba llvm cppyy
 ---

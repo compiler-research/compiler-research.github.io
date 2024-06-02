@@ -5,6 +5,7 @@ excerpt: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel, par
 sitemap: false
 author: Tharun Anandh
 permalink: blogs/gsoc24_tharun_anandh_introduction_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2024-05-30
 tags: gsoc xeus xeus-cpp cpp llm
 ---

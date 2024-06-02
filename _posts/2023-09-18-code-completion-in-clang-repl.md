@@ -11,6 +11,7 @@ statement. Consequently, this causes typos or syntactic errors."
 sitemap: false
 author: Yuquan (Fred) Fu
 permalink: blogs/gsoc23_ffu_experience_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2023-09-18
 tags: gsoc clang llvm
 ---

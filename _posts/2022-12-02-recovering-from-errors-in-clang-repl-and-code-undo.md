@@ -19,6 +19,7 @@ author:
 - Jun Zhang
 - Purva Chaudhari
 permalink: blogs/gsoc22_zhang_chaudhari_experience_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2022-12-02
 tags: gsoc clang llvm
 ---

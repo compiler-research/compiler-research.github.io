@@ -15,6 +15,7 @@ excerpt: "Clang is an LLVM native C/C++/Objective-C compiler, which aims to
 sitemap: false
 author: Matheus Izvekov
 permalink: blogs/gsoc22_izvekov_experience_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2022-11-30
 tags: gsoc clang llvm
 ---

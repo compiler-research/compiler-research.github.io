@@ -6,24 +6,16 @@ layout: default
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
-      <time
-        datetime="{{ page.date | date_to_xmlschema }}"
-        itemprop="datePublished"
-      >
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%b %-d, %Y" }}
       </time>
       {% if page.author %} • {% for author_name in page.author %}
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        {% assign author = site.data.contributors | where: "name", author_name |
-        first %} {% assign author_link = author.name | replace: " ", "" |
-        prepend: "/team/" %}
+        {% assign author = site.data.contributors | where: "name", author_name | first %}
+        {% assign author_link = author.name | replace: " ", "" | prepend: "/team/" %}
         <a href="{{ author_link }}" itemprop="url">
-          <img
-            src="{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}"
-            alt="{{ author_name }}"
-            class="author-image"
-            style="margin: 0"
-          />
+          <img src="{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}"
+               alt="{{ author_name }}" class="author-image" />
           <span itemprop="name">{{ author_name }}</span>
         </a>
         {% if forloop.last == false %} , {% endif %}
@@ -31,6 +23,13 @@ layout: default
       {% endfor %} {% endif %}
     </p>
   </header>
+
+  {% if page.banner_image %}
+  <div class="post-banner">
+    <img src="{{ page.banner_image }}"
+         alt="Banner Image" class="banner-image" />
+  </div>
+  {% endif %}
 
   <div class="post-content" itemprop="articleBody">{{ content }}</div>
 
@@ -40,14 +39,25 @@ layout: default
     <p>
       <h4>Tags:</h4>
       {% for tag in page.tags %}
-      <a
-        href="{{ site.baseurl }}/tag#{{ tag | downcase | slugify }}"
-        class="badge badge-secondary"
-        style="background-color: #999999; padding: 0.5rem"
-        >{{ tag }}</a
-      >
+      <a href="{{ site.baseurl }}/tag#{{ tag | downcase | slugify }}" class="badge badge-secondary tag-badge">{{ tag }}</a>
       {% endfor %}
     </p>
   </footer>
   {% endif %}
 </article>
+
+<style>
+.post-header .author-image {
+  margin: 0;
+}
+
+.post-banner .banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.tag-badge {
+  background-color: #999999;
+  padding: 0.5rem;
+}
+</style>

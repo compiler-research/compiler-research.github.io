@@ -7,6 +7,7 @@ This initiative will streamline navigation, improve accessibility, and update
 content, transforming LLVM.org into a more user-friendly resource."
 sitemap: false
 author: Chaitanya Shahare
+banner_image: /images/blog/gsoc-banner.png
 permalink: blogs/gsoc24_chaitanya_shahare_introduction_blog/
 date: 2024-05-11
 tags: gsoc llvm website

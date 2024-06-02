@@ -5,6 +5,7 @@ excerpt: "A GSoC 2024 project aimed at implementing the differentiation of the K
 sitemap: false
 author: Atell Yehor Krasnopolski
 permalink: blogs/gsoc24_atell_krasnopolsky_introduction_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2024-05-26
 tags: gsoc clang llvm clad
 ---
