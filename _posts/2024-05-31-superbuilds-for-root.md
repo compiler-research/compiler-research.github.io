@@ -5,6 +5,7 @@ excerpt: "A GSoC 2024 project with goal to split ROOT into separate components a
 sitemap: false
 author: Pavlo Svirin
 permalink: blogs/gsoc24_pavlo_svirin_introduction_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2024-05-31
 tags: gsoc root cmake 
 ---

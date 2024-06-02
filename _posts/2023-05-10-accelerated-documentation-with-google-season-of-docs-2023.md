@@ -10,6 +10,7 @@ Floating-Point Error Estimation), and Python-C++ Interoperability (Clang-Repl
 sitemap: false
 author: QuillPusher
 permalink: blogs/gsod23_quillpusher_experience_blog/
+banner_image: /images/blog/gsod-banner.png
 date: 2023-05-10
 tags: gsod documentation llvm root clang-repl cppyy
 ---

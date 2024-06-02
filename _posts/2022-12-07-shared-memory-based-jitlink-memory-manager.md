@@ -13,6 +13,7 @@ transferred through finalize calls."
 sitemap: false
 author: Anubhab Ghosh
 permalink: blogs/gsoc22_ghosh_experience_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2022-12-07
 tags: gsoc llvm jitlink memory-manager
 ---
