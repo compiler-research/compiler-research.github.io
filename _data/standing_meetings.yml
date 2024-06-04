@@ -7,6 +7,10 @@
       date: 2024-05-29 17:00:00 +0200
       speaker: "Riya Bisht"
       link: "[Slides](/assets/presentations/CaaS_Weekly_29_05_2024_Riya_Bisht_enable_CUDA_support_Cppyy_Numba_GSoC2024.pdf)"
+    - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends in cppyy"
+      date: 2024-05-29 17:00:00 +0200
+      speaker: "Khushiyant"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_28_05_2024_Khushiyant_CppyyGSoC.pdf)"
     - title: "Clad Constexpr Consteval Support Project Introduction"
       date: 2024-05-22 17:00:00 +0200
       speaker: "Mihail Mihov"
