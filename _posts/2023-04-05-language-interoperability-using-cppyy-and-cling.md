@@ -1,11 +1,11 @@
 ---
-title: "The Next Step in Language Interoperability using Cling and cppyy"
+title: "The Next Step in Language Interoperability using compiler-as-a-service and cppyy"
 layout: post
-excerpt: "Scientific software in constantly being challenged by enthusiasts trying to
+excerpt: "Scientific software is constantly being challenged by enthusiasts trying to
 test the boundaries of programming languages, in search of better performance
-and simpler workflows. One such breakthrough was achieved using Cling, a C++
-interpreter, that has presented new possibilities with an incremental
-compilation infrastructure that is available at runtime."
+and simpler workflows. Interactive C++ interpreters such as Cling and ClangRepl
+presented new possibilities with an incremental compilation infrastructure that
+ is available at runtime."
 sitemap: false
 permalink: blogs/language_interoperability_with_cling_and_cppyy/
 date: 2023-04-05
@@ -17,11 +17,11 @@ date: 2023-04-05
     margin: 0 auto;
 {% endcapture %}
 
-Scientific software in constantly being challenged by enthusiasts trying to
+Scientific software is constantly being challenged by enthusiasts trying to
 test the boundaries of programming languages, in search of better performance
-and simpler workflows. One such breakthrough was achieved using Cling, a C++
-interpreter, that has presented new possibilities with an incremental
-compilation infrastructure that is available at runtime.
+and simpler workflows. Interactive C++ interpreters such as Cling and ClangRepl
+presented new possibilities with an incremental compilation infrastructure that
+ is available at runtime.
 
 This means that Python can interact with C++ on an on-demand basis, and
 bindings can be automatically constructed at runtime. This provides
@@ -40,10 +40,10 @@ C++ gained early adoption in scientific research fields due to its high
 performance capabilities. But the interactive nature of Python and the gentler
 learning curve led to higher adoption rates elsewhere, and as a result, it saw
 exponential advancements in capabilities that were ideal for data science
-research. However, this does not discredit the usefulness of C++ in data
-science. A lot of research infrastructure is still rooted in C++ and benefits
-from some of its unique features (e.g., access to accelerators in
-heterogeneous computing environments). 
+research. Python shines when steering infrastructure written in high
+performance language such as C or C++. However, it is challenging to write the
+glue layers between both languages for every package available in the C++
+ecosystem. 
 
 This is where the usefulness of language interoperability becomes evident.
 However, this requires an advanced integration solution, especially for high
@@ -56,8 +56,9 @@ this task (with some enhancements). Numba is capable of compiling Python code
 while targeting either the CPU or the GPU, and providing interfaces to use the
 JITed closures from low-level libraries. Numba helps lower Python to machine
 code level and minimizes costly language crossings. In order to provide the
-missing links for this research, Numba was also integrated with cppyy (an
-automatic runtime bindings generator).
+missing links for this research, Numba was also integrated with the cppyy
+project -- an automatic runtime bindings generator based using interactive C++
+to connect to the Python runtime.
 
 The target of this research was to demonstrate a generic prototype that
 automatically brings advanced C++ features (e.g., highly optimized numeric
@@ -93,20 +94,39 @@ either C++ or Python, as appropriate.
 
 ### Prototype Overview
 
-The primary motivation behind the addition of Numba support in cppyy is the elimination of the overhead that arises from crossing the languiage barrier, which can multiply into large slowdowns when using loops with cppyy objects. Since Numba compiles Python code into machine code it only crosses the language barrier once and the loops thus run faster
+The primary motivation behind the addition of Numba support in cppyy is the
+elimination of the overhead that arises from crossing the language barrier,
+which can multiply into large slowdowns when using loops with cppyy objects.
+Since Numba compiles Python code into machine code, it only crosses the
+language barrier once, and the loops thus run faster
 
 ![numba extension](/images/blog/cppyy-numba-2.png){: style="{{ image_style }}"}
 
-Python is a dynamically typed language. It wraps and later unwraps objects (referred to as boxing/unboxing). These costly operations are eliminated with Numba, which unboxes the inputs of a function and converts it to machine code. This improves the performance of heavily looped code that perform certain operations. At the end, the output is boxed so that Python can use it. For this to work, Numba needs to infer the types of not only the input and output but the intermediate variables as well.
+Python is a dynamically typed language. It wraps and later unwraps objects
+(referred to as boxing/unboxing). These costly operations are eliminated with
+Numba, which unboxes the inputs of a function and converts it to machine code.
+This improves the performance of heavily looped code that perform certain
+operations. At the end, the output is boxed so that Python can use it. For
+this to work, Numba needs to infer the types of not only the input and output
+but the intermediate variables as well.
 
-To bring C++ to Numba, a custom module was developed on top of cppyy using the Numba low level extension API.
-This enables Python programmers to selectively enable Numba acceleration for performance-critical tasks by importing `cppyy.numba_ext`
+To bring C++ to Numba, a custom module was developed on top of cppyy using the
+Numba low-level extension API. This enables Python programmers to selectively
+enable Numba acceleration for performance-critical tasks by importing
+`cppyy.numba_ext`
 
 ![numba extension](/images/blog/cppyy-numba-3.png){: style="{{ image_style }}"}
 
-The extension aids Numba's three phases which are- Typing, Lowering(to LLVM IR) and Boxing/Unboxing which process all (or most) C++ proxies held by the Python interpreter in the form of cppyy objects.
+The extension aids Numba's three phases which are- Typing, Lowering(to LLVM
+IR) and Boxing/Unboxing which process all (or most) C++ proxies held by the
+Python interpreter in the form of cppyy objects.
 
-The biggest challenge while integrating cppyy support in Numba is to teach Numba what cppyy types and data mean. We approach this by utilising an improved reflection API within cppyy (`__cpp_reflex__`). Reflex returns information about cppyy objects within the scope of the Numba accelerated function. This allows us to inherit Numba's typing classes and populate them with more information without which we cannot box/unbox and lower to LLVM IR.
+The biggest challenge while integrating cppyy support in Numba is to teach
+Numba what cppyy types and data mean. We approach this by utilising an
+improved reflection API within cppyy (`__cpp_reflex__`). Reflex returns
+information about cppyy objects within the scope of the Numba accelerated
+function. This allows us to inherit Numba's typing classes and populate them
+with more information without which we cannot box/unbox and lower to LLVM IR.
 
 Let's look at the  interaction between Cppyy, Numba and the Numba extension:
 
@@ -145,8 +165,11 @@ the case of templated free functions.
 <br />
 
 Where,
-- Numba JIT time: The execution time of Numba JITed functions with cppyy objects against their Python counterparts (to obtain the time taken by Numba to JIT the function).
-- cppyy JIT time: The time taken by cppyy to create the typing information and possibly to perform lookups and instantiate templates.
+- Numba JIT time: The execution time of Numba JITed functions with cppyy
+  objects against their Python counterparts (to obtain the time taken by Numba
+  to JIT the function).
+- cppyy JIT time: The time taken by cppyy to create the typing information and
+  possibly to perform lookups and instantiate templates.
 - Hot run time: The time taken to execute the function after it has been JITed.
 - Python run time: The time taken to execute the equivalent Python function.
 - Speedup: Compares the Hot run time to Python run time.
@@ -165,7 +188,7 @@ This opens up several possibilities for developers. For example, they can
 develop and debug their code in Python, while using C++ libraries, and
 switching on the Numba JIT for selected performance-critical closures. 
 
-The results are promising, with 2-20 times speedup when using Numba to
+The results are promising, with a 2 to 20 times speedup when using Numba to
 accelerate cppyy through our extension. Further gains were demonstrated using
 the Clang-Repl component of LLVM and the newly developed library CppInterOp.
 Preliminary results show 1.4 to 144 times faster handling of templated code in
