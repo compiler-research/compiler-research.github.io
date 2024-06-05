@@ -13,6 +13,10 @@
       date: 2024-05-29 17:00:00 +0200
       speaker: "Khushiyant"
       link: "[Slides](/assets/presentations/CaaS_Weekly_28_05_2024_Khushiyant_CppyyGSoC.pdf)"
+    - title: "Improving performance of BioDynaMo using ROOT C++ Modules"
+      date: 2024-05-22 17:00:00 +0200
+      speaker: "Isaac Morales"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_22_05_2024_Isaac_Morales_BioDynamo.pdf)"
     - title: "Clad Constexpr Consteval Support Project Introduction"
       date: 2024-05-22 17:00:00 +0200
       speaker: "Mihail Mihov"
