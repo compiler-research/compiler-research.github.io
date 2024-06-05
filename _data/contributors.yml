@@ -316,6 +316,27 @@
   education: PhD Theoretical Nuclear Physics, University of Surrey (2018)
   active: 1
 
+- name: Sahil Patidar
+  info: "Google Summer of Code 2024 Contributor"
+  email: sahilpatidar60@gmail.com
+  education: "Computer Science and Engineering, Vindhya Institute of Technology, India"
+  github: "https://github.com/SahilPatidar"
+  active: 1
+  projects:
+    - title: "Out-Of-Process execution for Clang-Repl"
+      status: Ongoing
+      description: |
+        This project focuses on enhancing Clang-Repl, an interactive C++ interpreter
+        that leverages LLVM's JIT infrastructure. The current in-process execution model
+        poses challenges, especially for resource-constrained devices and stability.
+        By transitioning Clang-Repl to an out-of-process execution model, this project
+        aims to address these limitations. It will improve resource efficiency, making
+        Clang-Repl usable on devices with limited resources, and enhance crash resilience,
+        preventing user code failures from crashing the entire interpreter. This shift will
+        foster a more robust and accessible interactive C++ compilation and execution environment.
+      mentors: Vassil Vassilev, Matheus Izvekov
+      proposal: /assets/docs/Sahil_Patidar_Proposal_2024_ClangRepl.pdf
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
@@ -382,8 +403,6 @@
   photo: Ifrim.jpg
   email: ioana.ifrim@cern.ch
   education: MPhil Advanced Computer Science, University of Cambridge (2018)
-
-
 
 ################################################################################
 #                                     2023                                     #
