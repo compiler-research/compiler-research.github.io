@@ -90,7 +90,7 @@ only improves performance but also simplifies code development and debugging
 processes, offering a more efficient alternative to static binding methods.
 
 
-[Automatic Differentiation ↗]: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p2072r0.pdf
+[Automatic Differentiation ↗]: https://compiler-research.org/automatic_differentiation
 
 [Interactive C++]: https://blog.llvm.org/posts/2020-12-21-interactive-cpp-for-data-science/
 

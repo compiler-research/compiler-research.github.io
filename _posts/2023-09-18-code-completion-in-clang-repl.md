@@ -9,8 +9,11 @@ completing user input or code completion. Sometimes, C++ can be quite wordy,
 requiring users to type every character of an expression or
 statement. Consequently, this causes typos or syntactic errors."
 sitemap: false
+author: Yuquan (Fred) Fu
 permalink: blogs/gsoc23_ffu_experience_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2023-09-18
+tags: gsoc clang llvm
 ---
 
 ### Overview of the Project
@@ -50,11 +53,10 @@ clang-repl> c.move(<tab>
 If users hit the `<tab`> key at the indicated position, listing all symbols
 would be distracting. It is easy to find out that among all declarations, only
 `c1`, `c2` and `s` are well-typed candidates. So an ideal code completion system
-should be able to filter out results using type information. 
+should be able to filter out results using type information.
 
 The project leverages existing components of Clang/LLVM and aims to provides
 context-aware semantic completion suggestions.
-
 
 ### My Approach
 
@@ -96,7 +98,6 @@ main `ASTContext` to the code completion `ASTContext`.
 <img src="/images/blog/cc1.gif" width="600" />
 
 <img src="/images/blog/cc2.gif" width="600" />
-
 
 ### Future Work
 

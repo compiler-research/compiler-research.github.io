@@ -1,3 +1,31 @@
+- date: 2024-06-04
+  codebase: "Xeus-Cpp"
+  version: "v0.5"
+  description: |
+    This release merges most of the features available in xeus-clang-repl.
+    Implements code completion and drops `xtl` as a dependency. The release adds
+    a new kernel C++20 and drops C++11 and C++14 kernels as we upgraded to xeus
+    5.
+  link: "https://github.com/compiler-research/xeus-cpp/releases/tag/0.5.0"
+
+- date: 2024-05-21
+  codebase: "Clad"
+  version: "v1.5"
+  description: |
+    This release enables Clang-18. Includes reduced size of the generated code.
+    It integrates Clad better with Clang by moving the differentiation process
+    at the end of the translation unit. Improves the error estimation
+    infrastructure and has many bug fixes.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v1.5"
+
+- date: 2024-05-09
+  codebase: "CppInterOp"
+  version: "v1.3.0"
+  description: |
+    This release includes improved support on Windows, code completion support
+    and bug fixes.
+  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.3.0"
+
 - date: 2024-04-04
   codebase: "Xeus-Cpp"
   version: "v0.4"

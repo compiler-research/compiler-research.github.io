@@ -5,6 +5,30 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Enable CUDA Compilation on Cppyy-Numba generated IR"
+      date: 2024-05-29 17:00:00 +0200
+      speaker: "Riya Bisht"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_29_05_2024_Riya_Bisht_enable_CUDA_support_Cppyy_Numba_GSoC2024.pdf)"
+    - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends in cppyy"
+      date: 2024-05-29 17:00:00 +0200
+      speaker: "Khushiyant"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_28_05_2024_Khushiyant_CppyyGSoC.pdf)"
+    - title: "Clad Constexpr Consteval Support Project Introduction"
+      date: 2024-05-22 17:00:00 +0200
+      speaker: "Mihail Mihov"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_22_05_2024_Mihail_Mihov_Clad_Constexpr_Consteval_GSoC2024.pdf)"
+    - title: "ROOT: superbuilds"
+      date: 2024-05-15 17:00:00 +0200
+      speaker: "Pavlo Svirin"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_15_05_2024_Pavlo_Svirin_RootSuperBuildsGSoC.pdf)"
+    - title: "Implementing Differentiation of the Kokkos Framework in Clad"
+      date: 2024-05-15 17:00:00 +0200
+      speaker: "Atell Yehor Krasnopolski"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_15_05_2024_Atell_Krasnopolski_KokkosCladGSoC.pdf)"
+    - title: "LLVM.org Website Redesign"
+      date: 2024-05-15 17:00:00 +0200
+      speaker: "Chaitanya Shahare"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_15_05_2024_Chaitanya_Shahare_llvm_org_website_redesign.pdf)"
     - title: "Differentiating integral type variables in Clad"
       date: 2024-04-17 17:00:00 +0200
       speaker: "Petro Zarytskyi"
@@ -70,7 +94,7 @@
       speaker: "Yuquan (Fred) Fu"
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_06_2023_Fred_Code_Completion_in_ClangREPL.pdf)"
     - title: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
-      date: 2023-06-07 14:00:00 +0200      
+      date: 2023-06-07 14:00:00 +0200
       speaker: "Smit Shah"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_06_2023_Smit_Cross_Talk_Between_C++_Python_Using_cppyy.pdf)"
     - title: "WebAssembly Support for clang-repl"
@@ -221,4 +245,3 @@
       date: 2022-01-05 14:00:00 +0200
       speaker: "Parth Arora"
       link: "[Slides](/assets/presentations/CaaS_Weekly_05_01_2022_Parth-Add_Support_For_Differentiating_wrt_User_Defined_Types.pdf)"
-    

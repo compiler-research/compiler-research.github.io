@@ -5,7 +5,7 @@
 
     {% assign top_articles = site.data.openprojectlist %}
     {% for article in top_articles limit:4 %}
-      <p><a href="{{ site.url }}{{ site.baseurl }}/open_projects/#{{ article.name | slugify }}">{{ article.name }}</a><br /></p>
+      <p><a href="{{ site.url }}{{ site.baseurl }}/open_projects#{{ article.name | slugify }}">{{ article.name }}</a><br /></p>
     {% endfor %}
 
 

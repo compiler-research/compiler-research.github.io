@@ -1,0 +1,19 @@
+---
+layout: default
+title: Tags
+---
+
+<h2>Tags</h2>
+
+<div>
+  {% for tag in site.tags %} {% assign t = tag | first %} {% assign posts = tag
+  | last %}
+
+  <h3 id="{{ t | downcase }}">{{ t | downcase }}</h3>
+  <div>
+    {% for post in posts %} {% if post.tags contains t %} {% include
+    blog-post-card.html post=post %} {% endif %} {% endfor %}
+  </div>
+  <hr />
+  {% endfor %}
+</div>

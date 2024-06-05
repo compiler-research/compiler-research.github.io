@@ -13,8 +13,11 @@ excerpt: "Clang is an LLVM native C/C++/Objective-C compiler, which aims to
    This leads to many infamous pathological errors which have haunted C++ 
    developers for decades."
 sitemap: false
+author: Matheus Izvekov
 permalink: blogs/gsoc22_izvekov_experience_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2022-11-30
+tags: gsoc clang llvm
 ---
 
 ### Overview of the Project
@@ -60,7 +63,6 @@ naming context, without the need of tracking the template context. This
 approach, although more efficient, required some intrusive modifications on the
 way substitutions are represented in the AST.
 
-
 ### Contributions
 
 The main contributions to this project are listed here.
@@ -77,7 +79,6 @@ Pull Requests:
 6. [D130308 - Extend getCommonSugaredType to merge sugar nodes](https://reviews.llvm.org/D130308)
 7. [D131858 - Track the templated entity in type substitution](https://reviews.llvm.org/D131858)
 8. [D127695 - Implement Template Specialization Resugaring](https://reviews.llvm.org/D127695)
-
 
 ### Contributions
 
@@ -97,7 +98,6 @@ system. This issue often prevents successful resugaring in C++. Improving the
 type rules for syntactic sugar in STL will reduce the generation of errors in
 terms of desugared code, improving the relationship between the user's source
 program and the program evaluation.
-
 
 ### Acknowledgements
 

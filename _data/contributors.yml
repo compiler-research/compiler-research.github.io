@@ -146,6 +146,185 @@
   email: pavlo.svirin@cern.ch
   education: PhD Computer Science, National Technical University of Ukraine, 2014
   active: 1
+      
+- name: Isaac Morales Santana
+  info: "GSoC 2024 Contributor"
+  photo: Isaac.jpg
+  email: isaacmoralessantana@gmail.com
+  github: "https://github.com/imorlxs"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/isaac-morales-santana-724280203/"
+  education: "Computer Engineering, University of Granada, Spain"
+  projects:
+    - title: "Improving performance of BioDynaMo using ROOT C++ Modules"
+      status: Ongoing
+      description: |
+        The ROOT is a framework for data processing, born at CERN, at the heart of the research on high-energy physics. Every day, thousands of physicists use ROOT applications to analyze their data or to perform simulations. The ROOT software framework is foundational for the HEP ecosystem, providing capabilities such as IO, a C++ interpreter, GUI, and math libraries. It uses object-oriented concepts and build-time modules to layer between components. We believe additional layering formalisms will benefit ROOT and its users.
+
+        BioDynaMo is an agent-based simulation platform that enables users to perform simulations of previously unachievable scale and complexity, making it possible to tackle challenging scientific research questions. The project has a wide range of applications in cancer research, epidemiology, and social sciences.
+
+        BioDynaMo incorporates ROOT for several crucial functionalities such as statistical analysis, random number generation, C++-based Jupyter notebooks, and IO. Some features rely on efficient reflection information about BioDynaMo’s and user-defined C++ classes. This project is about improving the performance of the reflection system by upgrading to C++ modules.
+
+      proposal: /assets/docs/Isaac_Morales-Proposal_2024.pdf
+      mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswal and Fons Rademakers
+
+- name: "Chaitanya Shahare"
+  photo: Chaitanya-Shahare.jpeg
+  info: "GSoC 2024 Contributor"
+  email: shaharechaitanya3@gmail.com
+  education: "B.Tech in Mechanical Engineering, National Institute of Technology Srinagar, India"
+  github: "https://github.com/Chaitanya-Shahare"
+  www: "https://chaitanyashahare.com"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/cs03"
+  projects:
+    - title: "LLVM.org website redesign"
+      status: Ongoing
+      description: |
+        Revamping the LLVM.org Website: Modernizing the central hub for LLVM project
+        information. Enhancing navigation, content discoverability, and usability for
+        both new users and existing community members. Utilizing static site
+        generators, like Hugo, for efficiency and scalability. Separating data and
+        visualization using YAML and Markdown for easier content management. Engaging
+        the community for feedback and collaboration throughout the redesign process.
+      proposal: /assets/docs/Chaitanya_Shahare_Proposal_2024.pdf
+      mentors: Tanya Lattner, Vassil Vassilev
+      
+- name: "Riya Bisht"
+  photo: Riya-Bisht.jpeg
+  info: "Google Summer Of Code 2024 Contributor"
+  email: manasi.riya2003@gmail.com
+  education: "B.Tech in Computer Science Engineering, Graphic Era University, India"
+  github: "https://github.com/chococandy63"
+  www: "https://riyabisht.com/about/"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/riya-bisht-81b365196/"
+  projects:
+    - title: "Enable CUDA compilation on Cppyy-Numba generated IR"
+      status: Ongoing
+      description: |
+        Cppyy is an automatic, run-time, Python-C++ binding generator, for calling C++ from Python and Python from C++. 
+        Initial support has been added that allows Cppyy to hook into the high-performance Python compiler, Numba which
+        compiles looped code containing C++ objects/methods/functions defined via Cppyy into fast machine code. The 
+        project aims to enhance Cppyy, by enabling CUDA compilation on Numba-generated intermediate representation (IR). 
+        This integration will allow seamless utilization of CUDA paradigms in Python without compromising performance. 
+        The objectives includes adding support for Cppyy-defined CUDA Code i.e. implementing support for declaration and 
+        parsing of CUDA code defined in Cppyy within the Numba extension. Designing and developing a CUDA compilation 
+        mechanism and execution within the Cppyy-Numba environment.
+      proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
+      mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
+
+- name: "Atell Yehor Krasnopolski"
+  photo: Atell.jpg
+  info: "GSoC 2024 Contributor"
+  email: delta_atell@protonmail.com
+  education: "Mathematics, University of Wuerzburg, Germany"
+  github: "https://github.com/gojakuch"
+  www: "https://atell.neocities.org/"
+  active: 1
+  projects:
+    - title: "Implement Differentiating of the Kokkos Framework in Clad"
+      status: Ongoing
+      description: |
+        The goal is to implement the differentiation of the Kokkos framework including the support of Kokkos functors, lambdas, methods such as parallel_for, parallel_reduce, and deep_copy, as well as the general support for Kokkos view data structures. The set-off points for the project should be the existing "Kokkos-aware Clad" PR and the test cases I have developed. The additional aim of the project is to implement a generic approach to support any C++ library (starting with Kokkos) in such a way that the core of Clad is invariant to the internals of the library, but any Clad user can add it in a pluggable format for individual use cases.
+      proposal: /assets/docs/Atell_Krasnopolsky_Proposal_2024.pdf
+      mentors: Vassil Vassilev, Vaibhav Thakkar, Petro Zarytskyi
+
+- name: Khushiyant
+  photo: Khushiyant.jpg
+  info: "Research Intern, GSoC 2024 Contributor"
+  email: khushiyant2002@gmail.com
+  education: "B.Tech in Computer Science and Engineering, G.G.S.I.P.U, India"
+  github: "https://github.com/Khushiyant"
+  www: "https://bento.me/khushiyant"
+  linkedin: "https://www.linkedin.com/in/khushiyant/"
+  active: 1
+  projects:
+    - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
+      status: Ongoing
+      description: |
+            Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from Python and Python from C++. 
+            Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side. 
+            Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense. 
+            These cppyy objects can be plugged into idiomatic expressions that expect Python builtin-types. 
+            This behaviour is achieved by growing pythonistic methods like __len__ while also retaining its C++ methods like size.
+            Efficient and automatic conversion between C++ and Python is essential towards high-performance cross-language support. 
+            This approach eliminates overheads arising from iterative initialization such as comma insertion in Eigen. 
+            This opens up new avenues for the utilization of Cppyy’s bindings in tools that perform numerical operations for transformations, or optimization.
+            The on-demand C++ infrastructure wrapped by idiomatic Python enables new techniques in ML tools like JAX/CUTLASS. 
+            This project allows the C++ infrastructure to be plugged into at service to the users seeking high-performance library primitives that are unavailable in Python.
+
+      mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
+      proposal: /assets/docs/Khushiyant_Proposal_2024.pdf
+
+- name: "Tharun Anandh"
+  photo: tharun_a.jpg
+  info: "GSoC 2024 Contributor"
+  email: atharun05@gmail.com
+  education: "B.Tech in Computer Science and Engineering, National Institute of Technology, Tiruchirapalli, Tamil Nadu, India"
+  github: "https://github.com/tharun571"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/tharun-anandh-8b624b199/"
+  projects:
+    - title: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
+      status: Ongoing
+      description: |
+        Xeus-cpp, a Jupyter kernel for C++, is built upon the native implementation of the Jupyter protocol, xeus. This setup empowers users to interactively write and execute C++ code, providing immediate visibility into the results.With its REPL (read-eval-print-loop) functionality, users can rapidly prototype and iterate without the need to compile and run separate C++ programs. Additionally, this integration facilitates seamless interaction between C++ and Python within the same Jupyter environment. With the ever growing popularity of large language models, this project aims to integrate a large language model with the xeus-cpp Jupyter kernel. This integration will enable users to interactively generate and execute code in C++ leveraging the assistance of the language model.
+      proposal: /assets/docs/TharunA_GSoC_Proposal_2024-Xeus-Cpp.pdf
+      mentors: Anutosh Bhat, Johan Mabille, Aaron Jomy, David Lange, Vassil Vassilev
+
+- name: Thomas Fransham
+  info: "GSoC 2024 Contributor"
+  email: tfransham@gmail.com
+  github: "https://github.com/fsfod"
+  active: 1
+  projects:
+    - title: "Support clang plugins on Windows"
+      status: Ongoing
+      description: |
+        This project aims to allow using dynamically loaded Clang plugins on windows by adding 
+        support for building LLVM and Clang as shared libraries on Windows with all the 
+        public c++ API exported and dynamically linking to them. Part of the process will be 
+        automated with a tool built using the Clang tooling API to automatically add export macros
+        on the appropriate class and functions declarations in llvm public headers.
+      proposal: /assets/docs/Thomas_Fransham_GSoC24_Proposal.pdf
+      mentors: Vassil Vassilev, Saleem Abdulrasool
+
+- name: Mihail Mihov
+  photo: mihail-mihov.jpg
+  info: "GSoC 2024 Contributor"
+  email: mihovmihailp@gmail.com
+  github: "https://github.com/mihailmihov"
+  active: 1
+  projects:
+    - title: "Add support for consteval and constexpr functions in clad"
+      status: Ongoing
+      description: |
+        In mathematics and computer algebra, automatic differentiation (AD) is a set of techniques to numerically evaluate the derivative of a function specified by a computer program. Automatic differentiation is an alternative technique to Symbolic differentiation and Numerical differentiation (the method of finite differences). Clad is based on Clang which provides the necessary facilities for code transformation. The AD library can differentiate non-trivial functions, to find a partial derivative for trivial cases and has good unit test coverage.
+
+        C++ provides the specifiers consteval and constexpr to allow compile time evaluation of functions. constexpr declares a possibility, i.e the function will be evaluated at compile time if possible, else at runtime; whereas consteval makes it mandatory, i.e every call to the function must produce a compile-time constant.
+
+        The aim of this project is to ensure that same semantics are followed by the generated derivative function, i.e if the primal function is evaluated at compile time (because of constexpr or consteval specifier), then the generated derivative code should also have the same specifier to be evaluatable at compile time.
+
+        This will enable clad to demonstrate the benefits of doing automatic differentiation directly on C++ frontend to utilize the benefits of clang’s infrastructure.
+      proposal: /assets/docs/Mihail_Mihov_GSoC24_Proposal.pdf
+      mentors: Vaibhav Thakkar, Petro Zaritskyi, Vassil Vassilev
+
+- name: Matthew Barton
+  info: "Open Source Contributor"
+  photo: Matthew.jpg
+  education: PhD Theoretical Nuclear Physics, University of Surrey (2018)
+  active: 1
+
+- name: "This could be you!"
+  photo: rock.jpg
+  info: See <a href="/careers">openings</a> for more info
+  email: vvasilev@cern.ch
+  active: 1
+
+################################################################################
+#                                     2024                                     #
+################################################################################
 
 - name: Shreyas Atre
   photo: Shreyas.jpg
@@ -154,11 +333,10 @@
   education: "B.Tech in Electronics and Telecommunications Engineering, Veermata Jijabai Technological Institute, Mumbai, India | Masters in Computer Science, Louisiana State University, Baton Rouge, United States"
   github: "https://github.com/SAtacker"
   www: "https://satacker.github.io"
-  active: 1
   linkedin: "https://www.linkedin.com/in/atreshreyas/"
   projects:
     - title: "Improve the test coverage for CppInterOp"
-      status: Ongoing
+      status: Completed
       description: |
         This project aims to enhance the reliability and robustness of
         CppInterOp, a library facilitating language interoperability by
@@ -176,15 +354,6 @@
         of template specialization decls in clang modules.
       mentors:  Vassil Vassilev
 
-- name: "This could be you!"
-  photo: rock.jpg
-  info: See <a href="/vacancies">openings</a> for more info
-  email: vvasilev@cern.ch
-  active: 1
-
-################################################################################
-#                                     2024                                     #
-################################################################################
 
 - name: Abhi Acherjee
   info: "IRIS-HEP Fellow"
@@ -193,7 +362,7 @@
   education: "Computer Sciences B.S. + M.S , University of Cincinnati, OH"
   projects:
     - title: "Extend the Automatic Differentiation Support in RooFit"
-      status: Ongoing
+      status: Completed
       description: |
         In terms of minimization time, Roofit offers faster results even with numerical
         differentiation techniques as compared to minimizing a likelihood function that
@@ -237,6 +406,7 @@
         This project has the potential to transform C++ compilation, making it faster and more resource-efficient.
       mentors: Vassil Vassilev, Matheus Izvekov
       proposal: /assets/docs/Sahil_Patidar_Proposal_2024_Clang.pdf
+
 
 ################################################################################
 #                                     2023                                     #
@@ -917,4 +1087,4 @@
         compute Jacobians.
       report: |
         [Poster](/assets/presentations/LLVM2020_Clad.pdf){:target="_blank"}
-      mentors: Vassil Vassilev, Alexander Penev
+      mentors: Vassil Vassilev, Alexander Penev   
