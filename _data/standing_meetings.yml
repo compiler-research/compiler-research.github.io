@@ -5,6 +5,10 @@
   agenda:
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
+    - title: "Integrate a large language model with the Xeus-cpp jupyter kernel"
+      date: 2024-06-05 17:00:00 +0200
+      speaker: "Tharun Anandh"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_05_06_2024_Tharun_Anandh_Xeus_cpp.pdf)"
     - title: "Enable CUDA Compilation on Cppyy-Numba generated IR"
       date: 2024-05-29 17:00:00 +0200
       speaker: "Riya Bisht"
