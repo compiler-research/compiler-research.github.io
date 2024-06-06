@@ -6,6 +6,7 @@
   agenda:
     - title: Update
       speaker: Vassil Vassilev
+      slides: "/assets/presentations/CR_06_06_2024.pdf"
     - title: Next meeting
       speaker: Vassil Vassilev
       link: 11 Jul 1700
