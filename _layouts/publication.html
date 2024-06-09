@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+{% assign publication = site.data.publist | where: "title", page.title | first %}
+
+<article class="publication" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <header class="publication-header">
+    <h1 class="publication-title" itemprop="headline">{{ publication.title }}</h1>
+    <p class="publication-meta">
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ publication.author }}</span>
+      </span>
+      • <time datetime="{{ publication.year | date: "%Y" }}" itemprop="datePublished">{{ publication.year }}</time>
+    </p>
+  </header>
+
+  {% if page.banner_image %}
+  <div class="post-banner">
+    <img src="{{ page.banner_image }}"
+         alt="Banner Image" class="banner-image" />
+  </div>
+  {% endif %}
+
+  <div class="publication-content" itemprop="description">
+    <h3>Abstract</h3>
+    <p>{{ publication.abstract | markdownify }}</p>
+    {{ content }}
+  </div>
+
+  <div class="publication-info">
+    <h3>Details</h3>
+    {% if publication.journal %}
+      <p><strong>Journal:</strong> {{ publication.journal }}</p>
+    {% endif %}
+    {% if publication.volume %}
+      <p><strong>Volume:</strong> {{ publication.volume }}</p>
+    {% endif %}
+    {% if publication.pages %}
+      <p><strong>Pages:</strong> {{ publication.pages }}</p>
+    {% endif %}
+    {% if publication.cites %}
+      <p><strong>Cited by:</strong> {{ publication.cites }} times</p>
+    {% endif %}
+    {% if publication.eprint %}
+    <p><strong><a href="{{ publication.eprint }}" target="_blank">E-Print</a></strong></p>
+    {% endif %}
+    {% if publication.url %}
+    <p><strong><a href="{{ publication.url }}" target="_blank">Read Full Publication</a></strong></p>
+    {% endif %}
+  </div>
+
+</article>
+
+<style>
+.publication-header .author-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.publication-banner .banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.tag-badge {
+  background-color: #999999;
+  padding: 0.5rem;
+}
+</style>
