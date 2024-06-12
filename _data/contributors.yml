@@ -235,6 +235,21 @@
       proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
       mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
 
+- name: "Maksym Andriichuk"
+  photo: Andriichuk.jpg
+  info: "IRIS-HEP Fellow"
+  email: maksym.andriichuk@icloud.com
+  education: "Mathematics, University of Wuerzburg, Germany"
+  github: "https://github.com/ovdiiuv"
+  active: 1
+  projects:
+    - title: "Optimizing automatic differentiation using activity analysis"
+      status: Ongoing
+      description: |
+        Clad has undergone significant optimization in the recent years. One such optimization is the To-Be-Recorded optimization which reduces the memory pressure to the clad tape data structure. The next step is to implement the activity analysis which discards all statements which are irrelevant for the generated code. That is, if the statements do not depend on the input/output variables of a routine in a differentiable way, they are ignored. Combining both analyses could result in a much greater performance, which is our ultimate goal.        
+      proposal: /assets/docs/Maksym_Andriichuk_Proposal_2024.pdf
+      mentors: Vassil Vassilev, David Lange, Petro Zarytskyi
+
 - name: "Atell Yehor Krasnopolski"
   photo: Atell.jpg
   info: "GSoC 2024 Contributor"
