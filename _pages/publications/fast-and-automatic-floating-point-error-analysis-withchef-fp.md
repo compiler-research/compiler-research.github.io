@@ -4,3 +4,6 @@ permalink: /publications/fast-and-automatic-floating-point-error-analysis-with-c
 layout: publication
 ---
 
+### Tutorial
+
+[How to Estimate Floating Point Errors Using Automatic Differentiation]( https://compiler-research.org/tutorials/fp_error_estimation_clad_tutorial/ )
