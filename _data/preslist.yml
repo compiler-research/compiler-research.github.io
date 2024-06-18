@@ -274,7 +274,7 @@
     [Link to Slides](/assets/presentations/G_Singh-MiapbTUM_AD_RooFit.pdf)
   highlight: 1
 
-- title: "Fast and Automatic Floating Point Error Analysis With CHEF-FP"
+- title: "Fast And Automatic Floating Point Error Analysis With CHEF-FP"
   description: |
     As we reach the limit of Moore's Law, researchers are exploring different 
     paradigms to achieve unprecedented performance. Approximate Computing (AC), 
