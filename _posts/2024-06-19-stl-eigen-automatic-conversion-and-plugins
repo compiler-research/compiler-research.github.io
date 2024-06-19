@@ -1,0 +1,69 @@
+---
+title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
+layout: post
+excerpt: "Enable CPU based operations in JAX or other ML backends by providing automatic conversion between C++ and Python and developing plugins for high-performance operations."
+sitemap: false
+author: Khushiyant
+permalink: blogs/gsoc24_khushiyant_introduction_blog/
+banner_image: /images/blog/gsoc-banner.png
+date: 2024-06-19
+tags: gsoc cppyy stl eigen jax
+---
+
+### Introduction
+
+I'm Khushiyant, Machine Learning Engineer at [Martian](https://withmartian.com/) as well as a research assistant under Dr. Swati Aggarwal (Marie Curie Fellow) at NTNU in the field of high-performance clusters and the use of deep learning in brain signal processing. 
+
+Get to know me better through [Bento](https://www.bento.me/khushiyant/) 
+
+**Mentors**: Wim Lavrijsen, Aaron Jomy, Vassil Vassilev, Jonas Rembser
+
+### Personal Motivation
+
+Since the beginning of my journey, I have been deeply involved in research and driven by a passion for solving complex problems. Working as a Machine Learning Engineer for a US-based company called Martian and as a research assistant under Dr. Swati Aggarwal at NTNU, I have developed a strong foundation in high-performance clusters and the use of deep learning in brain signal processing. 
+
+CERN has always represented the pinnacle of scientific research and innovation to me. The opportunity to collaborate with the High Energy Physics Software Foundation (HSF) through GSoC is a dream come true. Although I previously applied for the CERN Summer Student Program without success, I see GSoC as an invaluable chance to work with some of the best mentors in the field, learn from their expertise, and contribute to groundbreaking projects.
+
+### Introduction to Cppyy and the problem statement
+
+Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from Python and Python from C++. Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side. Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense. These cppyy objects can be plugged into idiomatic expressions that expect Python builtin-types. This behaviour is achieved by growing pythonistic methods like len while also retaining its C++ methods like size. Efficient and automatic conversion between C++ and Python is essential towards high-performance cross-language support. This approach eliminates overheads arising from iterative initialization such as comma insertion in Eigen. This opens up new avenues for the utilization of Cppyy’s bindings in tools that perform numerical operations for transformations, or optimization. The on-demand C++ infrastructure wrapped by idiomatic Python enables new techniques in ML tools like JAX/CUTLASS. This project allows the C++ infrastructure to be plugged into at service to the users seeking high-performance library primitives that are unavailable in Python.
+
+### Importance of this project
+
+#### Enhancing Software Interoperability
+One of the core objectives of this project is to improve the interoperability between C++ and Python, particularly in the context of scientific computing and machine learning. By extending support for arbitrary dimensions in STL vectors and improving Eigen class initialization, we enable more complex data structures and operations to be seamlessly managed between these two languages. This not only simplifies the development process but also opens up new possibilities for researchers and developers to leverage the strengths of both C++ and Python in their work.
+
+#### Streamlining Data Conversion
+The development of conversion utilities between Python built-in types, numpy.ndarray, and STL/Eigen data structures addresses a critical need in the scientific and machine learning communities. These utilities make it easier to integrate different software components, allowing for more efficient data manipulation and processing. This streamlined interconversion is particularly beneficial for projects that rely on high-performance computing, where the ability to quickly and accurately convert data formats can lead to significant performance improvements.
+
+#### Enabling Advanced Computational Operations
+The implementation of experimental plugins for the JAX framework, utilizing CUTLASS for high-performance operations, represents a major advancement in computational capabilities. By providing support for operations like convolution, addition, subtraction, and multiplication, these plugins enhance the functionality of machine learning backends, making them more powerful and versatile. This can lead to more efficient and effective machine learning models and simulations, directly benefiting fields such as high-energy physics, where complex computations are routine.
+
+### Implementation Approach and Plans
+
+Milestones of this project include:
+1. **Extend STL support for std::vectors of arbitrary dimensions**: The first milestone in our project involves extending the support for `std::vector` to handle arbitrary dimensions within the Cpppy framework. This enhancement is crucial for enabling more complex and nested data structures, which are often required in scientific computing and machine learning applications.
+We need to handle the construction of multi-dimensional std::vector objects. This requires modifications to the object construction logic, also in `cppyy/src/pythonize.cxx`. 
+
+2. **Improve the initialization approach for Eigen classes**: At Improving the initialization of Eigen classes within the Cpppy framework is crucial for enhancing performance and usability. Eigen is widely used for linear algebra operations in scientific computing and machine learning, and optimizing its initialization can lead to significant efficiency gains.
+By extending the support for `std::vector` to handle arbitrary dimensions, we enable more complex data structures to be seamlessly managed within the Cpppy framework. This improvement is especially beneficial for scientific and machine learning applications that require nested and multi-dimensional vectors for efficient data processing and manipulation.
+
+3. **Develop a streamlined interconversion mechanism between Python built-in-types, numpy.ndarray, and STL/Eigen data structures along with POC to provide the JAX cpu operations**: We know that modern ML libraries like Pytorch, TensorFlow, and Jax are all optimized to run on GPUs and cannot compete with Cppyy executed on CPUs. 
+Eigen comma insertion and reconversion to ndarray take up the majority of the execution time and increases exponentially as the size of the layers in the neural network increases. We would require a way to initialize the Matrix similar to the cppyy.std.vector initialization with numpy.
+
+4. **Future scope**: To provide further support for more CPU operation in JAX or other ML backends
+
+This would allow Python users to utilise superior cppyy CPU operations in their ML backends. 
+
+### Conclusion
+
+This project allowed me to extend my expertise in machine learning frameworks, high-performance computing, and software development. By enhancing the support for arbitrary dimensions in STL vectors, improving Eigen class initialization, and developing conversion utilities between Python built-in types, numpy.ndarray, and STL/Eigen data structures, I contributed to making Cpppy more versatile and efficient. The implementation of experimental plugins for JAX and the integration of CUTLASS for high-performance operations further demonstrate the potential impact of our work on the broader research and development community.
+
+
+
+### Related Links
+
+- [Cppyy Repository](https://github.com/wlav/cppyy)
+- [Project Description](https://hepsoftwarefoundation.org/gsoc/2024/proposal_Cppyy-STL-Eigen-support.html)
+- [GSoC Project Proposal](/assets/docs/Khushiyant_Proposal_2024.pdf)
+- [My GitHub Profile](https://github.com/khushiyant)
