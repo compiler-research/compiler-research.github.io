@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+{% assign publication = site.data.publist | where: "title", page.title | first %}
+{% assign presentation = site.data.preslist | where: "title", page.title | first %}
+
+<article class="publication" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <header class="publication-header">
+    <h1 class="publication-title" itemprop="headline">{{ publication.title }}</h1>
+    <p class="publication-meta">
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ publication.author }}</span>
+      </span>
+      • <time datetime="{{ publication.year | date: "%Y" }}" itemprop="datePublished">{{ publication.year }}</time>
+    </p>
+  </header>
+
+  {% if page.banner_image %}
+  <div class="post-banner">
+    <img src="{{ page.banner_image }}"
+         alt="Banner Image" class="banner-image" />
+  </div>
+  {% endif %}
+
+  <div class="publication-content" itemprop="description">
+
+    <h3>Abstract</h3>
+
+    <p>{{ publication.abstract | markdownify }}</p>
+
+    {% if presentation %}
+    <div class="presentation-info">
+      <h3>Presentation</h3>
+      <div style="display: block; position: relative">
+        <a href="{{ presentation.artifacts | split: '(' | last | strip | split: ')' | first | strip }}">
+          <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ presentation.id }}.gif"
+            class=""
+            style="border-radius:2px; width: 100%;"
+          />
+          <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ presentation.id }}.png"
+            class="gif-animated-static"
+            style="border-radius:2px; width: 100%; position: absolute; top: 0; left: 0; margin; 0"
+          />
+        </a>
+      </div>
+      <p><strong>Title:</strong> {{ presentation.title }}</p>
+      <p><strong>Location:</strong> {{ presentation.location  | markdownify }}</p>
+      <p><strong>Date:</strong> {{ presentation.date | date: "%B %d, %Y" }}</p>
+      <p><strong>Speaker:</strong> {{ presentation.speaker }}</p>
+      <p><strong>Artifacts:</strong> {{ presentation.artifacts | markdownify }}</p>
+
+    </div>
+    {% endif %}
+
+    {{ content }}
+  </div>
+
+  <div class="publication-info">
+    <h3>Details</h3>
+
+    {% if publication.journal %}
+      <p><strong>Journal:</strong> {{ publication.journal }}</p>
+    {% endif %}
+
+    {% if publication.volume %}
+      <p><strong>Volume:</strong> {{ publication.volume }}</p>
+    {% endif %}
+
+    {% if publication.pages %}
+      <p><strong>Pages:</strong> {{ publication.pages }}</p>
+    {% endif %}
+
+    {% if publication.cites %}
+      <p><strong>Cited by:</strong> {{ publication.cites }} times</p>
+    {% endif %}
+
+    {% if publication.eprint %}
+      <p><strong><a href="{{ publication.eprint }}" target="_blank">E-Print</a></strong></p>
+    {% endif %}
+
+    {% if publication.url %}
+      <p><strong><a href="{{ publication.url }}" target="_blank">Read Full Publication</a></strong></p>
+    {% endif %}
+  </div>
+
+</article>
+
+<style>
+
+.publication-header .author-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.publication-banner .banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.tag-badge {
+  background-color: #999999;
+  padding: 0.5rem;
+}
+
+.presentation-info {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.presentation-info h3 {
+  margin-bottom: 1rem;
+}
+
+.presentation-info p {
+  margin-bottom: 0.5rem;
+}
+
+</style>

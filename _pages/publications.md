@@ -76,6 +76,11 @@ permalink: /publications/
 {% if  publi.abstract.size  > 7 %} 
   * {{publi.abstract}}
 {% endif %} 
+  {% if publi.link %}
+    <p>
+      <button class="btn btn-primary" onclick="window.location.href='{{ publi.link }}'">Read More</button>
+    </p>
+  {% endif %}
 {% endfor %}
 </div>
 </div>
