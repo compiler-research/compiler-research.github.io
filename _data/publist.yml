@@ -399,25 +399,6 @@
   url: https://arxiv.org/abs/2304.02650
   year: '2023'
 
-# - title: Fast And Automatic Floating Point Error Analysis With CHEF-FP
-#   author: Garima Singh, Baidyanath Kundu, Harshitha Menon, Alexander Penev, David J. Lange,
-#     Vassil Vassilev
-#   abstract: |
-#     As we reach the limit of Moore's Law, researchers are exploring different paradigms to
-#     achieve unprecedented performance. Approximate Computing (AC), which relies on the ability
-#     of applications to tolerate some error in the results to trade-off accuracy for performance,
-#     has shown significant promise. Despite the success of AC in domains such as Machine Learning,
-#     its acceptance in High-Performance Computing (HPC) is limited due to stringent requirements
-#     for accuracy. We need tools and techniques to identify regions of code that are amenable to
-#     approximations and their impact on the application output quality to guide developers to employ
-#     selective approximation. To this end, we propose CHEF-FP, a flexible, scalable, and easy-to-use
-#     source-code transformation tool based on Automatic Differentiation (AD) for analyzing
-#     approximation errors in HPC applications. CHEF-FP uses ...
-#   cites: '0'
-#   eprint: https://arxiv.org/abs/2304.06441
-#   url: https://arxiv.org/abs/2304.06441
-#   year: '2023'
-
 - title: Efficient and Accurate Automatic Python Bindings with cppyy & Cling
   author: Baidyanath Kundu, Vassil Vassilev, Wim Lavrijsen
   abstract: |
