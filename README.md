@@ -135,32 +135,10 @@ docker run --rm -v "$PWD:/srv/jekyll" \
 
 ## Guide to Making Changes to the Website
 
-### Adding a Project to /projects/ directory on the Website
-
-It is possible to 
-
-- add a new page with a lot of project details (e.g.,
-`\_pages\testproject.md`) and then add the project excerpt to the projects
-directory `_data\projects.yml`, or 
-
-- you can simply add the project excerpt to the projects directory
-`_data\projects.yml` if there aren't enough details available for the project.
-
-Next, use the `link` attribute in the `projects.yml` file to define the link
-to the detailed project page (if you created this in the previous step).
-
-The project excerpt should now automatically show up on the '/Projects/' page
-along with the link to the detailed project page.
-
-To change the layout of the Projects page itself, you can browse to
-`_pages\projects.md` and edit the Liquid code as needed.
-
-> Please note that the Projects page exists in parallel to the Open Projects
-> page (`_pages\open_projects.md`), and you should add your project details
-> where it makes more sense.
+Before making any changes to the Compiler Research website, please view the [Contibution Guide] to understand the existing site structure.
 
 
 [installation]: https://jekyllrb.com/docs/installation/windows/
 [RubyInstaller Downloads]: https://rubyinstaller.org/downloads/
-
+[Contibution Guide]: https://github.com/compiler-research/compiler-research.github.io/blob/master/CONTRIBUTING.md
 
