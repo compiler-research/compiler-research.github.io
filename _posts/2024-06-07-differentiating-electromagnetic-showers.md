@@ -26,7 +26,7 @@ During a four-week stay with the CERN SFT group in November 2023, and another tw
 
 After first encouraging results with the novel machine-code-based AD tool [Derivgrind](https://www.scicomp.uni-kl.de/software/derivgrind/), we applied the operator-overloading AD tool [CoDiPack](https://www.scicomp.uni-kl.de/software/codi/) to the simulation parts of G4HepEm and HepEmShow. The code for the [differentiated G4HepEm](https://github.com/SciCompKL/g4hepem/) and [HepEmShow](https://github.com/SciCompKL/hepemshow/) is available on GitHub. It allows us to compute, e.g., the mean pathwise algorithmic derivative of the energy depositions in the layers of the calorimeter, with respect to the initial kinetic energy of the incoming electrons. It turns out that the code is "AD-friendly" once a single process called multiple scattering is disabled. Comparing with the numerical derivatives (difference quotients) of the mean energy depositions, we get only a small deviation of about 5%.
 
-![Plot of the derivative of the energy deposition with respect to the primary energy.](d-edep-d-primaryenergy.jpg)
+![Plot of the derivative of the energy deposition with respect to the primary energy.](/images/blog/hepemshow-d-edep-d-primaryenergy.jpg)
 
 Similar observations can be made for derivatives of the energy deposition with respect to the thickness of the absorber and gap layers in the calorimeter. A small error is not a problem for gradient-based optimization, as we have demonstrated with a simple optimization study shown above, with gradient descent trajectories robustly converging to the minimizer.
 
