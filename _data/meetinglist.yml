@@ -1,4 +1,42 @@
 - name: "CaaS Monthly Meeting"
+  date: 2024-07-11 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/94396923932?pwd=9MDrbK3nQgGYjqkEZILGO7ne4YczA9.1)"
+  label: caas_11Jul2024
+  agenda:
+    - title: "Automatic Differentiation in Roofit for Fast and Accurate Likelihood Fits"
+      speaker:
+        image: "https://compiler-research.org/images/team/Vaibhav.jpg"
+        name: "Vaibhav Thakkar"
+        bio: |
+          Vaibhav Thakkar is currently a research Intern at CERN, working with
+          the compiler research group at Princeton University (US) on the
+          project of compile-time automatic differentiation (Clad) in C++ for
+          scientific computing applications. Previously, he earned my bachelor's
+          in technology in Electrical Engineering from IIT Kanpur in India and
+          worked as a software engineer for a couple of years after graduation.
+      description: |
+        RooFit is a widely used data analysis library in High-energy physics
+        experiments at CERN, which requires minimizing likelihoods with
+        thousands of free parameters spread over hundreds of likelihood
+        components. To iteratively find the minimum of a likelihood, one
+        generally has to know the gradient of the likelihood with respect to all
+        free parameters. Previously, these were calculated using numerical
+        differentiation, which requires varying one parameter at a time and
+        reevaluating the full likelihood. Although complete reevaluation can be
+        prevented by a caching mechanism, it incurs a significant overhead in
+        bookkeeping. This talk discusses the recent integration of automatic
+        differentiation (AD) in RooFit for these gradient computations using
+        Clad, a compile-time AD library for C++ codebases. We also present the
+        efficiency improvements with the recently released Atlas and CMS Higgs
+        models.
+    - title: Update
+      speaker: Vassil Vassilev
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 1 Aug 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2024-06-06 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/91331193595?pwd=FW3LpbZykgvVh5QwAEMNMA4Vk3TqOT)"
