@@ -3,8 +3,10 @@ layout: default
 title: Blog
 ---
 
-<h2>Latest Posts</h2>
+<div class="col-sm-12">
+  <h2>Latest Posts</h2>
 
-<div>
-  {% for post in site.posts %} {% include blog-post-card.html %} {% endfor %}
+  <div>
+    {% for post in site.posts %} {% include blog-post-card.html %} {% endfor %}
+  </div>
 </div>
