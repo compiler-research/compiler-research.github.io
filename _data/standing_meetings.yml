@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "LLVM.org Website Redesign - Midterm Progress Update"
+      date: 2024-07-31 17:00:00 +0200
+      speaker: "Chaitanya Shahare"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_31_07_2024_Chaitanya_Shahare_llvm_org_website_redesign_midterm.pdf)"
     - title: "Integrate a large language model with the Xeus-cpp jupyter kernel - Progress Update"
       date: 2024-07-24 17:00:00 +0200
       speaker: "Tharun Anandh"
