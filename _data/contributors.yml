@@ -146,6 +146,27 @@
   email: pavlo.svirin@cern.ch
   education: PhD Computer Science, National Technical University of Ukraine, 2014
   active: 1
+  projects:
+    - title: "ROOT Superbuilds"
+      status: Ongoing
+      description: |
+       [ROOT](https://root.cern/) is a framework for data processing,
+       born at CERN, at the heart of the research on high-energy physics.
+       Every day, thousands of physicists use ROOT applications to analyze their
+       data or to perform simulations. The ROOT software framework is
+       foundational for the HEP ecosystem, providing capabilities such
+       as IO, a C++ interpreter, GUI, and math libraries. It uses
+       object-oriented concepts and build-time modules to layer between
+       components. We believe additional layering formalisms will benefit
+       ROOT and its users.
+
+       Currently, ROOT is built as all-in-one package. We are working to create
+       a modular version of ROOT that provides a minimal base install of core
+       features, then later add functionality via incremental builds. This
+       requires introducing new layering mechanisms and extending the functionality
+       of the existing ROOT package manager prototype.
+      proposal: /assets/docs/Pavlo_Svirin_Proposal_2024.pdf
+      mentors: Vassil Vassilev, Danilo Piparo
       
 - name: Isaac Morales Santana
   info: "GSoC 2024 Contributor"
@@ -213,6 +234,21 @@
         mechanism and execution within the Cppyy-Numba environment.
       proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
       mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
+
+- name: "Maksym Andriichuk"
+  photo: Andriichuk.jpg
+  info: "IRIS-HEP Fellow"
+  email: maksym.andriichuk@icloud.com
+  education: "Mathematics, University of Wuerzburg, Germany"
+  github: "https://github.com/ovdiiuv"
+  active: 1
+  projects:
+    - title: "Optimizing automatic differentiation using activity analysis"
+      status: Ongoing
+      description: |
+        Clad has undergone significant optimization in the recent years. One such optimization is the To-Be-Recorded optimization which reduces the memory pressure to the clad tape data structure. The next step is to implement the activity analysis which discards all statements which are irrelevant for the generated code. That is, if the statements do not depend on the input/output variables of a routine in a differentiable way, they are ignored. Combining both analyses could result in a much greater performance, which is our ultimate goal.        
+      proposal: /assets/docs/Maksym_Andriichuk_Proposal_2024.pdf
+      mentors: Vassil Vassilev, David Lange, Petro Zarytskyi
 
 - name: "Atell Yehor Krasnopolski"
   photo: Atell.jpg
@@ -312,9 +348,31 @@
 
 - name: Matthew Barton
   info: "Open Source Contributor"
+  email: matthew.c.barton@hotmail.co.uk
   photo: Matthew.jpg
   education: PhD Theoretical Nuclear Physics, University of Surrey (2018)
   active: 1
+
+- name: Sahil Patidar
+  info: "Google Summer of Code 2024 Contributor"
+  email: sahilpatidar60@gmail.com
+  education: "Computer Science and Engineering, Vindhya Institute of Technology, India"
+  github: "https://github.com/SahilPatidar"
+  active: 1
+  projects:
+    - title: "Out-Of-Process execution for Clang-Repl"
+      status: Ongoing
+      description: |
+        This project focuses on enhancing Clang-Repl, an interactive C++ interpreter
+        that leverages LLVM's JIT infrastructure. The current in-process execution model
+        poses challenges, especially for resource-constrained devices and stability.
+        By transitioning Clang-Repl to an out-of-process execution model, this project
+        aims to address these limitations. It will improve resource efficiency, making
+        Clang-Repl usable on devices with limited resources, and enhance crash resilience,
+        preventing user code failures from crashing the entire interpreter. This shift will
+        foster a more robust and accessible interactive C++ compilation and execution environment.
+      mentors: Vassil Vassilev, Matheus Izvekov
+      proposal: /assets/docs/Sahil_Patidar_Proposal_2024_ClangRepl.pdf
 
 - name: "Christina Koutsou"
   photo: christina_koutsou.jpg
@@ -343,7 +401,7 @@
 
 - name: "This could be you!"
   photo: rock.jpg
-  info: See <a href="/vacancies">openings</a> for more info
+  info: See <a href="/careers">openings</a> for more info
   email: vvasilev@cern.ch
   active: 1
 
@@ -407,8 +465,6 @@
   photo: Ifrim.jpg
   email: ioana.ifrim@cern.ch
   education: MPhil Advanced Computer Science, University of Cambridge (2018)
-
-
 
 ################################################################################
 #                                     2023                                     #

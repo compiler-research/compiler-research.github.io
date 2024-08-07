@@ -10,7 +10,9 @@ Floating-Point Error Estimation), and Python-C++ Interoperability (Clang-Repl
 sitemap: false
 author: QuillPusher
 permalink: blogs/gsod23_quillpusher_experience_blog/
+banner_image: /images/blog/gsod-banner.png
 date: 2023-05-10
+tags: gsod documentation llvm root clang-repl cppyy
 ---
 
 ### How we got started
@@ -76,8 +78,6 @@ an effort. This project has set me off on a trajectory of self-improvement and
 learning, helping me identify how large, distributed communities work and what
 skills I need to acquire to advance in my career.” – [@QuillPusher] (Saqib)
 
-
-
 [Student Success Stories]: https://compiler-research.org/stories/
 
 [GSoD 2023 Case Study]: https://github.com/compiler-research/compiler-research.github.io/blob/master/assets/docs/gsod_casestudy_2023.pdf
@@ -97,4 +97,3 @@ skills I need to acquire to advance in my career.” – [@QuillPusher] (Saqib)
 [cppyy Enhancements]: https://github.com/compiler-research/CppInterOp/pull/160
 
 [Numba Enhancements]: https://github.com/wlav/cppyy/pull/199
-

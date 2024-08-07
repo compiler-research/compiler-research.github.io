@@ -13,10 +13,13 @@ transferred through finalize calls."
 sitemap: false
 author: Anubhab Ghosh
 permalink: blogs/gsoc22_ghosh_experience_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2022-12-07
+tags: gsoc llvm jitlink memory-manager
 ---
 
 ### Overview of the Project
+
 LLVM JIT APIs include JITLink, a just-in-time linker that links together objects
 code units directly in memory and executes them. It uses the
 JITLinkMemoryManager interface to allocate and manage memory for the generated
@@ -28,6 +31,7 @@ memory and then when the code is generated, all the section contents are
 transferred through finalize calls.
 
 #### Shared Memory
+
 The main problem was that EPC runs on top of file descriptor streams like Unix
 pipes or TCP sockets. As all the generated code and data bytes are transferred
 over the EPC this has some overhead that could be avoided by using shared
@@ -35,6 +39,7 @@ memory. If the two processes share the same physical memory pages then we can
 completely avoid extra memory copying.
 
 #### Small code model
+
 While we are at it, another goal was to introduce a simple slab-based memory
 manager. It would allocate a large chunk of memory in the beginning from the
 executor process and allocate smaller blocks from that entirely at the
@@ -53,16 +58,20 @@ int main() {
     return value + 1;
 }
 ```
+
 **Small code model**
+
 ```asm
 0000000000001119 <main>:
-    1119: 55               	push rbp
-    111a: 48 89 e5         	mov  rbp,rsp
-    111d: 8b 05 ed 2e 00 00	mov  eax,DWORD PTR [rip+0x2eed] # 4010 <value>
-    1123: 5d               	pop  rbp
-    1124: c3               	ret
+    1119: 55                push rbp
+    111a: 48 89 e5          mov  rbp,rsp
+    111d: 8b 05 ed 2e 00 00 mov  eax,DWORD PTR [rip+0x2eed] # 4010 <value>
+    1123: 5d                pop  rbp
+    1124: c3                ret
 ```
+
 **Large code model**
+
 ```asm
 0000000000001119 <main>:
     1119: 55                    push   rbp
@@ -81,10 +90,10 @@ int main() {
 Small code model is the default for most compilations so this is actually
 required to load ordinary precompiled code, e.g., from existing static archives.
 
-
 ### My Approach
 
 #### Memory Mappers
+
 I introduced a new `MemoryMapper` abstraction for interacting with OS APIs at
 different situations. It has separate implementations based on whether the code
 will be executed in the same or different process. The `InProcessMemoryMapper`
@@ -102,6 +111,7 @@ now already in place in the executor processes so finalization is just a matter
 of sending the memory protections.
 
 #### Slab-based allocator
+
 Furthermore, I developed a slab-based memory allocator for JITLink, reserving a
 large region of memory in the address space of the target process on the first
 allocation. All subsequent allocations result in sub-regions of that to be
@@ -111,6 +121,7 @@ region, it also guarantees that JIT’d memory satisfies the layout constraints
 required by the small code model.
 
 #### Concurrency problems
+
 After the implmentation, I tried JIT linking the CPython interpreter to
 benchmark the implementation. We discovered that our overall CPU execution time
 decreased by 45% but somewhat paradoxically clock time increased by 45%. In
@@ -132,7 +143,6 @@ this to access memory at runtime.
 
 For a more detailed description and all the patches, please consult my
 [GSoC final report](https://compiler-research.org/assets/docs/Anubhab_Ghosh_GSoC2022_Report.pdf).
-
 
 ### Acknowledgements
 

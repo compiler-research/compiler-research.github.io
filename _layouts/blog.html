@@ -3,40 +3,10 @@ layout: default
 title: Blog
 ---
 
-<h2>Latest Posts</h2>
+<div class="col-sm-12">
+  <h2>Latest Posts</h2>
 
-<div>
-  {% for post in site.posts %}
-  <div class="well">
-    <h3>{{ post.title }}</h3>
-    <p>
-      {% assign author = site.data.contributors | where: "name", post.author | first %}
-      {% if author %}
-      <a href="{{ author.name | replace: " ", "" | prepend: " /team/" }}">
-        <img
-          src="{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}"
-          alt="{{ author.name }}" style="
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            /* vertical-align: middle; */
-	    margin: 0;
-	    margin-top: 4px;
-	    margin-bottom: 4px;
-          " />
-        {{ author.name }}
-      </a>
-      {% else %}
-      {{ post.author }}
-      {% endif %}
-      <span class="text-muted">
-        • {{ post.date | date: "%b %d, %Y" }} • {{ post.content | number_of_words | divided_by: 200 | ceil }} min read
-      </span>
-    </p>
-    <p>{{ post.excerpt | truncatewords: 50 }}</p>
-    <p>
-      <button class="btn btn-primary" onclick="window.location.href='{{ post.url }}'">Read More</button>
-    </p>
+  <div>
+    {% for post in site.posts %} {% include blog-post-card.html %} {% endfor %}
   </div>
-  {% endfor %}
 </div>

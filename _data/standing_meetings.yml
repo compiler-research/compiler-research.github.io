@@ -3,12 +3,52 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Out-Of-Process execution for Clang-Repl"
+      date: 2024-07-31 17:00:00 +0200
+      speaker: "Sahil Patidar"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_31_07_2024_Sahil_Patidar_Out_of_process_execution_for_ClangRepl.pdf)"
+    - title: "LLVM.org Website Redesign - Midterm Progress Update"
+      date: 2024-07-31 17:00:00 +0200
+      speaker: "Chaitanya Shahare"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_31_07_2024_Chaitanya_Shahare_llvm_org_website_redesign_midterm.pdf)"
+    - title: "Integrate a large language model with the Xeus-cpp jupyter kernel - Progress Update"
+      date: 2024-07-24 17:00:00 +0200
+      speaker: "Tharun Anandh"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_24_07_2024_Tharun_Anandh_Xeus_cpp.pdf)"
+    - title: "Optimizing automatic differentiation using activity analysis"
+      date: 2024-06-12 17:00:00 +0200
+      speaker: "Maksym Andriichuk"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_12_06_2024_Maksym_Andriichuk_Activity.pdf)"
     - title: Updates
       link: "[Meeting Notes](https://docs.google.com/document/d/1HMUtM8rRPeTYDqsWZVD-iQityjJj9_GKgu0FHHbiBr0)"
     - title: "Enabling reverse-mode automatic differentiation of GPU (CUDA) kernels using Clad"
       date: 2024-05-15 17:00:00 +0200
       speaker: "Christina Koutsou"
       link: "[Slides](/assets/presentations/CaaS_Weekly_15_05_2024_Christina_Enbale_reverse_mode_autodiff_for_kernels_first_presentation.pdf)"
+    - title: "Integrate a large language model with the Xeus-cpp jupyter kernel"
+      date: 2024-06-05 17:00:00 +0200
+      speaker: "Tharun Anandh"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_05_06_2024_Tharun_Anandh_Xeus_cpp.pdf)"
+    - title: "Enable CUDA Compilation on Cppyy-Numba generated IR"
+      date: 2024-05-29 17:00:00 +0200
+      speaker: "Riya Bisht"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_29_05_2024_Riya_Bisht_enable_CUDA_support_Cppyy_Numba_GSoC2024.pdf)"
+    - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends in cppyy"
+      date: 2024-05-29 17:00:00 +0200
+      speaker: "Khushiyant"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_28_05_2024_Khushiyant_CppyyGSoC.pdf)"
+    - title: "Improving performance of BioDynaMo using ROOT C++ Modules"
+      date: 2024-05-22 17:00:00 +0200
+      speaker: "Isaac Morales Santana"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_22_05_2024_Isaac_Morales_BioDynamo.pdf)"
+    - title: "Clad Constexpr Consteval Support Project Introduction"
+      date: 2024-05-22 17:00:00 +0200
+      speaker: "Mihail Mihov"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_22_05_2024_Mihail_Mihov_Clad_Constexpr_Consteval_GSoC2024.pdf)"
+    - title: "ROOT: superbuilds"
+      date: 2024-05-15 17:00:00 +0200
+      speaker: "Pavlo Svirin"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_15_05_2024_Pavlo_Svirin_RootSuperBuildsGSoC.pdf)"
     - title: "Implementing Differentiation of the Kokkos Framework in Clad"
       date: 2024-05-15 17:00:00 +0200
       speaker: "Atell Yehor Krasnopolski"

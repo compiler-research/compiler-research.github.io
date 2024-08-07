@@ -20,6 +20,9 @@
     * Enhance the existing CMake build system rules to enable lazy building of packages
     * Bootstrap “RootBase”
     * Demonstrate “layered” lazy builds
+  status: ongoing
+  responsible: Pavlo Svirin
+
 
 - name: "Improving performance of BioDynaMo using ROOT C++ Modules"
   description: |
@@ -45,12 +48,13 @@
     information about BioDynaMo’s and user-defined C++ classes. This project
     is about improving the performance of the reflection system by upgrading
     to C++ modules.
-
   tasks: |
     * Rework the cmake rules to incorporate efficiently ROOT via `FetchContent`
     * Replace invocations of `genreflex` in favor of `rootcling`
     * Enable C++ modules in `rootcling`
     * Produce a comparison report
+  status: ongoing
+  responsible: Isaac Morales Santana
 
 - name: "Using ROOT in the field of genome sequencing"
   description: |
@@ -111,6 +115,10 @@
     * Enhance existing benchmarks demonstrating effectiveness of Clad for Kokkos
     * [Stretch goal] Performance benchmarks
 
+  status: ongoing
+  responsible: Atell Yehor Krasnopolski
+
+
 - name: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
   description: |
     xeus-cpp is a Jupyter kernel for cpp based on the native implementation
@@ -134,6 +142,8 @@
     * Comprehensive documentation and thorough testing/CI additions to ensure reliability.
     * [Stretch Goal] After achieving the previous milestones, the student can work on specializing the model for enhanced syntax and semantic understanding capabilities by using xeus notebooks as datasets.
 
+  status: ongoing
+  responsible: Tharun Anandh
 
 - name: "Implementing missing features in xeus-cpp"
   description: |
@@ -309,6 +319,10 @@
     * Design and develop a CUDA compilation and execution mechanism.
     * Prepare proper tests and documentation.
 
+  status: ongoing
+  responsible: Riya Bisht
+
+
 - name: "Cppyy STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
   description: |
     Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling 
@@ -341,6 +355,9 @@
     operations in frameworks like JAX
     * Work on integrating these plugins with toolkits like CUTLASS that
     utilise the bindings to provide a Python API
+
+  status: ongoing
+  responsible: Khushiyant
 
 - name: "Improve the LLVM.org Website Look and Feel"
   description: |
@@ -421,6 +438,8 @@
     Additionally, they should demonstrate the ability to navigate the community
     process with patience and understanding.
 
+  status: ongoing
+  responsible: Chaitanya Shahare
 
 - name: "On Demand Parsing in Clang"
   description: |
@@ -677,6 +696,8 @@
       * Enable reverse-mode automatic differentiation of CUDA GPU kernels and
         calls to CUDA GPU kernels from the host code.
       * Add proper tests and documentation.
+  status: ongoing
+  responsible: Christina Koutsou
 
 - name: "Design and Develop a CUDA engine working along with C/C++ mode in clang-repl"
   description: |
@@ -1005,6 +1026,8 @@
       * Extend the unit test coverage.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
+  status: ongoing
+  responsible: Mihail Mihov
 
 - name: "Improve robustness of dictionary to module lookups in ROOT"
   description: |
