@@ -374,6 +374,31 @@
       mentors: Vassil Vassilev, Matheus Izvekov
       proposal: /assets/docs/Sahil_Patidar_Proposal_2024_ClangRepl.pdf
 
+- name: "Christina Koutsou"
+  photo: christina_koutsou.jpg
+  info: "Google Summer of Code 2024 Contributor"
+  email: christinakoutsou22@gmail.com
+  education: "Integrated Master's in Electrical and Computer Engineering, Aristotle University of Thessaloniki, Greece"
+  github: "https://github.com/kchristin22"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/christina-koutsou-69416b28a/"
+  projects:
+    - title: "Reverse-mode automatic differentiation of GPU (CUDA) kernels using Clad"
+      status: Ongoing
+      description: |
+        Nowadays, the rise of AI has shed light into the power of GPUs. The notion of General Purpose GPU Programming is 
+        becoming more and more popular and it seems that the scientific community is increasingly favoring it over CPU Programming. 
+        Consequently, implementation of mathematics and operations needed for such projects are getting adjusted to GPU's architecture. 
+        Automatic differentiation is a notable concept in this context, finding applications across diverse domains from ML to Finance to Physics. 
+        Clad is a clang plugin for automatic differentiation that performs source-to-source transformation and produces a function capable of 
+        computing the derivatives of a given function at compile time. This project aims to widen Clad’s use range and audience by enabling 
+        the reverse-mode automatic differentiation of CUDA kernels. The total goal of the project is to support the differentiation of CUDA 
+        kernels that may also include typical CUDA built-in objects (e.g. threadIdx, blockDim etc.), which are employed to prevent race conditions, 
+        using Clad. These produced kernels will compute the derivative of an argument specified by the user as the output based on an input parameter 
+        of their choosing. In addition, the user must be able to call these kernels with a custom grid configuration. 
+      proposal: /assets/docs/Christina_Koutsou_GSoC_2024.pdf
+      mentors: Vassil Vassilev, Parth Arora, Alexander Penev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
