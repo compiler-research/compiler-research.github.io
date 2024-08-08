@@ -1,3 +1,20 @@
+- date: 2024-08-08
+  codebase: "Clad"
+  version: "v1.7"
+  description: |
+    This release includes support for `std::array` and range-based for loops.
+    Improved diagnostics and has many bug fixes.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v1.7"
+
+- date: 2024-07-18
+  codebase: "Clad"
+  version: "v1.6"
+  description: |
+    This release includes improved support for `std::string` and `const_cast`.
+    Removes the unnecessary `array_ref` usages. Adds support for computing the
+    only hessian diagonal and has many bug fixes.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v1.6"
+
 - date: 2024-06-04
   codebase: "Xeus-Cpp"
   version: "v0.5"
