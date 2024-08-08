@@ -6,7 +6,7 @@ sitemap: false
 author: Christina Koutsou
 permalink: blogs/gsoc24_christina_koutsou_project_introductory_blog/
 date: 2024-05-18
-
+tags: gsoc clang llvm clad cuda reverse-mode
 ---
 ### Overview of the project
 
