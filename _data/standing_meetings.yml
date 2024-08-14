@@ -7,6 +7,10 @@
       date: 2024-07-31 17:00:00 +0200
       speaker: "Sahil Patidar"
       link: "[Slides](/assets/presentations/CaaS_Weekly_31_07_2024_Sahil_Patidar_Out_of_process_execution_for_ClangRepl.pdf)"
+    - title: "Implementing Differentiation of the Kokkos Framework in Clad"
+      date: 2024-08-14 17:00:00 +0200
+      speaker: "Atell Yehor Krasnopolski"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_14_08_2024_Atell_Krasnopolski_KokkosCladMidProgressGSoC.pdf)"
     - title: "LLVM.org Website Redesign - Midterm Progress Update"
       date: 2024-07-31 17:00:00 +0200
       speaker: "Chaitanya Shahare"
