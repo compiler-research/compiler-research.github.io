@@ -32,6 +32,7 @@ permalink: /tutorials/
 {{pubinfo}} ({{tutorial.date}}).
 {% if  tutorial.abstract.size  > 7 %}
 * {{ tutorial.abstract | markdownify }}
+{{ tutorial.artifacts | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}
 {% endif %}
 {% endfor %}
 </div>
