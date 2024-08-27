@@ -399,6 +399,34 @@
       proposal: /assets/docs/Christina_Koutsou_GSoC_2024.pdf
       mentors: Vassil Vassilev, Parth Arora, Alexander Penev
 
+- name: "Vipul Cariappa"
+  photo: "Vipul-Cariappa.jpg"
+  info: "Intern"
+  email: vipulcariappa@gmail.com
+  education: "B.Tech in Computer Science Engineering, Ramaiah University of Applied Sciences, India"
+  github: "https://github.com/Vipul-Cariappa/"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/vipul-cariappa03/"
+  projects:
+    - title: "Adopting CppInterOp in cppyy"
+      status: Ongoing
+      description: |
+        cppyy is a Python library that provides fully automatic,
+        dynamic Python-C++ bindings using the cling based C++ interpreter/incremental compiler.
+        Cling itself is based on the LLVM toolchain. Compiler Research maintains its own fork of cppyy.
+        The main motivation of this fork is to directly use the LLVM's clang-REPL for C/C++ interpreter/incremental
+        compiler. This reduces the burden on the developers to maintain a separate fork of LLVM like the cling
+        interpreter. The Compiler Research's cppyy fork's migration to using the upstream clang-REPL is an ongoing
+        effort. The migration is incomplete, and many tests fail in the Compiler Research's fork.
+        I aim to fix as many failing tests as possible to complete the transition to use the clang-REPL compiler
+        backend.<br>
+        Once the migration to use the clang-REPL backend is complete, I plan on implementing a multi-language
+        Jupyter Kernel on top of xeus-cpp. This multi-language kernel will support using both C++ and Python for code
+        execution and will provide the ability for the users to seamlessly use symbols defined in each other.
+      proposal: /assets/docs/VipulCariappa_Internship_Proposal.pdf
+      mentors: Vassil Vassilev, Aaron Jomy, Wim Lavrijsen, Jonas Rembser
+
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
