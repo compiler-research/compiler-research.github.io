@@ -1,4 +1,16 @@
 - name: "CaaS Monthly Meeting"
+  date: 2024-09-05 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/94396923932?pwd=9MDrbK3nQgGYjqkEZILGO7ne4YczA9.1)"
+  label: caas_05Sep2024
+  agenda:
+    - title: Update
+      speaker: Vassil Vassilev
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 3 Oct 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2024-07-11 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/94396923932?pwd=9MDrbK3nQgGYjqkEZILGO7ne4YczA9.1)"
