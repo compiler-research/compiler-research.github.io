@@ -7,6 +7,10 @@
       date: 2024-07-31 17:00:00 +0200
       speaker: "Sahil Patidar"
       link: "[Slides](/assets/presentations/CaaS_Weekly_31_07_2024_Sahil_Patidar_Out_of_process_execution_for_ClangRepl.pdf)"
+    - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends : Mid-Term Evaluation"
+      date: 2024-08-21 17:00:00 +0200
+      speaker: "Khushiyant"
+      link: "[Slides](/assets/presentations/Khushiyant_GSOC_MidEval.pdf)"
     - title: "Implementing Differentiation of the Kokkos Framework in Clad"
       date: 2024-08-14 17:00:00 +0200
       speaker: "Atell Yehor Krasnopolski"
