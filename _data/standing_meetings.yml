@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Adopting CppInterOp in cppyy"
+      date: 2024-09-11 17:00:00 +0200
+      speaker: "Vipul Cariappa"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_12_09_2024_Vipul_Cariappa_Adopting_CppInterOp_in_cppyy.pdf)"
     - title: "Constexpr and consteval support in Clad"
       date: 2024-09-03 17:00:00 +0200
       speaker: "Mihail Mihov"
