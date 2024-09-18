@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Improving performance of BioDynaMo using ROOT C++ Modules"
+      date: 2024-09-18 17:00:00 +0200
+      speaker: "Isaac Morales"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_12_09_2024_Vipul_Cariappa_Adopting_CppInterOp_in_cppyy.pdf)"
     - title: "Adopting CppInterOp in cppyy"
       date: 2024-09-11 17:00:00 +0200
       speaker: "Vipul Cariappa"
@@ -10,7 +14,7 @@
     - title: "Constexpr and consteval support in Clad"
       date: 2024-09-03 17:00:00 +0200
       speaker: "Mihail Mihov"
-      link: "[Slides](/assets/presentations/CaaS_Weekly_03_09_2024_Mihail_Mihov_ConstexprConstevalInClad.pdf)"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_18_09_2024_Isaac_Morales_ImprovingBioDynaMo.pdf)"
     - title: "Superbuilds for ROOT"
       date: 2024-08-28 17:00:00 +0200
       speaker: "Pavlo Svirin"
