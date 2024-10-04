@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Develop of Clad Tutorials for CMS/HEP"
+      date: 2024-10-02 17:00:00 +0200
+      speaker: "Austėja Jurgaitytė"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_02_10_2024_Austeja_Jurgaityte_Develop_of_Clad_Tutorials_for_CMS_HEP.pdf)"
     - title: "Out-Of-Process execution for Clang-Repl"
       date: 2024-10-02 17:00:00 +0200
       speaker: "Sahil Patidar"
