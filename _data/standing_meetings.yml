@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Progress on Activity Analysis"
+      date: 2024-10-09 17:00:00 +0200
+      speaker: "Maksym Andriichuk"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_09_10_24_Maksym_Andriichuk_Progress_on_Activity_Analysis.pdf)"
     - title: "Develop of Clad Tutorials for CMS/HEP"
       date: 2024-10-02 17:00:00 +0200
       speaker: "Austėja Jurgaitytė"
