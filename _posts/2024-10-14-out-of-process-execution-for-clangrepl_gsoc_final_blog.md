@@ -51,6 +51,8 @@ systems, and suitable for broader use cases.
 
 ## **Summary of accomplished tasks**
 
+### **Note: Some of the PRs are still under review, but they are expected to be merged soon.**
+
 #### **Add Out-Of-Process Execution Support for Clang-Repl** [#110418](https://github.com/llvm/llvm-project/pull/110418)
 
 To implement out-of-process execution, I leveraged **ORC JIT’s remote execution capabilities** with `llvm-jitlink-executor`. Key features included:
@@ -122,6 +124,14 @@ function's interface.
 - [Sorting Algorithms](https://gist.github.com/SahilPatidar/c814634b2f863fc167b8d16b573f88ec)
 
 ---
+
+### **Result**
+
+With these changes, `clang-repl` now supports out-of-process execution. You can run it using the following command:
+
+```bash
+clang-repl --oop-executor=path/to/llvm-jitlink-executor --orc-runtime=path/to/liborc_rt.a
+```
 
 ### **Conclusion**
 
