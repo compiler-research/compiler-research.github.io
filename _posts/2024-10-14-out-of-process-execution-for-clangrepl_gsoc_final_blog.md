@@ -20,18 +20,12 @@ Mentors: Vassil Vassilev and Matheus Izvekov
 
 ### **Project Overview**
 
-**Clang** is a widely-used compiler front-end within the **LLVM** project, capable of
-compiling languages like C++. A powerful tool, **Clang-Repl**, acts as an interactive
-C++ interpreter using **Just-In-Time (JIT)** compilation. It allows users to write
-compile, and execute C++ code interactively, making it an invaluable resource for
-learning, prototyping, and debugging.
+**Clang** is a popular compiler front-end in the **LLVM** project, capable of handling languages like C++. One of its cool tools, **Clang-Repl**, is an interactive C++ interpreter using **Just-In-Time (JIT)** compilation. It lets you write, compile, and run C++ code interactively, making it super handy for learning, quick prototyping, and debugging.
 
-Despite its benefits, Clang-Repl had certain limitations:
+However, Clang-Repl did have a few drawbacks:
 
-1. **High Resource Usage**: Running the Clang-Repl environment and JIT in the same
-   process consumed a lot of system resources.
-2. **Instability**: If the user's code crashed, it would terminate the entire
-   Clang-Repl session, causing disruptions.
+1. **High Resource Usage**: Running both Clang-Repl and JIT in the same process used up a lot of system resources.
+2. **Instability**: If the user's code crashed, the entire Clang-Repl session would shut down, leading to interruptions.
 
 ### **Out-Of-Process Execution**
 
@@ -71,31 +65,25 @@ To support Clang-Repl’s out-of-process execution, I contributed several improv
 
 #### **Incremental Initializer Execution for Mach-O and ELF** [#97441](https://github.com/llvm/llvm-project/pull/97441), [#110406](https://github.com/llvm/llvm-project/pull/110406)
 
-The `dlupdate` function was introduced in the ORC runtime to enable the incremental
-execution of newly added initializers within the REPL environment. Unlike the
-traditional `dlopen` function, which handles initializers, code mapping, and library
-reference counts, `dlupdate` is focused solely on executing new initializers,
-ensuring that only the newly introduced sections are processed. This targeted
-approach improves efficiency, especially in interactive REPL sessions like `clang-repl`.
+The `dlupdate` function was added to the ORC runtime to allow for the incremental execution of new initializers in the REPL environment. Unlike the traditional `dlopen` function, which deals with everything from handling initializers to code mapping and library reference counts, `dlupdate` is all about running just the new initializers. This focused approach makes things way more efficient, especially during interactive sessions in `clang-repl`.
 
 #### **Push-Request Model for ELF Initializers** [#102846](https://github.com/llvm/llvm-project/pull/102846)
 
-I introduced a push-request model to manage ELF initializers within the runtime
-state for each JITDylib, similar to how Mach-O and COFF handle initializers.
-Previously, ELF had to request initializers every time it needed them, but
+I introduced a push-request model to handle ELF initializers in the runtime state for each JITDylib, similar to how Mach-O and COFF handle initializers.
+Previously, ELF had to request initializers every time `dlopen` was called, but
 lacked the ability to `register`, `deregister`, or `retain` these initializers.
 This led to issues when re-running `dlopen` because, once `rt_getInitializers`
 was invoked, the initializers were erased, making subsequent executions impossible.
 
 To address this, I introduced the following functions:
 
- - **`__orc_rt_elfnix_register_init_sections`**: Registers ELF initializer sections.
- - **`__orc_rt_elfnix_register_jitdylib`**: Registers JITDylib-specific initializers.
+- **`__orc_rt_elfnix_register_init_sections`**: Registers the ELF initializer's for the JITDylib.
 
-The push-request model effectively tracks and manages initializers for each
-`JITDylib` state. By utilizing Mach-O’s `RecordSectionsTracker`, the system selectively executes only newly
-registered initializers, thereby enhancing both efficiency and reliability
-when working with ELF targets in `clang-repl`.
+- **`__orc_rt_elfnix_register_jitdylib`**: Registers the JITDylib with the ELF runtime state.
+
+With this push-request model, we can better track and manage initializers for each `JITDylib` state. By leveraging Mach-O’s `RecordSectionsTracker`, we only run newly registered initializers, making the system more efficient and reliable when working with ELF targets in `clang-repl`.
+
+This update is key to enabling out-of-process execution in `clang-repl` on the ELF platform.
 
 ---
 
@@ -103,16 +91,15 @@ when working with ELF targets in `clang-repl`.
 
 #### **Auto-loading Dynamic Libraries in ORC JIT** [#109913](https://github.com/llvm/llvm-project/pull/109913) (On-going)
 
-I added an auto-loading dynamic library feature for ORC JIT, aimed at
-enhancing the efficiency of symbol resolution for both loaded and unloaded
-libraries. A key component of this improvement is the global bloom filter,
-which filters out symbols unlikely to be present, thereby reducing unnecessary
-search attempts and speeding up lookups.
+I added an auto-loading dynamic library feature to ORC JIT to speed up symbol resolution for both loaded and unloaded libraries. A key improvement is the global bloom filter, which helps skip symbols that probably aren’t there, reducing unnecessary searches and making things faster. With this update, if the JIT can't find a symbol in the loaded libraries, it will automatically search other libraries for the definition.
+
+So, here’s how it works: when the JIT tries to resolve a symbol, it first checks the currently loaded libraries. If it finds the symbol there, it simply grabs its address using dlsym and stores it in the results. If the symbol isn’t found among the loaded libraries, the search expands to unloaded ones.
+
+As we scan through each library, its symbol table gets added to the global bloom filter. If we go through all the possible auto-linkable libraries and still can’t find the symbol, the bloom filter gets returned as part of the result. Plus, we keep track of any symbols that the bloom filter marks as 'may-contain' but don’t actually resolve in any library, adding those to an excluded set.
 
 #### **Refactor `dlupdate`** [#110491](https://github.com/llvm/llvm-project/pull/110491)
 
-I refactored the `dlupdate` function to remove the mode argument, simplifying the
-function's interface.
+This change refactors the `dlupdate` function by removing the `mode` argument simplifying the function's interface.
 
 ---
 
@@ -127,7 +114,7 @@ function's interface.
 
 ### **Result**
 
-With these changes, `clang-repl` now supports out-of-process execution. You can run it using the following command:
+With these changes, `clang-repl` now supports out-of-process execution. We can run it using the following command:
 
 ```bash
 clang-repl --oop-executor=path/to/llvm-jitlink-executor --orc-runtime=path/to/liborc_rt.a
