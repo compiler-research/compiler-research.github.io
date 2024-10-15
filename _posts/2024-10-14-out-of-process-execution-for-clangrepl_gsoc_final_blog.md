@@ -120,6 +120,13 @@ With these changes, `clang-repl` now supports out-of-process execution. We can r
 clang-repl --oop-executor=path/to/llvm-jitlink-executor --orc-runtime=path/to/liborc_rt.a
 ```
 
+### **Future Work**
+
+- **Crash Recovery and Session Continuation** :
+Investigate and develop ways to enhance crash recovery so that if something goes wrong, the session can seamlessly resume without losing progress. This involves exploring options for an automatic process to restart the executor in the event of a crash.
+- **Finalize Auto Library Loading in ORC JIT** :
+Wrap up the feature that automatically loads libraries in ORC JIT. This will streamline symbol resolution for both loaded and unloaded dynamic libraries by ensuring that any required dylibs containing symbol definitions are loaded as needed.
+
 ### **Conclusion**
 
 Thanks to this project, **Clang-Repl** now supports **out-of-process execution** for
