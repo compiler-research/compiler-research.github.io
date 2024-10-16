@@ -53,7 +53,7 @@ To implement out-of-process execution, I leveraged **ORC JIT’s remote executio
 
 - **New Command Flags**:
   - `--oop-executor`: Launches the JIT executor in a separate process.
-  - `--oop-executor-connect`: Connects Clang-Repl to the external process for out-of-process execution.
+  - `--oop-executor-connect`: Connects Clang-Repl to the executor process over TCP.
 
 These flags enable Clang-Repl to use `llvm-jitlink-executor` for isolated code execution.
 
