@@ -37,11 +37,23 @@ I created a magic function called XAssist that connects to a specific LLM based 
 | [#160](https://github.com/compiler-research/xeus-cpp/pull/160) | XAssist Implementation - Update tests  |
 | [#161](https://github.com/compiler-research/xeus-cpp/pull/161) | XAssist Implementation - Handle prompts with special cases  |
 
+During Coding Phase 1, the focus was on establishing test coverage, setting up a testing framework, understanding XMagics, conducting research on OpenLLM, using the cURL library in C++, saving API keys in text files, and creating customized JSON calls for each model. In Coding Phase 2, efforts were directed toward fixing issues with the initial PR, debugging Windows-specific issues, adding context (chat history) to LLM calls, giving users more flexibility in selecting models, supporting Ollama, and improving documentation.
+
 ### Result
 
 Here is an example that demonstrates how one can use XAssist.
 
 ![Gemini](./images/blog/gemini.png)
+
+### Future Work
+
+Potential enhancements to XAssist that could significantly increase its usefulness include enabling the LLM to output code directly into subsequent cells, allowing the entire notebook to be analyzed for potential errors, and refining the output format to improve readability and presentation. This has been opened as an issue at [#162](https://github.com/compiler-research/xeus-cpp/issues/162). 
+
+### Conclusion
+
+This project will help developers seamlessly integrate OpenAI, Gemini, and Ollama into their workflows, enabling smoother adoption of advanced language models and making development tasks easier and more efficient. By automating complex interactions and streamlining API usage, XAssist aims to reduce manual effort, improve productivity, and enhance the developer experience across various domains.
+
+From day one, the learning experience has been incredibly rewarding. I would like to express my gratitude to my mentors—Anutosh Bhat, Johan Mabille, Aaron Jomy, David Lange, and Vassil Vassilev—for their outstanding support, as well as to my peers and fellow contributors from the compiler research organization for their invaluable assistance and collaboration. These past few months have been transformative for my professional growth, allowing me to sharpen my technical skills, and strengthen my problem-solving abilities. Moving forward, I plan to continue contributing to xeus-cpp and other projects within the organization, expand my involvement in open-source initiatives, and explore new areas where I can make meaningful contributions to the community.
 
 ### Related Links
 
