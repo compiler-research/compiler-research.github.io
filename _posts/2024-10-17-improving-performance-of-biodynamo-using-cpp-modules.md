@@ -41,14 +41,16 @@ these performance issues. C++ Modules offer an efficient on-disk representation 
 reducing the need for repeated parsing of invariant code. By implementing these modules,
 the project aimed to optimize runtime memory usage and improve overall performance
 
-## Key steps undertaken include:
+## What I did?:
 1. **Reworking CMake Rules:** The project incorporated ROOT and another packages
 efficiently using FetchContent, modifying CMake rules accordingly (e.g., PR [#365](https://github.com/BioDynaMo/biodynamo/pull/365)
-and [#387](https://github.com/BioDynaMo/biodynamo/pull/387))
+and [#387](https://github.com/BioDynaMo/biodynamo/pull/387), both merged)
 2. **Replacing genreflex with rootcling:** This switch was crucial to enable C++ Modules and
 streamline the generation of reflection information (PR [#379](https://github.com/BioDynaMo/biodynamo/pull/379))
-3. **Automatic Modules Map Generation:** Using relative paths, the CMake system was modified to
-automate module map creation, ensuring smooth integration with BioDynaMo's libraries.
+3. **C++ Modules changes** Among other things, I used automatic generation for the module map with relative paths,
+modified the `selection.xml` file to support the new dictionaries and fixed headers with missing includes (PR [#385](https://github.com/BioDynaMo/biodynamo/pull/385).
+4. **Updated some CI workflows** I fixed some failing workflows in PR [#377](https://github.com/BioDynaMo/biodynamo/pull/377).
+Also, I did some minor changes in some flags in PR's [#378](https://github.com/BioDynaMo/biodynamo/pull/378) and [#367](https://github.com/BioDynaMo/biodynamo/pull/367)
 
 ### Promising Results
 The results have been promising, showcasing significant performance gains. Benchmarking revealed 
@@ -66,10 +68,10 @@ As expected, the simulation time did not show an appreciable improvement. Howeve
 unit tests, the time was 33% lower. I believe this is because unit tests involve a lot of parsing and Cling calls.
 
 ### Future Steps and Challenges Ahead
-Despite these advances, several challenges remain. For instance, memory leaks have been observed when using the new
+Despite these advances, several challenges remain. PR's #365 is ready to merge and #385 needs some changes. For instance, memory leaks have been observed when using the new
 `ROOT_GENERATE_DICTIONARY`, even with C++ Modules disabled. Additionally, the build system for individual demos has
-caused compatibility issues with the main build system. Resolving these issues and finalizing the integration of C++
-Modules will be essential for ensuring long-term stability and reliability.
+caused compatibility issues with the main build system. Also, there is a problem with the Jupyter notebooks.
+Resolving these issues and finalizing the integration of C++ Modules will be essential for ensuring long-term stability and reliability.
 
 Looking ahead, further optimizations are planned, including potential module-based optimizations for BioDynaMo’s
 core components. Collaboration with the BioDynaMo team continues, with upcoming meetings scheduled
@@ -79,6 +81,19 @@ to align efforts and resolve outstanding issues.
 The integration of C++ Modules has proven effective in reducing memory usage and startup time, although some hurdles remain.
 Continued collaboration and testing will be crucial to fully realize the performance potential of BioDynaMo,
 enabling more efficient simulations for researchers in computational biology.
+
+### Acknowledges
+First of all, I would like to thank Google Summer of Code for the opportunity to work on this project.
+But above all, my most sincere gratitude goes to Vassil. He has been an exceptional mentor, always attentive
+and ready to help with anything I needed. His encouragement during weekly meetings and his constant support in all areas,
+from soft skills to technical expertise, have truly inspired me and earned my admiration.
+
+Many thanks also to the BioDynaMo team: to Lukas Breitweiser for guiding me through the final stages and helping
+me understand the complexities of BioDynaMo; to Tobias Duswald for reviewing my PRs and assisting me in analyzing
+my results; and to Fons Rademakers for his support when I faced challenges compiling ROOT in debug mode.
+
+Lastly, a special thanks to my colleagues from Compiler Research, particularly David, Attel and Maksym, whom I had
+the pleasure of meeting at the Fourth MODE in Valencia, for making this experience unforgettable.
 
 ### Related Links
 
