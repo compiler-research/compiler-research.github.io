@@ -92,7 +92,7 @@ Many thanks also to the BioDynaMo team: to Lukas Breitweiser for guiding me thro
 me understand the complexities of BioDynaMo; to Tobias Duswald for reviewing my PRs and assisting me in analyzing
 my results; and to Fons Rademakers for his support when I faced challenges compiling ROOT in debug mode.
 
-Lastly, a special thanks to my colleagues from Compiler Research, particularly David, Attel and Maksym, whom I had
+Lastly, a special thanks to my colleagues from Compiler Research, particularly David, Atel and Maksym, whom I had
 the pleasure of meeting at the Fourth MODE in Valencia, for making this experience unforgettable.
 
 ### Related Links
