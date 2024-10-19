@@ -5,6 +5,7 @@ excerpt: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel, par
 sitemap: false
 author: Tharun Anandh
 permalink: blogs/gsoc24_tharun_anandh_final_blog/
+banner_image: /images/blog/gsoc-banner.png
 date: 2024-10-17
 tags: gsoc xeus xeus-cpp cpp llm
 ---
@@ -25,7 +26,7 @@ Xeus-cpp is a Jupyter kernel for C++ built on the native Jupyter protocol, enabl
 
 ### Implementation
 
-![Codeflow](./images/blog/codeflow.png)
+![Codeflow](/images/blog/codeflow.png)
 
 I created a magic function called XAssist that connects to a specific LLM based on the user's preference. It utilizes utility functions and the cURL library to connect with the LLM and retrieve the respective response. The user saves the API keys for OpenAI and Gemini, sets the URL for Ollama, saves a particular model, and then uses the LLM.
 
@@ -100,7 +101,7 @@ I created a magic function called XAssist that connects to a specific LLM based 
 
 Here is an example that demonstrates how one can use XAssist.
 
-![Gemini](./images/blog/gemini.png)
+![Gemini](/images/blog/gemini.png)
 
 ---
 
