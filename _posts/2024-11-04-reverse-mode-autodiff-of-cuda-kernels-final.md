@@ -5,7 +5,7 @@ excerpt: "A not-very-short description of the challenges faced and my overall ex
 sitemap: false
 author: Christina Koutsou
 permalink: blogs/gsoc24_christina_koutsou_project_final_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/cuda_grad.png
 date: 2024-11-05
 tags: gsoc clang llvm clad cuda reverse-mode
 ---
