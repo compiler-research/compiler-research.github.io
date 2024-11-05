@@ -5,7 +5,7 @@ excerpt: "The LLVM.org website redesign project, part of GSoC
 2024, aimed to modernize and enhance usability of llvm.org website for its community of developers. This initiative will streamline navigation, improve accessibility, and update content, transforming LLVM.org into a more user-friendly resource."
 sitemap: false
 author: Chaitanya Shahare
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/gsoc-llvm-org-website-redesign-banner.png
 permalink: blogs/gsoc24_chaitanya_shahare_introduction_final_blog/
 date: 2024-11-04
 tags: gsoc llvm website
