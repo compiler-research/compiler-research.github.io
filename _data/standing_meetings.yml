@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Wrap-Up : Implementing Differentiation of the Kokkos Framework in Clad"
+      date: 2024-11-06 17:00:00 +0200
+      speaker: "Atell Yehor Krasnopolski"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_06_11_2024_Atell_Krasnopolski_KokkosCladWrapUpGSoC.pdf)"
     - title: "Wrap-Up : Out-Of-Process execution for Clang-Repl"
       date: 2024-10-16 17:00:00 +0200
       speaker: "Sahil Patidar"
