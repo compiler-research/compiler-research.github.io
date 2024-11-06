@@ -1,4 +1,45 @@
 - name: "CaaS Monthly Meeting"
+  date: 2024-11-07 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/91526749339?pwd=52MET9OQwUqI9nGgk3ko3XmTASQPuN.1)"
+  label: caas_07Nov2024
+  agenda:
+    - title: "CppInterOp: Advancing Interactive C++ for High Energy Physics"
+      speaker:
+        image: "https://compiler-research.org/images/team/Aaron.jpg"
+        name: "Aaron Jomy"
+        bio: |
+          Aaron Jomy is currently an intern at CERN, working with the ROOT team
+          on developing language interoperability software based on technologies
+          in Clang/LLVM. Previously, he earned his bachelor's in technology in
+          Computer Science from Manipal Institute of Technology in India and
+          worked as a research intern in the compiler research group at
+          Princeton University (US).
+      description: |
+        The Cling C++ interpreter has transformed language bindings by enabling
+        incremental compilation at runtime. This allows Python to interact with
+        C++ on demand and lazily construct bindings between the two. The
+        emergence of Clang-REPL as a potential alternative to Cling within the
+        LLVM compiler framework highlights the need for a unified framework for
+        interactive C++ technologies. This talk presents CppInterOp, a C++
+        Interoperability library, which leverages Cling and LLVM's Clang-REPL,
+        to provide a minimalist and backward-compatible API facilitating
+        seamless language interoperability. This provides downstream interactive
+        C++ tools with the compiler as a service by embedding Clang and LLVM as
+        libraries in their codebases. By enabling dynamic Python interactions
+        with static C++ codebases, CppInterOp enhances computational efficiency
+        and rapid development in high-energy physics. The library offers
+        primitives enabling cppyy(PyROOT), an automatic, run-time, Python-C++
+        bindings generator. We showcase how CppInterOp optimizes cross-language
+        execution and computational tasks in high-energy physics, making it a
+        valuable tool for researchers and developers.
+    - title: Update
+      speaker: Vassil Vassilev
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 5 Dec 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2024-09-05 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/94396923932?pwd=9MDrbK3nQgGYjqkEZILGO7ne4YczA9.1)"
@@ -9,7 +50,7 @@
       slides: "/assets/presentations/CR_05_09_2024.pdf"
     - title: Next meeting
       speaker: Vassil Vassilev
-      link: 3 Oct 1700
+      link: 7 Nov 1700
 
 - name: "CaaS Monthly Meeting"
   date: 2024-07-11 17:00:00 +0200
