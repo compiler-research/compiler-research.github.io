@@ -52,7 +52,7 @@ or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
       {% if item.speaker and item.speaker.first %}
         <div class="row">
           <div class="col-md-1">
-            <img style="border-radius:50%" width="72px" class="shadow-4-strong" alt="{{item.speaker.name}}" src="{{item.speaker.image}}" />
+            <img style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover"  class="shadow-4-strong" alt="{{item.speaker.name}}" src="{{item.speaker.image}}" />
           </div>
           <div class="col-md-11">
             <i>{{item.speaker.bio}}</i>
