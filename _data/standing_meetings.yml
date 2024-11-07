@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Modular Builds for ROOT- Final Presentation"
+      date: 2024-11-06 17:00:00 +0200
+      speaker: "Pavlo Svirin"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_06_11_2024_Pavlo_Svirin_SuperbuildsForROOT_GSoc_WrapUp.pdf)"
     - title: "LLVM.org Website Redesign - Final Presentation"
       date: 2024-11-06 17:00:00 +0200
       speaker: "Chaitanya Shahare"
