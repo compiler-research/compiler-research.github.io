@@ -1,3 +1,31 @@
+- title: "Advanced optimizations for source transformation based
+  automatic differentiation"
+  description: |
+    Clad is a LLVM/Clang plugin designed to provide automatic differentiation (AD)
+    for C++ mathematical functions. It generates code for computing derivatives modifying 
+    abstract syntax tree using LLVM compiler features. Clad supports forward- and 
+    reverse-mode differentiation that are effectively used to integrate all kinds of 
+    functions. The typical AD approach in Machine Learning tools records and flattens the
+    compute graph at runtime, whereas Clad can perform more advanced optimizations at 
+    compile time using a rich program representation provided by the Clang AST. These 
+    optimizations investigate which parts of the computation graph are relevant to 
+    the AD rules. 
+    
+    One such technique is the “To-Be-Recorded” optimization, which reduces
+    the memory pressure to the clad tape data structure in the adjoint mode. Another 
+    optimization technique is activity analysis, which discards all derivative 
+    statements that are not relevant to the generated code. In the talk we will explain
+    compiler-level optimizations specific to AD, and will show some specific examples
+    of how these analyses have impacted clad applications.
+
+  location: "[MODE 2024](https://indico.cern.ch/event/1380163/)"
+  date: 2024-09-25
+  speaker: Maksym Andriichuk
+  id: "VVMODE2024"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Maksym_Andriichuk_MODE2024_Optimizations.pdf)
+  highlight: 1
+
 - title: "Improving BioDynamo's Performance using ROOT C++ Modules"
   description: |
     Poster presented at the FOURTH Mode Workshop on Differentiable Programming for Experiment Design
