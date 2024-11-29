@@ -61,47 +61,6 @@
       report: |
         [Final Report](/assets/docs/Aaron_Jomy_GSoC23_Report.pdf)
 
-- name: Vaibhav Thakkar
-  photo: Vaibhav.jpg
-  info: "Research Intern at CERN, Google Summer of Code 2023 Contributor"
-  email: vaibhav.thakkar.22.12.99@gmail.com
-  education: "Electrical Engineering and Computer Science, Indian Institute of Technology, Kanpur, India"
-  active: 1
-  projects:
-    - title: "Add support for pointers in reverse mode AD in Clad"
-      status: Ongoing
-      description: |
-        In mathematics and computer algebra, automatic differentiation (AD) is a set of techniques
-        to numerically evaluate the derivative of a function specified by a computer program.
-        Automatic differentiation is an alternative technique to Symbolic differentiation and
-        Numerical differentiation (the method of finite differences).
-        Clad is based on Clang which provides the necessary facilities for code transformation.
-        The AD library is able to differentiate non-trivial functions, to find a partial derivative
-        for trivial cases and has good unit test coverage.
-        Clad currently supports differentiation with respect to single-dimensional arrays but has
-        limited support for pointers in reverse mode AD. This project aims to add support for
-        pointers in Clad.
-      mentors:  Vassil Vassilev, David Lange
-
-    - title: "Implement vector mode in forward mode automatic differentiation in Clad"
-      status: Completed
-      description: |
-        Clad is an automatic differentiation library based on Clang which provides the
-        necessary facilities for code transformation.
-        Automatic Differentiation (AD) is a set of techniques to numerically evaluate the
-        derivative of a function specified by a computer program.
-        Automatic differentiation is an alternative technique to Symbolic differentiation and
-        Numerical differentiation (the method of finite differences).
-        Vector mode support will facilitate the computation of gradients using the forward
-        mode AD in a single pass and thus without explicitly performing differentiation n times
-        for n function arguments.
-        The major benefit of using vector mode is that computationally expensive operations
-        do not need to be recomputed n times for n function arguments.
-      mentors:  Parth Arora, Vassil Vassilev, David Lange, Alexander Penev
-      proposal: /assets/docs/Vaibhav_Thakkar_Proposal_2023.pdf
-      report: |
-        [Final Report](/assets/docs/Vaibhav_Thakkar_GSoC23_Report.pdf)
-
 - name: QuillPusher
   info: "Technical Writer, Google Season of Docs 2023 contributor"
   active: 1
@@ -167,27 +126,6 @@
        of the existing ROOT package manager prototype.
       proposal: /assets/docs/Pavlo_Svirin_Proposal_2024.pdf
       mentors: Vassil Vassilev, Danilo Piparo
-      
-- name: Isaac Morales Santana
-  info: "GSoC 2024 Contributor"
-  photo: Isaac.jpg
-  email: isaacmoralessantana@gmail.com
-  github: "https://github.com/imorlxs"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/isaac-morales-santana-724280203/"
-  education: "Computer Engineering, University of Granada, Spain"
-  projects:
-    - title: "Improving performance of BioDynaMo using ROOT C++ Modules"
-      status: Ongoing
-      description: |
-        The ROOT is a framework for data processing, born at CERN, at the heart of the research on high-energy physics. Every day, thousands of physicists use ROOT applications to analyze their data or to perform simulations. The ROOT software framework is foundational for the HEP ecosystem, providing capabilities such as IO, a C++ interpreter, GUI, and math libraries. It uses object-oriented concepts and build-time modules to layer between components. We believe additional layering formalisms will benefit ROOT and its users.
-
-        BioDynaMo is an agent-based simulation platform that enables users to perform simulations of previously unachievable scale and complexity, making it possible to tackle challenging scientific research questions. The project has a wide range of applications in cancer research, epidemiology, and social sciences.
-
-        BioDynaMo incorporates ROOT for several crucial functionalities such as statistical analysis, random number generation, C++-based Jupyter notebooks, and IO. Some features rely on efficient reflection information about BioDynaMo’s and user-defined C++ classes. This project is about improving the performance of the reflection system by upgrading to C++ modules.
-
-      proposal: /assets/docs/Isaac_Morales-Proposal_2024.pdf
-      mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswal and Fons Rademakers
 
 - name: "Chaitanya Shahare"
   photo: Chaitanya-Shahare.jpeg
@@ -210,30 +148,6 @@
         the community for feedback and collaboration throughout the redesign process.
       proposal: /assets/docs/Chaitanya_Shahare_Proposal_2024.pdf
       mentors: Tanya Lattner, Vassil Vassilev
-      
-- name: "Riya Bisht"
-  photo: Riya-Bisht.jpeg
-  info: "Google Summer Of Code 2024 Contributor"
-  email: manasi.riya2003@gmail.com
-  education: "B.Tech in Computer Science Engineering, Graphic Era University, India"
-  github: "https://github.com/chococandy63"
-  www: "https://riyabisht.com/about/"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/riya-bisht-81b365196/"
-  projects:
-    - title: "Enable CUDA compilation on Cppyy-Numba generated IR"
-      status: Ongoing
-      description: |
-        Cppyy is an automatic, run-time, Python-C++ binding generator, for calling C++ from Python and Python from C++. 
-        Initial support has been added that allows Cppyy to hook into the high-performance Python compiler, Numba which
-        compiles looped code containing C++ objects/methods/functions defined via Cppyy into fast machine code. The 
-        project aims to enhance Cppyy, by enabling CUDA compilation on Numba-generated intermediate representation (IR). 
-        This integration will allow seamless utilization of CUDA paradigms in Python without compromising performance. 
-        The objectives includes adding support for Cppyy-defined CUDA Code i.e. implementing support for declaration and 
-        parsing of CUDA code defined in Cppyy within the Numba extension. Designing and developing a CUDA compilation 
-        mechanism and execution within the Cppyy-Numba environment.
-      proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
-      mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
 
 - name: "Maksym Andriichuk"
   photo: Andriichuk.jpg
@@ -265,49 +179,6 @@
         The goal is to implement the differentiation of the Kokkos framework including the support of Kokkos functors, lambdas, methods such as parallel_for, parallel_reduce, and deep_copy, as well as the general support for Kokkos view data structures. The set-off points for the project should be the existing "Kokkos-aware Clad" PR and the test cases I have developed. The additional aim of the project is to implement a generic approach to support any C++ library (starting with Kokkos) in such a way that the core of Clad is invariant to the internals of the library, but any Clad user can add it in a pluggable format for individual use cases.
       proposal: /assets/docs/Atell_Krasnopolsky_Proposal_2024.pdf
       mentors: Vassil Vassilev, Vaibhav Thakkar, Petro Zarytskyi
-
-- name: Khushiyant
-  photo: Khushiyant.jpg
-  info: "Research Intern, GSoC 2024 Contributor"
-  email: khushiyant2002@gmail.com
-  education: "B.Tech in Computer Science and Engineering, G.G.S.I.P.U, India"
-  github: "https://github.com/Khushiyant"
-  www: "https://bento.me/khushiyant"
-  linkedin: "https://www.linkedin.com/in/khushiyant/"
-  active: 1
-  projects:
-    - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
-      status: Ongoing
-      description: |
-            Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from Python and Python from C++. 
-            Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side. 
-            Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense. 
-            These cppyy objects can be plugged into idiomatic expressions that expect Python builtin-types. 
-            This behaviour is achieved by growing pythonistic methods like __len__ while also retaining its C++ methods like size.
-            Efficient and automatic conversion between C++ and Python is essential towards high-performance cross-language support. 
-            This approach eliminates overheads arising from iterative initialization such as comma insertion in Eigen. 
-            This opens up new avenues for the utilization of Cppyy’s bindings in tools that perform numerical operations for transformations, or optimization.
-            The on-demand C++ infrastructure wrapped by idiomatic Python enables new techniques in ML tools like JAX/CUTLASS. 
-            This project allows the C++ infrastructure to be plugged into at service to the users seeking high-performance library primitives that are unavailable in Python.
-
-      mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
-      proposal: /assets/docs/Khushiyant_Proposal_2024.pdf
-
-- name: "Tharun Anandh"
-  photo: tharun_a.jpg
-  info: "GSoC 2024 Contributor"
-  email: atharun05@gmail.com
-  education: "B.Tech in Computer Science and Engineering, National Institute of Technology, Tiruchirapalli, Tamil Nadu, India"
-  github: "https://github.com/tharun571"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/tharun-anandh-8b624b199/"
-  projects:
-    - title: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
-      status: Ongoing
-      description: |
-        Xeus-cpp, a Jupyter kernel for C++, is built upon the native implementation of the Jupyter protocol, xeus. This setup empowers users to interactively write and execute C++ code, providing immediate visibility into the results.With its REPL (read-eval-print-loop) functionality, users can rapidly prototype and iterate without the need to compile and run separate C++ programs. Additionally, this integration facilitates seamless interaction between C++ and Python within the same Jupyter environment. With the ever growing popularity of large language models, this project aims to integrate a large language model with the xeus-cpp Jupyter kernel. This integration will enable users to interactively generate and execute code in C++ leveraging the assistance of the language model.
-      proposal: /assets/docs/TharunA_GSoC_Proposal_2024-Xeus-Cpp.pdf
-      mentors: Anutosh Bhat, Johan Mabille, Aaron Jomy, David Lange, Vassil Vassilev
 
 - name: Thomas Fransham
   info: "GSoC 2024 Contributor"
@@ -436,6 +307,134 @@
 ################################################################################
 #                                     2024                                     #
 ################################################################################
+
+- name: Vaibhav Thakkar
+  photo: Vaibhav.jpg
+  info: "Research Intern at CERN, Google Summer of Code 2023 Contributor"
+  email: vaibhav.thakkar.22.12.99@gmail.com
+  education: "Electrical Engineering and Computer Science, Indian Institute of Technology, Kanpur, India"
+  projects:
+    - title: "Add support for pointers in reverse mode AD in Clad"
+      status: Completed
+      description: |
+        In mathematics and computer algebra, automatic differentiation (AD) is a set of techniques
+        to numerically evaluate the derivative of a function specified by a computer program.
+        Automatic differentiation is an alternative technique to Symbolic differentiation and
+        Numerical differentiation (the method of finite differences).
+        Clad is based on Clang which provides the necessary facilities for code transformation.
+        The AD library is able to differentiate non-trivial functions, to find a partial derivative
+        for trivial cases and has good unit test coverage.
+        Clad currently supports differentiation with respect to single-dimensional arrays but has
+        limited support for pointers in reverse mode AD. This project aims to add support for
+        pointers in Clad.
+      mentors:  Vassil Vassilev, David Lange
+
+    - title: "Implement vector mode in forward mode automatic differentiation in Clad"
+      status: Completed
+      description: |
+        Clad is an automatic differentiation library based on Clang which provides the
+        necessary facilities for code transformation.
+        Automatic Differentiation (AD) is a set of techniques to numerically evaluate the
+        derivative of a function specified by a computer program.
+        Automatic differentiation is an alternative technique to Symbolic differentiation and
+        Numerical differentiation (the method of finite differences).
+        Vector mode support will facilitate the computation of gradients using the forward
+        mode AD in a single pass and thus without explicitly performing differentiation n times
+        for n function arguments.
+        The major benefit of using vector mode is that computationally expensive operations
+        do not need to be recomputed n times for n function arguments.
+      mentors:  Parth Arora, Vassil Vassilev, David Lange, Alexander Penev
+      proposal: /assets/docs/Vaibhav_Thakkar_Proposal_2023.pdf
+      report: |
+        [Final Report](/assets/docs/Vaibhav_Thakkar_GSoC23_Report.pdf)
+
+      
+- name: Isaac Morales Santana
+  info: "GSoC 2024 Contributor"
+  photo: Isaac.jpg
+  email: isaacmoralessantana@gmail.com
+  github: "https://github.com/imorlxs"
+  linkedin: "https://www.linkedin.com/in/isaac-morales-santana-724280203/"
+  education: "Computer Engineering, University of Granada, Spain"
+  projects:
+    - title: "Improving performance of BioDynaMo using ROOT C++ Modules"
+      status: Completed
+      description: |
+        The ROOT is a framework for data processing, born at CERN, at the heart of the research on high-energy physics. Every day, thousands of physicists use ROOT applications to analyze their data or to perform simulations. The ROOT software framework is foundational for the HEP ecosystem, providing capabilities such as IO, a C++ interpreter, GUI, and math libraries. It uses object-oriented concepts and build-time modules to layer between components. We believe additional layering formalisms will benefit ROOT and its users.
+
+        BioDynaMo is an agent-based simulation platform that enables users to perform simulations of previously unachievable scale and complexity, making it possible to tackle challenging scientific research questions. The project has a wide range of applications in cancer research, epidemiology, and social sciences.
+
+        BioDynaMo incorporates ROOT for several crucial functionalities such as statistical analysis, random number generation, C++-based Jupyter notebooks, and IO. Some features rely on efficient reflection information about BioDynaMo’s and user-defined C++ classes. This project is about improving the performance of the reflection system by upgrading to C++ modules.
+
+      proposal: /assets/docs/Isaac_Morales-Proposal_2024.pdf
+      mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswal and Fons Rademakers
+
+
+- name: "Riya Bisht"
+  photo: Riya-Bisht.jpeg
+  info: "Google Summer Of Code 2024 Contributor"
+  email: manasi.riya2003@gmail.com
+  education: "B.Tech in Computer Science Engineering, Graphic Era University, India"
+  github: "https://github.com/chococandy63"
+  www: "https://riyabisht.com/about/"
+  linkedin: "https://www.linkedin.com/in/riya-bisht-81b365196/"
+  projects:
+    - title: "Enable CUDA compilation on Cppyy-Numba generated IR"
+      status: Failed
+      description: |
+        Cppyy is an automatic, run-time, Python-C++ binding generator, for calling C++ from Python and Python from C++. 
+        Initial support has been added that allows Cppyy to hook into the high-performance Python compiler, Numba which
+        compiles looped code containing C++ objects/methods/functions defined via Cppyy into fast machine code. The 
+        project aims to enhance Cppyy, by enabling CUDA compilation on Numba-generated intermediate representation (IR). 
+        This integration will allow seamless utilization of CUDA paradigms in Python without compromising performance. 
+        The objectives includes adding support for Cppyy-defined CUDA Code i.e. implementing support for declaration and 
+        parsing of CUDA code defined in Cppyy within the Numba extension. Designing and developing a CUDA compilation 
+        mechanism and execution within the Cppyy-Numba environment.
+      proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
+      mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
+
+
+- name: Khushiyant
+  photo: Khushiyant.jpg
+  info: "Research Intern, GSoC 2024 Contributor"
+  email: khushiyant2002@gmail.com
+  education: "B.Tech in Computer Science and Engineering, G.G.S.I.P.U, India"
+  github: "https://github.com/Khushiyant"
+  www: "https://bento.me/khushiyant"
+  linkedin: "https://www.linkedin.com/in/khushiyant/"
+  projects:
+    - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
+      status: Failed
+      description: |
+            Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from Python and Python from C++. 
+            Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side. 
+            Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense. 
+            These cppyy objects can be plugged into idiomatic expressions that expect Python builtin-types. 
+            This behaviour is achieved by growing pythonistic methods like __len__ while also retaining its C++ methods like size.
+            Efficient and automatic conversion between C++ and Python is essential towards high-performance cross-language support. 
+            This approach eliminates overheads arising from iterative initialization such as comma insertion in Eigen. 
+            This opens up new avenues for the utilization of Cppyy’s bindings in tools that perform numerical operations for transformations, or optimization.
+            The on-demand C++ infrastructure wrapped by idiomatic Python enables new techniques in ML tools like JAX/CUTLASS. 
+            This project allows the C++ infrastructure to be plugged into at service to the users seeking high-performance library primitives that are unavailable in Python.
+
+      mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
+      proposal: /assets/docs/Khushiyant_Proposal_2024.pdf
+
+
+- name: "Tharun Anandh"
+  photo: tharun_a.jpg
+  info: "GSoC 2024 Contributor"
+  email: atharun05@gmail.com
+  education: "B.Tech in Computer Science and Engineering, National Institute of Technology, Tiruchirapalli, Tamil Nadu, India"
+  github: "https://github.com/tharun571"
+  linkedin: "https://www.linkedin.com/in/tharun-anandh-8b624b199/"
+  projects:
+    - title: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
+      status: Completed
+      description: |
+        Xeus-cpp, a Jupyter kernel for C++, is built upon the native implementation of the Jupyter protocol, xeus. This setup empowers users to interactively write and execute C++ code, providing immediate visibility into the results.With its REPL (read-eval-print-loop) functionality, users can rapidly prototype and iterate without the need to compile and run separate C++ programs. Additionally, this integration facilitates seamless interaction between C++ and Python within the same Jupyter environment. With the ever growing popularity of large language models, this project aims to integrate a large language model with the xeus-cpp Jupyter kernel. This integration will enable users to interactively generate and execute code in C++ leveraging the assistance of the language model.
+      proposal: /assets/docs/TharunA_GSoC_Proposal_2024-Xeus-Cpp.pdf
+      mentors: Anutosh Bhat, Johan Mabille, Aaron Jomy, David Lange, Vassil Vassilev
 
 - name: Shreyas Atre
   photo: Shreyas.jpg
