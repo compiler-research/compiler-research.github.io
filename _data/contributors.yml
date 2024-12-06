@@ -297,6 +297,12 @@
       proposal: /assets/docs/VipulCariappa_Internship_Proposal.pdf
       mentors: Vassil Vassilev, Aaron Jomy, Wim Lavrijsen, Jonas Rembser
 
+- name: Anutosh Bhat
+  info: "Open Source Contributor to xeus-cpp, CppInterOp etc"
+  email: anutosh.bhat.21@gmail.com
+  photo: Anutosh.jpg
+  education: Integrated Dual Degree (B.Tech & M.Tech) in Data Science & Biological Engineering, IIT Madras, India (2024)
+  active: 1
 
 - name: "This could be you!"
   photo: rock.jpg
