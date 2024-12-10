@@ -33,6 +33,7 @@
         bindings generator. We showcase how CppInterOp optimizes cross-language
         execution and computational tasks in high-energy physics, making it a
         valuable tool for researchers and developers.
+      slides: "/assets/presentations/Aaron_J-CaaS_CppInterOp.pdf"
     - title: Update
       speaker: Vassil Vassilev
     - title: Next meeting
