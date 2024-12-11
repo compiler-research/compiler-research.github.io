@@ -24,38 +24,6 @@
   responsible: Pavlo Svirin
 
 
-- name: "Improving performance of BioDynaMo using ROOT C++ Modules"
-  description: |
-    [ROOT](https://root.cern/) is a framework for data processing,
-    born at CERN, at the heart of the research on high-energy physics.
-    Every day, thousands of physicists use ROOT applications to analyze their
-    data or to perform simulations. The ROOT software framework is
-    foundational for the HEP ecosystem, providing capabilities such
-    as IO, a C++ interpreter, GUI, and math libraries. It uses
-    object-oriented concepts and build-time modules to layer between
-    components. We believe additional layering formalisms will benefit
-    ROOT and its users.
-
-    BioDynaMo is an agent-based simulation platform that enables users
-    to perform simulations of previously unachievable scale and complexity,
-    making it possible to tackle challenging scientific research questions.
-    The project has a wide range of applications in cancer research,
-    epidemiology, and social sciences.
-
-    BioDynaMo incorporates ROOT for several crucial functionalities such
-    as statistical analysis, random number generation, C++-based Jupyter
-    notebooks, and IO. Some features rely on efficient reflection
-    information about BioDynaMo’s and user-defined C++ classes. This project
-    is about improving the performance of the reflection system by upgrading
-    to C++ modules.
-  tasks: |
-    * Rework the cmake rules to incorporate efficiently ROOT via `FetchContent`
-    * Replace invocations of `genreflex` in favor of `rootcling`
-    * Enable C++ modules in `rootcling`
-    * Produce a comparison report
-  status: ongoing
-  responsible: Isaac Morales Santana
-
 - name: "Using ROOT in the field of genome sequencing"
   description: |
     [ROOT](https://root.cern/) is a framework for data processing,
@@ -80,70 +48,7 @@
     * Investigate changing the compression strategies
     * Investigate different ROOT file splitting techniques
     * Produce a comparison report
-    
-- name: "Implement Differentiating of the Kokkos Framework"
-  description: |
-    In mathematics and computer algebra, automatic differentiation (AD) is
-    a set of techniques to numerically evaluate the derivative of a function
-    specified by a computer program. Automatic differentiation is an
-    alternative technique to Symbolic differentiation and Numerical
-    differentiation (the method of finite differences). Clad is based on
-    Clang which provides the necessary facilities for code transformation.
-    The AD library can differentiate non-trivial functions, to find a partial
-    derivative for trivial cases and has good unit test coverage.
 
-    The Kokkos C++ Performance Portability Ecosystem is a production level
-    solution for writing modern C++ applications in a hardware agnostic way.
-    It is part of the US Department of Energies Exascale Project – the leading
-    effort in the US to prepare the HPC community for the next generation of
-    super computing platforms. The Ecosystem consists of multiple libraries
-    addressing the primary concerns for developing and maintaining applications
-    in a portable way. The three main components are the Kokkos Core Programming
-    Model, the Kokkos Kernels Math Libraries and the Kokkos Profiling and
-    Debugging Tools.
-
-    The Kokkos framework is used in several domains including climate modeling
-    where gradients are important part of the simulation process. This project
-    aims at teaching Clad to differentiate Kokkos entities in a performance
-    portable way
-
-  tasks: |
-    * Implement common test cases for Kokkos in Clad
-    * Add support for Kokkos functors
-    * Add support for Kokkos lambdas
-    * Incorporate the changes from the [initial Kokkos PR](https://github.com/vgvassilev/clad/pull/783)
-    * Enhance existing benchmarks demonstrating effectiveness of Clad for Kokkos
-    * [Stretch goal] Performance benchmarks
-
-  status: ongoing
-  responsible: Atell Yehor Krasnopolski
-
-
-- name: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
-  description: |
-    xeus-cpp is a Jupyter kernel for cpp based on the native implementation
-    of the Jupyter protocol xeus. This enables users to write and execute
-    C++ code interactively, seeing the results immediately. This REPL
-    (read-eval-print-loop) nature allows rapid prototyping and iterations
-    without the overhead of compiling and running separate C++ programs.
-    This also achieves C++ and Python integration within a single Jupyter
-    environment.
-
-    This project aims to integrate a large language model, such as Bard/Gemini,
-    with the xeus-cpp Jupyter kernel. This integration will enable users to
-    interactively generate and execute code in C++ leveraging the assistance
-    of the language model. Upon successful integration, users will have access
-    to features such as code autocompletion, syntax checking, semantic
-    understanding, and even code generation based on natural language prompts.
-
-  tasks: |
-    * Design and implement mechanisms to interface the large language model with the xeus-cpp kernel. Jupyter-AI might be used as a motivating example
-    * Develop functionalities within the kernel to utilize the language model for code generation based on natural language descriptions and suggestions for autocompletion.
-    * Comprehensive documentation and thorough testing/CI additions to ensure reliability.
-    * [Stretch Goal] After achieving the previous milestones, the student can work on specializing the model for enhanced syntax and semantic understanding capabilities by using xeus notebooks as datasets.
-
-  status: ongoing
-  responsible: Tharun Anandh
 
 - name: "Implementing missing features in xeus-cpp"
   description: |
@@ -319,9 +224,6 @@
     * Design and develop a CUDA compilation and execution mechanism.
     * Prepare proper tests and documentation.
 
-  status: ongoing
-  responsible: Riya Bisht
-
 
 - name: "Cppyy STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
   description: |
@@ -355,91 +257,6 @@
     operations in frameworks like JAX
     * Work on integrating these plugins with toolkits like CUTLASS that
     utilise the bindings to provide a Python API
-
-  status: ongoing
-  responsible: Khushiyant
-
-- name: "Improve the LLVM.org Website Look and Feel"
-  description: |
-    The llvm.org website serves as the central hub for information about the
-    LLVM project, encompassing project details, current events, and relevant
-    resources. Over time, the website has evolved organically, prompting the
-    need for a redesign to enhance its modernity, structure, and ease of
-    maintenance.
-    
-    The goal of this project is to create a contemporary and coherent static
-    website that reflects the essence of LLVM.org. This redesign aims to improve
-    navigation, taxonomy, content discoverability, and overall usability. Given
-    the critical role of the website in the community, efforts will be made to
-    engage with community members, seeking consensus on the proposed changes.
-
-    LLVM's [current website](https://llvm.org) is a complicated mesh of uncoordinated pages with
-    inconsistent, static links pointing to both internal and external sources.
-    The website has grown substantially and haphazardly since its inception. 
-
-    It requires a major UI and UX overhaul to be able to better serve the LLVM
-    community. 
-
-    Based on a preliminary site audit, following are some of the problem areas
-    that need to be addressed.
-
-    **Sub-Sites**: Many of the sections/sub-sites have a completely different UI/UX
-    (e.g., [main](https://llvm.org), [clang](https://clang.llvm.org),
-    [lists](https://lists.llvm.org/cgi-bin/mailman/listinfo),
-    [foundation](https://foundation.llvm.org),
-    [circt](https://circt.llvm.org/docs/GettingStarted/),
-    [lnt](http://lnt.llvm.org), and [docs](https://llvm.org/docs)).
-    Sub-sites are divided into 8 separate repos and use different technologies
-    including [Hugo](https://github.com/llvm/circt-www/blob/main/website/config.toml),
-    [Jekyll](https://github.com/llvm/clangd-www/blob/main/_config.yml), etc.
-
-    **Navigation**: On-page navigation is inconsistent and confusing. Cross-sub-site
-    navigation is inconsistent, unintuitive, and sometimes non-existent. Important
-    subsections often depend on static links within (seemingly random) pages.
-    Multi-word menu items are center-aligned and flow out of margins.
-    
-    **Pages**: Many [large write-ups](https://clang.llvm.org/docs/UsersManual.html)
-    lack pagination, section boundaries, etc., making
-    them seem more intimidating than they really are. Several placeholder pages
-    re-route to [3rd party services](https://llvm.swoogo.com/2023devmtg),
-    adding bloat and inconsistency.
-
-    **Search**: Search options are placed in unintuitive locations, like the bottom
-    of the side panel, or from [static links](https://llvm.org/docs/) to
-    [redundant pages](https://llvm.org/docs/search.html). Some pages have
-    no search options at all. With multiple sections of the website hosted in
-    separate projects/repos, cross-sub-site search doesn't seem possible.
-        
-    **Expected results**: A modern, coherent-looking website that attracts new
-    prospect users and empowers the existing community with better navigation,
-    taxonomy, content discoverability, and overall usability. It should also
-    include a more descriptive Contribution Guide ([example](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/layouts)) to help novice
-    contributors, as well as to help maintain a coherent site structure.
-
-    Since the website is a critical infrastructure and most of the community
-    will have an opinion this project should try to engage with the community
-    building community consensus on the steps being taken. 
-
-  tasks: |
-    * Conduct a comprehensive content audit of the existing website.
-    * Select appropriate technologies, preferably static site generators like
-    Hugo or Jekyll.
-    * Advocate for a separation of data and visualization, utilizing formats such
-    as YAML and Markdown to facilitate content management without direct HTML
-    coding.
-    * Present three design mockups for the new website, fostering open discussions
-    and allowing time for alternative proposals from interested parties.
-    * Implement the chosen design, incorporating valuable feedback from the
-    community.
-    * Collaborate with content creators to integrate or update content as needed.
-    
-    The successful candidate should commit to regular participation in weekly
-    meetings, deliver presentations, and contribute blog posts as requested.
-    Additionally, they should demonstrate the ability to navigate the community
-    process with patience and understanding.
-
-  status: ongoing
-  responsible: Chaitanya Shahare
 
 - name: "On Demand Parsing in Clang"
   description: |
@@ -566,55 +383,6 @@
     Additionally, they should demonstrate the ability to navigate the
     community process with patience and understanding.
 
-- name: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
-  description: |
-    xeus-clang-REPL is a C++ kernel for Jupyter notebooks using clang-REPL as
-    its C++ Interpreter. Cppyy is an automatic, run-time, Python-C++ bindings
-    generator, for calling C++ from Python and Python from C++.
-
-    Allowing C++ and Python to talk between themselves in a Jupyter notebook
-    will allow users to switch between Python and C++ at will. This means
-    that data analysts can set up their analysis in Python while running the
-    actual analysis in C++. Thus reducing the time to write and debug their
-    analysis pipeline.
-
-    Initial support of cross talk between the two kernels has been implemented
-    but this only supports passing primitive data types. This project aims to
-    use Cppyy to extend this to support classes and functions.
-  tasks: |
-    * Automate creation of equivalent Cppyy objects in the Python kernel when
-      objects are created in the C++ kernel
-    * Automate the creation of equivalent C++ objects in the xeus-clang-REPL
-      kernel when Python objects are created
-    * Add documentation
-  status: ongoing
-  responsible: Aaron Jomy, Smit Shah
-
-- name: "Extend the Cppyy support in Numba"
-  description: |
-    Numba is a JIT compiler that translates a subset of Python and NumPy code
-    into fast machine code. Cppyy is an automatic, run-time, Python-C++
-    bindings generator, for calling C++ from Python and Python from C++. 
-
-    Cppyy has to pay a time penalty each time it needs to switch between
-    languages which can multiply into large slowdowns when using loops with
-    cppyy objects. This is where Numba can help. Since Numba compiles the
-    code in loops into machine code it only has to cross the language barrier
-    once and the loops thus run faster.
-
-    Initial support for Cppyy objects in Numba enabled the use of builtin
-    types and classes (see
-    [cppyy docs](https://cppyy.readthedocs.io/en/latest/numba.html)),
-    but some essential C++ features, such as references and STL classes,
-    are not yet supported.
-  tasks: |
-    There are several foreseen tasks:
-      * Add support for C++ reference types in Numba through Cppyy
-      * Add general support for C++ templates in Numba through Cppyy
-      * Add tests and documentation
-  status: completed
-  responsible: Aaron Jomy
-    
 - name: "Explore advanced activity-analysis and optimizations in reverse-mode automatic differentiation"
   description: |
     Clad is an automatic differentiation (AD) clang plugin for C++. Given a C++
@@ -643,7 +411,7 @@
       * Implement the proposed activity analysis mode.
       * Add tests and documentation.
   status: ongoing
-  responsible: Petro Zarytskyi
+  responsible: Maksym Andriichuk
 
 - name: "Improve automatic differentiation of object-oriented paradigms using Clad"
   description: |
@@ -677,186 +445,6 @@
       * Add support for the missing constructs.
       * Add proper tests and documentation.
 
-- name: "Enable reverse-mode automatic differentiation of (CUDA) GPU kernels using Clad"
-  description: |
-    Clad is an automatic differentiation (AD) clang plugin for C++. Given a C++
-    source code of a mathematical function, it can automatically generate C++
-    code for computing derivatives of the function. Clad has found uses in
-    statistical analysis and uncertainty assessment applications. In
-    scientific computing and machine learning, GPU multiprocessing can
-    provide a significant boost in performance and scalability. This project
-    focuses on enabling the automatic differentiation of CUDA GPU kernels using
-    Clad. This will allow users to take advantage of the power of GPUs while
-    benefiting from the accuracy and speed of automatic differentiation.
-  tasks: |
-    There are several foreseen tasks:
-      * Research about automatic differentiation of code involving CUDA GPU
-        kernels. Prepare a report and an initial strategy to follow.This may
-        involve brainstorming and the need for innovative solutions. 
-      * Enable reverse-mode automatic differentiation of CUDA GPU kernels and
-        calls to CUDA GPU kernels from the host code.
-      * Add proper tests and documentation.
-  status: ongoing
-  responsible: Christina Koutsou
-
-- name: "Design and Develop a CUDA engine working along with C/C++ mode in clang-repl"
-  description: |
-    Incremental compilation pipelines process code chunk-by-chunk by building an
-    ever-growing translation unit. Code is then lowered into the LLVM IR and
-    subsequently run by the LLVM JIT. Such a pipeline allows creation of
-    efficient interpreters. The interpreter enables interactive exploration and
-    makes the C++ language more user friendly. The incremental compilation mode
-    is used by the interactive C++ interpreter, Cling, initially developed to
-    enable interactive high-energy physics analysis in a C++ environment.
-
-    Our group puts efforts to incorporate and possibly redesign parts of Cling
-    in Clang mainline through a new tool, clang-repl. The project aims to
-    generalize the `IncrementalCUDADeviceCompiler` of cling and add this
-    functionality in clang-repl.
-  tasks: |
-    There are several foreseen tasks:
-      * Write a detailed request for comment (RFC) document on the design choices
-        and gather feedback from the LLVM community.
-      * Implement the necessary functionality to support existing test cases
-        available [here](https://github.com/root-project/cling/tree/master/test/CUDADeviceCode).
-      * Develop clang-repl-based tutorials for the CUDA backend.
-      * Investigate the requirements for supporting a HIP backend.
-      * Demonstrate a CUDA-executed gradient computed by the Clad automatic
-        differentiation plugin.
-      * Present the work at the relevant meetings and conferences.
-  status: completed
-  responsible: Anubhab Ghosh
-
-- name: "Tutorial development with clang-repl"
-  description: |
-    Incremental compilation pipelines process code chunk-by-chunk by building an
-    ever-growing translation unit. Code is then lowered into the LLVM IR and
-    subsequently run by the LLVM JIT. Such a pipeline allows creation of
-    efficient interpreters. The interpreter enables interactive exploration and
-    makes the C++ language more user friendly. The incremental compilation mode
-    is used by the interactive C++ interpreter, Cling, initially developed to
-    enable interactive high-energy physics analysis in a C++ environment.
-
-    Our group puts efforts to incorporate and possibly redesign parts of Cling
-    in Clang mainline through a new tool, clang-repl. The project aims
-    implementing tutorials demonstrating the capabilities of the project and
-    investigating adoption of clang-repl in xeus-cling.
-  tasks: |
-    There are several foreseen tasks:
-      * Write several tutorials demostrating the current capabilities of
-        clang-repl.
-      * Investigate the requirements for adding clang-repl as a backend to
-        xeus-cling.
-      * Implement the xeus kernel protocol for clang-repl.
-      * Complete a blog post about clang-repl and possibly Jupyter.
-      * Present the work at the relevant meetings and conferences.
-  status: completed
-  responsible: Krishna Narayanan
-
-- name: "Implement autocompletion in clang-repl"
-  description: |
-    The Clang compiler is part of the LLVM compiler infrastructure and supports
-    various languages such as C, C++, ObjC and ObjC++. The design of LLVM and
-    Clang enables them to be used as libraries, and has led to the creation of
-    an entire compiler-assisted ecosystem of tools. The relatively friendly
-    codebase of Clang and advancements in the JIT infrastructure in LLVM further
-    enable research into different methods for processing C++ by blurring the
-    boundary between compile time and runtime. Challenges include incremental
-    compilation and fitting compile/link time optimizations into a more dynamic
-    environment.
-
-    Incremental compilation pipelines process code chunk-by-chunk by building an
-    ever-growing translation unit. Code is then lowered into the LLVM IR and
-    subsequently run by the LLVM JIT. Such a pipeline allows creation of
-    efficient interpreters. The interpreter enables interactive exploration and
-    makes the C++ language more user friendly. The incremental compilation mode
-    is used by the interactive C++ interpreter, Cling, initially developed to
-    enable interactive high-energy physics analysis in a C++ environment.
-
-    Our group puts efforts to incorporate and possibly redesign parts of Cling
-    in Clang mainline through a new tool, clang-repl. The project aims at the
-    design and implementation of robust autocompletion when users type C++ at
-    the prompt of clang-repl. For example:
-    ```cpp
-    [clang-repl] class MyLongClassName {};
-    [clang-repl] My<tab>
-    // list of suggestions.
-    ```
-  tasks: |
-    There are several foreseen tasks:
-      * Research the current approaches for autocompletion in clang such as
-        `clang -code-completion-at=file:col1:col2`.
-      * Implement a version of the autocompletion support using the partial
-        translation unit infrastructure in clang's `libInterpreter`.
-      * Investigate the requirements for semantic autocompletion which takes into
-        account the exact grammar position and semantics of the code. Eg:
-        ```cpp
-        [clang-repl] struct S {S* operator+(S&) { return nullptr;}};
-        [clang-repl] S a, b;
-        [clang-repl] v = a + <tab> // shows b as the only acceptable choice here.
-        ```
-      * Present the work at the relevant meetings and conferences
-  status: completed
-  responsible: Yuquan (Fred) Fu
-
-- name: "Implement vector mode in forward mode automatic differentiation in Clad"
-  description: |
-    In mathematics and computer algebra, automatic differentiation (AD) is a set
-    of techniques to numerically evaluate the derivative of a function specified
-    by a computer program. Automatic differentiation is an alternative technique
-    to Symbolic differentiation and Numerical differentiation (the method of
-    finite differences). Clad is based on Clang which provides the necessary
-    facilities for code transformation. The AD library is able to differentiate
-    non-trivial functions, to find a partial derivative for trivial cases and
-    has good unit test coverage.
-
-    Vector mode support will facilitate the computation of gradients using the
-    forward mode AD in a single pass and thus without explicitly performing
-    differentiation n times for n function arguments. The major benefit of using
-    vector mode is that computationally expensive operations do not need to be
-    recomputed n times for n function arguments.
-
-    For example, if we want to compute `df/dx` and `df/dy` of a function
-    `f(x, y)` using the forward mode AD in Clad, then currently we need to
-    explicitly differentiate `f` two times. Vector mode will allow the
-    generation of `f_d(x, y)` such that we will be able to get partial
-    derivatives with respect to all the function arguments (gradient) in a
-    single call.
-
-    After successful completion of the project the code snippet should work
-    as expected:
-    ```cpp
-    #include <clad/Differentiator/Differentiator.h>
-    #include <iostream>
-
-    double someComputationalIntensiveFn();
-
-    double fn(double x, double y) {
-      double t = someComputationalIntensiveFn(); // should be computed only once
-                                                 // in the derived function.
-      double res = 2 * t * x + 3 * t * x * y;
-      return t;
-    }
-
-    int main() {
-      auto d_fn = clad::differentiate(fn, "arr");
-      double d_x = 0, d_y = 0;
-      d_fn.execute(3, 5, &d_x, &d_y);
-      std::cout << "Derivative of fn wrt d_x: " << d_x << "\n";
-      std::cout << "Derivative of fn wrt d_y: " << d_y << "\n";
-    }
-    ```
-  tasks: |
-    The project consists of the following tasks:
-      * Extend and generalize our ForwardModeVisitor to produce a single
-        function with the directional derivatives.
-      * Add a new mode to the top-level clad interface `clad::differentiate` for
-        vector mode.
-      * Extend the unit test coverage.
-      * Develop tutorials and documentation.
-      * Present the work at the relevant meetings and conferences.
-  status: completed
-  responsible: Vaibhav Thakkar
 
 - name: "Add support for differentiating with respect to multidimensional arrays
          (or pointers) in Clad."
@@ -972,6 +560,377 @@
       * Solve any general-purpose issues that come up with Clad during the process.
       * Prepare demos and carry out development needed for lossy compression. 
 
+
+- name: "Improve robustness of dictionary to module lookups in ROOT"
+  description: |
+    The LHC smashes groups of protons together at close to the speed of light:
+    40 million times per second and with seven times the energy of the most
+    powerful accelerators built up to now. Many of these will just be glancing
+    blows but some will be head on collisions and very energetic. When this
+    happens some of the energy of the collision is turned into mass and
+    previously unobserved, short-lived particles – which could give clues
+    about how Nature behaves at a fundamental level - fly out and into the
+    detector. Our work includes the experimental discovery of the Higgs boson,
+    which leads to the award of a Nobel prize for the underlying theory that
+    predicted the Higgs boson as an important piece of the standard model
+    theory of particle physics.
+
+    CMS is a particle detector that is designed to see a wide range of
+    particles and phenomena produced in high-energy collisions in the LHC.
+    Like a cylindrical onion, different layers of detectors measure the
+    different particles, and use this key data to build up a picture of events
+    at the heart of the collision. The
+    [CMSSW](https://github.com/cms-sw/cmssw/) is a collection of software for
+    the CMS experiment. It is responsible for the collection and processing of
+    information about the particle collisions at the detector. CMSSW uses
+    the [ROOT](root.cern/) framework to provide support for data storage and
+    processing. ROOT relies on Cling, Clang, LLVM for building automatically
+    efficient I/O representation of the necessary C++ objects. The I/O
+    properties of each object is described in a compileable C++ file called
+    a /dictionary/. ROOT's I/O dictionary system
+    [relies on C++ modules](https://github.com/root-project/root/blob/master/README/README.CXXMODULES.md)
+    to improve the overall memory footprint when being used.
+
+    The few run time failures in the modules integration builds of CMSSW are
+    due to dictionaries that can not be found in the modules system. These
+    dictionaries are present as the mainstream system is able to find them
+    using a broader search. The modules setup in ROOT needs to be extended to
+    include a dictionary extension to track dictionary<->module mappings for
+    C++ entities that introduce synonyms rather than declarations
+    (`using std::vector<A<B>> = MyVector` where the dictionaries of A, B are
+    elsewhere)
+  tasks: |
+    The project consists of the following tasks:
+      * If an alias declaration of kind `using std::vector<A<B>> = MyVector`, we
+        should store the ODRHash of it in the respective dictionary file as a
+        number attached to a special variable which can be retrieved at symbol
+        scanning time.
+      * Track down the test failures of CMSSW and check if the proposed
+        implementation works.
+      * Develop tutorials and documentation.
+      * Present the work at the relevant meetings and conferences.
+
+- name: "Enhance the incremental compilation error recovery in clang and clang-repl"
+  description: |
+    The Clang compiler is part of the LLVM compiler infrastructure and supports
+    various languages such as C, C++, ObjC and ObjC++. The design of LLVM and
+    Clang enables them to be used as libraries, and has led to the creation of
+    an entire compiler-assisted ecosystem of tools. The relatively friendly
+    codebase of Clang and advancements in the JIT infrastructure in LLVM further
+    enable research into different methods for processing C++ by blurring the
+    boundary between compile time and runtime. Challenges include incremental
+    compilation and fitting compile/link time optimizations into a more dynamic
+    environment.
+
+    Incremental compilation pipelines process code chunk-by-chunk by building an
+    ever-growing translation unit. Code is then lowered into the LLVM IR and
+    subsequently run by the LLVM JIT. Such a pipeline allows creation of
+    efficient interpreters. The interpreter enables interactive exploration and
+    makes the C++ language more user friendly. The incremental compilation mode
+    is used by the interactive C++ interpreter, Cling, initially developed to
+    enable interactive high-energy physics analysis in a C++ environment.
+
+    Our group puts efforts to incorporate and possibly redesign parts of Cling
+    in Clang mainline through a new tool, clang-repl. The project aims at
+    enhancing the error recovery when users type C++ at the prompt of clang-repl.
+  tasks: |
+    There are several tasks to improve the current rudimentary state of the
+    error recovery:
+      * Extend the test coverage for error recovery
+      * Find and fix cases where there are bugs
+      * Implement template instantiation error recovery support
+      * Implement argument-dependent lookup (ADL) recovery support
+
+- name: "Improve Cling's Development Lifecycle"
+  description: |
+    Cling is an interactive C++ interpreter, built on top of Clang and LLVM
+    compiler infrastructure. Cling realizes the read-eval-print loop (REPL)
+    concept, in order to leverage rapid application development. Implemented as
+    a small extension to LLVM and Clang, the interpreter reuses their strengths
+    such as the praised concise and expressive compiler diagnostics.
+  tasks: |
+    The project foresees to enhance the Github Actions infrastructure by adding
+    development process automation tools:
+      * Code Coverage information (`codecov`)
+      * Static code analysis (`clang-tidy`)
+      * Coding conventions checks (`clang-format`)
+      * Release binary upload automation
+
+- name: "Allow redefinition of CUDA functions in Cling"
+  description: |
+    Cling is an interactive C++ interpreter, built on top of Clang and LLVM
+    compiler infrastructure. Cling realizes the read-eval-print loop (REPL)
+    concept, in order to leverage rapid application development. Implemented as
+    a small extension to LLVM and Clang, the interpreter reuses their strengths
+    such as the praised concise and expressive compiler diagnostics.
+
+    Since the development of Cling started, it got some new features to enable
+    new workflows. One of the features is CUDA mode, which allows you to
+    interactively develop and run CUDA code on Nvidia GPUs. Another feature is
+    the redefinition of functions, variable classes and more, bypassing the
+    one-definition rule of C++. This feature enables comfortable rapid
+    prototyping in C++. Currently, the two features cannot be used together
+    because parsing and executing CUDA code behaves differently compared to
+    pure C++.
+  tasks: |
+    The task is to adapt the redefinitions feature of the pure C++ mode for the
+    CUDA mode. To do this, the student must develop solutions to known and
+    unknown problems that parsing and executing CUDA code causes.
+
+- name: "Developing C++ modules support in CMSSW and Boost"
+  description: |
+    The LHC smashes groups of protons together at close to the speed of light:
+    40 million times per second and with seven times the energy of the most
+    powerful accelerators built up to now. Many of these will just be glancing
+    blows but some will be head on collisions and very energetic. When this
+    happens some of the energy of the collision is turned into mass and
+    previously unobserved, short-lived particles – which could give clues about
+    how Nature behaves at a fundamental level - fly out and into the detector.
+    Our work includes the experimental discovery of the Higgs boson, which leads
+    to the award of a Nobel prize for the underlying theory that predicted the
+    Higgs boson as an important piece of the standard model theory of particle
+    physics.
+
+    CMS is a particle detector that is designed to see a wide range of particles
+    and phenomena produced in high-energy collisions in the LHC. Like a
+    cylindrical onion, different layers of detectors measure the different
+    particles, and use this key data to build up a picture of events at the
+    heart of the collision.
+
+    Last year, thanks to [Lucas Calmolezi and GSoC](https://summerofcode.withgoogle.com/archive/2020/projects/5397144158076928/),
+    the usage of boost in CMSSW was modernized. It improved the C++ modules
+    support of local boost fork.
+  tasks: |
+    Many of the accumulated local patches add missing includes to the relevant
+    boost header files. The candidate should start by proposing the existing
+    patches to the boost community. Try to compile more boost-specific modules
+    which is mostly a mechanical task. The student should be ready to work
+    towards making the C++ module files more efficient containing less
+    duplications. The student should be prepared to write a progress report and
+    present the results.
+
+- name: 'Modernize the LLVM "Building A JIT" tutorial series'
+  description: |
+    The LLVM BuildingAJIT tutorial series teaches readers to build their own JIT
+    class from scratch using LLVM’s ORC APIs, however the tutorial chapters have
+    not kept pace with recent API improvements. Bring the existing tutorial
+    chapters up to speed, write up a new chapter on lazy compilation (chapter
+    code already available) or write a new chapter from scratch.
+  tasks: |
+    * Update chapter text for Chapters 1-3 -- Easy, but offers a chance to get
+      up-to-speed on the APIs.
+    * Write chapter text for Chapter 4 -- Chapter code is already available, but
+      no chapter text exists yet.
+    * Write a new chapter from scratch -- E.g. How to write an out-of-process
+      JIT, or how to directly manipulate the JIT'd instruction stream using the
+      ObjectLinkingLayer::Plugin API.
+
+
+################################################################################
+#                                     2024                                     #
+################################################################################
+
+- name: "Improving performance of BioDynaMo using ROOT C++ Modules"
+  description: |
+    [ROOT](https://root.cern/) is a framework for data processing,
+    born at CERN, at the heart of the research on high-energy physics.
+    Every day, thousands of physicists use ROOT applications to analyze their
+    data or to perform simulations. The ROOT software framework is
+    foundational for the HEP ecosystem, providing capabilities such
+    as IO, a C++ interpreter, GUI, and math libraries. It uses
+    object-oriented concepts and build-time modules to layer between
+    components. We believe additional layering formalisms will benefit
+    ROOT and its users.
+
+    BioDynaMo is an agent-based simulation platform that enables users
+    to perform simulations of previously unachievable scale and complexity,
+    making it possible to tackle challenging scientific research questions.
+    The project has a wide range of applications in cancer research,
+    epidemiology, and social sciences.
+
+    BioDynaMo incorporates ROOT for several crucial functionalities such
+    as statistical analysis, random number generation, C++-based Jupyter
+    notebooks, and IO. Some features rely on efficient reflection
+    information about BioDynaMo’s and user-defined C++ classes. This project
+    is about improving the performance of the reflection system by upgrading
+    to C++ modules.
+  tasks: |
+    * Rework the cmake rules to incorporate efficiently ROOT via `FetchContent`
+    * Replace invocations of `genreflex` in favor of `rootcling`
+    * Enable C++ modules in `rootcling`
+    * Produce a comparison report
+  status: completed
+  responsible: Isaac Morales Santana
+
+
+- name: "Implement Differentiating of the Kokkos Framework"
+  description: |
+    In mathematics and computer algebra, automatic differentiation (AD) is
+    a set of techniques to numerically evaluate the derivative of a function
+    specified by a computer program. Automatic differentiation is an
+    alternative technique to Symbolic differentiation and Numerical
+    differentiation (the method of finite differences). Clad is based on
+    Clang which provides the necessary facilities for code transformation.
+    The AD library can differentiate non-trivial functions, to find a partial
+    derivative for trivial cases and has good unit test coverage.
+
+    The Kokkos C++ Performance Portability Ecosystem is a production level
+    solution for writing modern C++ applications in a hardware agnostic way.
+    It is part of the US Department of Energies Exascale Project – the leading
+    effort in the US to prepare the HPC community for the next generation of
+    super computing platforms. The Ecosystem consists of multiple libraries
+    addressing the primary concerns for developing and maintaining applications
+    in a portable way. The three main components are the Kokkos Core Programming
+    Model, the Kokkos Kernels Math Libraries and the Kokkos Profiling and
+    Debugging Tools.
+
+    The Kokkos framework is used in several domains including climate modeling
+    where gradients are important part of the simulation process. This project
+    aims at teaching Clad to differentiate Kokkos entities in a performance
+    portable way
+
+  tasks: |
+    * Implement common test cases for Kokkos in Clad
+    * Add support for Kokkos functors
+    * Add support for Kokkos lambdas
+    * Incorporate the changes from the [initial Kokkos PR](https://github.com/vgvassilev/clad/pull/783)
+    * Enhance existing benchmarks demonstrating effectiveness of Clad for Kokkos
+    * [Stretch goal] Performance benchmarks
+
+  status: completed
+  responsible: Atell Yehor Krasnopolski
+
+- name: "Integrate a Large Language Model with the xeus-cpp Jupyter kernel"
+  description: |
+    xeus-cpp is a Jupyter kernel for cpp based on the native implementation
+    of the Jupyter protocol xeus. This enables users to write and execute
+    C++ code interactively, seeing the results immediately. This REPL
+    (read-eval-print-loop) nature allows rapid prototyping and iterations
+    without the overhead of compiling and running separate C++ programs.
+    This also achieves C++ and Python integration within a single Jupyter
+    environment.
+
+    This project aims to integrate a large language model, such as Bard/Gemini,
+    with the xeus-cpp Jupyter kernel. This integration will enable users to
+    interactively generate and execute code in C++ leveraging the assistance
+    of the language model. Upon successful integration, users will have access
+    to features such as code autocompletion, syntax checking, semantic
+    understanding, and even code generation based on natural language prompts.
+
+  tasks: |
+    * Design and implement mechanisms to interface the large language model with the xeus-cpp kernel. Jupyter-AI might be used as a motivating example
+    * Develop functionalities within the kernel to utilize the language model for code generation based on natural language descriptions and suggestions for autocompletion.
+    * Comprehensive documentation and thorough testing/CI additions to ensure reliability.
+    * [Stretch Goal] After achieving the previous milestones, the student can work on specializing the model for enhanced syntax and semantic understanding capabilities by using xeus notebooks as datasets.
+
+  status: completed
+  responsible: Tharun Anandh
+
+- name: "Improve the LLVM.org Website Look and Feel"
+  description: |
+    The llvm.org website serves as the central hub for information about the
+    LLVM project, encompassing project details, current events, and relevant
+    resources. Over time, the website has evolved organically, prompting the
+    need for a redesign to enhance its modernity, structure, and ease of
+    maintenance.
+    
+    The goal of this project is to create a contemporary and coherent static
+    website that reflects the essence of LLVM.org. This redesign aims to improve
+    navigation, taxonomy, content discoverability, and overall usability. Given
+    the critical role of the website in the community, efforts will be made to
+    engage with community members, seeking consensus on the proposed changes.
+
+    LLVM's [current website](https://llvm.org) is a complicated mesh of uncoordinated pages with
+    inconsistent, static links pointing to both internal and external sources.
+    The website has grown substantially and haphazardly since its inception. 
+
+    It requires a major UI and UX overhaul to be able to better serve the LLVM
+    community. 
+
+    Based on a preliminary site audit, following are some of the problem areas
+    that need to be addressed.
+
+    **Sub-Sites**: Many of the sections/sub-sites have a completely different UI/UX
+    (e.g., [main](https://llvm.org), [clang](https://clang.llvm.org),
+    [lists](https://lists.llvm.org/cgi-bin/mailman/listinfo),
+    [foundation](https://foundation.llvm.org),
+    [circt](https://circt.llvm.org/docs/GettingStarted/),
+    [lnt](http://lnt.llvm.org), and [docs](https://llvm.org/docs)).
+    Sub-sites are divided into 8 separate repos and use different technologies
+    including [Hugo](https://github.com/llvm/circt-www/blob/main/website/config.toml),
+    [Jekyll](https://github.com/llvm/clangd-www/blob/main/_config.yml), etc.
+
+    **Navigation**: On-page navigation is inconsistent and confusing. Cross-sub-site
+    navigation is inconsistent, unintuitive, and sometimes non-existent. Important
+    subsections often depend on static links within (seemingly random) pages.
+    Multi-word menu items are center-aligned and flow out of margins.
+    
+    **Pages**: Many [large write-ups](https://clang.llvm.org/docs/UsersManual.html)
+    lack pagination, section boundaries, etc., making
+    them seem more intimidating than they really are. Several placeholder pages
+    re-route to [3rd party services](https://llvm.swoogo.com/2023devmtg),
+    adding bloat and inconsistency.
+
+    **Search**: Search options are placed in unintuitive locations, like the bottom
+    of the side panel, or from [static links](https://llvm.org/docs/) to
+    [redundant pages](https://llvm.org/docs/search.html). Some pages have
+    no search options at all. With multiple sections of the website hosted in
+    separate projects/repos, cross-sub-site search doesn't seem possible.
+        
+    **Expected results**: A modern, coherent-looking website that attracts new
+    prospect users and empowers the existing community with better navigation,
+    taxonomy, content discoverability, and overall usability. It should also
+    include a more descriptive Contribution Guide ([example](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/layouts)) to help novice
+    contributors, as well as to help maintain a coherent site structure.
+
+    Since the website is a critical infrastructure and most of the community
+    will have an opinion this project should try to engage with the community
+    building community consensus on the steps being taken. 
+
+  tasks: |
+    * Conduct a comprehensive content audit of the existing website.
+    * Select appropriate technologies, preferably static site generators like
+    Hugo or Jekyll.
+    * Advocate for a separation of data and visualization, utilizing formats such
+    as YAML and Markdown to facilitate content management without direct HTML
+    coding.
+    * Present three design mockups for the new website, fostering open discussions
+    and allowing time for alternative proposals from interested parties.
+    * Implement the chosen design, incorporating valuable feedback from the
+    community.
+    * Collaborate with content creators to integrate or update content as needed.
+    
+    The successful candidate should commit to regular participation in weekly
+    meetings, deliver presentations, and contribute blog posts as requested.
+    Additionally, they should demonstrate the ability to navigate the community
+    process with patience and understanding.
+
+  status: completed
+  responsible: Chaitanya Shahare
+
+
+- name: "Enable reverse-mode automatic differentiation of (CUDA) GPU kernels using Clad"
+  description: |
+    Clad is an automatic differentiation (AD) clang plugin for C++. Given a C++
+    source code of a mathematical function, it can automatically generate C++
+    code for computing derivatives of the function. Clad has found uses in
+    statistical analysis and uncertainty assessment applications. In
+    scientific computing and machine learning, GPU multiprocessing can
+    provide a significant boost in performance and scalability. This project
+    focuses on enabling the automatic differentiation of CUDA GPU kernels using
+    Clad. This will allow users to take advantage of the power of GPUs while
+    benefiting from the accuracy and speed of automatic differentiation.
+  tasks: |
+    There are several foreseen tasks:
+      * Research about automatic differentiation of code involving CUDA GPU
+        kernels. Prepare a report and an initial strategy to follow.This may
+        involve brainstorming and the need for innovative solutions. 
+      * Enable reverse-mode automatic differentiation of CUDA GPU kernels and
+        calls to CUDA GPU kernels from the host code.
+      * Add proper tests and documentation.
+  status: completed
+  responsible: Christina Koutsou
+
 - name: "Add support for consteval and constexpr functions in clad"
   description: |
     In mathematics and computer algebra, automatic differentiation (AD) is
@@ -1026,57 +985,239 @@
       * Extend the unit test coverage.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
-  status: ongoing
+  status: completed
   responsible: Mihail Mihov
 
-- name: "Improve robustness of dictionary to module lookups in ROOT"
+
+################################################################################
+#                                     2023                                     #
+################################################################################
+
+- name: "Enable cross-talk between Python and C++ kernels in xeus-clang-REPL by using Cppyy"
   description: |
-    The LHC smashes groups of protons together at close to the speed of light:
-    40 million times per second and with seven times the energy of the most
-    powerful accelerators built up to now. Many of these will just be glancing
-    blows but some will be head on collisions and very energetic. When this
-    happens some of the energy of the collision is turned into mass and
-    previously unobserved, short-lived particles – which could give clues
-    about how Nature behaves at a fundamental level - fly out and into the
-    detector. Our work includes the experimental discovery of the Higgs boson,
-    which leads to the award of a Nobel prize for the underlying theory that
-    predicted the Higgs boson as an important piece of the standard model
-    theory of particle physics.
+    xeus-clang-REPL is a C++ kernel for Jupyter notebooks using clang-REPL as
+    its C++ Interpreter. Cppyy is an automatic, run-time, Python-C++ bindings
+    generator, for calling C++ from Python and Python from C++.
 
-    CMS is a particle detector that is designed to see a wide range of
-    particles and phenomena produced in high-energy collisions in the LHC.
-    Like a cylindrical onion, different layers of detectors measure the
-    different particles, and use this key data to build up a picture of events
-    at the heart of the collision. The
-    [CMSSW](https://github.com/cms-sw/cmssw/) is a collection of software for
-    the CMS experiment. It is responsible for the collection and processing of
-    information about the particle collisions at the detector. CMSSW uses
-    the [ROOT](root.cern/) framework to provide support for data storage and
-    processing. ROOT relies on Cling, Clang, LLVM for building automatically
-    efficient I/O representation of the necessary C++ objects. The I/O
-    properties of each object is described in a compileable C++ file called
-    a /dictionary/. ROOT's I/O dictionary system
-    [relies on C++ modules](https://github.com/root-project/root/blob/master/README/README.CXXMODULES.md)
-    to improve the overall memory footprint when being used.
+    Allowing C++ and Python to talk between themselves in a Jupyter notebook
+    will allow users to switch between Python and C++ at will. This means
+    that data analysts can set up their analysis in Python while running the
+    actual analysis in C++. Thus reducing the time to write and debug their
+    analysis pipeline.
 
-    The few run time failures in the modules integration builds of CMSSW are
-    due to dictionaries that can not be found in the modules system. These
-    dictionaries are present as the mainstream system is able to find them
-    using a broader search. The modules setup in ROOT needs to be extended to
-    include a dictionary extension to track dictionary<->module mappings for
-    C++ entities that introduce synonyms rather than declarations
-    (`using std::vector<A<B>> = MyVector` where the dictionaries of A, B are
-    elsewhere)
+    Initial support of cross talk between the two kernels has been implemented
+    but this only supports passing primitive data types. This project aims to
+    use Cppyy to extend this to support classes and functions.
+  tasks: |
+    * Automate creation of equivalent Cppyy objects in the Python kernel when
+      objects are created in the C++ kernel
+    * Automate the creation of equivalent C++ objects in the xeus-clang-REPL
+      kernel when Python objects are created
+    * Add documentation
+  status: completed
+  responsible: Aaron Jomy, Smit Shah
+
+- name: "Extend the Cppyy support in Numba"
+  description: |
+    Numba is a JIT compiler that translates a subset of Python and NumPy code
+    into fast machine code. Cppyy is an automatic, run-time, Python-C++
+    bindings generator, for calling C++ from Python and Python from C++. 
+
+    Cppyy has to pay a time penalty each time it needs to switch between
+    languages which can multiply into large slowdowns when using loops with
+    cppyy objects. This is where Numba can help. Since Numba compiles the
+    code in loops into machine code it only has to cross the language barrier
+    once and the loops thus run faster.
+
+    Initial support for Cppyy objects in Numba enabled the use of builtin
+    types and classes (see
+    [cppyy docs](https://cppyy.readthedocs.io/en/latest/numba.html)),
+    but some essential C++ features, such as references and STL classes,
+    are not yet supported.
+  tasks: |
+    There are several foreseen tasks:
+      * Add support for C++ reference types in Numba through Cppyy
+      * Add general support for C++ templates in Numba through Cppyy
+      * Add tests and documentation
+  status: completed
+  responsible: Aaron Jomy
+
+- name: "Implement vector mode in forward mode automatic differentiation in Clad"
+  description: |
+    In mathematics and computer algebra, automatic differentiation (AD) is a set
+    of techniques to numerically evaluate the derivative of a function specified
+    by a computer program. Automatic differentiation is an alternative technique
+    to Symbolic differentiation and Numerical differentiation (the method of
+    finite differences). Clad is based on Clang which provides the necessary
+    facilities for code transformation. The AD library is able to differentiate
+    non-trivial functions, to find a partial derivative for trivial cases and
+    has good unit test coverage.
+
+    Vector mode support will facilitate the computation of gradients using the
+    forward mode AD in a single pass and thus without explicitly performing
+    differentiation n times for n function arguments. The major benefit of using
+    vector mode is that computationally expensive operations do not need to be
+    recomputed n times for n function arguments.
+
+    For example, if we want to compute `df/dx` and `df/dy` of a function
+    `f(x, y)` using the forward mode AD in Clad, then currently we need to
+    explicitly differentiate `f` two times. Vector mode will allow the
+    generation of `f_d(x, y)` such that we will be able to get partial
+    derivatives with respect to all the function arguments (gradient) in a
+    single call.
+
+    After successful completion of the project the code snippet should work
+    as expected:
+    ```cpp
+    #include <clad/Differentiator/Differentiator.h>
+    #include <iostream>
+
+    double someComputationalIntensiveFn();
+
+    double fn(double x, double y) {
+      double t = someComputationalIntensiveFn(); // should be computed only once
+                                                 // in the derived function.
+      double res = 2 * t * x + 3 * t * x * y;
+      return t;
+    }
+
+    int main() {
+      auto d_fn = clad::differentiate(fn, "arr");
+      double d_x = 0, d_y = 0;
+      d_fn.execute(3, 5, &d_x, &d_y);
+      std::cout << "Derivative of fn wrt d_x: " << d_x << "\n";
+      std::cout << "Derivative of fn wrt d_y: " << d_y << "\n";
+    }
+    ```
   tasks: |
     The project consists of the following tasks:
-      * If an alias declaration of kind `using std::vector<A<B>> = MyVector`, we
-        should store the ODRHash of it in the respective dictionary file as a
-        number attached to a special variable which can be retrieved at symbol
-        scanning time.
-      * Track down the test failures of CMSSW and check if the proposed
-        implementation works.
+      * Extend and generalize our ForwardModeVisitor to produce a single
+        function with the directional derivatives.
+      * Add a new mode to the top-level clad interface `clad::differentiate` for
+        vector mode.
+      * Extend the unit test coverage.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
+  status: completed
+  responsible: Vaibhav Thakkar
+
+- name: "Improving Cling Reflection for Scripting Languages"
+  description: |
+    Cling has basic facilities to make queries about the C++ code that it has
+    seen/collected so far. These lookups assume, however, that the caller knows
+    what it is looking for and the information returned, although exact, usually
+    only makes sense within C++ and is thus often too specific to be used as-is.
+
+    A scripting language, such as Python, that wants to make use of such lookups
+    by name, is forced to loop over all possible entities (classes, functions,
+    templates, enums, ...) to find a match. This is inefficient. Furthermore,
+    many lookups will be multi-stage: a function, but which overload? A template,
+    but which instantiation? A typedef, of what? The current mechanism forces
+    the scripting language to provide a type-based match, even where C++ makes
+    distinctions (e.g. pointer v.s. reference) that do not exist in the
+    scripting language. This, too, makes lookups very inefficient.
+
+    The returned information, once a match is found, is exact, but because of
+    its specificity, requires the caller to figure out C++ concepts that have no
+    meaning in the scripting language. E.g., there is no reason for Python to
+    consider an implicitly instantiated function template different from an
+    explicitly instantiated one.
+  tasks: |
+    The project should start with a design C++ entities grouping that make sense
+    for scripting languages and design a query API on top of these. Special
+    consideration should be given to the various name aliasing mechanisms in C++
+    (e.g., `using` and `typedef`), especially as relates to C++ access rules.
+    This design can likely start from the existing Cling wrapper API from Cppyy
+    and modify it to improve consistency, remove redundancy, and enable usage
+    patterns that minimize lookups into Cling.
+
+    Next is a redesign of Cling's lookup facilities to support this new API
+    efficiently, with particular care to use cases that require multiple,
+    consecutive/related, lookups, such as finding a specific function template
+    instantiation, or step-wise resolution of a typedef.
+
+    This design is then to be implemented, using test-driven development. As a
+    stretch goal, the cppyy-backend should be modified to use the new API.
+  status: completed
+  responsible: Baidyanath Kundu
+
+
+- name: "Write JITLink support for a new format/architecture"
+  description: |
+    JITLink is LLVM’s new JIT linker API -- the low-level API that transforms
+    compiler output (relocatable object files) into ready-to-execute bytes in
+    memory. To do this JITLink’s generic linker algorithm needs to be
+    specialized to support the target object format (COFF, ELF, MachO), and
+    architecture (arm, arm64, i386, x86-64). LLVM already has mature
+    implementations of JITLink for MachO/arm64 and MachO/x86-64, and a
+    relatively new implementation for ELF/x86-64. Write a JITLink implementation
+    for a missing target that interests you. If you choose to implement support
+    for a new architecture using the ELF or MachO formats then you will be able
+    to re-use the existing generic code for these formats. If you want to
+    implement support for a new target using the COFF format then you will need
+    to write both the generic COFF support code and the architecture support
+    code for your chosen architecture.
+  tasks: |
+    Write a JITLink specialization for a not-yet-supported format/architecture.
+  status: completed
+  responsible: Various Contributors
+
+################################################################################
+#                                     2022                                     #
+################################################################################
+- name: "Design and Develop a CUDA engine working along with C/C++ mode in clang-repl"
+  description: |
+    Incremental compilation pipelines process code chunk-by-chunk by building an
+    ever-growing translation unit. Code is then lowered into the LLVM IR and
+    subsequently run by the LLVM JIT. Such a pipeline allows creation of
+    efficient interpreters. The interpreter enables interactive exploration and
+    makes the C++ language more user friendly. The incremental compilation mode
+    is used by the interactive C++ interpreter, Cling, initially developed to
+    enable interactive high-energy physics analysis in a C++ environment.
+
+    Our group puts efforts to incorporate and possibly redesign parts of Cling
+    in Clang mainline through a new tool, clang-repl. The project aims to
+    generalize the `IncrementalCUDADeviceCompiler` of cling and add this
+    functionality in clang-repl.
+  tasks: |
+    There are several foreseen tasks:
+      * Write a detailed request for comment (RFC) document on the design choices
+        and gather feedback from the LLVM community.
+      * Implement the necessary functionality to support existing test cases
+        available [here](https://github.com/root-project/cling/tree/master/test/CUDADeviceCode).
+      * Develop clang-repl-based tutorials for the CUDA backend.
+      * Investigate the requirements for supporting a HIP backend.
+      * Demonstrate a CUDA-executed gradient computed by the Clad automatic
+        differentiation plugin.
+      * Present the work at the relevant meetings and conferences.
+  status: completed
+  responsible: Anubhab Ghosh
+
+- name: "Tutorial development with clang-repl"
+  description: |
+    Incremental compilation pipelines process code chunk-by-chunk by building an
+    ever-growing translation unit. Code is then lowered into the LLVM IR and
+    subsequently run by the LLVM JIT. Such a pipeline allows creation of
+    efficient interpreters. The interpreter enables interactive exploration and
+    makes the C++ language more user friendly. The incremental compilation mode
+    is used by the interactive C++ interpreter, Cling, initially developed to
+    enable interactive high-energy physics analysis in a C++ environment.
+
+    Our group puts efforts to incorporate and possibly redesign parts of Cling
+    in Clang mainline through a new tool, clang-repl. The project aims
+    implementing tutorials demonstrating the capabilities of the project and
+    investigating adoption of clang-repl in xeus-cling.
+  tasks: |
+    There are several foreseen tasks:
+      * Write several tutorials demostrating the current capabilities of
+        clang-repl.
+      * Investigate the requirements for adding clang-repl as a backend to
+        xeus-cling.
+      * Implement the xeus kernel protocol for clang-repl.
+      * Complete a blog post about clang-repl and possibly Jupyter.
+      * Present the work at the relevant meetings and conferences.
+  status: completed
+  responsible: Krishna Narayanan
 
 - name: "Optimize ROOT use of modules for large codebases (eg, CMSSW)"
   description: |
@@ -1124,37 +1265,6 @@
   status: completed
   responsible: Jun Zhang
 
-- name: "Enhance the incremental compilation error recovery in clang and clang-repl"
-  description: |
-    The Clang compiler is part of the LLVM compiler infrastructure and supports
-    various languages such as C, C++, ObjC and ObjC++. The design of LLVM and
-    Clang enables them to be used as libraries, and has led to the creation of
-    an entire compiler-assisted ecosystem of tools. The relatively friendly
-    codebase of Clang and advancements in the JIT infrastructure in LLVM further
-    enable research into different methods for processing C++ by blurring the
-    boundary between compile time and runtime. Challenges include incremental
-    compilation and fitting compile/link time optimizations into a more dynamic
-    environment.
-
-    Incremental compilation pipelines process code chunk-by-chunk by building an
-    ever-growing translation unit. Code is then lowered into the LLVM IR and
-    subsequently run by the LLVM JIT. Such a pipeline allows creation of
-    efficient interpreters. The interpreter enables interactive exploration and
-    makes the C++ language more user friendly. The incremental compilation mode
-    is used by the interactive C++ interpreter, Cling, initially developed to
-    enable interactive high-energy physics analysis in a C++ environment.
-
-    Our group puts efforts to incorporate and possibly redesign parts of Cling
-    in Clang mainline through a new tool, clang-repl. The project aims at
-    enhancing the error recovery when users type C++ at the prompt of clang-repl.
-  tasks: |
-    There are several tasks to improve the current rudimentary state of the
-    error recovery:
-      * Extend the test coverage for error recovery
-      * Find and fix cases where there are bugs
-      * Implement template instantiation error recovery support
-      * Implement argument-dependent lookup (ADL) recovery support
-
 - name: "Add initial integration of Clad with Enzyme"
   description: |
     In mathematics and computer algebra, automatic differentiation (AD) is a set
@@ -1179,6 +1289,113 @@
     derivative results; etc.
   status: completed
   responsible: Manish Kausik H
+
+- name: "Extend clang AST to provide information for the type as written in template instantiations"
+  description: |
+    When instantiating a template, the template arguments are canonicalized
+    before being substituted into the template pattern. Clang does not preserve
+    type sugar when subsequently accessing members of the instantiation.
+
+    ```cpp
+    std::vector<std::string> vs;
+    int n = vs.front(); // bad diagnostic: [...] aka 'std::basic_string<char>' [...]
+
+     template<typename T> struct Id { typedef T type; };
+     Id<size_t>::type // just 'unsigned long', 'size_t' sugar has been lost
+    ```
+    Clang should "re-sugar" the type when performing member access on a class
+    template specialization, based on the type sugar of the accessed
+    specialization. The type of vs.front() should be std::string, not
+    std::basic_string<char, [...]>.
+
+    Suggested design approach: add a new type node to represent template
+    argument sugar, and implicitly create an instance of this node whenever a
+    member of a class template specialization is accessed. When performing a
+    single-step desugar of this node, lazily create the desugared representation
+    by propagating the sugared template arguments onto inner type nodes (and in
+    particular, replacing Subst*Parm nodes with the corresponding sugar). When
+    printing the type for diagnostic purposes, use the annotated type sugar to
+    print the type as originally written.
+
+    For good results, template argument deduction will also need to be able to
+    deduce type sugar (and reconcile cases where the same type is deduced twice
+    with different sugar).
+  tasks: |
+    Diagnostics preserve type sugar even when accessing members of a template
+    specialization. `T<unsigned long>` and `T<size_t>` are still the same type
+    and the same template instantiation, but `T<unsigned long>::type` single-step
+    desugars to 'unsigned long' and `T<size_t>::type` single-step desugars to
+    'size_t'.
+  status: completed
+  responsible: Matheus Izvekov
+
+- name: "Infrastructure: Improve Cling's packaging system cpt"
+  description: |
+    Cling has a flexible tool which can build and package binaries. It is
+    implemented in python.
+  tasks: |
+    There are several improvements that can be made to cpt:
+    * Fix deb package creation
+    * Rewrite parts of cpt
+      * Use a `if __name__ == "__main__"` block as program execution starting
+        point
+      * No mutating global variables
+      * Minimize use of `subprocess`
+      * Making cpt flake8 compliant (flexible error/violation codes)
+      * Revamp argument parser (Examine possibility of dependent arguments)
+  status: completed
+  responsible: Surya Somayyajula
+
+
+################################################################################
+#                                     2021                                     #
+################################################################################
+
+- name: "Implement autocompletion in clang-repl"
+  description: |
+    The Clang compiler is part of the LLVM compiler infrastructure and supports
+    various languages such as C, C++, ObjC and ObjC++. The design of LLVM and
+    Clang enables them to be used as libraries, and has led to the creation of
+    an entire compiler-assisted ecosystem of tools. The relatively friendly
+    codebase of Clang and advancements in the JIT infrastructure in LLVM further
+    enable research into different methods for processing C++ by blurring the
+    boundary between compile time and runtime. Challenges include incremental
+    compilation and fitting compile/link time optimizations into a more dynamic
+    environment.
+
+    Incremental compilation pipelines process code chunk-by-chunk by building an
+    ever-growing translation unit. Code is then lowered into the LLVM IR and
+    subsequently run by the LLVM JIT. Such a pipeline allows creation of
+    efficient interpreters. The interpreter enables interactive exploration and
+    makes the C++ language more user friendly. The incremental compilation mode
+    is used by the interactive C++ interpreter, Cling, initially developed to
+    enable interactive high-energy physics analysis in a C++ environment.
+
+    Our group puts efforts to incorporate and possibly redesign parts of Cling
+    in Clang mainline through a new tool, clang-repl. The project aims at the
+    design and implementation of robust autocompletion when users type C++ at
+    the prompt of clang-repl. For example:
+    ```cpp
+    [clang-repl] class MyLongClassName {};
+    [clang-repl] My<tab>
+    // list of suggestions.
+    ```
+  tasks: |
+    There are several foreseen tasks:
+      * Research the current approaches for autocompletion in clang such as
+        `clang -code-completion-at=file:col1:col2`.
+      * Implement a version of the autocompletion support using the partial
+        translation unit infrastructure in clang's `libInterpreter`.
+      * Investigate the requirements for semantic autocompletion which takes into
+        account the exact grammar position and semantics of the code. Eg:
+        ```cpp
+        [clang-repl] struct S {S* operator+(S&) { return nullptr;}};
+        [clang-repl] S a, b;
+        [clang-repl] v = a + <tab> // shows b as the only acceptable choice here.
+        ```
+      * Present the work at the relevant meetings and conferences
+  status: completed
+  responsible: Yuquan (Fred) Fu
 
 - name: "Add numerical differentiation support in clad"
   description: |
@@ -1269,114 +1486,6 @@
   status: completed
   responsible: Baidyanath Kundu
 
-- name: "Improve Cling's Development Lifecycle"
-  description: |
-    Cling is an interactive C++ interpreter, built on top of Clang and LLVM
-    compiler infrastructure. Cling realizes the read-eval-print loop (REPL)
-    concept, in order to leverage rapid application development. Implemented as
-    a small extension to LLVM and Clang, the interpreter reuses their strengths
-    such as the praised concise and expressive compiler diagnostics.
-  tasks: |
-    The project foresees to enhance the Github Actions infrastructure by adding
-    development process automation tools:
-      * Code Coverage information (`codecov`)
-      * Static code analysis (`clang-tidy`)
-      * Coding conventions checks (`clang-format`)
-      * Release binary upload automation
-
-- name: "Allow redefinition of CUDA functions in Cling"
-  description: |
-    Cling is an interactive C++ interpreter, built on top of Clang and LLVM
-    compiler infrastructure. Cling realizes the read-eval-print loop (REPL)
-    concept, in order to leverage rapid application development. Implemented as
-    a small extension to LLVM and Clang, the interpreter reuses their strengths
-    such as the praised concise and expressive compiler diagnostics.
-
-    Since the development of Cling started, it got some new features to enable
-    new workflows. One of the features is CUDA mode, which allows you to
-    interactively develop and run CUDA code on Nvidia GPUs. Another feature is
-    the redefinition of functions, variable classes and more, bypassing the
-    one-definition rule of C++. This feature enables comfortable rapid
-    prototyping in C++. Currently, the two features cannot be used together
-    because parsing and executing CUDA code behaves differently compared to
-    pure C++.
-  tasks: |
-    The task is to adapt the redefinitions feature of the pure C++ mode for the
-    CUDA mode. To do this, the student must develop solutions to known and
-    unknown problems that parsing and executing CUDA code causes.
-
-- name: "Improving Cling Reflection for Scripting Languages"
-  description: |
-    Cling has basic facilities to make queries about the C++ code that it has
-    seen/collected so far. These lookups assume, however, that the caller knows
-    what it is looking for and the information returned, although exact, usually
-    only makes sense within C++ and is thus often too specific to be used as-is.
-
-    A scripting language, such as Python, that wants to make use of such lookups
-    by name, is forced to loop over all possible entities (classes, functions,
-    templates, enums, ...) to find a match. This is inefficient. Furthermore,
-    many lookups will be multi-stage: a function, but which overload? A template,
-    but which instantiation? A typedef, of what? The current mechanism forces
-    the scripting language to provide a type-based match, even where C++ makes
-    distinctions (e.g. pointer v.s. reference) that do not exist in the
-    scripting language. This, too, makes lookups very inefficient.
-
-    The returned information, once a match is found, is exact, but because of
-    its specificity, requires the caller to figure out C++ concepts that have no
-    meaning in the scripting language. E.g., there is no reason for Python to
-    consider an implicitly instantiated function template different from an
-    explicitly instantiated one.
-  tasks: |
-    The project should start with a design C++ entities grouping that make sense
-    for scripting languages and design a query API on top of these. Special
-    consideration should be given to the various name aliasing mechanisms in C++
-    (e.g., `using` and `typedef`), especially as relates to C++ access rules.
-    This design can likely start from the existing Cling wrapper API from Cppyy
-    and modify it to improve consistency, remove redundancy, and enable usage
-    patterns that minimize lookups into Cling.
-
-    Next is a redesign of Cling's lookup facilities to support this new API
-    efficiently, with particular care to use cases that require multiple,
-    consecutive/related, lookups, such as finding a specific function template
-    instantiation, or step-wise resolution of a typedef.
-
-    This design is then to be implemented, using test-driven development. As a
-    stretch goal, the cppyy-backend should be modified to use the new API.
-  status: completed
-  responsible: Baidyanath Kundu
-
-- name: "Developing C++ modules support in CMSSW and Boost"
-  description: |
-    The LHC smashes groups of protons together at close to the speed of light:
-    40 million times per second and with seven times the energy of the most
-    powerful accelerators built up to now. Many of these will just be glancing
-    blows but some will be head on collisions and very energetic. When this
-    happens some of the energy of the collision is turned into mass and
-    previously unobserved, short-lived particles – which could give clues about
-    how Nature behaves at a fundamental level - fly out and into the detector.
-    Our work includes the experimental discovery of the Higgs boson, which leads
-    to the award of a Nobel prize for the underlying theory that predicted the
-    Higgs boson as an important piece of the standard model theory of particle
-    physics.
-
-    CMS is a particle detector that is designed to see a wide range of particles
-    and phenomena produced in high-energy collisions in the LHC. Like a
-    cylindrical onion, different layers of detectors measure the different
-    particles, and use this key data to build up a picture of events at the
-    heart of the collision.
-
-    Last year, thanks to [Lucas Calmolezi and GSoC](https://summerofcode.withgoogle.com/archive/2020/projects/5397144158076928/),
-    the usage of boost in CMSSW was modernized. It improved the C++ modules
-    support of local boost fork.
-  tasks: |
-    Many of the accumulated local patches add missing includes to the relevant
-    boost header files. The candidate should start by proposing the existing
-    patches to the boost community. Try to compile more boost-specific modules
-    which is mostly a mechanical task. The student should be ready to work
-    towards making the C++ module files more efficient containing less
-    duplications. The student should be prepared to write a progress report and
-    present the results.
-
 - name: "Implement a shared-memory based JITLinkMemoryManager for out-of-process JITting"
   description: |
     LLVM’s JIT uses the JITLinkMemoryManager interface to allocate both working
@@ -1396,96 +1505,3 @@
       * Make an extensive performance study of the approach.
   status: completed
   responsible: Anubhab Ghosh
-
-- name: 'Modernize the LLVM "Building A JIT" tutorial series'
-  description: |
-    The LLVM BuildingAJIT tutorial series teaches readers to build their own JIT
-    class from scratch using LLVM’s ORC APIs, however the tutorial chapters have
-    not kept pace with recent API improvements. Bring the existing tutorial
-    chapters up to speed, write up a new chapter on lazy compilation (chapter
-    code already available) or write a new chapter from scratch.
-  tasks: |
-    * Update chapter text for Chapters 1-3 -- Easy, but offers a chance to get
-      up-to-speed on the APIs.
-    * Write chapter text for Chapter 4 -- Chapter code is already available, but
-      no chapter text exists yet.
-    * Write a new chapter from scratch -- E.g. How to write an out-of-process
-      JIT, or how to directly manipulate the JIT'd instruction stream using the
-      ObjectLinkingLayer::Plugin API.
-
-- name: "Write JITLink support for a new format/architecture"
-  description: |
-    JITLink is LLVM’s new JIT linker API -- the low-level API that transforms
-    compiler output (relocatable object files) into ready-to-execute bytes in
-    memory. To do this JITLink’s generic linker algorithm needs to be
-    specialized to support the target object format (COFF, ELF, MachO), and
-    architecture (arm, arm64, i386, x86-64). LLVM already has mature
-    implementations of JITLink for MachO/arm64 and MachO/x86-64, and a
-    relatively new implementation for ELF/x86-64. Write a JITLink implementation
-    for a missing target that interests you. If you choose to implement support
-    for a new architecture using the ELF or MachO formats then you will be able
-    to re-use the existing generic code for these formats. If you want to
-    implement support for a new target using the COFF format then you will need
-    to write both the generic COFF support code and the architecture support
-    code for your chosen architecture.
-  tasks: |
-    Write a JITLink specialization for a not-yet-supported format/architecture.
-  status: completed
-  responsible: Various Contributors
-
-- name: "Extend clang AST to provide information for the type as written in template instantiations"
-  description: |
-    When instantiating a template, the template arguments are canonicalized
-    before being substituted into the template pattern. Clang does not preserve
-    type sugar when subsequently accessing members of the instantiation.
-
-    ```cpp
-    std::vector<std::string> vs;
-    int n = vs.front(); // bad diagnostic: [...] aka 'std::basic_string<char>' [...]
-
-     template<typename T> struct Id { typedef T type; };
-     Id<size_t>::type // just 'unsigned long', 'size_t' sugar has been lost
-    ```
-    Clang should "re-sugar" the type when performing member access on a class
-    template specialization, based on the type sugar of the accessed
-    specialization. The type of vs.front() should be std::string, not
-    std::basic_string<char, [...]>.
-
-    Suggested design approach: add a new type node to represent template
-    argument sugar, and implicitly create an instance of this node whenever a
-    member of a class template specialization is accessed. When performing a
-    single-step desugar of this node, lazily create the desugared representation
-    by propagating the sugared template arguments onto inner type nodes (and in
-    particular, replacing Subst*Parm nodes with the corresponding sugar). When
-    printing the type for diagnostic purposes, use the annotated type sugar to
-    print the type as originally written.
-
-    For good results, template argument deduction will also need to be able to
-    deduce type sugar (and reconcile cases where the same type is deduced twice
-    with different sugar).
-  tasks: |
-    Diagnostics preserve type sugar even when accessing members of a template
-    specialization. `T<unsigned long>` and `T<size_t>` are still the same type
-    and the same template instantiation, but `T<unsigned long>::type` single-step
-    desugars to 'unsigned long' and `T<size_t>::type` single-step desugars to
-    'size_t'.
-  status: completed
-  responsible: Matheus Izvekov
-
-- name: "Infrastructure: Improve Cling's packaging system cpt"
-  description: |
-    Cling has a flexible tool which can build and package binaries. It is
-    implemented in python.
-  tasks: |
-    There are several improvements that can be made to cpt:
-    * Fix deb package creation
-    * Rewrite parts of cpt
-      * Use a `if __name__ == "__main__"` block as program execution starting
-        point
-      * No mutating global variables
-      * Minimize use of `subprocess`
-      * Making cpt flake8 compliant (flexible error/violation codes)
-      * Revamp argument parser (Examine possibility of dependent arguments)
-  status: completed
-  responsible: Surya Somayyajula
-
