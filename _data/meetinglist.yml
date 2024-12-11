@@ -1,4 +1,28 @@
 - name: "CaaS Monthly Meeting"
+  date: 2024-12-12 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/91526749339?pwd=52MET9OQwUqI9nGgk3ko3XmTASQPuN.1)"
+  label: caas_12Dec2024
+  agenda:
+    - title: "2024 Compiler-Research Project Overview"
+      speaker:
+        image: "https://compiler-research.org/images/team/Vassilev.jpg"
+        name: "Vassil Vassilev"
+      description: |
+        2024 was a busy year for our compiler research team. We have made
+        substantial progress in automatic differentiation with Clad. We enabled
+        large physics workflows and observed substantial performance gains in
+        minimization of likelihoods. We also progressed in advancing foundational
+        tools such as ClangRepl, BioDynaMo, Jupyter, LLVM and ROOT.
+
+        This talk provides a brief overview of what our team has done in 2024.
+    - title: Update
+      speaker: Vassil Vassilev
+    - title: Next meeting
+      speaker: Vassil Vassilev
+      link: 09 Jan 1700
+
+- name: "CaaS Monthly Meeting"
   date: 2024-11-07 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/91526749339?pwd=52MET9OQwUqI9nGgk3ko3XmTASQPuN.1)"
