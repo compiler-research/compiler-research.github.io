@@ -16,6 +16,7 @@
         tools such as ClangRepl, BioDynaMo, Jupyter, LLVM and ROOT.
 
         This talk provides a brief overview of what our team has done in 2024.
+      slides: "/assets/presentations/CaaS_12_12_2024.pdf"
     - title: Update
       speaker: Vassil Vassilev
     - title: Next meeting
