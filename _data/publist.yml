@@ -470,3 +470,64 @@
   link: /publications/fast-and-automatic-floating-point-error-analysis-with-chef-fp
   volume: '608'
   year: '2023'
+
+- title: Performance Portable Gradient Computations Using Source Transformation
+  author: Kim Liegeois, Brian Kelley, Eric Phipps, Sivasankaran Rajamanickam and
+    Vassil Vassilev
+  abstract: |
+    Derivative computation is a key component of optimization, sensitivity
+    analysis, uncertainty quantification, and nonlinear solvers.  Automatic
+    differentiation (AD) is a powerful technique for evaluating such
+    derivatives, and in recent years, has been integrated into programming
+    environments such as Jax, PyTorch, and TensorFlow to support derivative
+    computations needed for training of machine learning models, resulting in
+    widespread use of these technologies.  The C++ language has become the de
+    facto standard for scientific computing due to numerous factors, yet
+    language complexity has made the adoption of AD technologies for C++
+    difficult, hampering the incorporation of powerful differentiable
+    programming approaches into C++ scientific simulations.  This is exacerbated
+    by the increasing emergence of architectures such as GPUs, which have
+    limited memory capabilities and require massive thread-level
+    concurrency. Portable scientific codes rely on domain specific programming
+    models such as Kokkos making AD for such codes even more complex.<br />
+    In this paper, we will investigate source transformation-based automatic
+    differentiation using Clad to automatically generate portable and efficient
+    gradient computations of Kokkos-based code. We discuss the modifications of
+    Clad required to differentiate Kokkos abstractions.  We will illustrate the
+    feasibility of our proposed strategy by comparing the wall-clock time of the
+    generated gradient code with the wall-clock time of the input function on
+    different cutting edge GPU architectures such as NVIDIA H100, AMD MI250x,
+    and Intel Ponte Vecchio GPU.  For these three architectures and for the
+    considered example, evaluating up to 10,000 entries of the gradient only
+    took up to 2.17 times the wall-clock time of evaluating the input function.
+  cites: '0'
+  eprint: 8th International Conference on Algorithmic Differentiation
+  url: https://www.autodiff.org/ad24/
+  year: '2024'
+
+- title: Optimization Using Pathwise Algorithmic Derivatives of Electromagnetic
+    Shower Simulations
+  author: Max Aehle, Mihaly Novak, Vassil Vassilev, Nicolas R. Gauger,
+    Lukas Heinrich, Michael Kagan and David Lange
+  abstract: |
+    Among the well-known methods to approximate derivatives of expectancies
+    computed by Monte-Carlo simulations, averages of pathwise derivatives are
+    often the easiest one to apply. Computing them via algorithmic
+    differentiation typically does not require major manual analysis and
+    rewriting of the code, even for very complex programs like simulations of
+    particle-detector interactions in high-energy physics. However, the pathwise
+    derivative estimator can be biased if there are discontinuities in the
+    program, which may diminish its value for applications.<br />
+    This work integrates algorithmic differentiation into the electromagnetic
+    shower simulation code HepEmShow based on G4HepEm, allowing us to study how
+    well pathwise derivatives approximate derivatives of energy depositions in a
+    sampling calorimeter with respect to parameters of the beam and geometry. We
+    found that when multiple scattering is disabled in the simulation, means of
+    pathwise derivatives converge quickly to their expected values, and these
+    are close to the actual derivatives of the energy deposition. Additionally,
+    we demonstrate the applicability of this novel gradient estimator for
+    stochastic gradient-based optimization in a model example.
+  cites: '0'
+  eprint: https://arxiv.org/pdf/2405.07944
+  url: https://arxiv.org/pdf/2405.07944
+  year: '2024'
