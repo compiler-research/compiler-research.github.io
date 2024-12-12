@@ -1,3 +1,28 @@
+- title: "Automatic Differentiation in RooFit"
+  description: |
+    With the growing datasets of HEP experiments, statistical analysis becomes
+    more computationally demanding, requiring improvements in existing
+    statistical analysis software. One way forward is to use Automatic
+    Differentiation (AD) in likelihood fitting, which is often done with RooFit
+    (a toolkit that is part of ROOT.) As of recently, RooFit can generate the
+    gradient code for a given likelihood function with Clad, a compiler-based AD
+    tool. At the CHEP 2023, and ICHEP 2024 conferences, we showed how using this
+    analytical gradient significantly speeds up the minimization of simple
+    likelihoods. This talk will present the current state of AD in RooFit. One
+    highlight is that it now supports more complex models like template
+    histogram stacks ("HistFactory"). It also uses a new version of Clad that
+    contains several improvements tailored to the RooFit use case. This
+    contribution will furthermore demo complete RooFit workflows that benefit
+    from the improved performance with AD, such as CMS and ATLAS Higgs
+    measurements.
+  location: "[MODE 2024](https://indico.cern.ch/event/1380163/)"
+  date: 2024-09-25
+  speaker: Vassil Vassilev
+  id: "VVMODE2024"
+  artifacts: |
+    [Link to Slides](/assets/presentations/assets/presentations/V_Vassilev-MODE2024_CladRooFit.pdf)
+  highlight: 1
+
 - title: "Advanced optimizations for source transformation based
   automatic differentiation"
   description: |
