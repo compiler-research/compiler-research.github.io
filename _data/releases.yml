@@ -1,3 +1,13 @@
+- date: 2024-12-17
+  codebase: "Clad"
+  version: "v1.8"
+  description: |
+    This release includes support for `std::vector`, `constexpr` and `consteval`
+    constructs. It advances the CUDA support enabling differentiation both
+    device and host functions. It is the first release which enables Kokkos
+    entities. The new release has many bug fixes.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v1.8"
+
 - date: 2024-10-19
   codebase: "CppInterOp"
   version: "v1.4.0"
