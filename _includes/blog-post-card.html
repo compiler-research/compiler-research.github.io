@@ -14,7 +14,10 @@
         </a>
         {% if forloop.last == false %}, {% endif %}
         {% else %}
-        {{ author_name }}
+          <img
+            src="{{ post.avatar }}"
+            alt="{{ author.name }}" class="author-image" />
+          {{ author_name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines}}
         {% endif %}
       {% endfor %}
       {% endif %}

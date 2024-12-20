@@ -13,11 +13,17 @@ layout: default
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
         {% assign author = site.data.contributors | where: "name", author_name | first %}
         {% assign author_link = author.name | replace: " ", "" | prepend: "/team/" %}
-        <a href="{{ author_link }}" itemprop="url">
-          <img src="{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}"
+        {% if page.avatar %}
+          <img src="{% if page.avatar %} {{ page.avatar }} {% else %}{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}{% endif %}"
                alt="{{ author_name }}" class="author-image" />
-          <span itemprop="name">{{ author_name }}</span>
-        </a>
+          <span itemprop="name">{{ author_name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</span>
+        {% else %}
+          <a href="{{ author_link }}" itemprop="url">
+            <img src="{% if author.photo %}{{ site.baseurl }}/images/team/{{ author.photo }}{% else %}{{ site.baseurl }}/images/team/defaultDP.png{% endif %}"
+                 alt="{{ author_name }}" class="author-image" />
+            <span itemprop="name">{{ author_name | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }}</span>
+          </a>
+        {% endif %}
         {% if forloop.last == false %} , {% endif %}
       </span>
       {% endfor %} {% endif %}
