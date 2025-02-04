@@ -61,20 +61,6 @@
       report: |
         [Final Report](/assets/docs/Aaron_Jomy_GSoC23_Report.pdf)
 
-- name: QuillPusher
-  info: "Technical Writer, Google Season of Docs 2023 contributor"
-  active: 1
-  email: 9x3qly27@anonaddy.me
-  education: "Bachelors Degree in Science (BS)"
-  github: "https://github.com/QuillPusher"
-  projects:
-    - title: "Interactive Programming Documentation for  Data Science"
-      status: Ongoing
-      description: |
-        Revamp of Clang-Repl, Xeus-Clang-Repl and libInterOp documentation. The idea is to disambiguate these technologies, both for advanced users (that are interested in adopting or contributing to components), and for newcomers (that are interested in learning what these technologies have to offer). Initially, this may include a high-level orientation of the delivered technologies, existing features' timeline,  and planned features' highlights for visibility and early feedback. Over time, existing documentation may be restructured and rewritten to make it more accessible. Missing features may be identified and documented.
-      proposal: /assets/docs/QuillPusher_GSoD2023.pdf
-      mentors: Vassil Vassilev, David Lange
-
 - name: Petro Zarytskyi
   info: "IRIS-HEP Fellow"
   photo: Petro.jpg
@@ -127,28 +113,6 @@
       proposal: /assets/docs/Pavlo_Svirin_Proposal_2024.pdf
       mentors: Vassil Vassilev, Danilo Piparo
 
-- name: "Chaitanya Shahare"
-  photo: Chaitanya-Shahare.jpeg
-  info: "GSoC 2024 Contributor"
-  email: shaharechaitanya3@gmail.com
-  education: "B.Tech in Mechanical Engineering, National Institute of Technology Srinagar, India"
-  github: "https://github.com/Chaitanya-Shahare"
-  www: "https://chaitanyashahare.com"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/cs03"
-  projects:
-    - title: "LLVM.org website redesign"
-      status: Ongoing
-      description: |
-        Revamping the LLVM.org Website: Modernizing the central hub for LLVM project
-        information. Enhancing navigation, content discoverability, and usability for
-        both new users and existing community members. Utilizing static site
-        generators, like Hugo, for efficiency and scalability. Separating data and
-        visualization using YAML and Markdown for easier content management. Engaging
-        the community for feedback and collaboration throughout the redesign process.
-      proposal: /assets/docs/Chaitanya_Shahare_Proposal_2024.pdf
-      mentors: Tanya Lattner, Vassil Vassilev
-
 - name: "Maksym Andriichuk"
   photo: Andriichuk.jpg
   info: "IRIS-HEP Fellow"
@@ -163,23 +127,6 @@
         Clad has undergone significant optimization in the recent years. One such optimization is the To-Be-Recorded optimization which reduces the memory pressure to the clad tape data structure. The next step is to implement the activity analysis which discards all statements which are irrelevant for the generated code. That is, if the statements do not depend on the input/output variables of a routine in a differentiable way, they are ignored. Combining both analyses could result in a much greater performance, which is our ultimate goal.        
       proposal: /assets/docs/Maksym_Andriichuk_Proposal_2024.pdf
       mentors: Vassil Vassilev, David Lange, Petro Zarytskyi
-
-- name: Thomas Fransham
-  info: "GSoC 2024 Contributor"
-  email: tfransham@gmail.com
-  github: "https://github.com/fsfod"
-  active: 1
-  projects:
-    - title: "Support clang plugins on Windows"
-      status: Ongoing
-      description: |
-        This project aims to allow using dynamically loaded Clang plugins on windows by adding 
-        support for building LLVM and Clang as shared libraries on Windows with all the 
-        public c++ API exported and dynamically linking to them. Part of the process will be 
-        automated with a tool built using the Clang tooling API to automatically add export macros
-        on the appropriate class and functions declarations in llvm public headers.
-      proposal: /assets/docs/Thomas_Fransham_GSoC24_Proposal.pdf
-      mentors: Vassil Vassilev, Saleem Abdulrasool
 
 - name: Matthew Barton
   info: "Open Source Contributor"
@@ -277,6 +224,55 @@
 ################################################################################
 #                                     2024                                     #
 ################################################################################
+- name: QuillPusher
+  info: "Technical Writer, Google Season of Docs 2023 contributor"
+  email: 9x3qly27@anonaddy.me
+  education: "Bachelors Degree in Science (BS)"
+  github: "https://github.com/QuillPusher"
+  projects:
+    - title: "Interactive Programming Documentation for  Data Science"
+      status: Completed
+      description: |
+        Revamp of Clang-Repl, Xeus-Clang-Repl and libInterOp documentation. The idea is to disambiguate these technologies, both for advanced users (that are interested in adopting or contributing to components), and for newcomers (that are interested in learning what these technologies have to offer). Initially, this may include a high-level orientation of the delivered technologies, existing features' timeline,  and planned features' highlights for visibility and early feedback. Over time, existing documentation may be restructured and rewritten to make it more accessible. Missing features may be identified and documented.
+      proposal: /assets/docs/QuillPusher_GSoD2023.pdf
+      mentors: Vassil Vassilev, David Lange
+
+- name: Thomas Fransham
+  info: "GSoC 2024 Contributor"
+  email: tfransham@gmail.com
+  github: "https://github.com/fsfod"
+  projects:
+    - title: "Support clang plugins on Windows"
+      status: Completed
+      description: |
+        This project aims to allow using dynamically loaded Clang plugins on windows by adding 
+        support for building LLVM and Clang as shared libraries on Windows with all the 
+        public c++ API exported and dynamically linking to them. Part of the process will be 
+        automated with a tool built using the Clang tooling API to automatically add export macros
+        on the appropriate class and functions declarations in llvm public headers.
+      proposal: /assets/docs/Thomas_Fransham_GSoC24_Proposal.pdf
+      mentors: Vassil Vassilev, Saleem Abdulrasool
+
+- name: "Chaitanya Shahare"
+  photo: Chaitanya-Shahare.jpeg
+  info: "GSoC 2024 Contributor"
+  email: shaharechaitanya3@gmail.com
+  education: "B.Tech in Mechanical Engineering, National Institute of Technology Srinagar, India"
+  github: "https://github.com/Chaitanya-Shahare"
+  www: "https://chaitanyashahare.com"
+  linkedin: "https://www.linkedin.com/in/cs03"
+  projects:
+    - title: "LLVM.org website redesign"
+      status: Completed
+      description: |
+        Revamping the LLVM.org Website: Modernizing the central hub for LLVM project
+        information. Enhancing navigation, content discoverability, and usability for
+        both new users and existing community members. Utilizing static site
+        generators, like Hugo, for efficiency and scalability. Separating data and
+        visualization using YAML and Markdown for easier content management. Engaging
+        the community for feedback and collaboration throughout the redesign process.
+      proposal: /assets/docs/Chaitanya_Shahare_Proposal_2024.pdf
+      mentors: Tanya Lattner, Vassil Vassilev
 
 - name: "Atell Yehor Krasnopolski"
   photo: Atell.jpg
