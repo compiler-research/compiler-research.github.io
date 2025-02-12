@@ -1,3 +1,214 @@
+- name: "Agent-Based Simulation of CAR-T Cell Therapy Using BioDynaMo"
+  description: |
+    Chimeric Antigen Receptor T-cell (CAR-T) therapy has revolutionized
+    cancer treatment by harnessing the immune system to target and
+    destroy tumor cells. While CAR-T has demonstrated success in blood
+    cancers, its effectiveness in solid tumors remains limited due to
+    challenges such as poor tumor infiltration, immune suppression,
+    and T-cell exhaustion. To improve therapy outcomes, computational
+    modeling is essential for optimizing treatment parameters, predicting
+    failures, and testing novel interventions. However, existing models
+    of CAR-T behavior are often overly simplistic or computationally expensive,
+    making them impractical for large-scale simulations.
+
+    This project aims to develop a scalable agent-based simulation of CAR-T
+    therapy using BioDynaMo, an open-source high-performance biological
+    simulation platform. By modeling T-cell migration, tumor engagement,
+    and microenvironmental factors, we will investigate key treatment variables
+    such as dosage, administration timing, and combination therapies. The
+    simulation will allow researchers to explore how tumor microenvironment
+    suppression (e.g., regulatory T-cells, hypoxia, immunosuppressive cytokines)
+    affects CAR-T efficacy and what strategies such as checkpoint inhibitors or
+    cytokine support can improve outcomes.
+
+    The final deliverable will be a fully documented, reproducible BioDynaMo
+    simulation, along with analysis tools for visualizing treatment dynamics.
+    The model will provide insights into the optimal CAR-T cell dosing, tumor
+    penetration efficiency, and factors influencing therapy resistance. This
+    project will serve as a foundation for in silico testing of immunotherapies,
+    reducing the need for costly and time-consuming laboratory experiments while
+    accelerating the development of more effective cancer treatments.
+  
+  tasks: |
+    * Expected plan of work:
+
+    - Phase 1: Initial Setup & Simple T-cell Dynamics
+    - Phase 2: Advanced CAR-T Cell Behavior & Tumor Interaction
+    - Phase 3: Integration of Immunosuppressive Factors & Data Visualization
+
+    * Expected deliverables
+
+    - A fully documented BioDynaMo simulation of CAR-T therapy.
+    - Analysis scripts for visualizing tumor reduction and CAR-T efficacy.
+    - Performance benchmarks comparing different treatment strategies.
+    - A research-style report summarizing findings.
+
+
+- name: "Enable GPU support and Python Interoperability via a Plugin System"
+  description: |
+    Xeus-Cpp integrates [Clang-Repl](https://clang.llvm.org/docs/ClangRepl.html)
+    with the Xeus protocol via CppInterOp, providing a powerful platform for
+    C++ development within Jupyter Notebooks.
+
+    This project aims to introduce a plugin system for magic commands
+    (cell, line, etc.), enabling a more modular and maintainable approach
+    to extend Xeus-Cpp. Traditionally, magic commands introduce additional
+    code and dependencies directly into the Xeus-Cpp kernel, increasing
+    its complexity and maintenance burden. By offloading this functionality
+    to a dedicated plugin library, we can keep the core kernel minimal
+    while ensuring extensibility. This approach allows new magic commands
+    to be developed, packaged, and deployed independently—eliminating the
+    need to rebuild and release Xeus-Cpp for each new addition.
+
+    Initial groundwork has already been laid with the Xplugin library,
+    and this project will build upon that foundation. The goal is to clearly
+    define magic command compatibility across different platforms while
+    ensuring seamless integration.
+    A key objective is to reimplement existing features, such as the LLM
+    cell magic and the in-development Python magic, as plugins. This will
+    not only improve modularity within Xeus-Cpp but also enable these
+    features to be used in other Jupyter kernels.
+
+    As an extended goal, we aim to develop a new plugin for GPU execution,
+    leveraging CUDA or OpenMP to support high-performance computing workflows
+    within Jupyter.
+
+  tasks: |
+    * Move the currently implemented magics and reframe using xplugin
+    * Complete the on-going work on the Python interoperability magic
+    * Implement a test suite for the plugins
+    * Extended: To be able to execute on GPU using CUDA or OpenMP
+    * Optional: Extend the magics for the wasm use case (xeus-cpp-lite)
+    * Present the work at the relevant meetings and conferences
+    
+- name: "Integrate Clad to PyTorch and compare the gradient execution times"
+  description: |
+    PyTorch is a popular machine learning framework that includes its own
+    automatic differentiation engine, while Clad is a Clang plugin for
+    automatic differentiation that performs source-to-source transformation
+    to generate functions capable of computing derivatives at compile time.
+    
+    This project aims to integrate Clad-generated functions into PyTorch
+    using its C++ API and expose them to a Python workflow. The goal is
+    to compare the execution times of gradients computed by Clad with those
+    computed by PyTorch's native autograd system. Special attention will be
+    given to CUDA-enabled gradient computations, as PyTorch also offers GPU
+    acceleration capabilities.
+  
+  tasks: |
+    * Incorporate Clad's API components (such as `clad::array` and `clad::tape`)
+    into PyTorch using its C++ API
+    * Pass Clad-generated derivative functions to PyTorch and expose them to Python
+    * Perform benchmarks comparing the execution times and performance of Clad-derived
+    gradients versus PyTorch's autograd
+    * Automate the integration process
+    * Document thoroughly the integration process and the benchmark results and identify
+    potential bottlenecks in Clad's execution
+    * Present the work at the relevant meetings and conferences.
+
+- name: "Support usage of Thrust API in Clad"
+  description: |
+    The rise of ML has shed light into the power of GPUs and researchers are looking
+    for ways to incorporate them in their projects as a lightweight parallelization
+    method. Consequently, General Purpose GPU programming is becoming a very popular
+    way to speed up execution time.
+    
+    Clad is a clang plugin for automatic differentiation that performs source-to-source
+    transformation and produces a function capable of computing the derivatives of a
+    given function at compile time. This project aims to enhance Clad by adding support
+    for Thrust, a parallel algorithms library designed for GPUs and other accelerators.
+    By supporting Thrust, Clad will be able to differentiate algorithms that rely on
+    Thrust's parallel computing primitives, unlocking new possibilities for GPU-based
+    machine learning, scientific computing, and numerical optimization.
+
+  tasks: |
+    * Research and decide on the most valuable Thrust functions to support in Clad
+    * Create pushforward and pullback functions for these Thrust functions
+    * Write tests that cover the additions
+    * Include demos of using Clad on open source code examples that call Thrust functions
+    * Write documentation on which Thrust functions are supported in Clad
+    * Present the work at the relevant meetings and conferences.
+
+- name: "Enable automatic differentiation of C++ STL concurrency primitives in Clad"
+  description: |
+    Clad is an automatic differentiation (AD) clang plugin for C++. Given a C++ source
+    code of a mathematical function, it can automatically generate C++ code for computing
+    derivatives of the function. This project focuses on enabling automatic differentiation
+    of codes that utilise C++ concurrency features such as `std::thread`, `std::mutex`,
+    atomic operations and more. This will allow users to fully utilize their CPU resources.
+  
+  tasks: |
+    * Explore C++ concurrency primitives and prepare a report detailing the associated challenges
+    involved and the features that can be feasibly supported within the given timeframe.
+    * Add concurrency primitives support in Clad's forward-mode automatic differentiation.
+    * Add concurrency primitives support in Clad's reverse-mode automatic differentiation.
+    * Add proper tests and documentation.
+    * Present the work at the relevant meetings and conferences.
+
+- name: "Implementing Debugging Support in Xeus-Cpp"
+  description: |
+    xeus-cpp is an interactive execution environment for C++ in Jupyter
+    notebooks, built on the Clang-Repl C++ interpreter, provided by
+    [CppInterOp](https://github.com/compiler-research/CppInterOp/). While
+    xeus-cpp enables a seamless workflow for running C++ code interactively,
+    the lack of an integrated debugging experience remains a gap, especially
+    when dealing with code that is dynamically compiled and executed through
+    LLVM's JIT(Just-In-Time) infrastructure.
+
+    Jupyter's debugging system follows the Debug Adapter Protocol (DAP),
+    enabling seamless integration of debuggers into interactive kernels.
+    Existing Jupyter kernels, such as the IPython & the xeus-python kernel,
+    have successfully implemented debugging workflows that support
+    breakpoints, variable inspection, and execution control, even in
+    dynamically executed environments. These implementations address
+    challenges such as symbol resolution and source mapping for dynamically
+    generated code, ensuring that debugging within Jupyter remains intuitive
+    and user-friendly.
+
+    However, debugging C++ inside an interactive environment presents unique
+    challenges, particularly due to Clang-Repl’s use of LLVM’s ORC JIT to
+    compile and execute code dynamically. To integrate debugging into xeus-cpp,
+    the project will explore existing solutions for DAP implementations like
+    `lldb_dap` and debuggers like lldb that can interface with Jupyter while
+    effectively supporting the execution model of Clang-Repl.
+
+  tasks: |
+    * Seamless debugging integration, establishing reliable interactions
+    between xeus-cpp, a Debug Adapter Protocol (DAP) implementation, and
+    a debugger.
+    * Implement a testing framework through `xeus-zmq` to thoroughly test
+    the debugger. This can be inspired by an existing implementation
+    in `xeus-python`. 
+    * Present the work at the relevant meetings and conferences.
+
+
+- name: "Interactive Differential Debugging - Intelligent Auto-Stepping and Tab-Completion"
+  description: |
+    Differential debugging is a time-consuming task that is not well supported by existing tools.
+    Existing state-of-the-art tools do not consider a baseline(working) version while debugging
+    regressions in complex systems, often leading to manual efforts by developers to achieve an
+    automatable task.
+
+    The differential debugging technique analyzes a regressed system and identifies the cause of
+    unexpected behaviors by comparing it to a previous version of the same system. The idd tool
+    inspects two versions of the executable - a baseline and a regressed version. The interactive
+    debugging session runs both executables side-by-side, allowing the users to inspect and compare
+    various internal states.
+
+    This project aims to implement intelligent stepping (debugging) and tab completions of commands.
+    IDD should be able to execute until a stack frame or variable diverges between the two versions
+    of the system, then drop to the debugger. This may be achieved by introducing new IDD-specific
+    commands. IDD should be able to tab complete the underlying GDB/LLDB commands. The contributor
+    is also expected to set up the necessary CI infrastructure to automate the testing process of IDD.
+
+  
+  tasks: |
+    * Enable stream capture
+    * Enable IDD-specific commands to execute until diverging stack or variable value.
+    * Enable tab completion of commands.
+    * Set up CI infrastructure to automate testing IDD.
+    * Present the work at the relevant meetings and conferences.
+
 - name: "Using ROOT in the field of genome sequencing"
   description: |
     [ROOT](https://root.cern/) is a framework for data processing,
@@ -18,8 +229,9 @@
     the requirements of the field.
 
   tasks: |
-    * Reproduce the results from previous comparisons against the ROOT master
-    * Investigate changing the compression strategies
+    * Reproduce the results based on previous comparisons against ROOT master
+    * Investigate and compare the latest compression strategies used by [Samtools](https://www.htslib.org/) for conversions to BAM, with RAM(ROOT Alignment Maps).
+    * Explore ROOT's [RNTuple](https://root.cern/doc/v622/md_tree_ntuple_v7_doc_README.html) format to efficiently store RAM maps, in place of the previously used `TTree`.
     * Investigate different ROOT file splitting techniques
     * Produce a comparison report
 
