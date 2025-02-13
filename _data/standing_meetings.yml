@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Activity Analysis: Summary"
+      date: 2024-01-29 17:00:00 +0200
+      speaker: "Maksym Andriichuk"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_29_01_2025_Maksym_Andriichuk_Activity_Analysis_Summary.pdf)"
     - title: "Progress December: Adopting CppInterOp in cppyy"
       date: 2024-12-18 17:00:00 +0200
       speaker: "Vipul Cariappa"
