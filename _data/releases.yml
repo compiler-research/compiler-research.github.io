@@ -1,3 +1,20 @@
+- date: 2025-02-28
+  codebase: "CppInterOp"
+  version: "v1.6.0"
+  description: |
+    This release introduces new utilities for pointer, reference, and function
+    pointer types, along with enhanced enumeration support and class name
+    demangling functions. Key bug fixes address issues in code generation, CMake
+    configurations, and cross-platform compatibility, particularly for Windows
+    and Emscripten builds. Continuous integration and infrastructure
+    improvements optimize caching, streamline workflows, and expand CI coverage
+    for multiple architectures. Documentation updates include new Emscripten
+    build instructions, while testing and debugging enhancements refine Clang
+    formatting and unit test configurations. Overall, this update enhances code
+    flexibility, performance, and automation while improving debugging and build
+    processes.
+  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.6.0"
+
 - date: 2025-02-10
   codebase: "Clad"
   version: "v1.9"
