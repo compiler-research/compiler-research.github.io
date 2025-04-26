@@ -1,3 +1,17 @@
+- date: 2025-04-26
+  codebase: "Clad"
+  version: "v1.10"
+  description: |
+    This release introduces significant updates, including support for clang
+    versions 10 through 20 and improved diagnostics for unsupported features.
+    Forward mode now handles variadic functions, while reverse mode sees major
+    enhancements like marking const methods as non-differentiable, enabling
+    differentiation of global variables and static member functions, generating
+    constructor pullbacks automatically, and reducing tape usage through
+    optimizations. CUDA support has been expanded with better handling of
+    device pullbacks and kernel variables.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v1.10"
+
 - date: 2025-02-28
   codebase: "CppInterOp"
   version: "v1.6.0"
