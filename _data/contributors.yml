@@ -21,7 +21,18 @@
   email: apenev@uni-plovdiv.bg
   education:  PhD Computer Science, University of Plovdiv “Paisii Hilendarski”, Plovdiv, Bulgaria (2013)
   active: 1
-
+  
+- name: Galin Bistrev
+ info: "CERN Summer student 2025"
+ email: gbistrev@uni-sofia.bg
+ photo: Bistrev.png
+ education: "Nuclear and particle physics , Sofia University "St. Kliment  Ohridski , Bulgaria" 
+ current: 1
+ past_info:
+ description:
+ mentors: Vasil Vassilev,David Lange,Jonas Rembser
+ 
+ 
 - name: Aaron Jomy
   photo: Aaron.jpg
   info: "Research Intern at CERN"
@@ -1201,3 +1212,4 @@
       report: |
         [Poster](/assets/presentations/LLVM2020_Clad.pdf){:target="_blank"}
       mentors: Vassil Vassilev, Alexander Penev   
+
