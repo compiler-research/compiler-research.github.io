@@ -14,11 +14,17 @@
 {% endif %}
   <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member_photo }}" class="img-responsive" width="25%" style="float: left" />
   <i>{{ member.info }}</i><br>
+{% if member.responsibilities %}
+<p> {{ member.responsibilities | markdownify | remove: '<p>' | remove: '</p>'}} </p>
+{% endif %}
 {% if member.email %}
   <i>email: <{{ member.email }}></i>
 {% endif %}
 {% if member.education %}
 <p> <strong>Education:</strong> {{ member.education }} </p>
+{% endif %}
+{% if member.org %}
+<p> <strong>Institution:</strong> {{ member.org }} </p>
 {% endif %}
   {% for project in member.projects %}
   <p class="text-justify">
