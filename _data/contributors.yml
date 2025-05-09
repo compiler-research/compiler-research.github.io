@@ -85,34 +85,6 @@
       proposal: /assets/docs/Petro_Zarytskyi_Proposal.pdf
       mentors: Vassil Vassilev, David Lange
 
-- name: "Pavlo Svirin"
-  info: "Senior research engineer at the Barcelona Supercomputing Center"
-  photo: pavlo_svirin.png
-  email: pavlo.svirin@cern.ch
-  education: PhD Computer Science, National Technical University of Ukraine, 2014
-  active: 1
-  projects:
-    - title: "ROOT Superbuilds"
-      status: Ongoing
-      description: |
-       [ROOT](https://root.cern/) is a framework for data processing,
-       born at CERN, at the heart of the research on high-energy physics.
-       Every day, thousands of physicists use ROOT applications to analyze their
-       data or to perform simulations. The ROOT software framework is
-       foundational for the HEP ecosystem, providing capabilities such
-       as IO, a C++ interpreter, GUI, and math libraries. It uses
-       object-oriented concepts and build-time modules to layer between
-       components. We believe additional layering formalisms will benefit
-       ROOT and its users.
-
-       Currently, ROOT is built as all-in-one package. We are working to create
-       a modular version of ROOT that provides a minimal base install of core
-       features, then later add functionality via incremental builds. This
-       requires introducing new layering mechanisms and extending the functionality
-       of the existing ROOT package manager prototype.
-      proposal: /assets/docs/Pavlo_Svirin_Proposal_2024.pdf
-      mentors: Vassil Vassilev, Danilo Piparo
-
 - name: "Maksym Andriichuk"
   photo: Andriichuk.jpg
   info: "IRIS-HEP Fellow"
@@ -224,6 +196,33 @@
 ################################################################################
 #                                     2024                                     #
 ################################################################################
+- name: "Pavlo Svirin"
+  info: "Senior research engineer at the Barcelona Supercomputing Center"
+  photo: pavlo_svirin.png
+  email: pavlo.svirin@cern.ch
+  education: PhD Computer Science, National Technical University of Ukraine, 2014
+  projects:
+    - title: "ROOT Superbuilds"
+      status: Completed
+      description: |
+       [ROOT](https://root.cern/) is a framework for data processing,
+       born at CERN, at the heart of the research on high-energy physics.
+       Every day, thousands of physicists use ROOT applications to analyze their
+       data or to perform simulations. The ROOT software framework is
+       foundational for the HEP ecosystem, providing capabilities such
+       as IO, a C++ interpreter, GUI, and math libraries. It uses
+       object-oriented concepts and build-time modules to layer between
+       components. We believe additional layering formalisms will benefit
+       ROOT and its users.
+
+       Currently, ROOT is built as all-in-one package. We are working to create
+       a modular version of ROOT that provides a minimal base install of core
+       features, then later add functionality via incremental builds. This
+       requires introducing new layering mechanisms and extending the functionality
+       of the existing ROOT package manager prototype.
+      proposal: /assets/docs/Pavlo_Svirin_Proposal_2024.pdf
+      mentors: Vassil Vassilev, Danilo Piparo
+
 - name: QuillPusher
   info: "Technical Writer, Google Season of Docs 2023 contributor"
   email: 9x3qly27@anonaddy.me
