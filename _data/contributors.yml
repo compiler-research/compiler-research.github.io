@@ -10,6 +10,11 @@
   org: Princeton/CERN
   active: 1
   lead: 1
+  responsibilities: |
+    David serves as the principal investigator for the NSF-funded components of
+    the project, ensuring both administrative and technical coherence across its
+    various work streams. He also contributes as a mentor in programs such as
+    Google Summer of Code (GSoC), IRIS-HEP, and others.
 
 - name: Vassil Vassilev
   info: Research Staff
@@ -22,6 +27,10 @@
   org: Princeton/CERN
   active: 1
   lead: 1
+  responsibilities: |
+    Vassil provides overall project leadership and strategic vision. He is
+    responsible for all aspects of the project not explicitly delegated to other
+    team members.
 
 ################################################################################
 #                                  ASSOCIATED                                  #
@@ -35,6 +44,11 @@
   active: 1
   associated: 1
   org: University of Plovdiv "Paisii Hilendarski"
+  responsibilities: |
+    Alexander is a long-term Google Summer of Code mentor. He helps the project
+    with maintaining parts of the continuous integration systems and offers
+    technical guidance in the area of automatic differentiation in Computer
+    Graphics.
 
 ################################################################################
 #                                     TEAM                                     #
