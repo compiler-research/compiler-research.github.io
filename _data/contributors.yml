@@ -1,9 +1,15 @@
+################################################################################
+#                                     LEADS                                    #
+################################################################################
+
 - name: David J Lange
   info: Research Staff
   photo: Lange.png
   email: David.Lange@princeton.edu
   education: PhD Physics, University of California, Santa Barbara (1999).
+  org: Princeton/CERN
   active: 1
+  lead: 1
 
 - name: Vassil Vassilev
   info: Research Staff
@@ -11,16 +17,28 @@
   email: vvasilev@cern.ch
   education: PhD Computer Science, University of Plovdiv "Paisii Hilendarski", Plovdiv, Bulgaria (2015).
   www: "https://vassil.vassilev.info"
-  github: ""
-  linkedin: ""
+  github: "https://github.com/vgvassilev"
+  linkedin: "https://www.linkedin.com/in/vgvassilev/"
+  org: Princeton/CERN
   active: 1
+  lead: 1
+
+################################################################################
+#                                  ASSOCIATED                                  #
+################################################################################
 
 - name: Alexander Penev
   info: Assoc. Prof.
   photo: Penev.png
   email: apenev@uni-plovdiv.bg
-  education:  PhD Computer Science, University of Plovdiv “Paisii Hilendarski”, Plovdiv, Bulgaria (2013)
+  education: PhD Computer Science, University of Plovdiv "Paisii Hilendarski", Plovdiv, Bulgaria (2013)
   active: 1
+  associated: 1
+  org: University of Plovdiv "Paisii Hilendarski"
+
+################################################################################
+#                                     TEAM                                     #
+################################################################################
 
 - name: Aaron Jomy
   photo: Aaron.jpg
