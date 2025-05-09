@@ -6,6 +6,8 @@ sitemap: false
 permalink: /team/
 ---
 
+# Team
+
 <div class="clearfix">
 
 {% assign members = site.data.contributors %}
