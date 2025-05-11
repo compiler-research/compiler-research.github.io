@@ -219,6 +219,37 @@
   education: Integrated Dual Degree (B.Tech & M.Tech) in Data Science & Biological Engineering, IIT Madras, India (2024)
   active: 1
 
+- name: Aditya Pandey
+  photo: Aditya.jpeg
+  info: "Google Summer of Code 2025 Contributor"
+  email: adityapand3y666@gmail.com
+  education: "Bachelor of Technology, Birla Institute of Technology, Mesra, India"
+  github: "https://github.com/AdityaPandeyCN"
+  www: "https://adityapandeycn.github.io/personalblog/"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/aditya-pandey-019482200/"
+  projects:
+    - title: "Using ROOT in the field of genome sequencing"
+      status: Ongoing
+      description: |
+       This project aims to advance genomic data management by implementing ROOT's 
+       next-generation RNTuple format for sequence alignment storage. Beginning 
+       with validation of previous GeneROOT benchmarks showing 4x performance gains 
+       with TTree, we will then extend these capabilities with RNTuple technology. 
+       Genomic sequencing data volumes are growing exponentially, creating performance
+       bottlenecks in traditional formats.RNTuple's improved memory mapping, type 
+       safety through templated interfaces, and parallelization capabilities position 
+       it as an ideal solution.
+       We will systematically compare compression algorithms, implement file splitting 
+       strategies, and benchmark against established formats.Additionally, I will 
+       analyze the latest compression strategies implemented by samtools and incorporate
+       these techniques into the project to ensure comprehensive coverage of state-of-the-art
+       genomic data compression approaches.
+       The project will deliver optimized tools for handling rapidly growing genomic datasets, 
+       potentially establishing a new standard for high-performance genomic data analysis.
+      proposal: /assets/docs/Aditya_Pandey_GSoC2025.pdf
+      mentors: Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
+      
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
