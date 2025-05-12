@@ -50,6 +50,18 @@
     technical guidance in the area of automatic differentiation in Computer
     Graphics.
 
+- name: Martin Vassilev
+  info: Senior Assistant Prof.
+  photo: MVassilev.jpg
+  email: mvassilev@uni-plovdiv.bg
+  education: PhD Computer Science, University of Plovdiv "Paisii Hilendarski", Plovdiv, Bulgaria (2020)
+  active: 1
+  associated: 1
+  org: University of Plovdiv "Paisii Hilendarski"
+  responsibilities: |
+    Martin has research interest in the area of the compiler construction, analysis of complex software systems and bioinformatics.
+    He has obtained his PhD in 2020 in the University of Plovdiv "Paisii Hilendarski" where he continued to develop his academic career.
+
 ################################################################################
 #                                     TEAM                                     #
 ################################################################################
