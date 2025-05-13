@@ -68,17 +68,18 @@ jobs:
 
     - name: Get all changed markdown files
       uses: tj-actions/changed-files@v45
-      id: changed_files
+      id: changed-text-files
       with:
         files: |
            **.md
+           _data/**.yml
 
     - name: Run Spellcheck
-      if: steps.changed-markdown-files.outputs.any_changed == 'true'
+      if: steps.changed-text-files.outputs.any_changed == 'true'
       id: spellcheck
       uses: rojopolis/spellcheck-github-actions@v0
       with:
         task_name: Markdown
-        source_files: ${{ steps.changed_files.outputs.all_changed_files }}
+        source_files: ${{ steps.changed-text-files.outputs.all_changed_files }}
         config_path: .github/workflows/spellcheck.yaml
 
