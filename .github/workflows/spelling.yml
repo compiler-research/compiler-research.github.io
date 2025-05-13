@@ -74,6 +74,7 @@ jobs:
            **.md
 
     - name: Run Spellcheck
+      if: steps.changed-markdown-files.outputs.any_changed == 'true'
       id: spellcheck
       uses: rojopolis/spellcheck-github-actions@v0
       with:
