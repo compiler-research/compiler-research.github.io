@@ -50,25 +50,29 @@ Create advanced file splitting strategies (by chromosome, region, or read group)
 Implement high-performance query tools leveraging RNTuple's columnar structure
 
 ### Compression Strategy Analysis
+
 A key component of this project involves analyzing the compression techniques used by Samtools/HTSlib and comparing them with ROOT's compression capabilities:
-BGZF (Blocked GZIP Format) in BAM Files
 
-I'll study the 64KB block architecture that enables random access while maintaining gzip compatibility
-Test the nine compression levels (1-9) to determine optimal settings for genomic data
-Analyze the multi-threading implementation for parallel compression/decompression
+#### BGZF (Blocked GZIP Format) in BAM Files
 
-CRAM Advanced Codecs
+- I'll study the 64KB block architecture that enables random access while maintaining gzip compatibility
+- Test the nine compression levels (1-9) to determine optimal settings for genomic data
+- Analyze the multi-threading implementation for parallel compression/decompression
 
-Investigate rANS (Asymmetric Numeral Systems) implementations
-Examine CRAM transforms including interleaving, RLE, bit-packing, and striped encoding
-Analyze integration techniques for external codecs like bzip2 and LZMA
+#### CRAM Advanced Codecs
+
+- Investigate rANS (Asymmetric Numeral Systems) implementations
+- Examine CRAM transforms including interleaving, RLE, bit-packing, and striped encoding
+- Analyze integration techniques for external codecs like bzip2 and LZMA
+
+#### Implementation Strategy
 
 The findings from this analysis will inform the implementation of:
 
-Codec library integration with HTSlib's compression libraries where possible
-ROOT-native implementations of key algorithms where direct integration isn't possible
-Reference-based compression similar to CRAM
-Adaptive selection of optimal compression methods based on data characteristics
+- Codec library integration with HTSlib's compression libraries where possible
+- ROOT-native implementations of key algorithms where direct integration isn't possible
+- Reference-based compression similar to CRAM
+- Adaptive selection of optimal compression methods based on data characteristics
 
 ### Why RNTuple for Genomics?
 RNTuple is ROOT's successor to TTree columnar data storage, offering several advantages for genomic data:
