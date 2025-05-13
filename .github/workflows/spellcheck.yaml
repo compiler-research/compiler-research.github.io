@@ -13,4 +13,6 @@ matrix:
           ignores:
             - code
             - pre
+    sources:
+      - *
     default_encoding: utf-8
