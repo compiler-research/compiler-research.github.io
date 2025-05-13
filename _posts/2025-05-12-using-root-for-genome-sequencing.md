@@ -30,6 +30,15 @@ promising results with the TTree format, demonstrating approximately 4x performa
  My project aims to build on this foundation by implementing the next-generation RNTuple format, 
 which promises even greater efficiency.
 
+### Why RNTuple for Genomics?
+RNTuple is ROOT's successor to TTree columnar data storage, offering several advantages for genomic data:
+
+Improved Memory Efficiency: RNTuple's design allows uncompressed data to be directly mapped to memory without further copies due to the clear separation between offset/index data and payload data. This matches the in-memory layout on modern architectures and reduces RAM requirements when processing large genomic datasets.
+Type Safety: RNTuple provides compile-time type-safe interfaces through the use of templates, reducing common programming errors in genomic data processing. This is particularly valuable when handling complex nested data types common in genomic sequence information.
+Enhanced Storage Efficiency: Recent benchmarks show RNTuple achieving 20-35% storage space savings compared to TTree, which already outperforms traditional genomic formats. This translates to significant storage cost reductions for large-scale genomic datasets.
+Optimized Performance: RNTuple demonstrates multiple times faster read throughput than TTree, along with better write performance and multicore scalability. It can fully harness the performance of modern NVMe drives and object stores.
+Columnar Access Pattern: The columnar structure is ideal for genomic region queries that often only access chromosome and position information, avoiding unnecessary data loading. This is particularly important for genomic data, where analysts frequently need to examine specific regions rather than entire sequences.
+
 
 ### Project Description
 My project extends GeneROOT by implementing ROOT's next-generation RNTuple format for genomic data storage and analysis through two main stages:
@@ -74,14 +83,7 @@ The findings from this analysis will inform the implementation of:
 - Reference-based compression similar to CRAM
 - Adaptive selection of optimal compression methods based on data characteristics
 
-### Why RNTuple for Genomics?
-RNTuple is ROOT's successor to TTree columnar data storage, offering several advantages for genomic data:
 
-Improved Memory Efficiency: RNTuple's design allows uncompressed data to be directly mapped to memory without further copies due to the clear separation between offset/index data and payload data. This matches the in-memory layout on modern architectures and reduces RAM requirements when processing large genomic datasets.
-Type Safety: RNTuple provides compile-time type-safe interfaces through the use of templates, reducing common programming errors in genomic data processing. This is particularly valuable when handling complex nested data types common in genomic sequence information.
-Enhanced Storage Efficiency: Recent benchmarks show RNTuple achieving 20-35% storage space savings compared to TTree, which already outperforms traditional genomic formats. This translates to significant storage cost reductions for large-scale genomic datasets.
-Optimized Performance: RNTuple demonstrates multiple times faster read throughput than TTree, along with better write performance and multicore scalability. It can fully harness the performance of modern NVMe drives and object stores.
-Columnar Access Pattern: The columnar structure is ideal for genomic region queries that often only access chromosome and position information, avoiding unnecessary data loading. This is particularly important for genomic data, where analysts frequently need to examine specific regions rather than entire sequences.
 
 ### Project Architecture
 <img src="/images/blog/genome_sequencing.png" style="display: block; margin-left: auto; margin-right: auto;" width="50%" />
@@ -101,4 +103,4 @@ Faster genomic region queries through RNTuple's columnar structure
 Better memory efficiency when processing large genomic files
 Enhanced type safety through RNTuple's templated interfaces
 Optimized storage through specialized compression and splitting strategies
-A potential new standard for high-performance genomic data analysis
+A potential new standard for high-performance genomic data analysis.
