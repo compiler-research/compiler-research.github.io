@@ -75,4 +75,5 @@ jobs:
       with:
         task_name: Markdown
         source_files: ${{ steps.changed_files.outputs.all_changed_files }}
+        config_path: .github/workflows/spellcheck.yaml
 

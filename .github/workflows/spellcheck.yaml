@@ -1,0 +1,20 @@
+matrix:
+  - name: English
+    aspell:
+      lang: en
+      ignore-case: true
+    dictionary:
+      wordlists:
+        - .spellcheck_exceptions_dictionary.txt
+      encoding: utf-8
+    pipeline:
+      - pyspelling.filters.html:
+          comments: false
+          ignores:
+            - code
+            - pre
+    sources:
+      - "**/*.md"
+      - "**/*.tex"
+      - "**/*.txt"
+    default_encoding: utf-8
