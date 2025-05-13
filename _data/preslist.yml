@@ -5,7 +5,7 @@
     Differential debugging is a technique designed to streamline the debugging process by utilizing a previous version of the system as a baseline. This method reduces debugging time and complexity by narrowing down the phase space for bug localization. However, the current practice of differential debugging involves running two instances of the debugger independently, lacking cross communication regarding the execution state.
     
     In this presentation, we introduce a new tool called Interactive Differential Debugging (IDD). IDD automates the process of filtering out irrelevant execution paths between a reference and a regressed software system. Our debugging infrastructure goes beyond identification, providing syntactic and semantic tools to systematically compare the execution states of two versions of the same software, identifying functional or performance regressions. IDD seamlessly integrates with LLDB, leveraging its debug server to collect execution information from both systems. The result is a focused display of debugger states that differ between the two versions. Through practical demonstrations, we illustrate how IDD helps the detection of regressions at scale such as the clang compiler.
-  location: "[EuroLLVM 2025](https://llvm.swoogo.com/2025eurollvm/agenda)"
+  location: "[EuroLLVM 2025](https://youtu.be/sI-jxB0tGpM?si=CNNo264OvA4JMqRb)"
   date: 2025-04-16
   speaker: Vipul Cariappa, Martin Vassilev
   id: "EUROLLVM2025"
