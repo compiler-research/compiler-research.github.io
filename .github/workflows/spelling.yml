@@ -1,58 +1,48 @@
-name: Spell Check
+name: Spellcheck PR Diff
 
 on:
-  # Switch from `pull_request_target` event to reduce distraction from comments
-  # regarding errors reported in unmodified files.
   pull_request:
     branches:
       - master
-    types:
-      - 'opened'
-      - 'reopened'
-      - 'synchronize'
 
 jobs:
-  spelling:
-    name: Spell Check
-    permissions:
-      contents: read
-      pull-requests: read
-      actions: read
-    outputs:
-      followup: ${{ steps.spelling.outputs.followup }}
+  spellcheck:
+    name: Spellcheck PR Diff
     runs-on: ubuntu-latest
-    if: "contains(github.event_name, 'pull_request') || github.event_name == 'push'"
-    concurrency:
-      group: spelling-${{ github.event.pull_request.number || github.ref }}
-      # note: If you use only_check_changed_files, you do not want cancel-in-progress
-      cancel-in-progress: true
     steps:
-    - name: Run Spellcheck
-      id: spelling
-      uses: check-spelling/check-spelling@v0.0.24
-      with:
-        # This workflow runs in response to both `push` and `pull_request`, if there's an open `pull_request` in the same repository
-        # for a given branch, there's no reason to spend resources checking both the `push` and the `pull_request`, so this flag tells
-        # the action while running for the `push` to find the `pull_request` and stop working early:
-        suppress_push_for_open_pull_request: 1
-        # The action will manage checking out the repository itself instead of requiring the workflow to use `actions/checkout...`:
-        #checkout: true
-        # If running without `: write`, posting a comment won't work, and for security `: write` permissions are left to a distinct
-        # (optional) job, here we skip trying to post a comment:
-        post_comment: 0
-        use_magic_file: 1
-        only_check_changed_files: true
-        extra_dictionary_limit: 10
-        extra_dictionaries:
-          cspell:software-terms/software-terms.txt
-          cspell:php/php.txt
-          cspell:node/node.txt
-          cspell:django/django.txt
-          cspell:html/html.txt
-          cspell:npm/npm.txt
-          cspell:ruby/ruby.txt
-          cspell:fullstack/fullstack.txt
-          cspell:filetypes/filetypes.txt
-        check_extra_dictionaries: ''
-        dictionary_source_prefixes: >-
-          {"cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20241114/dictionaries/"}
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install aspell
+        run: sudo apt-get update && sudo apt-get install -y aspell
+
+      - name: Run aspell on added lines
+        run: |
+          git fetch origin master
+
+          git diff --unified=0 origin/master | \
+          awk '
+            BEGIN { filename=""; lineno=0 }
+            /^diff --git/ {
+              match($0, /^diff --git a\/.* b\/(.*)$/, m);
+              filename = m[1];
+            }
+            /^\+\+\+/ { next }
+            /^@@/ {
+              match($0, /\+([0-9]+)/, m);
+              lineno = m[1];
+              next;
+            }
+            /^\+/ {
+              text = substr($0, 2);
+              cmd = "echo \"" text "\" | aspell --mode=none list --lang=en | sort -u";
+              while ((cmd | getline word) > 0) {
+                if (word != "") {
+                  printf "::error file=%s,line=%d::Possible misspelling: %s\n", filename, lineno, word;
+                }
+              }
+              close(cmd);
+              lineno++;
+            }
+          '
