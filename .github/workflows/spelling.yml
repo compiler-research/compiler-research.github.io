@@ -62,6 +62,9 @@ jobs:
       # note: If you use only_check_changed_files, you do not want cancel-in-progress
       cancel-in-progress: true
     steps:
+    - uses: actions/checkout@v4
+       with:
+         fetch-depth: 0
     - name: Get all changed markdown files
       uses: tj-actions/changed-files@v45
       id: changed_files
