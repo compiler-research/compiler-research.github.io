@@ -63,8 +63,9 @@ jobs:
       cancel-in-progress: true
     steps:
     - uses: actions/checkout@v4
-       with:
-         fetch-depth: 0
+      with:
+        fetch-depth: 0
+
     - name: Get all changed markdown files
       uses: tj-actions/changed-files@v45
       id: changed_files
