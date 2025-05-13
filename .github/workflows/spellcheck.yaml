@@ -13,8 +13,4 @@ matrix:
           ignores:
             - code
             - pre
-    sources:
-      - "**/*.md"
-      - "**/*.tex"
-      - "**/*.txt"
     default_encoding: utf-8
