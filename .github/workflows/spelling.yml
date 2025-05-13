@@ -1,0 +1,48 @@
+name: Spellcheck PR Diff
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  spellcheck:
+    name: Spellcheck PR Diff
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install aspell
+        run: sudo apt-get update && sudo apt-get install -y aspell
+
+      - name: Run aspell on added lines
+        run: |
+          git fetch origin master
+
+          git diff --unified=0 origin/master | \
+          awk '
+            BEGIN { filename=""; lineno=0 }
+            /^diff --git/ {
+              match($0, /^diff --git a\/.* b\/(.*)$/, m);
+              filename = m[1];
+            }
+            /^\+\+\+/ { next }
+            /^@@/ {
+              match($0, /\+([0-9]+)/, m);
+              lineno = m[1];
+              next;
+            }
+            /^\+/ {
+              text = substr($0, 2);
+              cmd = "echo \"" text "\" | aspell --mode=none list --lang=en | sort -u";
+              while ((cmd | getline word) > 0) {
+                if (word != "") {
+                  printf "::error file=%s,line=%d::Possible misspelling: %s\n", filename, lineno, word;
+                }
+              }
+              close(cmd);
+              lineno++;
+            }
+          '
