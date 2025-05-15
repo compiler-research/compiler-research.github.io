@@ -39,8 +39,7 @@
         discusses the functionality introduced to enable differentiation from
         likelihood through to ML classifier call and the impact of this
         functionality upon performance of the SBI fit.
-    - title: Update
-      speaker: Vassil Vassilev
+      slides: "/assets/presentations/Jamie_G-RooFit_SBI.pdf"
     - title: Next meeting
       speaker: Vassil Vassilev
       link: 05 Jun 1700
