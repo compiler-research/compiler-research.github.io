@@ -165,7 +165,7 @@
       mentors: Vassil Vassilev
       proposal: /assets/docs/SahilPatidar_GSoC2025_Proposal.pdf
     - title: "Out-Of-Process execution for Clang-Repl"
-      status: Ongoing
+      status: Completed
       description: |
         This project focuses on enhancing Clang-Repl, an interactive C++ interpreter
         that leverages LLVM's JIT infrastructure. The current in-process execution model
