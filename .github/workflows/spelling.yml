@@ -19,6 +19,8 @@ jobs:
         with:
           python-version: 3.11
       - uses: compiler-research/git-spell-check@master
+        with:
+          debug: 1
       - name: Setup tmate session
         if: ${{ !cancelled() && runner.debug }}
         uses: mxschmitt/action-tmate@v3
