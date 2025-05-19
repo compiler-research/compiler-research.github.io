@@ -262,6 +262,40 @@
       proposal: /assets/docs/Aditya_Pandey_GSoC2025.pdf
       mentors: Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
       
+- name: Salvador de la Torre Gonzalez
+  info: "Google Summer of Code 2025 Contributor"
+  photo: salva_de_la_torre_gonzalez.jpg
+  email: delatorregonzalezsalvador@gmail.com
+  github: "https://github.com/salva24"
+  linkedin: "https://www.linkedin.com/in/salva-de-la-torre-gonzalez-7299b6335/"
+  education: "Mathematics and Computer Engineering, University of Seville, Spain"
+  active: 1
+  projects:
+    - title: "Agent-Based Simulation of CAR-T Cell Therapy Using BioDynaMo"
+      status: Ongoing
+      description: |
+        Chimeric Antigen Receptor T-cell (CAR-T) therapy has shown great promise 
+        in treating hematological cancers by harnessing the immune system to target 
+        and eliminate tumor cells. However, its effectiveness in solid tumors remains 
+        limited due to challenges such as poor T-cell infiltration, immune suppression, 
+        and T-cell exhaustion. This project aims to develop a scalable, agent-based 
+        simulation of CAR-T therapy using BioDynaMo, a high-performance, open-source 
+        biological simulation platform. The simulation will model key aspects of CAR-T 
+        dynamics, including T-cell migration, tumor cell engagement, and the influence 
+        of microenvironmental factors like hypoxia, regulatory T-cells, and 
+        immunosuppressive cytokines. By simulating various tumor types, including solid 
+        tumors and leukemias, the model will explore treatment variables such as CAR-T 
+        dosage, timing of administration, and combination strategies like checkpoint 
+        inhibitors and cytokine support. The project will deliver a complete and 
+        well-documented BioDynaMo-based simulation modeling CAR-T cell therapy, 
+        custom analysis scripts for visualizing tumor regression and evaluating CAR-T 
+        efficacy, performance benchmarking across therapeutic strategies, and a detailed 
+        report summarizing insights and future directions. This approach will provide 
+        valuable insights for optimizing CAR-T therapies, particularly in complex tumor 
+        microenvironments.
+      proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2025.pdf
+      mentors: Vassil Vassilev, Lukas Breitwieser
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
