@@ -5,7 +5,7 @@ excerpt: "A GSoC 2025 project aiming to advance genomic data management by imple
 sitemap: false
 author: Aditya Pandey
 permalink: blogs/gsoc25_aditya_pandey_introduction_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/genome_project_banner.png
 date: 2025-05-13
 tags: gsoc root genome bioinformatics 
 ---
