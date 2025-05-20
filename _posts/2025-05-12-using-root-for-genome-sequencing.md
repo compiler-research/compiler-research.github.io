@@ -86,7 +86,7 @@ The findings from this analysis will inform the implementation of:
 
 
 ### Project Architecture
-<img src="/images/blog/genome_sequencing.png" style="display: block; margin-left: auto; margin-right: auto;" width="50%" />
+<embed src="/images/blog/genome_sequencing.pdf" type="application/pdf" style="display: block; margin-left: auto; margin-right: auto;" width="100%" height="600px" />
 
 ### Implementation Progress
 I have already made significant progress optimizing the existing GeneROOT codebase. My initial work on ramview.C has shown impressive performance gains through:
