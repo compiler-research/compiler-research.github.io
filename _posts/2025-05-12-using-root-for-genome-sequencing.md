@@ -1,11 +1,11 @@
 ---
-title: "Using ROOT for genome sequencing"
+title: "Using ROOT in the field of genome sequencing"
 layout: post
 excerpt: "A GSoC 2025 project aiming to advance genomic data management by implementing ROOT's next-generation RNTuple format for sequence alignment storage."
 sitemap: false
 author: Aditya Pandey
 permalink: blogs/gsoc25_aditya_pandey_introduction_blog/
-banner_image: /images/blog/genome_project_banner.png
+banner_image: /images/blog/genome_project_banner.jpeg
 date: 2025-05-13
 tags: gsoc root genome bioinformatics 
 ---
