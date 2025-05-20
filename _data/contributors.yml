@@ -441,7 +441,7 @@
         differentiation directly on C++ frontend to utilize the benefits of
         clang’s infrastructure.
       proposal: /assets/docs/Mihail_Mihov_GSoC24_Proposal.pdf
-      mentors: Vaibhav Thakkar, Petro Zaritskyi, Vassil Vassilev
+      mentors: Vaibhav Thakkar, Petro Zarytskyi, Vassil Vassilev
 
 
 - name: Vaibhav Thakkar
@@ -812,7 +812,7 @@
         RooFit is a toolkit for statistical modeling and fitting used by most
         experiments in particle physics. Just as data sets from next-generation
         experiments grow, processing requirements for physics analysis become
-        more computationally demanding, necessitating performance optimizations
+        more computationally demanding, necessitating performance optimizagtions
         for RooFit. One possibility to speed-up minimization and add stability
         is the use of automatic differentiation (AD). Unlike for numerical
         differentiation, the computation cost scales linearly with the number of
@@ -929,7 +929,7 @@
           candidates are well-typed with respect to cursor positions. The
           project incorporates the completion infrastructure of Cling into
           Clang-REPL. Next, we build components that handle type contexts and
-          subtyping. Lastly, we combine the completion and type-related
+          subtypes. Lastly, we combine the completion and type-related
           components to deliver the type-directed auto-completion in Clang-REPL.
       proposal: /assets/docs/FredFu_Proposal.pdf
       mentors: Vassil Vassilev
@@ -952,7 +952,7 @@
         Clang-REPL is the evolution of Cling, an interactive c++ interpreter
         based on LLVM and Clang. It first developed as part of the high-energy
         physics (HEP) data analysis project - ROOT, and subsequently grew as a
-        standalone tool outisde the HEP community. The main goal behind the
+        standalone tool outside the HEP community. The main goal behind the
         Clang-REPL project is to move most parts of Cling into LLVM. By doing
         so, the benefits of using the LLVM community standards for code reviews,
         release cycles and integration will ensure the software's

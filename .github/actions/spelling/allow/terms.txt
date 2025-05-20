@@ -1,9 +1,12 @@
 AARCH
+CINT
 CMSSW
 Cppyy
+Debian
 GPGPU
 GSo
 GSoC
+HSF
 JIT’d
 Jacobians
 LLVM
@@ -12,6 +15,7 @@ PTX
 Softsusy
 Superbuilds
 TFormula
+TTree
 aarch
 bioinformatics
 consteval
