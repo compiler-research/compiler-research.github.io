@@ -1,8 +1,11 @@
 AARCH
+BGZF
+blogs
 CINT
 CMSSW
 Cppyy
 Debian
+genomics
 GPGPU
 GSo
 GSoC
@@ -12,6 +15,8 @@ Jacobians
 LLVM
 NVIDIA
 PTX
+ramview
+Slib
 Softsusy
 Superbuilds
 TFormula
@@ -40,3 +45,4 @@ xplugin
 youtu
 youtube
 zenodo
+
