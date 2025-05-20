@@ -735,7 +735,7 @@
         infrastructure, or by implementing custom
         instrumentation. Reoptimization could be applied to whole functions, or
         outlining could be used to enable optimization of portions of
-        functions. Re-entry into the JIT infrastructure from JIT’d code might be
+        functions. Re-entry into the JIT infrastructure from JIT'd code might be
         implemented on top of existing lazy compilation, or via a custom path.
       mentors: Vassil Vassilev, Stefan Gränitz, Lang Hames
       proposal: /assets/docs/Sunho_Kim_Proposal_2023.pdf
@@ -812,7 +812,7 @@
         RooFit is a toolkit for statistical modeling and fitting used by most
         experiments in particle physics. Just as data sets from next-generation
         experiments grow, processing requirements for physics analysis become
-        more computationally demanding, necessitating performance optimizagtions
+        more computationally demanding, necessitating performance optimizations
         for RooFit. One possibility to speed-up minimization and add stability
         is the use of automatic differentiation (AD). Unlike for numerical
         differentiation, the computation cost scales linearly with the number of
@@ -1066,7 +1066,7 @@
         Enzyme, and give the user the option of selecting Enzyme for Automatic
         Differentiation, based on his/her needs. This will give the user the
         same User Interface as clad for writing his/her code, but the option of
-        using Enzyme as the backend with all its optimisations to calculate the
+        using Enzyme as the backend with all its optimizations to calculate the
         Derivative/Gradient of the requested function.  My proposal also briefly
         gives insights into how this can be achieved by tapping into the
         existing code base of Clad.
@@ -1118,7 +1118,7 @@
       description: |
         In C++, it's often useful to write wrappers that abstract or extend some
         underlying type passed as a template argument. But templates are only
-        instantated taking into account the 'fundamental' types of the
+        instantiated taking into account the 'fundamental' types of the
         arguments, discarding 'type sugar', such as any aliases, attributes or
         other cosmetic metadata such as how the name of the type was qualified
         and such. While this ends up in practice being brittle to rely on,
@@ -1129,7 +1129,7 @@
         further engineering to work around this limitation, member accesses on
         template specializations will only reflect these canonical types, with
         the simplest example being the loss of any sugar on the argument when
-        acessing a member alias to the argument itself.  For this project, we
+        accessing a member alias to the argument itself.  For this project, we
         will improve Clang's type system so that any type sugar on the arguments
         of a template specialization are pushed into those member accesses.
       proposal: /assets/docs/Matheus_Izvekov_Proposal_2022.pdf

@@ -1,9 +1,9 @@
 # Email
 mailto:[-a-zA-Z=;:/?%&0-9+@.]{3,}
-\bemail:\s*[-a-zA-Z=;:/?%&0-9+@.]{3,}
+\bemail:\s*[-a-zA-Z=;:/?_%&0-9+@.]{3,}
 
 # proposal:
-\bproposal:\s*\S+\.pdf\b
+\bproposal:\s*\S+\b
 
 # www:
 \bwww:\s*"?https?:\/\/\S+\/?"?

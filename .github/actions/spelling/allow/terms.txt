@@ -7,7 +7,7 @@ GPGPU
 GSo
 GSoC
 HSF
-JIT’d
+JIT'd
 Jacobians
 LLVM
 NVIDIA
@@ -29,6 +29,7 @@ microenvironments
 pythonized
 samtools
 sitemap
+softsusy
 vimeo
 www
 xcolors
