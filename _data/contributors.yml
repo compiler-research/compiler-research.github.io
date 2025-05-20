@@ -768,7 +768,7 @@
     - title: "Tutorial development with clang-repl"
       status: Completed
       description: |
-        This project aims to develop tutorials demostrating the current
+        This project aims to develop tutorials demonstrating the current
         capabilities of clang-repl.  It also aims to investigate and research
         the requirements for adding clang-repl as a backend to xeus-cling.  Add
         support for Xeus with the newly added clang-repl which is inspired from

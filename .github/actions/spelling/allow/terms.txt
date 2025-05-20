@@ -1,8 +1,10 @@
+AARCH
 CMSSW
 Cppyy
 GPGPU
 GSo
 GSoC
+JIT’d
 Jacobians
 LLVM
 NVIDIA
@@ -10,6 +12,7 @@ PTX
 Softsusy
 Superbuilds
 TFormula
+aarch
 bioinformatics
 consteval
 cppyy
