@@ -1,1 +1,15 @@
+GSoC
 LLVM
+gsoc
+linkedin
+sitemap
+vimeo
+xcolors
+xeus
+xjson
+xmagics
+xplugin
+youtu
+youtube
+gitlab
+zenodo
