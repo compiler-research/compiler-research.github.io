@@ -247,7 +247,7 @@
        This project aims to advance genomic data management by implementing ROOT's 
        next-generation RNTuple format for sequence alignment storage. Beginning 
        with validation of previous GeneROOT benchmarks showing 4x performance gains 
-       with TTree, we will then extend these capabilities with RNTuple technology. 
+       with `TTree`, we will then extend these capabilities with RNTuple technology.
        Genomic sequencing data volumes are growing exponentially, creating performance
        bottlenecks in traditional formats.RNTuple's improved memory mapping, type 
        safety through templated interfaces, and parallelization capabilities position 
@@ -546,7 +546,7 @@
             Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side. 
             Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense. 
             These cppyy objects can be plugged into idiomatic expressions that expect Python builtin-types. 
-            This behaviour is achieved by growing pythonistic methods like __len__ while also retaining its C++ methods like size.
+            This behaviour is achieved by growing pythonic methods like __len__ while also retaining its C++ methods like size.
             Efficient and automatic conversion between C++ and Python is essential towards high-performance cross-language support. 
             This approach eliminates overheads arising from iterative initialization such as comma insertion in Eigen. 
             This opens up new avenues for the utilization of Cppyy’s bindings in tools that perform numerical operations for transformations, or optimization.
@@ -610,7 +610,7 @@
     - title: "Extend the Automatic Differentiation Support in RooFit"
       status: Completed
       description: |
-        In terms of minimization time, Roofit offers faster results even with numerical
+        In terms of minimization time, RooFit offers faster results even with numerical
         differentiation techniques as compared to minimizing a likelihood function that
         is written by hand in C++, due its complex caching logic. Automatic differentiation
         gives an additional speedup and more accuracy and scalability for problems with large

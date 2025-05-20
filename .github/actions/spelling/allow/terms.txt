@@ -1,9 +1,13 @@
 CMSSW
 Cppyy
+GPGPU
 GSo
 GSoC
 Jacobians
 LLVM
+NVIDIA
+PTX
+Softsusy
 Superbuilds
 TFormula
 bioinformatics
