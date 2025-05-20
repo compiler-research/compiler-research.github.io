@@ -1212,7 +1212,7 @@
       description: |
         The Clang compiler is part of the LLVM compiler infrastructure and
         supports various languages such as C, C++, ObjC and ObjC++. Advancements
-        in JIT infstructure and usability of Clang libriries in LLVM has enabled
+        in JIT infrastructure and usability of Clang libraries in LLVM has enabled
         research into processing C++. It has been challenging to include
         incremental compilation and fitting compile time optimizations into a
         more dynamic environment. Incremental compilation pipelines process code
@@ -1220,8 +1220,8 @@
         then lowered into the LLVM IR and subsequently run by the LLVM JIT. The
         incremental compilation mode is used by the interactive C++ interpreter,
         Cling, initially developed to enable interactive high-energy physics
-        analysis in a C++ environment. Clang-repl is a new-tool incroporated in
-        LLVM ecosystem by residesigning parts of Cling in Clang mainline. The
+        analysis in a C++ environment. Clang-repl is a new-tool incorporated in
+        LLVM ecosystem by redesigning parts of Cling in Clang mainline. The
         project aims at enhancing the error recovery when users type C++ at the
         prompt of clang-repl.
       mentors: Vassil Vassilev, David Lange
@@ -1260,7 +1260,7 @@
         allow implicit and explicit runtime shared library loading. It requires
         the interpreter to load the library descriptor. Re-parsing of
         descriptors’ content has a noticeable effect on runtime performance. C++
-        Modules are designed to minimize the reparsing of the same header
+        Modules are designed to minimize the re-parsing of the same header
         content by providing an efficient on-disk representation of the C++
         Code. C++ Modules have been implemented for Unix and OS X systems
         already and it is expected that with next release of ROOT, C++ modules
