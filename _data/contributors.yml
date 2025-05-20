@@ -357,7 +357,7 @@
         support for building LLVM and Clang as shared libraries on Windows with all the 
         public c++ API exported and dynamically linking to them. Part of the process will be 
         automated with a tool built using the Clang tooling API to automatically add export macros
-        on the appropriate class and functions declarations in llvm public headers.
+        on the appropriate class and functions declarations in LLVM public headers.
       proposal: /assets/docs/Thomas_Fransham_GSoC24_Proposal.pdf
       mentors: Vassil Vassilev, Saleem Abdulrasool
 
@@ -503,7 +503,7 @@
         BioDynaMo incorporates ROOT for several crucial functionalities such as statistical analysis, random number generation, C++-based Jupyter notebooks, and IO. Some features rely on efficient reflection information about BioDynaMo’s and user-defined C++ classes. This project is about improving the performance of the reflection system by upgrading to C++ modules.
 
       proposal: /assets/docs/Isaac_Morales-Proposal_2024.pdf
-      mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswal and Fons Rademakers
+      mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswald and Fons Rademakers
 
 
 - name: "Riya Bisht"
