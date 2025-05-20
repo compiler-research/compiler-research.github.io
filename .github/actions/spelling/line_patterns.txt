@@ -1,0 +1,175 @@
+# Should be `HH:MM:SS`
+\bHH:SS:MM\b
+
+# Should probably be `YYYYMMDD`
+\b[Yy]{4}[Dd]{2}[Mm]{2}(?!.*[Yy]{4}[Dd]{2}[Mm]{2}).*$
+
+# Should be `anymore`
+\bany more[,.]
+
+# Should be `cannot` (or `can't`)
+# See https://www.grammarly.com/blog/cannot-or-can-not/
+# > Don't use `can not` when you mean `cannot`. The only time you're likely to see `can not` written as separate words is when the word `can` happens to precede some other phrase that happens to start with `not`.
+# > `Can't` is a contraction of `cannot`, and it's best suited for informal writing.
+# > In formal writing and where contractions are frowned upon, use `cannot`.
+# > It is possible to write `can not`, but you generally find it only as part of some other construction, such as `not only . . . but also.`
+# - if you encounter such a case, add a pattern for that case to patterns.txt.
+\b[Cc]an not\b
+
+# Should be `GitHub`
+(?<![&*.]|// |\btype |\bimport )\bGithub\b(?![{()])
+\b[Gg]it\s[Hh]ub\b
+
+# Should be `GitLab`
+(?<![&*.]|// |\btype )\bGitlab\b(?![{)])
+
+# Should be `macOS` or `Mac OS X` or ...
+\bMacOS\b
+
+# Should be `Microsoft`
+\bMicroSoft\b
+
+# Should be `OAuth`
+(?:^|[^-/*$])[ '"]oAuth(?: [a-z]|\d+ |[^ a-zA-Z0-9:;_.()])
+
+# Should be `TypeScript`
+\bTypescript\b
+
+# Should be `another`
+\ban[- ]other\b
+
+# Should be `case-(in)sensitive`
+\bcase (?:in|)sensitive\b
+
+# Should be `coinciding`
+\bco-inciding\b
+
+# Should be `deprecation warning(s)`
+\b[Dd]epreciation [Ww]arnings?\b
+
+# Should be `greater than`
+\bgreater then\b
+
+# Should be `ID`
+#\bId\b
+
+# Should be `in front of`
+\bin from of\b
+
+# Should be `into`
+# when not phrasal and when `in order to` would be wrong:
+# https://thewritepractice.com/into-vs-in-to/
+\sin to\s(?!if\b)
+
+# Should be `use`
+\sin used by\b
+
+# Should be `is obsolete`
+\bis obsolescent\b
+
+# Should be `it's` or `its`
+\bits[']
+
+# Should be `its`
+\bit's(?= own\b)
+
+# Should be `perform its`
+\bperform it's\b
+
+# Should be `opt-in`
+(?<!\sfor)\sopt in\s
+
+# Should be `less than`
+\bless then\b
+
+# Should be `load balancer`
+\b[Ll]oud balancer
+
+# Should be `one of`
+\bon of\b
+
+# Should be `otherwise`
+\bother[- ]wise\b
+
+# Should be `or (more|less)`
+\bore (?:more|less)\b
+
+# Should be `rather than`
+\brather then\b
+
+# Should be `regardless, ...` or `regardless of (whether)`
+\b[Rr]egardless if you\b
+
+# Should be `no longer needed`
+\bno more needed\b(?! than\b)
+
+# Should be `did not exist`
+\bwere not existent\b
+
+# Should be `nonexistent`
+\bnon existing\b
+
+# Should be `nonexistent`
+\b[Nn]o[nt][- ]existent\b
+
+# Should be `@brief` / `@details` / `@param` / `@return` / `@retval`
+(?:^\s*|(?:\*|//|/*)\s+`)[\\@](?:breif|(?:detail|detials)|(?:params(?!\.)|prama?)|ret(?:uns?)|retvl)\b
+
+# Should be `preexisting`
+[Pp]re[- ]existing
+
+# Should be `preempt`
+[Pp]re[- ]empt\b
+
+# Should be `preemptively`
+[Pp]re[- ]emptively
+
+# Should be `recently changed` or `recent changes`
+[Rr]ecent changed
+
+# Should be `reentrancy`
+[Rr]e[- ]entrancy
+
+# Should be `reentrant`
+[Rr]e[- ]entrant
+
+# Should be `understand`
+\bunder stand\b
+
+# Should be `workarounds`
+\bwork[- ]arounds\b
+
+# Should be `workaround`
+(?:(?:[Aa]|[Tt]he|ugly)\swork[- ]around\b|\swork[- ]around\s+for)
+
+# Should be `(coarse|fine)-grained`
+\b(?:coarse|fine) grained\b
+
+# Should be `neither/nor` -- or reword
+\bnot\b[^.?!"/(]+\bnor\b
+
+# Should be `neither/nor` (plus rewording the beginning)
+# This is probably a double negative...
+\bnot\b[^.?!"/]*\bneither\b[^.?!"/(]*\bnor\b
+
+# In English, duplicated words are generally mistakes
+# There are a few exceptions (e.g. "that that").
+# If the highlighted doubled word pair is in:
+# * code, write a pattern to mask it.
+# * prose, have someone read the English before you dismiss this error.
+\s([A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,})\s\g{-1}\s
+
+# Should be API
+\s(?!API)(?!.*[\(\)\{\},=#]+)[Aa][Pp][Ii]\s
+
+# Should be arXiv
+\bAr[Xx]iv\b
+
+# Invalid Space Character
+\w \w
+
+# Don't use "smart quotes"
+(?!'")[‘’“”]
+
+# "an" should only be before vowels.
+\ban\s+(?![FHLMNRSX][A-Z0-9]+\b)(?!hour\b)(?!honest\b)([b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]{1}\w*)

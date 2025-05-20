@@ -12,4 +12,5 @@ xplugin
 youtu
 youtube
 gitlab
+www
 zenodo
