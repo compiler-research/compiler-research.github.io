@@ -9,7 +9,7 @@ mailto:[-a-zA-Z=;:/?%&0-9+@.]{3,}
 \bwww:\s*"?https?:\/\/\S+\/?"?
 
 # education:
-\beducation:\s*"?https?:\/\/\S+\/?"?
+\beducation:\s*(.+?)$
 
 # github:
 \bgithub:\s*"?https?:\/\/\S+\/?"?
