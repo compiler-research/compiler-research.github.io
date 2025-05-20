@@ -1,9 +1,14 @@
+bioinformatics
+cppyy
+Cppyy
 GSoC
 LLVM
+gitlab
 gsoc
 linkedin
 sitemap
 vimeo
+www
 xcolors
 xeus
 xjson
@@ -11,6 +16,4 @@ xmagics
 xplugin
 youtu
 youtube
-gitlab
-www
 zenodo
