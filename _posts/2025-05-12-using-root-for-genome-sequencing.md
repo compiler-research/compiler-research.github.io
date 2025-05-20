@@ -16,7 +16,7 @@ I am Aditya Pandey currently a Bachelor of Technology student with experience in
 and algorithm optimization. During Google Summer of Code 2025, I'll be working on the project
 "Using ROOT in the field of genome sequencing" with CERN-HSF.
 
-**Mentors**:Martin Vassilev, Jonas Rembser, Fons Rademakers,Vassil Vassilev
+**Mentors**:Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
 
 
 ### The Challenge of Genomic Data
