@@ -1,6 +1,6 @@
 AARCH
-BGZF
 blogs
+BGZF
 CINT
 CMSSW
 Cppyy
@@ -14,9 +14,8 @@ JIT'd
 Jacobians
 LLVM
 NVIDIA
+NVMe
 PTX
-ramview
-Slib
 Softsusy
 Superbuilds
 TFormula
@@ -32,6 +31,8 @@ gsoc
 linkedin
 microenvironments
 pythonized
+ramview
+Slib
 samtools
 sitemap
 softsusy
@@ -45,4 +46,3 @@ xplugin
 youtu
 youtube
 zenodo
-
