@@ -1,3 +1,6 @@
+# Email
+mailto:[-a-zA-Z=;:/?%&0-9+@.]{3,}
+\bemail:\s*[-a-zA-Z=;:/?%&0-9+@.]{3,}
 
 # Commit message -- Signed-off-by and friends
 ^\s*(?:(?:Based-on-patch|Co-authored|Helped|Mentored|Reported|Reviewed|Signed-off)-by|Thanks-to): (?:[^<]*<[^>]*>|[^<]*)\s*$
