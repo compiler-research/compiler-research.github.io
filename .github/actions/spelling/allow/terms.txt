@@ -1,11 +1,9 @@
 AARCH
-blogs
 BGZF
 CINT
 CMSSW
 Cppyy
 Debian
-genomics
 GPGPU
 GSo
 GSoC
@@ -16,12 +14,14 @@ LLVM
 NVIDIA
 NVMe
 PTX
+Slib
 Softsusy
 Superbuilds
 TFormula
 TTree
 aarch
 bioinformatics
+blogs
 consteval
 cppyy
 cytokine
@@ -32,7 +32,6 @@ linkedin
 microenvironments
 pythonized
 ramview
-Slib
 samtools
 sitemap
 softsusy
