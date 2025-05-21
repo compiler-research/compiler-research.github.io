@@ -245,7 +245,7 @@
       date: 2022-09-07 14:00:00 +0200
       speaker: "Anubhab Ghosh"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_09_2022_Anubhab-Shared_Memory_Based_JITLink_Memory_Manager.pdf)"
-    - title: "Current working status of optmizing ROOT modules"
+    - title: "Current working status of optimizing ROOT modules"
       date: 2022-09-07 14:00:00 +0200
       speaker: "Jun Zhang"
       link: "[Slides](/assets/presentations/CaaS_Weekly_07_09_2022_Jun_Zhang_Current_Working_Status_of_Optimize_Modules_Usage_For_ROOT.pdf)"

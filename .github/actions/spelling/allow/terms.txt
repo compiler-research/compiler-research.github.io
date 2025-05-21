@@ -52,7 +52,6 @@ zenodo
 biodynamo
 Caa
 Jurgaityt
-optmizing
 Resugaring
 superbuilds
 TBR
