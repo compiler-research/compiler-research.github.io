@@ -5,7 +5,7 @@ excerpt: "This GSoC 2025 project, Agent-Based Simulation of CAR-T Cell Therapy, 
 sitemap: true
 author: Salvador de la Torre Gonzalez
 permalink: blogs/gsoc25_salvador_introduction_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/cart_plasma_gsoc.png
 date: 2025-05-14
 tags: gsoc BioDynaMo c++
 ---
