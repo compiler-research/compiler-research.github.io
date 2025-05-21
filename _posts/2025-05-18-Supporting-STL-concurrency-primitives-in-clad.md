@@ -18,7 +18,7 @@ I will work on adding support of STL conurrency primitives to CLAD.
 ## Problem description
 
 `Clad` is a plugin for automatic differentiation for the `clang` compiler.
-Automatic differentiation is a term for multiple techniques of deriving a mathematical function non-analytically. Some of the ways of doing this include simply calculating the derivatiev numberically or by deriving a function by a set of rules, symbolically.
+Automatic differentiation is a term for multiple techniques of deriving a mathematical function analytically. Some of the ways of doing this include simply calculating the derivative numerically or by deriving a function by a set of rules, symbolically.
 
 `Clad` provides an interface that returns an object that containd the derivative of a given function. There might be problems with some functions, if they are to be derived. For example, one would not derive `printf`,  and neither would they derive `std::tread` - those are exceptions, and should be handled differently from mathematical  functions.
 
