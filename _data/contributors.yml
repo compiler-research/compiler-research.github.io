@@ -158,8 +158,22 @@
   github: "https://github.com/SahilPatidar"
   active: 1
   projects:
-    - title: "Out-Of-Process execution for Clang-Repl"
+    - title: "Advanced symbol resolution and reoptimization for clang-repl"
       status: Ongoing
+      description: |
+        This project aims to enhance Clang-Repl, an interactive C++ interpreter built
+        on top of LLVM’s ORC JIT infrastructure. Currently, Clang-Repl lacks a
+        mechanism to automatically load dynamic libraries when encountering unresolved
+        symbols. As a result, users must manually load the appropriate libraries if a
+        symbol used in their code resides in a specific dynamic library. To address
+        this limitation, we propose a solution that enables automatic library loading
+        for unresolved symbols. Additionally, the second goal of this project is to
+        introduce support for re-optimization within Clang-Repl, allowing code to
+        benefit from improved performance through dynamic optimization techniques.
+      mentors: Vassil Vassilev
+      proposal: /assets/docs/SahilPatidar_GSoC2025_Proposal.pdf
+    - title: "Out-Of-Process execution for Clang-Repl"
+      status: Completed
       description: |
         This project focuses on enhancing Clang-Repl, an interactive C++ interpreter
         that leverages LLVM's JIT infrastructure. The current in-process execution model
