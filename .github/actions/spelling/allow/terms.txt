@@ -5,6 +5,7 @@ CMSSW
 Cppyy
 Debian
 GPGPU
+GPT
 GSo
 GSoC
 HSF
@@ -28,6 +29,7 @@ cytokine
 cytokines
 gitlab
 gsoc
+llm
 linkedin
 microenvironments
 pythonized

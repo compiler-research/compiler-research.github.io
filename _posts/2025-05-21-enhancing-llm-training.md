@@ -5,7 +5,7 @@ excerpt: "This GSoC project leverages Clad to optimize LLM training in C++, aimi
 sitemap: true
 author: Rohan Timmaraju
 permalink: blogs/gsoc25_rohan_introduction_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/LLM_project_banner.jpg
 date: 2025-05-21
 tags: gsoc c++ clang clad llm
 ---
@@ -29,7 +29,7 @@ This project proposes to tackle this challenge by integrating Clad, an Automatic
 To facilitate this integration, I am developing a custom C++ tensor library to be used in neural network training. Inspired by the powerful approaches of libraries such as [llm.c](https://github.com/karpathy/llm.c) and [pytorch](https://docs.pytorch.org/cppdocs/), this library is being designed from the ground up with Clad compatibility in mind. The core idea is to replace manual or internally managed gradient computations with Clad's reverse-mode AD (as in `clad::gradient`) for key LLM operations like matrix multiplications, activation functions, normalization layers, and the final loss function.
 
 ### Implementation Plan
-1. **Foundation & Baseline:** We'll start by implementing a complete GPT-2 training loop in C++ *without* Clad. This will serve as our performance baseline. GPT-2 is chosen here as a relatively simple open-source LLM architecture capable of being trained on local devices. This could be extended to other architectures like Llama or Mistral.
+1. **Foundation & Baseline:** The implementation will start by implementing a complete GPT-2 training loop in C++ *without* Clad. This will serve as our performance baseline. GPT-2 is chosen here as a relatively simple open-source LLM architecture capable of being trained on local devices. This could be extended to other architectures like Llama or Mistral.
 2. **Core Clad Integration Strategy:** We will investigate and evaluate different strategies for applying Clad to tensor network gradient calculations, potentially also identifying potential areas where Clad itself could be enhanced for deep learning workloads.
 3. **Expanding Integration:** Once a promising strategy is identified and validated on simpler operations, we'll systematically integrate Clad into more complex components of the GPT-2 architecture.
 4. **Benchmarking & Optimization:** Benchmarking against our baseline will be crucial to quantify the performance gains (speed, memory). We'll also use profiling tools to identify bottlenecks and optimize the tensor library with Clad. OpenMP may be employed for parallelization to further boost performance.
