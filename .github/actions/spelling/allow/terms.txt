@@ -31,7 +31,10 @@ cytokines
 gitlab
 gridlay
 gsoc
+gpu
 llm
+llvm
+pushforward
 linkedin
 microenvironments
 pythonized

@@ -338,6 +338,29 @@
       proposal: /assets/docs/Rohan_Timmaraju_Proposal_2025.pdf
       mentors: Vassil Vassilev, David Lange, Jonas Rembser, Christina Koutsou
 
+- name: Abdelrhman Elrawy
+  photo: Abdelrhman.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: abdelrhman.elrawy1@gmail.com
+  education: "Master of Applied Computing, Wilfrid Laurier University, Canada"
+  github: "https://github.com/a-elrawy"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/elrawy/"
+  projects:
+    - title: "Support usage of Thrust API in Clad"
+      status: Ongoing
+      description: |
+        This project enhances Clad, a Clang-based automatic differentiation tool, 
+        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming. 
+        The goal is to implement custom derivative rules for Thrust primitives like 
+        `thrust::transform` and `thrust::reduce`, making it possible to differentiate 
+        high-performance CUDA code automatically. This work bridges the gap between 
+        automatic differentiation and GPU acceleration, enabling efficient gradient 
+        computations in scientific computing and machine learning workloads.
+      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
+      mentors: Vassil Vassilev, Alexander Penev
+
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
