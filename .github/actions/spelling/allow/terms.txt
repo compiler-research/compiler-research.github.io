@@ -4,6 +4,7 @@ CINT
 CMSSW
 Cppyy
 Debian
+EPC
 GPGPU
 GSo
 GSoC
@@ -36,6 +37,7 @@ linkedin
 microenvironments
 pythonized
 ramview
+reoptimize
 samtools
 sitemap
 softsusy
