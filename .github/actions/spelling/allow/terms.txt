@@ -1,4 +1,5 @@
 AARCH
+AIML
 BGZF
 CINT
 CMSSW
@@ -14,9 +15,11 @@ JIT'd
 Jacobians
 LLMs
 LLVM
+LULESH
 NVIDIA
 NVMe
 PTX
+SBO
 Slib
 Softsusy
 Superbuilds
