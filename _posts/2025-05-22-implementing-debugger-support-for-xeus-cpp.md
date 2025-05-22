@@ -14,7 +14,7 @@ tags: gsoc c++ debugger dap clang jupyter
 
 I am Abhinav Kumar, a final-year Computer Science and Engineering undergraduate at Indian Institute of Technology(IIT) Indore. I'm thrilled to be working with CERN-HSF for Google Summer of Code 2025 on the project "Implementing Debugging Support for xeus-cpp."
 
-**Mentors**:Vassil Vassilev, Vipul Cariappa, Aaron Jomy, Anutosh Bhat
+**Mentors**: Anutosh Bhat, Vipul Cariappa, Aaron Jomy, Vassil Vassilev
 
 
 ### The Need for Seamless C++ Debugging in Jupyter
