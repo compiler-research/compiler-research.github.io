@@ -7,7 +7,7 @@ author: Sahil Patidar
 permalink: blogs/gsoc25_sahil_introduction_blog/
 banner_image: /images/blog/gsoc_clang_repl.jpeg
 date: 2025-05-18
-tags: gsoc llvm clang-repl orc-jit auto-loading
+tags: gsoc LLVM clang-repl ORC-JIT auto-loading
 ---
 
 ### Introduction
