@@ -1,11 +1,11 @@
 ---
 title: "Advanced symbol resolution and re-optimization for Clang-Repl"
 layout: post
-excerpt: "Advanced symbol resolution and reoptimization for Clang-Repl is a Google Summer of Code 2025 project. It aims to improve Clang-Repl and ORC JIT by adding support for automatically loading dynamic libraries when symbols are missing. This removes the need for users to load libraries manually and makes things work more smoothly."
+excerpt: "Advanced symbol resolution and re-optimization for Clang-Repl is a Google Summer of Code 2025 project. It aims to improve Clang-Repl and ORC JIT by adding support for automatically loading dynamic libraries when symbols are missing. This removes the need for users to load libraries manually and makes things work more smoothly."
 sitemap: false
 author: Sahil Patidar
 permalink: blogs/gsoc25_sahil_introduction_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/gsoc_clang_repl.jpeg
 date: 2025-05-18
 tags: gsoc llvm clang-repl orc-jit auto-loading
 ---
@@ -34,7 +34,7 @@ Another part of this project is to add **re-optimization support** to Clang-Repl
 
 The primary objective of this project is to enable **automatic loading of dynamic libraries for unresolved symbols** in Clang-Repl. Since Clang-Repl heavily relies on LLVM's **ORC JIT** for incremental compilation and execution, our work focuses on extending ORC JIT to support this capability for out-of-process execution enviroment.
 
-Currently, ORC JIT handles dynamic library symbol resolution through the `DynamicLibrarySearchGenerator`, which is registered for each loaded dynamic library. This generator is responsible for symbol lookup and interacts with the **Executor Process Control (EPC)** layer to resolve symbols during execution. Specifically, it uses a `DylibHandle` to identify which dynamic library to search for the unresolved symbol. On the executor side, the `SimpleExecutorDylibManager` API performs the actual lookup using this handle.
+Currently, ORC JIT handles dynamic library symbol resolution through the `DynamicLibrarySearchGenerator`, which is registered for each loaded dynamic library. This generator is responsible for symbol lookup and interacts with the **Executor Process Control** layer to resolve symbols during execution. Specifically, it uses a `DylibHandle` to identify which dynamic library to search for the unresolved symbol. On the executor side, the `SimpleExecutorDylibManager` API performs the actual lookup using this handle.
 
 To support **auto-loading in out-of-process execution**, Lang Hames proposed a design involving two new components:
 
