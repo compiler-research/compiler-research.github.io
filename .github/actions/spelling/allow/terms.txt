@@ -11,6 +11,7 @@ GSoC
 HSF
 JIT'd
 Jacobians
+LLMs
 LLVM
 NVIDIA
 NVMe
@@ -28,6 +29,7 @@ cppyy
 cytokine
 cytokines
 gitlab
+gridlay
 gsoc
 llm
 linkedin

@@ -322,7 +322,19 @@
     - title: "Enhancing LLM Training Efficiency with Clad for Automatic Differentiation"
       status: Ongoing
       description: |
-        Training Large Language Models is computationally expensive, often limited by the performance limitations of Python-based frameworks. This project addresses this challenge by enhancing LLM training efficiency within a C++ environment through the integration of Clad, a Clang/LLVM compiler plugin for automatic differentiation (AD). We will develop a custom C++ tensor library specifically designed for optimal interaction with Clad. The core objective is to replace traditional runtime or manual gradient computations with Clad's efficient compile-time differentiation for key LLM operations within a GPT-2 training pipeline. This involves investigating effective strategies to bridge Clad's static analysis with dynamic neural network computations, benchmarking the resulting performance gains in speed and memory usage against a non-Clad baseline, and leveraging OpenMP for further parallelization.
+        Training Large Language Models is computationally expensive, often 
+        limited by the performance limitations of Python-based frameworks. This 
+        project addresses this challenge by enhancing LLM training efficiency 
+        within a C++ environment through the integration of Clad, a Clang/LLVM 
+        compiler plugin for automatic differentiation (AD). We will develop a 
+        custom C++ tensor library specifically designed for optimal interaction 
+        with Clad. The core objective is to replace traditional runtime or 
+        manual gradient computations with Clad's efficient compile-time 
+        differentiation for key LLM operations within a GPT-2 training pipeline. 
+        This involves investigating effective strategies to bridge Clad's static 
+        analysis with dynamic neural network computations, benchmarking the 
+        resulting performance gains in speed and memory usage against a non-Clad 
+        baseline, and leveraging OpenMP for further parallelization.
       proposal: /assets/docs/Rohan_Timmaraju_Proposal_2025.pdf
       mentors: Vassil Vassilev, David Lange, Jonas Rembser, Christina Koutsou
 
