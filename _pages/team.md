@@ -6,7 +6,7 @@ sitemap: false
 permalink: /team/
 ---
 
-# Group Members
+# Team
 
 <div class="clearfix">
 
@@ -18,22 +18,36 @@ permalink: /team/
 {% assign even_odd = even_odd | plus: 1 | modulo: 2 %}
 {% assign previndex0 = forloop.index0 | minus: 1 %}
 
-{% if member.active == nil and members[previndex0].active == 1 %}
+  {% assign needs_break = false %}
 
+  {% if member.lead == nil and members[previndex0].lead == 1 %}
+    {% assign needs_break = true %}
+    {% assign kind = "Associated" %}
+  {% endif %}
+
+  {% if member.associated == nil and members[previndex0].associated == 1 %}
+    {% assign needs_break = true %}
+    {% assign kind = "Team" %}
+  {% endif %}
+
+  {% if member.active == nil and members[previndex0].active == 1 %}
+    {% assign needs_break = true %}
+    {% assign kind = "Alumni" %}
+  {% endif %}
+
+  {% if needs_break %}
+    {% if even_odd == 1 %}
 </div>
-
-{% assign even_odd = 0 %}
+    {% endif %}
 
 <hr />
+### {{ kind }}
 
-### Alumni
-
-{% endif %}
-
-
-{% if even_odd == 0 %}
+      {% assign even_odd = 0 %}
 <div class="row">
-{% endif %}
+  {% elsif even_odd == 0 %}
+<div class="row">
+  {% endif %}
 
 <div class="col-sm-6 clearfix">
 {% if member.photo %}
@@ -50,11 +64,17 @@ permalink: /team/
   {% endif %}
   </h4>
   <i>{{ member.info }}</i><br>
+{% if member.responsibilities %}
+<p> {{ member.responsibilities | markdownify | remove: '<p>' | remove: '</p>'}} </p>
+{% endif %}
 {% if member.email %}
   <i>email: <{{ member.email }}></i>
 {% endif %}
 {% if member.education %}
 <p> <strong>Education:</strong> {{ member.education }} </p>
+{% endif %}
+{% if member.org %}
+<p> <strong>Institution:</strong> {{ member.org }} </p>
 {% endif %}
 </div>
 

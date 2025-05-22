@@ -1,9 +1,20 @@
+################################################################################
+#                                     LEADS                                    #
+################################################################################
+
 - name: David J Lange
   info: Research Staff
   photo: Lange.png
   email: David.Lange@princeton.edu
   education: PhD Physics, University of California, Santa Barbara (1999).
+  org: Princeton/CERN
   active: 1
+  lead: 1
+  responsibilities: |
+    David serves as the principal investigator for the NSF-funded components of
+    the project, ensuring both administrative and technical coherence across its
+    various work streams. He also contributes as a mentor in programs such as
+    Google Summer of Code (GSoC), IRIS-HEP, and others.
 
 - name: Vassil Vassilev
   info: Research Staff
@@ -11,39 +22,57 @@
   email: vvasilev@cern.ch
   education: PhD Computer Science, University of Plovdiv "Paisii Hilendarski", Plovdiv, Bulgaria (2015).
   www: "https://vassil.vassilev.info"
-  github: ""
-  linkedin: ""
+  github: "https://github.com/vgvassilev"
+  linkedin: "https://www.linkedin.com/in/vgvassilev/"
+  org: Princeton/CERN
   active: 1
+  lead: 1
+  responsibilities: |
+    Vassil provides overall project leadership and strategic vision. He is
+    responsible for all aspects of the project not explicitly delegated to other
+    team members.
+
+################################################################################
+#                                  ASSOCIATED                                  #
+################################################################################
 
 - name: Alexander Penev
   info: Assoc. Prof.
   photo: Penev.png
   email: apenev@uni-plovdiv.bg
-  education:  PhD Computer Science, University of Plovdiv “Paisii Hilendarski”, Plovdiv, Bulgaria (2013)
+  education: PhD Computer Science, University of Plovdiv "Paisii Hilendarski", Plovdiv, Bulgaria (2013)
   active: 1
-  
-- name: Galin Bistrev
- info: "CERN Summer student 2025"
- email: gbistrev@uni-sofia.bg
- photo: Bistrev.png
- education: "Nuclear and particle physics , Sofia University "St. Kliment  Ohridski , Bulgaria" 
- current: 1
- past_info:
- title: "Implementing AD in CMS Combine"
- description: This project aims to introduce automatic differentiation techniques into the CMS Combine tool. Combine is the primary statistical analysis tool used in CMS and is based on the RooFit software. 
- Recently RooFit has started using automatic differentiation (AD) technology to aid minimization algorithms.
- Computationally cheap gradients produced by AD can improve performance of the larger workflows in Combine by more than 5x as demonstrated at ICHEP.
- The way how RooFit implements AD also benefits the shareability of likelihoods.
- To get the likelihood gradient, RooFit transforms the likelihood from its internal representation to simple standalone C++ code, which is then used to generate the gradient code. 
- This can help collaborators without RooFit and Combine expertise to work with likelihoods from Combine at a lower level. 
- Adopting AD in Combine requires further collaboration between the parties.
 
- This project aims to bring this AD support into Combine. Aspects include reducing some of the code in Combine in favor of more standard RooFit primitives; 
- Implementing AD support for Combine-specific RooFit primitives; and writing benchmarks to showcase the benefits of RooFit AD in Combine. 
- The student selected for this project will work with several high-energy physics codes as well as the LLVM compiler ecosystem.
- mentors: Vasil Vassilev,David Lange,Jonas Rembser
+  
+
  
  
+=======
+  associated: 1
+  org: University of Plovdiv "Paisii Hilendarski"
+  responsibilities: |
+    Alexander is a long-term Google Summer of Code mentor. He helps the project
+    with maintaining parts of the continuous integration systems and offers
+    technical guidance in the area of automatic differentiation in Computer
+    Graphics.
+
+- name: Martin Vassilev
+  info: Senior Assistant Prof.
+  photo: MVassilev.jpg
+  email: mvassilev@uni-plovdiv.bg
+  education: PhD Computer Science, University of Plovdiv "Paisii Hilendarski", Plovdiv, Bulgaria (2020)
+  active: 1
+  associated: 1
+  org: University of Plovdiv "Paisii Hilendarski"
+  responsibilities: |
+    Martin has research interest in the area of the compiler construction, analysis of complex software systems and bioinformatics.
+    He has obtained his PhD in 2020 in the University of Plovdiv "Paisii Hilendarski" where he continued to develop his academic career.
+
+################################################################################
+#                                     TEAM                                     #
+################################################################################
+
+
 - name: Aaron Jomy
   photo: Aaron.jpg
   info: "Research Intern at CERN"
@@ -107,34 +136,6 @@
       proposal: /assets/docs/Petro_Zarytskyi_Proposal.pdf
       mentors: Vassil Vassilev, David Lange
 
-- name: "Pavlo Svirin"
-  info: "Senior research engineer at the Barcelona Supercomputing Center"
-  photo: pavlo_svirin.png
-  email: pavlo.svirin@cern.ch
-  education: PhD Computer Science, National Technical University of Ukraine, 2014
-  active: 1
-  projects:
-    - title: "ROOT Superbuilds"
-      status: Ongoing
-      description: |
-       [ROOT](https://root.cern/) is a framework for data processing,
-       born at CERN, at the heart of the research on high-energy physics.
-       Every day, thousands of physicists use ROOT applications to analyze their
-       data or to perform simulations. The ROOT software framework is
-       foundational for the HEP ecosystem, providing capabilities such
-       as IO, a C++ interpreter, GUI, and math libraries. It uses
-       object-oriented concepts and build-time modules to layer between
-       components. We believe additional layering formalisms will benefit
-       ROOT and its users.
-
-       Currently, ROOT is built as all-in-one package. We are working to create
-       a modular version of ROOT that provides a minimal base install of core
-       features, then later add functionality via incremental builds. This
-       requires introducing new layering mechanisms and extending the functionality
-       of the existing ROOT package manager prototype.
-      proposal: /assets/docs/Pavlo_Svirin_Proposal_2024.pdf
-      mentors: Vassil Vassilev, Danilo Piparo
-
 - name: "Maksym Andriichuk"
   photo: Andriichuk.jpg
   info: "IRIS-HEP Fellow"
@@ -164,8 +165,22 @@
   github: "https://github.com/SahilPatidar"
   active: 1
   projects:
-    - title: "Out-Of-Process execution for Clang-Repl"
+    - title: "Advanced symbol resolution and reoptimization for clang-repl"
       status: Ongoing
+      description: |
+        This project aims to enhance Clang-Repl, an interactive C++ interpreter built
+        on top of LLVM’s ORC JIT infrastructure. Currently, Clang-Repl lacks a
+        mechanism to automatically load dynamic libraries when encountering unresolved
+        symbols. As a result, users must manually load the appropriate libraries if a
+        symbol used in their code resides in a specific dynamic library. To address
+        this limitation, we propose a solution that enables automatic library loading
+        for unresolved symbols. Additionally, the second goal of this project is to
+        introduce support for re-optimization within Clang-Repl, allowing code to
+        benefit from improved performance through dynamic optimization techniques.
+      mentors: Vassil Vassilev
+      proposal: /assets/docs/SahilPatidar_GSoC2025_Proposal.pdf
+    - title: "Out-Of-Process execution for Clang-Repl"
+      status: Completed
       description: |
         This project focuses on enhancing Clang-Repl, an interactive C++ interpreter
         that leverages LLVM's JIT infrastructure. The current in-process execution model
@@ -231,11 +246,180 @@
       mentors: Vassil Vassilev, Aaron Jomy, Wim Lavrijsen, Jonas Rembser
 
 - name: Anutosh Bhat
-  info: "Open Source Contributor to xeus-cpp, CppInterOp etc"
-  email: anutosh.bhat.21@gmail.com
+  info: "Open Source Contractor at QuantStack, working on xeus-cpp and the surrounding Jupyter and LLVM ecosystem"
+  email: anutosh.bhat@quantstack.net
   photo: Anutosh.jpg
   education: Integrated Dual Degree (B.Tech & M.Tech) in Data Science & Biological Engineering, IIT Madras, India (2024)
   active: 1
+
+- name: Aditya Pandey
+  photo: Aditya.jpeg
+  info: "Google Summer of Code 2025 Contributor"
+  email: adityapand3y666@gmail.com
+  education: "Bachelor of Technology, Birla Institute of Technology, Mesra, India"
+  github: "https://github.com/AdityaPandeyCN"
+  www: "https://adityapandeycn.github.io/personalblog/"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/aditya-pandey-019482200/"
+  projects:
+    - title: "Using ROOT in the field of genome sequencing"
+      status: Ongoing
+      description: |
+       This project aims to advance genomic data management by implementing ROOT's 
+       next-generation RNTuple format for sequence alignment storage. Beginning 
+       with validation of previous GeneROOT benchmarks showing 4x performance gains 
+       with `TTree`, we will then extend these capabilities with RNTuple technology.
+       Genomic sequencing data volumes are growing exponentially, creating performance
+       bottlenecks in traditional formats.RNTuple's improved memory mapping, type 
+       safety through templated interfaces, and parallelization capabilities position 
+       it as an ideal solution.
+       We will systematically compare compression algorithms, implement file splitting 
+       strategies, and benchmark against established formats.Additionally, I will 
+       analyze the latest compression strategies implemented by samtools and incorporate
+       these techniques into the project to ensure comprehensive coverage of state-of-the-art
+       genomic data compression approaches.
+       The project will deliver optimized tools for handling rapidly growing genomic datasets, 
+       potentially establishing a new standard for high-performance genomic data analysis.
+      proposal: /assets/docs/Aditya_Pandey_GSoC2025.pdf
+      mentors: Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
+
+- name: Petro Mozil
+  photo: PetroMozil.jpeg
+  info: "Google Summer of Code 2025 Contributor"
+  email: mozil.petryk@gmail.com
+  education: "Bachelor of Computer Science, Ukrainian Catholic University, Ukraine"
+  github: "https://github.com/pmozil"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/petro-mozil-a94583170/"
+  projects:
+    - title: "Enabling support for STL concurrency primitives in CLAD"
+      status: Ongoing
+      description: |
+        Clad recursively iterates over the syntax tree to check whether a given 
+        statement should be differentiated. Each function that is called from 
+        inside of a differentiated function should be differentiated as well, 
+        and so should any object method. The main issue for clad is that std::thread is an object, 
+        and thus as a type that should be differentiated However, std::thread shouldn’t 
+        be differentiated, the function inside of it should. 
+        Some of STL’s concurrency primitives face the same problem - 
+        the methods in them should not be differentiated, 
+        and only the location of where they were called should be preserved.
+      proposal: /assets/docs/petro_mozil_promosal_GSoC_2025.pdf
+      mentors: Martin Vassilev, David Lange
+   
+- name: Galin Bistrev
+  photo: Bistrev.png
+  info: "CERN Summer student 2025"
+  email: gbistrev@uni-sofia.bg
+  education: "Nuclear and particle physics , Sofia University "St. Kliment  Ohridski , Bulgaria"
+  github: "https://github.com/GalinBistrev2"
+  active: 1
+  projects:
+    - title: "Implementing AD in CMS Combine"
+      status: Ongoing
+      description: |
+        This project aims to introduce automatic differentiation techniques into the CMS Combine tool.
+        Combine is the primary statistical analysis tool used in CMS and is based on the RooFit software. 
+        Recently RooFit has started using automatic differentiation (AD) technology to aid minimization algorithms.
+        Computationally cheap gradients produced by AD can improve performance of the 
+        larger workflows in Combine by more than 5x as demonstrated at ICHEP.
+        The way how RooFit implements AD also benefits the shareability of likelihoods.
+        To get the likelihood gradient, RooFit transforms the likelihood from 
+        its internal representation to simple standalone C++ code, which is then used to generate the gradient code. 
+        This can help collaborators without RooFit and Combine expertise to work with likelihoods from Combine at a lower level. 
+        Adopting AD in Combine requires further collaboration between the parties.
+
+        This project aims to bring this AD support into Combine. 
+        Aspects include reducing some of the code in Combine in favor of more standard RooFit primitives; 
+        Implementing AD support for Combine-specific RooFit primitives; 
+        and writing benchmarks to showcase the benefits of RooFit AD in Combine. 
+        The student selected for this project will work with several 
+        high-energy physics codes as well as the LLVM compiler ecosystem.
+      mentors: Vasil Vassilev,David Lange,Jonas Rembser 
+ 
+- name: Salvador de la Torre Gonzalez
+  photo: salva_de_la_torre_gonzalez.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: delatorregonzalezsalvador@gmail.com
+  github: "https://github.com/salva24"
+  linkedin: "https://www.linkedin.com/in/salva-de-la-torre-gonzalez-7299b6335/"
+  education: "Mathematics and Computer Engineering, University of Seville, Spain"
+  active: 1
+  projects:
+    - title: "Agent-Based Simulation of CAR-T Cell Therapy Using BioDynaMo"
+      status: Ongoing
+      description: |
+        Chimeric Antigen Receptor T-cell (CAR-T) therapy has shown great promise 
+        in treating hematological cancers by harnessing the immune system to target 
+        and eliminate tumor cells. However, its effectiveness in solid tumors remains 
+        limited due to challenges such as poor T-cell infiltration, immune suppression, 
+        and T-cell exhaustion. This project aims to develop a scalable, agent-based 
+        simulation of CAR-T therapy using BioDynaMo, a high-performance, open-source 
+        biological simulation platform. The simulation will model key aspects of CAR-T 
+        dynamics, including T-cell migration, tumor cell engagement, and the influence 
+        of microenvironmental factors like hypoxia, regulatory T-cells, and 
+        immunosuppressive cytokines. By simulating various tumor types, including solid 
+        tumors and leukemias, the model will explore treatment variables such as CAR-T 
+        dosage, timing of administration, and combination strategies like checkpoint 
+        inhibitors and cytokine support. The project will deliver a complete and 
+        well-documented BioDynaMo-based simulation modeling CAR-T cell therapy, 
+        custom analysis scripts for visualizing tumor regression and evaluating CAR-T 
+        efficacy, performance benchmarking across therapeutic strategies, and a detailed 
+        report summarizing insights and future directions. This approach will provide 
+        valuable insights for optimizing CAR-T therapies, particularly in complex tumor 
+        microenvironments.
+      proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2025.pdf
+      mentors: Vassil Vassilev, Lukas Breitwieser
+
+- name: Rohan Timmaraju
+  photo: Rohan_Timmaraju.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: rohan.timmaraju@gmail.com
+  education: "B.S. Computer Science, Columbia University"
+  github: "https://github.com/Rohan-T144"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/rohan-timmaraju-650ba3221/"
+  projects:
+    - title: "Enhancing LLM Training Efficiency with Clad for Automatic Differentiation"
+      status: Ongoing
+      description: |
+        Training Large Language Models is computationally expensive, often 
+        limited by the performance limitations of Python-based frameworks. This 
+        project addresses this challenge by enhancing LLM training efficiency 
+        within a C++ environment through the integration of Clad, a Clang/LLVM 
+        compiler plugin for automatic differentiation (AD). We will develop a 
+        custom C++ tensor library specifically designed for optimal interaction 
+        with Clad. The core objective is to replace traditional runtime or 
+        manual gradient computations with Clad's efficient compile-time 
+        differentiation for key LLM operations within a GPT-2 training pipeline. 
+        This involves investigating effective strategies to bridge Clad's static 
+        analysis with dynamic neural network computations, benchmarking the 
+        resulting performance gains in speed and memory usage against a non-Clad 
+        baseline, and leveraging OpenMP for further parallelization.
+      proposal: /assets/docs/Rohan_Timmaraju_Proposal_2025.pdf
+      mentors: Vassil Vassilev, David Lange, Jonas Rembser, Christina Koutsou
+
+- name: Abdelrhman Elrawy
+  photo: Abdelrhman.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: abdelrhman.elrawy1@gmail.com
+  education: "Master of Applied Computing, Wilfrid Laurier University, Canada"
+  github: "https://github.com/a-elrawy"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/elrawy/"
+  projects:
+    - title: "Support usage of Thrust API in Clad"
+      status: Ongoing
+      description: |
+        This project enhances Clad, a Clang-based automatic differentiation tool, 
+        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming. 
+        The goal is to implement custom derivative rules for Thrust primitives like 
+        `thrust::transform` and `thrust::reduce`, making it possible to differentiate 
+        high-performance CUDA code automatically. This work bridges the gap between 
+        automatic differentiation and GPU acceleration, enabling efficient gradient 
+        computations in scientific computing and machine learning workloads.
+      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
+      mentors: Vassil Vassilev, Alexander Penev
 
 - name: "This could be you!"
   photo: rock.jpg
@@ -246,6 +430,33 @@
 ################################################################################
 #                                     2024                                     #
 ################################################################################
+- name: "Pavlo Svirin"
+  info: "Senior research engineer at the Barcelona Supercomputing Center"
+  photo: pavlo_svirin.png
+  email: pavlo.svirin@cern.ch
+  education: PhD Computer Science, National Technical University of Ukraine, 2014
+  projects:
+    - title: "ROOT Superbuilds"
+      status: Completed
+      description: |
+       [ROOT](https://root.cern/) is a framework for data processing,
+       born at CERN, at the heart of the research on high-energy physics.
+       Every day, thousands of physicists use ROOT applications to analyze their
+       data or to perform simulations. The ROOT software framework is
+       foundational for the HEP ecosystem, providing capabilities such
+       as IO, a C++ interpreter, GUI, and math libraries. It uses
+       object-oriented concepts and build-time modules to layer between
+       components. We believe additional layering formalisms will benefit
+       ROOT and its users.
+
+       Currently, ROOT is built as all-in-one package. We are working to create
+       a modular version of ROOT that provides a minimal base install of core
+       features, then later add functionality via incremental builds. This
+       requires introducing new layering mechanisms and extending the functionality
+       of the existing ROOT package manager prototype.
+      proposal: /assets/docs/Pavlo_Svirin_Proposal_2024.pdf
+      mentors: Vassil Vassilev, Danilo Piparo
+
 - name: QuillPusher
   info: "Technical Writer, Google Season of Docs 2023 contributor"
   email: 9x3qly27@anonaddy.me
@@ -271,7 +482,7 @@
         support for building LLVM and Clang as shared libraries on Windows with all the 
         public c++ API exported and dynamically linking to them. Part of the process will be 
         automated with a tool built using the Clang tooling API to automatically add export macros
-        on the appropriate class and functions declarations in llvm public headers.
+        on the appropriate class and functions declarations in LLVM public headers.
       proposal: /assets/docs/Thomas_Fransham_GSoC24_Proposal.pdf
       mentors: Vassil Vassilev, Saleem Abdulrasool
 
@@ -355,7 +566,7 @@
         differentiation directly on C++ frontend to utilize the benefits of
         clang’s infrastructure.
       proposal: /assets/docs/Mihail_Mihov_GSoC24_Proposal.pdf
-      mentors: Vaibhav Thakkar, Petro Zaritskyi, Vassil Vassilev
+      mentors: Vaibhav Thakkar, Petro Zarytskyi, Vassil Vassilev
 
 
 - name: Vaibhav Thakkar
@@ -417,7 +628,7 @@
         BioDynaMo incorporates ROOT for several crucial functionalities such as statistical analysis, random number generation, C++-based Jupyter notebooks, and IO. Some features rely on efficient reflection information about BioDynaMo’s and user-defined C++ classes. This project is about improving the performance of the reflection system by upgrading to C++ modules.
 
       proposal: /assets/docs/Isaac_Morales-Proposal_2024.pdf
-      mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswal and Fons Rademakers
+      mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswald and Fons Rademakers
 
 
 - name: "Riya Bisht"
@@ -460,7 +671,7 @@
             Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side. 
             Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense. 
             These cppyy objects can be plugged into idiomatic expressions that expect Python builtin-types. 
-            This behaviour is achieved by growing pythonistic methods like __len__ while also retaining its C++ methods like size.
+            This behaviour is achieved by growing pythonic methods like __len__ while also retaining its C++ methods like size.
             Efficient and automatic conversion between C++ and Python is essential towards high-performance cross-language support. 
             This approach eliminates overheads arising from iterative initialization such as comma insertion in Eigen. 
             This opens up new avenues for the utilization of Cppyy’s bindings in tools that perform numerical operations for transformations, or optimization.
@@ -524,7 +735,7 @@
     - title: "Extend the Automatic Differentiation Support in RooFit"
       status: Completed
       description: |
-        In terms of minimization time, Roofit offers faster results even with numerical
+        In terms of minimization time, RooFit offers faster results even with numerical
         differentiation techniques as compared to minimizing a likelihood function that
         is written by hand in C++, due its complex caching logic. Automatic differentiation
         gives an additional speedup and more accuracy and scalability for problems with large
@@ -649,7 +860,7 @@
         infrastructure, or by implementing custom
         instrumentation. Reoptimization could be applied to whole functions, or
         outlining could be used to enable optimization of portions of
-        functions. Re-entry into the JIT infrastructure from JIT’d code might be
+        functions. Re-entry into the JIT infrastructure from JIT'd code might be
         implemented on top of existing lazy compilation, or via a custom path.
       mentors: Vassil Vassilev, Stefan Gränitz, Lang Hames
       proposal: /assets/docs/Sunho_Kim_Proposal_2023.pdf
@@ -682,7 +893,7 @@
     - title: "Tutorial development with clang-repl"
       status: Completed
       description: |
-        This project aims to develop tutorials demostrating the current
+        This project aims to develop tutorials demonstrating the current
         capabilities of clang-repl.  It also aims to investigate and research
         the requirements for adding clang-repl as a backend to xeus-cling.  Add
         support for Xeus with the newly added clang-repl which is inspired from
@@ -843,7 +1054,7 @@
           candidates are well-typed with respect to cursor positions. The
           project incorporates the completion infrastructure of Cling into
           Clang-REPL. Next, we build components that handle type contexts and
-          subtyping. Lastly, we combine the completion and type-related
+          subtypes. Lastly, we combine the completion and type-related
           components to deliver the type-directed auto-completion in Clang-REPL.
       proposal: /assets/docs/FredFu_Proposal.pdf
       mentors: Vassil Vassilev
@@ -866,7 +1077,7 @@
         Clang-REPL is the evolution of Cling, an interactive c++ interpreter
         based on LLVM and Clang. It first developed as part of the high-energy
         physics (HEP) data analysis project - ROOT, and subsequently grew as a
-        standalone tool outisde the HEP community. The main goal behind the
+        standalone tool outside the HEP community. The main goal behind the
         Clang-REPL project is to move most parts of Cling into LLVM. By doing
         so, the benefits of using the LLVM community standards for code reviews,
         release cycles and integration will ensure the software's
@@ -980,7 +1191,7 @@
         Enzyme, and give the user the option of selecting Enzyme for Automatic
         Differentiation, based on his/her needs. This will give the user the
         same User Interface as clad for writing his/her code, but the option of
-        using Enzyme as the backend with all its optimisations to calculate the
+        using Enzyme as the backend with all its optimizations to calculate the
         Derivative/Gradient of the requested function.  My proposal also briefly
         gives insights into how this can be achieved by tapping into the
         existing code base of Clad.
@@ -1032,7 +1243,7 @@
       description: |
         In C++, it's often useful to write wrappers that abstract or extend some
         underlying type passed as a template argument. But templates are only
-        instantated taking into account the 'fundamental' types of the
+        instantiated taking into account the 'fundamental' types of the
         arguments, discarding 'type sugar', such as any aliases, attributes or
         other cosmetic metadata such as how the name of the type was qualified
         and such. While this ends up in practice being brittle to rely on,
@@ -1043,7 +1254,7 @@
         further engineering to work around this limitation, member accesses on
         template specializations will only reflect these canonical types, with
         the simplest example being the loss of any sugar on the argument when
-        acessing a member alias to the argument itself.  For this project, we
+        accessing a member alias to the argument itself.  For this project, we
         will improve Clang's type system so that any type sugar on the arguments
         of a template specialization are pushed into those member accesses.
       proposal: /assets/docs/Matheus_Izvekov_Proposal_2022.pdf
@@ -1126,7 +1337,7 @@
       description: |
         The Clang compiler is part of the LLVM compiler infrastructure and
         supports various languages such as C, C++, ObjC and ObjC++. Advancements
-        in JIT infstructure and usability of Clang libriries in LLVM has enabled
+        in JIT infrastructure and usability of Clang libraries in LLVM has enabled
         research into processing C++. It has been challenging to include
         incremental compilation and fitting compile time optimizations into a
         more dynamic environment. Incremental compilation pipelines process code
@@ -1134,8 +1345,8 @@
         then lowered into the LLVM IR and subsequently run by the LLVM JIT. The
         incremental compilation mode is used by the interactive C++ interpreter,
         Cling, initially developed to enable interactive high-energy physics
-        analysis in a C++ environment. Clang-repl is a new-tool incroporated in
-        LLVM ecosystem by residesigning parts of Cling in Clang mainline. The
+        analysis in a C++ environment. Clang-repl is a new-tool incorporated in
+        LLVM ecosystem by redesigning parts of Cling in Clang mainline. The
         project aims at enhancing the error recovery when users type C++ at the
         prompt of clang-repl.
       mentors: Vassil Vassilev, David Lange
@@ -1174,7 +1385,7 @@
         allow implicit and explicit runtime shared library loading. It requires
         the interpreter to load the library descriptor. Re-parsing of
         descriptors’ content has a noticeable effect on runtime performance. C++
-        Modules are designed to minimize the reparsing of the same header
+        Modules are designed to minimize the re-parsing of the same header
         content by providing an efficient on-disk representation of the C++
         Code. C++ Modules have been implemented for Unix and OS X systems
         already and it is expected that with next release of ROOT, C++ modules
