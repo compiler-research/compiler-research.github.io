@@ -33,6 +33,7 @@ gitlab
 gridlay
 gsoc
 gpu
+jthread
 llm
 llvm
 pushforward
