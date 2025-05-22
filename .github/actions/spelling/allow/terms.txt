@@ -6,11 +6,13 @@ Cppyy
 Debian
 EPC
 GPGPU
+GPT
 GSo
 GSoC
 HSF
 JIT'd
 Jacobians
+LLMs
 LLVM
 NVIDIA
 NVMe
@@ -31,6 +33,7 @@ gitlab
 gridlay
 gsoc
 gpu
+llm
 llvm
 pushforward
 linkedin
