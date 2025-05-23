@@ -11,6 +11,7 @@ GPT
 GSo
 GSoC
 HSF
+IIT
 JIT'd
 Jacobians
 LLMs
@@ -35,6 +36,7 @@ gitlab
 gridlay
 gsoc
 gpu
+jit
 jthread
 llm
 llvm
@@ -51,8 +53,12 @@ superbuilds
 vimeo
 www
 xcolors
+xcpp
+xdap
+xdebugger
 xeus
 xjson
+xlldb
 xmagics
 xplugin
 youtu
