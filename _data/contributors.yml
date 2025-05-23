@@ -275,10 +275,34 @@
        potentially establishing a new standard for high-performance genomic data analysis.
       proposal: /assets/docs/Aditya_Pandey_GSoC2025.pdf
       mentors: Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
+
+- name: Petro Mozil
+  photo: PetroMozil.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: mozil.petryk@gmail.com
+  education: "Bachelor of Computer Science, Ukrainian Catholic University, Ukraine"
+  github: "https://github.com/pmozil"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/petro-mozil-a94583170/"
+  projects:
+    - title: "Enabling support for STL concurrency primitives in CLAD"
+      status: Ongoing
+      description: |
+        Clad recursively iterates over the syntax tree to check whether a given 
+        statement should be differentiated. Each function that is called from 
+        inside of a differentiated function should be differentiated as well, 
+        and so should any object method. The main issue for clad is that std::thread is an object, 
+        and thus as a type that should be differentiated However, std::thread shouldn’t 
+        be differentiated, the function inside of it should. 
+        Some of STL’s concurrency primitives face the same problem - 
+        the methods in them should not be differentiated, 
+        and only the location of where they were called should be preserved.
+      proposal: /assets/docs/petro_mozil_promosal_GSoC_2025.pdf
+      mentors: Martin Vassilev, David Lange
       
 - name: Salvador de la Torre Gonzalez
-  info: "Google Summer of Code 2025 Contributor"
   photo: salva_de_la_torre_gonzalez.jpg
+  info: "Google Summer of Code 2025 Contributor"
   email: delatorregonzalezsalvador@gmail.com
   github: "https://github.com/salva24"
   linkedin: "https://www.linkedin.com/in/salva-de-la-torre-gonzalez-7299b6335/"

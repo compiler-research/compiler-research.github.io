@@ -1,6 +1,7 @@
 AARCH
 AIML
 BGZF
+Caa
 CINT
 CMSSW
 Cppyy
@@ -23,6 +24,7 @@ SBO
 Slib
 Softsusy
 Superbuilds
+TBR
 TFormula
 TTree
 aarch
@@ -36,6 +38,7 @@ gitlab
 gridlay
 gsoc
 gpu
+jthread
 llm
 llvm
 pushforward
@@ -47,6 +50,7 @@ reoptimize
 samtools
 sitemap
 softsusy
+superbuilds
 vimeo
 www
 xcolors
@@ -57,3 +61,9 @@ xplugin
 youtu
 youtube
 zenodo
+biodynamo
+Caa
+Jurgaityt
+Resugaring
+superbuilds
+TBR
