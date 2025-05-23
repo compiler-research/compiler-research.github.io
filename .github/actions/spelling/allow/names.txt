@@ -32,6 +32,7 @@ Ilieva
 Isemann
 JLange
 Jomy
+Jurgaityt
 Kyiv
 LBNL
 Lattner
@@ -122,6 +123,7 @@ christinakoutsou
 daemond
 daemondzh
 davidlange
+delatorre
 dlange
 efremale
 elrawy
@@ -201,6 +203,7 @@ thakkar
 tharun
 timmaraju
 tlattner
+torre
 vaibhav
 vassil
 vassilev

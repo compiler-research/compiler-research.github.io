@@ -5,7 +5,7 @@ excerpt: "This GSoC 2025 project, Agent-Based Simulation of CAR-T Cell Therapy, 
 sitemap: true
 author: Salvador de la Torre Gonzalez
 permalink: blogs/gsoc25_salvador_introduction_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/cart_plasma_gsoc.png
 date: 2025-05-14
 tags: gsoc BioDynaMo c++
 ---
@@ -29,7 +29,7 @@ of microenvironmental factors like hypoxia, regulatory T-cells, and immunosuppre
 
 This project represents an exciting opportunity to apply my dual academic background in mathematics and computer engineering to a highly impactful domain: cancer immunotherapy.
 
-My interest in oncology and CAR-T treatments deepened significantly after attending a course on Mathematical Modeling and Data Analysis in Oncology, taught by researchers from the Mathematical Oncology Laboratory" ([MôLAB](https://molab.es/)) team at the University of Cádiz. During this course, I was introduced to the fundamentals of immunotherapy and CAR-T cell dynamics, and became fascinated by the potential of mathematical and computational tools to contribute to this area.
+My interest in oncology and CAR-T treatments deepened significantly after attending a course on Mathematical Modeling and Data Analysis in Oncology, taught by researchers from the Mathematical Oncology Laboratory" ([MôLAB](https://molab.es/)) team at the University of Cadiz. During this course, I was introduced to the fundamentals of immunotherapy and CAR-T cell dynamics, and became fascinated by the potential of mathematical and computational tools to contribute to this area.
 
 I believe that building a scalable, open-source simulation of CAR-T therapy can become a valuable resource for scientists and clinicians worldwide, helping them to better understand and optimize treatment strategies considering the complex landscape of solid tumors. 
 
