@@ -10,6 +10,7 @@ GPT
 GSo
 GSoC
 HSF
+IIT
 JIT'd
 Jacobians
 LLMs
@@ -33,6 +34,7 @@ gitlab
 gridlay
 gsoc
 gpu
+jit
 llm
 llvm
 pushforward
@@ -47,8 +49,12 @@ softsusy
 vimeo
 www
 xcolors
+xcpp
+xdap
+xdebugger
 xeus
 xjson
+xlldb
 xmagics
 xplugin
 youtu
