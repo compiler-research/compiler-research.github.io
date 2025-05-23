@@ -405,7 +405,7 @@
         the Clad tape to improve its efficiency, introduce multilayer storage, enhance thread safety, 
         and enable CPU-GPU transfer.
       proposal: /assets/docs/Aditi_Milind_Joshi_Proposal_2025.pdf
-      mentors: Vassil Vassilev, David Lange, Aaron Jomy
+      mentors: Aaron Jomy, David Lange, Vassil Vassilev
 
 - name: "This could be you!"
   photo: rock.jpg
