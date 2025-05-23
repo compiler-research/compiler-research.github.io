@@ -5,7 +5,7 @@ excerpt: "A GSoC 2025 project focussing on optimizing Clad's tape data structure
 sitemap: true
 author: Aditi Milind Joshi
 permalink: blogs/gsoc25_aditi_introduction_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/gsoc-clad-banner.png
 date: 2025-05-22
 tags: gsoc clad clang c++
 ---
