@@ -405,6 +405,31 @@
       proposal: /assets/docs/Abhinav_Kumar_Proposal_GSoC_2025.pdf
       mentors: Anutosh Bhat, Vipul Cariappa, Aaron Jomy, Vassil Vassilev
 
+
+- name: Aditi Milind Joshi
+  photo: Aditi.jpeg
+  info: "Google Summer of Code 2025 Contributor"
+  email: aditij0205@gmail.com
+  github: "https://github.com/aditimjoshi"
+  linkedin: "https://www.linkedin.com/in/aditi-joshi-149280309/"
+  education: "B.Tech in Computer Science and Engineering (AIML), Manipal Institute of Technology, Manipal, India"
+  active: 1
+  projects:
+    - title: "Implement and improve an efficient, layered tape with prefetching capabilities"
+      status: Ongoing
+      description: |
+        Automatic Differentiation (AD) is a computational technique that enables 
+        efficient and precise evaluation of derivatives for functions expressed in code. 
+        Clad is a Clang-based automatic differentiation tool that transforms C++ source 
+        code to compute derivatives efficiently. A crucial component for AD in Clad is the 
+        tape, a stack-like data structure that stores intermediate values for reverse mode AD. 
+        While benchmarking, it was observed that the tape operations of the current implementation 
+        were significantly slowing down the program. This project aims to optimize and generalize 
+        the Clad tape to improve its efficiency, introduce multilayer storage, enhance thread safety, 
+        and enable CPU-GPU transfer.
+      proposal: /assets/docs/Aditi_Milind_Joshi_Proposal_2025.pdf
+      mentors: Aaron Jomy, David Lange, Vassil Vassilev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
