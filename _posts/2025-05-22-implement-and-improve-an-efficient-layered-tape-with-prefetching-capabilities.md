@@ -14,7 +14,7 @@ tags: gsoc clad clang c++
 
 I'm Aditi Joshi, a third-year B.Tech undergraduate student studying Computer Science and Engineering (AIML) at Manipal Institute of Technology, Manipal, India. This summer, I will be contributing to the Clad repository as part of Google Summer of Code 2025, where I will be working on the project "Implement and improve an efficient, layered tape with prefetching capabilities."
 
-**Mentors:** Vassil Vassilev, David Lange, Aaron Jomy
+**Mentors:** Aaron Jomy, David Lange, Vassil Vassilev
 
 ### Briefly about Automatic Differentiation and Clad
 
