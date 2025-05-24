@@ -384,6 +384,28 @@
       proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
       mentors: Vassil Vassilev, Alexander Penev
 
+- name: Abhinav Kumar
+  photo: Abhinav.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: abhinavdnpiasb@gmail.com
+  education: "Computer Science & Engineering, Bachelor of Technology, Indian Institute of Technology(IIT) Indore, India"
+  github: "https://github.com/kr-2003"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/abhinavkumar2105/"
+  projects:
+    - title: "Implementing Debugging Support for xeus-cpp"
+      status: Ongoing
+      description: |
+        This project aims at integrating debugging into the xeus-cpp kernel for 
+        Jupyter using LLDB and its Debug Adapter Protocol (lldb-dap). Modeled 
+        after xeus-python, it leverages LLDB’s Clang and JIT debugging support 
+        to enable breakpoints, variable inspection, and step-through execution. 
+        The modular design ensures compatibility with Jupyter’s frontend, 
+        enhancing interactive C++ development in notebooks.
+      proposal: /assets/docs/Abhinav_Kumar_Proposal_GSoC_2025.pdf
+      mentors: Anutosh Bhat, Vipul Cariappa, Aaron Jomy, Vassil Vassilev
+
+
 - name: Aditi Milind Joshi
   info: "Google Summer of Code 2025 Contributor"
   email: aditij0205@gmail.com
