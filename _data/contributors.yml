@@ -62,6 +62,21 @@
     Martin has research interest in the area of the compiler construction, analysis of complex software systems and bioinformatics.
     He has obtained his PhD in 2020 in the University of Plovdiv "Paisii Hilendarski" where he continued to develop his academic career.
 
+- name: Jonas Rembser
+  info: Senior Scientific Software Developer
+  photo: JRembser.png
+  email: jonas.rembser@cern.ch
+  education: PhD Particle Physics, Ecole Polytechnique, Paris, France (2020)
+  active: 1
+  associated: 1
+  org: CERN
+  responsibilities: |
+    After working with the CMS experiment for his PhD in particle physics, Jonas
+    joined CERN in 2021 to work on the ROOT project. He is takes care of the
+    statistical analysis libraries in ROOT, such as RooFit and Minuit 2, as well
+    as the ROOT Python interface. His other academic interests include
+    differential programming and financial markets.
+
 ################################################################################
 #                                     TEAM                                     #
 ################################################################################
