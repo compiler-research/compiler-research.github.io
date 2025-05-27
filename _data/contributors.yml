@@ -299,6 +299,29 @@
         and only the location of where they were called should be preserved.
       proposal: /assets/docs/petro_mozil_promosal_GSoC_2025.pdf
       mentors: Martin Vassilev, David Lange
+
+- name: Jiayang Li
+  photo: Jiayang_Li.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: lijiayang404@gmail.com
+  education: "Bachelor of Computer Science, Shanghai University, China"
+  github: "https://github.com/Errant404"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/errant404/"
+  projects:
+    - title: "Enable automatic differentiation of OpenMP programs with Clad"
+      status: Ongoing
+      description: |
+        This project aims to extend Clad, a Clang-based automatic differentiation
+        tool for C++, to support OpenMP programs. By enabling Clad to parse and
+        differentiate OpenMP directives such as parallel for, reduction, and atomic,
+        we will allow gradient computation in multi-threaded environments.
+        The implementation will include enhancements to Clad’s AST parsing,
+        variable scope analysis, and differentiation logic for both forward and
+        reverse modes. Deliverables include robust OpenMP AD support, comprehensive
+        tests, and user documentation.
+      proposal: /assets/docs/Jiayang_Li_Proposal_2025.pdf
+      mentors: Vassil Vassilev, Martin Vassilev
       
 - name: Salvador de la Torre Gonzalez
   photo: salva_de_la_torre_gonzalez.jpg
