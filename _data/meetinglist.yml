@@ -1,4 +1,40 @@
 - name: "CaaS Monthly Meeting"
+  date: 2025-06-05 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"
+  label: caas_05June2025
+  agenda:
+    - title: "Differentiating RooFit likelihoods with Clad"
+      speaker:
+        image: "https://compiler-research.org/images/team/JRembser.png"
+        name: "Jonas Rembser"
+        bio: |
+          Jonas Rembser is a particle physicist with a strong interest in data
+          science and software development. After working with the CMS
+          experiment for his PhD in particle physics, Jonas joined CERN in 2021
+          to work on the ROOT project. He is takes care of the statistical
+          analysis libraries in ROOT, such as RooFit and Minuit 2, as well as
+          the ROOT Python interface. His other academic interests include
+          differential programming and financial markets.
+      description: |
+        RooFit is a C++ software for statistical data modeling that is part of
+        ROOT. It is widely used by the High Energy Physics (HEP) community,
+        most notably the LHC experiments. RooFits core feature is building and
+        numerically minimizing likelihood functions for parameter estimation
+        (aka. *fitting*). The minimization can be greatly sped up by using
+        reverse mode (Automatic Differentiation) AD, in particular for fits
+        with many parameters, as typical for the LHC experiments. This
+        presentation will tell the story of how AD was integrated to RooFit
+        powered by [Clad](https://github.com/vgvassilev/clad/), the AD tool
+        developed by Compiler Research. We will cover the integration strategy,
+        explain the particularities of AD in the context of likelihood fits,
+        and present benchmark results. The presentation will wrap up by
+        explaining the current limitations and plans for the future. More
+        information on AD in RooFit with Clad can also be found in
+        [this blog post](https://root.cern/blog/roofit-ad/) on the ROOT
+        website.
+
+- name: "CaaS Monthly Meeting"
   date: 2025-05-15 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"

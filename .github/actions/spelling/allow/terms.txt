@@ -16,6 +16,7 @@ IIT
 JIT'd
 Jacobians
 Jurgaityt
+LHC
 LLMs
 LLVM
 LULESH
@@ -49,6 +50,7 @@ jthread
 linkedin
 llm
 llvm
+meetinglist
 microenvironments
 omp
 openmp
