@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Using ROOT in the field of genome sequencing"
+      date: 2025-05-21 17:00:00 +0200
+      speaker: "Aditya Pandey"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_21_05_2025_Aditya_Pandey_Using_ROOT_for_genome_sequencing.pdf)"
     - title: "Activity Analysis: Summary"
       date: 2025-01-29 17:00:00 +0200
       speaker: "Maksym Andriichuk"
@@ -353,3 +357,7 @@
       date: 2025-05-21 17:00:00 +0200
       speaker: "Salvador de la Torre Gonzalez"
       link: "[Slides](/assets/presentations/Salva_initial_presentation_me_and_project_CART.pdf)"
+    - title: "Support Usage of Thrust API in Clad Initial Presentation"
+      date: 2025-05-28 15:00:00 +0200
+      speaker: "Abdelrhman Elrawy"
+      link: "[Slides](/assets/presentations/Abdelrhman_initial_presentation_support_usage_of_Thrust_API_in_clad.pdf)"
