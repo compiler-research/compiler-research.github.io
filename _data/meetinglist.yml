@@ -33,7 +33,7 @@
         information on AD in RooFit with Clad can also be found in
         [this blog post](https://root.cern/blog/roofit-ad/) on the ROOT
         website.
-
+      slides: /assets/presentations/J_Rembser-RooFit_Clad.pdf
 - name: "CaaS Monthly Meeting"
   date: 2025-05-15 17:00:00 +0200
   time_cest: "17:00"
