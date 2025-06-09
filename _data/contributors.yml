@@ -155,7 +155,7 @@
     - title: "Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
       status: Ongoing
       description: |
-        Clad is a Clang plugin designed to provide automatic differentiation (AD) for C++ mathematical functions. It generates code for computing derivatives modifying Abstract-Syntax-Tree(AST) using LLVM compiler features. It performs advanced program optimization by implementing more sophisticated analyses because it has access to a rich program representation – the Clang AST. Clad supports reverse-mode differentiation of the CUDA kernels, however it is not always optimal because the generated code might contain the data-race conditions, significantly slowing up the execution. Thread Safety Analysis(TSA) is a static analysis that detects possible data-race conditions that would enable reducing atomic operations in the Clad-produced code.
+        Clad is a Clang plugin designed to provide automatic differentiation (AD) for C++ mathematical functions. It generates code for computing derivatives modifying Abstract-Syntax-Tree(AST) using LLVM compiler features. It performs advanced program optimization by implementing more sophisticated analyses because it has access to a rich program representation – the Clang AST. Clad supports reverse-mode differentiation of the CUDA kernels, however it is not always optimal because the generated code might contain the data-race conditions, significantly slowing up the execution. Thread Safety Analysis is a static analysis that detects possible data-race conditions that would enable reducing atomic operations in the Clad-produced code.
 
       proposal: /assets/docs/Maksym_Andriichuk_Proposal_2025.pdf
       mentors: Vassil Vassilev, David Lange
