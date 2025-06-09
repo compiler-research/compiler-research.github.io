@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Improve automatic differentiation of object-oriented paradigms using Clad"
+      date: 2025-06-05 16:00:00 +0200
+      speaker: "Petro Zarytskyi"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_05_06_2025_Petro_Zarytskyi_AD_Object_Oriented_Paradigms.pdf)"
     - title: "Using ROOT in the field of genome sequencing"
       date: 2025-05-21 17:00:00 +0200
       speaker: "Aditya Pandey"
