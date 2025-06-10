@@ -152,8 +152,16 @@
   github: "https://github.com/ovdiiuv"
   active: 1
   projects:
-    - title: "Optimizing automatic differentiation using activity analysis"
+    - title: "Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
       status: Ongoing
+      description: |
+        Clad is a Clang plugin designed to provide automatic differentiation (AD) for C++ mathematical functions. It generates code for computing derivatives modifying Abstract-Syntax-Tree(AST) using LLVM compiler features. It performs advanced program optimization by implementing more sophisticated analyses because it has access to a rich program representation – the Clang AST. Clad supports reverse-mode differentiation of the CUDA kernels, however it is not always optimal because the generated code might contain the data-race conditions, significantly slowing up the execution. Thread Safety Analysis is a static analysis that detects possible data-race conditions that would enable reducing atomic operations in the Clad-produced code.
+
+      proposal: /assets/docs/Maksym_Andriichuk_Proposal_2025.pdf
+      mentors: Vassil Vassilev, David Lange
+
+    - title: "Optimizing automatic differentiation using activity analysis"
+      status: Completed project
       description: |
         Clad has undergone significant optimization in the recent years. One such optimization is the To-Be-Recorded optimization which reduces the memory pressure to the clad tape data structure. The next step is to implement the activity analysis which discards all statements which are irrelevant for the generated code. That is, if the statements do not depend on the input/output variables of a routine in a differentiable way, they are ignored. Combining both analyses could result in a much greater performance, which is our ultimate goal.        
       proposal: /assets/docs/Maksym_Andriichuk_Proposal_2024.pdf
