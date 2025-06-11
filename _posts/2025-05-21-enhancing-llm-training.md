@@ -43,7 +43,7 @@ By successfully integrating Clad into a C++ LLM training pipeline, we aim to:
 * **Offer a C++ Alternative:** Provide a foundation for more efficient, compiler-driven LLM training within the C++ ecosystems.
 * **Learn and Share:** Gain insights into the practicalities of applying compiler-based AD to complex ML problems and share these learnings with the community.
 
-I believe this project has the potential to make a valuable contribution to both the compiler research field and the ongoing efforts to make powerful AI models more accessible and efficient to train.
+This project has the potential to make a valuable contribution to both the compiler research field and the ongoing efforts to make powerful AI models more accessible and efficient to train.
 
 ### Related Links
 
