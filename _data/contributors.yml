@@ -323,6 +323,40 @@
       proposal: /assets/docs/petro_mozil_promosal_GSoC_2025.pdf
       mentors: Martin Vassilev, David Lange
 
+- name: Galin Bistrev
+  photo: Bistrev.jpg
+  info: "CERN Summer student 2025"
+  email: gbistrev@uni-sofia.bg
+  education: "Nuclear and particle physics , Sofia University , St. Kliment  Ohridski , Bulgaria"
+  github: "https://github.com/GalinBistrev2"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/galin-bistrev-905920369/"
+  projects:
+    - title: "Implementing AD in CMS Combine"
+      status: Ongoing
+      description: |
+        This project aims to introduce automatic differentiation techniques into
+        the CMS Combine tool.  Combine is the primary statistical analysis tool
+        used in CMS and is based on the RooFit software.  Recently RooFit has
+        started using automatic differentiation (AD) technology to aid
+        minimization algorithms.  Computationally cheap gradients produced by AD
+        can improve performance of the larger workflows in Combine by more than
+        5x as demonstrated at ICHEP.  The way how RooFit implements AD also
+        benefits the shareability of likelihoods.  To get the likelihood
+        gradient, RooFit transforms the likelihood from its internal
+        representation to simple standalone C++ code, which is then used to
+        generate the gradient code.  This can help collaborators without RooFit
+        and Combine expertise to work with likelihoods from Combine at a lower
+        level.  Adopting AD in Combine requires further collaboration between
+        the parties.  This project aims to bring this AD support into Combine.
+        Aspects include reducing some of the code in Combine in favor of more
+        standard RooFit primitives; Implementing AD support for Combine-specific
+        RooFit primitives; and writing benchmarks to showcase the benefits of
+        RooFit AD in Combine.  The student selected for this project will work
+        with several high-energy physics codes as well as the LLVM compiler
+        ecosystem.
+      mentors: Vasil Vassilev,David Lange,Jonas Rembser
+
 - name: Jiayang Li
   photo: Jiayang_Li.jpg
   info: "Google Summer of Code 2025 Contributor"
@@ -345,7 +379,7 @@
         tests, and user documentation.
       proposal: /assets/docs/Jiayang_Li_Proposal_2025.pdf
       mentors: Vassil Vassilev, Martin Vassilev
-      
+
 - name: Salvador de la Torre Gonzalez
   photo: salva_de_la_torre_gonzalez.jpg
   info: "Google Summer of Code 2025 Contributor"
