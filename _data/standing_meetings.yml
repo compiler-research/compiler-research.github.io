@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Implementing debugging support for xeus-cpp"
+      date: 2025-06-12 15:00:00 +0200
+      speaker: "Abhinav Kumar"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_12_06_2025_Abhinav_Kumar_Debugger_XeusCpp.pdf)"
     - title: "Enhancing LLM Training Efficiency with Clad for Backpropagation"
       date: 2025-06-05 15:00:00 +0200
       speaker: "Rohan Timmaraju"
