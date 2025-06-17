@@ -7,6 +7,10 @@
       date: 2025-06-12 15:00:00 +0200
       speaker: "Abhinav Kumar"
       link: "[Slides](/assets/presentations/CaaS_Weekly_12_06_2025_Abhinav_Kumar_Debugger_XeusCpp.pdf)"
+    - title: "Implement and improve an efficient, layered tape with prefetching capabilities"
+      date: 2025-06-05 15:00:00 +0200
+      speaker: "Aditi Milind Joshi"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_05_06_2025_Aditi_Joshi_Implement_and_improve_efficient_layered_tape.pdf)"
     - title: "Enhancing LLM Training Efficiency with Clad for Backpropagation"
       date: 2025-06-05 15:00:00 +0200
       speaker: "Rohan Timmaraju"
