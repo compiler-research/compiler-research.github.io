@@ -121,14 +121,35 @@
         [Final Report](/assets/docs/Aaron_Jomy_GSoC23_Report.pdf)
 
 - name: Petro Zarytskyi
-  info: "IRIS-HEP Fellow"
+  info: "Google Summer of Code 2025 Contributor"
   photo: Petro.jpg
   email: petro.zarytskyi@gmail.com
   education: Applied Mathematics, Taras Shevchenko National University of Kyiv, Ukraine, 2021-present
   active: 1
   projects:
-    - title: "Optimizing reverse-mode automatic differentiation with advanced activity-analysis"
+    - title: "Improve automatic differentiation of object-oriented paradigms using Clad"
       status: Ongoing
+      description: |
+        Clad is a Clang plugin enabling automatic differentiation (AD) for C++ mathematical
+        functions by modifying the abstract syntax tree using LLVM's compiler capabilities.
+        It integrates into existing codebases without modifications and supports forward and
+        reverse mode differentiation. Reverse mode is efficient for Machine Learning and 
+        inverse problems involving backpropagation.
+        Reverse mode AD requires two passes: forward pass stores intermediate values, reverse
+        pass computes derivatives. Currently, Clad only supports storing trivially copyable 
+        types for function call arguments, limiting support for C-style arrays and non-copyable
+        types like unique pointers, constraining Object-Oriented Programming usage.
+        The project aims to enhance Clad's capability to store intermediate values for non-copyable
+        types. One of the challenges lies in determining which expressions are modified in nested 
+        functions, potentially requiring run-time memory location tracking, which can be inefficient.
+        The solution involves enhancing To-Be-Recorded (TBR) analysis, currently limited with
+        poor nested function call support and no pointer reassignment handling. Improved TBR 
+        analysis will enable predictable memory handling, generating optimal code, and 
+        supporting both non-copyable types and efficient storage of copyable structures.
+      proposal: /assets/docs/Petro_Zarytskyi_Proposal_2025.pdf
+      mentors: Vassil Vassilev, David Lange
+    - title: "Optimizing reverse-mode automatic differentiation with advanced activity-analysis"
+      status: Completed project
       description: |
         Clad is an automatic differentiation clang plugin for C++. It automatically
         generates code that computes derivatives of functions given by the user.

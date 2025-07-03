@@ -1,7 +1,9 @@
-Reoptimization
-Resugaring
-optimizing
+copyable
+Galin
 genomics
+optimizing
+Reoptimization
 reoptimization
+Resugaring
 sustainability
 transitioning
