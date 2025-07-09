@@ -62,7 +62,7 @@ gradient use.
 
 - Developing benchmarks to quantitatively demonstrate the performance improvements AD brings to Combine overflows.
 
-##Conclusion 
+## Conclusion 
 
 By integrating automatic differentiation into the CMS Combine tool, we aim to make
 statistical inference not only faster but also more accessible to the broader 
