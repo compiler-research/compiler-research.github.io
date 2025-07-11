@@ -24,6 +24,7 @@ LLVM
 LULESH
 NVIDIA
 NVMe
+Ohridski
 OMP
 OpenMP
 PTX
@@ -40,6 +41,7 @@ backpropagation
 biodynamo
 bioinformatics
 blogs
+cms
 consteval
 cppyy
 cytokine
