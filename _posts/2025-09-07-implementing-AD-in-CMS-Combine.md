@@ -7,7 +7,7 @@ inference by leveraging RooFit's AD support and LLVM-based gradient generation."
 sitemap: false
 author: Galin Bistrev
 permalink: blogs/2025_galin_bistrev_introduction_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/banner-cern.jpg
 date: 2025-07-05
 tags: cern cms root combine c++ rooFit automatic-differentiation 
 ---
