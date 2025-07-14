@@ -14,25 +14,25 @@ tags: gsoc c++ clang root auto-differentiation
 Hi! I’m Maksym Andriichuk, a third-year student of JMU Wuerzburg studying Mathematics. I am exited to be a part of Clad team fo this year's Google Summer of Code.
 
 ### Project description
-My project focuses on removing atomic operations when differentiating CUDA kernels. When accessing gpu global memory inside of a gradinet of a kernel data races inevitably occur and atomic operation are used instead, due to how reverse mode differentiation works in Clad. However, in some cases we can guarantee that no data race occur which enables us to drop atomic operations and drastically speeds the execution time of the gradient.
+My project focuses on removing atomic operations when differentiating CUDA kernels. When accessing gpu global memory inside of a gradient of a kernel data races inevitably occur and atomic operation are used instead, due to how reverse mode differentiation works in Clad. However, in some cases we can guarantee that no data race occur which enables us to drop atomic operations and drastically speeds the execution time of the gradient.
 
 ### Project goals
 The main goals of this project are:
 
 - Implement a mechanism to check whether data races occur in various scenarios.
 
-- Compare Clad with other tools on benchmarks uncluding RSBench and LULESH.
+- Compare Clad with other tools on benchmarks including RSBench and LULESH.
 
 ### Implementation strategy 
 - Solve minor CUDA-related issues to get familiar with the codebase.
 
-- Implement series of visitors to distinguish between different types of scenarious where atomic operations could be dropped
+- Implement series of visitors to distinguish between different types of scenarios where atomic operations could be dropped
 
 - Use the existing benchmarks to compare the speedup from the implemented analysis.
 
 ## Conclusion 
 
-By integrating an analysis for (CUDA) GPU kernels we aim to speedup the execution of the gradient by removing atomic operation where posiible. To declare success, we would compare Clad to the other AD tools using different benchmarks. I am exited to be a part of the Clad team this summer and can not wait to share my progress. 
+By integrating an analysis for (CUDA) GPU kernels we aim to speedup the execution of the gradient by removing atomic operation where possible. To declare success, we would compare Clad to the other AD tools using different benchmarks. I am exited to be a part of the Clad team this summer and can not wait to share my progress. 
 
 ### Related Links
 
