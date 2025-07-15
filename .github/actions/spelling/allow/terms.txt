@@ -17,6 +17,7 @@ ICHEP
 IIT
 JIT'd
 Jacobians
+JMU
 Jurgaityt
 LHC
 LLMs
