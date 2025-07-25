@@ -44,6 +44,18 @@
     [Link to Slides](/assets/presentations/Vipul__Martin_EuroLLVM2025_IDD.pdf)
   highlight: 1
 
+- title: "Automatic Differentiation in RooFit and Community Needs"
+  description: |
+  The goal of the talk is to demonstrate automatic differentiation in scientific workflows
+  location: "[Foundation Models for Science Mini Workshop](https://indico.cern.ch/event/1459124/contributions/6155024/"
+  date: 2024-10-01
+  speaker: Vassil Vasilev
+  id: "FOUNDSCIROOFIT"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Vassil_CladRoofit_FoundSci2024.pdf)
+  highlight: 1
+
+
 - title: "Automatic Differentiation in RooFit"
   description: |
     With the growing datasets of HEP experiments, statistical analysis becomes
