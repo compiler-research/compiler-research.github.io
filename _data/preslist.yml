@@ -1,10 +1,10 @@
 - title: "Bringing Automatic Differentiation to CUDA with Compiler-Based Source Transformations"
   description: |
-  GPUs have become increasingly popular for their ability to perform parallel operations efficiently, driving interest in General-Purpose GPU Programming. Scientific computing, in particular, stands to benefit greatly from these capabilities. However, parallel programming systems such as CUDA introduce challenges for code transformation tools due to their reliance on low-level hardware management primitives. These challenges make implementing automatic differentiation (AD) for parallel systems particularly complex.
+    GPUs have become increasingly popular for their ability to perform parallel operations efficiently, driving interest in General-Purpose GPU Programming. Scientific computing, in particular, stands to benefit greatly from these capabilities. However, parallel programming systems such as CUDA introduce challenges for code transformation tools due to their reliance on low-level hardware management primitives. These challenges make implementing automatic differentiation (AD) for parallel systems particularly complex.
 
-  CUDA is being widely adopted as an accelerator technology in many scientific algorithms from machine learning to physics simulations. Enabling AD for such codes builds a new valuable capability necessary for advancing scientific computing.
+    CUDA is being widely adopted as an accelerator technology in many scientific algorithms from machine learning to physics simulations. Enabling AD for such codes builds a new valuable capability necessary for advancing scientific computing.
 
-  Clad is an LLVM/Clang plugin for automatic differentiation that performs source-to-source transformation by traversing the compiler's internal high-level data structures, and generates a function capable of computing derivatives of a given function at compile time. In this talk, we explore how we recently extended Clad to support GPU kernels and functions, as well as kernel launches and CUDA host functions. We will discuss the underlying techniques and real-world applications in scientific computing. Finally, we will examine current limitations and potential future directions for GPU-accelerated differentiation.
+    Clad is an LLVM/Clang plugin for automatic differentiation that performs source-to-source transformation by traversing the compiler's internal high-level data structures, and generates a function capable of computing derivatives of a given function at compile time. In this talk, we explore how we recently extended Clad to support GPU kernels and functions, as well as kernel launches and CUDA host functions. We will discuss the underlying techniques and real-world applications in scientific computing. Finally, we will examine current limitations and potential future directions for GPU-accelerated differentiation.
   location: "[Mode 2025](https://indico.cern.ch/event/1481852/contributions/6491917/)"
   date: 2025-06-11
   speaker: Christina Koutsou
@@ -15,11 +15,11 @@
 
 - title: "Scaling RooFit's Automatic Differentiation Capabilities to CMS Combine"
   description: |
-  RooFit's integration with the Clad infrastructure has introduced automatic differentiation (AD), leading to significant speedups and driving major improvements in its minimization framework. Besides, the AD integration has also inspired several optimizations and simplifications of key RooFit components in general. The AD framework in RooFit is designed to be extensible, providing all necessary primitives to efficiently traverse RooFit’s computation graphs.
+    RooFit's integration with the Clad infrastructure has introduced automatic differentiation (AD), leading to significant speedups and driving major improvements in its minimization framework. Besides, the AD integration has also inspired several optimizations and simplifications of key RooFit components in general. The AD framework in RooFit is designed to be extensible, providing all necessary primitives to efficiently traverse RooFit’s computation graphs.
 
-  CMS Combine, the primary statistical analysis tool in the CMS experiment, has played a pivotal role in groundbreaking discoveries, including the Higgs boson. Built on RooFit, CMS Combine is making AD a natural extension to improve performance and usability. Recognizing this potential, we have begun a collaborative effort to bridge gaps between the two frameworks with a core focus of enabling AD within CMS Combine through RooFit.
+    CMS Combine, the primary statistical analysis tool in the CMS experiment, has played a pivotal role in groundbreaking discoveries, including the Higgs boson. Built on RooFit, CMS Combine is making AD a natural extension to improve performance and usability. Recognizing this potential, we have begun a collaborative effort to bridge gaps between the two frameworks with a core focus of enabling AD within CMS Combine through RooFit.
 
-  In this talk, we will present our progress, highlight the challenges encountered, and discuss the benefits and opportunities that AD integration brings to the CMS analysis workflow. By sharing insights from our ongoing work, we aim to engage the community in furthering AD adoption in high-energy physics.
+    In this talk, we will present our progress, highlight the challenges encountered, and discuss the benefits and opportunities that AD integration brings to the CMS analysis workflow. By sharing insights from our ongoing work, we aim to engage the community in furthering AD adoption in high-energy physics.
   location: "[Mode 2025](https://indico.cern.ch/event/1481852/contributions/6464892)"
   date: 2025-06-11
   speaker: Vassil Vasilev
