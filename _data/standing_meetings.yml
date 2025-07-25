@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm: Improve automatic differentiation of object-oriented paradigms using Clad"
+      date: 2025-07-10 15:00:00 +0200
+      speaker: "Petro Zarytskyi"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_10_07_2025_Petro_Zarytskyi_Midterm_AD_Object_Oriented_Paradigms.pdf)"
     - title: "Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
       date: 2025-06-19 15:00:00 +0200
       speaker: "Maksym Andriichuk"
@@ -20,7 +24,7 @@
       speaker: "Rohan Timmaraju"
       link: "[Slides](/assets/presentations/CaaS_Weekly_05_06_2025_Rohan_Timmaraju_LLM_Training.pdf)"
     - title: "Improve automatic differentiation of object-oriented paradigms using Clad"
-      date: 2025-06-05 16:00:00 +0200
+      date: 2025-06-05 15:00:00 +0200
       speaker: "Petro Zarytskyi"
       link: "[Slides](/assets/presentations/CaaS_Weekly_05_06_2025_Petro_Zarytskyi_AD_Object_Oriented_Paradigms.pdf)"
     - title: "Using ROOT in the field of genome sequencing"
