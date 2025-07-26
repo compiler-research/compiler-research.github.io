@@ -46,7 +46,8 @@
 
 - title: "Automatic Differentiation in RooFit and Community Needs"
   description: |
-    The goal of the talk is to demonstrate automatic differentiation in scientific workflows
+    The goal of the talk is to demonstrate automatic 
+    differentiation in scientific workflows
   location: "[Foundation Models for Science Mini Workshop](https://indico.cern.ch/event/1459124/contributions/6155024/"
   date: 2024-10-01
   speaker: Vassil Vasilev
