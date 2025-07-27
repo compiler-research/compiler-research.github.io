@@ -1,3 +1,16 @@
+- date: 2025-07-27
+  codebase: "Clad"
+  version: "v2.0"
+  description: |
+    Clad 2.0 introduces improvements across both forward and reverse automatic
+    differentiation modes, including the adoption of static scheduling by
+    default and expanded support for custom derivatives, such as those involving
+    STL containers and iterators. The release enhances compatibility with Clang
+    versions 10 through 20 and extends support for CUDA through updated tape
+    handling. Additional updates include improved error diagnostics, support for
+    more complex object types, and infrastructure for benchmarking.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v2.0"
+
 - date: 2025-04-26
   codebase: "Clad"
   version: "v1.10"
