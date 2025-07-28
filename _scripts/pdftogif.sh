@@ -6,6 +6,15 @@ if [[ $# -lt 2 ]] ; then
     exit 1
 fi
 
+if ! [ -x "$(command -v gs)" ]; then
+  echo 'Error: gs is not installed. This script depends on it' >&2
+  exit 1
+fi
+
+if ! [ -x "$(command -v convert2)" ]; then
+  echo 'Error: convert is not installed. This script depends on it' >&2
+  exit 1
+fi
 
 SLIDES_PDF=$1
 PRES_ID=$2
