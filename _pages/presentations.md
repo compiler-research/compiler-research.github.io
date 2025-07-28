@@ -22,8 +22,8 @@ permalink: /presentations/
 {% endif %}
 
 <span id="{{presi.id}}">&nbsp;</span>
-<div class="col-sm-12 clearfix">
- <div class="well text-justify">
+<div class="col-sm-12">
+ <div class="well text-justify clearfix">
   <pubtit>
     <a style="text-decoration:none;" href="#{{presi.id}}"> {{ presi.title }},
       {{ presi.location | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }},
