@@ -8,6 +8,7 @@ Caa
 Cppyy
 Debian
 EPC
+forw
 GPGPU
 GPT
 GSo
