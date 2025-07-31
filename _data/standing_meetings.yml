@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm evaluation: Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
+      date: 2025-07-31 15:00:00 +0200
+      speaker: "Maksym Andriichuk"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_31_07_25_Maksym_Andriichuk_Midterm_CUDA_Activity.pdf)"
     - title: "Midterm: Improve automatic differentiation of object-oriented paradigms using Clad"
       date: 2025-07-10 15:00:00 +0200
       speaker: "Petro Zarytskyi"
