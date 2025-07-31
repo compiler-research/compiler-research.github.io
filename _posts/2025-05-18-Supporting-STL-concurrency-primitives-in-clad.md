@@ -4,7 +4,7 @@ layout: post
 excerpt: "Support for STL concurrency features in CLAD is a useful feature for applications utilizing cpu threads. Many applications of autodifferentiation benefit from parallel or concurrent processing, and support for some STL concurrency primitives such as threads and basic synchronization primitives may considerably simplify the user's design."
 sitemap: false
 author: Petro Mozil
-permalink: blogs/gsoc25_/
+permalink: blogs/gsoc25_petro_mozil_introduction_blog
 banner_image: /images/blog/gsoc-banner.png
 date: 2025-05-18
 tags: gsoc llvm clang auto-differentiation

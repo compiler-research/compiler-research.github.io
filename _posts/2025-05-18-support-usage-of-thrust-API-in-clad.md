@@ -4,7 +4,7 @@ layout: post
 excerpt: "This summer, I am working on adding support for Thrust API in Clad, enabling automatic differentiation of GPU-accelerated code. This work bridges the gap between high-performance CUDA parallelism and source-to-source AD transformation."
 sitemap: false
 author: Abdelrhman Elrawy
-permalink: blogs/gsoc25_/
+permalink: blogs/gsoc25_abdelrhman_elrawy_introduction_blog
 banner_image: /images/blog/gsoc-banner.png
 date: 2025-05-18
 tags: gsoc llvm clang automatic-differentiation gpu cuda thrust
