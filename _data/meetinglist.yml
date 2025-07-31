@@ -1,4 +1,32 @@
 - name: "CaaS Monthly Meeting"
+  date: 2025-08-07 17:00:00 +0200
+  time_cest: "17:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"
+  label: caas_05June2025
+  agenda:
+    - title: "Interpreting C++ in the web through Jupyter"
+      speaker:
+        image: "https://compiler-research.org/images/team/Anutosh.jpg"
+        name: "Anutosh Bhat"
+        bio: |
+          Anutosh Bhat is a scientific software engineer at QuantStack, working
+          at the intersection of compilers, Jupyter infrastructure, and
+          WebAssembly. He contributes to projects such as LLVM, Xeus, and
+          JupyterLite, and leads efforts to package them for Emscripten-Forge,
+          a conda-based distribution for the browser.
+      description: |
+        While interpreted languages like Python and R dominate interactive data
+        science workflows, compiled languages such as C++ have historically
+        lacked seamless REPL-based environments — particularly in the browser.
+        This talk presents Xeus-Cpp-Lite, a WebAssembly-powered Jupyter kernel
+        that brings interactive C++ programming directly to the browser using
+        JupyterLite.
+
+        We'll explore how this effort bridges modern compiler infrastructure
+        with the Jupyter ecosystem to enable serverless, client-side C++
+        execution — unlocking a new path for scientific computing, education,
+        and rapid prototyping entirely in the browser.
+- name: "CaaS Monthly Meeting"
   date: 2025-06-05 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"
