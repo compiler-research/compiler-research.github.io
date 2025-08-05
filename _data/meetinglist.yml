@@ -2,7 +2,7 @@
   date: 2025-08-07 17:00:00 +0200
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"
-  label: caas_05June2025
+  label: caas_07Aug2025
   agenda:
     - title: "Interpreting C++ in the web through Jupyter"
       speaker:
