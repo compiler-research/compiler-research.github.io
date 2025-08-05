@@ -11,6 +11,15 @@
     more complex object types, and infrastructure for benchmarking.
   link: "https://github.com/vgvassilev/clad/releases/tag/v2.0"
 
+- date: 2025-05-22
+  codebase: "CppInterOp"
+  version: "v1.7.0"
+  description: |
+    This release introduces new utilities handling constructors, function
+    templates and best overload candidate matching. It improves stability and
+    resolves bugs.
+  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.7.0"
+
 - date: 2025-04-26
   codebase: "Clad"
   version: "v1.10"
