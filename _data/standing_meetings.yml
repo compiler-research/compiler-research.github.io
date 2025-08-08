@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm evaluation: Using ROOT in the field of Genome Sequencing"
+      date: 2025-08-07 15:00:00 +0200
+      speaker: "Aditya Pandey"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_07_08_25_Aditya_Pandey_Midterm_Genome_Sequencing.pdf)"
     - title: "Midterm evaluation: Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
       date: 2025-07-31 15:00:00 +0200
       speaker: "Maksym Andriichuk"
@@ -393,3 +397,4 @@
       date: 2025-05-28 15:00:00 +0200
       speaker: "Abdelrhman Elrawy"
       link: "[Slides](/assets/presentations/Abdelrhman_initial_presentation_support_usage_of_Thrust_API_in_clad.pdf)"
+
