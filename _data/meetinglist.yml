@@ -26,6 +26,7 @@
         with the Jupyter ecosystem to enable serverless, client-side C++
         execution — unlocking a new path for scientific computing, education,
         and rapid prototyping entirely in the browser.
+      slides: /assets/presentations/Anutosh_Bhat_Xeus-Cpp-Lite.pdf
 - name: "CaaS Monthly Meeting"
   date: 2025-06-05 17:00:00 +0200
   time_cest: "17:00"
