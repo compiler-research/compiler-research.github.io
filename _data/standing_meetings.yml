@@ -401,4 +401,8 @@
       date: 2025-05-28 15:00:00 +0200
       speaker: "Abdelrhman Elrawy"
       link: "[Slides](/assets/presentations/Abdelrhman_initial_presentation_support_usage_of_Thrust_API_in_clad.pdf)"
+    - title: "Agent-Based Simulation of CAR-T Cell Therapy Using BioDynaMo Midterm Presentation"
+      date: 2025-08-14 15:00:00 +0200
+      speaker: "Salvador de la Torre Gonzalez"
+      link: "[Slides](/assets/presentations/Salva_GSoC_midterm_presentation_CART.pdf)"
 
