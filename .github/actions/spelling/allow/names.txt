@@ -233,3 +233,6 @@ vvasilev
 wikipedia
 wlav
 zhang
+luciana
+melina
+luque

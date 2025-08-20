@@ -77,6 +77,20 @@
     as the ROOT Python interface. His other academic interests include
     differential programming and financial markets.
 
+- name: Luciana Melina Luque
+  info: Cross-Disciplinary Fellow
+  photo: lucianaMelinaLuque.png
+  email:  l.luque@crukscotlandinstitute.ac.uk
+  education: PhD in Physics. National University of La Plata. Argentina (2019)
+  active: 1
+  associated: 1
+  org: Cancer Research UK - Scotland Institute. United Kingdom
+  responsibilities: |
+    Luciana holds a background in physics and computational biology. She contributes 
+    to Compiler Research by bridging algorithm development and real-world biological 
+    challenges, helping translate computational models into biological insights and 
+    clinical relevance.
+
 ################################################################################
 #                                     TEAM                                     #
 ################################################################################
