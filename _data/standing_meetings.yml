@@ -7,6 +7,10 @@
       date: 2025-08-14 15:00:00 +0200
       speaker: "Abdelrhman Elrawy"
       link: "[Slides](/assets/presentations/CaaS_Weekly_14_08_25_Abdelrhman_Elrawy_Midterm_Thrust.pdf)"
+    - title: "Midterm evaluation: Implementing debugging support for xeus-cpp"
+      date: 2025-08-07 15:00:00 +0200
+      speaker: "Abhinav Kumar"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_07_08_2025_Abhinav_Kumar_Midterm_Debugger_XeusCpp.pdf)"
     - title: "Midterm evaluation: Using ROOT in the field of Genome Sequencing"
       date: 2025-08-07 15:00:00 +0200
       speaker: "Aditya Pandey"
