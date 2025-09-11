@@ -19,6 +19,10 @@
       date: 2025-07-31 15:00:00 +0200
       speaker: "Maksym Andriichuk"
       link: "[Slides](/assets/presentations/CaaS_Weekly_31_07_25_Maksym_Andriichuk_Midterm_CUDA_Activity.pdf)"
+    - title: "Midterm: Enhancing LLM Training Efficiency with Clad"
+      date: 2025-07-31 15:00:00 +0200
+      speaker: "Rohan Timmaraju"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_31_07_25_Rohan_Timmaraju_Midterm_LLM.pdf)"
     - title: "Midterm: Implement and improve an efficient, layered tape with prefetching capabilities"
       date: 2025-07-24 15:00:00 +0200
       speaker: "Aditi Milind Joshi"
