@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Wrap-Up: Improve automatic differentiation of object-oriented paradigms using Clad"
+      date: 2025-09-18 15:00:00 +0200
+      speaker: "Petro Zarytskyi"
+      link: "[Slides](/assets/presentations/CaaS_Weekly_18_09_2025_Petro_Zarytskyi_OOPParadigms_GSoC_WrapUp.pdf)"
     - title: "Midterm evaluation: Support usage of Thrust API in Clad"
       date: 2025-08-14 15:00:00 +0200
       speaker: "Abdelrhman Elrawy"
