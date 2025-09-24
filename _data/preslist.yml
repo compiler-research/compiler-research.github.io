@@ -2,7 +2,7 @@
   description: |
     Agent-based models (ABM) are powerful tools for digital twins in personalised medicine, enabling simulation of CAR T cell dynamics and therapy responses. CARTopiaX, implemented in the BioDynaMo engine, supports rapid, high-performance 3D simulations of tumour growth and CAR T cell administration, reproducing cellular dynamics with high fidelity and offering an accessible interface to explore treatment dose, fractionation, and administration routes.
 
-    Tissue-resolved wet-lab measurements of CAR T cell functionality and persistence across organs are critical to guide and validate ABM, supporting the evaluation of different dosimetry strategies, including single and multiple dosing to prevent T cell hypofunction. Preliminary benchmarks show that CARTopiaX runs simulations in approximately half the time of the previously available ABM.
+    Tissue-resolved wet-lab measurements of CAR T cell functionality and persistence across organs are critical to guide and validate ABM, supporting the evaluation of different dosimetry strategies, including single and multiple dosing to prevent T cell hypofunction. Preliminary benchmarks show that CARTopiaX runs simulations in approximately half the time of the previously published ABM.
 
     This tissue-aware digital-twin framework provides fast, interpretable, and actionable insights, facilitating hypothesis testing, reducing exploratory animal use, and guiding CAR T cell dosimetry in preclinical studies.
   location: "[Foundations of Oncological Digital Twins workshop in Cambridge](https://www.newton.ac.uk/event/ooew07/)"
