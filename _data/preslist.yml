@@ -1,3 +1,18 @@
+- title: "From measurement to decision: a tissue-aware digital-twin platform for CAR T cell dosimetry"
+  description: |
+    Agent-based models (ABM) are powerful tools for digital twins in personalised medicine, enabling simulation of CAR T cell dynamics and therapy responses. CARTopiaX, implemented in the BioDynaMo engine, supports rapid, high-performance 3D simulations of tumour growth and CAR T cell administration, reproducing cellular dynamics with high fidelity and offering an accessible interface to explore treatment dose, fractionation, and administration routes.
+
+    Tissue-resolved wet-lab measurements of CAR T cell functionality and persistence across organs are critical to guide and validate ABM, supporting the evaluation of different dosimetry strategies, including single and multiple dosing to prevent T cell hypofunction. Preliminary benchmarks show that CARTopiaX runs simulations in approximately half the time of the previously available ABM.
+
+    This tissue-aware digital-twin framework provides fast, interpretable, and actionable insights, facilitating hypothesis testing, reducing exploratory animal use, and guiding CAR T cell dosimetry in preclinical studies.
+  location: "[Foundations of Oncological Digital Twins workshop in Cambridge](https://www.newton.ac.uk/event/ooew07/)"
+  date: 2025-09-19
+  speaker: Luciana Melina Luque
+  id: "CARTDIGITALTWIN2025CAMBRIDGE"
+  artifacts: |
+    [Link to Poster](/assets/presentations/LMLuque_Poster_19_09_2025.pdf)
+  highlight: 1
+
 - title: "Bringing Automatic Differentiation to CUDA with Compiler-Based Source Transformations"
   description: |
     GPUs have become increasingly popular for their ability to perform parallel operations efficiently, driving interest in General-Purpose GPU Programming. Scientific computing, in particular, stands to benefit greatly from these capabilities. However, parallel programming systems such as CUDA introduce challenges for code transformation tools due to their reliance on low-level hardware management primitives. These challenges make implementing automatic differentiation (AD) for parallel systems particularly complex.
