@@ -89,13 +89,13 @@ achieve the stated objectives:
 
 - Imported three pieces of code from Combine that handle the minimization 
   procedures within the framework in RooFit's `RooMinimizer.cxx`. 
-  The first is the class `FreezeDisconnectedParametersRAII`,
+  The first is a class imported by Jonas Rembser called `FreezeDisconnectedParametersRAII`,
   which automatically freezes and unfreezes parameters disconnected from 
   the likelihood graph. The second is the function `generateOrthogonalCombinations`, 
   which generates a list of index combinations by initializing a base configuration 
   with all indices set to zero and then varying one category at a time. 
-  The third and final function is `reorderCombinations`, which takes the 
-  set of indices produced by `generateOrthogonalCombinations` and adjusts 
+  The third and final piece of code is a function called  `reorderCombinations`, 
+  which takes the set of indices produced by `generateOrthogonalCombinations` and adjusts 
   each combination by adding the corresponding base values modulo the 
   maximum allowed index, effectively shifting the combinations relative 
   to the current best indices.
@@ -104,8 +104,8 @@ achieve the stated objectives:
   which is the main minimization algorithm in Combine, was imported in
   `RooMinimizer.cxx`.
   
-- Created a [tutorial](https://root.cern/doc/master/rf619__discrete__profiling_8py.html) 
-  and a [benchmark](https://github.com/vgvassilev/clad/issues/1521), 
+- A  [tutorial](https://root.cern/doc/master/rf619__discrete__profiling_8py.html) was created
+  along with  a [benchmark](https://github.com/vgvassilev/clad/issues/1521) ,made by Jonas Rembser, 
   demonstrating discrete profiling with RooMultiPdf objects and evaluating 
   the performance of AD in the likelihood scans.  
 
@@ -128,10 +128,10 @@ accurate optimization of both discrete and continuous parameters.
   gains from automatic differentiation.
 
 - Additional optimization of Clad is needed to eliminate unnecessary overhead 
- in gradient generation.
+  in gradient generation.
 
 - The discrete profiling logic implemented in RooMinimizer should be tested across 
-different models to evaluate the minimizer’s behavior and robustness
+  different models to evaluate the minimizer’s behavior and robustness.
 
 ## **Acknowledgements**
 would like to express my sincere gratitude to the CERN Summer School for 
