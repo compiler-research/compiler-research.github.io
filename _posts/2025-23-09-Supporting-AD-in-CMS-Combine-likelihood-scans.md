@@ -11,7 +11,7 @@ author: Galin Bistrev
 permalink: blogs/2025_galin_bistrev_results_blog/
 banner_image: /images/blog/banner-cern.jpg
 date: 2025-09-25
-tags: cern cms root combine c++ rooFit automatic-differentiation	
+tags: cern cms root combine c++ RooFit automatic-differentiation	
 ---
 
 ### **Introduction**
@@ -22,7 +22,7 @@ that aimed to provide support for Automatic Differentiation (AD)
 into  the CMS Combine tool profile likelihood scans.
 
 
-Mentors: Jonas Rembser , Vassil Vasilev , David Lange
+Mentors: Jonas Rembser, Vassil Vasilev, David Lange
 
 ### **Description of the Project**
 
@@ -32,7 +32,7 @@ statistical analysis tool of the CMS experiment at CERN.
 Combine is built on top of RooFit, which has recently introduced AD to 
 improve minimization techniques.By providing computationally efficient
 gradients through AD, RooFit achieves substantial performance 
-improvements. In Roofit ,Clad converts internal likelihood representations 
+improvements. In RooFit ,Clad converts internal likelihood representations 
 into standalone C++ code, from which gradient routines for AD 
 are generated.This strategy not only speeds up the fitting process but 
 also increases the portability and shareability of likelihood models, 
@@ -88,7 +88,7 @@ achieve the stated objectives:
   `CodegenImpl.cxx` to generate code for models making use of it.  
 
 - Imported three pieces of code from Combine that handle the minimization 
-  procedures within the framework in Roofit's `RooMinimizer.cxx`. 
+  procedures within the framework in RooFit's `RooMinimizer.cxx`. 
   The first is the class `FreezeDisconnectedParametersRAII`,
   which automatically freezes and unfreezes parameters disconnected from 
   the likelihood graph. The second is the function `generateOrthogonalCombinations`, 
@@ -99,7 +99,7 @@ achieve the stated objectives:
   them so that combinations differing least from the current best 
   configuration are evaluated first.
  
-- Using the above stated functions , the discrete profiling algorith, 
+- Using the above stated functions , the discrete profiling algorithm, 
   which is the main minimization algorithm in Combine, was imported in
   `RooMinimizer.cxx`.
   
@@ -145,7 +145,6 @@ CERN.
 
 
 ## **Related Links**
-### Related Links
 - [CMS Combine GitHub page]https://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/latest/
 - [ROOT official repository]https://github.com/root-project/root
 - [My GitHub profile]https://github.com/GalinBistrev2 
