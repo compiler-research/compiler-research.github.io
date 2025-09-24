@@ -95,9 +95,10 @@ achieve the stated objectives:
   which generates a list of index combinations by initializing a base configuration 
   with all indices set to zero and then varying one category at a time. 
   The third and final function is `reorderCombinations`, which takes the 
-  set of indices produced by `generateOrthogonalCombinations` and reorders
-  them so that combinations differing least from the current best 
-  configuration are evaluated first.
+  set of indices produced by `generateOrthogonalCombinations` and adjusts 
+  each combination by adding the corresponding base values modulo the 
+  maximum allowed index, effectively shifting the combinations relative 
+  to the current best indices.
  
 - Using the above stated functions , the discrete profiling algorithm, 
   which is the main minimization algorithm in Combine, was imported in
