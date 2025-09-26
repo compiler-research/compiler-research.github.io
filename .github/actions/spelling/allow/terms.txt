@@ -51,6 +51,7 @@ consteval
 cppyy
 cytokine
 cytokines
+doxygen
 gitlab
 gpu
 gridlay

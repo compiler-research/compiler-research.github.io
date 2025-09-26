@@ -71,7 +71,7 @@ offering improved performance.
 Over the course of the project, several major tasks were completed to achieve the stated objectives:
 
 - Imported the `RooMultiPdf` class in RooFit from Combine, enabling 
-switching between multiple PDFs, applying statistical penalties, 
+switching between multiple PDF-s, applying statistical penalties, 
 and supporting code generation for AD.
  
 - The implementation of the new class was made to be supported by 
