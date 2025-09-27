@@ -5,6 +5,7 @@ Backpropagation
 CINT
 CMSSW
 Caa
+Codegen
 Cppyy
 Debian
 EPC
@@ -30,6 +31,7 @@ Ohridski
 OMP
 OpenMP
 PTX
+RAII
 Resugaring
 SBO
 Slib
@@ -44,10 +46,12 @@ biodynamo
 bioinformatics
 blogs
 cms
+codegen
 consteval
 cppyy
 cytokine
 cytokines
+doxygen
 gitlab
 gpu
 gridlay
