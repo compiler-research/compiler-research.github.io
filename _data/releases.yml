@@ -1,3 +1,21 @@
+- date: 2025-10-01
+  codebase: "Clad"
+  version: "v2.1"
+  description: |
+    Clad 2.1 introduces major advancements in reverse mode differentiation,
+    bringing smarter handling of loops, assignments, and method calls, alongside
+    the new clad::restore_tracker for functions that modify their
+    inputs. Forward mode gains static scheduling for Hessians and higher-order
+    derivatives, while CUDA support expands with custom derivatives for key
+    Thrust algorithms such as reduce, transform, and transform_reduce, plus
+    optimizations that reduce unnecessary GPU atomics. The release also
+    strengthens error estimation, simplifies adjoint initialization, improves
+    tape efficiency, and enhances diagnostics. With a migration to C++17,
+    support extended up to clang-21, and numerous bug fixes, Clad 2.1 delivers
+    faster, safer, and more reliable automatic differentiation across CPU and
+    GPU workflows.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v2.1"
+
 - date: 2025-07-27
   codebase: "Clad"
   version: "v2.0"
