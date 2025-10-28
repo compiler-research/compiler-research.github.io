@@ -1,0 +1,197 @@
+- name: "CompilerResearchCon 2025 (day 2)"
+  date: 2025-11-13 15:00:00 +0200
+  time_cest: "15:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"
+  label: gsoc2025_wrapup_2
+  agenda:
+    - title: "Implementing Debugging Support for xeus-cpp"
+      speaker:
+        name: "Abhinav Kumar"
+      time_cest: "15:00 - 15:20"
+      description: |
+        This proposal outlines integrating debugging into the xeus-cpp kernel 
+        for Jupyter using LLDB and its Debug Adapter Protocol (lldb-dap). 
+        Modeled after xeus-python, it leverages LLDB’s Clang and JIT debugging 
+        support to enable breakpoints, variable inspection, and step-through 
+        execution. The modular design ensures compatibility with Jupyter’s 
+        frontend, enhancing interactive C++ development in notebooks.
+
+        This project achieved DAP protocol integration with xeus-cpp. User can 
+        use the JupyterLab’s debugger panel to debug C++ JIT code. Applying and 
+        hitting breakpoints, stepping in and out of functions are supported in 
+        xeus-cpp. Additionally, during this project I had refactored 
+        the Out-of-Process JIT execution which was the major part in implementing 
+        the debugger. 
+
+
+      # slides: /assets/presentations/...
+
+    - title: "Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
+      speaker:
+        name: "Maksym Andriichuk"
+      time_cest: "15:20 - 15:40"
+      description: |
+        Clad is a Clang plugin designed to provide automatic differentiation (AD) for C++ 
+        mathematical functions. It generates code for computing derivatives modifying 
+        Abstract-Syntax-Tree(AST) using LLVM compiler features. It performs advanced program 
+        optimization by implementing more sophisticated analyses because it has access to a 
+        rich program representation – the Clang AST. 
+
+        The project achieved to optimize code  that contains potential data-race conditions, 
+        significantly speeding up the execution. Thread Safety Analysis is a static analysis 
+        that detects possible data-race conditions that would enable reducing atomic 
+        operations in the Clad-produced code.
+        
+      # slides: /assets/presentations/...
+
+    - title: "Enable automatic differentiation of OpenMP programs with Clad"
+      speaker:
+        name: "Jiayang Li"
+      time_cest: "15:40 - 16:00"
+      description: |
+        This project extends Clad, a Clang-based automatic differentiation tool for C++, to 
+        support OpenMP programs. This project enables Clad to parse and differentiate 
+        functions with OpenMP directives, thereby enabling gradient computation in 
+        multi-threaded environments.
+
+        This project achieved Clad support for both forward and reverse mode differentiation 
+        of common OpenMP directives (parallel, parallel for) and clauses (private, 
+        firstprivate, lastprivate, shared, atomic, reduction) by implementing OpenMP-related 
+        AST parsing and designing corresponding differentiation strategies. Additional 
+        contributions include example applications and comprehensive tests.
+
+        
+      # slides: /assets/presentations/...
+
+    - title: "Using ROOT in the field of Genome Sequencing"
+      speaker:
+        name: "Aditya Pandey"
+      time_cest: "16:00 - 16:20"
+      description: |
+        The project extends ROOT, CERN's petabyte-scale data processing framework, to address 
+        the critical challenge of managing genomic data that generates upto 200GB per human 
+        genome. By leveraging ROOT's big data expertise and introducing the next-generation 
+        RNTuple columnar storage format specifically optimized for genomic sequences, the 
+        project eliminates the traditional trade-off between compression efficiency and 
+        access speed in bioinformatics.
+
+        The project achieved comprehensive genomic data support through validating GeneROOT 
+        baseline performance benchmarks against BAM/SAM formats, implementing RNTuple-based 
+        RAM (ROOT Alignment Maps) format with full SAM/BAM field support and smart reference 
+        management, demonstrating 23.5% smaller file sizes compared to CRAM while delivering 
+        1.9x faster large region queries and 3.2x faster full chromosome scans, optimizing 
+        FASTQ compression from 14.2GB to 6.8GB. We also developed chromosome based 
+        file-splitting for larger genome file so that chromosome based data can be extracted. 
+
+        
+      # slides: /assets/presentations/...
+
+- name: "CompilerResearchCon 2025 (day 1)"
+  date: 2025-10-30 15:00:00 +0200
+  time_cest: "15:00"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"
+  label: gsoc2025_wrapup_1
+  agenda:
+    - title: "CARTopiaX an Agent-Based Simulation of CAR -T -Cell Therapy built on BioDynaMo"
+      speaker:
+        name: "Salvador de la Torre Gonzalez"
+      time_cest: "15:00 - 15:20"
+      description: |
+        CAR- T-cell therapy is a form of cancer immunotherapy that engineers a 
+        patient’s T cells to recognize and eliminate malignant cells. Although 
+        highly effective in leukemias and other hematological cancers, this therapy 
+        faces significant challenges in solid tumors due to the complex and 
+        heterogeneous tumor microenvironment. CARTopiaX is an advanced agent-based 
+        model developed to address this challenge, using the mathematical framework 
+        proposed in the Nature paper “In silico study of heterogeneous tumour-derived 
+        organoid response to CAR T-cell therapy,” successfully replicating its core 
+        results. Built on BioDynaMo, a high-performance, open-source platform for 
+        large-scale and modular biological modeling, CARTopiaX enables detailed 
+        exploration of complex biological interactions, hypothesis testing, and 
+        data-driven discovery within solid tumor microenvironments. 
+
+        The project achieved major milestones, including simulations that run more than 
+        twice as fast as previous model, allowing rapid scenario exploration and robust 
+        hypothesis validation; high-quality, well-structured, and maintainable C++ code 
+        developed following modern software engineering principles; and a scalable, 
+        modular, and extensible architecture that fosters collaboration, customization, 
+        and the continuous evolution of an open-source ecosystem. Altogether, this work 
+        represents a meaningful advancement in computational biology, providing 
+        researchers with a powerful tool to investigate CAR- T- cell dynamics in solid 
+        tumors and accelerating scientific discovery while reducing the time and cost 
+        associated with experimental wet-lab research.
+
+      # slides: /assets/presentations/...
+
+    - title: "Efficient LLM Training in C++ via Compiler-Level Autodiff with Clad"
+      speaker:
+        name: "Rohan Timmaraju"
+      time_cest: "15:20 - 15:40"
+      description: |
+        The computational demands of Large Language Model (LLM) training are 
+        often constrained by the performance of Python frameworks. This project 
+        tackles these bottlenecks by developing a high-performance LLM training 
+        pipeline in C++ using Clad, a Clang plugin for compiler-level automatic 
+        differentiation. The core of this work involved creating cladtorch, a new 
+        C++ tensor library with a PyTorch-style API designed for compatibility 
+        with Clad's differentiation capabilities. This library provides a more 
+        user-friendly interface for building and training neural networks while 
+        enabling Clad to automatically generate gradient computations for 
+        backpropagation.
+
+        Throughout the project, I successfully developed two distinct LLM training 
+        implementations. The first, using the cladtorch library, established a 
+        functional and flexible framework for Clad-driven AD. To further push 
+        performance boundaries, I then developed a second, highly-optimized 
+        implementation inspired by llm.c, which utilizes pre-allocated memory buffers 
+        and custom kernels. This optimized C-style approach, when benchmarked for 
+        GPT-2 training on a multithreaded CPU, outperformed the equivalent PyTorch 
+        implementation. This work successfully demonstrates the viability and 
+        performance benefits of compiler-based AD for deep learning in C++ and 
+        provides a strong foundation for future hardware acceleration, such as porting 
+        the implementation to CUDA.
+        
+      # slides: /assets/presentations/...
+
+    - title: "Implement and improve an efficient, layered tape with prefetching capabilities"
+      speaker:
+        name: "Aditi Milind Joshi"
+      time_cest: "15:40 - 16:00"
+      description: |
+        Clad relies on a tape data structure to store intermediate values during reverse 
+        mode differentiation. This project focuses on enhancing the core tape implementation 
+        in Clad to make it more efficient and scalable. Key deliverables include replacing 
+        the existing dynamic array-based tape with a slab allocation approach and small 
+        buffer optimization, enabling multilayer storage, and introducing thread safety to 
+        support concurrent access.
+
+        The current implementation replaces the dynamic array with a slab-based structure 
+        and a small static buffer, eliminating costly reallocations. Thread-safe access 
+        functions have been added through a mutex locking mechanism, ensuring safe parallel 
+        tape operations. Ongoing work includes developing a multilayer tape system with 
+        offloading capabilities, which will allow only the most recent slabs to remain in 
+        memory.
+
+        
+      # slides: /assets/presentations/...
+
+    - title: "Support usage of Thrust API in Clad"
+      speaker:
+        name: "Abdelrhman Elrawy"
+      time_cest: "16:00 - 16:20"
+      description: |
+        This project integrates NVIDIA's Thrust library into Clad, a Clang-based automatic 
+        differentiation tool for C++. By extending Clad's source-to-source transformation 
+        engine to recognize and differentiate Thrust parallel algorithms, the project 
+        enables automatic gradient generation for GPU-accelerated scientific computing 
+        and machine learning applications.
+
+        The project achieved Thrust support in Clad through implementing custom derivatives 
+        for core algorithms including thrust::reduce, thrust::transform, 
+        thrust::transform_reduce, thrust::inner_product, thrust::copy, scan operations 
+        (inclusive/exclusive), thrust::adjacent_difference, and sorting primitives. 
+        Additional contributions include Thrust data containers like thrust::device_vector, 
+        generic functor handling for transformations, demonstration applications, and 
+        comprehensive unit tests.
+        
+      # slides: /assets/presentations/...
