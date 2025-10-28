@@ -134,3 +134,15 @@ VVCR
 VVLLVM
 VVMODE
 VVSNL
+Autodiff
+cladtorch
+FASTQ
+firstprivate
+godbolt
+KWh
+lastprivate
+markdownify
+crcon
+crconlist
+petabyte
+Vkv
