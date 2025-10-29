@@ -2,7 +2,7 @@
   date: 2025-11-13 15:00:00 +0200
   time_cest: "15:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"
-  label: gsoc2025_wrapup_2
+  label: crcon25_part_2
   agenda:
     - title: "Implementing Debugging Support for xeus-cpp"
       speaker:
@@ -90,7 +90,7 @@
   date: 2025-10-30 15:00:00 +0200
   time_cest: "15:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/94431046845?pwd=D5i77Qb0PgfwwIubvbo2viEunne7eQ.1)"
-  label: gsoc2025_wrapup_1
+  label: crcon25_part_1
   agenda:
     - title: "CARTopiaX an Agent-Based Simulation of CAR -T -Cell Therapy built on BioDynaMo"
       speaker:
