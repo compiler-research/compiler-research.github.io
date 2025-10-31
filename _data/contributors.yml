@@ -420,34 +420,33 @@
   info: "Google Summer of Code 2025 Contributor"
   email: delatorregonzalezsalvador@gmail.com
   github: "https://github.com/salva24"
-  linkedin: "https://www.linkedin.com/in/salva-de-la-torre-gonzalez-7299b6335/"
+  linkedin: "https://www.linkedin.com/in/salvador-de-la-torre-gonzalez-7299b6335/"
   education: "Mathematics and Computer Engineering, University of Seville, Spain"
   active: 1
   projects:
-    - title: "Agent-Based Simulation of CAR-T Cell Therapy Using BioDynaMo"
-      status: Ongoing
+    - title: "CARTopiaX: an Agent-Based Simulation of CAR T-Cell Therapy built on BioDynaMo"
+      status: Completed
       description: |
-        Chimeric Antigen Receptor T-cell (CAR-T) therapy has shown great promise 
-        in treating hematological cancers by harnessing the immune system to target 
-        and eliminate tumor cells. However, its effectiveness in solid tumors remains 
-        limited due to challenges such as poor T-cell infiltration, immune suppression, 
-        and T-cell exhaustion. This project aims to develop a scalable, agent-based 
-        simulation of CAR-T therapy using BioDynaMo, a high-performance, open-source 
-        biological simulation platform. The simulation will model key aspects of CAR-T 
-        dynamics, including T-cell migration, tumor cell engagement, and the influence 
-        of microenvironmental factors like hypoxia, regulatory T-cells, and 
-        immunosuppressive cytokines. By simulating various tumor types, including solid 
-        tumors and leukemias, the model will explore treatment variables such as CAR-T 
-        dosage, timing of administration, and combination strategies like checkpoint 
-        inhibitors and cytokine support. The project will deliver a complete and 
-        well-documented BioDynaMo-based simulation modeling CAR-T cell therapy, 
-        custom analysis scripts for visualizing tumor regression and evaluating CAR-T 
-        efficacy, performance benchmarking across therapeutic strategies, and a detailed 
-        report summarizing insights and future directions. This approach will provide 
-        valuable insights for optimizing CAR-T therapies, particularly in complex tumor 
-        microenvironments.
+        CAR T-cell therapy is a form of cancer immunotherapy that engineers a patient’s T cells 
+        to recognize and eliminate malignant cells. Although highly effective in leukemias and other 
+        hematological cancers, this therapy faces significant challenges in solid tumors due to the 
+        complex and heterogeneous tumor microenvironment. CARTopiaX is an advanced agent-based model 
+        developed to address this challenge, using the mathematical framework proposed in the Nature 
+        paper “In silico study of heterogeneous tumour-derived organoid response to CAR T-cell therapy,” 
+        successfully replicating its core results. Built on BioDynaMo, a high-performance, open-source 
+        platform for large-scale and modular biological modeling, CARTopiaX enables detailed 
+        exploration of complex biological interactions, hypothesis testing, and data-driven discovery 
+        within solid tumor microenvironments. 
+        The project achieved major milestones, including simulations that run more than twice as fast as 
+        previous model, allowing rapid scenario exploration and robust hypothesis validation; high-quality, 
+        well-structured, and maintainable C++ code developed following modern software engineering 
+        principles; and a scalable, modular, and extensible architecture that fosters collaboration, 
+        customization, and the continuous evolution of an open-source ecosystem. Altogether, this work 
+        represents a meaningful advancement in computational biology, providing researchers with a powerful 
+        tool to investigate CAR T-cell dynamics in solid tumor and accelerating scientific discovery while 
+        reducing the time and cost associated with experimental wet-lab research.
       proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2025.pdf
-      mentors: Vassil Vassilev, Lukas Breitwieser
+      mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque, Tobias Duswald
 
 - name: Rohan Timmaraju
   photo: Rohan_Timmaraju.jpg
