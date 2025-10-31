@@ -425,3 +425,7 @@
       date: 2025-08-14 15:00:00 +0200
       speaker: "Salvador de la Torre Gonzalez"
       link: "[Slides](/assets/presentations/Salva_GSoC_midterm_presentation_CART.pdf)"
+    - title: "CARTopiaX: an Agent-Based Simulation of CAR T-Cell Therapy built on BioDynaMo. GSoC Wrap-Up: CompilerResearchCon 2025"
+      date: 2025-10-30 15:00:00 +0200
+      speaker: "Salvador de la Torre Gonzalez"
+      link: "[Slides](/assets/presentations/Salva_GSoC25_final_presentation_CART.pdf)"

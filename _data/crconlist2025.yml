@@ -92,7 +92,7 @@
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   label: crcon25_part_1
   agenda:
-    - title: "CARTopiaX an Agent-Based Simulation of CAR -T -Cell Therapy built on BioDynaMo"
+    - title: "CARTopiaX an Agent-Based Simulation of CAR T-Cell Therapy built on BioDynaMo"
       speaker:
         name: "Salvador de la Torre Gonzalez"
       time_cest: "15:00 - 15:20"
@@ -121,7 +121,7 @@
         tumors and accelerating scientific discovery while reducing the time and cost 
         associated with experimental wet-lab research.
 
-      # slides: /assets/presentations/...
+      slides: /assets/presentations/Salva_GSoC25_final_presentation_CART.pdf
 
     - title: "Efficient LLM Training in C++ via Compiler-Level Autodiff with Clad"
       speaker:
