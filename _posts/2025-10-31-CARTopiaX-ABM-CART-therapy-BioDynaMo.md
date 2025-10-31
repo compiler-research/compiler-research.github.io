@@ -76,7 +76,7 @@ All cells consume oxygen, and cancer cells can die from **necrosis** in its abse
 
 <u>Before day 10:</u> CAR T-cells are actively killing tumor cells and **Type 1 and 2 cell populations decrease** as more proliferative cancer cells are targeted.
 
-<u>After day 10:</u> When CAR T-cells die from apoptosis, **Type 1 and 2 cells increase** their proportion in the tumor at the expense of Type 3 and 4 cells, as high-oncoprotein expressers divide faster.
+<u>After day 10:</u> When CAR T-cells die from apoptosis, **Type 1 and 2 cells increase** their proportion in the tumor at the expense of Type 3 and 4 cells, as high-oncoprotein-expressing cells divide faster.
 
 <img src="/images/blog/cartopiax/dose_scale1_day0_type_of_cells_percentage_populations.png" alt="1dose Percentage of Each Cell Type" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
 
