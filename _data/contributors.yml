@@ -86,9 +86,9 @@
   associated: 1
   org: Cancer Research UK - Scotland Institute. United Kingdom
   responsibilities: |
-    Luciana holds a background in physics and computational biology. She contributes 
-    to Compiler Research by bridging algorithm development and real-world biological 
-    challenges, helping translate computational models into biological insights and 
+    Luciana holds a background in physics and computational biology. She contributes
+    to Compiler Research by bridging algorithm development and real-world biological
+    challenges, helping translate computational models into biological insights and
     clinical relevance.
 
 ################################################################################
@@ -147,18 +147,18 @@
         Clad is a Clang plugin enabling automatic differentiation (AD) for C++ mathematical
         functions by modifying the abstract syntax tree using LLVM's compiler capabilities.
         It integrates into existing codebases without modifications and supports forward and
-        reverse mode differentiation. Reverse mode is efficient for Machine Learning and 
+        reverse mode differentiation. Reverse mode is efficient for Machine Learning and
         inverse problems involving backpropagation.
         Reverse mode AD requires two passes: forward pass stores intermediate values, reverse
-        pass computes derivatives. Currently, Clad only supports storing trivially copyable 
+        pass computes derivatives. Currently, Clad only supports storing trivially copyable
         types for function call arguments, limiting support for C-style arrays and non-copyable
         types like unique pointers, constraining Object-Oriented Programming usage.
         The project aims to enhance Clad's capability to store intermediate values for non-copyable
-        types. One of the challenges lies in determining which expressions are modified in nested 
+        types. One of the challenges lies in determining which expressions are modified in nested
         functions, potentially requiring run-time memory location tracking, which can be inefficient.
         The solution involves enhancing To-Be-Recorded (TBR) analysis, currently limited with
-        poor nested function call support and no pointer reassignment handling. Improved TBR 
-        analysis will enable predictable memory handling, generating optimal code, and 
+        poor nested function call support and no pointer reassignment handling. Improved TBR
+        analysis will enable predictable memory handling, generating optimal code, and
         supporting both non-copyable types and efficient storage of copyable structures.
       proposal: /assets/docs/Petro_Zarytskyi_Proposal_2025.pdf
       mentors: Vassil Vassilev, David Lange
@@ -198,7 +198,7 @@
     - title: "Optimizing automatic differentiation using activity analysis"
       status: Completed project
       description: |
-        Clad has undergone significant optimization in the recent years. One such optimization is the To-Be-Recorded optimization which reduces the memory pressure to the clad tape data structure. The next step is to implement the activity analysis which discards all statements which are irrelevant for the generated code. That is, if the statements do not depend on the input/output variables of a routine in a differentiable way, they are ignored. Combining both analyses could result in a much greater performance, which is our ultimate goal.        
+        Clad has undergone significant optimization in the recent years. One such optimization is the To-Be-Recorded optimization which reduces the memory pressure to the clad tape data structure. The next step is to implement the activity analysis which discards all statements which are irrelevant for the generated code. That is, if the statements do not depend on the input/output variables of a routine in a differentiable way, they are ignored. Combining both analyses could result in a much greater performance, which is our ultimate goal.
       proposal: /assets/docs/Maksym_Andriichuk_Proposal_2024.pdf
       mentors: Vassil Vassilev, David Lange, Petro Zarytskyi
 
@@ -243,31 +243,6 @@
         foster a more robust and accessible interactive C++ compilation and execution environment.
       mentors: Vassil Vassilev, Matheus Izvekov
       proposal: /assets/docs/Sahil_Patidar_Proposal_2024_ClangRepl.pdf
-
-- name: "Christina Koutsou"
-  photo: christina_koutsou.jpg
-  info: "Google Summer of Code 2024 Contributor"
-  email: christinakoutsou22@gmail.com
-  education: "Integrated Master's in Electrical and Computer Engineering, Aristotle University of Thessaloniki, Greece"
-  github: "https://github.com/kchristin22"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/christina-koutsou-69416b28a/"
-  projects:
-    - title: "Reverse-mode automatic differentiation of GPU (CUDA) kernels using Clad"
-      status: Ongoing
-      description: |
-        Nowadays, the rise of AI has shed light into the power of GPUs. The notion of General Purpose GPU Programming is 
-        becoming more and more popular and it seems that the scientific community is increasingly favoring it over CPU Programming. 
-        Consequently, implementation of mathematics and operations needed for such projects are getting adjusted to GPU's architecture. 
-        Automatic differentiation is a notable concept in this context, finding applications across diverse domains from ML to Finance to Physics. 
-        Clad is a clang plugin for automatic differentiation that performs source-to-source transformation and produces a function capable of 
-        computing the derivatives of a given function at compile time. This project aims to widen Clad’s use range and audience by enabling 
-        the reverse-mode automatic differentiation of CUDA kernels. The total goal of the project is to support the differentiation of CUDA 
-        kernels that may also include typical CUDA built-in objects (e.g. threadIdx, blockDim etc.), which are employed to prevent race conditions, 
-        using Clad. These produced kernels will compute the derivative of an argument specified by the user as the output based on an input parameter 
-        of their choosing. In addition, the user must be able to call these kernels with a custom grid configuration. 
-      proposal: /assets/docs/Christina_Koutsou_GSoC_2024.pdf
-      mentors: Vassil Vassilev, Parth Arora, Alexander Penev
 
 - name: "Vipul Cariappa"
   photo: "Vipul-Cariappa.jpg"
@@ -316,81 +291,23 @@
     - title: "Using ROOT in the field of genome sequencing"
       status: Ongoing
       description: |
-       This project aims to advance genomic data management by implementing ROOT's 
-       next-generation RNTuple format for sequence alignment storage. Beginning 
-       with validation of previous GeneROOT benchmarks showing 4x performance gains 
+       This project aims to advance genomic data management by implementing ROOT's
+       next-generation RNTuple format for sequence alignment storage. Beginning
+       with validation of previous GeneROOT benchmarks showing 4x performance gains
        with `TTree`, we will then extend these capabilities with RNTuple technology.
        Genomic sequencing data volumes are growing exponentially, creating performance
-       bottlenecks in traditional formats.RNTuple's improved memory mapping, type 
-       safety through templated interfaces, and parallelization capabilities position 
+       bottlenecks in traditional formats.RNTuple's improved memory mapping, type
+       safety through templated interfaces, and parallelization capabilities position
        it as an ideal solution.
-       We will systematically compare compression algorithms, implement file splitting 
-       strategies, and benchmark against established formats.Additionally, I will 
+       We will systematically compare compression algorithms, implement file splitting
+       strategies, and benchmark against established formats.Additionally, I will
        analyze the latest compression strategies implemented by samtools and incorporate
        these techniques into the project to ensure comprehensive coverage of state-of-the-art
        genomic data compression approaches.
-       The project will deliver optimized tools for handling rapidly growing genomic datasets, 
+       The project will deliver optimized tools for handling rapidly growing genomic datasets,
        potentially establishing a new standard for high-performance genomic data analysis.
       proposal: /assets/docs/Aditya_Pandey_GSoC2025.pdf
       mentors: Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
-
-- name: Petro Mozil
-  photo: PetroMozil.jpg
-  info: "Google Summer of Code 2025 Contributor"
-  email: mozil.petryk@gmail.com
-  education: "Bachelor of Computer Science, Ukrainian Catholic University, Ukraine"
-  github: "https://github.com/pmozil"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/petro-mozil-a94583170/"
-  projects:
-    - title: "Enabling support for STL concurrency primitives in CLAD"
-      status: Ongoing
-      description: |
-        Clad recursively iterates over the syntax tree to check whether a given 
-        statement should be differentiated. Each function that is called from 
-        inside of a differentiated function should be differentiated as well, 
-        and so should any object method. The main issue for clad is that std::thread is an object, 
-        and thus as a type that should be differentiated However, std::thread shouldn’t 
-        be differentiated, the function inside of it should. 
-        Some of STL’s concurrency primitives face the same problem - 
-        the methods in them should not be differentiated, 
-        and only the location of where they were called should be preserved.
-      proposal: /assets/docs/petro_mozil_promosal_GSoC_2025.pdf
-      mentors: Martin Vassilev, David Lange
-
-- name: Galin Bistrev
-  photo: Bistrev.jpg
-  info: "CERN Summer student 2025"
-  email: gbistrev@uni-sofia.bg
-  education: "Nuclear and particle physics , Sofia University , St. Kliment  Ohridski , Bulgaria"
-  github: "https://github.com/GalinBistrev2"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/galin-bistrev-905920369/"
-  projects:
-    - title: "Implementing AD in CMS Combine"
-      status: Ongoing
-      description: |
-        This project aims to introduce automatic differentiation techniques into
-        the CMS Combine tool.  Combine is the primary statistical analysis tool
-        used in CMS and is based on the RooFit software.  Recently RooFit has
-        started using automatic differentiation (AD) technology to aid
-        minimization algorithms.  Computationally cheap gradients produced by AD
-        can improve performance of the larger workflows in Combine by more than
-        5x as demonstrated at ICHEP.  The way how RooFit implements AD also
-        benefits the shareability of likelihoods.  To get the likelihood
-        gradient, RooFit transforms the likelihood from its internal
-        representation to simple standalone C++ code, which is then used to
-        generate the gradient code.  This can help collaborators without RooFit
-        and Combine expertise to work with likelihoods from Combine at a lower
-        level.  Adopting AD in Combine requires further collaboration between
-        the parties.  This project aims to bring this AD support into Combine.
-        Aspects include reducing some of the code in Combine in favor of more
-        standard RooFit primitives; Implementing AD support for Combine-specific
-        RooFit primitives; and writing benchmarks to showcase the benefits of
-        RooFit AD in Combine.  The student selected for this project will work
-        with several high-energy physics codes as well as the LLVM compiler
-        ecosystem.
-      mentors: Vasil Vassilev,David Lange,Jonas Rembser
 
 - name: Jiayang Li
   photo: Jiayang_Li.jpg
@@ -427,23 +344,23 @@
     - title: "CARTopiaX: an Agent-Based Simulation of CAR T-Cell Therapy built on BioDynaMo"
       status: Completed
       description: |
-        CAR T-cell therapy is a form of cancer immunotherapy that engineers a patient’s T cells 
-        to recognize and eliminate malignant cells. Although highly effective in leukemias and other 
-        hematological cancers, this therapy faces significant challenges in solid tumors due to the 
-        complex and heterogeneous tumor microenvironment. CARTopiaX is an advanced agent-based model 
-        developed to address this challenge, using the mathematical framework proposed in the Nature 
-        paper “In silico study of heterogeneous tumour-derived organoid response to CAR T-cell therapy,” 
-        successfully replicating its core results. Built on BioDynaMo, a high-performance, open-source 
-        platform for large-scale and modular biological modeling, CARTopiaX enables detailed 
-        exploration of complex biological interactions, hypothesis testing, and data-driven discovery 
-        within solid tumor microenvironments. 
-        The project achieved major milestones, including simulations that run more than twice as fast as 
-        previous model, allowing rapid scenario exploration and robust hypothesis validation; high-quality, 
-        well-structured, and maintainable C++ code developed following modern software engineering 
-        principles; and a scalable, modular, and extensible architecture that fosters collaboration, 
-        customization, and the continuous evolution of an open-source ecosystem. Altogether, this work 
-        represents a meaningful advancement in computational biology, providing researchers with a powerful 
-        tool to investigate CAR T-cell dynamics in solid tumor and accelerating scientific discovery while 
+        CAR T-cell therapy is a form of cancer immunotherapy that engineers a patient’s T cells
+        to recognize and eliminate malignant cells. Although highly effective in leukemias and other
+        hematological cancers, this therapy faces significant challenges in solid tumors due to the
+        complex and heterogeneous tumor microenvironment. CARTopiaX is an advanced agent-based model
+        developed to address this challenge, using the mathematical framework proposed in the Nature
+        paper “In silico study of heterogeneous tumour-derived organoid response to CAR T-cell therapy,”
+        successfully replicating its core results. Built on BioDynaMo, a high-performance, open-source
+        platform for large-scale and modular biological modeling, CARTopiaX enables detailed
+        exploration of complex biological interactions, hypothesis testing, and data-driven discovery
+        within solid tumor microenvironments.
+        The project achieved major milestones, including simulations that run more than twice as fast as
+        previous model, allowing rapid scenario exploration and robust hypothesis validation; high-quality,
+        well-structured, and maintainable C++ code developed following modern software engineering
+        principles; and a scalable, modular, and extensible architecture that fosters collaboration,
+        customization, and the continuous evolution of an open-source ecosystem. Altogether, this work
+        represents a meaningful advancement in computational biology, providing researchers with a powerful
+        tool to investigate CAR T-cell dynamics in solid tumor and accelerating scientific discovery while
         reducing the time and cost associated with experimental wet-lab research.
       proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2025.pdf
       mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque, Tobias Duswald
@@ -460,18 +377,18 @@
     - title: "Enhancing LLM Training Efficiency with Clad for Automatic Differentiation"
       status: Ongoing
       description: |
-        Training Large Language Models is computationally expensive, often 
-        limited by the performance limitations of Python-based frameworks. This 
-        project addresses this challenge by enhancing LLM training efficiency 
-        within a C++ environment through the integration of Clad, a Clang/LLVM 
-        compiler plugin for automatic differentiation (AD). We will develop a 
-        custom C++ tensor library specifically designed for optimal interaction 
-        with Clad. The core objective is to replace traditional runtime or 
-        manual gradient computations with Clad's efficient compile-time 
-        differentiation for key LLM operations within a GPT-2 training pipeline. 
-        This involves investigating effective strategies to bridge Clad's static 
-        analysis with dynamic neural network computations, benchmarking the 
-        resulting performance gains in speed and memory usage against a non-Clad 
+        Training Large Language Models is computationally expensive, often
+        limited by the performance limitations of Python-based frameworks. This
+        project addresses this challenge by enhancing LLM training efficiency
+        within a C++ environment through the integration of Clad, a Clang/LLVM
+        compiler plugin for automatic differentiation (AD). We will develop a
+        custom C++ tensor library specifically designed for optimal interaction
+        with Clad. The core objective is to replace traditional runtime or
+        manual gradient computations with Clad's efficient compile-time
+        differentiation for key LLM operations within a GPT-2 training pipeline.
+        This involves investigating effective strategies to bridge Clad's static
+        analysis with dynamic neural network computations, benchmarking the
+        resulting performance gains in speed and memory usage against a non-Clad
         baseline, and leveraging OpenMP for further parallelization.
       proposal: /assets/docs/Rohan_Timmaraju_Proposal_2025.pdf
       mentors: Vassil Vassilev, David Lange, Jonas Rembser, Christina Koutsou
@@ -488,12 +405,12 @@
     - title: "Support usage of Thrust API in Clad"
       status: Ongoing
       description: |
-        This project enhances Clad, a Clang-based automatic differentiation tool, 
-        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming. 
-        The goal is to implement custom derivative rules for Thrust primitives like 
-        `thrust::transform` and `thrust::reduce`, making it possible to differentiate 
-        high-performance CUDA code automatically. This work bridges the gap between 
-        automatic differentiation and GPU acceleration, enabling efficient gradient 
+        This project enhances Clad, a Clang-based automatic differentiation tool,
+        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming.
+        The goal is to implement custom derivative rules for Thrust primitives like
+        `thrust::transform` and `thrust::reduce`, making it possible to differentiate
+        high-performance CUDA code automatically. This work bridges the gap between
+        automatic differentiation and GPU acceleration, enabling efficient gradient
         computations in scientific computing and machine learning workloads.
       proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
       mentors: Vassil Vassilev, Alexander Penev
@@ -510,11 +427,11 @@
     - title: "Implementing Debugging Support for xeus-cpp"
       status: Ongoing
       description: |
-        This project aims at integrating debugging into the xeus-cpp kernel for 
-        Jupyter using LLDB and its Debug Adapter Protocol (lldb-dap). Modeled 
-        after xeus-python, it leverages LLDB’s Clang and JIT debugging support 
-        to enable breakpoints, variable inspection, and step-through execution. 
-        The modular design ensures compatibility with Jupyter’s frontend, 
+        This project aims at integrating debugging into the xeus-cpp kernel for
+        Jupyter using LLDB and its Debug Adapter Protocol (lldb-dap). Modeled
+        after xeus-python, it leverages LLDB’s Clang and JIT debugging support
+        to enable breakpoints, variable inspection, and step-through execution.
+        The modular design ensures compatibility with Jupyter’s frontend,
         enhancing interactive C++ development in notebooks.
       proposal: /assets/docs/Abhinav_Kumar_Proposal_GSoC_2025.pdf
       mentors: Anutosh Bhat, Vipul Cariappa, Aaron Jomy, Vassil Vassilev
@@ -532,14 +449,14 @@
     - title: "Implement and improve an efficient, layered tape with prefetching capabilities"
       status: Ongoing
       description: |
-        Automatic Differentiation (AD) is a computational technique that enables 
-        efficient and precise evaluation of derivatives for functions expressed in code. 
-        Clad is a Clang-based automatic differentiation tool that transforms C++ source 
-        code to compute derivatives efficiently. A crucial component for AD in Clad is the 
-        tape, a stack-like data structure that stores intermediate values for reverse mode AD. 
-        While benchmarking, it was observed that the tape operations of the current implementation 
-        were significantly slowing down the program. This project aims to optimize and generalize 
-        the Clad tape to improve its efficiency, introduce multilayer storage, enhance thread safety, 
+        Automatic Differentiation (AD) is a computational technique that enables
+        efficient and precise evaluation of derivatives for functions expressed in code.
+        Clad is a Clang-based automatic differentiation tool that transforms C++ source
+        code to compute derivatives efficiently. A crucial component for AD in Clad is the
+        tape, a stack-like data structure that stores intermediate values for reverse mode AD.
+        While benchmarking, it was observed that the tape operations of the current implementation
+        were significantly slowing down the program. This project aims to optimize and generalize
+        the Clad tape to improve its efficiency, introduce multilayer storage, enhance thread safety,
         and enable CPU-GPU transfer.
       proposal: /assets/docs/Aditi_Milind_Joshi_Proposal_2025.pdf
       mentors: Aaron Jomy, David Lange, Vassil Vassilev
@@ -549,6 +466,101 @@
   info: See <a href="/careers">openings</a> for more info
   email: vvasilev@cern.ch
   active: 1
+
+
+################################################################################
+#                                     2025                                     #
+################################################################################
+
+- name: Galin Bistrev
+  photo: Bistrev.jpg
+  info: "CERN Summer student 2025"
+  email: gbistrev@uni-sofia.bg
+  education: "Nuclear and particle physics , Sofia University , St. Kliment  Ohridski , Bulgaria"
+  github: "https://github.com/GalinBistrev2"
+  linkedin: "https://www.linkedin.com/in/galin-bistrev-905920369/"
+  projects:
+    - title: "Implementing AD in CMS Combine"
+      status: Completed
+      description: |
+        This project aims to introduce automatic differentiation techniques into
+        the CMS Combine tool.  Combine is the primary statistical analysis tool
+        used in CMS and is based on the RooFit software.  Recently RooFit has
+        started using automatic differentiation (AD) technology to aid
+        minimization algorithms.  Computationally cheap gradients produced by AD
+        can improve performance of the larger workflows in Combine by more than
+        5x as demonstrated at ICHEP.  The way how RooFit implements AD also
+        benefits the shareability of likelihoods.  To get the likelihood
+        gradient, RooFit transforms the likelihood from its internal
+        representation to simple standalone C++ code, which is then used to
+        generate the gradient code.  This can help collaborators without RooFit
+        and Combine expertise to work with likelihoods from Combine at a lower
+        level.  Adopting AD in Combine requires further collaboration between
+        the parties.  This project aims to bring this AD support into Combine.
+        Aspects include reducing some of the code in Combine in favor of more
+        standard RooFit primitives; Implementing AD support for Combine-specific
+        RooFit primitives; and writing benchmarks to showcase the benefits of
+        RooFit AD in Combine.  The student selected for this project will work
+        with several high-energy physics codes as well as the LLVM compiler
+        ecosystem.
+      mentors: Vasil Vassilev,David Lange,Jonas Rembser
+
+- name: "Christina Koutsou"
+  photo: christina_koutsou.jpg
+  info: "Google Summer of Code 2024 Contributor"
+  email: christinakoutsou22@gmail.com
+  education: "Integrated Master's in Electrical and Computer Engineering, Aristotle University of Thessaloniki, Greece"
+  github: "https://github.com/kchristin22"
+  linkedin: "https://www.linkedin.com/in/christina-koutsou-69416b28a/"
+  projects:
+    - title: "Reverse-mode automatic differentiation of GPU (CUDA) kernels using Clad"
+      status: Completed
+      description: |
+        Nowadays, the rise of AI has shed light into the power of GPUs. The
+        notion of General Purpose GPU Programming is becoming more and more
+        popular and it seems that the scientific community is increasingly
+        favoring it over CPU Programming.  Consequently, implementation of
+        mathematics and operations needed for such projects are getting adjusted
+        to GPU's architecture.  Automatic differentiation is a notable concept
+        in this context, finding applications across diverse domains from ML to
+        Finance to Physics.  Clad is a clang plugin for automatic
+        differentiation that performs source-to-source transformation and
+        produces a function capable of computing the derivatives of a given
+        function at compile time. This project aims to widen Clad’s use range
+        and audience by enabling the reverse-mode automatic differentiation of
+        CUDA kernels. The total goal of the project is to support the
+        differentiation of CUDA kernels that may also include typical CUDA
+        built-in objects (e.g. threadIdx, blockDim etc.), which are employed to
+        prevent race conditions, using Clad. These produced kernels will compute
+        the derivative of an argument specified by the user as the output based
+        on an input parameter of their choosing. In addition, the user must be
+        able to call these kernels with a custom grid configuration.
+      proposal: /assets/docs/Christina_Koutsou_GSoC_2024.pdf
+      mentors: Vassil Vassilev, Parth Arora, Alexander Penev
+
+- name: Petro Mozil
+  photo: PetroMozil.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: mozil.petryk@gmail.com
+  education: "Bachelor of Computer Science, Ukrainian Catholic University, Ukraine"
+  github: "https://github.com/pmozil"
+  linkedin: "https://www.linkedin.com/in/petro-mozil-a94583170/"
+  projects:
+    - title: "Enabling support for STL concurrency primitives in CLAD"
+      status: Failed
+      description: |
+        Clad recursively iterates over the syntax tree to check whether a given
+        statement should be differentiated. Each function that is called from
+        inside of a differentiated function should be differentiated as well,
+        and so should any object method. The main issue for clad is that std::thread is an object,
+        and thus as a type that should be differentiated However, std::thread shouldn’t
+        be differentiated, the function inside of it should.
+        Some of STL’s concurrency primitives face the same problem -
+        the methods in them should not be differentiated,
+        and only the location of where they were called should be preserved.
+      proposal: /assets/docs/petro_mozil_promosal_GSoC_2025.pdf
+      mentors: Martin Vassilev, David Lange
+
 
 ################################################################################
 #                                     2024                                     #
@@ -601,9 +613,9 @@
     - title: "Support clang plugins on Windows"
       status: Completed
       description: |
-        This project aims to allow using dynamically loaded Clang plugins on windows by adding 
-        support for building LLVM and Clang as shared libraries on Windows with all the 
-        public c++ API exported and dynamically linking to them. Part of the process will be 
+        This project aims to allow using dynamically loaded Clang plugins on windows by adding
+        support for building LLVM and Clang as shared libraries on Windows with all the
+        public c++ API exported and dynamically linking to them. Part of the process will be
         automated with a tool built using the Clang tooling API to automatically add export macros
         on the appropriate class and functions declarations in LLVM public headers.
       proposal: /assets/docs/Thomas_Fransham_GSoC24_Proposal.pdf
@@ -732,7 +744,7 @@
       report: |
         [Final Report](/assets/docs/Vaibhav_Thakkar_GSoC23_Report.pdf)
 
-      
+
 - name: Isaac Morales Santana
   info: "GSoC 2024 Contributor"
   photo: Isaac.jpg
@@ -766,13 +778,13 @@
     - title: "Enable CUDA compilation on Cppyy-Numba generated IR"
       status: Failed
       description: |
-        Cppyy is an automatic, run-time, Python-C++ binding generator, for calling C++ from Python and Python from C++. 
+        Cppyy is an automatic, run-time, Python-C++ binding generator, for calling C++ from Python and Python from C++.
         Initial support has been added that allows Cppyy to hook into the high-performance Python compiler, Numba which
-        compiles looped code containing C++ objects/methods/functions defined via Cppyy into fast machine code. The 
-        project aims to enhance Cppyy, by enabling CUDA compilation on Numba-generated intermediate representation (IR). 
-        This integration will allow seamless utilization of CUDA paradigms in Python without compromising performance. 
-        The objectives includes adding support for Cppyy-defined CUDA Code i.e. implementing support for declaration and 
-        parsing of CUDA code defined in Cppyy within the Numba extension. Designing and developing a CUDA compilation 
+        compiles looped code containing C++ objects/methods/functions defined via Cppyy into fast machine code. The
+        project aims to enhance Cppyy, by enabling CUDA compilation on Numba-generated intermediate representation (IR).
+        This integration will allow seamless utilization of CUDA paradigms in Python without compromising performance.
+        The objectives includes adding support for Cppyy-defined CUDA Code i.e. implementing support for declaration and
+        parsing of CUDA code defined in Cppyy within the Numba extension. Designing and developing a CUDA compilation
         mechanism and execution within the Cppyy-Numba environment.
       proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
       mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
@@ -790,15 +802,15 @@
     - title: "STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
       status: Failed
       description: |
-            Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from Python and Python from C++. 
-            Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side. 
-            Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense. 
-            These cppyy objects can be plugged into idiomatic expressions that expect Python builtin-types. 
+            Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling C++ from Python and Python from C++.
+            Cppyy uses pythonized wrappers of useful classes from libraries like STL and Eigen that allow the user to utilize them on the Python side.
+            Current support follows container types in STL like std::vector, std::map, and std::tuple and the Matrix-based classes in Eigen/Dense.
+            These cppyy objects can be plugged into idiomatic expressions that expect Python builtin-types.
             This behaviour is achieved by growing pythonic methods like __len__ while also retaining its C++ methods like size.
-            Efficient and automatic conversion between C++ and Python is essential towards high-performance cross-language support. 
-            This approach eliminates overheads arising from iterative initialization such as comma insertion in Eigen. 
+            Efficient and automatic conversion between C++ and Python is essential towards high-performance cross-language support.
+            This approach eliminates overheads arising from iterative initialization such as comma insertion in Eigen.
             This opens up new avenues for the utilization of Cppyy’s bindings in tools that perform numerical operations for transformations, or optimization.
-            The on-demand C++ infrastructure wrapped by idiomatic Python enables new techniques in ML tools like JAX/CUTLASS. 
+            The on-demand C++ infrastructure wrapped by idiomatic Python enables new techniques in ML tools like JAX/CUTLASS.
             This project allows the C++ infrastructure to be plugged into at service to the users seeking high-performance library primitives that are unavailable in Python.
 
       mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
@@ -1556,4 +1568,4 @@
         compute Jacobians.
       report: |
         [Poster](/assets/presentations/LLVM2020_Clad.pdf){:target="_blank"}
-      mentors: Vassil Vassilev, Alexander Penev   
+      mentors: Vassil Vassilev, Alexander Penev
