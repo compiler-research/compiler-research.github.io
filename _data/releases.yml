@@ -1,3 +1,20 @@
+- date: 2025-11-02
+  codebase: "Clad"
+  version: "v2.2"
+  description: |
+   Clad 2.2, delivers improvements to differentiation pipelines, feature
+   coverage, and language compatibility. It now supports clang versions 11–21,
+   includes better handling of pointer, tensor, and reference types, and adds
+   conversion operator and `std::reference_wrapper` support. Forward mode gains
+   experimental OpenMP differentiation, while reverse mode introduces loop
+   checkpointing, elidable reverse passes, and enhanced handling of complex
+   expressions and memory operations. CUDA support expands with new Thrust
+   operations, device vector support, and a logistic regression demo. The
+   release also improves thread safety through lock-controlled tape access,
+   refines error handling and diagnostics, and simplifies attribute-based
+   memory management.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v2.2"
+
 - date: 2025-10-01
   codebase: "Clad"
   version: "v2.1"
