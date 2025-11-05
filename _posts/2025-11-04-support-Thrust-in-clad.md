@@ -5,7 +5,7 @@ excerpt: "A comprehensive wrap-up of my Google Summer of Code 2025 project on en
 sitemap: false
 author: Abdelrhman Elrawy
 permalink: blogs/gsoc25_elrawy_wrapup_blog/
-banner_image: /images/blog/gsoc-banner.png
+banner_image: /images/blog/thrust-clad-banner.jpg
 date: 2025-11-04
 tags: gsoc automatic-differentiation clad gpu cuda thrust
 ---
