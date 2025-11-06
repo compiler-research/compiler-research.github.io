@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Wrap-Up: Support usage of Thrust API in Clad"
+      date: 2025-10-30 15:00:00 +0200
+      speaker: "Abdelrhman Elrawy"
+      link: "[Slides](/assets/presentations/Abdelrhman_final_presentation_support_usage_of_Thrust_API_in_clad.pdf)"
     - title: "Supporting Automatic Differentiation in CMS Combine profile likelihood scans"
       date: 2025-09-25 15:00:00 +0200
       speaker: "Galin Bistrev"
