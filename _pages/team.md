@@ -68,7 +68,7 @@ permalink: /team/
 <p> {{ member.responsibilities | markdownify | remove: '<p>' | remove: '</p>'}} </p>
 {% endif %}
 {% if member.email %}
-  <i>email: <{{ member.email }}></i>
+  {% include email-display.html email=member.email %}
 {% endif %}
 {% if member.education %}
 <p> <strong>Education:</strong> {{ member.education }} </p>

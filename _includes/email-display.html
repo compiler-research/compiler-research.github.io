@@ -1,0 +1,2 @@
+{% assign obfuscated_email = include.email | replace: "@", "[at]" | replace: ".", "[dot]" %}
+<p><i>email: {{ obfuscated_email }}</i></p>
