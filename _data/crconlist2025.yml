@@ -151,7 +151,7 @@
         provides a strong foundation for future hardware acceleration, such as porting 
         the implementation to CUDA.
         
-      # slides: /assets/presentations/...
+      slides: /assets/presentations/Rohan_Timmaraju_GSoC25_final.pdf
 
     - title: "Implement and improve an efficient, layered tape with prefetching capabilities"
       speaker:
