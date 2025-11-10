@@ -14,7 +14,6 @@ date: 2025-10-08
 tags: [
   nasa,
   neo-flood,
-  rohan-timmaraju,
   compiler-research,
   neuromorphic-computing,
   satellite-ai,

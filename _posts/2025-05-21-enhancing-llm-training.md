@@ -7,7 +7,7 @@ author: Rohan Timmaraju
 permalink: blogs/gsoc25_rohan_introduction_blog/
 banner_image: /images/blog/LLM_project_banner.jpg
 date: 2025-05-21
-tags: gsoc c++ clang clad llm
+tags: gsoc c++ clang clad llm rohan-timmaraju
 ---
 
 ### Introduction
@@ -49,4 +49,4 @@ This project has the potential to make a valuable contribution to both the compi
 
 - [Project Description](https://hepsoftwarefoundation.org/gsoc/2025/proposal_Clad-LLM.html)
 - [Clad Repository](https://github.com/vgvassilev/clad)
-- [My GitHub Profile](https://github.com/Rohan-T144)
+- [My GitHub Profile](https://github.com/r-timmaraju)
