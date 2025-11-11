@@ -7,6 +7,7 @@ CMSSW
 Caa
 Codegen
 Cppyy
+CUDACC
 Debian
 EPC
 forw
@@ -48,6 +49,7 @@ blogs
 cms
 codegen
 consteval
+cplusplus
 cppyy
 cytokine
 cytokines
@@ -70,9 +72,11 @@ pythonized
 ramview
 reoptimize
 samtools
+sbo
 sitemap
 softsusy
 superbuilds
+tapenade
 vimeo
 www
 xcolors
