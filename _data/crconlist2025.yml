@@ -171,9 +171,8 @@
         tape operations. Ongoing work includes developing a multilayer tape system with 
         offloading capabilities, which will allow only the most recent slabs to remain in 
         memory.
-
         
-      # slides: /assets/presentations/...
+      slides: /assets/presentations/Aditi_Joshi_gsoc25_final_presentation.pdf
 
     - title: "Support usage of Thrust API in Clad"
       speaker:

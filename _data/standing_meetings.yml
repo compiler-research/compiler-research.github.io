@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Wrap-Up: Implement and improve an efficient, layered tape with prefetching capabilities"
+      date: 2025-10-30 15:40:00 +0200
+      speaker: "Aditi Milind Joshi"
+      link: "[Slides](/assets/presentations/Aditi_Joshi_gsoc25_final_presentation.pdf)"
     - title: "Wrap-Up: Support usage of Thrust API in Clad"
       date: 2025-10-30 15:00:00 +0200
       speaker: "Abdelrhman Elrawy"
