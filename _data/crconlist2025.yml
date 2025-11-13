@@ -42,7 +42,7 @@
         that detects possible data-race conditions that would enable reducing atomic 
         operations in the Clad-produced code.
         
-      # slides: /assets/presentations/...
+      slides: /assets/presentations/Maksym_Andriichuk_final_gsoc_atomic.pdf
 
     - title: "Enable automatic differentiation of OpenMP programs with Clad"
       speaker:
