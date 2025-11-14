@@ -59,6 +59,7 @@ gpu
 gridlay
 gsoc
 jit
+jitlink
 jthread
 linkedin
 llm
@@ -67,6 +68,7 @@ meetinglist
 microenvironments
 omp
 openmp
+oop
 pushforward
 pythonized
 ramview
@@ -78,6 +80,7 @@ softsusy
 superbuilds
 tapenade
 vimeo
+watchpoints
 www
 xcolors
 xcpp
