@@ -41,7 +41,7 @@
         that detects possible data-race conditions that would enable reducing atomic 
         operations in the Clad-produced code.
         
-      # slides: /assets/presentations/...
+      slides: /assets/presentations/Maksym_Andriichuk_final_gsoc_atomic.pdf
 
     - title: "Enable automatic differentiation of OpenMP programs with Clad"
       speaker:
@@ -59,7 +59,6 @@
         AST parsing and designing corresponding differentiation strategies. Additional 
         contributions include example applications and comprehensive tests.
 
-        
       # slides: /assets/presentations/...
 
     - title: "Using ROOT in the field of Genome Sequencing"
@@ -82,8 +81,7 @@
         FASTQ compression from 14.2GB to 6.8GB. We also developed chromosome based 
         file-splitting for larger genome file so that chromosome based data can be extracted. 
 
-        
-      # slides: /assets/presentations/...
+        slides: /assets/presentations/Aditya_Pandey_GSoC2025_final.pdf
 
 - name: "CompilerResearchCon 2025 (day 1)"
   date: 2025-10-30 15:00:00 +0200
@@ -193,3 +191,4 @@
         comprehensive unit tests.
         
       slides: /assets/presentations/Abdelrhman_final_presentation_support_usage_of_Thrust_API_in_clad.pdf
+

@@ -7,6 +7,10 @@
       date: 2025-11-13 15:00:00 +0200
       speaker: "Abhinav Kumar"
       link: "[Slides](/assets/presentations/Abhinav_Kumar_GSoC25_final.pdf)"
+      - title: "Summary: Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
+      date: 2025-11-13 15:30:00 +0200
+      speaker: "Maksym Andriichuk"
+      link: "[Slides](/assets/presentations/Maksym_Andriichuk_final_gsoc_atomic.pdf)"
     - title: "Wrap-Up: Implement and improve an efficient, layered tape with prefetching capabilities"
       date: 2025-10-30 15:40:00 +0200
       speaker: "Aditi Milind Joshi"
@@ -445,4 +449,8 @@
       date: 2025-10-30 15:20:00 +0200
       speaker: "Rohan Timmaraju"
       link: "[Slides](/assets/presentations/Rohan_Timmaraju_GSoC25_final.pdf)"
+    - title: "Final Presentation: Using ROOT in the field of Genome Sequencing"
+      date: 2025-11-13 16:20:00 +0200
+      speaker: "Aditya Pandey"
+      link: "[Slides](/assets/presentations/Aditya_Pandey_GSoC2025_final.pdf)"
 
