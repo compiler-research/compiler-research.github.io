@@ -23,7 +23,7 @@
         the Out-of-Process JIT execution which was the major part in implementing 
         the debugger. 
 
-      # slides: /assets/presentations/...
+      slides: /assets/presentations/Abhinav_Kumar_GSoC25_final.pdf
 
     - title: "Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
       speaker:
