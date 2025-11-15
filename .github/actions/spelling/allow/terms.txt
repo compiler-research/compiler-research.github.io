@@ -32,7 +32,9 @@ Ohridski
 OMP
 OpenMP
 PTX
+QNAME
 RAII
+RNAME
 Resugaring
 SBO
 Slib
@@ -58,6 +60,7 @@ gitlab
 gpu
 gridlay
 gsoc
+hpc
 jit
 jthread
 linkedin
@@ -70,8 +73,11 @@ openmp
 pushforward
 pythonized
 ramview
+ramntupleview
 reoptimize
+rntuple
 samtools
+samtoramntuple
 sbo
 sitemap
 softsusy
@@ -156,10 +162,4 @@ Oncoprotein
 oncoprotein
 organoids
 paraview
-hpc
-QNAME
-ramntupleview
-RNAME
-rntuple
-samtoramntuple
 
