@@ -4,7 +4,7 @@ layout: post
 excerpt: "A summary of my GSoC 2025 project focusing on OpenMP support to Clad, enabling automatic differentiation of multi-threaded C++ programs."
 sitemap: false
 author: Jiayang Li
-permalink: blogs/gsoc25_jiayangli_warpup_blog/
+permalink: blogs/gsoc25_jiayangli_wrapup_blog/
 banner_image: /images/blog/gsoc-banner.png
 date: 2025-11-14
 tags: gsoc llvm clad openmp automatic-differentiation
