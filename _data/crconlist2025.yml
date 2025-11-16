@@ -55,11 +55,11 @@
 
         This project achieved Clad support for both forward and reverse mode differentiation 
         of common OpenMP directives (parallel, parallel for) and clauses (private, 
-        firstprivate, lastprivate, shared, atomic, reduction) by implementing OpenMP-related 
+        private, firstprivate, shared, reduction) by implementing OpenMP-related 
         AST parsing and designing corresponding differentiation strategies. Additional 
         contributions include example applications and comprehensive tests.
 
-      # slides: /assets/presentations/...
+      slides: /assets/presentations/Jiayang_Li_GSoS25_final.pdf
 
     - title: "Using ROOT in the field of Genome Sequencing"
       speaker:

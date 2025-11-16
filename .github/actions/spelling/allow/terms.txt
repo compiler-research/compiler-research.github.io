@@ -138,6 +138,7 @@ pubpic
 recomputations
 ROOFIT
 Sacado
+Sema
 SKLLVM
 SNL
 SNSFPI
