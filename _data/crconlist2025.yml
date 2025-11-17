@@ -81,7 +81,7 @@
         FASTQ compression from 14.2GB to 6.8GB. We also developed chromosome based 
         file-splitting for larger genome file so that chromosome based data can be extracted. 
 
-        slides: /assets/presentations/Aditya_Pandey_GSoC2025_final.pdf
+      slides: /assets/presentations/Aditya_Pandey_GSoC2025_final.pdf
 
 - name: "CompilerResearchCon 2025 (day 1)"
   date: 2025-10-30 15:00:00 +0200
