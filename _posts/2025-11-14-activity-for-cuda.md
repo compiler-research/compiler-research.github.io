@@ -6,7 +6,7 @@ sitemap: true
 author: Maksym Andriichuk
 permalink: blogs/gsoc25_andriichuk_final_blog/
 banner_image: /images/blog/gsoc-clad-banner.png
-date: 2025-14-11
+date: 2025-11-14
 tags: gsoc clad cuda clang c++
 ---
 
