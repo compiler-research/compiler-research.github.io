@@ -1,49 +1,3 @@
-- name: "Agent-Based Simulation of CAR-T Cell Therapy Using BioDynaMo"
-  description: |
-    Chimeric Antigen Receptor T-cell (CAR-T) therapy has revolutionized
-    cancer treatment by harnessing the immune system to target and
-    destroy tumor cells. While CAR-T has demonstrated success in blood
-    cancers, its effectiveness in solid tumors remains limited due to
-    challenges such as poor tumor infiltration, immune suppression,
-    and T-cell exhaustion. To improve therapy outcomes, computational
-    modeling is essential for optimizing treatment parameters, predicting
-    failures, and testing novel interventions. However, existing models
-    of CAR-T behavior are often overly simplistic or computationally expensive,
-    making them impractical for large-scale simulations.
-
-    This project aims to develop a scalable agent-based simulation of CAR-T
-    therapy using BioDynaMo, an open-source high-performance biological
-    simulation platform. By modeling T-cell migration, tumor engagement,
-    and microenvironmental factors, we will investigate key treatment variables
-    such as dosage, administration timing, and combination therapies. The
-    simulation will allow researchers to explore how tumor microenvironment
-    suppression (e.g., regulatory T-cells, hypoxia, immunosuppressive cytokines)
-    affects CAR-T efficacy and what strategies such as checkpoint inhibitors or
-    cytokine support can improve outcomes.
-
-    The final deliverable will be a fully documented, reproducible BioDynaMo
-    simulation, along with analysis tools for visualizing treatment dynamics.
-    The model will provide insights into the optimal CAR-T cell dosing, tumor
-    penetration efficiency, and factors influencing therapy resistance. This
-    project will serve as a foundation for in silico testing of immunotherapies,
-    reducing the need for costly and time-consuming laboratory experiments while
-    accelerating the development of more effective cancer treatments.
-  
-  tasks: |
-    * Expected plan of work:
-
-    - Phase 1: Initial Setup & Simple T-cell Dynamics
-    - Phase 2: Advanced CAR-T Cell Behavior & Tumor Interaction
-    - Phase 3: Integration of Immunosuppressive Factors & Data Visualization
-
-    * Expected deliverables
-
-    - A fully documented BioDynaMo simulation of CAR-T therapy.
-    - Analysis scripts for visualizing tumor reduction and CAR-T efficacy.
-    - Performance benchmarks comparing different treatment strategies.
-    - A research-style report summarizing findings.
-
-
 - name: "Enable GPU support and Python Interoperability via a Plugin System"
   description: |
     Xeus-Cpp integrates [Clang-Repl](https://clang.llvm.org/docs/ClangRepl.html)
@@ -143,29 +97,6 @@
     potential bottlenecks in Clad's execution
     * Present the work at the relevant meetings and conferences.
 
-- name: "Support usage of Thrust API in Clad"
-  description: |
-    The rise of ML has shed light into the power of GPUs and researchers are looking
-    for ways to incorporate them in their projects as a lightweight parallelization
-    method. Consequently, General Purpose GPU programming is becoming a very popular
-    way to speed up execution time.
-    
-    Clad is a clang plugin for automatic differentiation that performs source-to-source
-    transformation and produces a function capable of computing the derivatives of a
-    given function at compile time. This project aims to enhance Clad by adding support
-    for Thrust, a parallel algorithms library designed for GPUs and other accelerators.
-    By supporting Thrust, Clad will be able to differentiate algorithms that rely on
-    Thrust's parallel computing primitives, unlocking new possibilities for GPU-based
-    machine learning, scientific computing, and numerical optimization.
-
-  tasks: |
-    * Research and decide on the most valuable Thrust functions to support in Clad
-    * Create pushforward and pullback functions for these Thrust functions
-    * Write tests that cover the additions
-    * Include demos of using Clad on open source code examples that call Thrust functions
-    * Write documentation on which Thrust functions are supported in Clad
-    * Present the work at the relevant meetings and conferences.
-
 - name: "Enable automatic differentiation of C++ STL concurrency primitives in Clad"
   description: |
     Clad is an automatic differentiation (AD) clang plugin for C++. Given a C++ source
@@ -181,43 +112,6 @@
     * Add concurrency primitives support in Clad's reverse-mode automatic differentiation.
     * Add proper tests and documentation.
     * Present the work at the relevant meetings and conferences.
-
-- name: "Implementing Debugging Support in Xeus-Cpp"
-  description: |
-    xeus-cpp is an interactive execution environment for C++ in Jupyter
-    notebooks, built on the Clang-Repl C++ interpreter, provided by
-    [CppInterOp](https://github.com/compiler-research/CppInterOp/). While
-    xeus-cpp enables a seamless workflow for running C++ code interactively,
-    the lack of an integrated debugging experience remains a gap, especially
-    when dealing with code that is dynamically compiled and executed through
-    LLVM's JIT(Just-In-Time) infrastructure.
-
-    Jupyter's debugging system follows the Debug Adapter Protocol (DAP),
-    enabling seamless integration of debuggers into interactive kernels.
-    Existing Jupyter kernels, such as the IPython & the xeus-python kernel,
-    have successfully implemented debugging workflows that support
-    breakpoints, variable inspection, and execution control, even in
-    dynamically executed environments. These implementations address
-    challenges such as symbol resolution and source mapping for dynamically
-    generated code, ensuring that debugging within Jupyter remains intuitive
-    and user-friendly.
-
-    However, debugging C++ inside an interactive environment presents unique
-    challenges, particularly due to Clang-Repl’s use of LLVM’s ORC JIT to
-    compile and execute code dynamically. To integrate debugging into xeus-cpp,
-    the project will explore existing solutions for DAP implementations like
-    `lldb_dap` and debuggers like lldb that can interface with Jupyter while
-    effectively supporting the execution model of Clang-Repl.
-
-  tasks: |
-    * Seamless debugging integration, establishing reliable interactions
-    between xeus-cpp, a Debug Adapter Protocol (DAP) implementation, and
-    a debugger.
-    * Implement a testing framework through `xeus-zmq` to thoroughly test
-    the debugger. This can be inspired by an existing implementation
-    in `xeus-python`. 
-    * Present the work at the relevant meetings and conferences.
-
 
 - name: "Interactive Differential Debugging - Intelligent Auto-Stepping and Tab-Completion"
   description: |
@@ -245,32 +139,6 @@
     * Enable tab completion of commands.
     * Set up CI infrastructure to automate testing IDD.
     * Present the work at the relevant meetings and conferences.
-
-- name: "Using ROOT in the field of genome sequencing"
-  description: |
-    [ROOT](https://root.cern/) is a framework for data processing,
-    born at CERN, at the heart of the research on high-energy physics.
-    Every day, thousands of physicists use ROOT applications to analyze their
-    data or to perform simulations. The ROOT software framework is
-    foundational for the HEP ecosystem, providing capabilities such
-    as IO, a C++ interpreter, GUI, and math libraries. It uses
-    object-oriented concepts and build-time modules to layer between
-    components. We believe additional layering formalisms will benefit
-    ROOT and its users.
-
-    ROOT has broader scientific uses than the field of high energy
-    physics. Several studies have shown promising applications of
-    the ROOT I/O system in the field of genome sequencing. This
-    project is about extending the developed capability in
-    [GeneROOT](https://github.com/GeneROOT) and understanding better
-    the requirements of the field.
-
-  tasks: |
-    * Reproduce the results based on previous comparisons against ROOT master
-    * Investigate and compare the latest compression strategies used by [Samtools](https://www.htslib.org/) for conversions to BAM, with RAM(ROOT Alignment Maps).
-    * Explore ROOT's [RNTuple](https://root.cern/doc/v622/md_tree_ntuple_v7_doc_README.html) format to efficiently store RAM maps, in place of the previously used `TTree`.
-    * Investigate different ROOT file splitting techniques
-    * Produce a comparison report
 
 - name: "Implement CppInterOp API exposing memory, ownership and thread safety information "
   description: |
@@ -546,68 +414,6 @@
     Additionally, they should demonstrate the ability to navigate the
     community process with patience and understanding.
 
-- name: "Explore advanced activity-analysis and optimizations in reverse-mode automatic differentiation"
-  description: |
-    Clad is an automatic differentiation (AD) clang plugin for C++. Given a C++
-    source code of a mathematical function, it can automatically generate C++
-    code for computing derivatives of the function. Clad has found uses in
-    statistical analysis and uncertainty assessment applications.
-
-    Automatic differentiation techniques involve computing partial derivatives
-    of each intermediate variable encountered while automatically
-    differentiating a function. Users are generally interested in the
-    derivatives of a subset of the output variables with respect to a subset
-    of the input variables. In this case, partial derivatives of many
-    intermediate variables may not contribute to final derivatives and
-    therefore can be ignored and not computed. Activity analysis finds
-    intermediate variables whose partial derivatives contribute to the final
-    required derivatives. It allows the AD tool to only compute the set of
-    partial derivatives that are required. By not computing partial
-    derivatives for such intermediate variables, both the memory requirement
-    and the run time of the generated program can be reduced.
-  tasks: |
-    There are several foreseen tasks:
-      * Research about automatic differentiation activity analysis techniques.
-        Prepare an activity analysis model report with an initial strategy to
-        follow. This may involve brainstorming and the need for innovative
-        solutions.
-      * Implement the proposed activity analysis mode.
-      * Add tests and documentation.
-  status: ongoing
-  responsible: Maksym Andriichuk
-
-- name: "Improve automatic differentiation of object-oriented paradigms using Clad"
-  description: |
-    Clad is an automatic differentiation (AD) clang plugin for C++. Given a
-    C++ source code of a mathematical function, it can automatically generate
-    C++ code for computing derivatives of the function. Clad has found uses
-    in statistical analysis and uncertainty assessment applications.
-
-    Object oriented paradigms (OOP) provide a structured approach for complex
-    use cases, allowing for modular components that can be reused & extended.
-    OOP also allows for abstraction which makes code easier to reason about &
-    maintain. Gaining full OOP support is an open research area for automatic
-    differentiation codes.
-
-    This project focuses on improving support for differentiating
-    object-oriented constructs in Clad. This will allow users to seamlessly
-    compute derivatives to the algorithms in their projects which use an
-    object-oriented model. C++ object-oriented constructs include but are
-    not limited to: classes, inheritance, polymorphism, and related features
-    such as operator overloading.
-  tasks: |
-    There are several foreseen tasks:
-      * Study the current object-oriented differentiable programming support
-        in Clad. Prepare a report of missing constructs that should be added to
-        support the automatic differentiation of object-oriented paradigms in
-        both the forward mode AD and the reverse mode AD.
-        Some of the missing constructs are: differentiation of constructors,
-        limited support for differentiation of operator overloads, reference
-        class members, and no way of specifying custom derivatives for
-        constructors.
-      * Add support for the missing constructs.
-      * Add proper tests and documentation.
-
 - name: "Broaden the Scope for the Floating-Point Error Estimation Framework in Clad"
 
   description: |
@@ -748,6 +554,212 @@
       * Find and fix cases where there are bugs
       * Implement template instantiation error recovery support
       * Implement argument-dependent lookup (ADL) recovery support
+
+################################################################################
+#                                     2025                                     #
+################################################################################
+- name: "Agent-Based Simulation of CAR-T Cell Therapy Using BioDynaMo"
+  description: |
+    Chimeric Antigen Receptor T-cell (CAR-T) therapy has revolutionized
+    cancer treatment by harnessing the immune system to target and
+    destroy tumor cells. While CAR-T has demonstrated success in blood
+    cancers, its effectiveness in solid tumors remains limited due to
+    challenges such as poor tumor infiltration, immune suppression,
+    and T-cell exhaustion. To improve therapy outcomes, computational
+    modeling is essential for optimizing treatment parameters, predicting
+    failures, and testing novel interventions. However, existing models
+    of CAR-T behavior are often overly simplistic or computationally expensive,
+    making them impractical for large-scale simulations.
+
+    This project aims to develop a scalable agent-based simulation of CAR-T
+    therapy using BioDynaMo, an open-source high-performance biological
+    simulation platform. By modeling T-cell migration, tumor engagement,
+    and microenvironmental factors, we will investigate key treatment variables
+    such as dosage, administration timing, and combination therapies. The
+    simulation will allow researchers to explore how tumor microenvironment
+    suppression (e.g., regulatory T-cells, hypoxia, immunosuppressive cytokines)
+    affects CAR-T efficacy and what strategies such as checkpoint inhibitors or
+    cytokine support can improve outcomes.
+
+    The final deliverable will be a fully documented, reproducible BioDynaMo
+    simulation, along with analysis tools for visualizing treatment dynamics.
+    The model will provide insights into the optimal CAR-T cell dosing, tumor
+    penetration efficiency, and factors influencing therapy resistance. This
+    project will serve as a foundation for in silico testing of immunotherapies,
+    reducing the need for costly and time-consuming laboratory experiments while
+    accelerating the development of more effective cancer treatments.
+  
+  tasks: |
+    * Expected plan of work:
+
+    - Phase 1: Initial Setup & Simple T-cell Dynamics
+    - Phase 2: Advanced CAR-T Cell Behavior & Tumor Interaction
+    - Phase 3: Integration of Immunosuppressive Factors & Data Visualization
+
+    * Expected deliverables
+
+    - A fully documented BioDynaMo simulation of CAR-T therapy.
+    - Analysis scripts for visualizing tumor reduction and CAR-T efficacy.
+    - Performance benchmarks comparing different treatment strategies.
+    - A research-style report summarizing findings.
+  status: completed
+  responsible: Salvador de la Torre Gonzalez
+
+- name: "Support usage of Thrust API in Clad"
+  description: |
+    The rise of ML has shed light into the power of GPUs and researchers are looking
+    for ways to incorporate them in their projects as a lightweight parallelization
+    method. Consequently, General Purpose GPU programming is becoming a very popular
+    way to speed up execution time.
+    
+    Clad is a clang plugin for automatic differentiation that performs source-to-source
+    transformation and produces a function capable of computing the derivatives of a
+    given function at compile time. This project aims to enhance Clad by adding support
+    for Thrust, a parallel algorithms library designed for GPUs and other accelerators.
+    By supporting Thrust, Clad will be able to differentiate algorithms that rely on
+    Thrust's parallel computing primitives, unlocking new possibilities for GPU-based
+    machine learning, scientific computing, and numerical optimization.
+
+  tasks: |
+    * Research and decide on the most valuable Thrust functions to support in Clad
+    * Create pushforward and pullback functions for these Thrust functions
+    * Write tests that cover the additions
+    * Include demos of using Clad on open source code examples that call Thrust functions
+    * Write documentation on which Thrust functions are supported in Clad
+    * Present the work at the relevant meetings and conferences.
+  status: completed
+  responsible: Abdelrhman Elrawy
+
+- name: "Implementing Debugging Support in Xeus-Cpp"
+  description: |
+    xeus-cpp is an interactive execution environment for C++ in Jupyter
+    notebooks, built on the Clang-Repl C++ interpreter, provided by
+    [CppInterOp](https://github.com/compiler-research/CppInterOp/). While
+    xeus-cpp enables a seamless workflow for running C++ code interactively,
+    the lack of an integrated debugging experience remains a gap, especially
+    when dealing with code that is dynamically compiled and executed through
+    LLVM's JIT(Just-In-Time) infrastructure.
+
+    Jupyter's debugging system follows the Debug Adapter Protocol (DAP),
+    enabling seamless integration of debuggers into interactive kernels.
+    Existing Jupyter kernels, such as the IPython & the xeus-python kernel,
+    have successfully implemented debugging workflows that support
+    breakpoints, variable inspection, and execution control, even in
+    dynamically executed environments. These implementations address
+    challenges such as symbol resolution and source mapping for dynamically
+    generated code, ensuring that debugging within Jupyter remains intuitive
+    and user-friendly.
+
+    However, debugging C++ inside an interactive environment presents unique
+    challenges, particularly due to Clang-Repl’s use of LLVM’s ORC JIT to
+    compile and execute code dynamically. To integrate debugging into xeus-cpp,
+    the project will explore existing solutions for DAP implementations like
+    `lldb_dap` and debuggers like lldb that can interface with Jupyter while
+    effectively supporting the execution model of Clang-Repl.
+
+  tasks: |
+    * Seamless debugging integration, establishing reliable interactions
+    between xeus-cpp, a Debug Adapter Protocol (DAP) implementation, and
+    a debugger.
+    * Implement a testing framework through `xeus-zmq` to thoroughly test
+    the debugger. This can be inspired by an existing implementation
+    in `xeus-python`. 
+    * Present the work at the relevant meetings and conferences.
+  status: completed
+  responsible: Abhinav Kumar
+
+
+- name: "Using ROOT in the field of genome sequencing"
+  description: |
+    [ROOT](https://root.cern/) is a framework for data processing,
+    born at CERN, at the heart of the research on high-energy physics.
+    Every day, thousands of physicists use ROOT applications to analyze their
+    data or to perform simulations. The ROOT software framework is
+    foundational for the HEP ecosystem, providing capabilities such
+    as IO, a C++ interpreter, GUI, and math libraries. It uses
+    object-oriented concepts and build-time modules to layer between
+    components. We believe additional layering formalisms will benefit
+    ROOT and its users.
+
+    ROOT has broader scientific uses than the field of high energy
+    physics. Several studies have shown promising applications of
+    the ROOT I/O system in the field of genome sequencing. This
+    project is about extending the developed capability in
+    [GeneROOT](https://github.com/GeneROOT) and understanding better
+    the requirements of the field.
+
+  tasks: |
+    * Reproduce the results based on previous comparisons against ROOT master
+    * Investigate and compare the latest compression strategies used by [Samtools](https://www.htslib.org/) for conversions to BAM, with RAM(ROOT Alignment Maps).
+    * Explore ROOT's [RNTuple](https://root.cern/doc/v622/md_tree_ntuple_v7_doc_README.html) format to efficiently store RAM maps, in place of the previously used `TTree`.
+    * Investigate different ROOT file splitting techniques
+    * Produce a comparison report
+  status: completed
+  responsible: Aditya Pandey
+
+- name: "Explore advanced activity-analysis and optimizations in reverse-mode automatic differentiation"
+  description: |
+    Clad is an automatic differentiation (AD) clang plugin for C++. Given a C++
+    source code of a mathematical function, it can automatically generate C++
+    code for computing derivatives of the function. Clad has found uses in
+    statistical analysis and uncertainty assessment applications.
+
+    Automatic differentiation techniques involve computing partial derivatives
+    of each intermediate variable encountered while automatically
+    differentiating a function. Users are generally interested in the
+    derivatives of a subset of the output variables with respect to a subset
+    of the input variables. In this case, partial derivatives of many
+    intermediate variables may not contribute to final derivatives and
+    therefore can be ignored and not computed. Activity analysis finds
+    intermediate variables whose partial derivatives contribute to the final
+    required derivatives. It allows the AD tool to only compute the set of
+    partial derivatives that are required. By not computing partial
+    derivatives for such intermediate variables, both the memory requirement
+    and the run time of the generated program can be reduced.
+  tasks: |
+    There are several foreseen tasks:
+      * Research about automatic differentiation activity analysis techniques.
+        Prepare an activity analysis model report with an initial strategy to
+        follow. This may involve brainstorming and the need for innovative
+        solutions.
+      * Implement the proposed activity analysis mode.
+      * Add tests and documentation.
+  status: completed
+  responsible: Maksym Andriichuk
+
+- name: "Improve automatic differentiation of object-oriented paradigms using Clad"
+  description: |
+    Clad is an automatic differentiation (AD) clang plugin for C++. Given a
+    C++ source code of a mathematical function, it can automatically generate
+    C++ code for computing derivatives of the function. Clad has found uses
+    in statistical analysis and uncertainty assessment applications.
+
+    Object oriented paradigms (OOP) provide a structured approach for complex
+    use cases, allowing for modular components that can be reused & extended.
+    OOP also allows for abstraction which makes code easier to reason about &
+    maintain. Gaining full OOP support is an open research area for automatic
+    differentiation codes.
+
+    This project focuses on improving support for differentiating
+    object-oriented constructs in Clad. This will allow users to seamlessly
+    compute derivatives to the algorithms in their projects which use an
+    object-oriented model. C++ object-oriented constructs include but are
+    not limited to: classes, inheritance, polymorphism, and related features
+    such as operator overloading.
+  tasks: |
+    There are several foreseen tasks:
+      * Study the current object-oriented differentiable programming support
+        in Clad. Prepare a report of missing constructs that should be added to
+        support the automatic differentiation of object-oriented paradigms in
+        both the forward mode AD and the reverse mode AD.
+        Some of the missing constructs are: differentiation of constructors,
+        limited support for differentiation of operator overloads, reference
+        class members, and no way of specifying custom derivatives for
+        constructors.
+      * Add support for the missing constructs.
+      * Add proper tests and documentation.
+  status: completed
+  responsible: Petro Zarytskyi
 
 
 ################################################################################

@@ -278,60 +278,6 @@
   education: Integrated Dual Degree (B.Tech & M.Tech) in Data Science & Biological Engineering, IIT Madras, India (2024)
   active: 1
 
-- name: Aditya Pandey
-  photo: Aditya.jpeg
-  info: "Google Summer of Code 2025 Contributor"
-  email: adityapand3y666@gmail.com
-  education: "Bachelor of Technology, Birla Institute of Technology, Mesra, India"
-  github: "https://github.com/AdityaPandeyCN"
-  www: "https://adityapandeycn.github.io/personalblog/"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/aditya-pandey-019482200/"
-  projects:
-    - title: "Using ROOT in the field of genome sequencing"
-      status: Ongoing
-      description: |
-       This project aims to advance genomic data management by implementing ROOT's
-       next-generation RNTuple format for sequence alignment storage. Beginning
-       with validation of previous GeneROOT benchmarks showing 4x performance gains
-       with `TTree`, we will then extend these capabilities with RNTuple technology.
-       Genomic sequencing data volumes are growing exponentially, creating performance
-       bottlenecks in traditional formats.RNTuple's improved memory mapping, type
-       safety through templated interfaces, and parallelization capabilities position
-       it as an ideal solution.
-       We will systematically compare compression algorithms, implement file splitting
-       strategies, and benchmark against established formats.Additionally, I will
-       analyze the latest compression strategies implemented by samtools and incorporate
-       these techniques into the project to ensure comprehensive coverage of state-of-the-art
-       genomic data compression approaches.
-       The project will deliver optimized tools for handling rapidly growing genomic datasets,
-       potentially establishing a new standard for high-performance genomic data analysis.
-      proposal: /assets/docs/Aditya_Pandey_GSoC2025.pdf
-      mentors: Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
-
-- name: Jiayang Li
-  photo: Jiayang_Li.jpg
-  info: "Google Summer of Code 2025 Contributor"
-  email: lijiayang404@gmail.com
-  education: "Bachelor of Computer Science, Shanghai University, China"
-  github: "https://github.com/Errant404"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/errant404/"
-  projects:
-    - title: "Enable automatic differentiation of OpenMP programs with Clad"
-      status: Ongoing
-      description: |
-        This project aims to extend Clad, a Clang-based automatic differentiation
-        tool for C++, to support OpenMP programs. By enabling Clad to parse and
-        differentiate OpenMP directives such as parallel for, reduction, and atomic,
-        we will allow gradient computation in multi-threaded environments.
-        The implementation will include enhancements to Clad’s AST parsing,
-        variable scope analysis, and differentiation logic for both forward and
-        reverse modes. Deliverables include robust OpenMP AD support, comprehensive
-        tests, and user documentation.
-      proposal: /assets/docs/Jiayang_Li_Proposal_2025.pdf
-      mentors: Vassil Vassilev, Martin Vassilev
-
 - name: Salvador de la Torre Gonzalez
   photo: salva_de_la_torre_gonzalez.jpg
   info: "Google Summer of Code 2025 Contributor"
@@ -393,50 +339,6 @@
       proposal: /assets/docs/Rohan_Timmaraju_Proposal_2025.pdf
       mentors: Vassil Vassilev, David Lange, Jonas Rembser, Christina Koutsou
 
-- name: Abdelrhman Elrawy
-  photo: Abdelrhman.jpg
-  info: "Google Summer of Code 2025 Contributor"
-  email: abdelrhman.elrawy1@gmail.com
-  education: "Master of Applied Computing, Wilfrid Laurier University, Canada"
-  github: "https://github.com/a-elrawy"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/elrawy/"
-  projects:
-    - title: "Support usage of Thrust API in Clad"
-      status: Ongoing
-      description: |
-        This project enhances Clad, a Clang-based automatic differentiation tool,
-        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming.
-        The goal is to implement custom derivative rules for Thrust primitives like
-        `thrust::transform` and `thrust::reduce`, making it possible to differentiate
-        high-performance CUDA code automatically. This work bridges the gap between
-        automatic differentiation and GPU acceleration, enabling efficient gradient
-        computations in scientific computing and machine learning workloads.
-      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
-      mentors: Vassil Vassilev, Alexander Penev
-
-- name: Abhinav Kumar
-  photo: Abhinav.jpg
-  info: "Google Summer of Code 2025 Contributor"
-  email: abhinavdnpiasb@gmail.com
-  education: "Computer Science & Engineering, Bachelor of Technology, Indian Institute of Technology(IIT) Indore, India"
-  github: "https://github.com/kr-2003"
-  active: 1
-  linkedin: "https://www.linkedin.com/in/abhinavkumar2105/"
-  projects:
-    - title: "Implementing Debugging Support for xeus-cpp"
-      status: Ongoing
-      description: |
-        This project aims at integrating debugging into the xeus-cpp kernel for
-        Jupyter using LLDB and its Debug Adapter Protocol (lldb-dap). Modeled
-        after xeus-python, it leverages LLDB’s Clang and JIT debugging support
-        to enable breakpoints, variable inspection, and step-through execution.
-        The modular design ensures compatibility with Jupyter’s frontend,
-        enhancing interactive C++ development in notebooks.
-      proposal: /assets/docs/Abhinav_Kumar_Proposal_GSoC_2025.pdf
-      mentors: Anutosh Bhat, Vipul Cariappa, Aaron Jomy, Vassil Vassilev
-
-
 - name: Aditi Milind Joshi
   photo: Aditi.jpeg
   info: "Google Summer of Code 2025 Contributor"
@@ -471,6 +373,99 @@
 ################################################################################
 #                                     2025                                     #
 ################################################################################
+- name: Abhinav Kumar
+  photo: Abhinav.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: abhinavdnpiasb@gmail.com
+  education: "Computer Science & Engineering, Bachelor of Technology, Indian Institute of Technology(IIT) Indore, India"
+  github: "https://github.com/kr-2003"
+  linkedin: "https://www.linkedin.com/in/abhinavkumar2105/"
+  projects:
+    - title: "Implementing Debugging Support for xeus-cpp"
+      status: Completed
+      description: |
+        This project aims at integrating debugging into the xeus-cpp kernel for
+        Jupyter using LLDB and its Debug Adapter Protocol (lldb-dap). Modeled
+        after xeus-python, it leverages LLDB’s Clang and JIT debugging support
+        to enable breakpoints, variable inspection, and step-through execution.
+        The modular design ensures compatibility with Jupyter’s frontend,
+        enhancing interactive C++ development in notebooks.
+      proposal: /assets/docs/Abhinav_Kumar_Proposal_GSoC_2025.pdf
+      mentors: Anutosh Bhat, Vipul Cariappa, Aaron Jomy, Vassil Vassilev
+
+- name: Aditya Pandey
+  photo: Aditya.jpeg
+  info: "Google Summer of Code 2025 Contributor"
+  email: adityapand3y666@gmail.com
+  education: "Bachelor of Technology, Birla Institute of Technology, Mesra, India"
+  github: "https://github.com/AdityaPandeyCN"
+  www: "https://adityapandeycn.github.io/personalblog/"
+  linkedin: "https://www.linkedin.com/in/aditya-pandey-019482200/"
+  projects:
+    - title: "Using ROOT in the field of genome sequencing"
+      status: Completed
+      description: |
+       This project aims to advance genomic data management by implementing ROOT's
+       next-generation RNTuple format for sequence alignment storage. Beginning
+       with validation of previous GeneROOT benchmarks showing 4x performance gains
+       with `TTree`, we will then extend these capabilities with RNTuple technology.
+       Genomic sequencing data volumes are growing exponentially, creating performance
+       bottlenecks in traditional formats.RNTuple's improved memory mapping, type
+       safety through templated interfaces, and parallelization capabilities position
+       it as an ideal solution.
+       We will systematically compare compression algorithms, implement file splitting
+       strategies, and benchmark against established formats.Additionally, I will
+       analyze the latest compression strategies implemented by samtools and incorporate
+       these techniques into the project to ensure comprehensive coverage of state-of-the-art
+       genomic data compression approaches.
+       The project will deliver optimized tools for handling rapidly growing genomic datasets,
+       potentially establishing a new standard for high-performance genomic data analysis.
+      proposal: /assets/docs/Aditya_Pandey_GSoC2025.pdf
+      mentors: Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
+
+
+- name: Jiayang Li
+  photo: Jiayang_Li.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: lijiayang404@gmail.com
+  education: "Bachelor of Computer Science, Shanghai University, China"
+  github: "https://github.com/Errant404"
+  linkedin: "https://www.linkedin.com/in/errant404/"
+  projects:
+    - title: "Enable automatic differentiation of OpenMP programs with Clad"
+      status: Completed
+      description: |
+        This project aims to extend Clad, a Clang-based automatic differentiation
+        tool for C++, to support OpenMP programs. By enabling Clad to parse and
+        differentiate OpenMP directives such as parallel for, reduction, and atomic,
+        we will allow gradient computation in multi-threaded environments.
+        The implementation will include enhancements to Clad’s AST parsing,
+        variable scope analysis, and differentiation logic for both forward and
+        reverse modes. Deliverables include robust OpenMP AD support, comprehensive
+        tests, and user documentation.
+      proposal: /assets/docs/Jiayang_Li_Proposal_2025.pdf
+      mentors: Vassil Vassilev, Martin Vassilev
+
+- name: Abdelrhman Elrawy
+  photo: Abdelrhman.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: abdelrhman.elrawy1@gmail.com
+  education: "Master of Applied Computing, Wilfrid Laurier University, Canada"
+  github: "https://github.com/a-elrawy"
+  linkedin: "https://www.linkedin.com/in/elrawy/"
+  projects:
+    - title: "Support usage of Thrust API in Clad"
+      status: Completed
+      description: |
+        This project enhances Clad, a Clang-based automatic differentiation tool,
+        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming.
+        The goal is to implement custom derivative rules for Thrust primitives like
+        `thrust::transform` and `thrust::reduce`, making it possible to differentiate
+        high-performance CUDA code automatically. This work bridges the gap between
+        automatic differentiation and GPU acceleration, enabling efficient gradient
+        computations in scientific computing and machine learning workloads.
+      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
+      mentors: Vassil Vassilev, Alexander Penev
 
 - name: Galin Bistrev
   photo: Bistrev.jpg
