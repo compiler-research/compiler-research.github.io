@@ -1,3 +1,18 @@
+- title: "CARTopiaX: an Agent-Based Simulation of CAR T-Cell Therapy built with BioDynaMo and ROOT"
+  description: |
+    CAR T-cell therapy has revolutionized cancer immunotherapy by reprogramming patient T cells to recognize and eliminate malignant cells, achieving remarkable success in hematologic cancers. However, its application to solid tumors remains challenging due to the complexity and heterogeneity of the tumor microenvironment. 
+    
+    CARTopiaX is an advanced agent-based model developed on BioDynaMo, an open-source, high-performance platform for large-scale biological simulations that incorporates ROOT. The model enables detailed exploration of interactions between CAR T-cells and solid tumor microenvironments, supporting hypothesis testing and data-driven discovery. 
+    
+    By combining biological accuracy with computational efficiency and scalability, CARTopiaX provides researchers with a powerful tool to investigate CAR T-cell dynamics in silico, accelerating scientific progress and reducing reliance on costly and time-consuming experimental approaches.
+  location: "[ROOT Users CERN's Workshop 2025 in UPV-Valencia](https://indico.cern.ch/event/1505384/contributions/6781575/)"
+  date: 2025-11-21
+  speaker: Salvador de la Torre Gonzalez
+  id: "CARTOPIAXROOT2025VALENCIA"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Salva_ROOT_Valencia_CARTopiaX_2025.pdf)
+  highlight: 1
+
 - title: "From measurement to decision: a tissue-aware digital-twin platform for CAR T cell dosimetry"
   description: |
     Agent-based models (ABM) are powerful tools for digital twins in personalised medicine, enabling simulation of CAR T cell dynamics and therapy responses. CARTopiaX, implemented in the BioDynaMo engine, supports rapid, high-performance 3D simulations of tumour growth and CAR T cell administration, reproducing cellular dynamics with high fidelity and offering an accessible interface to explore treatment dose, fractionation, and administration routes.
