@@ -278,6 +278,16 @@
   education: Integrated Dual Degree (B.Tech & M.Tech) in Data Science & Biological Engineering, IIT Madras, India (2024)
   active: 1
 
+- name: "This could be you!"
+  photo: rock.jpg
+  info: See <a href="/careers">openings</a> for more info
+  email: vvasilev@cern.ch
+  active: 1
+
+
+################################################################################
+#                                     2025                                     #
+################################################################################
 - name: Salvador de la Torre Gonzalez
   photo: salva_de_la_torre_gonzalez.jpg
   info: "Google Summer of Code 2025 Contributor"
@@ -285,7 +295,6 @@
   github: "https://github.com/salva24"
   linkedin: "https://www.linkedin.com/in/salvador-de-la-torre-gonzalez-7299b6335/"
   education: "Mathematics and Computer Engineering, University of Seville, Spain"
-  active: 1
   projects:
     - title: "CARTopiaX: an Agent-Based Simulation of CAR T-Cell Therapy built on BioDynaMo"
       status: Completed
@@ -317,11 +326,10 @@
   email: rohan.timmaraju@gmail.com
   education: "B.S. Computer Science, Columbia University"
   github: "https://github.com/r-timmaraju"
-  active: 1
   linkedin: "https://www.linkedin.com/in/rohan-timmaraju-650ba3221/"
   projects:
     - title: "Enhancing LLM Training Efficiency with Clad for Automatic Differentiation"
-      status: Ongoing
+      status: Completed
       description: |
         Training Large Language Models is computationally expensive, often
         limited by the performance limitations of Python-based frameworks. This
@@ -346,10 +354,9 @@
   github: "https://github.com/aditimjoshi"
   linkedin: "https://www.linkedin.com/in/aditi-joshi-149280309/"
   education: "B.Tech in Computer Science and Engineering (AIML), Manipal Institute of Technology, Manipal, India"
-  active: 1
   projects:
     - title: "Implement and improve an efficient, layered tape with prefetching capabilities"
-      status: Ongoing
+      status: Completed
       description: |
         Automatic Differentiation (AD) is a computational technique that enables
         efficient and precise evaluation of derivatives for functions expressed in code.
@@ -363,16 +370,6 @@
       proposal: /assets/docs/Aditi_Milind_Joshi_Proposal_2025.pdf
       mentors: Aaron Jomy, David Lange, Vassil Vassilev
 
-- name: "This could be you!"
-  photo: rock.jpg
-  info: See <a href="/careers">openings</a> for more info
-  email: vvasilev@cern.ch
-  active: 1
-
-
-################################################################################
-#                                     2025                                     #
-################################################################################
 - name: Abhinav Kumar
   photo: Abhinav.jpg
   info: "Google Summer of Code 2025 Contributor"
