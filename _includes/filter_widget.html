@@ -1,0 +1,151 @@
+{% comment %} 1. Collect all tags {% endcomment %}
+{% assign all_tags = "" | split: "," %}
+{% for item in include.items %}
+  {% if item.tags %}
+    {% for tag in item.tags %}
+      {% assign all_tags = all_tags | push: tag %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} 2. Count and format for sorting {% endcomment %}
+{% assign unique_tags = all_tags | uniq %}
+{% assign tag_counts_string = "" %}
+
+{% for tag in unique_tags %}
+  {% assign count = 0 %}
+  {% for t in all_tags %}
+    {% if t == tag %}{% assign count = count | plus: 1 %}{% endif %}
+  {% endfor %}
+
+  {% comment %} Create a long string separated by ':::' {% endcomment %}
+  {% assign count_padded = count | prepend: "0000" | slice: -4, 4 %}
+  {% assign entry = count_padded | append: "|" | append: tag %}
+  {% assign tag_counts_string = tag_counts_string | append: entry | append: ":::" %}
+{% endfor %}
+
+{% comment %} 3. Convert string to Array and then Sort {% endcomment %}
+{% assign sorted_tag_counts = tag_counts_string | split: ":::" | sort | reverse %}
+
+<div class="filter-widget" markdown="0">
+  <div class="filter-search-row">
+    <input type="text" id="search-input" placeholder="Search..." onkeyup="updateFilters()">
+    <button id="clear-filters" onclick="resetFilters()">Clear</button>
+  </div>
+
+  <div class="filter-tag-row">
+    <span class="filter-label">{{ include.label }}:</span>
+    <button class="filter-btn active" onclick="applyTagFilter('all')">
+      All <span class="count-pill">{{ include.items.size }}</span>
+    </button>
+    {% for entry in sorted_tag_counts %}
+      {% assign parts = entry | split: "|" %}{% assign tag = parts[1] %}{% assign count = parts[0] | plus: 0 %}
+      <button class="filter-btn" onclick="applyTagFilter('{{ tag }}')">
+        {{ tag }} <span class="count-pill">{{ count }}</span>
+      </button>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  /* --- Core Layout (Global) --- */
+.filterable-list .filter-item.well {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.filterable-list .post-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.filterable-list .thumbnail-container {
+  flex: 0 0 200px;
+}
+
+.filterable-list .thumbnail-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* --- The Tag Badges --- */
+.tag-badge {
+  display: inline-block;
+  background: #004b87;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.75em;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.tag-badge:hover { opacity: 0.8; }
+
+/* The only acceptable !important to ensure JS override works */
+.is-hidden { display: none !important; }
+
+/* --- Responsive Stacking --- */
+@media (max-width: 768px) {
+  .filterable-list .filter-item.well { flex-direction: column-reverse; }
+  .filterable-list .thumbnail-container { width: 100%; flex-basis: auto; }
+  .filterable-list .thumbnail-image { width: 100%; height: auto; max-height: 250px; }
+}
+
+.filter-widget {
+    margin: 20px 0;
+    padding: 1.5rem;
+    background: #fcfcfc;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+  }
+  .filter-search-row { display: flex; gap: 10px; margin-bottom: 1rem; }
+  .filter-search-row input { flex: 1; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; }
+  .filter-tag-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .filter-label { font-weight: bold; font-size: 0.9em; color: #555; }
+
+  .filter-btn {
+    background: white;
+    border: 1px solid #004b87;
+    color: #004b87;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    display: inline-flex;
+    align-items: center;
+  }
+  .filter-btn.active { background: #004b87; color: white; }
+  .count-pill { background: rgba(0,0,0,0.08); padding: 1px 6px; border-radius: 10px; margin-left: 8px; font-size: 0.8em; }
+  .filter-btn.active .count-pill { background: rgba(255,255,255,0.2); }
+
+</style>
+
+<script>
+/* JS remains focused on toggling .filter-item visibility based on currentTag and search query */
+window.currentTag = 'all';
+window.applyTagFilter = function(tag) {
+  window.currentTag = tag;
+  window.updateFilters();
+};
+window.updateFilters = function() {
+  const q = document.getElementById('search-input').value.toLowerCase();
+  document.querySelectorAll('.filter-item').forEach(item => {
+    const tags = (item.dataset.tags || "").split(',');
+    const match = (window.currentTag === 'all' || tags.includes(window.currentTag)) && item.innerText.toLowerCase().includes(q);
+    item.classList.toggle('is-hidden', !match);
+  });
+  // Update button active states
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    const btnTag = btn.getAttribute('onclick').match(/'([^']+)'/)[1];
+    btn.classList.toggle('active', btnTag === window.currentTag);
+  });
+};
+window.resetFilters = function() { document.getElementById('search-input').value = ''; window.applyTagFilter('all'); };
+</script>

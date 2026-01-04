@@ -26,7 +26,6 @@
     As an extended goal, we aim to develop a new plugin for GPU execution,
     leveraging CUDA or OpenMP to support high-performance computing workflows
     within Jupyter.
-
   tasks: |
     * Move the currently implemented magics and reframe using xplugin
     * Complete the on-going work on the Python interoperability magic
@@ -34,6 +33,7 @@
     * Extended: To be able to execute on GPU using CUDA or OpenMP
     * Optional: Extend the magics for the wasm use case (xeus-cpp-lite)
     * Present the work at the relevant meetings and conferences
+  tags: ["xeus", "xeus-cpp", "clang", "clang-repl", "jupyter", "gpu", "cuda", "python", "plugins"]
 
 - name: "Enhancing LLM Training with Clad for efficient differentiation"
   description: |
@@ -61,7 +61,6 @@
     has the potential to enhance both research and production-level AI
     applications, aligning with compiler-research.org's broader goal of
     advancing computational techniques for scientific discovery.
-  
   tasks: |
     * Develop a simplified LLM setup in C++
     * Apply Clad to compute gradients for selected layers and loss functions
@@ -71,6 +70,7 @@
     * Develop tests to ensure correctness, numerical stability, and efficiency
     * Document the approach, implementation details, and performance gains
     * Present progress and findings at relevant meetings and conferences
+  tags: ["clad", "llm", "ai", "machine-learning", "automatic-differentiation", "cpp", "optimization"]
  
 - name: "Integrate Clad in PyTorch and compare the gradient execution times"
   description: |
@@ -85,7 +85,6 @@
     computed by PyTorch's native autograd system. Special attention will be
     given to CUDA-enabled gradient computations, as PyTorch also offers GPU
     acceleration capabilities.
-  
   tasks: |
     * Incorporate Clad's API components (such as `clad::array` and `clad::tape`)
     into PyTorch using its C++ API
@@ -96,6 +95,7 @@
     * Document thoroughly the integration process and the benchmark results and identify
     potential bottlenecks in Clad's execution
     * Present the work at the relevant meetings and conferences.
+  tags: ["clad", "pytorch", "python", "cuda", "benchmarking", "automatic-differentiation", "gpu"]
 
 - name: "Enable automatic differentiation of C++ STL concurrency primitives in Clad"
   description: |
@@ -104,7 +104,6 @@
     derivatives of the function. This project focuses on enabling automatic differentiation
     of codes that utilise C++ concurrency features such as `std::thread`, `std::mutex`,
     atomic operations and more. This will allow users to fully utilize their CPU resources.
-  
   tasks: |
     * Explore C++ concurrency primitives and prepare a report detailing the associated challenges
     involved and the features that can be feasibly supported within the given timeframe.
@@ -112,6 +111,7 @@
     * Add concurrency primitives support in Clad's reverse-mode automatic differentiation.
     * Add proper tests and documentation.
     * Present the work at the relevant meetings and conferences.
+  tags: ["clad", "cpp", "stl", "concurrency", "multithreading", "automatic-differentiation"]
 
 - name: "Interactive Differential Debugging - Intelligent Auto-Stepping and Tab-Completion"
   description: |
@@ -131,14 +131,13 @@
     of the system, then drop to the debugger. This may be achieved by introducing new IDD-specific
     commands. IDD should be able to tab complete the underlying GDB/LLDB commands. The contributor
     is also expected to set up the necessary CI infrastructure to automate the testing process of IDD.
-
-  
   tasks: |
     * Enable stream capture
     * Enable IDD-specific commands to execute until diverging stack or variable value.
     * Enable tab completion of commands.
     * Set up CI infrastructure to automate testing IDD.
     * Present the work at the relevant meetings and conferences.
+  tags: ["debugging", "idd", "gdb", "lldb", "regression", "tooling", "ci"]
 
 - name: "Implement CppInterOp API exposing memory, ownership and thread safety information "
   description: |
@@ -166,7 +165,6 @@
     cppyy (Python-C++ language bindings) as an exemplar. If time permits, extend
     the work to persistify this information across translation units and use it on
     code compiled with Clang.
-
   tasks: |
     * Collect and categorize possible exposed interop information kinds
     * Write one or more facilities to extract necessary implementation details
@@ -174,6 +172,7 @@
     * Integrate the work in clang-repl and Cling
     * Implement and demonstrate its use in cppyy as an exemplar
     * Present the work at the relevant meetings and conferences.
+  tags: ["cppinterop", "cppyy", "clang-repl", "cling", "interoperability", "ast", "jit"]
 
 - name: "Implement and improve an efficient, layered tape with prefetching capabilities"
   description: |
@@ -205,7 +204,6 @@
 
     This project aims to improve the efficiency of the clad tape and generalize
     it into a tool-agnostic facility that could be used outside of clad as well.
-
   tasks: |
     * Optimize the current tape by avoiding re-allocating on resize in favor of using connected slabs of array
     * Enhance existing benchmarks demonstrating the efficiency of the new tape
@@ -214,6 +212,7 @@
     * [Stretch goal] Support cpu-gpu transfer of the tape
     * [Stretch goal] Add infrastructure to enable checkpointing offload to the new tape
     * [Stretch goal] Performance benchmarks
+  tags: ["clad", "data-structures", "performance", "memory-management", "gpu", "hpc"]
 
 - name: "Enabling CUDA compilation on Cppyy-Numba generated IR"
   description: |
@@ -254,7 +253,7 @@
     the Numba extension.
     * Design and develop a CUDA compilation and execution mechanism.
     * Prepare proper tests and documentation.
-
+  tags: ["cppyy", "numba", "cuda", "llvm", "ir", "gpu", "python"]
 
 - name: "Cppyy STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
   description: |
@@ -278,7 +277,6 @@
     techniques in ML tools like JAX/CUTLASS. This project allows the C++
     infrastructure to be plugged into at service to the users seeking
     high-performance library primitives that are unavailable in Python.
-    
   tasks: |
     * Extend STL support for std::vectors of arbitrary dimensions
     * Improve the initialization approach for Eigen classes
@@ -288,6 +286,7 @@
     operations in frameworks like JAX
     * Work on integrating these plugins with toolkits like CUTLASS that
     utilise the bindings to provide a Python API
+  tags: ["cppyy", "stl", "eigen", "jax", "cutlass", "numpy", "machine-learning"]
 
 - name: "On Demand Parsing in Clang"
   description: |
@@ -401,7 +400,6 @@
       Alternative and more efficient implementation could be to make the lookup tables
       range based but we do not have even a prototype proving this could be a feasible
       approach.   
-
   tasks: |
     * Design and implementation of on-demand compilation for non-templated functions
     * Support non-templated structs and classes
@@ -413,9 +411,9 @@
     meetings, deliver presentations, and contribute blog posts as requested.
     Additionally, they should demonstrate the ability to navigate the
     community process with patience and understanding.
+  tags: ["clang", "compiler", "parsing", "performance", "memory-optimization", "cling"]
 
 - name: "Broaden the Scope for the Floating-Point Error Estimation Framework in Clad"
-
   description: |
       In mathematics and computer algebra, automatic differentiation (AD) is
       a set of techniques to numerically evaluate the derivative of a function 
@@ -473,7 +471,7 @@
         the capabilities of the framework.
       * Solve any general-purpose issues that come up with Clad during the process.
       * Prepare demos and carry out development needed for lossy compression. 
-
+  tags: ["clad", "floating-point", "numerical-stability", "benchmarking", "error-estimation"]
 
 - name: "Improve robustness of dictionary to module lookups in ROOT"
   description: |
@@ -523,6 +521,7 @@
         implementation works.
       * Develop tutorials and documentation.
       * Present the work at the relevant meetings and conferences.
+  tags: ["root", "cern", "cpp-modules", "cmssw", "dictionary", "io"]
 
 - name: "Enhance the incremental compilation error recovery in clang and clang-repl"
   description: |
@@ -554,6 +553,7 @@
       * Find and fix cases where there are bugs
       * Implement template instantiation error recovery support
       * Implement argument-dependent lookup (ADL) recovery support
+  tags: ["clang", "clang-repl", "incremental-compilation", "error-recovery", "jit"]
 
 ################################################################################
 #                                     2025                                     #

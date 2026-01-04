@@ -6,7 +6,11 @@ title: Blog
 <div class="col-sm-12">
   <h2>Latest Posts</h2>
 
-  <div>
-    {% for post in site.posts %} {% include blog-post-card.html %} {% endfor %}
-  </div>
+  {% include filter_widget.html items=site.posts label="Topic" %}
+
+  <div class="filterable-list">
+    {% for post in site.posts %}
+      {% include blog-post-card.html %}
+    {% endfor %}
+</div>
 </div>
