@@ -21,10 +21,9 @@ permalink: /presentations/
 <div class="row">
 {% endif %}
 
-<span id="{{presi.id}}">&nbsp;</span>
 <div class="col-sm-12">
- <div class="well text-justify clearfix">
-  <pubtit>
+ <div id="{{presi.id}}" class="well text-justify clearfix" style="scroll-margin-top: 80px;">
+ <pubtit>
     <a style="text-decoration:none;" href="#{{presi.id}}"> {{ presi.title }},
       {{ presi.location | markdownify | remove: '<p>' | remove: '</p>' | strip_newlines }},
       <em>{{ presi.speaker }}</em>,
@@ -34,10 +33,10 @@ permalink: /presentations/
   </pubtit>
   <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ presi.id }}.gif"
        class="img-responsive"
-       style="border-radius:2px; max-width:512px; float: left;" />
+       style="border-radius:2px; max-width:512px; min-height:200px; float: left;" />
   <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ presi.id }}.png"
        class="gif-animated-static img-responsive "
-       style="border-radius:2px; max-width:512px; float: left;" />
+       style="border-radius:2px; max-width:512px; min-height:200px; float: left;" />
   {{ presi.description | markdownify }}
  </div>
 </div>
@@ -65,8 +64,9 @@ permalink: /presentations/
 <div style="padding-left: 40px;">
 
 {% for pres in sorted_pres %}
-  <b>{{ pres.title }}</b> <br />
-  <em>{{ pres.speaker }} </em> at the {{pres.location}} ({{ pres.date | date: '%-d %B %Y' }}) {{ pres.artifacts }}
+  <div id="{{ pres.id }}" style="scroll-margin-top: 80px; margin-bottom: 10px;">
+    <b>{{ pres.title }}</b> <br />
+    <em>{{ pres.speaker }} </em> at the {{pres.location}} ({{ pres.date | date: '%-d %B %Y' }}) {{ pres.artifacts }}
+  </div>
 {% endfor %}
-
 </div>
