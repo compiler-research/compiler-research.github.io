@@ -74,7 +74,7 @@ We benchmarked RAMTools using the HG00154 sample from the 1000 Genomes Project, 
 
 RNTuple's columnar architecture shows significant speedups, especially for large region queries, when compared to the older ROOT TTree format and CRAM (industry-standard compressed format).
 
-![Region Query Performance](/images/blog/genome_query_time.png)
+![Region Query Performance](/images/blog/genome_query_time.png){: .img-responsive }
 
 The benchmarks demonstrate performance across three query sizes:
 
