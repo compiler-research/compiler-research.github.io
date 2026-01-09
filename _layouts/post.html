@@ -31,10 +31,35 @@ layout: default
   </header>
 
   {% if page.banner_image %}
+  {% comment %} Special-case GSoC banner when the image path contains 'gsoc-banner.png' {% endcomment %}
+  {% if page.banner_image contains 'gsoc-banner.png' %}
+  <!-- Special GSoC banner composition -->
+  <div class="gsoc-banner-wrapper" role="img" aria-label="Google Summer of Code — Compiler Research">
+    <div class="gsoc-banner">
+      <div class="logo logo-left">
+        <!-- left GSoC logo: update path if needed -->
+        <img src="/images/gsoc-logo.svg" alt="Google Summer of Code logo" />
+      </div>
+
+      <div class="at-sign" aria-hidden="true">@</div>
+
+      <div class="logo logo-right">
+        <!-- right Compiler Research logo: update path if needed -->
+        <img src="/images/cr-logo_old.png" alt="Compiler Research logo" />
+      </div>
+    </div>
+
+    <div class="gsoc-caption" role="heading" aria-level="2">
+      Google <strong>Summer of Code</strong>
+    </div>
+  </div>
+  {% else %}
+  <!-- Default banner -->
   <div class="post-banner">
     <img src="{{ page.banner_image }}"
          alt="Banner Image" class="banner-image" />
   </div>
+  {% endif %}
   {% endif %}
 
   <div class="post-content" itemprop="articleBody">{{ content }}</div>
@@ -60,13 +85,110 @@ layout: default
   object-fit: cover;
 }
 
+/* Default post banner (fallback) */
 .post-banner .banner-image {
   width: 100%;
   height: auto;
 }
 
+/* Tag badge */
 .tag-badge {
   background-color: #999999;
   padding: 0.5rem;
+}
+
+/* ---------------------------
+   GSoC banner: scalable sizing
+   ---------------------------
+   Tweak these variables to change sizes.
+   - --gsoc-wrapper-max: max-width of the banner wrapper (percent of container or px)
+   - --gsoc-banner-height: height of the banner area (viewport-relative works well)
+   - --gsoc-logo-scale: fraction of banner height used for logos (0..1)
+   - --gsoc-at-scale: fraction of banner height used for the @ sign
+   - --gsoc-caption-scale: fraction of banner height used for caption text
+*/
+:root {
+  --gsoc-wrapper-max: 95%;        /* percent of container width (or use 1200px) */
+  --gsoc-banner-height: 25vh;     /* change to 16vh or 12vh as needed */
+  --gsoc-logo-scale: 0.85;        /* logos = 85% of banner height */
+  --gsoc-at-scale: 0.5;           /* @ size = 80% of banner height */
+  --gsoc-caption-scale: 0.25;     /* caption size = 35% of banner height */
+}
+
+/* wrapper & layout */
+.gsoc-banner-wrapper {
+  width: 100%;
+  max-width: var(--gsoc-wrapper-max);
+  margin: 0 auto;
+  padding: 18px 12px;
+  box-sizing: border-box;
+}
+
+.gsoc-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5rem;          /* more spacing when elements are larger */
+  padding: 8px 0;
+}
+
+/* logos */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+/* Logos scale with the banner height (uses CSS calc() and the scale factors) */
+.logo img {
+  display: block;
+  height: calc(var(--gsoc-banner-height) * var(--gsoc-logo-scale));
+  width: auto;
+  max-width: 28vw;      /* prevent logos from growing extremely wide on huge screens */
+  min-height: 48px;     /* ensure small-screen readability */
+}
+
+/* right logo circular badge appearance (optional) */
+.logo-right img {
+  padding: 8px;
+  background: #fff;
+  box-sizing: content-box;
+}
+
+/* @ sign scales with banner height */
+.at-sign {
+  font-size: calc(var(--gsoc-banner-height) * var(--gsoc-at-scale));
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* caption scales too */
+.gsoc-caption {
+  text-align: center;
+  margin-top: 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: calc(var(--gsoc-banner-height) * var(--gsoc-caption-scale));
+  color: #111;
+}
+
+/* Responsive fallbacks: on very small screens, reduce banner height */
+@media (max-width: 900px) {
+  :root { --gsoc-banner-height: 16vh; } /* slightly taller on medium screens */
+  .gsoc-banner { gap: 2.5rem; }
+}
+
+@media (max-width: 520px) {
+  :root { --gsoc-banner-height: 18vh; } /* stack-friendly sizing */
+  .gsoc-banner {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .gsoc-caption { margin-top: 6px; }
 }
 </style>
