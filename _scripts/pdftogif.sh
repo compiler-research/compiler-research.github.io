@@ -1,43 +1,118 @@
-#!/bin/bash -x
+#!/usr/bin/env bash
+#
+# pdftogif.sh
+# Convert a multi-page PDF into:
+#   - an animated GIF (all pages)
+#   - a PNG preview (first page)
+#
+# Requires: ghostscript (gs), ImageMagick (convert)
+#
+# Example:
+#   ./pdftogif.sh slides.pdf MyPresentation
+#
 
-if [[ $# -lt 2 ]] ; then
-    echo 'Please pass the path to the pdf to convert and the name of the output file.'
-    echo 'Run something like cd images/pubpic; ../../_scripts/pdftogif.sh ../../assets/presentations/B_Kundu-PyHEP23_Cppyy_CppInterOp.pdf BKPyHEPDev2023'
-    exit 1
-fi
+set -euo pipefail
 
-if ! [ -x "$(command -v gs)" ]; then
-  echo 'Error: gs is not installed. This script depends on it' >&2
+# -----------------------
+# configuration defaults
+# -----------------------
+DPI=48
+GIF_DELAY=100   # centiseconds (100 = 1s per frame)
+
+# -----------------------
+# helpers
+# -----------------------
+usage() {
+  cat <<EOF
+Usage:
+  $(basename "$0") <input.pdf> <output_name>
+
+Creates:
+  <output_name>.gif   Animated GIF of all pages
+  <output_name>.png   PNG preview of the first page
+
+Example:
+  cd images/pubpic
+  ../../_scripts/pdftogif.sh \\
+    ../../assets/presentations/B_Kundu-PyHEP23_Cppyy_CppInterOp.pdf \\
+    BKPyHEPDev2023
+
+Requirements:
+  - ghostscript (gs)
+  - ImageMagick (convert)
+EOF
+}
+
+die() {
+  echo "Error: $*" >&2
+  exit 1
+}
+
+check_cmd() {
+  command -v "$1" >/dev/null 2>&1 || die "'$1' is not installed or not in PATH"
+}
+
+# -----------------------
+# argument parsing
+# -----------------------
+if [[ $# -ne 2 ]]; then
+  usage
   exit 1
 fi
 
-if ! [ -x "$(command -v convert2)" ]; then
-  echo 'Error: convert is not installed. This script depends on it' >&2
-  exit 1
-fi
+SLIDES_PDF="$1"
+PRES_ID="$2"
 
-SLIDES_PDF=$1
-PRES_ID=$2
-WORK_DIR=$(mktemp -d)
+[[ -f "$SLIDES_PDF" ]] || die "Input PDF not found: $SLIDES_PDF"
 
-gs -dSAFER -dQUIET -dNOPLATFONTS -dNOPAUSE -dBATCH \
-   -sOutputFile="$WORK_DIR/%d.png" \
+# -----------------------
+# dependency checks
+# -----------------------
+check_cmd gs
+check_cmd convert
+
+# -----------------------
+# temp working directory
+# -----------------------
+WORK_DIR="$(mktemp -d "${TMPDIR:-/tmp}/pdftogif.XXXXXX")"
+
+cleanup() {
+  rm -rf "$WORK_DIR"
+}
+trap cleanup EXIT
+
+# -----------------------
+# PDF → PNGs
+# -----------------------
+echo "Rendering PDF pages to PNGs…"
+
+gs -dSAFER -dQUIET -dNOPAUSE -dBATCH \
    -sDEVICE=pngalpha \
-   -r48 \
+   -sOutputFile="$WORK_DIR/%03d.png" \
+   -r"$DPI" \
    -dTextAlphaBits=4 \
    -dGraphicsAlphaBits=4 \
    -dUseCIEColor \
    -dUseTrimBox \
-   $SLIDES_PDF
+   "$SLIDES_PDF"
 
-convert -delay 100 $(ls $WORK_DIR/*.png | sort -V) $PRES_ID.gif
-mv $WORK_DIR/1.png $PRES_ID.png
+# -----------------------
+# PNGs → GIF
+# -----------------------
+echo "Creating animated GIF: ${PRES_ID}.gif"
 
-# deletes the temp directory
-function cleanup {      
-  rm -rf "$WORK_DIR"
-  echo "Deleted temp working directory $WORK_DIR"
-}
+convert -delay "$GIF_DELAY" \
+        "$WORK_DIR"/*.png \
+        "${PRES_ID}.gif"
 
-# register the cleanup function to be called on the EXIT signal
-trap cleanup EXIT
+# -----------------------
+# first page preview
+# -----------------------
+cp "$WORK_DIR/001.png" "${PRES_ID}.png"
+
+# -----------------------
+# done
+# -----------------------
+echo "Done."
+echo "  → ${PRES_ID}.gif"
+echo "  → ${PRES_ID}.png"

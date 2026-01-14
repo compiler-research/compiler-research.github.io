@@ -1,10 +1,67 @@
+- title: "Teaching Automatic Differentiation with Interactive C++ Jupyter Notebooks"
+  description: |
+    The compiler research group pioneered interactive C++ notebooks with
+    xeus-clang-repl, and its successor xeus-cpp. The ability to write automatic
+    differentiation code in an interactive context eliminates the need for long
+    edit-compile-run cycles and simplifies the approach to teaching
+    computational methods.
+
+    By leveraging the clang-repl C/C++ interpreter, we create an interactive
+    notebook environment for teaching autodiff concepts and evaluating the
+    efficiency and correctness of differentiated code. This approach combines
+    the performance of compiled C++ with the accessibility of Jupyter notebooks,
+    making advanced automatic differentiation techniques more approachable for
+    students and researchers.
+
+    This talk demonstrates how various C++ automatic differentiation tools, such
+    as CoDiPack, Clad and boost-autodiff integrate with the xeus-cpp Jupyter
+    kernel to enable interactive differentiable programming.
+  location: "[28th EuroAD Workshop](https://indico.cern.ch/event/1543104/contributions/6791578/)"
+  date: 2025-12-09
+  speaker:  Aaron Jomy
+  id: "TEACHINGADEUROAD2025"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Aaron_Teaching_EuroAD_2025.pdf)
+  highlight: 1
+
+- title: "Differentiating Object-Oriented paradigms using Clad"
+  description: |
+    Clad is a Clang plugin that enables automatic differentiation for C++ by
+    transforming abstract syntax trees using LLVM's compiler infrastructure. A
+    key design goal is generating readable, efficient derivatives that integrate
+    seamlessly into existing codebases. This talk explores the challenges of
+    extending Clad to support object-oriented programming, demonstrating our
+    approach through examples such as constructors, methods, and non-copyable
+    types. We discuss the analyses and optimization techniques—both implemented
+    and in development—that maintain code readability and performance when
+    handling OOP paradigms. Finally, we present examples of use cases that
+    these enhancements enable.
+  location: "[28th EuroAD Workshop](https://indico.cern.ch/event/1543104/contributions/6791593/)"
+  date: 2025-12-09
+  speaker:  Petro Zarytskyi
+  id: "CLADEUROAD2025"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Petro_Clad_EuroAD_2025.pdf)
+  highlight: 1
+
 - title: "CARTopiaX: an Agent-Based Simulation of CAR T-Cell Therapy built with BioDynaMo and ROOT"
   description: |
-    CAR T-cell therapy has revolutionized cancer immunotherapy by reprogramming patient T cells to recognize and eliminate malignant cells, achieving remarkable success in hematologic cancers. However, its application to solid tumors remains challenging due to the complexity and heterogeneity of the tumor microenvironment. 
-    
-    CARTopiaX is an advanced agent-based model developed on BioDynaMo, an open-source, high-performance platform for large-scale biological simulations that incorporates ROOT. The model enables detailed exploration of interactions between CAR T-cells and solid tumor microenvironments, supporting hypothesis testing and data-driven discovery. 
-    
-    By combining biological accuracy with computational efficiency and scalability, CARTopiaX provides researchers with a powerful tool to investigate CAR T-cell dynamics in silico, accelerating scientific progress and reducing reliance on costly and time-consuming experimental approaches.
+    CAR T-cell therapy has revolutionized cancer immunotherapy by reprogramming
+    patient T cells to recognize and eliminate malignant cells, achieving
+    remarkable success in hematologic cancers. However, its application to solid
+    tumors remains challenging due to the complexity and heterogeneity of the
+    tumor microenvironment.
+
+    CARTopiaX is an advanced agent-based model developed on BioDynaMo, an
+    open-source, high-performance platform for large-scale biological
+    simulations that incorporates ROOT. The model enables detailed exploration
+    of interactions between CAR T-cells and solid tumor microenvironments,
+    supporting hypothesis testing and data-driven discovery.
+
+    By combining biological accuracy with computational efficiency and
+    scalability, CARTopiaX provides researchers with a powerful tool to
+    investigate CAR T-cell dynamics in silico, accelerating scientific progress
+    and reducing reliance on costly and time-consuming experimental approaches.
   location: "[ROOT Users CERN's Workshop 2025 in UPV-Valencia](https://indico.cern.ch/event/1505384/contributions/6781575/)"
   date: 2025-11-21
   speaker: Salvador de la Torre Gonzalez
@@ -12,6 +69,45 @@
   artifacts: |
     [Link to Slides](/assets/presentations/Salva_ROOT_Valencia_CARTopiaX_2025.pdf)
   highlight: 1
+
+- title: "Advancing Python-C++ Interoperability in ROOT and beyond "
+  description: |
+  location: "[ROOT Users CERN's Workshop 2025 in UPV-Valencia](https://indico.cern.ch/event/1505384/contributions/6781575/)"
+  date: 2025-11-20
+  speaker:  Aaron Jomy, Vipul Nellamakada
+  id: "INTEROP2025VALENCIA"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Aaron_Vipul_ROOT_Valencia_InterOp_2025.pdf)
+  highlight: 1
+
+- title: "Compiler Research in the Open: Connecting People, Projects, and Progress"
+  description: |
+    The compiler-research.org initiative aims to make compiler research more
+    visible, interconnected, and sustainable across academia and
+    industry. Beyond research infrastructure, it pioneers a new model for
+    open-source education and mentorship offering remote, project-based training
+    in advanced compiler and systems engineering for early-career
+    professionals. This approach fills a critical gap in scientific software
+    development by fostering deep technical mentorship, alignment with research
+    goals, and long-term engagement through meaningful open-source
+    contributions. Graduates emerge ready for research-driven roles in AI,
+    high-performance computing, and scientific software engineering.
+
+    This talk will present an overview of the project’s goals and evolving
+    open-source architecture for organizing compiler knowledge in a
+    community-driven way. We’ll explore how foundational compiler and systems
+    tools foster modern data science; highlight recent achievements and ongoing
+    collaborations; and share our vision for enabling cross-disciplinary
+    progress through shared infrastructure and open, connected research.
+
+  location: "[ROOT Users CERN's Workshop 2025 in UPV-Valencia](https://indico.cern.ch/event/1505384/contributions/6781575/)"
+  date: 2025-11-18
+  speaker: Vassil Vassilev
+  id: "CRROOT2025VALENCIA"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Vassil_ROOT_Valencia_CR_2025.pdf)
+  highlight: 1
+
 
 - title: "From measurement to decision: a tissue-aware digital-twin platform for CAR T cell dosimetry"
   description: |
@@ -62,9 +158,9 @@
 - title: "Debugging Regressions: Interactive Differential Debugging"
   description: |
     Software systems have grown to millions lines of code and are developed by a community of hundreds of developers. Often benign changes can trigger undesired behavior which is very challenging to isolate and reproduce. The conventional approach to addressing these regressions is time-consuming, usually requiring the expertise of experienced engineers.
-    
+
     Differential debugging is a technique designed to streamline the debugging process by utilizing a previous version of the system as a baseline. This method reduces debugging time and complexity by narrowing down the phase space for bug localization. However, the current practice of differential debugging involves running two instances of the debugger independently, lacking cross communication regarding the execution state.
-    
+
     In this presentation, we introduce a new tool called Interactive Differential Debugging (IDD). IDD automates the process of filtering out irrelevant execution paths between a reference and a regressed software system. Our debugging infrastructure goes beyond identification, providing syntactic and semantic tools to systematically compare the execution states of two versions of the same software, identifying functional or performance regressions. IDD seamlessly integrates with LLDB, leveraging its debug server to collect execution information from both systems. The result is a focused display of debugger states that differ between the two versions. Through practical demonstrations, we illustrate how IDD helps the detection of regressions at scale such as the clang compiler.
   location: "[EuroLLVM 2025](https://youtu.be/sI-jxB0tGpM?si=CNNo264OvA4JMqRb)"
   date: 2025-04-16
@@ -76,9 +172,9 @@
 
 - title: "Automatic Differentiation in RooFit and Community Needs"
   description: |
-    The goal of the talk is to demonstrate automatic 
+    The goal of the talk is to demonstrate automatic
     differentiation in scientific workflows
-    
+
   location: "[Foundation Models for Science Mini Workshop](https://indico.cern.ch/event/1459124/contributions/6155024/)"
   date: 2024-10-01
   speaker: Vassil Vasilev
@@ -117,18 +213,18 @@
   automatic differentiation"
   description: |
     Clad is a LLVM/Clang plugin designed to provide automatic differentiation (AD)
-    for C++ mathematical functions. It generates code for computing derivatives modifying 
-    abstract syntax tree using LLVM compiler features. Clad supports forward- and 
-    reverse-mode differentiation that are effectively used to integrate all kinds of 
+    for C++ mathematical functions. It generates code for computing derivatives modifying
+    abstract syntax tree using LLVM compiler features. Clad supports forward- and
+    reverse-mode differentiation that are effectively used to integrate all kinds of
     functions. The typical AD approach in Machine Learning tools records and flattens the
-    compute graph at runtime, whereas Clad can perform more advanced optimizations at 
-    compile time using a rich program representation provided by the Clang AST. These 
-    optimizations investigate which parts of the computation graph are relevant to 
-    the AD rules. 
-    
+    compute graph at runtime, whereas Clad can perform more advanced optimizations at
+    compile time using a rich program representation provided by the Clang AST. These
+    optimizations investigate which parts of the computation graph are relevant to
+    the AD rules.
+
     One such technique is the “To-Be-Recorded” optimization, which reduces
-    the memory pressure to the clad tape data structure in the adjoint mode. Another 
-    optimization technique is activity analysis, which discards all derivative 
+    the memory pressure to the clad tape data structure in the adjoint mode. Another
+    optimization technique is activity analysis, which discards all derivative
     statements that are not relevant to the generated code. In the talk we will explain
     compiler-level optimizations specific to AD, and will show some specific examples
     of how these analyses have impacted clad applications.
@@ -446,38 +542,38 @@
 
 - title: "Fast And Automatic Floating Point Error Analysis With CHEF-FP"
   description: |
-    As we reach the limit of Moore's Law, researchers are exploring different 
-    paradigms to achieve unprecedented performance. Approximate Computing (AC), 
-    which relies on the ability of applications to tolerate some error in the 
-    results to trade-off accuracy for performance, has shown significant promise. 
-    Despite the success of AC in domains such as Machine Learning, its acceptance 
-    in High-Performance Computing (HPC) is limited due to its stringent 
-    requirement of accuracy. We need tools and techniques to identify regions of 
-    the code that are amenable to approximations and their impact on the 
-    application output quality so as to guide developers to employ selective 
-    approximation. To this end, we propose CHEF-FP, a flexible, scalable, and 
-    easy-to-use source-code transformation tool based on Automatic 
+    As we reach the limit of Moore's Law, researchers are exploring different
+    paradigms to achieve unprecedented performance. Approximate Computing (AC),
+    which relies on the ability of applications to tolerate some error in the
+    results to trade-off accuracy for performance, has shown significant promise.
+    Despite the success of AC in domains such as Machine Learning, its acceptance
+    in High-Performance Computing (HPC) is limited due to its stringent
+    requirement of accuracy. We need tools and techniques to identify regions of
+    the code that are amenable to approximations and their impact on the
+    application output quality so as to guide developers to employ selective
+    approximation. To this end, we propose CHEF-FP, a flexible, scalable, and
+    easy-to-use source-code transformation tool based on Automatic
     Differentiation (AD) for analysing approximation errors in HPC applications.
-    
-    CHEF-FP uses Clad,  an efficient AD tool built as a plugin to the Clang 
-    compiler and based on the LLVM compiler infrastructure, as a backend and 
-    utilizes its AD abilities to evaluate approximation errors in C++ code. 
-    CHEF-FP works at the source level by injecting error estimation code 
-    into the generated adjoints. This enables the error-estimation code to 
-    undergo compiler optimizations resulting in improved analysis time and 
-    reduced memory usage. We also provide theoretical and architectural 
-    augmentations to source code transformation-based AD tools to perform FP 
+
+    CHEF-FP uses Clad,  an efficient AD tool built as a plugin to the Clang
+    compiler and based on the LLVM compiler infrastructure, as a backend and
+    utilizes its AD abilities to evaluate approximation errors in C++ code.
+    CHEF-FP works at the source level by injecting error estimation code
+    into the generated adjoints. This enables the error-estimation code to
+    undergo compiler optimizations resulting in improved analysis time and
+    reduced memory usage. We also provide theoretical and architectural
+    augmentations to source code transformation-based AD tools to perform FP
     error analysis.
-    
-    In this talk, we primarily focus on analyzing errors introduced by 
-    mixed-precision AC techniques, the most popular approximate technique in HPC. 
-    We also show the applicability of our tool in estimating other kinds of 
-    errors by evaluating our tool on codes that use approximate functions. 
-    Moreover, we demonstrate the speedups achieved by CHEF-FP during analysis 
-    time as compared to the existing state-of-the-art tool as a result of its 
-    ability to generate and insert approximation error estimate code directly 
-    into the derivative source. The generated code also becomes a candidate for 
-    better compiler optimizations contributing to lesser runtime performance 
+
+    In this talk, we primarily focus on analyzing errors introduced by
+    mixed-precision AC techniques, the most popular approximate technique in HPC.
+    We also show the applicability of our tool in estimating other kinds of
+    errors by evaluating our tool on codes that use approximate functions.
+    Moreover, we demonstrate the speedups achieved by CHEF-FP during analysis
+    time as compared to the existing state-of-the-art tool as a result of its
+    ability to generate and insert approximation error estimate code directly
+    into the derivative source. The generated code also becomes a candidate for
+    better compiler optimizations contributing to lesser runtime performance
     overhead.
 
   location: "[IPDPS 2023](https://www.ipdps.org/ipdps2023/)"
