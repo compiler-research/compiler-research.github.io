@@ -34,17 +34,45 @@
   </div>
 
   <div class="filter-tag-row">
-    <span class="filter-label">{{ include.label }}:</span>
-    <button class="filter-btn active" onclick="applyTagFilter('all')">
-      All <span class="count-pill">{{ include.items.size }}</span>
+  <span class="filter-label">{{ include.label }}:</span>
+
+  {% comment %} Set your threshold here: tags with count < threshold are hidden {% endcomment %}
+  {% assign threshold = 2 %}
+  {% assign has_extra = false %}
+
+  <button class="filter-btn" onclick="applyTagFilter('all')">
+    All <span class="count-pill">{{ include.items.size }}</span>
+  </button>
+
+  {% for entry in sorted_tag_counts %}
+    {% assign parts = entry | split: "|" %}
+    {% assign tag = parts[1] %}
+    {% assign count = parts[0] | plus: 0 %}
+
+    {% if tag != "" %}
+      {% if count >= threshold %}
+        <button class="filter-btn" onclick="applyTagFilter('{{ tag }}')">
+          {{ tag }} <span class="count-pill">{{ count }}</span>
+        </button>
+      {% else %}
+        {% if has_extra == false %}
+          <span id="extra-tag-container" class="is-hidden" style="display: contents;">
+          {% assign has_extra = true %}
+        {% endif %}
+        <button class="filter-btn" onclick="applyTagFilter('{{ tag }}')">
+          {{ tag }} <span class="count-pill">{{ count }}</span>
+        </button>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_extra %}
+    </span> <button id="toggle-more-btn" class="filter-btn" onclick="toggleExtraTags()" style="border-style: dashed; opacity: 0.7;">
+      + More
     </button>
-    {% for entry in sorted_tag_counts %}
-      {% assign parts = entry | split: "|" %}{% assign tag = parts[1] %}{% assign count = parts[0] | plus: 0 %}
-      <button class="filter-btn" onclick="applyTagFilter('{{ tag }}')">
-        {{ tag }} <span class="count-pill">{{ count }}</span>
-      </button>
-    {% endfor %}
+  {% endif %}
   </div>
+
   <div id="no-results" class="no-results-message is-hidden">
     Please select a tag to view items.
   </div>
@@ -205,5 +233,17 @@ window.updateFilters = function(updateUrl = true) {
 window.resetFilters = function() {
   document.getElementById('search-input').value = '';
   window.applyTagFilter('all');
+};
+
+window.toggleExtraTags = function() {
+  const container = document.getElementById('extra-tag-container');
+  const btn = document.getElementById('toggle-more-btn');
+
+  if (container && btn) {
+    const isHidden = container.classList.toggle('is-hidden');
+    btn.innerText = isHidden ? "+ More" : "- Less";
+    // Optional: add a class to style the button differently when open
+    btn.classList.toggle('active-toggle', !isHidden);
+  }
 };
 </script>
