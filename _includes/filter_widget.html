@@ -169,13 +169,18 @@
   }
   /* Ensure this is at the bottom of your style block */
   .is-hidden { display: none !important; }
+
+  /* Keeps the flex flow of the parent row */
+  #extra-tag-container:not(.is-hidden) {
+    display: contents !important;
+  }
 </style>
 
 <script>
 /** 1. On Load: Set state from URL and run filter **/
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
-  window.currentTag = params.get('tag'); // No fallback here ensures empty if missing
+  window.currentTag = params.get('tag') || 'all';
 
   const searchInput = document.getElementById('search-input');
   if (searchInput) searchInput.value = params.get('q') || '';
