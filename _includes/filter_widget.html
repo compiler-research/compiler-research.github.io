@@ -45,6 +45,9 @@
       </button>
     {% endfor %}
   </div>
+  <div id="no-results" class="no-results-message is-hidden">
+    Please select a tag to view items.
+  </div>
 </div>
 
 <style>
@@ -125,90 +128,82 @@
   .count-pill { background: rgba(0,0,0,0.08); padding: 1px 6px; border-radius: 10px; margin-left: 8px; font-size: 0.8em; }
   .filter-btn.active .count-pill { background: rgba(255,255,255,0.2); }
 
+  .no-results-message {
+    margin: 20px 0;
+    padding: 2rem;
+    text-align: center;
+    background: #fff9e6; /* Light amber background */
+    border: 1px solid #ffe58f; /* Subtle border */
+    border-radius: 8px;
+    color: #856404; /* Darker amber text */
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  /* Ensure this is at the bottom of your style block */
+  .is-hidden { display: none !important; }
 </style>
 
 <script>
-/**
- * 1. Initial Load: Read URL parameters and apply them
- */
+/** 1. On Load: Set state from URL and run filter **/
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
-  const urlTag = params.get('tag') || 'all';
-  const urlQuery = params.get('q') || '';
+  window.currentTag = params.get('tag'); // No fallback here ensures empty if missing
 
-  // Set initial state
-  window.currentTag = urlTag;
   const searchInput = document.getElementById('search-input');
-  if (searchInput) searchInput.value = urlQuery;
+  if (searchInput) searchInput.value = params.get('q') || '';
 
-  // Apply filters without pushing to history again
-  window.updateFilters(false);
+  window.updateFilters(false); // Initial run
 });
 
-/**
- * 2. Tag Selection Handler
- */
+/** 2. Click Handler **/
 window.applyTagFilter = function(tag) {
   window.currentTag = tag;
   window.updateFilters(true);
 };
 
-/**
- * 3. Core Filter Engine
- * @param {boolean} updateUrl - If true, syncs state to browser address bar
- */
+/** 3. Core Logic: URL Sync + Visibility + No Results Message **/
 window.updateFilters = function(updateUrl = true) {
-  const searchInput = document.getElementById('search-input');
-  const q = searchInput ? searchInput.value : '';
+  const q = document.getElementById('search-input').value || '';
   const qLower = q.toLowerCase();
 
-  // Sync state to URL
+  // Sync Address Bar
   if (updateUrl) {
     const url = new URL(window.location);
-    if (window.currentTag === 'all') {
-      url.searchParams.delete('tag');
-    } else {
-      url.searchParams.set('tag', window.currentTag);
-    }
-
-    if (q) {
-      url.searchParams.set('q', q);
-    } else {
-      url.searchParams.delete('q');
-    }
-    // Update address bar without reloading
+    window.currentTag ? url.searchParams.set('tag', window.currentTag) : url.searchParams.delete('tag');
+    q ? url.searchParams.set('q', q) : url.searchParams.delete('q');
     window.history.replaceState({}, '', url);
   }
 
-  // Filter Items in DOM
+  let visibleCount = 0;
+
+  // Logic: Only show if a tag is active (currentTag is truthy) AND search matches
   document.querySelectorAll('.filter-item').forEach(item => {
     const tags = (item.dataset.tags || "").split(',');
-    const text = item.innerText.toLowerCase();
+    const matchesTag = (window.currentTag === 'all') || (window.currentTag && tags.includes(window.currentTag));
+    const matchesSearch = item.innerText.toLowerCase().includes(qLower);
 
-    const matchesTag = (window.currentTag === 'all' || tags.includes(window.currentTag));
-    const matchesSearch = text.includes(qLower);
-
-    item.classList.toggle('is-hidden', !(matchesTag && matchesSearch));
+    const isVisible = !!(matchesTag && matchesSearch);
+    item.classList.toggle('is-hidden', !isVisible);
+    if (isVisible) visibleCount++;
   });
 
-  // Update Button UI States
+  // Handle No Results Message
+  const noResultsEl = document.getElementById('no-results');
+  if (noResultsEl) {
+    noResultsEl.classList.toggle('is-hidden', visibleCount > 0);
+    noResultsEl.innerText = !window.currentTag ? "Please select a tag to view items." : "No items match your criteria.";
+  }
+
+  // Sync Button UI
   document.querySelectorAll('.filter-btn').forEach(btn => {
-    // Extract the tag name from the onclick attribute: applyTagFilter('tag-name')
-    const onclickAttr = btn.getAttribute('onclick') || "";
-    const match = onclickAttr.match(/'([^']+)'/);
-    if (match) {
-      const btnTag = match[1];
-      btn.classList.toggle('active', btnTag === window.currentTag);
-    }
+    const btnTag = btn.getAttribute('onclick').match(/'([^']+)'/)[1];
+    btn.classList.toggle('active', btnTag === window.currentTag);
   });
 };
 
-/**
- * 4. Reset Handler
- */
+/** 4. Reset **/
 window.resetFilters = function() {
-  const searchInput = document.getElementById('search-input');
-  if (searchInput) searchInput.value = '';
+  document.getElementById('search-input').value = '';
   window.applyTagFilter('all');
 };
 </script>
