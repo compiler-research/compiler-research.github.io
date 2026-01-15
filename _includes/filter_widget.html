@@ -128,24 +128,87 @@
 </style>
 
 <script>
-/* JS remains focused on toggling .filter-item visibility based on currentTag and search query */
-window.currentTag = 'all';
+/**
+ * 1. Initial Load: Read URL parameters and apply them
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  const params = new URLSearchParams(window.location.search);
+  const urlTag = params.get('tag') || 'all';
+  const urlQuery = params.get('q') || '';
+
+  // Set initial state
+  window.currentTag = urlTag;
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.value = urlQuery;
+
+  // Apply filters without pushing to history again
+  window.updateFilters(false);
+});
+
+/**
+ * 2. Tag Selection Handler
+ */
 window.applyTagFilter = function(tag) {
   window.currentTag = tag;
-  window.updateFilters();
+  window.updateFilters(true);
 };
-window.updateFilters = function() {
-  const q = document.getElementById('search-input').value.toLowerCase();
+
+/**
+ * 3. Core Filter Engine
+ * @param {boolean} updateUrl - If true, syncs state to browser address bar
+ */
+window.updateFilters = function(updateUrl = true) {
+  const searchInput = document.getElementById('search-input');
+  const q = searchInput ? searchInput.value : '';
+  const qLower = q.toLowerCase();
+
+  // Sync state to URL
+  if (updateUrl) {
+    const url = new URL(window.location);
+    if (window.currentTag === 'all') {
+      url.searchParams.delete('tag');
+    } else {
+      url.searchParams.set('tag', window.currentTag);
+    }
+
+    if (q) {
+      url.searchParams.set('q', q);
+    } else {
+      url.searchParams.delete('q');
+    }
+    // Update address bar without reloading
+    window.history.replaceState({}, '', url);
+  }
+
+  // Filter Items in DOM
   document.querySelectorAll('.filter-item').forEach(item => {
     const tags = (item.dataset.tags || "").split(',');
-    const match = (window.currentTag === 'all' || tags.includes(window.currentTag)) && item.innerText.toLowerCase().includes(q);
-    item.classList.toggle('is-hidden', !match);
+    const text = item.innerText.toLowerCase();
+
+    const matchesTag = (window.currentTag === 'all' || tags.includes(window.currentTag));
+    const matchesSearch = text.includes(qLower);
+
+    item.classList.toggle('is-hidden', !(matchesTag && matchesSearch));
   });
-  // Update button active states
+
+  // Update Button UI States
   document.querySelectorAll('.filter-btn').forEach(btn => {
-    const btnTag = btn.getAttribute('onclick').match(/'([^']+)'/)[1];
-    btn.classList.toggle('active', btnTag === window.currentTag);
+    // Extract the tag name from the onclick attribute: applyTagFilter('tag-name')
+    const onclickAttr = btn.getAttribute('onclick') || "";
+    const match = onclickAttr.match(/'([^']+)'/);
+    if (match) {
+      const btnTag = match[1];
+      btn.classList.toggle('active', btnTag === window.currentTag);
+    }
   });
 };
-window.resetFilters = function() { document.getElementById('search-input').value = ''; window.applyTagFilter('all'); };
+
+/**
+ * 4. Reset Handler
+ */
+window.resetFilters = function() {
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) searchInput.value = '';
+  window.applyTagFilter('all');
+};
 </script>
