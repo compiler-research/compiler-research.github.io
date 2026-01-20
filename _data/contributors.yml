@@ -294,7 +294,7 @@
   photo: Anutosh.jpg
   education: Integrated Dual Degree (B.Tech & M.Tech) in Data Science & Biological Engineering, IIT Madras, India (2024)
   active: 1
-
+  
 - name: Aditya Pandey
   photo: Aditya.jpeg
   info: "Google Summer of Code 2025 Contributor"
@@ -345,6 +345,7 @@
   info: See <a href="/careers">openings</a> for more info
   email: vvasilev@cern.ch
   active: 1
+
 
 ################################################################################
 #                                     2025                                     #
@@ -583,6 +584,7 @@
       proposal: /assets/docs/petro_mozil_promosal_GSoC_2025.pdf
       mentors: Martin Vassilev, David Lange
 
+
 ################################################################################
 #                                     2024                                     #
 ################################################################################
@@ -687,6 +689,7 @@
       proposal: /assets/docs/Atell_Krasnopolsky_Proposal_2024.pdf
       mentors: Vassil Vassilev, Vaibhav Thakkar, Petro Zarytskyi
 
+
 - name: Mihail Mihov
   photo: mihail-mihov.jpg
   info: "GSoC 2024 Contributor"
@@ -722,6 +725,7 @@
         clang’s infrastructure.
       proposal: /assets/docs/Mihail_Mihov_GSoC24_Proposal.pdf
       mentors: Vaibhav Thakkar, Petro Zarytskyi, Vassil Vassilev
+
 
 - name: Vaibhav Thakkar
   photo: Vaibhav.jpg
@@ -763,6 +767,7 @@
       report: |
         [Final Report](/assets/docs/Vaibhav_Thakkar_GSoC23_Report.pdf)
 
+
 - name: Isaac Morales Santana
   info: "GSoC 2024 Contributor"
   photo: Isaac.jpg
@@ -782,6 +787,7 @@
 
       proposal: /assets/docs/Isaac_Morales-Proposal_2024.pdf
       mentors: Vassil Vassilev, Lukas Breitwieser, Tobias Duswald and Fons Rademakers
+
 
 - name: "Riya Bisht"
   photo: Riya-Bisht.jpeg
@@ -805,6 +811,7 @@
         mechanism and execution within the Cppyy-Numba environment.
       proposal: /assets/docs/Riya_Bisht_GSoC2024_Proposal.pdf
       mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
+
 
 - name: Khushiyant
   photo: Khushiyant.jpg
@@ -831,6 +838,7 @@
 
       mentors: Vassil Vassilev, Wim Lavrijsen, Aaron Jomy, Jonas Rembser
       proposal: /assets/docs/Khushiyant_Proposal_2024.pdf
+
 
 - name: "Tharun Anandh"
   photo: tharun_a.jpg
@@ -875,6 +883,7 @@
         of template specialization decls in clang modules.
       mentors:  Vassil Vassilev
 
+
 - name: Abhi Acherjee
   info: "IRIS-HEP Fellow"
   photo: Abhi.jpg
@@ -895,6 +904,7 @@
 
       proposal: /assets/docs/Abhigyan_Acherjee-Proposal_2023.pdf
       mentors: Vassil Vassilev, David Lange
+
 
 - name: Ioana Ifrim
   info: Research Staff
@@ -1451,6 +1461,8 @@
       report: |
         [Final Report](/assets/docs/Parth_Arora_GSoC21_Report.pdf)
 
+
+
 ################################################################################
 #                                     2021                                     #
 ################################################################################
@@ -1509,6 +1521,7 @@
       mentors: Vassil Vassilev, David Lange
       report: |
         [URL](https://indico.cern.ch/event/1066812/contributions/4495290/attachments/2302817/3917355/Iris%20HeP.pdf"){:target="_blank"}
+
 
 ################################################################################
 #                                     2020                                     #
@@ -1579,4 +1592,3 @@
       report: |
         [Poster](/assets/presentations/LLVM2020_Clad.pdf){:target="_blank"}
       mentors: Vassil Vassilev, Alexander Penev
-      
