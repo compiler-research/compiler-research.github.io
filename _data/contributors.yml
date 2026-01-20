@@ -303,6 +303,7 @@
   github: "https://github.com/AdityaPandeyCN"
   www: "https://adityapandeycn.github.io/personalblog/"
   linkedin: "https://www.linkedin.com/in/aditya-pandey-019482200/"
+  active: 1
   projects:
     - title: "Advancing GeneROOT project"
       status: Ongoing
