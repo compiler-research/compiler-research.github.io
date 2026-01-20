@@ -319,7 +319,7 @@
        clinical validation workflows where manual review of aligned 
        reads is essential for confirming variant calls.
       mentors: Vassil Vassilev, Martin Vassilev
-      proposal: /assets/docs/Aditya_Pandey_GeneROOT2026.pdf
+      proposal: /assets/docs/AdityaPandey_GeneROOT2026.pdf
     - title: "Using ROOT in the field of genome sequencing"
       status: Completed
       description: |
