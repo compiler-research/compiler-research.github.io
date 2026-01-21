@@ -28,6 +28,7 @@ Guilherme
 Guiraud
 Hageboeck
 Hahnfeld
+Hames
 Harshitha
 Hilendarski
 Ikarashi
@@ -41,6 +42,7 @@ Joshi
 Jurgaityt
 Kyiv
 LBNL
+Lang
 Lattner
 Lavrijsen
 Li
@@ -172,6 +174,7 @@ kundu
 kundubaidya
 lange
 li
+lhames
 lucas
 maksym
 manasi
