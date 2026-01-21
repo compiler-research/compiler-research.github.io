@@ -111,7 +111,7 @@ So how does symbol resolution actually work? Let’s walk through the process st
 
 ### ExecutorResolver:
 [143654](https://github.com/llvm/llvm-project/pull/143654)
-suggested by @lhames.we introduced a `DylibSymbolResolver` that helps resolve symbols for each loaded dylib.
+suggested by Lang Hames. We introduced a `DylibSymbolResolver` that helps resolve symbols for each loaded dylib.
 
 Previously, we returned a DylibHandle to the controller. Now, we wrap the native handle inside `DylibSymbolResolver` and return a `ResolverHandle` instead. This makes the code cleaner and separates the symbol resolution logic from raw handle management.
 
