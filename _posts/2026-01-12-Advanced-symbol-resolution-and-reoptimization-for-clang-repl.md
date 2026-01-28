@@ -134,6 +134,7 @@ Because of this, the API is especially useful for dynamic runtime systems like *
 
 Below is a simple example showing how to set up the API and start the resolution process:
 
+{% raw %}
 ```cpp
 llvm::orc::LibraryResolver::Setup S =
     llvm::orc::LibraryResolver::Setup::create({});
@@ -172,6 +173,7 @@ Controller->resolveSymbols(
     },
     Config);
 ```
+{% endraw %}
 
 ### Other PRs
 [166510](https://github.com/llvm/llvm-project/pull/166510)
