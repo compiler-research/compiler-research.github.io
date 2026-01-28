@@ -71,14 +71,14 @@
     * Document the approach, implementation details, and performance gains
     * Present progress and findings at relevant meetings and conferences
   tags: ["clad", "llm", "ai", "machine-learning", "automatic-differentiation", "cpp", "optimization"]
- 
+
 - name: "Integrate Clad in PyTorch and compare the gradient execution times"
   description: |
     PyTorch is a popular machine learning framework that includes its own
     automatic differentiation engine, while Clad is a Clang plugin for
     automatic differentiation that performs source-to-source transformation
     to generate functions capable of computing derivatives at compile time.
-    
+
     This project aims to integrate Clad-generated functions into PyTorch
     using its C++ API and expose them to a Python workflow. The goal is
     to compare the execution times of gradients computed by Clad with those
@@ -159,7 +159,7 @@
     memory is allocated and returned, the caller needs to take ownership; if a
     function is pure, it can be elided; if a call provides access to a data member,
     it can be reduced to an address lookup.
-    
+
     The goal of this project is to develop API for CppInterOp which are capable of
     extracting and exposing such information AST or from JIT-ed code and use it in
     cppyy (Python-C++ language bindings) as an exemplar. If time permits, extend
@@ -223,10 +223,10 @@
     defined via Cppyy into fast machine code. Since Numba compiles the code in
     loops into machine code it crosses the language barrier just once and avoids
     large slowdowns accumulating from repeated calls between the two languages.
-    Numba uses its own lightweight version of the LLVM compiler toolkit ([llvmlite](https://github.com/numba/llvmlite)) 
+    Numba uses its own lightweight version of the LLVM compiler toolkit ([llvmlite](https://github.com/numba/llvmlite))
     that generates an intermediate code representation (LLVM IR) which is also
     supported by the Clang compiler capable of compiling CUDA C++ code.
-    
+
     The project aims to demonstrate Cppyy's capability to provide CUDA paradigms to
     Python users without any compromise in performance. Upon successful completion
     a possible proof-of-concept can be expected in the below code snippet -
@@ -234,7 +234,7 @@
     ```python
     import cppyy
     import cppyy.numba_ext
-    
+
     cppyy.cppdef('''
     __global__ void MatrixMul(float* A, float* B, float* out) {
         // kernel logic for matrix multiplication
@@ -246,7 +246,7 @@
         # Allocate memory for input and output arrays on GPU
         # Define grid and block dimensions
         # Launch the kernel
-        MatrixMul[griddim, blockdim](d_A, d_B, d_out)	
+        MatrixMul[griddim, blockdim](d_A, d_B, d_out)
     ```
   tasks: |
     * Add support for declaration and parsing of Cppyy-defined CUDA code on
@@ -257,7 +257,7 @@
 
 - name: "Cppyy STL/Eigen - Automatic conversion and plugins for Python based ML-backends"
   description: |
-    Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling 
+    Cppyy is an automatic, run-time, Python-C++ bindings generator, for calling
     C++ from Python and Python from C++. Cppyy uses pythonized wrappers of useful
     classes from libraries like STL and Eigen that allow the user to utilize them
     on the Python side. Current support follows container types in STL like
@@ -282,161 +282,36 @@
     * Improve the initialization approach for Eigen classes
     * Develop a streamlined interconversion mechanism between Python
     builtin-types, numpy.ndarray, and STL/Eigen data structures
-    * Implement experimental plugins that perform basic computational  
+    * Implement experimental plugins that perform basic computational
     operations in frameworks like JAX
     * Work on integrating these plugins with toolkits like CUTLASS that
     utilise the bindings to provide a Python API
   tags: ["cppyy", "stl", "eigen", "jax", "cutlass", "numpy", "machine-learning"]
 
-- name: "On Demand Parsing in Clang"
-  description: |
-    Clang, like any C++ compiler, parses a sequence of characters as they appear,
-    linearly. The linear character sequence is then turned into tokens and AST
-    before lowering to machine code. In many cases the end-user code uses a small
-    portion of the C++ entities from the entire translation unit but the user
-    still pays the price for compiling all of the redundancies.
-
-    This project proposes to process the heavy compiling C++ entities upon using
-    them rather than eagerly. This approach is already adopted in Clang’s CodeGen
-    where it allows Clang to produce code only for what is being used. On demand
-    compilation is expected to significantly reduce the compilation peak memory
-    and improve the compile time for translation units which sparsely use their
-    contents. In addition, that would have a significant impact on interactive
-    C++ where header inclusion essentially becomes a no-op and entities will be
-    only parsed on demand.
-
-    The Cling interpreter implements a very naive but efficient cross-translation
-    unit lazy compilation optimization which scales across hundreds of libraries
-    in the field of high-energy physics.
-
-      ```cpp
-      // A.h
-      #include <string>
-      #include <vector>
-      template <class T, class U = int> struct AStruct {
-        void doIt() { /*...*/ }
-        const char* data;
-        // ...
-      };
-
-      template<class T, class U = AStruct<T>>
-      inline void freeFunction() { /* ... */ }
-      inline void doit(unsigned N = 1) { /* ... */ }
-
-      // Main.cpp
-      #include "A.h"
-      int main() {
-        doit();
-        return 0;
-      }
-      ```
-
-      This pathological example expands to 37253 lines of code to process. Cling
-      builds an index (it calls it an autoloading map) where it contains only
-      forward declarations of these C++ entities. Their size is 3000 lines of code.
-      
-      The index looks like:
-
-      ```cpp
-      // A.h.index
-      namespace std{inline namespace __1{template <class _Tp, class _Allocator> class __attribute__((annotate("$clingAutoload$vector")))  __attribute__((annotate("$clingAutoload$A.h")))  __vector_base;
-        }}
-      ...
-      template <class T, class U = int> struct __attribute__((annotate("$clingAutoload$A.h"))) AStruct;
-      ```
-
-      Upon requiring the complete type of an entity, Cling includes the relevant
-      header file to get it. There are several trivial workarounds to deal with
-      default arguments and default template arguments as they now appear on the
-      forward declaration and then the definition. You can read more [here](https://github.com/root-project/root/blob/master/README/README.CXXMODULES.md#header-parsing-in-root). 
-
-      Although the implementation could not be called a reference implementation,
-      it shows that the Parser and the Preprocessor of Clang are relatively stateless
-      and can be used to process character sequences which are not linear in their
-      nature. In particular namespace-scope definitions are relatively easy to handle
-      and it is not very difficult to return to namespace-scope when we lazily parse
-      something. For other contexts such as local classes we will have lost some
-      essential information such as name lookup tables for local entities. However,
-      these cases are probably not very interesting as the lazy parsing granularity
-      is probably worth doing only for top-level entities.
-
-      Such implementation can help with already existing issues in the standard such
-      as CWG2335, under which the delayed portions of classes get parsed immediately
-      when they're first needed, if that first usage precedes the end of the class.
-      That should give good motivation to upstream all the operations needed to
-      return to an enclosing scope and parse something.
-
-      **Implementation approach**:
-
-      Upon seeing a tag definition during parsing we could create a forward declaration,
-      record the token sequence and mark it as a lazy definition. Later upon complete
-      type request, we could re-position the parser to parse the definition body.
-      We already skip some of the template specializations in a similar way [[commit](https://github.com/llvm/llvm-project/commit/b9fa99649bc99), [commit](https://github.com/llvm/llvm-project/commit/0f192e89405ce)].
-
-      Another approach is every lazy parsed entity to record its token stream and change
-      the Toks stored on LateParsedDeclarations to optionally refer to a subsequence of
-      the externally-stored token sequence instead of storing its own sequence
-      (or maybe change CachedTokens so it can do that transparently). One of the
-      challenges would be that we currently modify the cached tokens list to append
-      an "eof" token, but it should be possible to handle that in a different way.
-
-      In some cases, a class definition can affect its surrounding context in a few
-      ways you'll need to be careful about here:
-
-      1) `struct X` appearing inside the class can introduce the name `X` into the enclosing context.
-
-      2) `static inline` declarations can introduce global variables with non-constant initializers
-      that may have arbitrary side-effects.
-
-      For point (2), there's a more general problem: parsing any expression can trigger
-      a template instantiation of a class template that has a static data member with
-      an initializer that has side-effects. Unlike the above two cases, I don't think
-      there's any way we can correctly detect and handle such cases by some simple analysis
-      of the token stream; actual semantic analysis is required to detect such cases. But
-      perhaps if they happen only in code that is itself unused, it wouldn't be terrible
-      for Clang to have a language mode that doesn't guarantee that such instantiations
-      actually happen.
-
-      Alternative and more efficient implementation could be to make the lookup tables
-      range based but we do not have even a prototype proving this could be a feasible
-      approach.   
-  tasks: |
-    * Design and implementation of on-demand compilation for non-templated functions
-    * Support non-templated structs and classes
-    * Run performance benchmarks on relevant codebases and prepare report
-    * Prepare a community RFC document
-    * [Stretch goal] Support templates
-
-    The successful candidate should commit to regular participation in weekly
-    meetings, deliver presentations, and contribute blog posts as requested.
-    Additionally, they should demonstrate the ability to navigate the
-    community process with patience and understanding.
-  tags: ["clang", "compiler", "parsing", "performance", "memory-optimization", "cling"]
-
 - name: "Broaden the Scope for the Floating-Point Error Estimation Framework in Clad"
   description: |
       In mathematics and computer algebra, automatic differentiation (AD) is
-      a set of techniques to numerically evaluate the derivative of a function 
-      specified by a computer program. Automatic differentiation is an alternative 
-      technique to Symbolic differentiation and Numerical differentiation (the 
-      method of finite differences). Clad is based on Clang which provides the 
-      necessary facilities for code transformation. The AD library can differentiate 
-      non-trivial functions, to find a partial derivative for trivial cases and has 
+      a set of techniques to numerically evaluate the derivative of a function
+      specified by a computer program. Automatic differentiation is an alternative
+      technique to Symbolic differentiation and Numerical differentiation (the
+      method of finite differences). Clad is based on Clang which provides the
+      necessary facilities for code transformation. The AD library can differentiate
+      non-trivial functions, to find a partial derivative for trivial cases and has
       good unit test coverage.
 
-      Clad also possesses the capabilities of annotating given source code with 
-      floating-point error estimation code. This allows Clad to compute any 
-      floating-point related errors in the given function on the fly. This allows 
-      Clad to reason about the numerical stability of the given 
+      Clad also possesses the capabilities of annotating given source code with
+      floating-point error estimation code. This allows Clad to compute any
+      floating-point related errors in the given function on the fly. This allows
+      Clad to reason about the numerical stability of the given
       function and also analyze the sensitivity of the variables involved.
 
-      The idea behind this project is to develop benchmarks and improve the 
-      floating-point error estimation framework as necessary. Moreover, find 
-      compelling real-world use-cases of the tool and investigate the possibility 
+      The idea behind this project is to develop benchmarks and improve the
+      floating-point error estimation framework as necessary. Moreover, find
+      compelling real-world use-cases of the tool and investigate the possibility
       of performing lossy compression with it.
 
-      On successful completion of the project, the framework should have a 
-      sufficiently large set of benchmarks and example usages. Moreover, 
+      On successful completion of the project, the framework should have a
+      sufficiently large set of benchmarks and example usages. Moreover,
       the framework should be able to run the following code as expected:
       ```cpp
       #include <iostream>
@@ -465,12 +340,12 @@
       ```
   tasks: |
     The project consists of the following tasks:
-      * Add at least 5 benchmarks and compare the framework's correctness and 
+      * Add at least 5 benchmarks and compare the framework's correctness and
         performance against them.
-      * Compile at least 3 real-world examples that are complex enough to demonstrate 
+      * Compile at least 3 real-world examples that are complex enough to demonstrate
         the capabilities of the framework.
       * Solve any general-purpose issues that come up with Clad during the process.
-      * Prepare demos and carry out development needed for lossy compression. 
+      * Prepare demos and carry out development needed for lossy compression.
   tags: ["clad", "floating-point", "numerical-stability", "benchmarking", "error-estimation"]
 
 - name: "Improve robustness of dictionary to module lookups in ROOT"
@@ -556,6 +431,493 @@
   tags: ["clang", "clang-repl", "incremental-compilation", "error-recovery", "jit"]
 
 ################################################################################
+#                            CppAlliance Fellowships                           #
+################################################################################
+- name: "Implement missing C++26 features in Clang"
+  description: |
+    This project proposes a candidate-driven program to complete Clang’s support
+    for selected C++26-era language papers and closely related C proposals. The
+    project provides a vehicle for applicants to propose a standards paper that
+    is not yet implemented in Clang (or to pick from a short curated list) and
+    then implement that paper within the scope of the project. Work may touch
+    parsing, semantic analysis, diagnostics, preprocessing, or code generation;
+    when appropriate, a clang-tidy/clang-sa prototype will be offered first so
+    behavior can be validated opt-in before moving into the default compiler.
+
+    Candidates are encouraged to propose compact, well-scoped papers (syntax
+    sugar, diagnostics, small semantic clarifications, preprocessing or
+    embedding features) that have clear testability and low ABI risk. If a
+    candidate does not have their own paper, the following example papers are
+    suggested starting points: *Introduce storage-class specifiers for compound
+    literals* (C23 example). *`if` declarations for C (C2y)* (based on C++
+    practice). *`#embed` / binary resource inclusion (P1967)* (C++ proposal that
+    maps to a C-style inclusion concept). *"Preprocessing is never undefined" /
+    better preprocessing diagnostics* (P2843 — diagnostics-focused).
+
+    Care must be taken to avoid breaking existing code, destabilizing
+    diagnostics that downstream users depend on, or adding noisy warnings by
+    default. All changes will be incremental, conservative by default, and
+    backed by targeted regression tests and example-driven validation. Where a
+    change could be noisy or controversial, an opt-in clang-tidy/clang-sa
+    prototype or command-line flag will be used initially.
+
+  tasks: |
+    * A concise intake form and selection rubric for candidate papers (paper
+      skeleton \+ required example test cases).
+    * A prioritized backlog of selected papers to implement in this cycle.
+    * For each accepted paper: an implementation plan (scoped tasks),
+      incremental PRs, and a mentor assigned from the Clang team.
+    * Reference Clang implementations for selected papers (parser \+ Sema \+
+      diagnostics \+ CodeGen as needed), or clang-tidy/clang-sa prototypes when
+      opt-in behavior is preferred.
+    * Regression test suites (lit tests, compile-and-run where applicable) and
+      CI integration proving correctness and no regressions on existing test
+      suites.
+    * Upstreamed PRs with review iteration, and a short implementation summary
+    per paper (what changed, why, and any remaining limitations or interactions).
+    * Onboarding docs for future candidates: the minimal paper skeleton, example
+    tests, and a short "how to implement a language paper in Clang" checklist.
+
+    **Success Criteria**
+    * Implemented papers match the intent and precise wording of the submitted
+      standards text (or a documented, reviewers-approved interpretation).
+    * All new tests pass in Clang CI; no regressions on the existing LLVM/Clang
+      test suite; no unacceptable performance or memory regressions on
+      representative large codebases.
+    * At least one implemented paper per funding sprint is accepted upstream as
+      a Clang change or as a well-documented clang-tidy prototype with clear
+      adoption guidance.
+    * New diagnostics (if any) are low-noise in practice; fix-its are safe and
+      validated by compile-and-run tests where applicable.
+    * Positive reviewer and community feedback indicating the implementations
+      are correct, maintainable, and useful.
+
+    **Testing and Verification**
+
+    * Require a minimal reproducer and at least 5 short lit-style test cases
+      submitted with each candidate paper (good/bad/borderline/edge cases).
+    * Add lit tests to clang/test and clang/CodeGen where codegen is touched;
+      add diagnostics tests verifying message text and fix-its when applicable.
+    * For changes that affect preprocessing, templates, or macros, include
+      macro-heavy test cases and negative tests to avoid false positives.
+    * For fixes touching runtime/codegen behaviour, include runtime tests (where
+      feasible) to validate observable behavior and ABI stability.
+    * For changes that add analysis or dataflow: include microbenchmarks and
+      memory checks to ensure no unacceptable compile-time or peak memory regressions.
+    * Run the new tests and a selected subset of the LLVM/Clang test suite and
+      perfbench on representative OSS projects as part of the PR pipeline.
+
+    **Difficulty:** 4/10; **Expected timeline:** 6 months FTE (program setup
+      \+ 2-4 small/medium paper implementations, or equivalent aggregated
+      effort; individual paper scope will affect schedule).
+
+  tags: [cppalliance-fellow, cppalliance-fellow-26, clang, c++26, standards,
+         parsing, sema, diagnostics, codegen]
+
+
+- name: "Improve Clang Performance"
+  description: |
+    This project aims to systematically improve Clang’s performance by
+    identifying, understanding, and addressing common compilation bottlenecks
+    across real-world codebases. While Clang is highly capable, performance
+    regressions and inefficiencies can accumulate over time due to increasing
+    language complexity, new features, and evolving usage patterns. These issues
+    can impact compile time, peak memory usage, and overall memory pressure,
+    especially in large projects.
+
+    The work is divided into two major phases. First, we will benchmark Clang
+    across a representative set of open-source projects and compiler releases to
+    identify performance hot spots and regressions. This includes analyzing
+    trends over time to determine where performance has degraded and correlating
+    regressions with specific upstream changes. Second, we will deeply
+    investigate identified bottlenecks across the major compilation phases
+    lexing, parsing, semantic analysis, and code generation and design targeted
+    improvements to address them.
+
+    Care needs to be taken to avoid changes that compromise correctness,
+    diagnostic quality, or maintainability. Improvements will be data-driven,
+    incremental, and supported by strong evidence from benchmarks and profiling.
+    Where appropriate, fixes will prioritize broadly impactful improvements
+    rather than narrowly optimized corner cases.
+
+    Improving Clang’s performance reduces build times, lowers resource
+    consumption, and improves developer productivity across the ecosystem. By
+    identifying root causes of regressions and addressing systemic
+    inefficiencies, this project helps ensure Clang scales effectively with
+    modern C++ workloads.
+  tasks: |
+    * A benchmarking framework and methodology for evaluating Clang performance
+      across releases.
+    * A curated set of real-world open-source benchmarks covering different
+      compilation phases.
+    * A documented analysis of identified performance bottlenecks and
+      regressions.
+    * Targeted performance improvements addressing key issues in lexing,
+      parsing, semantic analysis, and/or code generation.
+    * Memory usage and peak memory pressure optimizations where applicable.
+    * A summary report documenting regressions found, fixes implemented, and
+      measurable improvements achieved.
+
+    **Success Criteria**
+
+    The project is successful if the identified performance issues are
+    reproducible, well-understood, and meaningfully improved without introducing
+    correctness regressions. All changes should be validated by benchmarks,
+    pass existing and new tests, and be accepted upstream. Measurable
+    improvements in compile time and/or memory usage on representative
+    codebases, along with positive upstream feedback, indicate success.
+
+    **Testing and Verification**
+
+    We should:
+    * Run performance benchmarks across multiple Clang releases to detect
+      regressions.
+    * Use profiling tools to attribute time and memory usage to specific
+      compiler components.
+    * Add regression benchmarks or tests where appropriate to prevent future
+      slowdowns.
+    * Validate improvements on large, real-world codebases.
+    * Ensure that compile-time performance gains do not introduce excessive
+      memory usage or correctness issues.
+
+    **Difficulty:** 3/10; **Expected timeline:** 6 months FTE
+  tags: [cppalliance-fellow, cppalliance-fellow-26, clang, performance,
+         benchmarking, profiling, memory-optimization, codegen]
+
+
+- name: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
+  description: |
+    This project proposes to systematically process and resolve the highest-
+    impact open requests in clang-tidy and the Clang Static Analyzer. The
+    clang-tidy issue tracker contains a large backlog of reports covering false
+    positives, false negatives, invalid fix-it hints, performance regressions,
+    and requests for new checks. Many of these issues are well-motivated and
+    affect real-world adoption, but remain unresolved due to limited maintainer
+    time rather than technical difficulty.
+
+    The focus of this project is to triage these requests, identify those with
+    the highest user impact, and implement conservative, well-tested fixes or
+    improvements. Work will prioritize issues that reduce noise, fix incorrect
+    or unsafe fix-its, close obvious coverage gaps, or address performance and
+    scalability problems in commonly used checks. Where appropriate, fixes will
+    apply both to clang-tidy and to the Clang Static Analyzer, depending on the
+    nature of the analysis and the desired default behavior.
+
+    Care must be taken to avoid introducing new false positives, breaking
+    existing workflows, or increasing analysis cost. All changes will be driven
+    by minimal reproducer test cases, include targeted regression tests, and
+    follow existing Clang and LLVM contribution guidelines. Fix-it hints will
+    only be added or modified when correctness can be guaranteed.
+
+    By reducing long-standing friction points and improving the reliability of
+    existing checks, this work improves trust in Clang-based tooling and
+    directly benefits a broad segment of the C and C++ ecosystem without
+    requiring users to adopt new tools or configurations.
+  tasks: |
+    * A triaged and prioritized list of high-impact open clang-tidy and Clang
+      Static Analyzer issues.
+    * Implementations addressing a selected set of high-impact requests
+      (e.g., false positives, false negatives, invalid fix-its, or performance issues).
+    * Improved or corrected fix-it hints where safe and appropriate.
+    * Targeted regression tests for each resolved issue.
+    * Documentation or issue updates explaining the resolution and any remaining
+      limitations.
+    * A short summary documenting which issues were addressed and why they were
+      prioritized.
+
+    **Success Criteria**
+
+    The resolved issues are reproducible, correctly fixed, and accepted
+    upstream. The changes reduce real-world false positives or incorrect
+    behavior without introducing regressions, pass all existing and new tests,
+    and receive positive feedback from users and reviewers indicating improved
+    usefulness and reliability of clang-tidy and the Clang Static Analyzer.
+
+    **Testing and Verification**
+
+    We will add minimal reproducer-based regression tests for each issue,
+    include negative tests to prevent spurious diagnostics, validate fix-it
+    correctness on representative examples, and ensure that analysis performance
+    and memory usage do not regress on large codebases.
+
+    **Difficulty:** 4/10; **Expected timeline:** 6 months FTE
+  tags: [cppalliance-fellow, cppalliance-fellow-26, clang, clang-tidy,
+         static-analyzer, diagnostics, tooling, regression-tests]
+
+- name: "Enhance Clang Diagnostics"
+  description: |
+    This project proposes to improve the clarity, usefulness, and robustness of
+    Clang’s diagnostics so that developers can more easily understand and fix
+    errors and warnings in C++ code. Many existing diagnostics are technically
+    correct but difficult to interpret, especially for newcomers or when dealing
+    with complex language features. This project focuses on refining wording,
+    adding contextual information, introducing high-value new diagnostics, and
+    providing reliable fix-it hints where safe and appropriate. We will also
+    upstream mature clang-tidy checks into Clang itself when they are broadly
+    applicable.
+
+    Beyond immediate improvements, this work establishes a foundation for more
+    systematic diagnostic quality improvements, such as developing informal
+    style guidelines and identifying recurring sources of confusion. Care must
+    be taken to avoid false positives, excessive verbosity, or breaking users
+    who rely on stable diagnostic output. Changes will therefore be incremental,
+    well-tested, and conservative by default.
+
+    Clearer diagnostics reduce debugging time, lower the barrier to entry for
+    C++, and improve developer productivity across the ecosystem. By upstreaming
+    proven checks and improving default behavior, the benefits reach all Clang
+    users without requiring additional tools or configuration.
+  tasks: |
+    * A curated set of rewritten diagnostics with clearer wording and added
+      context.
+    * New default diagnostics for subtle or silent semantic issues.
+    * Improved and expanded fix-it hints.
+    * Migration of selected clang-tidy checks into Clang proper.
+    * A list of clang-tidy diagnostics which can be moved to clang including but
+      not limited to bugprone-return-const-ref-from-parameter,
+      bugprone-raw-memory-call-on-non-trivial-type,
+      bugprone-multiple-new-in-one-expression,
+      bugprone-multiple-statement-macro. bugprone-use-after-move.
+    * Implementation of diagnostics for silent change of semantics during third
+      party code changes such as https://godbolt.org/z/E9Me1djP6
+    * A short summary documenting which diagnostics were improved and why.
+
+    **Success Criteria**
+
+    The enhanced diagnostics trigger correctly in intended scenarios, introduce
+    no significant false positives or regressions, pass all existing and new
+    tests, and are accepted upstream with positive feedback indicating improved
+    clarity and usefulness.
+
+    **Testing and Verification**
+
+    We should add targeted regression tests for each diagnostic change, validate
+    fix-its on representative examples, perform negative testing to prevent
+    spurious warnings, and ensure compile-time performance remains stable on
+    large codebases.
+
+    **Difficulty:** 5/10; **Expected timeline:** 6 months FTE
+  tags: [cppalliance-fellow, cppalliance-fellow-26, clang, diagnostics,
+         clang-tidy, fixit, developer-experience]
+
+- name: "On Demand Parsing in Clang"
+  description: |
+    Clang, like any C++ compiler, parses a sequence of characters as they appear,
+    linearly. The linear character sequence is then turned into tokens and AST
+    before lowering to machine code. In many cases the end-user code uses a small
+    portion of the C++ entities from the entire translation unit but the user
+    still pays the price for compiling all of the redundancies.
+
+    This project proposes to process the heavy compiling C++ entities upon using
+    them rather than eagerly. This approach is already adopted in Clang’s CodeGen
+    where it allows Clang to produce code only for what is being used. On demand
+    compilation is expected to significantly reduce the compilation peak memory
+    and improve the compile time for translation units which sparsely use their
+    contents. In addition, that would have a significant impact on interactive
+    C++ where header inclusion essentially becomes a no-op and entities will be
+    only parsed on demand.
+
+    The Cling interpreter implements a very naive but efficient cross-translation
+    unit lazy compilation optimization which scales across hundreds of libraries
+    in the field of high-energy physics.
+
+      ```cpp
+      // A.h
+      #include <string>
+      #include <vector>
+      template <class T, class U = int> struct AStruct {
+        void doIt() { /*...*/ }
+        const char* data;
+        // ...
+      };
+
+      template<class T, class U = AStruct<T>>
+      inline void freeFunction() { /* ... */ }
+      inline void doit(unsigned N = 1) { /* ... */ }
+
+      // Main.cpp
+      #include "A.h"
+      int main() {
+        doit();
+        return 0;
+      }
+      ```
+
+      This pathological example expands to 37253 lines of code to process. Cling
+      builds an index (it calls it an autoloading map) where it contains only
+      forward declarations of these C++ entities. Their size is 3000 lines of code.
+
+      The index looks like:
+
+      ```cpp
+      // A.h.index
+      namespace std{inline namespace __1{template <class _Tp, class _Allocator> class __attribute__((annotate("$clingAutoload$vector")))  __attribute__((annotate("$clingAutoload$A.h")))  __vector_base;
+        }}
+      ...
+      template <class T, class U = int> struct __attribute__((annotate("$clingAutoload$A.h"))) AStruct;
+      ```
+
+      Upon requiring the complete type of an entity, Cling includes the relevant
+      header file to get it. There are several trivial workarounds to deal with
+      default arguments and default template arguments as they now appear on the
+      forward declaration and then the definition. You can read more [here](https://github.com/root-project/root/blob/master/README/README.CXXMODULES.md#header-parsing-in-root).
+
+      Although the implementation could not be called a reference implementation,
+      it shows that the Parser and the Preprocessor of Clang are relatively stateless
+      and can be used to process character sequences which are not linear in their
+      nature. In particular namespace-scope definitions are relatively easy to handle
+      and it is not very difficult to return to namespace-scope when we lazily parse
+      something. For other contexts such as local classes we will have lost some
+      essential information such as name lookup tables for local entities. However,
+      these cases are probably not very interesting as the lazy parsing granularity
+      is probably worth doing only for top-level entities.
+
+      Such implementation can help with already existing issues in the standard such
+      as CWG2335, under which the delayed portions of classes get parsed immediately
+      when they're first needed, if that first usage precedes the end of the class.
+      That should give good motivation to upstream all the operations needed to
+      return to an enclosing scope and parse something.
+
+      **Implementation approach**:
+
+      Upon seeing a tag definition during parsing we could create a forward declaration,
+      record the token sequence and mark it as a lazy definition. Later upon complete
+      type request, we could re-position the parser to parse the definition body.
+      We already skip some of the template specializations in a similar way [[commit](https://github.com/llvm/llvm-project/commit/b9fa99649bc99), [commit](https://github.com/llvm/llvm-project/commit/0f192e89405ce)].
+
+      Another approach is every lazy parsed entity to record its token stream and change
+      the Toks stored on LateParsedDeclarations to optionally refer to a subsequence of
+      the externally-stored token sequence instead of storing its own sequence
+      (or maybe change CachedTokens so it can do that transparently). One of the
+      challenges would be that we currently modify the cached tokens list to append
+      an "eof" token, but it should be possible to handle that in a different way.
+
+      In some cases, a class definition can affect its surrounding context in a few
+      ways you'll need to be careful about here:
+
+      1) `struct X` appearing inside the class can introduce the name `X` into the enclosing context.
+
+      2) `static inline` declarations can introduce global variables with non-constant initializers
+      that may have arbitrary side-effects.
+
+      For point (2), there's a more general problem: parsing any expression can trigger
+      a template instantiation of a class template that has a static data member with
+      an initializer that has side-effects. Unlike the above two cases, I don't think
+      there's any way we can correctly detect and handle such cases by some simple analysis
+      of the token stream; actual semantic analysis is required to detect such cases. But
+      perhaps if they happen only in code that is itself unused, it wouldn't be terrible
+      for Clang to have a language mode that doesn't guarantee that such instantiations
+      actually happen.
+
+      Alternative and more efficient implementation could be to make the lookup tables
+      range based but we do not have even a prototype proving this could be a feasible
+      approach.
+  tasks: |
+    * A prototype deferring parsing of non-templated functions and classes.
+    * Initial support for lazy parsing of class and struct definitions.
+    * Benchmark results comparing memory usage and compile time.
+    * A design document or RFC describing the approach and trade-offs.
+    * A stretch prototype extending the mechanism to templates.
+
+    **Success Criteria**
+
+    The prototype shows measurable reductions in memory usage or compile time on
+    representative workloads, preserves correct semantics, passes Clang's test
+    suite, and receives constructive community feedback through the RFC process.
+
+    **Testing and Verification**
+
+    We should add regression tests covering lazy parsing behavior, validate
+    correctness on pathological and real-world examples, benchmark against
+    baseline builds, and ensure deferred parsing is triggered correctly when
+    entities are referenced.
+
+    **Difficulty:** 10/10; **Expected timeline:** 6 months FTE
+  tags: [cppalliance-fellow, cppalliance-fellow-26, clang, parsing,
+         lazy-parsing, scalability, memory-optimization, templates, cling]
+
+- name: "Optimize Usage of Source Locations in Clang Modules"
+  description: |
+    This project proposes to reduce source-location memory pressure in modular
+    builds by reusing source-location allocations for duplicated inputs,
+    extending the lifetime of Clang’s 32-bit source-location representation. In
+    large modular builds, repeated inclusion of the same headers across modules
+    can quickly exhaust available offsets.
+
+    Rather than immediately switching to a more invasive 64-bit representation,
+    this project explores reusing existing allocations through interval mapping
+    and careful coordination with module loading. This approach introduces
+    complexity in diagnostics and include-stack reconstruction, so correctness
+    and transparency are key concerns.
+
+    If successful, the work avoids a disruptive global change, reduces memory
+    usage, and improves Clang’s scalability for modern modular C++ codebases.
+  tasks: |
+    * An interval-mapping mechanism to detect and reuse source-location slabs.
+    * Updates to module loading and deserialization to enable reuse.
+    * A prototype demonstrating reduced duplication in multi-module builds.
+    * Measurements showing memory savings.
+    * Documentation of diagnostic implications and mitigations.
+
+    **Success Criteria**
+
+    Duplicated module inputs no longer cause proportional growth in
+    source-location allocations, modular builds complete without exhaustion,
+    diagnostics remain correct in tested cases, and the design is accepted or
+    constructively reviewed upstream.
+
+    **Testing and Verification**
+
+    We should reproduce known problematic module scenarios, compare allocation
+    statistics before and after changes, run regression tests with emphasis on
+    diagnostics, and validate behavior across different module load orders.
+
+    **Difficulty:** 6/10; **Expected timeline:** 6 months FTE
+  tags: [cppalliance-fellow, cppalliance-fellow-26, clang, modules,
+         source-locations, memory-optimization, diagnostics]
+
+- name: "Consistent Error Recovery Infrastructure"
+  description: |
+    This project proposes to improve Clang’s error recovery, particularly for
+    interactive and incremental use cases such as clang-repl. Today, invalid or
+    incomplete C++ input can easily leave the compiler in an unrecoverable
+    state, limiting its usefulness for exploration, teaching, and rapid
+    prototyping.
+
+    This project strengthens recovery across templates, ADL failures, and name
+    collisions, while improving performance and crash resilience. Error recovery
+    must be powerful without hiding real problems or destabilizing compiler
+    state, so improvements will be carefully scoped and heavily tested.
+
+    Better recovery makes interactive C++ tooling more practical, supports
+    educational workflows, and provides shared infrastructure for future
+    incremental and REPL-based tools built on Clang.
+  tasks: |
+    * Expanded test coverage for error recovery scenarios.
+    * Fixes for known recovery bugs.
+    * Recovery support for templates, ADL, and name collisions.
+    * Optional bump-allocator support for recovery paths.
+    * Improved crash resilience and value printing in clang-repl.
+
+    **Success Criteria**
+
+    The compiler and REPL recover from common errors without crashing, continue
+    accepting input after failures, pass all tests, and demonstrate clearly
+    improved interactive usability.
+
+    **Testing and Verification**
+
+    We should simulate interactive sessions with invalid input, add targeted
+    regression tests for recovery paths, fuzz error cases to detect crashes, and
+    ensure normal compilation performance is unaffected. In particular we should
+    include a test case in clang, undo it and include it again without any
+    errors produced.
+
+    **Difficulty:** 7/10; **Expected timeline:** 6 months FTE
+  tags: [cppalliance-fellow, cppalliance-fellow-26, clang, error-recovery, repl,
+         interactive, robustness]
+
+################################################################################
 #                                     2025                                     #
 ################################################################################
 - name: "Agent-Based Simulation of CAR-T Cell Therapy Using BioDynaMo"
@@ -588,7 +950,7 @@
     project will serve as a foundation for in silico testing of immunotherapies,
     reducing the need for costly and time-consuming laboratory experiments while
     accelerating the development of more effective cancer treatments.
-  
+
   tasks: |
     * Expected plan of work:
 
@@ -611,7 +973,7 @@
     for ways to incorporate them in their projects as a lightweight parallelization
     method. Consequently, General Purpose GPU programming is becoming a very popular
     way to speed up execution time.
-    
+
     Clad is a clang plugin for automatic differentiation that performs source-to-source
     transformation and produces a function capable of computing the derivatives of a
     given function at compile time. This project aims to enhance Clad by adding support
@@ -663,7 +1025,7 @@
     a debugger.
     * Implement a testing framework through `xeus-zmq` to thoroughly test
     the debugger. This can be inspired by an existing implementation
-    in `xeus-python`. 
+    in `xeus-python`.
     * Present the work at the relevant meetings and conferences.
   status: completed
   responsible: Abhinav Kumar
@@ -782,7 +1144,7 @@
     features, then later add functionality via incremental builds. This
     requires introducing new layering mechanisms and extending the functionality
     of the existing ROOT package manager prototype.
-  
+
   tasks: |
     * Enhance the existing CMake build system rules to enable lazy building of packages
     * Bootstrap “RootBase”
@@ -1009,7 +1371,7 @@
     resources. Over time, the website has evolved organically, prompting the
     need for a redesign to enhance its modernity, structure, and ease of
     maintenance.
-    
+
     The goal of this project is to create a contemporary and coherent static
     website that reflects the essence of LLVM.org. This redesign aims to improve
     navigation, taxonomy, content discoverability, and overall usability. Given
@@ -1018,10 +1380,10 @@
 
     LLVM's [current website](https://llvm.org) is a complicated mesh of uncoordinated pages with
     inconsistent, static links pointing to both internal and external sources.
-    The website has grown substantially and haphazardly since its inception. 
+    The website has grown substantially and haphazardly since its inception.
 
     It requires a major UI and UX overhaul to be able to better serve the LLVM
-    community. 
+    community.
 
     Based on a preliminary site audit, following are some of the problem areas
     that need to be addressed.
@@ -1040,7 +1402,7 @@
     navigation is inconsistent, unintuitive, and sometimes non-existent. Important
     subsections often depend on static links within (seemingly random) pages.
     Multi-word menu items are center-aligned and flow out of margins.
-    
+
     **Pages**: Many [large write-ups](https://clang.llvm.org/docs/UsersManual.html)
     lack pagination, section boundaries, etc., making
     them seem more intimidating than they really are. Several placeholder pages
@@ -1052,7 +1414,7 @@
     [redundant pages](https://llvm.org/docs/search.html). Some pages have
     no search options at all. With multiple sections of the website hosted in
     separate projects/repos, cross-sub-site search doesn't seem possible.
-        
+
     **Expected results**: A modern, coherent-looking website that attracts new
     prospect users and empowers the existing community with better navigation,
     taxonomy, content discoverability, and overall usability. It should also
@@ -1061,7 +1423,7 @@
 
     Since the website is a critical infrastructure and most of the community
     will have an opinion this project should try to engage with the community
-    building community consensus on the steps being taken. 
+    building community consensus on the steps being taken.
 
   tasks: |
     * Conduct a comprehensive content audit of the existing website.
@@ -1075,7 +1437,7 @@
     * Implement the chosen design, incorporating valuable feedback from the
     community.
     * Collaborate with content creators to integrate or update content as needed.
-    
+
     The successful candidate should commit to regular participation in weekly
     meetings, deliver presentations, and contribute blog posts as requested.
     Additionally, they should demonstrate the ability to navigate the community
@@ -1100,7 +1462,7 @@
     There are several foreseen tasks:
       * Research about automatic differentiation of code involving CUDA GPU
         kernels. Prepare a report and an initial strategy to follow.This may
-        involve brainstorming and the need for innovative solutions. 
+        involve brainstorming and the need for innovative solutions.
       * Enable reverse-mode automatic differentiation of CUDA GPU kernels and
         calls to CUDA GPU kernels from the host code.
       * Add proper tests and documentation.
@@ -1136,7 +1498,7 @@
     ```cpp
     #include <cstdio>
     #include "clad/Differentiator/Differentiator.h"
-    
+
     constexpr double sq(double x) { return x*x; }
 
     consteval double fn(double x, double y, double z) {
@@ -1197,7 +1559,7 @@
   description: |
     Numba is a JIT compiler that translates a subset of Python and NumPy code
     into fast machine code. Cppyy is an automatic, run-time, Python-C++
-    bindings generator, for calling C++ from Python and Python from C++. 
+    bindings generator, for calling C++ from Python and Python from C++.
 
     Cppyy has to pay a time penalty each time it needs to switch between
     languages which can multiply into large slowdowns when using loops with
