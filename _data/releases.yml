@@ -1,3 +1,13 @@
+- date: 2026-01-28
+  codebase: "CppInterOp"
+  version: "v1.8.0"
+  description: |
+    This release focuses on improving runtime introspection, extending the JIT
+    and incremental compilation capabilities, introducing a new API dispatch
+    mechanism, and delivering numerous robustness and correctness fixes across
+    the interpreter and code generation layers.
+  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.8.0"
+
 - date: 2025-11-02
   codebase: "Clad"
   version: "v2.2"
