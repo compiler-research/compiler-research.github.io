@@ -1,36 +1,42 @@
+name: Check broken links on public site
+
 on:
   pull_request:
 
-name: Check markdown links
-
 jobs:
-  preview_and_check:
+  broken_link_check:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Install linkchecker
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material
+          pip install linkchecker
 
-      - name: Run MkDocs server
-        run: mkdocs serve -a 0.0.0.0:4444 &
-        continue-on-error: true
+      - name: Check for broken links
+        run: |
+          SITE_URL="https://compiler-research.org/"
+          LOGFILE=$(mktemp)
 
-      - name: Wait for server to start
-        run: sleep 10
+          echo "Checking broken links on $SITE_URL ..."
 
-      - name: Run Link Checker
-        uses: merlos/broken-links@0.2.2
-        with:
-          url: 'https://compiler-research.org/'
-          only-errors: 'true'
-          ignore-file: './check-ignore'
+          linkchecker "$SITE_URL" --no-status --check-extern --timeout=5 > "$LOGFILE" 2>&1 || true
+
+          BROKEN_COUNT=$(grep -E "ERROR|BROKEN|dead" "$LOGFILE" | tee /dev/tty | wc -l)
+
+          echo "---------------------------"
+          echo "Summary:"
+          echo "Broken links found: $BROKEN_COUNT"
+          echo "---------------------------"
+
+          if [ "$BROKEN_COUNT" -gt 0 ]; then
+            exit 1
+          fi
