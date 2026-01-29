@@ -4,14 +4,33 @@ on:
 name: Check markdown links
 
 jobs:
-  check-links:
+  preview_and_check:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material
+
+      - name: Run MkDocs server
+        run: mkdocs serve -a 0.0.0.0:4444 &
+        continue-on-error: true
+
+      - name: Wait for server to start
+        run: sleep 10
+
       - name: Run Link Checker
         uses: merlos/broken-links@0.2.2
         with:
-          url: 'https://compiler-research.org'
+          url: 'https://compiler-research.org/'
           only-errors: 'true'
+          ignore-file: './check-ignore'
