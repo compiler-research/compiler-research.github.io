@@ -1,0 +1,21 @@
+name: Broken link check
+
+on:
+  pull_request:
+
+jobs:
+  broken_link_checker_job:
+    runs-on: ubuntu-latest
+    name: Check for broken links
+    steps:
+      - name: Check for broken links
+        id: link-report
+        uses: celinekurpershoek/link-checker@v1.0.3
+        with:
+          url: "https://compiler-research.org/"
+          honorRobotExclusions: false
+          ignorePatterns: "github,google"
+          recursiveLinks: true
+      - name: Fail if broken links found
+        if: ${{ steps.link-report.outputs.result != 'success' }}
+        run: exit 1
