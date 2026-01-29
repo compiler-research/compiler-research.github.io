@@ -1,52 +1,24 @@
-name: Broken link check
+name: periodic-broken-link-checks
 
 on:
-  pull_request:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/periodic-broken-link-checks.yml
+  schedule:
+    - cron: '3 3 * * 3'
 
 jobs:
-  broken_link_checker_job:
+  broken-link-checker:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+
+      - name: Check for broken links
+        uses: ruzickap/action-my-broken-link-checker@v3
         with:
-          node-version: "20"
-
-      - name: Install broken-link-checker
-        run: npm install -g broken-link-checker
-
-      - name: Run broken-link-checker and log all links
-        run: |
-          echo "Starting broken link check for https://compiler-research.org/ ..."
-          
-          LOGFILE=$(mktemp)
-          REPORTFILE=$(mktemp)
-
-          blc https://compiler-research.org/ \
-            --honor-robot-exclusions false \
-            --exclude "github,google" \
-            --recursive \
-            --no-progress \
-            --retry 3 \
-            --timeout 5000 \
-            > "$LOGFILE" 2>&1 || true
-
-          echo "---------------------------"
-          echo "Full link report (all scanned links):"
-          echo "---------------------------"
-
-          grep -E "http" "$LOGFILE" | awk '{print $0}' | tee "$REPORTFILE"
-
-          BROKEN_COUNT=$(grep -E "BROKEN|dead" "$LOGFILE" | wc -l)
-
-          echo "---------------------------"
-          echo "Summary:"
-          echo "Broken links found: $BROKEN_COUNT"
-          echo "---------------------------"
-
-          if [ "$BROKEN_COUNT" -gt 0 ]; then
-            exit 1
-          fi
+          url: ${{ steps.pages.outputs.base_url }}
+          cmd_params: '--buffer-size=8192 --max-connections=10 --color=always --header="User-Agent:curl/7.54.0" --timeout=20'
