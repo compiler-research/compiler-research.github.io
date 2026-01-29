@@ -1,52 +1,17 @@
-name: Broken link check
-
 on:
   pull_request:
 
+name: Check markdown links
+
 jobs:
-  broken_link_checker_job:
+  check-links:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Run Link Checker
+        uses: merlos/broken-links@0.2.2
         with:
-          node-version: "20"
-
-      - name: Install broken-link-checker
-        run: npm install -g broken-link-checker
-
-      - name: Run broken-link-checker and log all links
-        run: |
-          echo "Starting broken link check for https://compiler-research.org/ ..."
-
-          LOGFILE=$(mktemp)
-          REPORTFILE=$(mktemp)
-
-          blc https://compiler-research.org/ \
-            --honor-robot-exclusions false \
-            --exclude "github,google" \
-            --recursive \
-            --no-progress \
-            --retry 3 \
-            --timeout 5000 \
-            > "$LOGFILE" 2>&1 || true
-
-          echo "---------------------------"
-          echo "Full link report (all scanned links):"
-          echo "---------------------------"
-
-          awk '/http/{print $0}' "$LOGFILE" | tee "$REPORTFILE"
-
-          BROKEN_COUNT=$(grep -E "BROKEN|dead" "$LOGFILE" | wc -l)
-
-          echo "---------------------------"
-          echo "Summary:"
-          echo "Broken links found: $BROKEN_COUNT"
-          echo "---------------------------"
-
-          if [ "$BROKEN_COUNT" -gt 0 ]; then
-            exit 1
-          fi
+          url: 'https://compiler-research.org'
+          only-errors: 'true'
