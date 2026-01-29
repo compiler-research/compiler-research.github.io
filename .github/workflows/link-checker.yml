@@ -1,24 +1,27 @@
-name: periodic-broken-link-checks
+name: Checks
 
 on:
-  workflow_dispatch:
   push:
-    paths:
-      - .github/workflows/periodic-broken-link-checks.yml
-  schedule:
-    - cron: '3 3 * * 3'
+    branches:
+      - main
 
 jobs:
-  broken-link-checker:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
+    
+      - name: Check links using script
+        env:
+          INPUT_URL: https://compiler-research.org/
+          INPUT_PAGES_PATH: ./public/
+          INPUT_CMD_PARAMS: '--skip-tls-verification --verbose --color=always'
+          INPUT_DEBUG: true
+        run: wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v3/entrypoint.sh | bash
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
-
-      - name: Check for broken links
+      - name: Check links using container
         uses: ruzickap/action-my-broken-link-checker@v3
         with:
-          url: ${{ steps.pages.outputs.base_url }}
-          cmd_params: '--buffer-size=8192 --max-connections=10 --color=always --header="User-Agent:curl/7.54.0" --timeout=20'
+          url: https://compiler-research.org/
+          pages_path: ./public/
+          cmd_params: '--skip-tls-verification --verbose --color=always'
+          debug: true
