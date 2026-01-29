@@ -16,6 +16,12 @@ jobs:
           honorRobotExclusions: false
           ignorePatterns: "github,google"
           recursiveLinks: true
+
+      - name: Show broken links
+        run: |
+          echo "Broken links found:"
+          echo "${{ steps.link-report.outputs.details }}"
+
       - name: Fail if broken links found
         if: ${{ steps.link-report.outputs.result != 'success' }}
         run: exit 1
