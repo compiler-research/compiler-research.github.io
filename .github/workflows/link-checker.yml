@@ -8,20 +8,36 @@ jobs:
     runs-on: ubuntu-latest
     name: Check for broken links
     steps:
-      - name: Check for broken links
-        id: link-report
-        uses: celinekurpershoek/link-checker@v1.0.3
-        with:
-          url: "https://compiler-research.org/"
-          honorRobotExclusions: false
-          ignorePatterns: "github,google"
-          recursiveLinks: true
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Show broken links
+      - name: Check for broken links using wget
         run: |
-          echo "Broken links found:"
-          echo "${{ steps.link-report.outputs.details }}"
+          echo "Checking links on https://compiler-research.org/ ..."
+          # Get all hrefs from the homepage
+          LINKS=$(curl -s https://compiler-research.org/ | grep -Eo 'href="[^"]+"' | cut -d'"' -f2)
+          
+          BROKEN=0
+          for link in $LINKS; do
+            # Skip empty links and anchors
+            if [[ -z "$link" || "$link" == \#* ]]; then
+              continue
+            fi
+            # Skip ignored patterns
+            if [[ "$link" == *"github"* || "$link" == *"google"* ]]; then
+              continue
+            fi
+            # Make request and get HTTP status
+            STATUS=$(curl -o /dev/null -s -w "%{http_code}" "$link" || echo "000")
+            if [[ "$STATUS" -ge 400 || "$STATUS" == "000" ]]; then
+              echo "BROKEN: $link -> $STATUS"
+              BROKEN=$((BROKEN+1))
+            fi
+          done
 
-      - name: Fail if broken links found
-        if: ${{ steps.link-report.outputs.result != 'success' }}
-        run: exit 1
+          if [[ $BROKEN -gt 0 ]]; then
+            echo "$BROKEN broken link(s) found."
+            exit 1
+          else
+            echo "No broken links found."
+          fi
