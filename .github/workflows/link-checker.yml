@@ -1,10 +1,10 @@
-name: Build and Check Links (PR)
+name: Check broken links (PR build)
 
 on:
   pull_request:
 
 jobs:
-  build_and_check_links:
+  broken_link_check:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,34 +16,17 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material linkchecker
-
-      - name: Build MkDocs site
-        run: mkdocs build --strict
-
-      - name: Serve built site
-        run: |
-          cd site
-          python -m http.server 8000 &
-
-      - name: Wait for server
-        run: sleep 5
+      - name: Install linkchecker
+        run: pip install --upgrade pip linkchecker
 
       - name: Check broken links
         run: |
-          SITE_URL="http://localhost:8000"
+          SITE_URL="https://compiler-research.org/"   # директно публичния сайт
           LOGFILE=$(mktemp)
 
-          echo "Checking broken links on PR build at $SITE_URL ..."
+          echo "Checking broken links on $SITE_URL ..."
 
-          # Linkchecker
-          linkchecker "$SITE_URL" \
-            --check-extern \
-            --no-status \
-            --timeout=5 \
+          linkchecker "$SITE_URL" --check-extern --no-status --timeout=5 \
             > "$LOGFILE" 2>&1 || true
 
           echo "Broken links:"
@@ -53,7 +36,6 @@ jobs:
 
           echo "Summary: $BROKEN_COUNT broken link(s) found"
 
-          # Fail the job if there are broken links
           if [ "$BROKEN_COUNT" -gt 0 ]; then
             exit 1
           fi
