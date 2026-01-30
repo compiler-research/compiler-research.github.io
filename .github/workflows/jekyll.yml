@@ -47,6 +47,22 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          
+      - name: Check for broken links
+        run: |
+          echo "Checking for broken links..."
+          OUTPUT=$(bundle exec htmlproofer ./_site --disable-external 2>&1) || true
+          
+          # Check if output contains "HTML-Proofer found"
+          if echo "$OUTPUT" | grep -q "HTML-Proofer found"; then
+            echo "Broken links detected:"
+            echo "$OUTPUT" | grep -v "Run options"
+            exit 1
+          else
+            echo "No broken links found."
+          fi
+
+
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
