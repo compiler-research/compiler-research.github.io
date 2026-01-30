@@ -51,17 +51,19 @@ jobs:
       - name: Check for broken links
         run: |
           echo "Checking for broken links..."
-          OUTPUT=$(bundle exec htmlproofer ./_site --disable-external 2>&1) || true
-          
-          # Check if output contains "HTML-Proofer found"
-          if echo "$OUTPUT" | grep -q "HTML-Proofer found"; then
-            echo "Broken links detected:"
-            echo "$OUTPUT" | grep -v "Run options"
-            exit 1
+
+          OUTPUT=$(bundle exec htmlproofer ./_site 2>&1)
+          EXIT_CODE=$?
+
+          # Print all output
+          echo "$OUTPUT"
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "Broken links detected!"
+            exit $EXIT_CODE
           else
             echo "No broken links found."
           fi
-
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
