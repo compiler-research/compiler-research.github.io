@@ -54,11 +54,12 @@ jobs:
           directory: '_site'
           check_external: true
           fail_on_error: true
-          ignore_alt: true
-          ignore_fragments: true
           ignore_urls: '^http://,^//'
-          extra_args: '--quiet'
-          
+          extra_args: >
+            --quiet
+            --ignore-alt
+            --ignore-fragments
+
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
