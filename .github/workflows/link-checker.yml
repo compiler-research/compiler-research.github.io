@@ -1,0 +1,42 @@
+name: Check broken links on public site
+
+on:
+  pull_request:
+
+jobs:
+  broken_link_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install linkchecker
+        run: |
+          python -m pip install --upgrade pip
+          pip install linkchecker
+
+      - name: Check for broken links
+        run: |
+          SITE_URL="https://compiler-research.org/"
+          LOGFILE=$(mktemp)
+
+          echo "Checking broken links on $SITE_URL ..."
+
+          linkchecker "$SITE_URL" --no-status --check-extern --timeout=5 > "$LOGFILE" 2>&1 || true
+
+          BROKEN_COUNT=$(grep -E "ERROR|BROKEN|dead" "$LOGFILE" | tee /dev/tty | wc -l)
+
+          echo "---------------------------"
+          echo "Summary:"
+          echo "Broken links found: $BROKEN_COUNT"
+          echo "---------------------------"
+
+          if [ "$BROKEN_COUNT" -gt 0 ]; then
+            exit 1
+          fi
