@@ -54,14 +54,13 @@ jobs:
           directory: '_site'
           check_external: true
           fail_on_error: true
-          ignore_urls: '^http://,^//'
           ignore_alt: true
           ignore_fragments: true
+          ignore_urls: '^http://,^//'
           extra_args: >
             --quiet
             --ignore-fragments
-            --disable-image-checks
-            --checks Links
+            --checks Links  
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
