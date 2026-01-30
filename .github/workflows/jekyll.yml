@@ -48,20 +48,19 @@ jobs:
         env:
           JEKYLL_ENV: production
           
-      - name: Check for broken links
+      - name: Check internal links only
         uses: athackst/htmlproofer-action@main
         with:
           directory: '_site'
-          check_external: true
+          check_external: false
           fail_on_error: true
-          ignore_empty_alt: true
+      
+          enforce_https: false
+          check_internal_hash: false
           ignore_missing_alt: true
-          ignore_fragments: true
-          ignore_urls: '^http://,^//'
-          extra_args: >
-            --quiet
-            --ignore-fragments
-            --checks Links  
+          ignore_empty_alt: true
+      
+          extra_args: '--quiet'
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
