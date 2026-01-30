@@ -61,11 +61,13 @@ jobs:
           EXIT_CODE=$?
           echo "$OUTPUT"
           if [ $EXIT_CODE -ne 0 ]; then
-            echo "Broken links detected!"
+            echo "Broken links detected:"
+            echo "$OUTPUT" | grep -E "does not exist|error|HTML-Proofer"
             exit $EXIT_CODE
           else
             echo "No broken links found."
           fi
+
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
