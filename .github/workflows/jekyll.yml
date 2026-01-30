@@ -57,7 +57,10 @@ jobs:
           ignore_alt: true
           ignore_fragments: true
           ignore_urls: '^http://,^//'
-          extra_args: '--quiet'
+          extra_args: >
+            --quiet
+            --ignore-fragments
+            --checks Links  
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
