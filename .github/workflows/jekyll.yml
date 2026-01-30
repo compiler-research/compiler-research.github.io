@@ -48,6 +48,10 @@ jobs:
         env:
           JEKYLL_ENV: production
           
+      - name: Install html-proofer
+        run: gem install html-proofer
+
+          
       - name: Check for broken links
         run: |
           echo "Checking for broken links..."
