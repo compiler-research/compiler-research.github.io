@@ -48,19 +48,28 @@ jobs:
         env:
           JEKYLL_ENV: production
           
-      - name: Check internal links only
+      - name: Check links
         uses: athackst/htmlproofer-action@main
         with:
           directory: '_site'
-          check_external: false
+      
+          # Internal links are enforced
+          check_external: true
           fail_on_error: true
       
+          # External sites safety
           enforce_https: false
+          ignore_status_codes: '429,403,500,502,503,504'
+      
+          # Silence noise
           check_internal_hash: false
+          check_external_hash: false
           ignore_missing_alt: true
           ignore_empty_alt: true
       
+          ignore_urls: '^http://,^//'
           extra_args: '--quiet'
+
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
