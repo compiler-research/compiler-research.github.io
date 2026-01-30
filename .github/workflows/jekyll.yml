@@ -48,23 +48,18 @@ jobs:
         env:
           JEKYLL_ENV: production
           
-      - name: Install html-proofer
-        run: gem install html-proofer
-
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
           
       - name: Check for broken links
         run: |
           echo "Checking all links (internal + external)..."
-
-          # Run html-proofer in verbose mode, capture output but allow command to finish
           OUTPUT=$(bundle exec htmlproofer ./_site --verbose 2>&1) || true
           EXIT_CODE=$?
-
-          # Print everything so we can see all links checked
-          echo "=== All links checked ==="
           echo "$OUTPUT"
-
-          # Highlight only broken links
           if [ $EXIT_CODE -ne 0 ]; then
             echo "Broken links detected:"
             echo "$OUTPUT" | grep -E "does not exist|error|HTML-Proofer"
