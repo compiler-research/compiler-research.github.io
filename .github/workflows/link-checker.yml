@@ -1,29 +1,59 @@
-name: PR HTMLProofer
+name: Build and Check Links (PR)
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
 
 jobs:
-  htmlproofer:
+  build_and_check_links:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
-          ruby-version: '3.x'
+          python-version: '3.x'
 
-      - name: Install gems
-        run: bundle install --jobs 4 --retry 3
-
-      - name: Build Jekyll site
-        run: bundle exec jekyll build --destination _site
-
-      - name: Run HTMLProofer
+      - name: Install dependencies
         run: |
-          bundle exec htmlproofer ./_site \
-            --assume-extension \
-            --check-html \
-            --allow-hash-href \
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material linkchecker
+
+      - name: Build MkDocs site
+        run: mkdocs build --strict
+
+      - name: Serve built site
+        run: |
+          cd site
+          python -m http.server 8000 &
+
+      - name: Wait for server
+        run: sleep 5
+
+      - name: Check broken links
+        run: |
+          SITE_URL="http://localhost:8000"
+          LOGFILE=$(mktemp)
+
+          echo "Checking broken links on PR build at $SITE_URL ..."
+
+          # Linkchecker
+          linkchecker "$SITE_URL" \
+            --check-extern \
+            --no-status \
+            --timeout=5 \
+            > "$LOGFILE" 2>&1 || true
+
+          echo "Broken links:"
+          grep -E "ERROR|BROKEN|dead" "$LOGFILE" || echo "None"
+
+          BROKEN_COUNT=$(grep -E "ERROR|BROKEN|dead" "$LOGFILE" | wc -l)
+
+          echo "Summary: $BROKEN_COUNT broken link(s) found"
+
+          # Fail the job if there are broken links
+          if [ "$BROKEN_COUNT" -gt 0 ]; then
+            exit 1
+          fi
