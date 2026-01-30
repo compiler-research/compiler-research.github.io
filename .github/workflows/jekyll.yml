@@ -48,26 +48,12 @@ jobs:
         env:
           JEKYLL_ENV: production
           
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42
+      - name: Test with htmlproofer
+        uses: athackst/htmlproofer-action@main
         with:
-          ruby-version: '3.1'
-          bundler-cache: true
-          
-      - name: Check for broken links
-        run: |
-          echo "Checking all links (internal + external)..."
-          OUTPUT=$(bundle exec htmlproofer ./_site --verbose 2>&1) || true
-          EXIT_CODE=$?
-          echo "$OUTPUT"
-          if [ $EXIT_CODE -ne 0 ]; then
-            echo "Broken links detected:"
-            echo "$OUTPUT" | grep -E "does not exist|error|HTML-Proofer"
-            exit $EXIT_CODE
-          else
-            echo "No broken links found."
-          fi
-
+          directory: '_site'
+          check_external: true
+          fail_on_error: true
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
