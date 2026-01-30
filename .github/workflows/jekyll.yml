@@ -54,7 +54,8 @@ jobs:
           directory: '_site'
           check_external: true
           fail_on_error: true
-          ignore_alt: true
+          ignore_empty_alt: true
+          ignore_missing_alt: true
           ignore_fragments: true
           ignore_urls: '^http://,^//'
           extra_args: >
