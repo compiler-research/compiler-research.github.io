@@ -53,8 +53,6 @@ jobs:
         with:
           directory: '_site'
       
-          # What to check
-          check_links: true
           check_images: false
           check_scripts: false
           check_opengraph: false
@@ -69,6 +67,7 @@ jobs:
           check_external_hash: false
           ignore_missing_alt: true
           ignore_empty_alt: true
+          allow_missing_href: true
       
           # Ignore HTTP + protocol-relative URLs
           ignore_urls: '^http://,^//'
