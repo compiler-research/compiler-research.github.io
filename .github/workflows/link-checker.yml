@@ -16,26 +16,26 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install linkchecker
-        run: pip install --upgrade pip linkchecker
-
-      - name: Check broken links
-        run: |
-          SITE_URL="https://compiler-research.org/"   # директно публичния сайт
-          LOGFILE=$(mktemp)
-
-          echo "Checking broken links on $SITE_URL ..."
-
-          linkchecker "$SITE_URL" --check-extern --no-status --timeout=5 \
-            > "$LOGFILE" 2>&1 || true
-
-          echo "Broken links:"
-          grep -E "ERROR|BROKEN|dead" "$LOGFILE" || echo "None"
-
-          BROKEN_COUNT=$(grep -E "ERROR|BROKEN|dead" "$LOGFILE" | wc -l)
-
-          echo "Summary: $BROKEN_COUNT broken link(s) found"
-
-          if [ "$BROKEN_COUNT" -gt 0 ]; then
-            exit 1
-          fi
+      - name: Check for broken links
+        uses: athackst/htmlproofer-action@main
+        with:
+          directory: '_site'
+      
+          check_images: false
+          check_scripts: false
+          check_opengraph: false
+      
+          # External behavior
+          disable_external: false
+          enforce_https: false
+          ignore_status_codes: '403,429,500,502,503,504'
+      
+          # Silence noise
+          check_internal_hash: false
+          check_external_hash: false
+          ignore_missing_alt: true
+          ignore_empty_alt: true
+          allow_missing_href: true
+      
+          # Ignore HTTP + protocol-relative URLs
+          ignore_urls: '^http://,^//'
