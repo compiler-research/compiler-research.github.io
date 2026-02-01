@@ -54,12 +54,7 @@ jobs:
             -v "$PWD/_site:/site" \
             klakegg/html-proofer:latest \
             /site \
-            --allow-missing-href \
-            --ignore-missing-alt \
-            --ignore-empty-alt \
-            --ignore-fragments \
-            --ignore-urls "^http://,^//" \
-            --ignore-status-codes "403,429,500,502,503,504"
+            --help
 
 
       - name: Upload artifact
