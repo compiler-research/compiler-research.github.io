@@ -54,8 +54,8 @@ jobs:
             -v "$PWD/_site:/site" \
             klakegg/html-proofer:latest \
             /site \
-            --allow-hash-href=true
-            --empty-alt-ignore=true
+            --allow-hash-href
+            --empty-alt-ignore
             --url-ignore ['^http:','^//']
             
       - name: Upload artifact
