@@ -54,13 +54,13 @@ jobs:
             -v "$PWD/_site:/site" \
             klakegg/html-proofer:latest \
             /site \
-            --disable-images \
-            --disable-scripts \
-            --ignore-fragments \
-            --ignore-missing-alt \
             --allow-missing-href \
+            --ignore-missing-alt \
+            --ignore-empty-alt \
+            --ignore-fragments \
             --ignore-urls "^http://,^//" \
             --ignore-status-codes "403,429,500,502,503,504"
+
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
