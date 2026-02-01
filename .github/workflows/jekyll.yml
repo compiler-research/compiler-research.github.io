@@ -54,10 +54,8 @@ jobs:
             -v "$PWD/_site:/site" \
             klakegg/html-proofer:latest \
             /site \
-            --check-links \
-            --disable-image-checks \
-            --disable-script-checks \
-            --disable-opengraph \
+            --disable-images \
+            --disable-scripts \
             --ignore-fragments \
             --ignore-missing-alt \
             --allow-missing-href \
