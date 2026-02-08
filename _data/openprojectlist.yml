@@ -35,6 +35,28 @@
     * Present the work at the relevant meetings and conferences
   tags: ["xeus", "xeus-cpp", "clang", "clang-repl", "jupyter", "gpu", "cuda", "python", "plugins"]
 
+- name: Enable automatic differentiation of OpenMP programs with Clad
+  description: |
+    Clad is an automatic differentiation (AD) clang plugin for C++. Given a C++
+    source code of a mathematical function, it can automatically generate C++
+    code for computing derivatives of the function. Clad is useful in powering
+    statistical analysis and uncertainty assessment applications. OpenMP (Open
+    Multi-Processing) is an application programming interface (API) that
+    supports multi-platform shared-memory multiprocessing programming in C, C++,
+    and other computing platforms.
+
+    This project aims to develop infrastructure in Clad to support the
+    differentiation of programs that contain OpenMP primitives.
+  tasks: |
+    *  Extend the pragma handling support
+    * List the most commonly used OpenMP concurrency primitives and prepare a
+      plan for how they should be handled in both forward and reverse
+      accumulation in Clad
+    * Add support for concurrency primitives in Clad’s forward and reverse mode
+      automatic differentiation.
+    * Add proper tests and documentation.
+    * Present the work at the relevant meetings and conferences.
+  tags: ["clad", "openmp", "gsoc", "gsoc-26"]
 - name: "Enhancing LLM Training with Clad for efficient differentiation"
   description: |
     This project aims to leverage Clad, an automatic differentiation (AD)
