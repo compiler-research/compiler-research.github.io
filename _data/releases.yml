@@ -1,3 +1,19 @@
+- date: 2026-02-11
+  codebase: "Cling"
+  version: "v1.3"
+  description: |
+    Cling 1.3 introduces a significant update to the interactive C++ interpreter
+    built on Clang and LLVM, highlighted by an upgrade to LLVM 20 and improved
+    alignment with modern C++ standards through module map cleanup and removal
+    of deprecated headers. The release delivers faster, clang-repl–style code
+    completion, safer and more robust JIT and dictionary handling on macOS
+    (including improved Mach-O bundle support), and enhanced compatibility with
+    macOS SDK 15.4. It also includes Clad integration improvements (now bumped
+    to v1.9), standalone build and documentation refinements, CMake
+    modernization, and initial Loong64 platform support. Several important bugs
+    are fixed.
+  link: "https://github.com/vgvassilev/cling/releases/tag/v1.3"
+
 - date: 2026-01-28
   codebase: "CppInterOp"
   version: "v1.8.0"
