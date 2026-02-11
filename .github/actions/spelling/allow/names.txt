@@ -31,6 +31,7 @@ Hahnfeld
 Hames
 Harshitha
 Hilendarski
+Hristiyan
 Ikarashi
 Ilieva
 Isemann
@@ -80,6 +81,7 @@ Saphire
 Saqib
 Sergey
 Shadura
+Shterev
 Sitong
 Sivasankaran
 Svrin
@@ -149,6 +151,7 @@ garimasingh
 gojakuch
 gonzalez
 grimmmyshini
+hristiyan
 ifrim
 imorlxs
 ioana
@@ -214,6 +217,7 @@ shaharechaitanya
 shakhov
 shreyas
 shreyasatre
+shterev
 siu
 somayyajula
 sunho
