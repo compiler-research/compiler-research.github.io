@@ -1,3 +1,208 @@
+- name: Clad as First-Class Citizen in LibTorch
+  description: |
+
+    This project will design, implement, benchmark, and integrate a
+    proof-of-concept that uses Clad (compiler-based automatic differentiation)
+    as a first-class gradient engine in LibTorch (the C++ API of PyTorch). The
+    goal is to demonstrate how ROOT users can run high-performance, pure-C++
+    machine-learning training and inference pipelines, without relying on
+    Python. The project will result in a working prototype that integrates
+    Clad-generated backward routines into LibTorch via
+    `torch::autograd::Function` or custom ATen operators.
+
+    Recent efforts have extended the ROOT framework with modern machine-learning
+    capabilities. In particular, a ROOT Users Workshop 2025 contribution by
+    Meyer-Conde et al. demonstrates the use of LibTorch directly inside ROOT for
+    gravitational-wave data analysis
+    \[[1](https://indico.cern.ch/event/1505384/contributions/6706597)\]. Their
+    “ROOT+” prototype library augments ROOT with advanced features such as
+    complex tensor arithmetic on CPU/GPU and modern I/O mechanisms (HTTP,
+    Kafka), while relying on LibTorch for ML training and inference. In
+    practice, this enables ROOT to load and execute neural networks (via ONNX or
+    LibTorch) entirely in C++, and to combine them seamlessly with ROOT’s
+    data-processing tools such as RDataFrame and TMVA, all within a single
+    environment.
+
+    In parallel, recent work in the Compiler Research community has demonstrated
+    that Clad-generated gradients can match and even outperform PyTorch autograd
+    on CPU when carefully optimized
+    \[[2](https://compiler-research.org/blogs/gsoc25_rohan_final_blog)\]. These
+    results motivate a deeper exploration of compiler-driven automatic
+    differentiation as a backend for machine learning frameworks. Building on
+    both efforts, this project will culminate in a ROOT integration demo (for
+    example, a simplified gravitational-wave analysis workflow) and a
+    reproducible benchmarking suite comparing Clad-based gradients with PyTorch
+    autograd for realistic HEP and GW workloads.
+
+    This project is expected to deliver tangible performance and usability
+    benefits for machine-learning workflows in ROOT. By offloading gradient
+    computation to Clad’s compiler-generated routines, meaningful speedups are
+    expected for CPU-bound training workloads; prior results report speedups
+    over PyTorch autograd on CPU
+    \[[2](https://compiler-research.org/blogs/gsoc25_rohan_final_blog)\]. This
+    makes the approach particularly attractive for offline HEP and
+    gravitational-wave analyses, where CPU efficiency is often a limiting
+    factor. In addition, the project will enable fully native C++
+    machine-learning workflows in ROOT, allowing users to define, train, and
+    evaluate models without Python dependencies and to integrate ML tightly with
+    existing C++ analysis code, ROOT I/O, and data pipelines. The Clad-enhanced
+    LibTorch backend will naturally complement ROOT’s existing ML ecosystem
+    including TMVA, SOFIE, ONNX-based inference, and RDataFrame providing a
+    flexible “best-of-both-worlds” solution that combines modern deep-learning
+    frameworks with ROOT’s mature analysis infrastructure. Beyond the immediate
+    prototype, this work will establish a solid foundation for future research
+    on compiler-driven optimizations such as kernel fusion, reduced memory
+    traffic, and eventual GPU acceleration.
+
+  tasks: |
+    * Create a small C++ demo where a simple neural network is defined
+      (e.g. MLP) and use Clad to generate its derivative functions. Integrate
+      this with LibTorch by wrapping the Clad-generated gradient code as a
+      custom `torch::autograd::Function` or operator. This follows the strategy
+      outlined in the Clad-PyTorch project. The result is a model that uses
+      LibTorch tensors for forward, but Clad’s code for backward.
+    * Measure training (forward+backward) performance on CPU for representative
+      tasks (e.g. MNIST or a simple GW signal classification). Compare
+      Clad-derived gradients vs PyTorch autograd. Focus on performance: optimize
+      memory layout and avoid dynamic allocations to maximize throughput.
+    * Adapt the working prototype into the ROOT framework. For example,
+      incorporate it into a ROOT macro or plugin so that one can run C++ ML code
+      under `root.exe` or in PyROOT. Provide examples using ROOT’s data
+      structures (TTrees, RDataFrame) feeding into the Clad-empowered model.
+      Investigate loading pretrained models (via ONNX or TorchScript) and
+      whether Clad can backpropagate through them.
+  tags: ["clad", "automatic-differentiation", "compiler-technology",
+         "libtorch", "pytorch", "machine-learning", "root-framework",
+         "scientific-computing", "performance-optimization", "c++", "gsoc",
+         "gsoc-26"]
+
+- name: "CartopiaX: Enhancing a Next-Generation Platform for Computational Cancer Biology"
+  description: |
+    CartopiaX is an emerging simulation and modeling platform designed to
+    support computational cancer research through large-scale, agent-based
+    biological simulations. The project builds on modern high-performance
+    scientific computing practices and leverages technologies inspired by
+    platforms such as BioDynaMo to model tumor growth, tissue microenvironments,
+    cell-cell interactions, and diffusion of signaling molecules.
+
+    CartopiaX aims to provide a flexible research environment that enables
+    computational scientists and domain biologists to collaboratively design,
+    execute, and analyze large-scale biological simulations. The platform
+    combines high-performance C++ simulation kernels with user-friendly
+    interfaces and scripting capabilities to enable rapid experimentation and
+    reproducible research workflows.
+
+    Currently, CartopiaX provides a performant core simulation engine but still
+    requires improvements in usability, extensibility, and performance
+    portability to support wider adoption in computational oncology and systems
+    biology communities.
+
+    This project invites contributors to explore improvements that help
+    integrate, extend, and deploy CartopiaX for real-world research
+    applications. Students are encouraged to propose approaches that enhance
+    developer productivity, accessibility for domain scientists, and
+    computational performance.
+
+    *Possible areas of exploration.* **Easy integration:** a possible direction
+     focuses on improving the usability of CartopiaX by developing more
+     intuitive ways for researchers to configure and run simulations. Currently,
+     simulations rely heavily on static configuration files and parameter
+     definitions. Students may explore designing graphical or web-based
+     interfaces that allow researchers to interactively define experiments,
+     create structured configuration systems using formats such as YAML or JSON,
+     and develop reusable experiment templates. This direction aims to make
+     CartopiaX more accessible to domain scientists who may not have extensive
+     programming experience while improving reproducibility and workflow
+     management. **Flexibility:** A potential direction involves extending
+     CartopiaX through Python integration to support flexible and rapid
+     scientific experimentation. Many researchers in computational biology
+     prefer Python due to its strong ecosystem for data analysis and
+     prototyping. Students may investigate technologies such as cppyy to enable
+     seamless interaction between the high-performance C++ simulation core and
+     Python. This could allow scientists to define cell behaviors, simulation
+     rules, or analysis pipelines directly in Python while preserving the
+     performance advantages of the C++ backend. This area provides opportunities
+     to work on language interoperability and mixed-language scientific
+     workflows. **HPC:** a third direction explores improving the performance
+     and scalability of CartopiaX by identifying and optimizing computational
+     bottlenecks within the simulation engine. Agent-based biological
+     simulations frequently involve expensive processes such as diffusion
+     modeling and large-scale cell interaction calculations. Students may
+     explore profiling the simulation engine, investigating GPU acceleration
+     strategies for diffusion solvers or other parallelizable components, and
+     developing benchmarking tools to evaluate performance improvements. This
+     direction is particularly suited for students interested in
+     high-performance computing and parallel programming techniques.
+
+  tasks: |
+  tags: ["computational-biology",  "computational-oncology",
+         "agent-based-simulation", "scientific-computing",
+         "high-performance-computing",  "parallel-programming", "c++", "python",
+         "gpu", "reproducibility", "gsoc", "gsoc-26"]
+
+- name: Agent-based Large-Scale Antimatter Simulation
+  description: |
+    **Description:** Deliver a self-contained BioDynaMo module and research
+    prototype that enables validated, reproducible simulations of charged
+    antiparticle ensembles in Penning-trap-like geometries at scales beyond
+    existing demonstrations. The project generalizes prior BioDynaMo
+    Penning-trap work into a reusable, documented, and scalable module suitable
+    for antimatter-motivated studies and other charged-particle systems.
+
+    The student will extend BioDynaMo with a focused set of features (pluginized
+    force models, neighbor search tuned for charged particles, elastic runtime
+    hooks, and analysis/visualization pipelines), validate the models on
+    canonical testcases (single-particle motion, small plasma modes), and
+    demonstrate scaling and scientific workflows up to the largest feasible size
+    within available resources.
+
+    BioDynaMo already provides an agent/plugin API, parallel execution (OpenMP),
+    and visualization hooks (ParaView/VTK). A prior intern report demonstrates a
+    Penning-trap proof-of-concept and identifies directions for extension
+    (custom forces, multi-scale runs, hierarchical models, CI,
+    containerization)\[[1](https://repository.cern/records/7capf-rqp49)\].
+
+    The high-level goals are:
+    **Engineering**
+
+    * Implement a BioDynaMo plugin module (“AntimatterKernel”) optimized for
+      charged-particle workloads, including SoA-compatible data layouts, spatial
+      decomposition, and an efficient neighbor search.
+    * Enable elastic and reproducible execution via containerized workflows and
+      runtime configuration for local, HPC, or cloud environments.
+    * Provide performance instrumentation and a small, well-documented benchmark
+      suite integrated with BioDynaMo’s tooling.
+
+    **Physics / Scientific**
+
+    * Implement physics components as BioDynaMo plugins: Penning-trap external
+      fields, Coulomb interactions (pairwise with documented extension points
+      for approximations), stochastic annihilation handling, and basic species
+      support.
+    * Validate against analytic and reference scenarios (single-particle
+      trapping, basic plasma oscillation modes), with clearly stated assumptions
+      and limits.
+    * Perform a limited parameter sweep (e.g. density, magnetic field, trap
+      voltage) at increasing scale to explore collective behavior observable
+      within accessible regimes.
+  tasks: |
+    * A BioDynaMo plugin/module implementing charged-particle dynamics suitable
+      for antimatter-motivated simulations.
+    * A set of validated physics testcases reproducing canonical scenarios, with
+      documented assumptions and limitations.
+    * A scalable and reproducible simulation workflow, including performance
+      instrumentation and example benchmark configurations.
+    * Elastic execution artifacts (containers and run scripts) enabling
+      consistent execution across local, HPC, and cloud systems.
+    * Analysis and visualization pipelines producing scientifically meaningful
+      observables (e.g. density profiles, energy spectra, annihilation maps).
+    * A public open-source release with documentation and a short technical
+      report or draft publication suitable for a workshop or conference.
+  tags: ["biodynamo", "agent-based-simulation", "computational-physics",
+         "high-performance-computing", "parallel-programming", "c++",
+         "scientific-simulation", "antimatter", "containerization",
+         "visualization"]
+
 - name: "Enable GPU support and Python Interoperability via a Plugin System"
   description: |
     Xeus-Cpp integrates [Clang-Repl](https://clang.llvm.org/docs/ClangRepl.html)
