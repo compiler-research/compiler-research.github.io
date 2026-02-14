@@ -341,6 +341,29 @@
       proposal: /assets/docs/Aditya_Pandey_GSoC2025.pdf
       mentors: Martin Vassilev, Jonas Rembser, Fons Rademakers, Vassil Vassilev
 
+      -name: Georgi Haralanov
+      -photo: placeholder.jpg
+      -info: High School Student
+      -email: georgiharalanov2009@gmail.com
+      -education: "Systems Programmer, High School of Mathematics Akad Kiril Popov, Plovdiv, Bulgaria"
+      -github: "https://github.com/GeorgiLH"
+      -projects:
+        -title: "General improvements to GeneRoot"
+        status: Ongoing
+        description: |
+          The project aims to increase speed and efficiency in the GeneRoot project.
+          Speed is a crucial part in any research and development environment. With
+          the advancment of genomic sequencing technologies the speed of acquisition
+          and the size of the data being handled in the field has shown growth by an 
+          exceptionally large factor in the last decade. As such GeneRoot and tools
+          like it will be used for the analysis of amounts of data far exceeding
+          the currently seen ones. Speed may be gained by employing a variety of
+          methods some of which are: faster/more optimal search algorithms, better
+          compression/ordering of data without loss of information and exploiting
+          the full potential of modern hardware. Some of these methods will be 
+          teseted and employed in the project.
+        propsal: /assets/docs/stg.pdf
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
