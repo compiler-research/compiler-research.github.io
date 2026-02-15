@@ -358,11 +358,11 @@
           exceptionally large factor in the last decade. As such GeneRoot and tools
           like it will be used for the analysis of amounts of data far exceeding
           the currently seen ones. Speed may be gained by employing a variety of
-          methods some of which are: faster/more optimal search algorithms, better
+          different methods including: faster/more optimal search algorithms, better
           compression/ordering of data without loss of information and exploiting
           the full potential of modern hardware. Some of these methods will be 
           teseted and employed in the project.
-        propsal: /assets/docs/stg.pdf
+        propsal: /assets/docs/GeorgiHaralanovProposition.pdf
 
 - name: "This could be you!"
   photo: rock.jpg
