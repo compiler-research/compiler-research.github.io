@@ -23,12 +23,14 @@ Duswald
 Elrawy
 Foco
 Galin
+Georgi
 Graenitz
 Guilherme
 Guiraud
 Hageboeck
 Hahnfeld
 Hames
+Haralanov
 Harshitha
 Hilendarski
 Hristiyan
@@ -145,6 +147,7 @@ elrawy
 fransham
 fsfod
 galin
+georgi
 gargvaibhav
 garima
 garimasingh
@@ -152,6 +155,7 @@ gojakuch
 gonzalez
 grimmmyshini
 hristiyan
+haralanov
 ifrim
 imorlxs
 ioana

@@ -368,6 +368,30 @@
        contributions such as improving documentation, adding example notebooks, or clarifying existing behavior.
       proposal: /assets/docs/Hristiyan_Shterev_project_proposal.pdf
       mentors: Vassil Vasilev 
+- name: Georgi Haralanov
+  active: 1 
+  photo: GeorgiHaralanov.jpg
+  info: High School Student
+  email: georgiharalanov2009@gmail.com
+  education: "Systems Programmer, High School of Mathematics Akad Kiril Popov, Plovdiv, Bulgaria"
+  github: "https://github.com/GeorgiLH"
+  projects:
+    - title: "General improvements to GeneRoot"
+      status: Ongoing
+      description: |
+       The project aims to increase speed and efficiency in the GeneRoot project.
+       Speed is a crucial part in any research and development environment. With
+       the advancement of genomic sequencing technologies the speed of acquisition
+       and the size of the data being handled in the field has shown growth by an 
+       exceptionally large factor in the last decade. As such GeneRoot and tools
+       like it will be used for the analysis of amounts of data far exceeding
+       the currently seen ones. Speed may be gained by employing a variety of
+       different methods including: faster/more optimal search algorithms, better
+       compression/ordering of data without loss of information and exploiting
+       the full potential of modern hardware. Some of these methods will be 
+       tested and employed in the project.
+      mentors: Vassil Vassilev
+      proposal: /assets/docs/GeorgiHaralanovProposition.pdf
 
 - name: "This could be you!"
   photo: rock.jpg
