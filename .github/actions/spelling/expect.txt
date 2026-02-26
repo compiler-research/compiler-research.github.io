@@ -3,12 +3,16 @@ backpropation
 cblas
 copyable
 endunless
+fezova
+Fezova
 Galin
 genomics
 gpt
 inp
+jank
 Karpathy
 layernorm
+lang
 Loihi
 Neuromorphic
 neuromorphic
@@ -21,3 +25,6 @@ Resugaring
 sgemm
 sustainability
 transitioning
+upstreaming
+
+

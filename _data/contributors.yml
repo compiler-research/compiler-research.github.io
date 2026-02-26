@@ -394,6 +394,27 @@
       proposal: /assets/docs/Hristiyan_Shterev_project_proposal.pdf
       mentors: Vassil Vasilev 
 
+- name: Iva Fezova
+  photo: iva_fezova3.jpg
+  info: "High School Intern"
+  email: ivkafezova@gmail.com
+  education: "High School of Mathematics Akademik Kiril Popov, Plovdiv, Bulgaria"
+  github: "https://github.com/Iv-F"
+  active: 1
+  projects:
+    - title: "Upstream jank-lang specific patches back to CppInterOp"
+      status: Ongoing
+      description: | 
+        The project focuses on upstreaming jank-lang-specific patches to CppInterOp to reduce downstream
+        maintenance costs and improve interoperability support within the C++ tooling ecosystem.
+        The work involves analyzing existing modifications, refactoring them into upstream-acceptable components,
+        and ensuring compatibility with LLVM and Clang APIs.
+        By simplifying and generalizing these modifications, the project aims to establish a repeatable process for
+        evaluating downstream patches while providing well-designed improvements that benefit both the jank language
+        and the broader CppInterOp user base through an incremental and review-oriented approach.
+      proposal: /assets/docs/Iva_Fezova_Proposal_2026.pdf
+      mentors: Vassil Vasilev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
