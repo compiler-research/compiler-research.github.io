@@ -33,26 +33,12 @@ layout: default
   {% if page.banner_image %}
   {% comment %} Special-case GSoC banner when the image path contains 'gsoc-banner.png' {% endcomment %}
   {% if page.banner_image contains 'gsoc-banner.png' %}
-  <!-- Special GSoC banner composition -->
-  <div class="gsoc-banner-wrapper" role="img" aria-label="Google Summer of Code — Compiler Research">
-    <div class="gsoc-banner">
-      <div class="logo logo-left">
-        <!-- left GSoC logo: update path if needed -->
-        <img src="/images/gsoc-logo.svg" alt="Google Summer of Code logo" />
-      </div>
-
-      <div class="at-sign" aria-hidden="true">@</div>
-
-      <div class="logo logo-right">
-        <!-- right Compiler Research logo: update path if needed -->
-        <img src="/images/cr-logo_old.png" alt="Compiler Research logo" />
-      </div>
-    </div>
-
-    <div class="gsoc-caption" role="heading" aria-level="2">
-      Google <strong>Summer of Code</strong>
-    </div>
-  </div>
+    <!-- Special GSoC banner composition -->
+    {% include dual-banner.html
+     left_logo="/images/gsoc-logo.svg"
+     right_logo="/images/cr-logo_old.png"
+     caption="Google <strong>Summer of Code</strong>"
+     height="20vh" %}
   {% else %}
   <!-- Default banner -->
   <div class="post-banner">
