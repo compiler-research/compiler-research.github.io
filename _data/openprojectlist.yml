@@ -83,7 +83,10 @@
     biological simulations. The project builds on modern high-performance
     scientific computing practices and leverages technologies inspired by
     platforms such as BioDynaMo to model tumor growth, tissue microenvironments,
-    cell-cell interactions, and diffusion of signaling molecules.
+    cell-cell interactions, and diffusion of signaling molecules. It
+    reimplements the agent based model presented in
+    [In silico study of heterogeneous tumour-derived organoid response to CAR T-cell therapy](https://www.nature.com/articles/s41598-024-63125-5)
+    using BioDynaMo.
 
     CartopiaX aims to provide a flexible research environment that enables
     computational scientists and domain biologists to collaboratively design,
