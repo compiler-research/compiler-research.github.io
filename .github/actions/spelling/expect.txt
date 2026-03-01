@@ -17,7 +17,6 @@ Loihi
 Neuromorphic
 neuromorphic
 optimizing
-pld
 previndex
 pubtit
 Reoptimization
