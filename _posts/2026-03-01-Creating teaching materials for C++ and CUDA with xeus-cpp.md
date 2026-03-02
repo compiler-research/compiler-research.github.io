@@ -89,7 +89,7 @@ More specific goals include:
 <span class="n">std<span class="o">::</span>vector<</span><span class="kt">unsigned int</span><span class="n">> data_gpu(N_bench);</span>
 
 <span class="k">for</span> <span class="p">(</span><span class=
-"kt">unsighed int</span> <span class="n">i</span> <span class="o">=</span> <span class=
+"kt">unsigned int</span> <span class="n">i</span> <span class="o">=</span> <span class=
 "mi">0</span><span class="n">;</span> <span class="n">i</span> <span class=
 "o">&lt;</span> <span class="n">N_bench;</span></span> <span class="n">i</span><span class="o">++</span><span class=
 "n">)</span> <span class="p">{</span>
@@ -109,7 +109,7 @@ More specific goals include:
         <div class="text_cell_render border-box-sizing rendered_html">
         <h1 id="CPU and GPU sorting">CPU and GPU sorting<a class="anchor-link" href="#CPU and GPU sorting">&#182;</a></h1>
           <p>
-            Next we use std::sort and merge_sort_gpu_full funcion form the loaded CUDA code and measure the time the CPU and GPU sorts the data. 
+            Next we use std::sort and merge_sort_gpu_full function form the loaded CUDA code and measure the time the CPU and GPU sorts the data. 
           </p>
         </div>
       </div>
@@ -131,7 +131,7 @@ More specific goals include:
 <span class="n">merge_sort_gpu_full(data_gpu.data(), N_bench);</span>
 <span class="k">auto</span> <span class="n">end_gpu = std::chrono::high_resolution_clock::now();</span>
 
-<span class="n">stdtd<span class="o">::</span>chronotd<span class="o">::</span>duration&lt;double, std<span class="o">::</span>milli&gt; gpu_ms <span class="o">=</span> end_gpu - start_gpu;</span>
+<span class="n">std<span class="o">::</span>chrono<span class="o">::</span>duration&lt;double, std<span class="o">::</span>milli&gt; gpu_ms <span class="o">=</span> end_gpu - start_gpu;</span>
 </pre>
             </div>
           </div>
