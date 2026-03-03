@@ -76,7 +76,9 @@ oop
 pushforward
 pythonized
 ramview
+ramtools
 ramntupleview
+samply
 reoptimize
 rntuple
 samtools
