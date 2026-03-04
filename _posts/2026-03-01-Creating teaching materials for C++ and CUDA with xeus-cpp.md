@@ -5,6 +5,7 @@ excerpt: "Exploring how xeus-cpp behaves, porting tutorials for C++ and CUDA and
 sitemap: false
 author: Hristiyan Shterev
 permalink: blogs/xeus_cpp_Hristiyan_Shterev_blog/
+thumbnail_image:/images/mg-pld-logo.png
 date: 2026-03-01
 tags: xeus-cpp cuda jupyter c++ xeus internship high-school systems-programming
 custom_css: jupyter
