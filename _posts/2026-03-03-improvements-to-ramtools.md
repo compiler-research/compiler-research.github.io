@@ -5,6 +5,7 @@ excerpt: "Exploring possibilities for increased speed and efficiency"
 sitemap: false
 author: Georgi Haralanov
 permalink: blogs/ramtools_Georgi_Haralanov_blog/
+thumbnail_image:/images/mg-pld-logo.img
 date: 2026-03-03
 tags: c++ genomics bioinformatics root rntuple cern hpc
 ---
