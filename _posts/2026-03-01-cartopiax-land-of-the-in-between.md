@@ -4,7 +4,7 @@ layout: post
 excerpt: |
   Cross-disciplinary research is not a stylistic choice but a structural necessity for tackling today's complex scientific systems. Join me in exploring why the most consequential problems live in the in-between -- and what it takes to work there.
 sitemap: true
-author: Luciana Luque
+author: Luciana Melina Luque
 permalink: blogs/cartopiax-land-of-the-in-between/
 banner_image: /images/blog/cartopiax-header.png
 date: 2026-03-01
