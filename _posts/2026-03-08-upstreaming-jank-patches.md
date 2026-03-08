@@ -3,6 +3,7 @@ title: "Upstreaming jank-lang specific patches back to CppInterOp"
 layout: post
 sitemap: false
 author: Iva Fezova
+excerpt: "Integrating jank-specific improvements directly into CppInterOp to eliminate maintenance overhead and empower the native Clojure dialect."
 permalink: blogs/upstreaming_jank_lang_patches_Iva_Fezova_blog/
 thumbnail_image: /images/mg-pld-logo.png
 date: 2026-03-08
