@@ -17,6 +17,7 @@ Loihi
 Neuromorphic
 neuromorphic
 optimizing
+pld
 previndex
 pubtit
 Reoptimization
@@ -26,5 +27,6 @@ sgemm
 sustainability
 transitioning
 upstreaming
+Upstreaming
 
 
