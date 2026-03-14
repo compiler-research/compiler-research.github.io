@@ -101,6 +101,7 @@ xcpp
 xdap
 xdebugger
 xeus
+xeuscpp
 xjson
 xlldb
 xmagics
