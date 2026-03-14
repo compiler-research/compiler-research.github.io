@@ -416,7 +416,7 @@
       mentors: Vassil Vasilev
 
 - name: Georgi Runtolev
-  photo:
+  photo: GeorgiRuntolev.jpg
   info: "High School Intern"
   email: runtolev.georgi@gmail.com
   education: 'Systems programmer at High School of Mathematics "Akad. Kiril Popov", Plovdiv'
@@ -433,7 +433,7 @@
         The goal of this project is to port existing C and C++ course materials to xeus-cpp notebooks, making them interactive and suitable for hands-on learning. 
         The project emphasizes understanding xeus-cpp’s execution model, documenting differences from standard compilation, 
         and producing teaching materials that help users explore C and C++ concepts in a notebook environment.
-      proposal: 
+      proposal: GeorgiRuntolev_proposal.pdf
       mentors: Vassil Vassilev
 
   
