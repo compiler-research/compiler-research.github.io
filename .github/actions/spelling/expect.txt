@@ -1,3 +1,4 @@
+Akad
 Akida
 backpropation
 cblas
@@ -11,12 +12,14 @@ gpt
 inp
 jank
 Karpathy
+Kiril
 layernorm
 lang
 Loihi
 Neuromorphic
 neuromorphic
 optimizing
+pld
 previndex
 pubtit
 Reoptimization
