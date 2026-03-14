@@ -365,6 +365,29 @@
        tested and employed in the project.
       mentors: Vassil Vassilev
       proposal: /assets/docs/GeorgiHaralanovProposition.pdf
+  name: Ivan Velev
+  active: 1
+  photo: IvanVelev.jpg
+  info: High School Student
+  email: ivanvelev_20b@schoolmath.eu
+  education: "Systems Programmer, High School of Mathematics Akad Kiril Popov, Plovdiv, Bulgaria"
+  github: "https://github.com/CopyPasteExpert"
+  projects:
+    - title: "Fixing Undefined Behavior in Clad-Generated Functions"
+      status: Ongoing
+      description: |
+        This project focuses on improving the reliability and safety of automatically 
+        generated derivative functions in Clad. Some mathematical operations in these 
+        functions can produce undefined behavior when given inputs outside their 
+        valid domains, which may lead to incorrect results or program crashes. The goal 
+        is to implement a safe math mode using the CLAD_SAFE_MATH flag, which adds 
+        optional input checks and returns well-defined values like NaN when invalid 
+        inputs are detected. The project also includes debugging utilities and 
+        performance testing to ensure that enabling safety does not significantly 
+        affect efficiency. This work will allow Clad-generated functions to behave 
+        predictably and help developers identify and fix issues more easily.
+      mentors: Vassil Vassilev
+      proposal: /assets/docs/Ivan_Velev_Proposal_2026.pdf
 
 - name: Hristiyan Shterev
   photo: Hristiyan.jpg
