@@ -6,7 +6,7 @@ sitemap: false
 author: Anton Dekov
 permalink: blogs/cppyy_BioDynaMo_Anton_Dekov_blog/
 thumbnail_image: /images/mg-pld-logo.png
-date: 2026-03-03
+date: 2026-03-15
 tags: BioDynaMo cppyy bioinformatics c++
 ---
 
