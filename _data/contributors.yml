@@ -415,6 +415,27 @@
       proposal: /assets/docs/Iva_Fezova_Proposal_2026.pdf
       mentors: Vassil Vasilev
 
+- name: Anton Dekov
+  photo: Anton_Dekov.jpg
+  info: "High School Intern"
+  email: dexant3500@gmail.com
+  education: "High School of Mathematics Akademik Kiril Popov, Plovdiv, Bulgaria"
+  github: "https://github.com/Dexant3500"
+  active: 1
+  projects:
+    - title: "Integrating cppyy with BioDynaMo"
+      status: Ongoing
+      description: | 
+        BioDynaMo is an open-source platform for large-scale agent-based simulations, capable of modeling up to
+        billions of biological entities (cells, molecules) in 3D space and while its performance-critical core is
+        written in C++, many researchers and students prefer Python for rapid prototyping, data analysis, and educational
+        use. The project aims to integrate cppyy, an automatic Python-C++ bindings generator, with BioDynaMo. 
+        This will enable a hybrid modeling environment where users can call existing C++ agents from Python and also create
+        new agents in Python that inherit directly from C++ base classes. This combines the performance of C++ with the 
+        accessibility, flexibility and libraries of Python.
+      proposal: /assets/docs/Anton_Dekov_project_proposal.pdf
+      mentors: Vassil Vasilev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
