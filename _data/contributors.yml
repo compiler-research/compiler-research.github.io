@@ -415,6 +415,28 @@
       proposal: /assets/docs/Iva_Fezova_Proposal_2026.pdf
       mentors: Vassil Vasilev
 
+- name: Georgi Runtolev
+  photo: GeorgiRuntolev.jpg
+  info: "High School Intern"
+  email: runtolev.georgi@gmail.com
+  education: 'Systems programmer at High School of Mathematics "Akad. Kiril Popov", Plovdiv'
+  github: "https://github.com/gRuntolev"
+  active: 1
+  projects:
+    - title: "Port C and C++ courses to xeus-cpp for interactive learning"
+      status: Ongoing
+      description: |
+        The xeus-cpp kernel provides a Jupyter interface for interactive C++ programming. Unlike traditional compilation workflows, 
+        xeus-cpp executes code cell by cell while preserving the program state across executions. 
+        This allows students and developers to experiment, visualize, and debug C++ code incrementally, but introduces behaviors that are different from standard compilation, 
+        such as state persistence, redefinition conflicts, and execution order sensitivity.
+        The goal of this project is to port existing C and C++ course materials to xeus-cpp notebooks, making them interactive and suitable for hands-on learning. 
+        The project emphasizes understanding xeus-cpp’s execution model, documenting differences from standard compilation, 
+        and producing teaching materials that help users explore C and C++ concepts in a notebook environment.
+      proposal: GeorgiRuntolev_proposal.pdf
+      mentors: Vassil Vassilev
+
+  
 - name: Anton Dekov
   photo: Anton_Dekov.jpg
   info: "High School Intern"
