@@ -249,3 +249,5 @@ luciana
 melina
 luque
 Carlevaro
+Ivan
+Velev
