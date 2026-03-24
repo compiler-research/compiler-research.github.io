@@ -66,3 +66,27 @@ body {
     border-radius: 10px;
     z-index: 10;
 }
+
+.well p small.text-muted {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Custom sizing for the News/Blog labels */
+.well .label {
+    display: inline-block;
+    padding: .2em .6em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: .25em;
+    text-transform: uppercase;
+}
+
+/* Match your brand blue for the Blog tag */
+.label-primary {
+    background-color: #004481;
+}
