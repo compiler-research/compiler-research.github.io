@@ -11,8 +11,8 @@ author: Vassil Vassilev
 permalink: blogs/high_school_internships_2026/
 thumbnail_image: /images/mg-pld-logo.png
 date: 2026-02-27
-tags: [internship, high-school, mentorship, compiler-engineering,
-       systems-programming, open-source, community]
+tags: [announcement, internship, high-school, mentorship,
+       compiler-engineering, systems-programming, open-source, community]
 
 ---
 

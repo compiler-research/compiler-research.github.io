@@ -10,7 +10,7 @@ author: Vassil Vassilev
 permalink: blogs/cr24_recap/
 banner_image: /images/blog/vv-2024-recap.webp
 date: 2025-01-05
-tags: [2024, recap, year-in-review, compiler-research, open-source, community]
+tags: [2024, highlight, recap, year-in-review, compiler-research, open-source, community]
 ---
 
 As we close 2024, I'm filled with excitement about how far our Compiler Research

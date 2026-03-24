@@ -1,5 +1,12 @@
-<div class="well filter-item" data-tags="{{ post.tags | join: ',' }}">
+{% assign card_classes = "" %}
+{% if post.tags contains 'announcement' %}
+  {% assign card_classes = card_classes | append: " is-announcement" %}
+{% endif %}
+{% if post.tags contains 'highlight' %}
+  {% assign card_classes = card_classes | append: " is-highlight" %}
+{% endif %}
 
+<div class="well filter-item {{ card_classes }}" data-tags="{{ post.tags | join: ',' }}">
   <div class="post-content">
     <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
 
