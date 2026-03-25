@@ -40,4 +40,4 @@ The goal of this project is to improve the robustness of Clad-generated function
 
 - [Clad repository](https://github.com/vgvassilev/clad)
 - [LLVM project](https://github.com/llvm/llvm-project)
-- [Project proposal](/assets/docs/IvanVelevProposition.pdf)
+- [Project proposal](/assets/docs/Ivan_Velev_Proposal_2026.pdf)
