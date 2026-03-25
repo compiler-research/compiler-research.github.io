@@ -101,6 +101,7 @@ xcpp
 xdap
 xdebugger
 xeus
+xeuscpp
 xjson
 xlldb
 xmagics
@@ -177,3 +178,4 @@ oncoprotein
 organoids
 paraview
 CARTOPIAXROOT
+pld

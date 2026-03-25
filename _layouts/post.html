@@ -56,7 +56,7 @@ layout: default
     <p>
       <h4>Tags:</h4>
       {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tag#{{ tag | downcase | slugify }}" class="badge badge-secondary tag-badge">{{ tag }}</a>
+      <a href="{{ '/blog' | relative_url }}?tag={{ tag | downcase | slugify }}" class="badge badge-secondary tag-badge">{{ tag }}</a>
       {% endfor %}
     </p>
   </footer>

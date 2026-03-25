@@ -11,7 +11,7 @@ author: Vassil Vassilev
 permalink: blogs/cr25_recap/
 banner_image: /images/blog/vv-2025-recap.webp
 date: 2026-01-07
-tags: [2025, recap, year-in-review, compiler-research, open-source, community]
+tags: [2025, highlight, recap, year-in-review, compiler-research, open-source, community]
 ---
 
 If 2024 was the year we sketched the map, 2025 was the year we started paving

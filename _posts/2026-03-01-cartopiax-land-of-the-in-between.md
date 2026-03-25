@@ -8,7 +8,7 @@ author: Luciana Melina Luque
 permalink: blogs/cartopiax-land-of-the-in-between/
 banner_image: /images/blog/cartopiax-header.png
 date: 2026-03-01
-tags: [cross-disciplinary, mechanistic-modeling, CAR-T, agent-based-models, computational-biology]
+tags: [highlight, cross-disciplinary, mechanistic-modeling, CAR-T, agent-based-models, computational-biology]
 ---
 
 After moving from loop quantum gravity to statistical mechanics and eventually into cancer research, I arrived at a conclusion that would once have surprised me: the most consequential scientific problems do not live inside disciplines. They live in the *in-between*.

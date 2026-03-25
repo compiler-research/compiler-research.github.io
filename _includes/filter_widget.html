@@ -211,8 +211,9 @@ window.updateFilters = function(updateUrl = true) {
 
   // Logic: Only show if a tag is active (currentTag is truthy) AND search matches
   document.querySelectorAll('.filter-item').forEach(item => {
-    const tags = (item.dataset.tags || "").split(',');
-    const matchesTag = (window.currentTag === 'all') || (window.currentTag && tags.includes(window.currentTag));
+    const tags = (item.dataset.tags || "").toLowerCase().split(',');
+    const activeTag = (window.currentTag || 'all').toLowerCase();
+    const matchesTag = (activeTag === 'all') || (window.currentTag && tags.includes(activeTag));
     const matchesSearch = item.innerText.toLowerCase().includes(qLower);
 
     const isVisible = !!(matchesTag && matchesSearch);
@@ -230,7 +231,7 @@ window.updateFilters = function(updateUrl = true) {
   // Sync Button UI
   document.querySelectorAll('.filter-btn').forEach(btn => {
     const btnTag = btn.getAttribute('onclick').match(/'([^']+)'/)[1];
-    btn.classList.toggle('active', btnTag === window.currentTag);
+    btn.classList.toggle('active', btnTag.toLowerCase() === window.currentTag.toLowerCase());
   });
 };
 
