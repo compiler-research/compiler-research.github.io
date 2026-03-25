@@ -15,6 +15,7 @@ We are always looking for new group members with passion, talent, and grit!
 If you are interested in working with us for a fixed period of time, there are
 number of programs which offer scholarships:
 
+* [CppAlliance Fellow @ Compiler-Research Program](/careers/cppalliance-fellowship/)
 * [Google Summer of Code](https://summerofcode.withgoogle.com/how-it-works/)
 * [IRIS-HEP Fellow Program](https://iris-hep.org/fellows.html)
 * [CERN Students Programs](https://careers.cern/students)
