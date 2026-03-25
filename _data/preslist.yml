@@ -1,3 +1,16 @@
+- title: "Compiler as a Service: C++ Goes Live"
+  description: |
+    Despite its high-performance capabilities, C++ is not the first programming language that comes to mind for rapidly developing robust applications, mainly due to the long edit-compile-run cycles. Ongoing research in the compiler-research.org group aims to provide practical, interactive capabilities for C++, enabling dynamic interoperability, rapid prototyping, and exploratory programming, essential for data science and other applications. This talk explores how interactive C++ can be leveraged for various scientific usecases and teaching. Attendees will also learn how to leverage Clang as a library to build a simple C++ REPL for incremental compilation and introspection, integrating this layer with the Python runtime.
+
+    The second part of this talk covers CppInterOp, a production-grade C++ interoperability library based on LLVM and Clang that provides compiler-as-a-service capabilities for seamless cross-language integration. CppInterOp formalizes a stable, backward-compatible API that enables dynamic languages to harness the full power of modern C++ without sacrificing expressiveness or performance. We explore applications of the CppInterOp library in the context of Python/C++ bindings, interactive C++ notebooks with xeus-cpp, and WebAssembly.
+  location: "[using std::cpp 2026](https://eventos.uc3m.es/141471/detail/using-std-cpp-2026.html)"
+  date: 2026-03-17
+  speaker:  Aaron Jomy, Vipul Cariappa
+  id: "USINGSTDCPP2026"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Aaron_Vipul_Compiler_as_a_Service_CXX_goes_Live.pdf)
+  highlight: 1
+
 - title: "Teaching Automatic Differentiation with Interactive C++ Jupyter Notebooks"
   description: |
     The compiler research group pioneered interactive C++ notebooks with
