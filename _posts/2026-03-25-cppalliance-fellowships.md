@@ -67,7 +67,7 @@ We want to instill:
 3.  **The Discipline of the Merge:** The professional stamina required to follow
       an idea through a dozen rounds of review until it is finally accepted
       upstream.
-4.  **AI-aware Coding** Finding a good synergy between the AI-driven code
+4.  **AI-aware Coding:** Finding a good synergy between the AI-driven code
       development that helps the learning process but also accelerates
       development.
 
