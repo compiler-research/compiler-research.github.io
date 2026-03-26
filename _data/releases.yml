@@ -1,3 +1,13 @@
+- date: 2026-03-26
+  codebase: "CppInterOp"
+  version: "v1.9.0"
+  description: |
+    This release drops LLVM 18 support, adds CUDA/GPU support with automatic
+    SDK and architecture detection, improves introspection and type reflection
+    APIs, hardens the incremental C++ and dispatch infrastructure, and includes
+    ROOT-Cling integration changes for Cppyy.
+  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.9.0"
+  
 - date: 2026-02-11
   codebase: "Cling"
   version: "v1.3"
