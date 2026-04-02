@@ -14,3 +14,79 @@ body {
 .gif-animated-static:hover {
   opacity:0;
 }
+
+/* Base styles for any "Special" post */
+.well.filter-item.is-announcement,
+.well.filter-item.is-highlight {
+    position: relative;
+    border-left-width: 10px !important; /* The heavyweight look */
+    margin-top: 25px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- ANNOUNCEMENT STYLE (Blue) --- */
+.is-announcement {
+    border: 2px solid #004481;
+    border-left-color: #004481;
+    background-color: #f8faff;
+}
+
+.is-announcement::after {
+    content: "★ ANNOUNCEMENT";
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background: #004481;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* --- HIGHLIGHT STYLE (Gold) --- */
+.is-highlight {
+    border: 2px solid #d4a017; /* Darker gold for readability */
+    border-left-color: #d4a017;
+    background-color: #fffdf5; /* Warm tint */
+}
+
+/* If it's JUST a highlight (not an announcement), add the gold badge */
+.is-highlight:not(.is-announcement)::after {
+    content: "★ HIGHLIGHT";
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background: #d4a017;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.well p small.text-muted {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Custom sizing for the News/Blog labels */
+.well .label {
+    display: inline-block;
+    padding: .2em .6em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: .25em;
+    text-transform: uppercase;
+}
+
+/* Match your brand blue for the Blog tag */
+.label-primary {
+    background-color: #004481;
+}

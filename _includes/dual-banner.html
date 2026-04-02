@@ -1,0 +1,89 @@
+{::nomarkdown}
+{% comment %}
+  Parameters:
+  - left_logo: URL path
+  - right_logo: URL path
+  - separator: The character between logos (default: @)
+  - caption: The HTML/Text below
+  - height: Optional height override (e.g., 20vh)
+{% endcomment %}
+
+{% assign banner_height = include.height | default: "25vh" %}
+
+<div class="custom-banner-wrapper" role="img" aria-label="{{ include.caption | strip_html }}">
+  <div class="custom-banner-flex">
+    <div class="banner-logo">
+      <img src="{{ include.left_logo | relative_url }}" alt="Left Logo" />
+    </div>
+
+    <div class="banner-separator" aria-hidden="true">
+      {{ include.separator | default: "@" }}
+    </div>
+
+    <div class="banner-logo logo-right-bg">
+      <img src="{{ include.right_logo | relative_url }}" alt="Right Logo" />
+    </div>
+  </div>
+
+  {% if include.caption %}
+  <div class="banner-caption" role="heading" aria-level="2">
+    {{ include.caption }}
+  </div>
+  {% endif %}
+</div>
+{:/nomarkdown}
+
+<style>
+  .custom-banner-wrapper {
+    --b-height: {{ banner_height }};
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+  }
+
+  .custom-banner-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .banner-logo img {
+    height: calc(var(--b-height) * 0.85);
+    width: auto;
+    max-width: 30vw;
+    min-height: 50px;
+    object-fit: contain;
+  }
+
+  /* Keep the white background for the right logo badge if needed */
+  .logo-right-bg img {
+    padding: 8px;
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  .banner-separator {
+    font-size: calc(var(--b-height) * 0.5);
+    font-weight: 700;
+    color: #000;
+  }
+
+  .banner-caption {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: Georgia, serif;
+    font-size: calc(var(--b-height) * 0.25);
+    color: #111;
+  }
+
+  @media (max-width: 768px) {
+    .custom-banner-wrapper { --b-height: 15vh; }
+    .custom-banner-flex { gap: 1.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    .custom-banner-flex { flex-direction: column; gap: 1rem; }
+  }
+</style>
