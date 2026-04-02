@@ -9,8 +9,6 @@
     examples, and outputs in one place. This allows students to run and modify 
     code instantly, which improves understanding. Notebooks also reduce the complexity of 
     setting up development environments, letting learners focus more on programming and GPU concepts.
-
-  location: "[28th EuroAD Workshop](https://indico.cern.ch/event/1543104/contributions/6791578/)"
   date: 2026-03-18
   speaker:  Hristiyan Shterev
   id: "TEACHINGCUDACPP2026"
