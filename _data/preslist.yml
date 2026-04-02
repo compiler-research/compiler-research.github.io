@@ -1,3 +1,23 @@
+- title: "Creating teaching materials for C++ and CUDA with xeus-cpp"
+  description: |
+    The xeus-cpp project provides a Jupyter kernel that enables interactive C++ programming in Jupyter notebooks. 
+    It allows C++ code to be compiled and executed cell by cell while preserving state across executions, 
+    which makes it useful for experimentation and learning.
+    
+    The main goal of this project is making learning programming more interactive and easier for students.
+    Using Jupyter Notebook, teaching materials can combine explanations, code 
+    examples, and outputs in one place. This allows students to run and modify 
+    code instantly, which improves understanding. Notebooks also reduce the complexity of 
+    setting up development environments, letting learners focus more on programming and GPU concepts.
+
+  location: "[28th EuroAD Workshop](https://indico.cern.ch/event/1543104/contributions/6791578/)"
+  date: 2026-03-18
+  speaker:  Hristiyan Shterev
+  id: "TEACHINGCUDACPP2026"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Hristiyan-Shterev-Teaching-materials-with-xeus-cpp.pdf)
+  highlight: 1
+
 - title: "Compiler as a Service: C++ Goes Live"
   description: |
     Despite its high-performance capabilities, C++ is not the first programming language that comes to mind for rapidly developing robust applications, mainly due to the long edit-compile-run cycles. Ongoing research in the compiler-research.org group aims to provide practical, interactive capabilities for C++, enabling dynamic interoperability, rapid prototyping, and exploratory programming, essential for data science and other applications. This talk explores how interactive C++ can be leveraged for various scientific usecases and teaching. Attendees will also learn how to leverage Clang as a library to build a simple C++ REPL for incremental compilation and introspection, integrating this layer with the Python runtime.
