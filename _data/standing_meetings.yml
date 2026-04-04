@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Various improvements to ramtools"
+      date: 2026-03-24 09:30:00 +0200
+      speaker: "Georgi Haralanov"
+      link: "[Slides](/assets/presentations/Georgi_Haralanov_Improving_ramtools_query_speeds.pdf)"
     - title: "Creating teaching materials for C++ and CUDA with xeus-cpp"
       date: 2026-03-18 15:00:00 +0200
       speaker: "Hristiyan Shterev"
@@ -461,3 +465,4 @@
       date: 2025-11-13 15:40:00 +0200
       speaker: "Jiayang Li"
       link: "[Slides](/assets/presentations/Jiayang_Li_GSoS25_final.pdf)"
+
