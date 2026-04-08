@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "GeneROOT project progress"
+      date: 2026-04-01 16:30:00 +0200
+      speaker: "Aditya Pandey"
+      link: "[Slides](/assets/presentations/Aditya_Pandey_GeneROOT_project_progress.pdf)"
     - title: "Upstream jank-lang specific patches back to CppInterOp"
       date: 2026-03-24 10:00:00 +0200
       speaker: "Iva Fezova"
