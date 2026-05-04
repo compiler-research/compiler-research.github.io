@@ -231,7 +231,7 @@ author_profile: false
   <div class="stipend-panel">
     <div class="row">
       <div class="col-sm-8">
-        <p>We provide a stipend to support focused technical work, calculated using the <strong>GSoC GDP-adjusted tables</strong> to ensure fair compensation relative to your location.</p>
+        <p>We provide a stipend to support focused technical work, calculated using the <strong>GSoC PPP(Purchasing Power Parity)-adjusted tables</strong> to ensure fair compensation relative to your location.</p>
         <ul class="highlight-list list-unstyled">
           <li><span class="glyphicon glyphicon-calendar"></span> <div><strong>Disbursement:</strong> Paid in two 50% installments.</div></li>
           <li><span class="glyphicon glyphicon-check"></span> <div><strong>Milestones:</strong> Released upon passing Midterm and Final evaluations.</div></li>
