@@ -151,6 +151,22 @@
 #                                     TEAM                                     #
 ################################################################################
 
+- name: Ezzeldin Ibrahim
+  photo: Ezz.jpeg
+  info: "C++ Alliance Fellowship 2026 Contributor"
+  email: ezzibrahimx@gmail.com
+  education: "Bachelor of Computer Science, Zagazig University, Egypt, 2022 - 2026"
+  github: "https://github.com/AnonMiraj"
+  www: "https://almiraj.xyz"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/ezz-eldean/"
+  projects:
+    - title: "Improve Clang Performance"
+      status: Ongoing
+      description: |
+        This project aims to systematically improve Clang’s performance by identifying, understanding, and addressing common compilation bottlenecks across real-world codebases. While Clang is highly capable, performance regressions and inefficiencies can accumulate over time due to increasing language complexity, new features, and evolving usage patterns. These issues can impact compile time, peak memory usage, and overall memory pressure, especially in large projects.
+      mentors: Vassil Vassilev, Aaron Jomy
+
 - name: Muhammad Bassiouni
   photo: Muhammad.jpeg
   info: "C++ Alliance Fellowship 2026 Contributor"
