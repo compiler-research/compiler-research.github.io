@@ -19,6 +19,7 @@ Kiril
 lang
 layernorm
 Loihi
+Medhane
 Nellamakada
 Neuromorphic
 neuromorphic
