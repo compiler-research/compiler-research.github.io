@@ -482,6 +482,25 @@
       proposal: /assets/docs/Anton_Dekov_project_proposal.pdf
       mentors: Vassil Vasilev
 
+- name: Aditya Medhane
+  info: "CppAlliance Fellowship 2026 Contributor"
+  photo: Adi.jpeg
+  email: adityamedhane.dev@gmail.com
+  education: "B.Tech in Computer Science, IIIT Gwalior, India"
+  github: "https://github.com/flash1729"
+  active: 1
+  projects:
+    - title: "Enhance Clang Diagnostics"
+      status: Ongoing
+      description: |
+        This project focuses on enhancing Clang's diagnostics by addressing gaps in compiler warnings and errors.
+        Key tasks include implementing diagnostics for recent C2y standard papers, detecting silent semantic changes
+        (like pointer vs value comparison), and upstreaming valuable checks from clang-tidy to Clang proper.
+        Additionally, the project will improve diagnostic wording, add missing fix-it hints, and implement warnings
+        for undefined behavior like self-initialization, improving the overall developer experience and code safety.
+      proposal: /assets/docs/Enhance_Clang_Diagnostics_Proposal_Aditya_2026.pdf
+      mentors: Vassil Vassilev, Aaron Jomy
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
