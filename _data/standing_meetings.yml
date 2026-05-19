@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Ramtools multithreading final presentation"
+      date: 2026-05-13 9:15:00 +0200
+      speaker: "Georgi Haralanov"
+      link: "[Slides](/assets/presentations/Georgi_Haralanov_Improvements_to_ramtools_Final_Presentation.pdf)"
     - title: "GeneROOT project progress"
       date: 2026-04-01 16:30:00 +0200
       speaker: "Aditya Pandey"
@@ -477,4 +481,3 @@
       date: 2025-11-13 15:40:00 +0200
       speaker: "Jiayang Li"
       link: "[Slides](/assets/presentations/Jiayang_Li_GSoS25_final.pdf)"
-
