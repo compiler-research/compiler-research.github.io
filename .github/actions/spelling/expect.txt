@@ -7,7 +7,9 @@ Bassiouni
 cblas
 CLADEUROAD
 copyable
+cppalliance
 CRROOT
+CTAD
 endunless
 Fezova
 fezova
