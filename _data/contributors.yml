@@ -151,6 +151,26 @@
 #                                     TEAM                                     #
 ################################################################################
 
+- name: Muhammad Bassiouni
+  photo: Muhammad.jpeg
+  info: "C++ Alliance Fellowship 2026 Contributor"
+  email: muhammad.m.bassiouni@gmail.com
+  education: "Bachelor of Artificial Intelligence in Intelligent Systems, Menoufia University, Egypt, 2021 - 2025"
+  github: "https://github.com/bassiounix"
+  www: "https://bassiounix.github.io"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/bassiounix/"
+  projects:
+    - title: "Implement missing C++26 features in Clang"
+      status: Ongoing
+      description: |
+        This project proposes a candidate-driven program to complete Clang's
+        support for selected C++26-era language papers and closely related C
+        proposals. The project provides a vehicle for applicants to propose a
+        standards paper that is not yet implemented in Clang and then implement
+        that paper within the scope of the project.
+      mentors: Vassil Vassilev, Aaron Jomy
+
 - name: Matthew Barton
   info: "Open Source Contributor"
   email: matthew.c.barton@hotmail.co.uk
