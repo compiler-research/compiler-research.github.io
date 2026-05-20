@@ -151,6 +151,31 @@
 #                                     TEAM                                     #
 ################################################################################
 
+- name: Ayokunle Amodu
+  info: "C++ Alliance Fellowship 2026 Contributor"
+  photo: Ayokunle.jpg
+  email: ayokunle321@gmail.com
+  education: Bsc in Computing Science, University of Alberta, Canada, 2022-2026
+  active: 1
+  projects:
+    - title: "Optimize Usage of Source Locations in Clang Modules"
+      status: Ongoing
+      description: |
+        This project aims to reduce memory pressure caused by duplicated source locations
+        in Clang's modular builds. In large-scale C++ projects, repeatedly including the
+        same headers across different modules can quickly exhaust Clang's 32-bit
+        source-location representation. Instead of switching to a more costly 64-bit
+        design, this project explores reusing existing source-location allocations through
+        an interval-mapping mechanism and careful coordination during module loading. The
+        work involves updating module deserialization, preserving diagnostic correctness,
+        and ensuring include-stack reconstruction remains transparent. If successful,
+        duplicated module inputs will no longer cause proportional growth in source-location
+        allocations, modular builds will complete without exhaustion, and Clang will scale
+        better for modern modular C++ codebases, all without requiring a disruptive global
+        change to the compiler.
+      proposal: /assets/docs/Ayokunle_Amodu_Proposal_2026.pdf
+      mentors: Vassil Vassilev, Aaron Jomy
+
 - name: Petro Zarytskyi
   info: "Google Summer of Code 2025 Contributor"
   photo: Petro.jpg
