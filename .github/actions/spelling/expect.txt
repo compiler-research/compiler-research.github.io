@@ -2,6 +2,8 @@ Akad
 Akida
 autodiff
 backpropation
+bassiouni
+Bassiouni
 cblas
 CLADEUROAD
 copyable
@@ -21,6 +23,8 @@ Kiril
 lang
 layernorm
 Loihi
+medhane
+Medhane
 Nellamakada
 Neuromorphic
 neuromorphic
@@ -41,3 +45,7 @@ usecases
 USINGSTDCPP
 zhang
 Zhang
+Ezzeldin
+ezzeldin
+ibrahim
+Ezz
