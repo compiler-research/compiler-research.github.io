@@ -449,6 +449,33 @@
       proposal: /assets/docs/Anton_Dekov_project_proposal.pdf
       mentors: Vassil Vasilev
 
+- name: Jeffrey Zhang
+  photo: Jeffrey_Zhang.png
+  info: "Open Source Contributor"
+  email: jiefu.zhang1226@gmail.com
+  education: "Bachelor of Physics, Nagoya University, Japan, 2023 - 2027"
+  github: "https://github.com/RedBlueBird"
+  www: "https://redbluebird.github.io/"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/jeffrey-zhang-566a16223/"
+  projects:
+    - title: "Enhance and develop GeneROOT infrastructure"
+      status: Ongoing
+      description: |
+       This project builds on the GeneROOT RNTuple foundation established in GSoC
+       2025. The work expands the benchmark suite to run reproducibly across heavy
+       bioinformatics datasets, and introduces cross-format comparisons against
+       SAM, BAM, and CRAM. On the performance side, it optimizes RNTuple's
+       indexing and search by replacing the linear scan in region queries with a
+       logarithmic binary search, eliminating redundant index structures, and
+       exposing configurable index granularity. It also evaluates modern genomic
+       compression schemes (Crumble, QVZ, CALQ, P-block, etc.) for quality-score
+       data and integrates the most effective candidates. Finally, it brings
+       RAMtools to feature parity with SAMtools by adding Stat, IdxStats,
+       FlagStat, View, Split, Merge, and Sort.
+      proposal: /assets/docs/Jeffrey_Zhang_Proposal_2026.pdf
+      mentors: Martin Vassilev, Vassil Vassilev, Aaron Jomy
+      
 - name: Aditya Medhane
   info: "CppAlliance Fellowship 2026 Contributor"
   photo: Adi.jpeg

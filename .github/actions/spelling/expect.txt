@@ -16,6 +16,8 @@ genomics
 gpt
 inp
 jank
+jeffrey
+Jeffrey
 Karpathy
 Kiril
 lang
@@ -41,7 +43,12 @@ upstreaming
 Upstreaming
 usecases
 USINGSTDCPP
+zhang
+Zhang
 Ezzeldin
 ezzeldin
 ibrahim
 Ezz
+CALQ
+Mtools
+QVZ
