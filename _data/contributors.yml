@@ -475,7 +475,7 @@
        FlagStat, View, Split, Merge, and Sort.
       proposal: /assets/docs/Jeffrey_Zhang_Proposal_2026.pdf
       mentors: Martin Vassilev, Vassil Vassilev, Aaron Jomy
-      
+
 - name: Aditya Medhane
   info: "CppAlliance Fellowship 2026 Contributor"
   photo: Adi.jpeg
@@ -494,6 +494,33 @@
         for undefined behavior like self-initialization, improving the overall developer experience and code safety.
       proposal: /assets/docs/Enhance_Clang_Diagnostics_Proposal_Aditya_2026.pdf
       mentors: Vassil Vassilev, Aaron Jomy
+
+- name: Peiqi Li
+  photo: Peiqi.jpg
+  info: "CppAlliance Fellow 2026"
+  email: voyager7@sjtu.edu.cn
+  education: "Dual Degree in Mathematics and Artificial Intelligence, Shanghai Jiao Tong University, Shanghai, China"
+  github: "https://github.com/voyager-jhk"
+  active: 1
+  projects:
+    - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
+      status: Ongoing
+      description: |
+        The clang-tidy and Clang Static Analyzer issue trackers contain
+        unresolved reports regarding false positives, false negatives,
+        and invalid fix-it hints. This project systematically triages
+        and resolves a targeted set of these high-impact diagnostic issues,
+        prioritizing code patterns frequently used in modern C++
+        (e.g., templates, smart pointers, and perfect forwarding). The
+        technical work involves refining Clang's AST matchers and addressing
+        specific path-sensitive CFG limitations to improve diagnostic
+        accuracy. All fixes are implemented conservatively, driven by
+        minimal reproducers, and validated with strict llvm-lit regression
+        tests to ensure no new regressions are introduced before merging
+        upstream.
+      proposal: /assets/docs/Peiqi_Li_Proposal_2026.pdf
+      mentors: Vassil Vassilev, Aaron Ballman, Martin Vassilev
+
 
 - name: "This could be you!"
   photo: rock.jpg
