@@ -187,6 +187,29 @@
         that paper within the scope of the project.
       mentors: Vassil Vassilev, Aaron Jomy
 
+- name: Vedant Goyal
+  photo: Vedant.jpeg
+  info: "Google Summer of Code 2026 Contributor"
+  email: "goyalvedant2005@gmail.com"
+  github: "https://github.com/Vedant2005goyal"
+  linkedin: "https://www.linkedin.com/in/vedant-goyal-64ba42275/"
+  education: "B.E. in Electrical and Computer Engineering, Thapar Institute of Engineering and Technology, Patiala, India"
+  active: 1
+  projects:   
+    -title: "Consolidate and advance the GPU infrastructure in Clad"
+    status: Ongoing
+    description: |
+      Automatic Differentiation(AD) is a set of techniques to evaluate the derivative 
+      of functions specified by the computer programs precisely and efficiently. Clad 
+      is a Clang based AD tool that transforms C++ code to compute derivatives. Clad 
+      supports multiple differentiation modes like reverse mode, forward mode and hessian 
+      mode making it suitable for wide range of applications. Clad have also demonstrated 
+      promising support for GPU based differentiation however the work remains fragmented.
+      This project aims to consolidate the fragmented work and advance Clad's GPU infrastructure
+      into a robust and consistent system.
+    proposal: /assets/docs/Vedant_Goyal_Proposal_2026.pdf
+    mentors: Aaron Jomy, David Lange, Vassil Vassilev
+  
 - name: Matthew Barton
   info: "Open Source Contributor"
   email: matthew.c.barton@hotmail.co.uk
