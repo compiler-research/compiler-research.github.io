@@ -1,3 +1,0 @@
-^\Qassets/docs/Vedant_Goyal_Proposal_2026.pdf\E$
-^\Qimages/blog/banner-clad-gsoc.png\E$
-^\Qimages/team/Vedant.jpeg\E$

@@ -45,6 +45,8 @@ peiqi
 pld
 previndex
 pubtit
+Qassets
+Qimages
 QVZ
 Reoptimization
 reoptimization
