@@ -10,7 +10,7 @@ author: Aditya Medhane
 permalink: blogs/cppalliance26_aditya_medhane_intro_blog/
 thumbnail_image: /images/cppalliance-logo.svg
 date: 2026-05-23
-tags: [cppalliance, clang, diagnostics, c2y, sema, llvm, compiler-engineering]
+tags: [cppalliance, clang, diagnostics, c2y, llvm, compiler-engineering]
 ---
 
 {% include dual-banner.html
