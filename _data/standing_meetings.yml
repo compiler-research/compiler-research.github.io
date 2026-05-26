@@ -11,6 +11,10 @@
       date: 2026-04-01 16:30:00 +0200
       speaker: "Aditya Pandey"
       link: "[Slides](/assets/presentations/Aditya_Pandey_GeneROOT_project_progress.pdf)"
+    - title: "Port C and C++ courses to xeus-cpp"
+      date: 2026-04-01 16:15:00 +0200
+      speaker: "Georgi Runtolev"
+      link: "[Slides](/assets/presentations/G-Runtolev-Port-C-and-C++-Courses-to-xeus-cpp for-interactive-learning.pdf)"
     - title: "Integrating ROOTs cppyy with BioDynaMo"
       date: 2026-03-23 9:30:00 +0200
       speaker: "Anton Dekov"
