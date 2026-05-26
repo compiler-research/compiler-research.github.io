@@ -187,6 +187,29 @@
         that paper within the scope of the project.
       mentors: Vassil Vassilev, Aaron Jomy
 
+- name: Vedant Goyal
+  photo: Vedant.jpeg
+  info: "Google Summer of Code 2026 Contributor"
+  email: "goyalvedant2005@gmail.com"
+  github: "https://github.com/Vedant2005goyal"
+  linkedin: "https://www.linkedin.com/in/vedant-goyal-64ba42275/"
+  education: "B.E. in Electrical and Computer Engineering, Thapar Institute of Engineering and Technology, Patiala, India"
+  active: 1
+  projects:   
+    -title: "Consolidate and advance the GPU infrastructure in Clad"
+    status: Ongoing
+    description: |
+      Automatic Differentiation(AD) is a set of techniques to evaluate the derivative 
+      of functions specified by the computer programs precisely and efficiently. Clad 
+      is a Clang based AD tool that transforms C++ code to compute derivatives. Clad 
+      supports multiple differentiation modes like reverse mode, forward mode and hessian 
+      mode making it suitable for wide range of applications. Clad have also demonstrated 
+      promising support for GPU based differentiation however the work remains fragmented.
+      This project aims to consolidate the fragmented work and advance Clad's GPU infrastructure
+      into a robust and consistent system.
+    proposal: /assets/docs/Vedant_Goyal_Proposal_2026.pdf
+    mentors: Aaron Jomy, David Lange, Vassil Vassilev
+  
 - name: Matthew Barton
   info: "Open Source Contributor"
   email: matthew.c.barton@hotmail.co.uk
@@ -449,6 +472,33 @@
       proposal: /assets/docs/Anton_Dekov_project_proposal.pdf
       mentors: Vassil Vasilev
 
+- name: Jeffrey Zhang
+  photo: Jeffrey_Zhang.png
+  info: "Open Source Contributor"
+  email: jiefu.zhang1226@gmail.com
+  education: "Bachelor of Physics, Nagoya University, Japan, 2023 - 2027"
+  github: "https://github.com/RedBlueBird"
+  www: "https://redbluebird.github.io/"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/jeffrey-zhang-566a16223/"
+  projects:
+    - title: "Enhance and develop GeneROOT infrastructure"
+      status: Ongoing
+      description: |
+       This project builds on the GeneROOT RNTuple foundation established in GSoC
+       2025. The work expands the benchmark suite to run reproducibly across heavy
+       bioinformatics datasets, and introduces cross-format comparisons against
+       SAM, BAM, and CRAM. On the performance side, it optimizes RNTuple's
+       indexing and search by replacing the linear scan in region queries with a
+       logarithmic binary search, eliminating redundant index structures, and
+       exposing configurable index granularity. It also evaluates modern genomic
+       compression schemes (Crumble, QVZ, CALQ, P-block, etc.) for quality-score
+       data and integrates the most effective candidates. Finally, it brings
+       RAMtools to feature parity with SAMtools by adding Stat, IdxStats,
+       FlagStat, View, Split, Merge, and Sort.
+      proposal: /assets/docs/Jeffrey_Zhang_Proposal_2026.pdf
+      mentors: Martin Vassilev, Vassil Vassilev, Aaron Jomy
+
 - name: Aditya Medhane
   info: "CppAlliance Fellowship 2026 Contributor"
   photo: Adi.jpeg
@@ -467,6 +517,33 @@
         for undefined behavior like self-initialization, improving the overall developer experience and code safety.
       proposal: /assets/docs/Enhance_Clang_Diagnostics_Proposal_Aditya_2026.pdf
       mentors: Vassil Vassilev, Aaron Jomy
+
+- name: Peiqi Li
+  photo: Peiqi.jpg
+  info: "CppAlliance Fellow 2026"
+  email: voyager7@sjtu.edu.cn
+  education: "Dual Degree in Mathematics and Artificial Intelligence, Shanghai Jiao Tong University, Shanghai, China"
+  github: "https://github.com/voyager-jhk"
+  active: 1
+  projects:
+    - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
+      status: Ongoing
+      description: |
+        The clang-tidy and Clang Static Analyzer issue trackers contain
+        unresolved reports regarding false positives, false negatives,
+        and invalid fix-it hints. This project systematically triages
+        and resolves a targeted set of these high-impact diagnostic issues,
+        prioritizing code patterns frequently used in modern C++
+        (e.g., templates, smart pointers, and perfect forwarding). The
+        technical work involves refining Clang's AST matchers and addressing
+        specific path-sensitive CFG limitations to improve diagnostic
+        accuracy. All fixes are implemented conservatively, driven by
+        minimal reproducers, and validated with strict llvm-lit regression
+        tests to ensure no new regressions are introduced before merging
+        upstream.
+      proposal: /assets/docs/Peiqi_Li_Proposal_2026.pdf
+      mentors: Vassil Vassilev, Aaron Ballman, Martin Vassilev
+
 
 - name: "This could be you!"
   photo: rock.jpg

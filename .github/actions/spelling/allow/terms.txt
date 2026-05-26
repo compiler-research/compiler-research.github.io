@@ -17,6 +17,7 @@ GSo
 GSoC
 HSF
 ICHEP
+IIIT
 IIT
 JIT'd
 Jacobians
@@ -93,6 +94,7 @@ sitemap
 softsusy
 superbuilds
 tapenade
+upstreamed
 vimeo
 watchpoints
 www
