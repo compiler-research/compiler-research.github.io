@@ -26,6 +26,7 @@ Elrawy
 Foco
 Galin
 Georgi
+Goyal
 Graenitz
 Guilherme
 Guiraud
@@ -101,6 +102,7 @@ Uppili
 Vasilev
 Vassil
 Vassilev
+Vedant
 Vindhya
 Vinod
 Vishwakarma
@@ -160,6 +162,7 @@ garima
 garimasingh
 gojakuch
 gonzalez
+goyal
 grimmmyshini
 haralanov
 hristiyan
