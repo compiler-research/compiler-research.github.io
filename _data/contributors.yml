@@ -182,68 +182,57 @@
   email: petro.zarytskyi@gmail.com
   education: Applied Mathematics, Taras Shevchenko National University of Kyiv, Ukraine, 2021-present
   active: 1
+  linkedin: "https://www.linkedin.com/in/ezz-eldean/"
   projects:
-    - title: "Improve automatic differentiation of object-oriented paradigms using Clad"
+    - title: "Improve Clang Performance"
       status: Ongoing
       description: |
-        Clad is a Clang plugin enabling automatic differentiation (AD) for C++ mathematical
-        functions by modifying the abstract syntax tree using LLVM's compiler capabilities.
-        It integrates into existing codebases without modifications and supports forward and
-        reverse mode differentiation. Reverse mode is efficient for Machine Learning and
-        inverse problems involving backpropagation.
-        Reverse mode AD requires two passes: forward pass stores intermediate values, reverse
-        pass computes derivatives. Currently, Clad only supports storing trivially copyable
-        types for function call arguments, limiting support for C-style arrays and non-copyable
-        types like unique pointers, constraining Object-Oriented Programming usage.
-        The project aims to enhance Clad's capability to store intermediate values for non-copyable
-        types. One of the challenges lies in determining which expressions are modified in nested
-        functions, potentially requiring run-time memory location tracking, which can be inefficient.
-        The solution involves enhancing To-Be-Recorded (TBR) analysis, currently limited with
-        poor nested function call support and no pointer reassignment handling. Improved TBR
-        analysis will enable predictable memory handling, generating optimal code, and
-        supporting both non-copyable types and efficient storage of copyable structures.
-      proposal: /assets/docs/Petro_Zarytskyi_Proposal_2025.pdf
-      mentors: Vassil Vassilev, David Lange
-    - title: "Optimizing reverse-mode automatic differentiation with advanced activity-analysis"
-      status: Completed project
-      description: |
-        Clad is an automatic differentiation clang plugin for C++. It automatically
-        generates code that computes derivatives of functions given by the user.
-        Clad can work in two main modes: forward and reverse. The reverse mode involves
-        computing the derivative by applying the chain rule to all the elementary operations
-        from the result to the argument. It turns out to be more
-        efficient when there are more dependent output variables than independent
-        input variables (e.g. calculating a gradient). However, the approach to blindly
-        compute the derivatives of all the intermediate variables obviously produces
-        code that does a lot of unnecessary calculations. With advanced activity analysis,
-        the variables which are not used to compute the result can be found and removed,
-        increasing the time- and memory- efficiency of the output code.
-      proposal: /assets/docs/Petro_Zarytskyi_Proposal.pdf
-      mentors: Vassil Vassilev, David Lange
+        This project aims to systematically improve Clang’s performance by identifying, understanding, and addressing common compilation bottlenecks across real-world codebases. While Clang is highly capable, performance regressions and inefficiencies can accumulate over time due to increasing language complexity, new features, and evolving usage patterns. These issues can impact compile time, peak memory usage, and overall memory pressure, especially in large projects.
+      mentors: Vassil Vassilev, Aaron Jomy
 
-- name: "Maksym Andriichuk"
-  photo: Andriichuk.jpg
-  info: "IRIS-HEP Fellow"
-  email: maksym.andriichuk@icloud.com
-  education: "Mathematics, University of Wuerzburg, Germany"
-  github: "https://github.com/ovdiiuv"
+- name: Muhammad Bassiouni
+  photo: Muhammad.jpeg
+  info: "C++ Alliance Fellowship 2026 Contributor"
+  email: muhammad.m.bassiouni@gmail.com
+  education: "Bachelor of Artificial Intelligence in Intelligent Systems, Menoufia University, Egypt, 2021 - 2025"
+  github: "https://github.com/bassiounix"
+  www: "https://bassiounix.github.io"
   active: 1
+  linkedin: "https://www.linkedin.com/in/bassiounix/"
   projects:
-    - title: "Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
+    - title: "Implement missing C++26 features in Clang"
       status: Ongoing
       description: |
-        Clad is a Clang plugin designed to provide automatic differentiation (AD) for C++ mathematical functions. It generates code for computing derivatives modifying Abstract-Syntax-Tree(AST) using LLVM compiler features. It performs advanced program optimization by implementing more sophisticated analyses because it has access to a rich program representation – the Clang AST. Clad supports reverse-mode differentiation of the CUDA kernels, however it is not always optimal because the generated code might contain the data-race conditions, significantly slowing up the execution. Thread Safety Analysis is a static analysis that detects possible data-race conditions that would enable reducing atomic operations in the Clad-produced code.
+        This project proposes a candidate-driven program to complete Clang's
+        support for selected C++26-era language papers and closely related C
+        proposals. The project provides a vehicle for applicants to propose a
+        standards paper that is not yet implemented in Clang and then implement
+        that paper within the scope of the project.
+      mentors: Vassil Vassilev, Aaron Jomy
 
-      proposal: /assets/docs/Maksym_Andriichuk_Proposal_2025.pdf
-      mentors: Vassil Vassilev, David Lange
-
-    - title: "Optimizing automatic differentiation using activity analysis"
-      status: Completed project
-      description: |
-        Clad has undergone significant optimization in the recent years. One such optimization is the To-Be-Recorded optimization which reduces the memory pressure to the clad tape data structure. The next step is to implement the activity analysis which discards all statements which are irrelevant for the generated code. That is, if the statements do not depend on the input/output variables of a routine in a differentiable way, they are ignored. Combining both analyses could result in a much greater performance, which is our ultimate goal.
-      proposal: /assets/docs/Maksym_Andriichuk_Proposal_2024.pdf
-      mentors: Vassil Vassilev, David Lange, Petro Zarytskyi
-
+- name: Vedant Goyal
+  photo: Vedant.jpeg
+  info: "Google Summer of Code 2026 Contributor"
+  email: "goyalvedant2005@gmail.com"
+  github: "https://github.com/Vedant2005goyal"
+  linkedin: "https://www.linkedin.com/in/vedant-goyal-64ba42275/"
+  education: "B.E. in Electrical and Computer Engineering, Thapar Institute of Engineering and Technology, Patiala, India"
+  active: 1
+  projects:   
+    -title: "Consolidate and advance the GPU infrastructure in Clad"
+    status: Ongoing
+    description: |
+      Automatic Differentiation(AD) is a set of techniques to evaluate the derivative 
+      of functions specified by the computer programs precisely and efficiently. Clad 
+      is a Clang based AD tool that transforms C++ code to compute derivatives. Clad 
+      supports multiple differentiation modes like reverse mode, forward mode and hessian 
+      mode making it suitable for wide range of applications. Clad have also demonstrated 
+      promising support for GPU based differentiation however the work remains fragmented.
+      This project aims to consolidate the fragmented work and advance Clad's GPU infrastructure
+      into a robust and consistent system.
+    proposal: /assets/docs/Vedant_Goyal_Proposal_2026.pdf
+    mentors: Aaron Jomy, David Lange, Vassil Vassilev
+  
 - name: Matthew Barton
   info: "Open Source Contributor"
   email: matthew.c.barton@hotmail.co.uk
@@ -485,7 +474,6 @@
       proposal: GeorgiRuntolev_proposal.pdf
       mentors: Vassil Vassilev
 
-  
 - name: Anton Dekov
   photo: Anton_Dekov.jpg
   info: "High School Intern"
@@ -507,21 +495,85 @@
       proposal: /assets/docs/Anton_Dekov_project_proposal.pdf
       mentors: Vassil Vasilev
 
-- name: "This could be you!"
-  photo: rock.jpg
-  info: See <a href="/careers">openings</a> for more info
-  email: vvasilev@cern.ch
+- name: Jeffrey Zhang
+  photo: Jeffrey_Zhang.png
+  info: "Open Source Contributor"
+  email: jiefu.zhang1226@gmail.com
+  education: "Bachelor of Physics, Nagoya University, Japan, 2023 - 2027"
+  github: "https://github.com/RedBlueBird"
+  www: "https://redbluebird.github.io/"
   active: 1
+  linkedin: "https://www.linkedin.com/in/jeffrey-zhang-566a16223/"
+  projects:
+    - title: "Enhance and develop GeneROOT infrastructure"
+      status: Ongoing
+      description: |
+       This project builds on the GeneROOT RNTuple foundation established in GSoC
+       2025. The work expands the benchmark suite to run reproducibly across heavy
+       bioinformatics datasets, and introduces cross-format comparisons against
+       SAM, BAM, and CRAM. On the performance side, it optimizes RNTuple's
+       indexing and search by replacing the linear scan in region queries with a
+       logarithmic binary search, eliminating redundant index structures, and
+       exposing configurable index granularity. It also evaluates modern genomic
+       compression schemes (Crumble, QVZ, CALQ, P-block, etc.) for quality-score
+       data and integrates the most effective candidates. Finally, it brings
+       RAMtools to feature parity with SAMtools by adding Stat, IdxStats,
+       FlagStat, View, Split, Merge, and Sort.
+      proposal: /assets/docs/Jeffrey_Zhang_Proposal_2026.pdf
+      mentors: Martin Vassilev, Vassil Vassilev, Aaron Jomy
+
+- name: Aditya Medhane
+  info: "CppAlliance Fellowship 2026 Contributor"
+  photo: Adi.jpeg
+  email: adityamedhane.dev@gmail.com
+  education: "B.Tech in Computer Science, IIIT Gwalior, India"
+  github: "https://github.com/flash1729"
+  active: 1
+  projects:
+    - title: "Enhance Clang Diagnostics"
+      status: Ongoing
+      description: |
+        This project focuses on enhancing Clang's diagnostics by addressing gaps in compiler warnings and errors.
+        Key tasks include implementing diagnostics for recent C2y standard papers, detecting silent semantic changes
+        (like pointer vs value comparison), and upstreaming valuable checks from clang-tidy to Clang proper.
+        Additionally, the project will improve diagnostic wording, add missing fix-it hints, and implement warnings
+        for undefined behavior like self-initialization, improving the overall developer experience and code safety.
+      proposal: /assets/docs/Enhance_Clang_Diagnostics_Proposal_Aditya_2026.pdf
+      mentors: Vassil Vassilev, Aaron Jomy
+
+- name: Peiqi Li
+  photo: Peiqi.jpg
+  info: "CppAlliance Fellow 2026"
+  email: voyager7@sjtu.edu.cn
+  education: "Dual Degree in Mathematics and Artificial Intelligence, Shanghai Jiao Tong University, Shanghai, China"
+  github: "https://github.com/voyager-jhk"
+  active: 1
+  projects:
+    - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
+      status: Ongoing
+      description: |
+        The clang-tidy and Clang Static Analyzer issue trackers contain
+        unresolved reports regarding false positives, false negatives,
+        and invalid fix-it hints. This project systematically triages
+        and resolves a targeted set of these high-impact diagnostic issues,
+        prioritizing code patterns frequently used in modern C++
+        (e.g., templates, smart pointers, and perfect forwarding). The
+        technical work involves refining Clang's AST matchers and addressing
+        specific path-sensitive CFG limitations to improve diagnostic
+        accuracy. All fixes are implemented conservatively, driven by
+        minimal reproducers, and validated with strict llvm-lit regression
+        tests to ensure no new regressions are introduced before merging
+        upstream.
+      proposal: /assets/docs/Peiqi_Li_Proposal_2026.pdf
+      mentors: Vassil Vassilev, Aaron Ballman, Martin Vassilev
 
 
-################################################################################
-#                                     2025                                     #
-################################################################################
 - name: Salvador de la Torre Gonzalez
   photo: salva_de_la_torre_gonzalez.jpg
   info: "Google Summer of Code 2025 Contributor"
   email: delatorregonzalezsalvador@gmail.com
   github: "https://github.com/salva24"
+  active: 1
   linkedin: "https://www.linkedin.com/in/salvador-de-la-torre-gonzalez-7299b6335/"
   education: "Mathematics and Computer Engineering, University of Seville, Spain"
   projects:
@@ -548,6 +600,114 @@
         reducing the time and cost associated with experimental wet-lab research.
       proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2025.pdf
       mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque, Tobias Duswald
+    - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology"
+      status: Ongoing
+      description: |
+        This project proposes a comprehensive strategy to extend the CARTopiaX platform within BioDynaMo to 
+        replicate a wider range of in vitro observations relevant to CAR T-cell therapy in solid tumors. By 
+        incorporating additional agents, microenvironmental factors and interaction rules, combined with 
+        robust parameter calibration strategies such as Bayesian optimization and evolutionary algorithms, 
+        the enhanced model aims to capture critical dynamics that influence therapeutic outcomes, providing 
+        a flexible and powerful tool for in silico hypothesis testing. If successful, the extended CARTopiaX 
+        model will serve as a reliable platform for exploring CAR T-cell therapies and has the potential to 
+        generate high-impact insights in computational cancer biology. By bridging experimental data with 
+        predictive modeling, the project could accelerate the translation of in silico findings into actionable 
+        guidance for experimental and clinical research.
+      proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2026.pdf
+      mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque
+
+- name: "This could be you!"
+  photo: rock.jpg
+  info: See <a href="/careers">openings</a> for more info
+  email: vvasilev@cern.ch
+  active: 1
+
+
+################################################################################
+#                                     2025                                     #
+################################################################################
+
+- name: Petro Zarytskyi
+  info: "Google Summer of Code 2025 Contributor"
+  photo: Petro.jpg
+  email: petro.zarytskyi@gmail.com
+  education: Applied Mathematics, Taras Shevchenko National University of Kyiv, Ukraine, 2021-present
+  projects:
+    - title: "Improve automatic differentiation of object-oriented paradigms using Clad"
+      status: Completed
+      description: |
+        Clad is a Clang plugin enabling automatic differentiation (AD) for C++ mathematical
+        functions by modifying the abstract syntax tree using LLVM's compiler capabilities.
+        It integrates into existing codebases without modifications and supports forward and
+        reverse mode differentiation. Reverse mode is efficient for Machine Learning and
+        inverse problems involving backpropagation.
+        Reverse mode AD requires two passes: forward pass stores intermediate values, reverse
+        pass computes derivatives. Currently, Clad only supports storing trivially copyable
+        types for function call arguments, limiting support for C-style arrays and non-copyable
+        types like unique pointers, constraining Object-Oriented Programming usage.
+        The project aims to enhance Clad's capability to store intermediate values for non-copyable
+        types. One of the challenges lies in determining which expressions are modified in nested
+        functions, potentially requiring run-time memory location tracking, which can be inefficient.
+        The solution involves enhancing To-Be-Recorded (TBR) analysis, currently limited with
+        poor nested function call support and no pointer reassignment handling. Improved TBR
+        analysis will enable predictable memory handling, generating optimal code, and
+        supporting both non-copyable types and efficient storage of copyable structures.
+      proposal: /assets/docs/Petro_Zarytskyi_Proposal_2025.pdf
+      mentors: Vassil Vassilev, David Lange
+    - title: "Optimizing reverse-mode automatic differentiation with advanced activity-analysis"
+      status: Completed project
+      description: |
+        Clad is an automatic differentiation clang plugin for C++. It automatically
+        generates code that computes derivatives of functions given by the user.
+        Clad can work in two main modes: forward and reverse. The reverse mode involves
+        computing the derivative by applying the chain rule to all the elementary operations
+        from the result to the argument. It turns out to be more
+        efficient when there are more dependent output variables than independent
+        input variables (e.g. calculating a gradient). However, the approach to blindly
+        compute the derivatives of all the intermediate variables obviously produces
+        code that does a lot of unnecessary calculations. With advanced activity analysis,
+        the variables which are not used to compute the result can be found and removed,
+        increasing the time- and memory- efficiency of the output code.
+      proposal: /assets/docs/Petro_Zarytskyi_Proposal.pdf
+      mentors: Vassil Vassilev, David Lange
+
+- name: "Maksym Andriichuk"
+  photo: Andriichuk.jpg
+  info: "IRIS-HEP Fellow"
+  email: maksym.andriichuk@icloud.com
+  education: "Mathematics, University of Wuerzburg, Germany"
+  github: "https://github.com/ovdiiuv"
+  projects:
+    - title: "Activity analysis for reverse-mode differentiation of (CUDA) GPU kernels"
+      status: Completed
+      description: |
+        Clad is a Clang plugin designed to provide automatic differentiation
+        (AD) for C++ mathematical functions. It generates code for computing
+        derivatives modifying Abstract-Syntax-Tree(AST) using LLVM compiler
+        features. It performs advanced program optimization by implementing more
+        sophisticated analyses because it has access to a rich program
+        representation – the Clang AST. Clad supports reverse-mode
+        differentiation of the CUDA kernels, however it is not always optimal
+        because the generated code might contain the data-race conditions,
+        significantly slowing up the execution. Thread Safety Analysis is a
+        static analysis that detects possible data-race conditions that would
+        enable reducing atomic operations in the Clad-produced code.
+      proposal: /assets/docs/Maksym_Andriichuk_Proposal_2025.pdf
+      mentors: Vassil Vassilev, David Lange
+
+    - title: "Optimizing automatic differentiation using activity analysis"
+      status: Completed project
+      description: |
+        Clad has undergone significant optimization in the recent years. One
+        such optimization is the To-Be-Recorded optimization which reduces the
+        memory pressure to the clad tape data structure. The next step is to
+        implement the activity analysis which discards all statements which are
+        irrelevant for the generated code. That is, if the statements do not
+        depend on the input/output variables of a routine in a differentiable
+        way, they are ignored. Combining both analyses could result in a much
+        greater performance, which is our ultimate goal.
+      proposal: /assets/docs/Maksym_Andriichuk_Proposal_2024.pdf
+      mentors: Vassil Vassilev, David Lange, Petro Zarytskyi
 
 - name: Rohan Timmaraju
   photo: Rohan_Timmaraju.jpg
