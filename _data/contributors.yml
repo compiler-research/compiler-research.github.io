@@ -176,11 +176,13 @@
       proposal: /assets/docs/Ayokunle_Amodu_Proposal_2026.pdf
       mentors: Vassil Vassilev, Aaron Jomy
 
-- name: Petro Zarytskyi
-  info: "Google Summer of Code 2025 Contributor"
-  photo: Petro.jpg
-  email: petro.zarytskyi@gmail.com
-  education: Applied Mathematics, Taras Shevchenko National University of Kyiv, Ukraine, 2021-present
+- name: Ezzeldin Ibrahim
+  photo: Ezz.jpg
+  info: "C++ Alliance Fellowship 2026 Contributor"
+  email: ezzibrahimx@gmail.com
+  education: "Bachelor of Computer Science, Zagazig University, Egypt, 2022 - 2026"
+  github: "https://github.com/AnonMiraj"
+  www: "https://almiraj.xyz"
   active: 1
   linkedin: "https://www.linkedin.com/in/ezz-eldean/"
   projects:
@@ -621,7 +623,6 @@
   info: See <a href="/careers">openings</a> for more info
   email: vvasilev@cern.ch
   active: 1
-
 
 ################################################################################
 #                                     2025                                     #
