@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Upstream jank-lang patches back to CppInterOp final presentation"
+      date: 2026-05-27 9:30:00 +0200
+      speaker: "Iva Fezova"
+      link: "[Slides](/assets/presentations/Iva_Fezova_Upstreaming_Final_Presentation.pdf)"
     - title: "Ramtools multithreading final presentation"
       date: 2026-05-13 9:15:00 +0200
       speaker: "Georgi Haralanov"
