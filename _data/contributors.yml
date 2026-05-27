@@ -545,6 +545,54 @@
       mentors: Vassil Vassilev, Aaron Ballman, Martin Vassilev
 
 
+- name: Salvador de la Torre Gonzalez
+  photo: salva_de_la_torre_gonzalez.jpg
+  info: "Google Summer of Code 2025 Contributor"
+  email: delatorregonzalezsalvador@gmail.com
+  github: "https://github.com/salva24"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/salvador-de-la-torre-gonzalez-7299b6335/"
+  education: "Mathematics and Computer Engineering, University of Seville, Spain"
+  projects:
+    - title: "CARTopiaX: an Agent-Based Simulation of CAR T-Cell Therapy built on BioDynaMo"
+      status: Completed
+      description: |
+        CAR T-cell therapy is a form of cancer immunotherapy that engineers a patient’s T cells
+        to recognize and eliminate malignant cells. Although highly effective in leukemias and other
+        hematological cancers, this therapy faces significant challenges in solid tumors due to the
+        complex and heterogeneous tumor microenvironment. CARTopiaX is an advanced agent-based model
+        developed to address this challenge, using the mathematical framework proposed in the Nature
+        paper “In silico study of heterogeneous tumour-derived organoid response to CAR T-cell therapy,”
+        successfully replicating its core results. Built on BioDynaMo, a high-performance, open-source
+        platform for large-scale and modular biological modeling, CARTopiaX enables detailed
+        exploration of complex biological interactions, hypothesis testing, and data-driven discovery
+        within solid tumor microenvironments.
+        The project achieved major milestones, including simulations that run more than twice as fast as
+        previous model, allowing rapid scenario exploration and robust hypothesis validation; high-quality,
+        well-structured, and maintainable C++ code developed following modern software engineering
+        principles; and a scalable, modular, and extensible architecture that fosters collaboration,
+        customization, and the continuous evolution of an open-source ecosystem. Altogether, this work
+        represents a meaningful advancement in computational biology, providing researchers with a powerful
+        tool to investigate CAR T-cell dynamics in solid tumor and accelerating scientific discovery while
+        reducing the time and cost associated with experimental wet-lab research.
+      proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2025.pdf
+      mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque, Tobias Duswald
+    - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology"
+      status: Ongoing
+      description: |
+        This project proposes a comprehensive strategy to extend the CARTopiaX platform within BioDynaMo to 
+        replicate a wider range of in vitro observations relevant to CAR T-cell therapy in solid tumors. By 
+        incorporating additional agents, microenvironmental factors and interaction rules, combined with 
+        robust parameter calibration strategies such as Bayesian optimization and evolutionary algorithms, 
+        the enhanced model aims to capture critical dynamics that influence therapeutic outcomes, providing 
+        a flexible and powerful tool for in silico hypothesis testing. If successful, the extended CARTopiaX 
+        model will serve as a reliable platform for exploring CAR T-cell therapies and has the potential to 
+        generate high-impact insights in computational cancer biology. By bridging experimental data with 
+        predictive modeling, the project could accelerate the translation of in silico findings into actionable 
+        guidance for experimental and clinical research.
+      proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2026.pdf
+      mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
@@ -637,39 +685,6 @@
         greater performance, which is our ultimate goal.
       proposal: /assets/docs/Maksym_Andriichuk_Proposal_2024.pdf
       mentors: Vassil Vassilev, David Lange, Petro Zarytskyi
-
-
-- name: Salvador de la Torre Gonzalez
-  photo: salva_de_la_torre_gonzalez.jpg
-  info: "Google Summer of Code 2025 Contributor"
-  email: delatorregonzalezsalvador@gmail.com
-  github: "https://github.com/salva24"
-  linkedin: "https://www.linkedin.com/in/salvador-de-la-torre-gonzalez-7299b6335/"
-  education: "Mathematics and Computer Engineering, University of Seville, Spain"
-  projects:
-    - title: "CARTopiaX: an Agent-Based Simulation of CAR T-Cell Therapy built on BioDynaMo"
-      status: Completed
-      description: |
-        CAR T-cell therapy is a form of cancer immunotherapy that engineers a patient’s T cells
-        to recognize and eliminate malignant cells. Although highly effective in leukemias and other
-        hematological cancers, this therapy faces significant challenges in solid tumors due to the
-        complex and heterogeneous tumor microenvironment. CARTopiaX is an advanced agent-based model
-        developed to address this challenge, using the mathematical framework proposed in the Nature
-        paper “In silico study of heterogeneous tumour-derived organoid response to CAR T-cell therapy,”
-        successfully replicating its core results. Built on BioDynaMo, a high-performance, open-source
-        platform for large-scale and modular biological modeling, CARTopiaX enables detailed
-        exploration of complex biological interactions, hypothesis testing, and data-driven discovery
-        within solid tumor microenvironments.
-        The project achieved major milestones, including simulations that run more than twice as fast as
-        previous model, allowing rapid scenario exploration and robust hypothesis validation; high-quality,
-        well-structured, and maintainable C++ code developed following modern software engineering
-        principles; and a scalable, modular, and extensible architecture that fosters collaboration,
-        customization, and the continuous evolution of an open-source ecosystem. Altogether, this work
-        represents a meaningful advancement in computational biology, providing researchers with a powerful
-        tool to investigate CAR T-cell dynamics in solid tumor and accelerating scientific discovery while
-        reducing the time and cost associated with experimental wet-lab research.
-      proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2025.pdf
-      mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque, Tobias Duswald
 
 - name: Rohan Timmaraju
   photo: Rohan_Timmaraju.jpg

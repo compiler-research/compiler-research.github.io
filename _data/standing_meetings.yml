@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology Initial Presentation"
+      date: 2026-05-27 16:00:00 +0200
+      speaker: "Salvador de la Torre Gonzalez"
+      link: "[Slides](/assets/presentations/Salva_initial_presentation_me_and_project_2026GSoC.pdf)"
     - title: "Ramtools multithreading final presentation"
       date: 2026-05-13 9:15:00 +0200
       speaker: "Georgi Haralanov"
