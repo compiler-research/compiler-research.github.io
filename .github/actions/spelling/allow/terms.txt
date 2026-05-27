@@ -181,3 +181,16 @@ organoids
 paraview
 CARTOPIAXROOT
 pld
+CAFs
+downregulating
+Fibroblasts
+fibroblasts
+Hesam
+macrophages
+MDSCs
+Montigny
+Mutlu
+PBMCs
+PPo
+SIGPLAN
+TGF
