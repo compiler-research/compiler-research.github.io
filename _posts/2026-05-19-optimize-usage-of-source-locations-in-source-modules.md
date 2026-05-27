@@ -18,28 +18,15 @@ height="20vh" %}
 
 ## Introduction
 
-Hi everyone! I am incredibly excited to be joining the Compiler Research team as a
-CppAlliance Fellow for the 2026 cycle. As an aspiring compiler engineer, finding an
-initiative like this felt like exactly the kind of opportunity I had been hoping for,
-a chance to do meaningful upstream work on a production compiler and jumpstart my
-career, with real mentorship from people who know this codebase deeply. I am genuinely
-thrilled to be here.
+Hi everyone! I am Ayokunle Amodu, joining the Compiler Research team as a CppAlliance
+Fellow for the 2026 cycle. I am an MLIR geek at heart. Most of my compiler work has
+lived in the middle end, progressive lowering. I love seeing how high-level structure 
+survives a full lowering chain and still means something at the bottom.
 
-## A Little About Me
-
-I am an MLIR geek at heart. Most of my compiler work has lived in the middle end,
-where you are close enough to the hardware to feel the constraints but still working
-at a level where the abstractions are rich and the design space is wide. How high
-level structure eventually has to survive a chain of lowerings and still mean the same
-thing at the bottom, that is the space I feel most at home in.
-
-So when this project came up, my first reaction was honestly curiosity. This is
-front-end territory. `SourceManager`, `ASTReader`, module deserialization, the
-machinery Clang uses to track where everything came from before it even becomes an IR.
-I do not live here normally but that is exactly what made it interesting. I have spent
-enough time at the hardware-software boundary to appreciate what it means when a 32-bit
-representation starts running out of room, and I wanted to see what the front end had
-to say about it. A real opportunity to stretch.
+This project is front-end territory, not my typical residence, but being a comp arch
+kid who has spent time with RISC-V assembly means a 32-bit space running out of room
+is a very familiar kind of problem. Working under Vassil Vassilev with real upstream
+review as the target is exactly the kind of opportunity I wanted.
 
 ## The Problem
 
@@ -56,10 +43,6 @@ room, but the proposal did not land. The concern was legitimate: `SourceLocation
 embedded across a huge number of AST nodes, so making it bigger raises memory usage
 for every build, not just the ones actually hitting the limit. It is a global cost for
 a problem that has a much more local cause.
-
-The cause is at the allocation site. Every module gets its own fresh region of the
-address space, unconditionally, with no check for whether the same files have already
-been seen.
 
 ## The Approach
 
@@ -78,19 +61,15 @@ reconstruction, and upstream patch preparation for LLVM review.
 
 ## What We Hope to Achieve
 
-If this works the way we expect, duplicated module inputs will no longer cause
-proportional growth in source-location allocations. Large modular builds that are
-currently approaching the limit will complete without exhaustion, and Clang's
-scalability for modern C++ codebases improves without requiring a disruptive global
-change to the compiler. Diagnostics stay correct, the design targets upstream review
-in the LLVM community, and the address space scales with unique content rather than
-module count. That is the goal, and it is a meaningful one.
+If this works the way we expect, large modular builds that are currently approaching
+the limit will complete without exhaustion. Duplicated headers stop eating into the
+address space, diagnostics stay correct, and the fix is local enough that nothing
+else in the compiler has to change. The address space scales with unique content
+instead of module count.
 
-## Looking Ahead
+## Relevant Links
 
-I am genuinely looking forward to going deep on this. There is something satisfying
-about a problem where the root cause is this concrete and the fix, while technically
-careful, is conceptually clean. And getting serious time in the front end pushes me
-one step closer to knowing my favourite compiler end to end.
+- [LLVM Discourse: Revisiting 64-bit source locations](https://discourse.llvm.org/t/revisiting-64-bit-source-locations/86556)
+- [LLVM Discourse: RFC: An opt-in CMake option for 64-bit Source Location](https://discourse.llvm.org/t/rfc-an-opt-in-cmake-option-for-64-bit-source-location/87538)
 
 May the blessings of the Dragon be with us.
