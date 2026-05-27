@@ -1,6 +1,10 @@
 Akad
 Akida
+Amodu
+amodu
 autodiff
+Ayokunle
+ayokunle
 backpropation
 Bassiouni
 bassiouni
@@ -36,6 +40,7 @@ Loihi
 Medhane
 medhane
 Mtools
+MLIR
 Nellamakada
 Neuromorphic
 neuromorphic
