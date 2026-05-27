@@ -53,7 +53,7 @@ The work breaks into five tasks:
    a sorted `fIndex` (eliminating the redundant `fIndexMap`/`RebuildMap`
    pair), have `kPositionInterval` and `kMappedInterval` as configurable
    parameters, and implement a no-index columnar query fallback in
-   `RAMNTupleView.cxx` similar to legacy TTree `ramview_no_index.css`.
+   `RAMNTupleView.cxx` similar to legacy TTree `ramview_no_index.cxx`.
 
 5. **Add common SAMtools features to RAMtools.** Add `ramntuplestats`,
    `ramntupleidxstat`, and `ramntupleflagstat`; complete `ramntupleview`

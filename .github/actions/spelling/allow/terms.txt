@@ -184,3 +184,12 @@ CARTOPIAXROOT
 Mtools
 pld
 QVZ
+generoot
+petabytes
+RAMN
+ramntupleflagstat
+ramntupleidxstat
+ramntuplemerge
+ramntuplesort
+ramntuplesplit
+ramntuplestats
