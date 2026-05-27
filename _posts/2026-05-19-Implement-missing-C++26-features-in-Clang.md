@@ -23,7 +23,8 @@ selected `C++26`-era language papers and closely related `C` proposals. The
 project provides a vehicle for applicants to propose a standards paper that is
 not yet implemented in `Clang` and then implement that paper within the scope of
 the project.
-**Mentor**: Vassil Vassilev, Aaron Jomy
+
+**Mentors**: Vassil Vassilev, Aaron Jomy
 
 ## Overview
 

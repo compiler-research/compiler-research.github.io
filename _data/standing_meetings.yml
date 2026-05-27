@@ -7,6 +7,10 @@
       date: 2026-05-27 16:00:00 +0200
       speaker: "Salvador de la Torre Gonzalez"
       link: "[Slides](/assets/presentations/Salva_initial_presentation_me_and_project_2026GSoC.pdf)"
+    - title: "Upstream jank-lang patches back to CppInterOp final presentation"
+      date: 2026-05-27 9:30:00 +0200
+      speaker: "Iva Fezova"
+      link: "[Slides](/assets/presentations/Iva_Fezova_Upstreaming_Final_Presentation.pdf)"
     - title: "Ramtools multithreading final presentation"
       date: 2026-05-13 9:15:00 +0200
       speaker: "Georgi Haralanov"
