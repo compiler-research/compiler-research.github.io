@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Enhance Clang Diagnostics Initial Presentation"
+      date: 2026-05-27 17:00:00 +0200
+      speaker: "Aditya Medhane"
+      link: "[Slides](/assets/presentations/Aditya_Medhane_Enhance_Clang_Diagnostics_Intro.pdf)"
     - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology Initial Presentation"
       date: 2026-05-27 16:00:00 +0200
       speaker: "Salvador de la Torre Gonzalez"
