@@ -15,6 +15,10 @@
       date: 2026-05-27 9:30:00 +0200
       speaker: "Iva Fezova"
       link: "[Slides](/assets/presentations/Iva_Fezova_Upstreaming_Final_Presentation.pdf)"
+    - title: "Port C and C++ Course to xeus-cpp final presentation"
+      date: 2026-05-27 9:15:00 +0200
+      speaker: "Georgi Runtolev"
+      link: "[Slides](/assets/presentations/G_Runtolev_xeus_cpp_final_report.pdf)"
     - title: "Ramtools multithreading final presentation"
       date: 2026-05-13 9:15:00 +0200
       speaker: "Georgi Haralanov"
