@@ -224,6 +224,14 @@
   github: "https://github.com/SahilPatidar"
   active: 1
   projects:
+    - title: "Consistent Error Recovery Infrastructure"
+      status: Ongoing
+      description: |
+        This project aims to improve Clang’s error recovery infrastructure for interactive compilation environments such as Clang-Repl. While Clang provides robust error recovery for normal compilation, its current design is primarily built around a single compilation flow and does not always behave consistently in incremental compilation scenarios.
+        The goal is to ensure that failed inputs do not improperly affect future semantic analysis while preserving Clang’s existing behavior and assumptions.
+      mentors: Vassil Vassilev, Aaron Jomy
+      proposal: /assets/docs/Sahil_Patidar_Clang_Error_Recovery_Proposal_2026.pdf
+  projects:
     - title: "Advanced symbol resolution and reoptimization for clang-repl"
       status: Ongoing
       description: |
