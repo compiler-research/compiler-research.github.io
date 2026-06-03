@@ -19,6 +19,10 @@
       date: 2026-05-27 9:15:00 +0200
       speaker: "Georgi Runtolev"
       link: "[Slides](/assets/presentations/G_Runtolev_xeus_cpp_final_report.pdf)"
+    - title: "Clad as a First-Class Gradient Engine in LibTorch Initial Presentation"
+      date: 2026-05-20 17:00:00 +0200
+      speaker: "Kacent Huang"
+      link: "[Slides](/assets/presentations/Kacent_Clad_As_Torch_Engine.pdf)"
     - title: "Ramtools multithreading final presentation"
       date: 2026-05-13 9:15:00 +0200
       speaker: "Georgi Haralanov"
