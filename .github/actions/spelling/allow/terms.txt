@@ -193,3 +193,16 @@ ramntuplemerge
 ramntuplesort
 ramntuplesplit
 ramntuplestats
+CAFs
+downregulating
+Fibroblasts
+fibroblasts
+Hesam
+macrophages
+MDSCs
+Montigny
+Mutlu
+PBMCs
+PPo
+SIGPLAN
+TGF
