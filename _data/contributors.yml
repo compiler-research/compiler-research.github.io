@@ -209,6 +209,36 @@
         into a robust and consistent system.
       proposal: /assets/docs/Vedant_Goyal_Proposal_2026.pdf
       mentors: Aaron Jomy, David Lange, Vassil Vassilev
+
+- name: Kacent Huang
+  info: "Google Summer of Code 2026 Contributor"
+  email: "fogsong233@gmail.com"
+  github: "https://github.com/fogsong233"
+  education: "Computer Science, Nanjing University, Nanjing, China"
+  active: 1
+  projects:
+    - title: "Clad as a First-Class Gradient Engine in LibTorch"
+      status: Ongoing
+      description: |
+        This proposal targets the HSF 2026 idea Clad as a first-class gradient engine
+        in LibTorch, a 350-hour project intended to make compiler-generated gradients
+        available from LibTorch and, eventually, easier to reuse from the ROOT ecosystem.
+        My goal is to build a practical and well-scoped integration path that allows
+        a LibTorch C++ training loop to call Clad-generated derivative code for
+        a small but meaningful subset of workloads. The primary implementation path
+        is to wrap Clad-generated backward logic inside torch::autograd::Function, because
+        the PyTorch C++ frontend explicitly supports custom autograd functions and presents
+        them as the standard way to integrate optimized forward and backward code in extensions.
+        If time permits and the API proves cleaner, I will also evaluate a custom-operator path
+        based on the PyTorch C++ extension mechanisms. This proposal is intentionally scoped
+        as a proof of concept, not as a general replacement for LibTorch autograd. A realistic
+        first milestone is to differentiate selected training kernels or small model components
+        written in C++, expose them to LibTorch, and measure where compiler-generated derivatives
+        are correct, maintainable, and competitive. This produces a concrete result for mentors
+        and also establishes a clear baseline for future work on broader operator coverage, deeper
+        ROOT integration, or GPU support.
+      proposal: /assets/docs/Kacent_Proposal_GSOC2026.pdf
+      mentors: Aaron Jomy, David Lange, Vassil Vassilev
   
 - name: Matthew Barton
   info: "Open Source Contributor"
