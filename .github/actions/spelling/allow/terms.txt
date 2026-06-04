@@ -211,6 +211,8 @@ autograd
 dtype
 fogsong
 Kacent
+libtorch
 LibTorch
 Nanjing
+pytorch
 PyTorch
