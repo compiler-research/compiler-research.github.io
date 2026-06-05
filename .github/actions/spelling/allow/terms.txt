@@ -32,6 +32,7 @@ NVMe
 Ohridski
 OMP
 OpenMP
+PTU
 PTX
 QNAME
 RAII
@@ -94,6 +95,8 @@ sitemap
 softsusy
 superbuilds
 tapenade
+tok
+Tok
 upstreamed
 vimeo
 watchpoints
