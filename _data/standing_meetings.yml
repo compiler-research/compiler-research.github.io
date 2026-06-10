@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Implement Missing C++26 Features in Clang Initial Presentation"
+      date: 2026-06-10 16:00:00 +0200
+      speaker: "Muhammad Bassiouni"
+      link: "[Slides](/assets/presentations/Muhammad_Bassiouni_CppAlliance_Fellowship2026_initial_presentation.pdf)"
     - title: "Enhance Clang Diagnostics Initial Presentation"
       date: 2026-05-27 17:00:00 +0200
       speaker: "Aditya Medhane"

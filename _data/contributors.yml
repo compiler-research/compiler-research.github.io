@@ -210,6 +210,7 @@
         proposals. The project provides a vehicle for applicants to propose a
         standards paper that is not yet implemented in Clang and then implement
         that paper within the scope of the project.
+      proposal: /assets/docs/Muhammad_Bassiouni_CppAlliance2026_Proposal.pdf
       mentors: Vassil Vassilev, Aaron Jomy
 
 - name: Vedant Goyal
