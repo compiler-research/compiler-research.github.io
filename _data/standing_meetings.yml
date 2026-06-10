@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Enhance And Develop GeneROOT Infrastructure Project Introduction"
+      date: 2026-06-03 17:00:00 +0200
+      speaker: "Jeffrey Zhang"
+      link: "[Slides](/assets/presentations/Jeffrey_Zhang_GeneROOT_project_intro.pdf)"
     - title: "Enhance Clang Diagnostics Initial Presentation"
       date: 2026-05-27 17:00:00 +0200
       speaker: "Aditya Medhane"
