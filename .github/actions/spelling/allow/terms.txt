@@ -134,6 +134,7 @@ GSCHEP
 GSMODE
 HOMMEXX
 IDD
+interactable
 interoperate
 IPDPS
 jacobians
