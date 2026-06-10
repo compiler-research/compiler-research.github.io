@@ -43,7 +43,7 @@ The CUDA notebooks include 8 different examples that add to one another. Here is
 This benchmark adds two vectors with 10 million elements each into a third one. This is done 3 times using different methods.
 
 - The first one is a basic CPU only demonstration. The time is around 21 ms.
-- The second example is using the GPU but with only 1 thread per block. We can see that this is slower compared to the first one. This is a very unoptimised way to use the device.
+- The second example is using the GPU but with only 1 thread per block. We can see that this is slower compared to the first one. This is a very unoptimized way to use the device.
 - The third method is now a lot faster than the other 2. We make each block use 256 threads which speeds up the time by a lot - around 2 milliseconds.
 
 <img src="/images/blog/cuda-vs-cpu-benchmark.png" alt="Benchmarked comparison of CUDA vs the CPU" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
