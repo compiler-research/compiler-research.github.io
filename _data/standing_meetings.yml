@@ -7,6 +7,10 @@
       date: 2026-05-27 17:00:00 +0200
       speaker: "Aditya Medhane"
       link: "[Slides](/assets/presentations/Aditya_Medhane_Enhance_Clang_Diagnostics_Intro.pdf)"
+    - title: "Consolidate and Advance the GPU infrastructure in Clad"
+      date: 2026-05-27 17:00:00 +0200
+      speaker: "Vedant Goyal"
+      link: "[Slides](/assets/presentations/Vedant_Goyal_GSoC2026_inital_presentation.pdf)"
     - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology Initial Presentation"
       date: 2026-05-27 16:00:00 +0200
       speaker: "Salvador de la Torre Gonzalez"
@@ -505,8 +509,3 @@
       date: 2025-11-13 15:40:00 +0200
       speaker: "Jiayang Li"
       link: "[Slides](/assets/presentations/Jiayang_Li_GSoS25_final.pdf)"
-    - title: "Consolidate and Advance the GPU infrastructure in Clad"
-      date: 2025-06-05 16:00:00 +0200
-      speaker: "Vedant Goyal"
-      link: "[Slides](/assets/presentations/Vedant_Goyal_GSoC2026_inital_presentation.pdf)"
-
