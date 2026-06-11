@@ -7,6 +7,10 @@
       date: 2026-06-10 17:00:00 +0200
       speaker: "Hristiyan Shterev"
       link: "[Slides](/assets/presentations/Hristiyan-Shterev-Teaching-materials-with-xeus-cpp-final.pdf)"
+    - title: "Improve Clang performance Project progress"
+      date: 2026-06-10 17:00:00 +0200
+      speaker: "Ezzeldin Ibrahim"
+      link: "[Slides](/assets/presentations/Ezzeldin_improve_clang_performance_intro_presentation.pdf)"
     - title: "Enhance Clang Diagnostics Initial Presentation"
       date: 2026-05-27 17:00:00 +0200
       speaker: "Aditya Medhane"
