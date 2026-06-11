@@ -151,6 +151,29 @@
 #                                     TEAM                                     #
 ################################################################################
 
+- name: Kerem Sahin
+  photo: Kerem.jpg
+  info: "Google Summer of Code 2026 Contributor"
+  email: keremsahin401@gmail.com
+  education: "Bachelor of Computer Engineering, Boğaziçi University, Istanbul, Turkey, 2024 - 2029"
+  github: "https://github.com/keremsahn"
+  www: "Do not have"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/keremsahn/"
+  projects:
+    - title: "Implement CppInterOp API Exposing Memory Ownership and Thread Safety"
+      status: Ongoing
+      description: |
+        This project extends CppInterOp with a new API layer that statically analyzes C++ functions and
+        exposes their memory and thread safety behavior using AST. Language binding tools like cppyy can use
+        this information to automatically determine whether a returned object must be deleted by the caller,
+        or whether a function is safe to call concurrently. This is particularly valuable for large scientific
+        libraries like ROOT, where users today must manually handle memory management and thread safety concerns when
+        calling C++ functions from Python. By exposing this information directly from the AST,
+        the project enables binding tools to handle it automatically.
+      mentors: Vassil Vassilev, Aaron Jomy, Vipul Cariappa
+      proposal: /assets/docs/KeremSahin_CppInterOp2026.pdf
+
 - name: Ayokunle Amodu
   info: "C++ Alliance Fellowship 2026 Contributor"
   photo: Ayokunle.jpg
