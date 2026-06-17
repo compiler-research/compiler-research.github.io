@@ -680,6 +680,37 @@
       proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2026.pdf
       mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque
 
+- name: Abdelrhman Elrawy
+  photo: Abdelrhman.jpg
+  info: "Google Summer of Code 2026 Contributor"
+  email: abdelrhman.elrawy1@gmail.com
+  education: "Master of Applied Computing, Wilfrid Laurier University, Canada"
+  github: "https://github.com/a-elrawy"
+  linkedin: "https://www.linkedin.com/in/elrawy/"
+  active: 1
+  projects:
+    - title: "Enabling Differentiable Rendering via AD of Parallel C++ STL Primitives in Clad"
+      status: Ongoing
+      description: |
+        This project proposes to enhance Clad, a Clang-based automatic differentiation (AD) tool, by
+        leveraging its liveness analysis to automatically generate lock-free backward passes for
+        highly parallel differentiable rendering pipelines. Specifically, the project targets the atomic
+        bottleneck inherent in 3D Gaussian Splatting (3DGS) rasterization.
+      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2026.pdf
+      mentors: Vassil Vassilev, Alexander Penev
+    - title: "Support usage of Thrust API in Clad"
+      status: Completed
+      description: |
+        This project enhances Clad, a Clang-based automatic differentiation tool,
+        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming.
+        The goal is to implement custom derivative rules for Thrust primitives like
+        `thrust::transform` and `thrust::reduce`, making it possible to differentiate
+        high-performance CUDA code automatically. This work bridges the gap between
+        automatic differentiation and GPU acceleration, enabling efficient gradient
+        computations in scientific computing and machine learning workloads.
+      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
+      mentors: Vassil Vassilev, Alexander Penev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
@@ -864,27 +895,6 @@
         tests, and user documentation.
       proposal: /assets/docs/Jiayang_Li_Proposal_2025.pdf
       mentors: Vassil Vassilev, Martin Vassilev
-
-- name: Abdelrhman Elrawy
-  photo: Abdelrhman.jpg
-  info: "Google Summer of Code 2025 Contributor"
-  email: abdelrhman.elrawy1@gmail.com
-  education: "Master of Applied Computing, Wilfrid Laurier University, Canada"
-  github: "https://github.com/a-elrawy"
-  linkedin: "https://www.linkedin.com/in/elrawy/"
-  projects:
-    - title: "Support usage of Thrust API in Clad"
-      status: Completed
-      description: |
-        This project enhances Clad, a Clang-based automatic differentiation tool,
-        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming.
-        The goal is to implement custom derivative rules for Thrust primitives like
-        `thrust::transform` and `thrust::reduce`, making it possible to differentiate
-        high-performance CUDA code automatically. This work bridges the gap between
-        automatic differentiation and GPU acceleration, enabling efficient gradient
-        computations in scientific computing and machine learning workloads.
-      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
-      mentors: Vassil Vassilev, Alexander Penev
 
 - name: Galin Bistrev
   photo: Bistrev.jpg

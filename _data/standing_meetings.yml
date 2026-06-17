@@ -7,6 +7,10 @@
       date: 2026-06-10 16:00:00 +0200
       speaker: "Muhammad Bassiouni"
       link: "[Slides](/assets/presentations/Muhammad_Bassiouni_CppAlliance_Fellowship2026_initial_presentation.pdf)"
+    - title: "Enabling Differentiable Rendering via AD of Parallel C++ STL Primitives in Clad Initial Presentation"
+      date: 2026-06-10 16:00:00 +0200
+      speaker: "Abdelrhman Elrawy"
+      link: "[Slides](/assets/presentations/Abdelrhman_initial_presentation_enabling_differentiable_rendering_via_AD_in_clad.pdf)"
     - title: "Creating teaching materials with xeus-cpp final report"
       date: 2026-06-10 17:00:00 +0200
       speaker: "Hristiyan Shterev"
