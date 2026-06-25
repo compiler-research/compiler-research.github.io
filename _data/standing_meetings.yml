@@ -23,6 +23,10 @@
       date: 2026-06-10 17:00:00 +0200
       speaker: "Ezzeldin Ibrahim"
       link: "[Slides](/assets/presentations/Ezzeldin_improve_clang_performance_intro_presentation.pdf)"
+    - title: "Implementing CppInterOp API, Exposing Memory Ownership and Thread Safety"
+      date: 2026-05-27 17:00:00 +0200
+      speaker: "Kerem Sahin"
+      link: "[Slides](/assets/presentations/Kerem_Sahin_Implement_CppInterOp_Memory_Ownership_Intro.pdf)"
     - title: "Enhance Clang Diagnostics Initial Presentation"
       date: 2026-05-27 17:00:00 +0200
       speaker: "Aditya Medhane"
