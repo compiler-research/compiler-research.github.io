@@ -348,6 +348,20 @@
   active: 1
   linkedin: "https://www.linkedin.com/in/vipul-cariappa03/"
   projects:
+    - title: On-Demand Parsing in Clang
+      status: Ongoing
+      description: |
+        A typical C++ translation unit often includes a substantial number of header files, while only a
+        limited subset of the declarations and definitions contained within those headers is actually
+        utilized. Despite this, modern compilers such as Clang eagerly parse the entirety of the included
+        code. This approach leads to unnecessary computational overhead, resulting in increased
+        compilation time and higher memory consumption.<br>
+        The objective of this project is to design and implement a mechanism within the Clang compiler
+        that defers the parsing of function and class definitions until the point at which they are first
+        required. By introducing this form of on-demand parsing, the compiler can avoid processing
+        unused code paths, thereby improving efficiency.
+      proposal: /assets/docs/Vipul_Cariappa_CppAlliance_Proposal.pdf
+      mentors: Vassil Vassilev, Aaron Jomy
     - title: "Adopting CppInterOp in cppyy"
       status: Ongoing
       description: |

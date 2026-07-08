@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "On-Demand Parsing in Clang"
+      date: 2026-06-24 16:00:00 +0200
+      speaker: "Vipul Cariappa"
+      link: "[Slides](/assets/presentations/VipulCariappa_OnDemandParsingInClang_IntroPresentation.pdf)"
     - title: "Enhance And Develop GeneROOT Infrastructure Project Introduction"
       date: 2026-06-03 17:00:00 +0200
       speaker: "Jeffrey Zhang"
