@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm: Enhance Clang Diagnostics"
+      date: 2026-07-22 17:00:00 +0200
+      speaker: "Aditya Medhane"
+      link: "[Slides](/assets/presentations/Aditya_Medhane_Enhance_Clang_Diagnostics_Midterm.pdf)"
     - title: "Midterm evaluation: Improve Clang performance"
       date: 2026-06-10 17:00:00 +0200
       speaker: "Ezzeldin Ibrahim"
