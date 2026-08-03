@@ -213,6 +213,7 @@
       status: Ongoing
       description: |
         This project aims to systematically improve Clang’s performance by identifying, understanding, and addressing common compilation bottlenecks across real-world codebases. While Clang is highly capable, performance regressions and inefficiencies can accumulate over time due to increasing language complexity, new features, and evolving usage patterns. These issues can impact compile time, peak memory usage, and overall memory pressure, especially in large projects.
+      proposal: /assets/docs/Ezzeldin_Ibrahim_CppAlliance2026_Proposal.pdf
       mentors: Vassil Vassilev, Aaron Jomy
 
 - name: Muhammad Bassiouni
