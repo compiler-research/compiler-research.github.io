@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm presentation: Enabling Differentiable Rendering via AD of Parallel C++ STL Primitives in Clad"
+      date: 2026-07-29 16:00:00 +0200
+      speaker: "Abdelrhman Elrawy"
+      link: "[Slides](/assets/presentations/Abdelrhman_midterm_presentation_enabling_differentiable_rendering_via_AD_in_clad.pdf)"
     - title: "Midterm: Enhance Clang Diagnostics"
       date: 2026-07-22 17:00:00 +0200
       speaker: "Aditya Medhane"
