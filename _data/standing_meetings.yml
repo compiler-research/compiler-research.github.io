@@ -3,6 +3,62 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm presentation: Enabling Differentiable Rendering via AD of Parallel C++ STL Primitives in Clad"
+      date: 2026-07-29 16:00:00 +0200
+      speaker: "Abdelrhman Elrawy"
+      link: "[Slides](/assets/presentations/Abdelrhman_midterm_presentation_enabling_differentiable_rendering_via_AD_in_clad.pdf)"
+    - title: "Midterm: Enhance Clang Diagnostics"
+      date: 2026-07-22 17:00:00 +0200
+      speaker: "Aditya Medhane"
+      link: "[Slides](/assets/presentations/Aditya_Medhane_Enhance_Clang_Diagnostics_Midterm.pdf)"
+    - title: "Midterm evaluation: Improve Clang performance"
+      date: 2026-06-10 17:00:00 +0200
+      speaker: "Ezzeldin Ibrahim"
+      link: "[Slides](/assets/presentations/Ezzeldin_improve_clang_performance_midterm_presentation.pdf)"
+    - title: "Midterm: Process High-Impact clang-tidy and Clang Static Analyzer Requests"
+      date: 2026-07-15 16:00:00 +0200
+      speaker: "Peiqi Li"
+      link: "[Slides](/assets/presentations/Peiqi_CppAlliance_midterm_presentation.pdf)"
+    - title: "On-Demand Parsing in Clang"
+      date: 2026-06-24 16:00:00 +0200
+      speaker: "Vipul Cariappa"
+      link: "[Slides](/assets/presentations/VipulCariappa_OnDemandParsingInClang_IntroPresentation.pdf)"
+    - title: "Improving Clang Error Recovery for Interactive Workflows"
+      date: 2026-06-24 17:00:00 +0200
+      speaker: "Sahil Patidar"
+      link: "[Slides](/assets/presentations/Sahil_Patidar_Improve_Error_Recovery_For_ClangRepl.pdf)"
+    - title: "Enhance And Develop GeneROOT Infrastructure Project Introduction"
+      date: 2026-06-03 17:00:00 +0200
+      speaker: "Jeffrey Zhang"
+      link: "[Slides](/assets/presentations/Jeffrey_Zhang_GeneROOT_project_intro.pdf)"
+    - title: "Implement Missing C++26 Features in Clang Initial Presentation"
+      date: 2026-06-10 16:00:00 +0200
+      speaker: "Muhammad Bassiouni"
+      link: "[Slides](/assets/presentations/Muhammad_Bassiouni_CppAlliance_Fellowship2026_initial_presentation.pdf)"
+    - title: "Enabling Differentiable Rendering via AD of Parallel C++ STL Primitives in Clad Initial Presentation"
+      date: 2026-06-10 16:00:00 +0200
+      speaker: "Abdelrhman Elrawy"
+      link: "[Slides](/assets/presentations/Abdelrhman_initial_presentation_enabling_differentiable_rendering_via_AD_in_clad.pdf)"
+    - title: "Creating teaching materials with xeus-cpp final report"
+      date: 2026-06-10 17:00:00 +0200
+      speaker: "Hristiyan Shterev"
+      link: "[Slides](/assets/presentations/Hristiyan-Shterev-Teaching-materials-with-xeus-cpp-final.pdf)"
+    - title: "Improve Clang performance Project progress"
+      date: 2026-06-10 17:00:00 +0200
+      speaker: "Ezzeldin Ibrahim"
+      link: "[Slides](/assets/presentations/Ezzeldin_improve_clang_performance_intro_presentation.pdf)"
+    - title: "Implementing CppInterOp API, Exposing Memory Ownership and Thread Safety"
+      date: 2026-05-27 17:00:00 +0200
+      speaker: "Kerem Sahin"
+      link: "[Slides](/assets/presentations/Kerem_Sahin_Implement_CppInterOp_Memory_Ownership_Intro.pdf)"
+    - title: "Enhance Clang Diagnostics Initial Presentation"
+      date: 2026-05-27 17:00:00 +0200
+      speaker: "Aditya Medhane"
+      link: "[Slides](/assets/presentations/Aditya_Medhane_Enhance_Clang_Diagnostics_Intro.pdf)"
+    - title: "Consolidate and Advance the GPU infrastructure in Clad"
+      date: 2026-05-27 17:00:00 +0200
+      speaker: "Vedant Goyal"
+      link: "[Slides](/assets/presentations/Vedant_Goyal_GSoC2026_inital_presentation.pdf)"
     - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology Initial Presentation"
       date: 2026-05-27 16:00:00 +0200
       speaker: "Salvador de la Torre Gonzalez"
@@ -11,6 +67,14 @@
       date: 2026-05-27 9:30:00 +0200
       speaker: "Iva Fezova"
       link: "[Slides](/assets/presentations/Iva_Fezova_Upstreaming_Final_Presentation.pdf)"
+    - title: "Port C and C++ Course to xeus-cpp final presentation"
+      date: 2026-05-27 9:15:00 +0200
+      speaker: "Georgi Runtolev"
+      link: "[Slides](/assets/presentations/G_Runtolev_xeus_cpp_final_report.pdf)"
+    - title: "Clad as a First-Class Gradient Engine in LibTorch Initial Presentation"
+      date: 2026-05-20 17:00:00 +0200
+      speaker: "Kacent Huang"
+      link: "[Slides](/assets/presentations/Kacent_Clad_As_Torch_Engine.pdf)"
     - title: "Ramtools multithreading final presentation"
       date: 2026-05-13 9:15:00 +0200
       speaker: "Georgi Haralanov"

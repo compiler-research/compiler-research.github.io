@@ -151,6 +151,29 @@
 #                                     TEAM                                     #
 ################################################################################
 
+- name: Kerem Sahin
+  photo: Kerem.jpg
+  info: "Google Summer of Code 2026 Contributor"
+  email: keremsahin401@gmail.com
+  education: "Bachelor of Computer Engineering, Boğaziçi University, Istanbul, Turkey, 2024 - 2029"
+  github: "https://github.com/keremsahn"
+  www: "Do not have"
+  active: 1
+  linkedin: "https://www.linkedin.com/in/keremsahn/"
+  projects:
+    - title: "Implement CppInterOp API Exposing Memory Ownership and Thread Safety"
+      status: Ongoing
+      description: |
+        This project extends CppInterOp with a new API layer that statically analyzes C++ functions and
+        exposes their memory and thread safety behavior using AST. Language binding tools like cppyy can use
+        this information to automatically determine whether a returned object must be deleted by the caller,
+        or whether a function is safe to call concurrently. This is particularly valuable for large scientific
+        libraries like ROOT, where users today must manually handle memory management and thread safety concerns when
+        calling C++ functions from Python. By exposing this information directly from the AST,
+        the project enables binding tools to handle it automatically.
+      mentors: Vassil Vassilev, Aaron Jomy, Vipul Cariappa
+      proposal: /assets/docs/KeremSahin_CppInterOp2026.pdf
+
 - name: Ayokunle Amodu
   info: "C++ Alliance Fellowship 2026 Contributor"
   photo: Ayokunle.jpg
@@ -190,6 +213,7 @@
       status: Ongoing
       description: |
         This project aims to systematically improve Clang’s performance by identifying, understanding, and addressing common compilation bottlenecks across real-world codebases. While Clang is highly capable, performance regressions and inefficiencies can accumulate over time due to increasing language complexity, new features, and evolving usage patterns. These issues can impact compile time, peak memory usage, and overall memory pressure, especially in large projects.
+      proposal: /assets/docs/Ezzeldin_Ibrahim_CppAlliance2026_Proposal.pdf
       mentors: Vassil Vassilev, Aaron Jomy
 
 - name: Muhammad Bassiouni
@@ -210,6 +234,7 @@
         proposals. The project provides a vehicle for applicants to propose a
         standards paper that is not yet implemented in Clang and then implement
         that paper within the scope of the project.
+      proposal: /assets/docs/Muhammad_Bassiouni_CppAlliance2026_Proposal.pdf
       mentors: Vassil Vassilev, Aaron Jomy
 
 - name: Vedant Goyal
@@ -221,19 +246,49 @@
   education: "B.E. in Electrical and Computer Engineering, Thapar Institute of Engineering and Technology, Patiala, India"
   active: 1
   projects:   
-    -title: "Consolidate and advance the GPU infrastructure in Clad"
-    status: Ongoing
-    description: |
-      Automatic Differentiation(AD) is a set of techniques to evaluate the derivative 
-      of functions specified by the computer programs precisely and efficiently. Clad 
-      is a Clang based AD tool that transforms C++ code to compute derivatives. Clad 
-      supports multiple differentiation modes like reverse mode, forward mode and hessian 
-      mode making it suitable for wide range of applications. Clad have also demonstrated 
-      promising support for GPU based differentiation however the work remains fragmented.
-      This project aims to consolidate the fragmented work and advance Clad's GPU infrastructure
-      into a robust and consistent system.
-    proposal: /assets/docs/Vedant_Goyal_Proposal_2026.pdf
-    mentors: Aaron Jomy, David Lange, Vassil Vassilev
+    - title: "Consolidate and advance the GPU infrastructure in Clad"
+      status: Ongoing
+      description: |
+        Automatic Differentiation(AD) is a set of techniques to evaluate the derivative 
+        of functions specified by the computer programs precisely and efficiently. Clad 
+        is a Clang based AD tool that transforms C++ code to compute derivatives. Clad 
+        supports multiple differentiation modes like reverse mode, forward mode and hessian 
+        mode making it suitable for wide range of applications. Clad have also demonstrated 
+        promising support for GPU based differentiation however the work remains fragmented.
+        This project aims to consolidate the fragmented work and advance Clad's GPU infrastructure
+        into a robust and consistent system.
+      proposal: /assets/docs/Vedant_Goyal_Proposal_2026.pdf
+      mentors: Aaron Jomy, David Lange, Vassil Vassilev
+
+- name: Kacent Huang
+  info: "Google Summer of Code 2026 Contributor"
+  email: "fogsong233@gmail.com"
+  github: "https://github.com/fogsong233"
+  education: "Computer Science, Nanjing University, Nanjing, China"
+  active: 1
+  projects:
+    - title: "Clad as a First-Class Gradient Engine in LibTorch"
+      status: Ongoing
+      description: |
+        This proposal targets the HSF 2026 idea Clad as a first-class gradient engine
+        in LibTorch, a 350-hour project intended to make compiler-generated gradients
+        available from LibTorch and, eventually, easier to reuse from the ROOT ecosystem.
+        My goal is to build a practical and well-scoped integration path that allows
+        a LibTorch C++ training loop to call Clad-generated derivative code for
+        a small but meaningful subset of workloads. The primary implementation path
+        is to wrap Clad-generated backward logic inside torch::autograd::Function, because
+        the PyTorch C++ frontend explicitly supports custom autograd functions and presents
+        them as the standard way to integrate optimized forward and backward code in extensions.
+        If time permits and the API proves cleaner, I will also evaluate a custom-operator path
+        based on the PyTorch C++ extension mechanisms. This proposal is intentionally scoped
+        as a proof of concept, not as a general replacement for LibTorch autograd. A realistic
+        first milestone is to differentiate selected training kernels or small model components
+        written in C++, expose them to LibTorch, and measure where compiler-generated derivatives
+        are correct, maintainable, and competitive. This produces a concrete result for mentors
+        and also establishes a clear baseline for future work on broader operator coverage, deeper
+        ROOT integration, or GPU support.
+      proposal: /assets/docs/Kacent_Proposal_GSOC2026.pdf
+      mentors: Aaron Jomy, David Lange, Vassil Vassilev
   
 - name: Matthew Barton
   info: "Open Source Contributor"
@@ -249,6 +304,19 @@
   github: "https://github.com/SahilPatidar"
   active: 1
   projects:
+    - title: "Consistent Error Recovery Infrastructure"
+      status: Ongoing
+      description: |
+        This project aims to improve Clang’s error recovery infrastructure for
+        interactive compilation environments such as Clang-Repl. While Clang
+        provides robust error recovery for normal compilation, its current
+        design is primarily built around a single compilation flow and does not
+        always behave consistently in incremental compilation scenarios.
+        The goal is to ensure that failed inputs do not improperly affect
+        future semantic analysis while preserving Clang’s existing behavior
+        and assumptions.
+      mentors: Vassil Vassilev, Aaron Jomy
+      proposal: /assets/docs/Sahil_Patidar_Clang_Error_Recovery_Proposal_2026.pdf
     - title: "Advanced symbol resolution and reoptimization for clang-repl"
       status: Ongoing
       description: |
@@ -286,6 +354,20 @@
   active: 1
   linkedin: "https://www.linkedin.com/in/vipul-cariappa03/"
   projects:
+    - title: On-Demand Parsing in Clang
+      status: Ongoing
+      description: |
+        A typical C++ translation unit often includes a substantial number of header files, while only a
+        limited subset of the declarations and definitions contained within those headers is actually
+        utilized. Despite this, modern compilers such as Clang eagerly parse the entirety of the included
+        code. This approach leads to unnecessary computational overhead, resulting in increased
+        compilation time and higher memory consumption.<br>
+        The objective of this project is to design and implement a mechanism within the Clang compiler
+        that defers the parsing of function and class definitions until the point at which they are first
+        required. By introducing this form of on-demand parsing, the compiler can avoid processing
+        unused code paths, thereby improving efficiency.
+      proposal: /assets/docs/Vipul_Cariappa_CppAlliance_Proposal.pdf
+      mentors: Vassil Vassilev, Aaron Jomy
     - title: "Adopting CppInterOp in cppyy"
       status: Ongoing
       description: |
@@ -618,6 +700,37 @@
       proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2026.pdf
       mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque
 
+- name: Abdelrhman Elrawy
+  photo: Abdelrhman.jpg
+  info: "Google Summer of Code 2026 Contributor"
+  email: abdelrhman.elrawy1@gmail.com
+  education: "Master of Applied Computing, Wilfrid Laurier University, Canada"
+  github: "https://github.com/a-elrawy"
+  linkedin: "https://www.linkedin.com/in/elrawy/"
+  active: 1
+  projects:
+    - title: "Enabling Differentiable Rendering via AD of Parallel C++ STL Primitives in Clad"
+      status: Ongoing
+      description: |
+        This project proposes to enhance Clad, a Clang-based automatic differentiation (AD) tool, by
+        leveraging its liveness analysis to automatically generate lock-free backward passes for
+        highly parallel differentiable rendering pipelines. Specifically, the project targets the atomic
+        bottleneck inherent in 3D Gaussian Splatting (3DGS) rasterization.
+      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2026.pdf
+      mentors: Vassil Vassilev, Alexander Penev
+    - title: "Support usage of Thrust API in Clad"
+      status: Completed
+      description: |
+        This project enhances Clad, a Clang-based automatic differentiation tool,
+        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming.
+        The goal is to implement custom derivative rules for Thrust primitives like
+        `thrust::transform` and `thrust::reduce`, making it possible to differentiate
+        high-performance CUDA code automatically. This work bridges the gap between
+        automatic differentiation and GPU acceleration, enabling efficient gradient
+        computations in scientific computing and machine learning workloads.
+      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
+      mentors: Vassil Vassilev, Alexander Penev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
@@ -802,27 +915,6 @@
         tests, and user documentation.
       proposal: /assets/docs/Jiayang_Li_Proposal_2025.pdf
       mentors: Vassil Vassilev, Martin Vassilev
-
-- name: Abdelrhman Elrawy
-  photo: Abdelrhman.jpg
-  info: "Google Summer of Code 2025 Contributor"
-  email: abdelrhman.elrawy1@gmail.com
-  education: "Master of Applied Computing, Wilfrid Laurier University, Canada"
-  github: "https://github.com/a-elrawy"
-  linkedin: "https://www.linkedin.com/in/elrawy/"
-  projects:
-    - title: "Support usage of Thrust API in Clad"
-      status: Completed
-      description: |
-        This project enhances Clad, a Clang-based automatic differentiation tool,
-        by enabling it to support NVIDIA's Thrust library for GPU-parallel programming.
-        The goal is to implement custom derivative rules for Thrust primitives like
-        `thrust::transform` and `thrust::reduce`, making it possible to differentiate
-        high-performance CUDA code automatically. This work bridges the gap between
-        automatic differentiation and GPU acceleration, enabling efficient gradient
-        computations in scientific computing and machine learning workloads.
-      proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
-      mentors: Vassil Vassilev, Alexander Penev
 
 - name: Galin Bistrev
   photo: Bistrev.jpg

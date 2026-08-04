@@ -2,16 +2,16 @@
   <h4><b>Latest News</b></h4>
   <div style="height: 300px; overflow-y: auto;">
 
-    {% capture raw_items %}
-      {% for item in site.data.news %}
-        {{ item.date | date: "%Y-%m-%d" }}|{{ item.headline }}|{{ item.link }}|{% unless forloop.last %}::{% endunless %}
-      {% endfor %}
-      {% for post in site.posts %}
-        {% if post.tags contains 'announcement' %}
-          ::{{ post.date | date: "%Y-%m-%d" }}|{{ post.title }}|{{ post.url | prepend: site.baseurl }}|BLOG
-        {% endif %}
-      {% endfor %}
-    {% endcapture %}
+    {%- capture raw_items -%}
+      {%- for item in site.data.news -%}
+        {{ item.date | date: "%Y-%m-%d" }}|{{ item.headline }}|{{ item.link }}|::
+      {%- endfor -%}
+      {%- for post in site.posts -%}
+        {%- if post.tags contains 'announcement' -%}
+          {{ post.date | date: "%Y-%m-%d" }}|{{ post.title }}|{{ post.url | prepend: site.baseurl }}|BLOG::
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
 
     {% assign news_array = raw_items | split: "::" | sort | reverse %}
 

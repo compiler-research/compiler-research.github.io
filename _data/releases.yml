@@ -1,3 +1,22 @@
+- date: 2026-06-28
+  codebase: "Clad"
+  version: "v2.4"
+  description: |
+    Clad 2.4 is now compatible with clang-12 through clang-22, having ported to
+    LLVM 22 and shifted its support window to the last ten major releases
+    (clang-11 has been dropped). This release strengthens both forward and
+    reverse modes with OpenMP critical directive support, reverse-mode handling
+    of member access on call results, and the ability to redefine builtin custom
+    derivatives. CUDA support advances with tape offloading to VRAM and
+    device-callable tape element destruction. A major theme is robustness: a
+    graceful fallback when differentiating parameterless functions, a
+    correctness fix for TBR analysis that was silently producing wrong
+    derivatives, and an extensive round of memory-safety cleanup—scope-leak
+    fixes, use-after-poison repairs, and explicit ownership—surfaced by new
+    LLVM 22 AddressSanitizer CI coverage. Static-library builds now skip backend
+    pass registration, fixing rootcling dictionary generation in ROOT.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v2.4"
+
 - date: 2026-04-19
   codebase: "Clad"
   version: "v2.3"

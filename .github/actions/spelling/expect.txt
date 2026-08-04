@@ -29,8 +29,6 @@ gpt
 ibrahim
 inp
 jank
-Jeffrey
-jeffrey
 Karpathy
 Kiril
 lang
@@ -68,5 +66,3 @@ upstreaming
 usecases
 USINGSTDCPP
 vedant
-Zhang
-zhang
