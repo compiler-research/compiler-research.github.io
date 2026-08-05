@@ -223,5 +223,5 @@ pytorch
 PyTorch
 unoptimised
 rasterization
-3DGS
+DGS
 Splatting
