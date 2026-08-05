@@ -11,6 +11,10 @@
       date: 2026-07-29 16:00:00 +0200
       speaker: "Abdelrhman Elrawy"
       link: "[Slides](/assets/presentations/Abdelrhman_midterm_presentation_enabling_differentiable_rendering_via_AD_in_clad.pdf)"
+    - title: "Midterm: Implementing CppInterOp API, Exposing Memory Ownership and Thread Safety"
+      date: 2026-07-22 17:00:00 +0200
+      speaker: "Kerem Sahin"
+      link: "[Slides](/assets/presentations/Kerem_Sahin_Implement_CppInterOp_Memory_Ownership_Midterm.pdf)"
     - title: "Midterm: Enhance Clang Diagnostics"
       date: 2026-07-22 17:00:00 +0200
       speaker: "Aditya Medhane"
