@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology Midterm Presentation"
+      date: 2026-08-05 16:00:00 +0200
+      speaker: "Salvador de la Torre Gonzalez"
+      link: "[Slides](/assets/presentations/Salva_GSoC26_midterm_presentation_CART.pdf)"
     - title: "Midterm presentation: Implement Missing C++26 Features in Clang"
       date: 2026-07-29 16:00:00 +0200
       speaker: "Muhammad Bassiouni"
