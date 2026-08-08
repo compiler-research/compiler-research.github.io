@@ -7,7 +7,7 @@ author: Muhammad Bassiouni
 permalink: blogs/Implement_missing_C++26_features_in_Clang_Muhammad_Bassiouni_blog/
 thumbnail_image: /images/cppalliance-logo.svg
 date: 2026-05-19
-tags: Clang LLVM C C++ C2y C++20 if-declaration CTAD-alias-templates
+tags: cppalliance Clang LLVM C C++ C2y C++20 if-declaration CTAD-alias-templates
 ---
 
 {% include dual-banner.html
