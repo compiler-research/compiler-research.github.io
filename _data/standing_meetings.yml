@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm: Consolidate and Advance the GPU infrastructure in Clad"
+      date: 2026-08-05 16:00:00 +0200
+      speaker: "Vedant Goyal"
+      link: "[Slides](/assets/presentations/Vedant_Goyal_GSoC2026_midterm_presentation.pdf)"
     - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology Midterm Presentation"
       date: 2026-08-05 16:00:00 +0200
       speaker: "Salvador de la Torre Gonzalez"
