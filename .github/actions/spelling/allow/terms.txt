@@ -223,3 +223,6 @@ pytorch
 PyTorch
 unoptimised
 SLoc
+rasterization
+DGS
+Splatting
