@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm: Clad as a First-Class Gradient Engine in LibTorch Initial Presentation"
+      date: 2026-08-19 16:00:00 +0200
+      speaker: "Kacent Huang"
+      link: "[Slides](/assets/presentations/Kacent_Clad_As_Torch_Engine_Midterm.pdf)"
     - title: "Midterm: Consolidate and Advance the GPU infrastructure in Clad"
       date: 2026-08-05 16:00:00 +0200
       speaker: "Vedant Goyal"
