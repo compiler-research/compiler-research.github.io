@@ -1,3 +1,21 @@
+- date: 2026-09-07
+  codebase: "cppjit"
+  version: "v0.1.0a1"
+  description: |
+    cppjit 0.1.0a1 is the first prerelease of cppjit, the successor of cppyy
+    rebuilt on CppInterOp and the clang-repl C++ interpreter in LLVM. The
+    user-facing Python layer is mostly unchanged from cppyy, while the
+    compiler layer underneath replaces Cling and its patched LLVM with
+    CppInterOp on stock LLVM releases. As presented at
+    [CHEP 2026](https://indico.cern.ch/event/1471803/contributions/6968247/attachments/3283391/5868828/CppInterOp_CHEP2026.pdf),
+    this new, more efficient and correct backend enables a larger set of
+    C++ features and provides various opportunities for more advanced
+    interoperability. The release installs from PyPI with
+    `pip install --pre cppjit` and ships wheels for Linux x86_64/aarch64
+    and macOS arm64/x86_64 on Python 3.12-3.14, built with the LLVM 21
+    toolchain.
+  link: "https://github.com/compiler-research/cppjit/releases/tag/v0.1.0a1"
+
 - date: 2026-06-28
   codebase: "Clad"
   version: "v2.4"
