@@ -1,3 +1,33 @@
+- date: 2026-09-28
+  codebase: "Clad"
+  version: "v2.5"
+  description: |
+    Clad 2.5 is compatible with clang-14 through clang-23, having dropped
+    clang-11 through clang-13 and ported to LLVM 23. The release makes the
+    derivatives clad writes readable: generated code carries real source
+    locations, so a debugger steps through a derivative and a diagnostic points
+    into it, and `-fgenerated-source-dir` writes it out as a file. The analyses
+    clad runs are described in one table that drives the switches
+    (`-fenable-analysis=/-fdisable-analysis=`, and `clad::opts::enable_*` per
+    request), and `-Rclad-analysis=<name>` reports what an analysis left in the
+    derivative and what it was looking for; the command-line options are a table
+    too, with a suggestion for a misspelled one and `-fclad-porting-hints` naming
+    the custom derivatives a translation unit is missing. `clad::immediate_mode`
+    is gone: clad decides from the call site whether a derivative is needed
+    while the program compiles, in every mode. Reverse mode gains `#pragma omp
+    parallel`, hessians assembled from hessian-vector products, std::vector
+    construction/resize pullbacks, per-call state handed from a reverse_forw to
+    its pullback through clad::pullback_state, and counted loops whose trip
+    count is recomputed rather than counted, with a broadcast read's adjoint
+    summed in a register. CUDA builtins are passive and a broadcast adjoint is
+    summed per thread. Fifty issues are closed, among them crashes on lambdas
+    with loops, early-return regressions, wrong gradients for compound indices
+    and loop-carried divisors, and hessian failures on const pointers and
+    std::max. Static builds no longer need the `LLVM_LINK_LLVM_DYLIB` workaround
+    for TableGen, and the generated tables are rendered at build time. For
+    details, please refer to the release notes.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v2.5"
+
 - date: 2026-09-07
   codebase: "cppjit"
   version: "v0.1.0a1"
