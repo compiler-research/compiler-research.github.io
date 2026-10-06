@@ -5,6 +5,8 @@ excerpt: "Landing page for the SC26 tutorial 'Accelerating and Scaling Python
           for HPC' -- abstract, logistics, and tutorial materials."
 sitemap: false
 permalink: /tutorials/sc26/
+redirect_from:
+  - /sc26/
 date: 2026-11-16
 ---
 
