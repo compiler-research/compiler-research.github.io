@@ -12,35 +12,7 @@ date: 2026-11-16
 
 {::nomarkdown}
 
-<style>
-  .hero-box {
-    position: relative;
-    border: 2px solid #004481;
-    border-left: 10px solid #004481 !important;
-    background-color: #f8faff;
-    margin-top: 35px;
-    padding: 2rem 1.5rem;
-    overflow: visible !important;
-  }
-  .status-badge {
-    position: absolute;
-    top: -12px;
-    right: 15px;
-    background: #004481;
-    color: white;
-    padding: 2px 12px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 11px;
-    z-index: 10;
-    white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  @media (max-width: 767px) {
-    .status-badge { right: 5px; font-size: 10px; }
-    .hero-box h1 { font-size: 1.8em; }
-  }
-</style>
+{% include tutorial-hero-style.html %}
 
 <div class="hero-box">
   <span class="status-badge">★ SC26 TUTORIAL · MON, NOV 16 · ROOM W185A</span>
