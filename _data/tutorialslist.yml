@@ -1,3 +1,16 @@
+- title: Accelerating and Scaling Python for HPC (SC26)
+  author: "Vassil Vassilev (Princeton/CERN)"
+  abstract: |
+    Full-day hands-on SC26 tutorial on writing, debugging, profiling, and
+    optimizing multi-node GPU applications in Python: CuPy for drop-in GPU
+    acceleration, Numba for custom kernels, mpi4py for multi-node scaling,
+    and DragonHPC for workflow acceleration -- taught through guided Jupyter
+    notebooks in a web-based environment (just a laptop and a browser).
+  artifacts: |
+    [Tutorial landing page](/tutorials/sc26/)
+  url: "/tutorials/sc26/"
+  date: 2026-11-16
+
 - title: Efficient Python Programming
   author: "Aaron Jomy (CERN); Vassil Vassilev (Princeton/CERN)"
   abstract: |
