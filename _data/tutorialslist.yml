@@ -11,6 +11,19 @@
   url: "/tutorials/sc26/"
   date: 2026-11-16
 
+- title: Accelerating and Scaling Python for HPC (ISC 2026)
+  author: "Vassil Vassilev (Princeton/CERN)"
+  abstract: |
+    Hands-on tutorial at ISC High Performance 2026 (Hamburg) on writing,
+    debugging, profiling, and optimizing multi-node GPU applications in
+    Python: CuPy for drop-in GPU acceleration, Numba for custom kernels,
+    and mpi4py for multi-node scaling, taught through guided Jupyter
+    notebooks.
+  artifacts: |
+    [Tutorial archive page](/tutorials/isc26/)
+  url: "/tutorials/isc26/"
+  date: 2026-06-22
+
 - title: Efficient Python Programming
   author: "Aaron Jomy (CERN); Vassil Vassilev (Princeton/CERN)"
   abstract: |
