@@ -1,0 +1,26 @@
+- name: "CompilerResearchCon 2026 (day 1)"
+  date: 2026-11-03 15:00:00 +0100
+  time_cest: "15:00"
+  connect: "Not available yet"
+  label: crcon26_part_1
+  agenda:
+    - title: "To be announced."
+      time_cest: "15:00 - 18.00"
+
+- name: "CompilerResearchCon 2026 (day 2)"
+  date: 2026-11-04 15:00:00 +0100
+  time_cest: "15:00"
+  connect: "Not available yet"
+  label: crcon26_part_2
+  agenda:
+    - title: "To be announced."
+      time_cest: "15:00 - 18:00"
+
+- name: "CompilerResearchCon 2026 (day 3)"
+  date: 2026-11-06 17:00:00 +0100
+  time_cest: "17:00"
+  connect: "Not available yet"
+  label: crcon26_part_3
+  agenda:
+    - title: "To be announced."
+      time_cest: "17:00 - 19:30"

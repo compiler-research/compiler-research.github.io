@@ -3,10 +3,10 @@ title: "CompilerResearchCon"
 layout: gridlay
 excerpt: "CompilerResearchCon"
 sitemap: false
-permalink: /crcon2025/
+permalink: /crcon2026/
 ---
 
-# CompilerResearchCon 2025
+# CompilerResearchCon 2026
 
 Compiler Research Conferences are focused events that bring together members and 
 contributors to share progress and insights on specific initiatives. These 
@@ -22,7 +22,7 @@ and celebrate the collaborative achievements of our research community.
 [compiler-research-announce google groups forum](https://groups.google.com/g/compiler-research-announce)
 or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
 
-{% assign sorted_crcon = site.data.crconlist2025 | sort: "date" | reverse %}
+{% assign sorted_crcon = site.data.crconlist2026 | sort: "date" %}
 
 {% for crcon in sorted_crcon %}
 
@@ -41,11 +41,11 @@ or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
       {% if item.speaker %}
       {% if item.speaker.first %}
         {{ item.speaker.name }}
-      <br>“{{item.title}}”</strong>
       {% else %}
         ({{item.speaker}})
       {% endif %}
       {% endif %}
+      {% if item.title %}<br>“{{item.title}}”{% endif %}</strong>
       {% if item.description %}
         <br /> <i>Abstract:</i>{{item.description | markdownify }}
       {% endif %}
