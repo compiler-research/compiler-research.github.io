@@ -147,6 +147,24 @@
     challenges, helping translate computational models into biological insights and
     clinical relevance.
 
+- name: Emery Conrad
+  photo: Conrad.png
+  info: Principal Research Engineer
+  email: emery.conrad@chicagotrading.com
+  education: PhD Mathematics, Virginia Polytechnic Institute and State University (2006)
+  github: "https://github.com/conrade-ctc"
+  active: 1
+  associated: 1
+  org: Chicago Trading Company
+  responsibilities: |
+    Emery's PhD research area was mathematical biology (bifurcation analysis),
+    and after a short stint in academia at the University of Michigan, he got
+    pulled into the trading industry, and has been focused on research
+    computation and modeling ever since. Emery now works on the interactive C++
+    and Python-C++ interoperability stack (Clang-REPL, CppInterOp, and cppjit)
+    for production use at Chicago Trading Company. He contributes fixes and
+    features upstream to CppInterOp and LLVM.
+
 ################################################################################
 #                                     TEAM                                     #
 ################################################################################
