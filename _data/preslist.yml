@@ -1,3 +1,98 @@
+- title: "Accelerated Python Tutorial: Shallow Water Equations with Python/C++ Interoperability"
+  description: |
+    This hands-on tutorial tours the high-performance Python landscape,
+    covering the NumPy and CuPy array models, distributed computing with
+    mpi4py, alternative programming models such as JAX and PyOMP, Python/C++
+    interoperability, and writing custom CUDA kernels.
+
+    The Shallow Water Equations application is an ordered case study that
+    solves a 1D Shallow Water Equations bump pulse using NumPy, JAX, PyOMP,
+    nanobind, CppJIT/CUB and mpi4py. Each approach is benchmarked against the
+    NumPy baseline and the kernels are profiled with NVIDIA's developer tools.
+  location: "[ISC High Performance 2026](https://isc.app.swapcard.com/event/isc-high-performance-2026/planning/UGxhbm5pbmdfNDM5MDIyNw==)"
+  date: 2026-06-22
+  speaker:  Aaron Jomy, Jonas Rembser
+  id: "ISC2026"
+  artifacts: |
+    [Link to Tutorial](https://github.com/NVIDIA/accelerated-computing-hub/tree/main/tutorials/accelerated-python),&nbsp;
+    [Link to Slides](/assets/presentations/Aaron_ISC2026_Python_CXX_Interop.pdf)
+  highlight: 1
+
+- title: "ROOT's new Python Interfaces based on CppInterOp: Performance, Correctness, and Future-Proof Design"
+  description: |
+    The ROOT Python interfaces are a cornerstone of HENP analysis workflows,
+    enabling rapid development while retaining access to high-performance C++
+    code. In this contribution, we present a major upcoming update to the
+    backend powering the dynamic C++ bindings generation, based on the new
+    CppInterOp library.
+
+    For ROOT users, this migration translates directly into a better
+    experience: faster bindings creation in several cases, reduced memory
+    consumption, and improved correctness when using advanced C++ language
+    features. The new backend relies more directly on the Clang API to
+    understand C++ semantics directly, eliminating a number of long-standing
+    issues caused by heuristic approaches and string-based type manipulation.
+    This will also make it easier to support upcoming C++ language features and
+    implement sophisticated Pythonizations.
+
+    Beyond immediate gains, this work prepares ROOT's Python interfaces for
+    future evolution. By supporting both Cling and Clang-REPL via CppInterOp,
+    the new Python interface backend aligns with ongoing efforts towards a
+    transparent migration from Cling to Clang-REPL in ROOT, while continuing to
+    support existing user code.
+
+    Furthermore, our work showcases the latest developments in CppInterOp,
+    enabling cutting-edge R&D in the domain of language bindings by providing
+    better encapsulation of C++ reflection via Clang.
+
+    We describe the motivation for the updated ROOT Python bindings migration,
+    highlight user-visible improvements in performance and memory usage, and
+    demonstrate how the new backend strengthens ROOT as a future-proof
+    framework for HENP data analysis in Python.
+  location: "[CHEP 2026](https://indico.cern.ch/event/1471803/contributions/6968247/)"
+  date: 2026-05-28
+  speaker:  Aaron Jomy
+  id: "CHEP2026"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Aaron_CHEP2026_ROOT_Python_CppInterOp.pdf)
+  highlight: 1
+
+- title: "CppInterOp: Interactive C++ as a Service and Advanced Language Interoperability"
+  description: |
+    CppInterOp provides compiler-as-a-service capabilities using Clang-REPL,
+    enabling dynamic languages to interoperate with C++. This talk covers its
+    technical architecture, including runtime template instantiation, C++
+    overload resolution, and JitCall - a lightweight runtime wrapper
+    generator. We demonstrate how CppInterOp's API, built on Clang's AST,
+    enables practical Python-C++ interoperability, including use cases like
+    invoking CUDA kernels from Python and cross-language inheritance between
+    Python and C++ classes.
+  location: "[EuroLLVM 2026](https://llvm.org/devmtg/2026-04/)"
+  date: 2026-04-15
+  speaker:  Aaron Jomy
+  id: "EUROLLVM2026TALK"
+  artifacts: |
+    [Video](https://youtu.be/-xbcgdO0g2Y),&nbsp;
+    [Link to Slides](/assets/presentations/Aaron_EuroLLVM2026_CppInterOp.pdf)
+  highlight: 1
+
+- title: "Hands-on Using Clang as a library"
+  description: |
+    This tutorial teaches how to use Clang as a library to build a C++ REPL
+    with incremental compilation by splitting translation units into partial
+    compilation steps. We demonstrate how to create a compiler-as-a-service
+    that enables programmatic instantiation and invocation of C++ template
+    functions from client code. Finally, we integrate these components with the
+    Python runtime to examine practical cross-language interoperability.
+  location: "[EuroLLVM 2026](https://llvm.org/devmtg/2026-04/)"
+  date: 2026-04-14
+  speaker:  Aaron Jomy
+  id: "EUROLLVM2026TUTORIAL"
+  artifacts: |
+    [Video](https://youtu.be/GuodsU3VO8Q),&nbsp;
+    [Link to Slides](/assets/presentations/Aaron_EuroLLVM2026_Clang_as_a_Library_Tutorial.pdf)
+  highlight: 1
+
 - title: "Compiler as a Service: C++ Goes Live"
   description: |
     Despite its high-performance capabilities, C++ is not the first programming language that comes to mind for rapidly developing robust applications, mainly due to the long edit-compile-run cycles. Ongoing research in the compiler-research.org group aims to provide practical, interactive capabilities for C++, enabling dynamic interoperability, rapid prototyping, and exploratory programming, essential for data science and other applications. This talk explores how interactive C++ can be leveraged for various scientific usecases and teaching. Attendees will also learn how to leverage Clang as a library to build a simple C++ REPL for incremental compilation and introspection, integrating this layer with the Python runtime.
