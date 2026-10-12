@@ -33,6 +33,7 @@ genomics
 goyalvedant
 gpt
 gtest
+HENP
 ibrahim
 inp
 jank
@@ -46,7 +47,9 @@ Loihi
 Medhane
 medhane
 MLIR
+mpi
 Mtools
+nanobind
 Nellamakada
 Neuromorphic
 neuromorphic
@@ -58,6 +61,7 @@ pld
 previndex
 pubtit
 pushforwards
+Pythonizations
 Qassets
 Qimages
 QVZ
