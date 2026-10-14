@@ -3,6 +3,14 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Midterm: Optimize Usage of Source Locations in Clang Modules"
+      date: 2026-08-05 16:00:00 +0200
+      speaker: "Ayokunle Amodu"
+      link: "[Slides](/assets/presentations/Ayokunle_Amodu_Optimize_SLoc_Usage_Midterm.pdf)"
+    - title: "Optimize Usage of Source Locations in Clang Modules"
+      date: 2026-06-03 17:00:00 +0200
+      speaker: "Ayokunle Amodu"
+      link: "[Slides](/assets/presentations/Ayokunle_Amodu_Optimize_SLoc_Usage.pdf)"
     - title: "Midterm: Clad as a First-Class Gradient Engine in LibTorch Initial Presentation"
       date: 2026-08-19 16:00:00 +0200
       speaker: "Kacent Huang"
