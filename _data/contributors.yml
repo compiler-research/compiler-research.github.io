@@ -202,18 +202,14 @@
     - title: "Optimize Usage of Source Locations in Clang Modules"
       status: Ongoing
       description: |
-        This project aims to reduce memory pressure caused by duplicated source locations
-        in Clang's modular builds. In large-scale C++ projects, repeatedly including the
-        same headers across different modules can quickly exhaust Clang's 32-bit
-        source-location representation. Instead of switching to a more costly 64-bit
-        design, this project explores reusing existing source-location allocations through
-        an interval-mapping mechanism and careful coordination during module loading. The
-        work involves updating module deserialization, preserving diagnostic correctness,
-        and ensuring include-stack reconstruction remains transparent. If successful,
-        duplicated module inputs will no longer cause proportional growth in source-location
-        allocations, modular builds will complete without exhaustion, and Clang will scale
-        better for modern modular C++ codebases, all without requiring a disruptive global
-        change to the compiler.
+        In large modular C++ builds, the same headers get included across many modules, and
+        each copy takes its own range in Clang's limited source-location address space. Big
+        builds can exhaust that space and fail outright. Instead of moving to a costlier
+        64-bit representation, this project removes the duplication at the source: when a
+        module is written, if an imported module already provides a header, the writer skips
+        a second copy and points to the existing one. Duplicated inputs then no longer consume 
+        address space proportionally, and Clang scales better for modern C++ without a disruptive global
+        change.
       proposal: /assets/docs/Ayokunle_Amodu_Proposal_2026.pdf
       mentors: Vassil Vassilev, Aaron Jomy
 
