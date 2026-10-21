@@ -120,12 +120,16 @@
   connect: "Not available yet"
   label: crcon26_part_3
   agenda:
-    - title: "Not available yet"
+    - title: "One Copy Is Enough: Deduplicating Source Locations in Clang Modules"
       speaker:
         name: "Ayokunle Amodu"
       time_cest: "17:00 - 17:20"
       description: |
-        Not available yet
+        Modular builds fill Clang's 32-bit source-location space with duplicate
+        entries for the same shared headers, and when large builds run out,
+        compilation fails. This talk covers an upstream patch I made that stops
+        writing the duplicates, redirecting a header's locations to the module
+        that already has them.
 
     - title: "Not available yet"
       speaker:
