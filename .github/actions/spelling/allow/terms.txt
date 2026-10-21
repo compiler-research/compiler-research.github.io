@@ -22,6 +22,7 @@ IIT
 JIT'd
 Jacobians
 JMU
+JTC
 Jurgaityt
 LHC
 LLMs
@@ -118,6 +119,7 @@ ACAT
 ADSIAMUQ
 AKMODE
 arxiv
+aspirational
 BKACAT
 BKPy
 CARTDIGITALTWIN
@@ -141,6 +143,7 @@ jacobians
 LIGO
 MAMODE
 meetup
+mentoring
 metaprogramming
 Miapb
 milli
