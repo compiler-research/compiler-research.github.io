@@ -37,7 +37,13 @@ or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
 </div><div>
   Agenda:
   <ul>{% for item in crcon.agenda %}
-    <li>{{item.time_cest}}
+    {% if item.speaker.name %}
+      {% assign talk_id = item.speaker.name | slugify: "latin" | prepend: "_" | prepend: crcon.label %}
+    {% else %}
+      {% assign talk_id = forloop.index | prepend: "_" | prepend: crcon.label %}
+    {% endif %}
+    <li id="{{talk_id}}" style="scroll-margin-top: 80px;">
+      <a style="text-decoration:none;" href="#{{talk_id}}">{{item.time_cest}}</a>
       {% if item.title %} <strong>"{{item.title}}"</strong>{% endif %}
       {% if item.description %}
         <br /> <i>Abstract:</i>{{item.description | markdownify }}
