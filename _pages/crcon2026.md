@@ -44,7 +44,12 @@ or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
     {% endif %}
     <li id="{{talk_id}}">
       <a style="text-decoration:none;" href="#{{talk_id}}">{{item.time_cest}}</a>
-      {% if item.title %} <strong>"{{item.title}}"</strong>{% endif %}
+      {% if item.speaker.first %}
+        {% assign speaker_name = item.speaker.name %}
+      {% else %}
+        {% assign speaker_name = item.speaker %}
+      {% endif %}
+      {% if item.title %} <strong>"{{item.title}}"</strong>{% endif %}{% if speaker_name %}, <em>{{ speaker_name }}</em>{% endif %}
       {% if item.description %}
         <br /> <i>Abstract:</i>{{item.description | markdownify }}
       {% endif %}
