@@ -1,9 +1,11 @@
 ---
-title: "Compiler Research - Team - Kerem Sahin"
+title: "Compiler Research - Team - Kerem Şahin"
 layout: gridlay
 excerpt: "Compiler Research: Team members"
 sitemap: false
-permalink: /team/KeremSahin
+permalink: /team/KeremŞahin
+redirect_from:
+  - /team/KeremSahin
 email: keremsahin401@gmail.com
 ---
 
