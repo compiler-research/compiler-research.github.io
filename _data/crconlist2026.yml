@@ -49,7 +49,6 @@
     - title: "Compiler-Research: State of the Union"
       speaker:
         name: "Vassil Vassilev"
-        image: "https://compiler-research.org/images/team/Vassilev.jpg"
         bio: |
           Dr. Vassil Vassilev is a seasoned compiler engineer and research
           software consultant with extensive experience in building large-scale
@@ -96,21 +95,21 @@
 
     - title: "Not available yet"
       speaker:
-        name: "Martin"
+        name: "Martin Vassilev"
       time_cest: "16:15 - 16:35"
       description: |
         Not available yet
 
     - title: "Not available yet"
       speaker:
-        name: "Kacent"
+        name: "Kacent Huang"
       time_cest: "16:40 - 17:00"
       description: |
         Not available yet
 
     - title: "Not available yet"
       speaker:
-        name: "Lu Luque"
+        name: "Luciana Melina Luque"
       time_cest: "17:05 - 17:25"
       description: |
         Not available yet
@@ -159,6 +158,10 @@
     - title: "Not available yet"
       speaker:
         name: "Jeaye Wilkerson"
+        image: "https://avatars.githubusercontent.com/u/1057635"
+        bio: |
+          Jeaye Wilkerson is the creator of the jank programming language, a
+          dialect of Clojure on LLVM.
       time_cest: "19:05 - 19:25"
       description: |
         Not available yet

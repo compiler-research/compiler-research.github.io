@@ -43,13 +43,25 @@ or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
         <br /> <i>Abstract:</i>{{item.description | markdownify }}
       {% endif %}
       {% if item.speaker and item.speaker.first %}
-        {% if item.speaker.image %}
+        {% comment %} Fall back to the team info when the agenda does not provide an image or a bio. {% endcomment %}
+        {% assign member = site.data.contributors | where: "name", item.speaker.name | first %}
+        {% assign speaker_image = item.speaker.image %}
+        {% if speaker_image == nil and member %}
+          {% assign speaker_image = member.photo | default: "defaultDP.png" | prepend: "/images/team/" | prepend: site.baseurl %}
+        {% endif %}
+        {% assign speaker_bio = item.speaker.bio | default: member.responsibilities %}
+        {% if speaker_bio == nil and member %}
+          {% capture speaker_bio %}{{ member.info }}{% if member.education %}, {{ member.education }}{% endif %}{% endcapture %}
+        {% endif %}
+        {% if speaker_image or speaker_bio %}
         <div class="row">
           <div class="col-md-1">
-            <img style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover"  class="shadow-4-strong" alt="{{item.speaker.name}}" src="{{item.speaker.image}}" />
+            {% if speaker_image %}
+            <img style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover"  class="shadow-4-strong" alt="{{item.speaker.name}}" src="{{speaker_image}}" />
+            {% endif %}
           </div>
           <div class="col-md-11">
-            <small><i>{{item.speaker.bio}}</i></small>
+            <small><i>{{ speaker_bio | markdownify | remove: '<p>' | remove: '</p>' }}</i></small>
           </div>
         </div>
         {% endif %}
