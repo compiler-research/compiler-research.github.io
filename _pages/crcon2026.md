@@ -37,17 +37,22 @@ or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
 </div><div>
   Agenda:
   <ul>{% for item in crcon.agenda %}
-    <li><strong>{{item.time_cest}}
-      {% if item.speaker %}
-      {% if item.speaker.first %}
-        {{ item.speaker.name }}
-      {% else %}
-        ({{item.speaker}})
-      {% endif %}
-      {% endif %}
-      {% if item.title %}<br>“{{item.title}}”{% endif %}</strong>
+    <li>{{item.time_cest}}
+      {% if item.title %} <strong>"{{item.title}}"</strong>{% endif %}
       {% if item.description %}
         <br /> <i>Abstract:</i>{{item.description | markdownify }}
+      {% endif %}
+      {% if item.speaker and item.speaker.first %}
+        {% if item.speaker.image %}
+        <div class="row">
+          <div class="col-md-1">
+            <img style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover"  class="shadow-4-strong" alt="{{item.speaker.name}}" src="{{item.speaker.image}}" />
+          </div>
+          <div class="col-md-11">
+            <small><i>{{item.speaker.bio}}</i></small>
+          </div>
+        </div>
+        {% endif %}
       {% endif %}
       {% if item.slides %}
       <a style="text-decoration:none;" href="{{item.slides}}">Slides</a>

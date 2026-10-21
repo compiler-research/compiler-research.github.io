@@ -1,7 +1,7 @@
 - name: "CompilerResearchCon 2026 (day 1)"
   date: 2026-11-03 15:00:00 +0100
   time_cest: "15:00"
-  connect: "Not available yet"
+  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   label: crcon26_part_1
   agenda:
     - title: "Not available yet"
@@ -46,12 +46,26 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "Compiler-Research: State of the Union"
       speaker:
         name: "Vassil Vassilev"
+        image: "https://compiler-research.org/images/team/Vassilev.jpg"
+        bio: |
+          Dr. Vassil Vassilev is a seasoned compiler engineer and research
+          software consultant with extensive experience in building large-scale
+          programming-language infrastructure and leading technical teams. He
+          specializes in programming languages, compiler-based automatic
+          differentiation, dynamic C++/Python interoperability, and is a code
+          owner of key Clang components. Vassil chairs the Bulgarian delegation
+          to ISO/JTC1/SC22, contributing to C++ standardization, and is
+          dedicated to advancing reliable, sustainable open-source software for
+          high-performance scientific computing while mentoring early-career
+          researchers.
       time_cest: "17:30 - 17:55"
       description: |
-        Not available yet
+        In this talk we will make an overview of the various activities around
+        the compiler research initiative in terms of people, projects, code and
+        impact. We will outline our aspirational plans and perspective for 2027.
 
 - name: "CompilerResearchCon 2026 (day 2)"
   date: 2026-11-04 15:00:00 +0100
