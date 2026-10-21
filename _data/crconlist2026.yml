@@ -4,8 +4,54 @@
   connect: "Not available yet"
   label: crcon26_part_1
   agenda:
-    - title: "To be announced."
-      time_cest: "15:00 - 18.00"
+    - title: "Not available yet"
+      speaker:
+        name: "Aaron Jomy"
+      time_cest: "15:00 - 15:20"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Kerem Şahin"
+      time_cest: "15:25 - 15:45"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Peiqi Li"
+      time_cest: "15:50 - 16:10"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Muhammad Bassiouni"
+      time_cest: "16:15 - 16:35"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Ezzeldin Ibrahim"
+      time_cest: "16:40 - 17:00"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Emery Conrad"
+      time_cest: "17:05 - 17:25"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Vassil Vassilev"
+      time_cest: "17:30 - 17:55"
+      description: |
+        Not available yet
 
 - name: "CompilerResearchCon 2026 (day 2)"
   date: 2026-11-04 15:00:00 +0100
@@ -13,8 +59,47 @@
   connect: "Not available yet"
   label: crcon26_part_2
   agenda:
-    - title: "To be announced."
-      time_cest: "15:00 - 18:00"
+    - title: "Not available yet"
+      speaker:
+        name: "Vipul Cariappa"
+      time_cest: "15:00 - 15:20"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Jonas Rembser"
+      time_cest: "15:25 - 15:45"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Jeffrey Zhang"
+      time_cest: "15:50 - 16:10"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Martin"
+      time_cest: "16:15 - 16:35"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Kacent"
+      time_cest: "16:40 - 17:00"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Lu Luque"
+      time_cest: "17:05 - 17:25"
+      description: |
+        Not available yet
 
 - name: "CompilerResearchCon 2026 (day 3)"
   date: 2026-11-06 17:00:00 +0100
@@ -22,5 +107,44 @@
   connect: "Not available yet"
   label: crcon26_part_3
   agenda:
-    - title: "To be announced."
-      time_cest: "17:00 - 19:30"
+    - title: "Not available yet"
+      speaker:
+        name: "Ayokunle Amodu"
+      time_cest: "17:00 - 17:20"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Vedant Goyal"
+      time_cest: "17:25 - 17:45"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Aditya Medhane"
+      time_cest: "17:50 - 18:10"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Abdelrhman Elrawy"
+      time_cest: "18:15 - 18:35"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Salvador de la Torre Gonzalez"
+      time_cest: "18:40 - 19:00"
+      description: |
+        Not available yet
+
+    - title: "Not available yet"
+      speaker:
+        name: "Jeaye Wilkerson"
+      time_cest: "19:05 - 19:25"
+      description: |
+        Not available yet
