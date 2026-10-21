@@ -42,7 +42,7 @@ or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
     {% else %}
       {% assign talk_id = forloop.index | prepend: "_" | prepend: crcon.label %}
     {% endif %}
-    <li id="{{talk_id}}" style="scroll-margin-top: 80px;">
+    <li id="{{talk_id}}">
       <a style="text-decoration:none;" href="#{{talk_id}}">{{item.time_cest}}</a>
       {% if item.title %} <strong>"{{item.title}}"</strong>{% endif %}
       {% if item.description %}
