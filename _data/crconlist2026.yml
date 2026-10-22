@@ -37,12 +37,16 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "Improving Clang Performance"
       speaker:
         name: "Ezzeldin Ibrahim"
       time_cest: "16:40 - 17:00"
       description: |
-        Not available yet
+        In this talk, I will provide an overview of my fellowship work focused
+        on Clang performance optimization. I will detail the tooling used
+        to benchmark compilation speeds, my approach to finding and fixing
+        performance regressions, and how these discoveries created a feedback loop
+        that exposed even more areas for optimization.
 
     - title: "Not available yet"
       speaker:
