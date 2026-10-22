@@ -112,12 +112,25 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "Beyond the Benchmark: Finding Scientific Challenges for Computational Innovation"
       speaker:
         name: "Luciana Melina Luque"
       time_cest: "17:05 - 17:25"
       description: |
-        Not available yet
+        What does compiler optimisation have to do with cancer research? Perhaps
+        more than you might expect.
+
+        Imagine simulating the development of a tumour, where computational
+        performance determines which scientific questions we can realistically
+        investigate. Similar challenges arise across disciplines, where
+        increasingly complex data and models push the limits of existing
+        technologies.
+
+        Drawing on examples from cancer research, including our work on
+        CARTopiaX, I will explore how advances in computing can open new avenues
+        for scientific discovery, and how stepping beyond our areas of expertise
+        can reveal unexpected challenges, inspire new ideas and create
+        opportunities for collaboration.
 
 - name: "CompilerResearchCon 2026 (day 3)"
   date: 2026-11-06 17:00:00 +0100
