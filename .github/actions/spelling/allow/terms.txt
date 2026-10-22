@@ -52,6 +52,7 @@ biodynamo
 bioinformatics
 blogs
 chrono
+clangd
 cms
 codegen
 consteval
