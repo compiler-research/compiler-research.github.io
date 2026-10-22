@@ -18,12 +18,17 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
       speaker:
         name: "Peiqi Li"
       time_cest: "15:50 - 16:10"
       description: |
-        Not available yet
+        clang-tidy and the Clang Static Analyzer carry a long backlog of incorrect
+        diagnostics: false positives in widely used checks, fix-its that produce
+        broken code, and an escape heuristic that silences real leak reports. This
+        talk walks through a series of upstream fixes for these issues, the
+        integration of query-based custom checks into clangd, and the analyzer
+        patches currently in review.
 
     - title: "Not available yet"
       speaker:
