@@ -160,12 +160,23 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "Enhancing Clang Diagnostics: Lessons from Landing Warnings Upstream"
       speaker:
         name: "Aditya Medhane"
       time_cest: "17:50 - 18:10"
       description: |
-        Not available yet
+        This talk covers my fellowship work on Clang diagnostics. It follows
+        the path of enabling -Wunused-template under -Wall, from a 20-PR
+        cleanup campaign across the LLVM monorepo to its downstream impact in
+        projects like Bitcoin Core, and the false positives that surfaced in
+        the wild (such as templates used only in C++20 requires clauses) along
+        with their fixes. It also covers diagnosing conflicting internal and
+        external linkage in C (WG14 N3410), handling _Atomic types in
+        __has_unique_object_representations to support -Wsuspicious-memcmp, and
+        fixing long-standing Sema false positives and negatives (including
+        C++20 destroying delete, VLA pointer subtraction, and function-reference
+        null comparisons). I will close with lessons learned about getting
+        diagnostics accepted and kept enabled upstream.
 
     - title: "Not available yet"
       speaker:

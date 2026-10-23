@@ -230,3 +230,6 @@ SLoc
 rasterization
 DGS
 Splatting
+Bitcoin
+Wsuspicious
+Wunused
