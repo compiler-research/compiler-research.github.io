@@ -185,12 +185,18 @@
         null comparisons). I will close with lessons learned about getting
         diagnostics accepted and kept enabled upstream.
 
-    - title: "Not available yet"
+    - title: "Extending Clad for Parallel C++ and Differentiable Rendering"
       speaker:
         name: "Abdelrhman Elrawy"
       time_cest: "18:15 - 18:35"
       description: |
-        Not available yet
+        Parallel C++ and CUDA introduce challenges for automatic differentiation,
+        from concurrency to complex control flow. This talk covers my work
+        extending Clad’s support for these programs and applying it to
+        differentiable rendering. I’ll discuss threading support, compiler
+        correctness improvements, and integrating generated derivatives for
+        selected computations into a 3D Gaussian Splatting training pipeline,
+        including performance comparisons and remaining limitations.
 
     - title: "Not available yet"
       speaker:
