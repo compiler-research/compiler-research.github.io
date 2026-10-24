@@ -153,12 +153,19 @@
         writing the duplicates, redirecting a header's locations to the module
         that already has them.
 
-    - title: "Not available yet"
+    - title: "Advancing GPU infrastructure in Clad"
       speaker:
         name: "Vedant Goyal"
       time_cest: "17:25 - 17:45"
       description: |
-        Not available yet
+        This talk presents my GSoC work on Clad to build a unified and robust GPU 
+        automatic differentiation infrastructure in Clad. I will discuss integrating 
+        existing CUDA support, extending differentiation for NVIDIA Thrust through 
+        custom derivative handlers, and bringing GPU applications such as LULESH, 
+        XSBench, and the in-tree CUDA ray tracer into a unified framework. I will 
+        also cover benchmarking Clad against other AD tools. I will conclude with the 
+        key challenges and lessons learned in building a more robust and maintainable 
+        foundation for GPU automatic differentiation in Clad.
 
     - title: "Enhancing Clang Diagnostics: Lessons from Landing Warnings Upstream"
       speaker:
