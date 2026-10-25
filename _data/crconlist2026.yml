@@ -11,12 +11,18 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "Memory Ownership Design for Dynamic Python-C++ Interoperability"
       speaker:
         name: "Kerem Şahin"
       time_cest: "15:25 - 15:45"
       description: |
-        Not available yet
+        One of the things CppInterOp did not expose is
+        memory ownership behaviour of the C++ functions. Therefore
+        language binding tools such as CppJIT were not able to abstract
+        memory management when objects cross between Python and C++.
+        This talk will cover my work on CppInterOp to reflect memory ownership
+        information of C++ functions in different ways, and how we adapt these
+        new APIs in CppJIT.
 
     - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
       speaker:
@@ -216,7 +222,7 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "jank - The native Clojure dialect with seamless C++ interop"
       speaker:
         name: "Jeaye Wilkerson"
         image: "https://avatars.githubusercontent.com/u/1057635"
@@ -225,4 +231,10 @@
           dialect of Clojure on LLVM.
       time_cest: "19:05 - 19:25"
       description: |
-        Not available yet
+        jank opens the world of C++ up to the world of Clojure. We
+        get to enjoy Lisp macros, functional programming, immutable data
+        structures, and world-class interactive development with REPL protocols.
+        All of this is now available in your C++ programs, or standalone, using
+        both JIT and AOT compilation. In this talk, you'll learn about jank and
+        how it's utilizing the underlying clang-repl and CppInterOp features to
+        build an unprecedented language.
