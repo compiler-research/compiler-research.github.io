@@ -19,6 +19,10 @@
       date: 2026-08-19 16:00:00 +0200
       speaker: "Kacent Huang"
       link: "[Slides](/assets/presentations/Kacent_Clad_As_Torch_Engine_Midterm.pdf)"
+    - title: "Mid-Term: On-Demand Parsing in Clang"
+      date: 2026-08-12 16:00:00 +0200
+      speaker: "Vipul Cariappa"
+      link: "[Slides](/assets/presentations/VipulCariappa_OnDemandParsingInClang_MidTermPresentation.pdf)"
     - title: "Midterm: Consolidate and Advance the GPU infrastructure in Clad"
       date: 2026-08-05 16:00:00 +0200
       speaker: "Vedant Goyal"
