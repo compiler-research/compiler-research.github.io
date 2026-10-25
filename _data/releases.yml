@@ -1,3 +1,25 @@
+- date: 2026-10-14
+  codebase: "RAMTools"
+  version: "v0.1.0"
+  description: |
+    RAMTools 0.1.0 is the first tagged release of RAMTools, which stores
+    aligned sequencing reads from SAM and BAM files in ROOT's RNTuple columnar
+    format. The project began in 2017 at CERN openlab as a format stored in
+    ROOT's TTree; this release is its rewrite on RNTuple, and the TTree backend
+    is gone. It ships `samtoramntuple` and `bamtoramntuple` (BAM through
+    htslib), both with `-threads N` and `-compression N`, and `-split` for one
+    file per reference; `ramdump`, which writes a file or a region of it back
+    out as SAM and takes the `samtools view` options `-h`, `-H`, `-c`, `-f`,
+    `-F` and `-o`; and `ramntupleview`, which times region queries. A region
+    query finds its records by binary search over the positions of a
+    coordinate-sorted file and decides overlap by each read's CIGAR span.
+    Opening a file no longer starts ROOT's interpreter: on 2 million records,
+    counting a 10 Mb region went from 0.59 s and 150 MB to 0.26 s and 19 MB.
+    ROOT 6.38 is the minimum version. The release is licensed under Apache 2.0
+    and archived on Zenodo (DOI 10.5281/zenodo.23362910). For details, please
+    refer to the release notes.
+  link: "https://github.com/compiler-research/ramtools/releases/tag/v0.1.0"
+
 - date: 2026-09-28
   codebase: "Clad"
   version: "v2.5"
