@@ -81,12 +81,23 @@
   connect: "Not available yet"
   label: crcon26_part_2
   agenda:
-    - title: "Not available yet"
+    - title: "On-Demand Parsing in Clang"
       speaker:
         name: "Vipul Cariappa"
       time_cest: "15:00 - 15:20"
       description: |
-        Not available yet
+        A typical C++ translation unit includes a large number of headers, yet
+        only a small fraction of the declarations they contain is ever used.
+        Clang still parses all of it eagerly, spending time and memory on code
+        that never reaches the final binary. This talk presents a prototype of
+        on-demand parsing in Clang, where the bodies of function and class
+        definitions are skipped during the initial pass, their token ranges are
+        recorded on the declaration, and parsing is resumed lazily the first
+        time the definition is actually needed. I will walk through how this is
+        wired into the parser and problems faced during implementation,
+        the benchmarks used to measure compilation time and peak memory against
+        upstream Clang, the results the prototype achieves so far, and the work
+        still ahead.
 
     - title: "Not available yet"
       speaker:
