@@ -10,26 +10,26 @@
       time_cest: "15:00 - 15:20"
       description: |
         CppJIT is an automatic Python–C++ interoperability layer and bindings
-        generator, built on Clang and LLVM. This talk traces my work over the
-        last three years on CppJIT, CppInterOp, ROOT, and LLVM: extending Numba
-        support, exposing AST-based reflection, modernizing the CPython
-        extension, upgrading ROOT's wrapper generation system, building a runtime
-        library dispatch mechanism, and recently, upstreaming enhancements to
-        clang-repl's CUDA support. Along the way, I was responsible for
-        delivering a major undertaking: the migration of ROOT's legacy type
-        system and Python bindings to CppInterOp and CppJIT.
+        generator, built on Clang and LLVM. This talk presents my work over the
+        last three years on CppJIT, CppInterOp, ROOT, and LLVM: Numba support,
+        AST-based reflection, CPython extension modernization, wrapper code
+        generation (JitCall), runtime library dispatch, and recently,
+        enhancements to clang-repl's CUDA support. On the ROOT side, I was
+        responsible for migrating the legacy type system and Python
+        interoperability layer to CppInterOp and CppJIT, a major undertaking
+        delivered in the latest release.
 
-        This was done with the goal of developing the next generation of
-        Python–C++ interoperability based on cppyy, taking it from research to
+        With the goal of developing the next generation of Python–C++
+        interoperability based on cppyy, CppJIT went from research to
         production — into ROOT at CERN, where it now supports LHC experiment
-        code, as well as other sciences and communities as a general-purpose
+        code, and beyond to other sciences and communities as a general-purpose
         Python library.
 
-        I'll then go over ongoing developments in CppJIT's GPU support for HPC
-        and scientific computing. These include zero-copy interoperability with
-        foreign device arrays, CUDA streams, and graphs from CuPy and cuda.core,
-        demonstrated in a GPU-accelerated topological data analysis of the cosmic
-        web.
+        I'll walk through my ongoing work on the upcoming CppJIT GPU support for
+        HPC and scientific applications: kernel expression support, zero-copy
+        interoperability with foreign device arrays, CUDA streams, and graphs
+        from CuPy and cuda.core, demonstrated in a topological data analysis of
+        the cosmic web.
 
     - title: "Memory Ownership Design for Dynamic Python-C++ Interoperability"
       speaker:
