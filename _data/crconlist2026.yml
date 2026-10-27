@@ -74,12 +74,18 @@
         performance regressions, and how these discoveries created a feedback loop
         that exposed even more areas for optimization.
 
-    - title: "Not available yet"
+    - title: "Cross-language Debugging Support"
       speaker:
         name: "Emery Conrad"
       time_cest: "17:05 - 17:25"
       description: |
-        Not available yet
+        At Chicago Trading Company, we are eagerly investing in the future of
+        `cppjit` and `CppInterOp`, and have built an ecosystem that makes use of these
+        technologies in non-trivial ways. To support users of this ecosystem, we have
+        added debugging support that attempts to make debugging "just work" across the
+        Python/C++ boundary, and have pushed an experimental version of this upstream
+        to `cppjit` and `CppInterOp`. Today we will walk through what that looks like
+        in VSCode.
 
     - title: "Compiler-Research: State of the Union"
       speaker:
