@@ -79,6 +79,7 @@ In CARTopiaX, oxygen flows in from the border of the cylinder (3000 µm) and is 
 
 <img src="/images/blog/cartopiax/oxygen_profile_comparison.png" alt="Oxygen profile comparison" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
 <p style="text-align: center;"><i>Left: oxygen profile reported by Ando et al. (2019). Right: CARTopiaX oxygen profile at minute 1440 (24 hours).</i></p>
+
 ### No treatment, without cap (normoxia)
 
 Without the cap, oxygen can enter the whole tumor, so the environmental conditions are perfectly symmetric and **cell death is uniform** across the tumor. The absolute number of dead cells grows with the radius only because outer rings are larger, as the area-normalized plot shows.
