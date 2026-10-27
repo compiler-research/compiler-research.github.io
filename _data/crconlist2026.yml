@@ -215,12 +215,21 @@
         selected computations into a 3D Gaussian Splatting training pipeline,
         including performance comparisons and remaining limitations.
 
-    - title: "Not available yet"
+    - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology"
       speaker:
         name: "Salvador de la Torre Gonzalez"
       time_cest: "18:40 - 19:00"
       description: |
-        Not available yet
+        CAR T-cell therapy has transformed the treatment of blood cancers, but it still struggles in solid tumors, 
+        where robust simulation models remain scarce. CARTopiaX is an open-source agent-based model built on BioDynaMo 
+        that simulates the interactions between tumor cells and CAR T-cells, enabling in silico hypothesis testing of 
+        CAR T-cell therapies. In this Google Summer of Code 2026 project, CARTopiaX was extended to replicate a 
+        state-of-the-art wet-lab experiment of CAR T-cell therapy in a hypoxic 3D tumor model. This required a new tumor 
+        geometry, glucose as a new nutrient, and new cell behaviors, together with a Bayesian optimization tool to 
+        calibrate the model against experimental data. The extended model reproduces the key trends of the experiment and 
+        offers an in silico explanation of the “non-contact” killing of cancer cells observed by the authors: competition 
+        between CAR T-cells and cancer cells for glucose and oxygen. These results demonstrate CARTopiaX as a flexible 
+        platform for fast, low-cost hypothesis testing in CAR T-cell research.
 
     - title: "jank - The native Clojure dialect with seamless C++ interop"
       speaker:
