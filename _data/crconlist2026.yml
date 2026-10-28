@@ -56,12 +56,14 @@
         integration of query-based custom checks into clangd, and the analyzer
         patches currently in review.
 
-    - title: "Not available yet"
+    - title: "Implementing Missing C and C++ Language Features in Clang"
       speaker:
         name: "Muhammad Bassiouni"
       time_cest: "16:15 - 16:35"
       description: |
-        Not available yet
+        This talk covers my fellowship work on implementing missing C and C++
+        language features in Clang. I will walk through what landed upstream,
+        and what got blocked along the way and why, and how it impacted Clang.
 
     - title: "Improving Clang Performance"
       speaker:
