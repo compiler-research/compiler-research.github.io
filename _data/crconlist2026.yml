@@ -138,12 +138,22 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "What Particle Physics Can Teach Genomics: Scaling RAMtools with ROOT's RNTuple"
       speaker:
         name: "Jeffrey Zhang"
       time_cest: "15:50 - 16:10"
       description: |
-        Not available yet
+        A single sequenced human genome can occupy hundreds of gigabytes, and
+        GeneROOT explores whether ROOT's columnar RNTuple format, built for LHC
+        data, can store and query genomic data at scale. This talk presents my
+        work on RAMtools, focusing on two questions: how do we measure it
+        fairly, and how small can we make it? I will first cover a reproducible
+        benchmark suite that replaces a single low-coverage sample with Genome
+        in a Bottle datasets, tracks memory usage, and compares RNTuple against
+        SAM, BAM, and CRAM. I will then discuss compressing quality scores,
+        evaluating modern schemes beyond Illumina 8-binning, and how they trade
+        accuracy for size. I will close with the results and open questions such
+        as per-column compression in ROOT.
 
     - title: "Not available yet"
       speaker:
