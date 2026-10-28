@@ -152,8 +152,7 @@
         in a Bottle datasets, tracks memory usage, and compares RNTuple against
         SAM, BAM, and CRAM. I will then discuss compressing quality scores,
         evaluating modern schemes beyond Illumina 8-binning, and how they trade
-        accuracy for size. I will close with the results and open questions such
-        as per-column compression in ROOT.
+        accuracy for size.
 
     - title: "Not available yet"
       speaker:
