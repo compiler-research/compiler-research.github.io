@@ -2,7 +2,7 @@
   date: 2026-11-03 15:00:00 +0100
   time_cest: "15:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  label: crcon26_part_1
+  label: crcon26_day_1
   agenda:
     - title: "CppJIT: Automatic Python–C++ Interoperability, from Research to Production"
       speaker:
@@ -110,8 +110,8 @@
 - name: "CompilerResearchCon 2026 (day 2)"
   date: 2026-11-04 15:00:00 +0100
   time_cest: "15:00"
-  connect: "Not available yet"
-  label: crcon26_part_2
+  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
+  label: crcon26_day_2
   agenda:
     - title: "On-Demand Parsing in Clang"
       speaker:
@@ -191,8 +191,8 @@
 - name: "CompilerResearchCon 2026 (day 3)"
   date: 2026-11-06 17:00:00 +0100
   time_cest: "17:00"
-  connect: "Not available yet"
-  label: crcon26_part_3
+  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
+  label: crcon26_day_3
   agenda:
     - title: "One Copy Is Enough: Deduplicating Source Locations in Clang Modules"
       speaker:
