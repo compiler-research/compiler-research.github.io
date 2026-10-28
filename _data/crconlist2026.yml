@@ -159,7 +159,11 @@
         name: "Martin Vassilev"
       time_cest: "16:15 - 16:35"
       description: |
-        Not available yet
+        RAMTools stores aligned sequencing reads, the SAM and BAM files of genomics, in ROOT's RNTuple, so that a question about a few fields reads only those columns.
+        The talk briefly introduces the tool, from its start at CERN openlab to the 0.1.0 release, and then presents the work since.
+        Typed columns for tags and mate fields, together with CRAM 3.1's codecs for read names and quality scores, made files a third smaller.
+        Every read still comes back exactly as samtools prints it, and statistics such as flagstat run several times faster than on BAM or CRAM.
+        We show how the results are made reproducible on any machine and close with the next steps: reference-based sequence encoding, an htslib plugin, a stable 1.0 format, and a first experiment with Clad gradients.
 
     - title: "Not available yet"
       speaker:
