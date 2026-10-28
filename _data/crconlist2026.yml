@@ -2,14 +2,34 @@
   date: 2026-11-03 15:00:00 +0100
   time_cest: "15:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  label: crcon26_part_1
+  label: crcon26_day_1
   agenda:
-    - title: "Not available yet"
+    - title: "CppJIT: Automatic Python–C++ Interoperability, from Research to Production"
       speaker:
         name: "Aaron Jomy"
       time_cest: "15:00 - 15:20"
       description: |
-        Not available yet
+        CppJIT is an automatic Python–C++ interoperability layer and bindings
+        generator, built on Clang and LLVM. This talk presents my work over the
+        last three years on CppJIT, CppInterOp, ROOT, and LLVM: Numba support,
+        AST-based reflection, CPython extension modernization, wrapper code
+        generation (JitCall), runtime library dispatch, and recently,
+        enhancements to clang-repl's CUDA support. On the ROOT side, I was
+        responsible for migrating the legacy type system and Python
+        interoperability layer to CppInterOp and CppJIT, a major undertaking
+        delivered in the latest release.
+
+        With the goal of developing the next generation of Python–C++
+        interoperability based on cppyy, CppJIT went from research to
+        production — into ROOT at CERN, where it now supports LHC experiment
+        code, and beyond to other sciences and communities as a general-purpose
+        Python library.
+
+        I'll walk through my ongoing work on the upcoming CppJIT GPU support for
+        HPC and scientific applications: kernel expression support, zero-copy
+        interoperability with foreign device arrays, CUDA streams, and graphs
+        from CuPy and cuda.core, demonstrated in a topological data analysis of
+        the cosmic web.
 
     - title: "Memory Ownership Design for Dynamic Python-C++ Interoperability"
       speaker:
@@ -54,12 +74,18 @@
         performance regressions, and how these discoveries created a feedback loop
         that exposed even more areas for optimization.
 
-    - title: "Not available yet"
+    - title: "Cross-language Debugging Support"
       speaker:
         name: "Emery Conrad"
       time_cest: "17:05 - 17:25"
       description: |
-        Not available yet
+        At Chicago Trading Company, we are eagerly investing in the future of
+        `cppjit` and `CppInterOp`, and have built an ecosystem that makes use of these
+        technologies in non-trivial ways. To support users of this ecosystem, we have
+        added debugging support that attempts to make debugging "just work" across the
+        Python/C++ boundary, and have pushed an experimental version of this upstream
+        to `cppjit` and `CppInterOp`. Today we will walk through what that looks like
+        in VSCode.
 
     - title: "Compiler-Research: State of the Union"
       speaker:
@@ -84,8 +110,8 @@
 - name: "CompilerResearchCon 2026 (day 2)"
   date: 2026-11-04 15:00:00 +0100
   time_cest: "15:00"
-  connect: "Not available yet"
-  label: crcon26_part_2
+  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
+  label: crcon26_day_2
   agenda:
     - title: "On-Demand Parsing in Clang"
       speaker:
@@ -112,12 +138,21 @@
       description: |
         Not available yet
 
-    - title: "Not available yet"
+    - title: "What Particle Physics Can Teach Genomics: Scaling RAMtools with ROOT's RNTuple"
       speaker:
         name: "Jeffrey Zhang"
       time_cest: "15:50 - 16:10"
       description: |
-        Not available yet
+        A single sequenced human genome can occupy hundreds of gigabytes, and
+        GeneROOT explores whether ROOT's columnar RNTuple format, built for LHC
+        data, can store and query genomic data at scale. This talk presents my
+        work on RAMtools, focusing on two questions: how do we measure it
+        fairly, and how small can we make it? I will first cover a reproducible
+        benchmark suite that replaces a single low-coverage sample with Genome
+        in a Bottle datasets, tracks memory usage, and compares RNTuple against
+        SAM, BAM, and CRAM. I will then discuss compressing quality scores,
+        evaluating modern schemes beyond Illumina 8-binning, and how they trade
+        accuracy for size.
 
     - title: "Not available yet"
       speaker:
@@ -160,8 +195,8 @@
 - name: "CompilerResearchCon 2026 (day 3)"
   date: 2026-11-06 17:00:00 +0100
   time_cest: "17:00"
-  connect: "Not available yet"
-  label: crcon26_part_3
+  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
+  label: crcon26_day_3
   agenda:
     - title: "One Copy Is Enough: Deduplicating Source Locations in Clang Modules"
       speaker:
@@ -219,12 +254,21 @@
         selected computations into a 3D Gaussian Splatting training pipeline,
         including performance comparisons and remaining limitations.
 
-    - title: "Not available yet"
+    - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology"
       speaker:
         name: "Salvador de la Torre Gonzalez"
       time_cest: "18:40 - 19:00"
       description: |
-        Not available yet
+        CAR T-cell therapy has transformed the treatment of blood cancers, but it still struggles in solid tumors, 
+        where robust simulation models remain scarce. CARTopiaX is an open-source agent-based model built on BioDynaMo 
+        that simulates the interactions between tumor cells and CAR T-cells, enabling in silico hypothesis testing of 
+        CAR T-cell therapies. In this Google Summer of Code 2026 project, CARTopiaX was extended to replicate a 
+        state-of-the-art wet-lab experiment of CAR T-cell therapy in a hypoxic 3D tumor model. This required a new tumor 
+        geometry, glucose as a new nutrient, and new cell behaviors, together with a Bayesian optimization tool to 
+        calibrate the model against experimental data. The extended model reproduces the key trends of the experiment and 
+        offers an in silico explanation of the “non-contact” killing of cancer cells observed by the authors: competition 
+        between CAR T-cells and cancer cells for glucose and oxygen. These results demonstrate CARTopiaX as a flexible 
+        platform for fast, low-cost hypothesis testing in CAR T-cell research.
 
     - title: "jank - The native Clojure dialect with seamless C++ interop"
       speaker:
