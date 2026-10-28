@@ -245,3 +245,6 @@ cytotoxicity
 Healthc
 AOT
 Illumina
+openlab
+flagstat
+htslib
