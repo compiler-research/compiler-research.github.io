@@ -156,7 +156,7 @@
         evaluating modern schemes beyond Illumina 8-binning, and how they trade
         accuracy for size.
 
-    - title: "Not available yet"
+    - title: "Same Reads, Fewer Bytes: RAMTools since 0.1.0"
       speaker:
         name: "Martin Vassilev"
       time_cest: "16:15 - 16:35"
