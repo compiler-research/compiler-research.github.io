@@ -167,12 +167,25 @@
         Every read still comes back exactly as samtools prints it, and statistics such as flagstat run several times faster than on BAM or CRAM.
         We show how the results are made reproducible on any machine and close with the next steps: reference-based sequence encoding, an htslib plugin, a stable 1.0 format, and a first experiment with Clad gradients.
 
-    - title: "Not available yet"
+    - title: "Clad Meets PyTorch: Gradients Ahead of Time"
       speaker:
         name: "Kacent Huang"
       time_cest: "16:40 - 17:00"
       description: |
-        Not available yet
+        Clad generates derivative code while compiling C++. Can those
+        derivatives become part of a PyTorch training loop, and how much
+        runtime work can they save? This talk follows a C++ tensor function
+        into torch::autograd::Function, connecting its backward pass to a
+        Clad-generated pullback. Along the way, I will explain how we separate
+        differentiation requests from Clad's usual entry points, provide
+        derivatives for tensor operations, and connect the generated code
+        to PyTorch's autograd system.
+        I will then use a small MNIST training example to examine execution
+        time and memory use against PyTorch autograd. We will look at where
+        allocations and repeated computation remain, whether generating
+        derivatives ahead of time automatically makes training
+        faster, and which future optimizations fit naturally into Clad's existing
+        framework.
 
     - title: "Beyond the Benchmark: Finding Scientific Challenges for Computational Innovation"
       speaker:
