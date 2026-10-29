@@ -5,6 +5,7 @@
   {% assign og_image = og_image | prepend: abs_base %}
 {% endif %}
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: abs_base }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:title" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}" />
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
 <meta property="og:locale" content="en_US" />
