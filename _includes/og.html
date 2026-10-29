@@ -1,5 +1,10 @@
 <meta name="author" content="{% if page.author %} {{ page.author }} {% else %} Compiler Research Team {% endif %}" />
-<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+{% assign og_image = page.banner_image | default: page.image %}
+{% if og_image and og_image contains "://" %}
+{% elsif og_image %}
+  {% assign og_image = og_image | prepend: abs_base %}
+{% endif %}
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: abs_base }}" />
 <meta property="og:title" content="{% if page.title %}{{ page.title | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}" />
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
 <meta property="og:locale" content="en_US" />
@@ -32,13 +37,13 @@
   {% if page.ogimagenull %}
     <!-- no og image -->
   {% elsif page.banner_image %}
-    <meta property="og:image" content="{{ page.banner_image }}" />
-    <meta name="twitter:image" content="{{ page.banner_image }}" />
+    <meta property="og:image" content="{{ og_image }}" />
+    <meta name="twitter:image" content="{{ og_image }}" />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="315" />
   {% elsif page.image %}
-    <meta property="og:image" content="{{ page.image }}" />
-    <meta name="twitter:image" content="{{ page.image }}" />
+    <meta property="og:image" content="{{ og_image }}" />
+    <meta name="twitter:image" content="{{ og_image }}" />
   {% else %}
   {% endif %}
 
