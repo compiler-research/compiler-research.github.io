@@ -1,7 +1,8 @@
 ---
-title: "CompilerResearchCon"
+title: "CompilerResearchCon 2026"
 layout: gridlay
-excerpt: "CompilerResearchCon"
+excerpt: "Online, November 3, 4 and 6, 2026: talks on Clang, C++ interop with Python and beyond, automatic differentiation with Clad, and scientific computing."
+image: /images/crcon26-banner.jpg
 sitemap: false
 permalink: /crcon2026/
 ---
