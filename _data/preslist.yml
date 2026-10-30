@@ -1,3 +1,72 @@
+- title: "Compiler-Research: State of the Union"
+  description: |
+    A review of the Compiler Research group's year since CRCon25: code and releases, upstream work, organization health and risks, impact in high-energy physics, industry, life sciences and HPC, the people and programs behind the work, events, and the plan toward a Compiler Research Foundation.
+  location: "[CompilerResearchCon 2026](/crcon2026/)"
+  date: 2026-11-03
+  speaker: Vassil Vassilev
+  id: "CRCON2026SOTU"
+  highlight: 1
+
+- title: "Trust, then scale: checkable gradients in a minimal end-to-end pipeline"
+  description: |
+    End-to-end differentiability is changing how we think about analysis and
+
+    experiment design: instead of scanning parameters by brute force and tuning calibrations by hand, we can let gradients of the likelihood flow back through reconstruction, digitization, and detector response, and optimize calibrations, selections, and eventually design for the physics objective directly. However, at the scale of a full simulation-and-reconstruction stack it is hard to tell whether a given differentiable method genuinely works or only appears to: it requires a lot of work upfront, ground truth is unavailable, brute-force baselines are unaffordable, and the failure modes hide.
+
+    Our prototype deliberately reduces complexity. We have built a minimal end-to-end pipeline (generation, showering, digitization, reconstruction, likelihood) small enough that we can check every gradient by hand, yet arranged so each stage maps one-to-one onto a real subsystem, so the integration path survives. Part of the motivation is pedagogical: the coupling between calibration and physics inference is far easier to see when the whole chain fits on a screen. The stronger reason is research discipline: a small system is where we can obtain ground truth, afford the brute-force baseline, and actually prove that a method is right rather than merely plausible.
+
+    The talk is organized around what this testbed establishes, and what it does not. Where the downstream is analytic, the adjoint matches finite differences to machine precision, a coding check, not a discovery, but a necessary one. When a parameter lives inside a stochastic simulator we treat as a black box, we extract a frozen local response operator from fixed-seed runs; two independent extractions agree to well under a percent, and we can *measure* the narrow window in which that operator still tracks a brute force rerun, rather than assume it does. Within that window a joint fit recovers a parameter buried inside the simulator alongside a calibration gain, to a few percent, where the usual fix-the-nuisance-and-scan cannot reach the buried parameter at all. It does so without re-simulating at every step, taking its gradients from cached events and the frozen operator.
+
+    We are explicit about scope: this is a closed-world injection-recovery study with detector noise switched off, the operator is only locally valid and must be refreshed, and the efficiency is structural rather than a measured speedup on anything real. What we think it earns is a small, checkable object with which to reason about end-to-end optimization before paying the cost of scale, and a shared substrate for exactly the cross-domain conversation MODE convenes. We would welcome feedback from detector, reconstruction, and differentiable-programming colleagues on which of these results survive contact with their systems, and which break first.
+
+    Joint work with Jonas Rembser.
+  location: "[Sixth MODE Workshop, Crete](https://indico.cern.ch/event/1655754/contributions/7190201/)"
+  date: 2026-09-03
+  speaker: Vassil Vassilev
+  id: "MODE2026GRADIENTS"
+  artifacts: |
+    [Link to Slides](/assets/presentations/V_Vassilev-MODE2026_Checkable_Gradients.pdf)
+  highlight: 1
+
+- title: "Automatic Differentiation in CMS Combine: From Integration to Physics-Grade Fits"
+  description: |
+    At the previous MODE workshop we presented the beginning of a collaborative effort to enable automatic differentiation (AD) in CMS Combine through RooFit's Clad-based AD framework. In this talk we report on the progress made since: the integration has moved from a proof of feasibility toward a usable capability for realistic CMS statistical models.
+
+    We will discuss the RooFit-side developments that closed the gap to Combine's modeling primitives, and the Clad-side compiler work that makes the generated gradients scale: improved activity and to-be-recorded analyses that avoid worst-case tape growth on large likelihoods, and a restructured analysis pipeline informed by an audit against established AD tooling. We will also present the newly-added support for higher-order derivatives (Hessians) in RooFit with Clad.
+
+    We will present performance results on cutting-edge Higgs measurements with LHC Run-3 data, comparing AD-based minimization against numerical differentiation in fit time, minimizer robustness, and memory footprint. We will also candidly discuss what did not work: the modeling patterns that resist source transformation, the debugging and validation burden of generated gradients, and what this implies for AD adoption across the wider HEP statistics ecosystem. We aim to turn the lessons from Combine into a reusable recipe for other RooFit-based frameworks.
+
+    Joint work with Jonas Rembser.
+  location: "[Sixth MODE Workshop, Crete](https://indico.cern.ch/event/1655754/contributions/7190200/)"
+  date: 2026-09-02
+  speaker: Vassil Vassilev
+  id: "MODE2026COMBINE"
+  artifacts: |
+    [Link to Slides](/assets/presentations/V_Vassilev-MODE2026_AD_in_CMS_Combine.pdf)
+  highlight: 1
+
+- title: "Introduction to Automatic Differentiation and Differentiable Programming"
+  description: |
+    Lecture at the Eighth Computational and Data Science school for HEP (CoDaS-HEP 2026).
+  location: "[CoDaS-HEP 2026, Princeton](https://indico.cern.ch/event/1704372/contributions/7194410/)"
+  date: 2026-07-15
+  speaker: Vassil Vassilev
+  id: "CODASHEP2026AD"
+  artifacts: |
+    [Link to Slides](/assets/presentations/V_Vassilev-CoDaS-HEP2026_AD.pdf)
+  highlight: 1
+
+- title: "Performance Tuning of Scientific Software"
+  description: |
+    Lecture at the Eighth Computational and Data Science school for HEP (CoDaS-HEP 2026).
+  location: "[CoDaS-HEP 2026, Princeton](https://indico.cern.ch/event/1704372/contributions/7168536/)"
+  date: 2026-07-15
+  speaker: Vassil Vassilev
+  id: "CODASHEP2026PERF"
+  artifacts: |
+    [Link to Slides](/assets/presentations/V_Vassilev-CoDaS-HEP2026_Performance_Tuning.pdf)
+  highlight: 1
+
 - title: "Accelerated Python Tutorial: Shallow Water Equations with Python/C++ Interoperability"
   description: |
     This hands-on tutorial tours the high-performance Python landscape,
@@ -107,6 +176,17 @@
     [Link to Slides](/assets/presentations/Aaron_Vipul_Compiler_as_a_Service_CXX_goes_Live.pdf)
   highlight: 1
 
+- title: "Differentiable Programming in C++ and ROOT with Clad"
+  description: |
+    In this presentation, we make the case for differential programming in C++ for High Energy Physics. We will first introduce source code-transformation-based Automatic Differentiation (AD) with Clad, a Clang compiler plugin. Some success stories of how this is used for statistical analysis in ROOT are presented, including using Clad to differentiate through statistical likelihoods in RooFit and neural network inference with TMVA SOFIE. Finally, we are reporting on some toy studies on end-to-end differentiable analysis pipelines and how such studies could guide differentiable algorithm development and help identify the “killer app” for differentiable programming in HEP.
+  location: "[IRIS-HEP Differentiable Analysis Blueprint Workshop, CERN](https://indico.cern.ch/event/1633539/contributions/6915488/)"
+  date: 2026-03-06
+  speaker: Jonas Rembser, Vassil Vassilev
+  id: "IRISHEP2026DIFFPROG"
+  artifacts: |
+    [Link to Slides](/assets/presentations/J_Rembser_V_Vassilev-IRIS-HEP2026_Differentiable_Programming.pdf)
+  highlight: 1
+
 - title: "Teaching Automatic Differentiation with Interactive C++ Jupyter Notebooks"
   description: |
     The compiler research group pioneered interactive C++ notebooks with
@@ -183,7 +263,7 @@
   description: |
   location: "[ROOT Users CERN's Workshop 2025 in UPV-Valencia](https://indico.cern.ch/event/1505384/contributions/6781575/)"
   date: 2025-11-20
-  speaker:  Aaron Jomy, Vipul Nellamakada
+  speaker:  Aaron Jomy, Vipul Cariappa
   id: "INTEROP2025VALENCIA"
   artifacts: |
     [Link to Slides](/assets/presentations/Aaron_Vipul_ROOT_Valencia_InterOp_2025.pdf)
