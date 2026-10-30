@@ -1,12 +1,3 @@
-- title: "Compiler-Research: State of the Union"
-  description: |
-    A review of the Compiler Research group's year since CRCon25: code and releases, upstream work, organization health and risks, impact in high-energy physics, industry, life sciences and HPC, the people and programs behind the work, events, and the plan toward a Compiler Research Foundation.
-  location: "[CompilerResearchCon 2026](/crcon2026/)"
-  date: 2026-11-03
-  speaker: Vassil Vassilev
-  id: "CRCON2026SOTU"
-  highlight: 1
-
 - title: "Trust, then scale: checkable gradients in a minimal end-to-end pipeline"
   description: |
     End-to-end differentiability is changing how we think about analysis and
