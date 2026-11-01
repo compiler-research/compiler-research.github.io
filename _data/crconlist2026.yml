@@ -31,18 +31,19 @@
         from CuPy and cuda.core, demonstrated in a topological data analysis of
         the cosmic web.
 
-    - title: "Memory Ownership Design for Dynamic Python-C++ Interoperability"
+    - title: "Advancing GPU infrastructure in Clad"
       speaker:
-        name: "Kerem Şahin"
+        name: "Vedant Goyal"
       time_cest: "15:25 - 15:45"
       description: |
-        One of the things CppInterOp did not expose is
-        memory ownership behaviour of the C++ functions. Therefore
-        language binding tools such as CppJIT were not able to abstract
-        memory management when objects cross between Python and C++.
-        This talk will cover my work on CppInterOp to reflect memory ownership
-        information of C++ functions in different ways, and how we adapt these
-        new APIs in CppJIT.
+        This talk presents my GSoC work on Clad to build a unified and robust GPU 
+        automatic differentiation infrastructure in Clad. I will discuss integrating 
+        existing CUDA support, extending differentiation for NVIDIA Thrust through 
+        custom derivative handlers, and bringing GPU applications such as LULESH, 
+        XSBench, and the in-tree CUDA ray tracer into a unified framework. I will 
+        also cover benchmarking Clad against other AD tools. I will conclude with the 
+        key challenges and lessons learned in building a more robust and maintainable 
+        foundation for GPU automatic differentiation in Clad.
 
     - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
       speaker:
@@ -224,19 +225,18 @@
         writing the duplicates, redirecting a header's locations to the module
         that already has them.
 
-    - title: "Advancing GPU infrastructure in Clad"
+    - title: "Memory Ownership Design for Dynamic Python-C++ Interoperability"
       speaker:
-        name: "Vedant Goyal"
+        name: "Kerem Şahin"
       time_cest: "17:25 - 17:45"
       description: |
-        This talk presents my GSoC work on Clad to build a unified and robust GPU 
-        automatic differentiation infrastructure in Clad. I will discuss integrating 
-        existing CUDA support, extending differentiation for NVIDIA Thrust through 
-        custom derivative handlers, and bringing GPU applications such as LULESH, 
-        XSBench, and the in-tree CUDA ray tracer into a unified framework. I will 
-        also cover benchmarking Clad against other AD tools. I will conclude with the 
-        key challenges and lessons learned in building a more robust and maintainable 
-        foundation for GPU automatic differentiation in Clad.
+        One of the things CppInterOp did not expose is
+        memory ownership behaviour of the C++ functions. Therefore
+        language binding tools such as CppJIT were not able to abstract
+        memory management when objects cross between Python and C++.
+        This talk will cover my work on CppInterOp to reflect memory ownership
+        information of C++ functions in different ways, and how we adapt these
+        new APIs in CppJIT.
 
     - title: "Enhancing Clang Diagnostics: Lessons from Landing Warnings Upstream"
       speaker:
