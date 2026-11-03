@@ -105,6 +105,7 @@
           high-performance scientific computing while mentoring early-career
           researchers.
       time_cest: "17:30 - 17:55"
+      slides: /assets/presentations/V_Vassilev-CRCon26_State_of_the_Union.pdf
       description: |
         In this talk we will make an overview of the various activities around
         the compiler research initiative in terms of people, projects, code and
