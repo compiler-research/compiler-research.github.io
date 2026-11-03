@@ -135,12 +135,26 @@
         upstream Clang, the results the prototype achieves so far, and the work
         still ahead.
 
-    - title: "Not available yet"
+    - title: "Clad applied to likelihood fits with Minuit 2, RooFit, and CMS Combine"
       speaker:
         name: "Jonas Rembser"
       time_cest: "15:25 - 15:45"
       description: |
-        Not available yet
+        Likelihood fits are at the core of every LHC measurement, and the
+        gradients and Hessians that drive them are usually obtained by
+        numerical differentiation, which is slow and fragile for fits with
+        hundreds of parameters. Automatic differentiation (AD) is a natural
+        remedy. In this talk I will cover recent developments in using Clad
+        across the ROOT-based likelihood-fit ecosystem. First, I will show how
+        analytical gradients are used in the Minuit 2 minimizer, and what is
+        still missing to avoid any fallback to numerical differentiation.
+        Second, I will turn to the integration of Clad in RooFit, the
+        likelihood-building framework that uses Minuit 2 for minimization, and
+        the recent milestone of generating analytical Hessians of RooFit
+        likelihoods with Clad. Finally, I will report on the effort to enable a
+        full AD pipeline in Combine, the statistical analysis tool of the CMS
+        Collaboration at the LHC, through which Clad can reach hundreds of
+        users and save thousands of CPU hours.
 
     - title: "What Particle Physics Can Teach Genomics: Scaling RAMtools with ROOT's RNTuple"
       speaker:
