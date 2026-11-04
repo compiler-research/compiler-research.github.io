@@ -61,6 +61,7 @@
       speaker:
         name: "Muhammad Bassiouni"
       time_cest: "16:15 - 16:35"
+      slides: /assets/presentations/Muhammad_Bassiouni-CRCon26_Missing_C_and_CXX_Features_in_Clang.pdf
       description: |
         This talk covers my fellowship work on implementing missing C and C++
         language features in Clang. I will walk through what landed upstream,
