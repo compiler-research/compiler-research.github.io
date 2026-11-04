@@ -9,10 +9,12 @@ ayokunle
 backpropation
 Bassiouni
 bassiouni
+BASSIOUNI
 CALQ
 cblas
 ccache
 CLADEUROAD
+CODASHEP
 copyable
 cppalliance
 cppjit
@@ -20,6 +22,7 @@ CRROOT
 csa
 CTAD
 demangling
+DIFFPROG
 EDSLs
 elidable
 ellint
@@ -42,6 +45,7 @@ gtest
 HENP
 ibrahim
 inp
+IRISHEP
 jank
 Karpathy
 kinda
@@ -80,11 +84,14 @@ rootcling
 rtti
 sgemm
 sema
+SOFIE
+SOTU
 stdexec
 supportpassing
 sustainability
 TEACHINGADEUROAD
 Thapar
+TMVA
 transitioning
 triaging
 TUs

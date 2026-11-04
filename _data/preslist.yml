@@ -1,3 +1,14 @@
+- title: "Implementing Missing C and C++ Language Features in Clang"
+  description: |
+    An overview of the C++ Alliance fellowship work on implementing missing C and C++ language features in Clang: C2y N3356 (declarations in if and switch conditions), which landed upstream; C++20 CTAD for alias templates and C++26 constexpr math, which got blocked and why; and C++29 P3668R4 (defaulted postfix increment and decrement), which has a PR filed.
+  location: "[CompilerResearchCon 2026](/crcon2026/)"
+  date: 2026-11-03
+  speaker: Muhammad Bassiouni
+  id: "CRCON2026BASSIOUNI"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Muhammad_Bassiouni-CRCon26_Missing_C_and_CXX_Features_in_Clang.pdf)
+  highlight: 1
+
 - title: "Compiler-Research: State of the Union"
   description: |
     A review of the Compiler Research group's year since CRCon25: code and releases, upstream work, organization health and risks, impact in high-energy physics, industry, life sciences and HPC, the people and programs behind the work, events, and the plan toward a Compiler Research Foundation.
