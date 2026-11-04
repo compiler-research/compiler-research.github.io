@@ -122,6 +122,7 @@
       speaker:
         name: "Vipul Cariappa"
       time_cest: "15:00 - 15:20"
+      slides: /assets/presentations/VipulCariappa-CRCon26-OnDemandParsingInClang.pdf  
       description: |
         A typical C++ translation unit includes a large number of headers, yet
         only a small fraction of the declarations they contain is ever used.
