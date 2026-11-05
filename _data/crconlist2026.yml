@@ -142,6 +142,7 @@
       speaker:
         name: "Jonas Rembser"
       time_cest: "15:25 - 15:45"
+      slides: /assets/presentations/2026-11-04-crcon-clad-likelihood-fits.pdf
       description: |
         Likelihood fits are at the core of every LHC measurement, and the
         gradients and Hessians that drive them are usually obtained by

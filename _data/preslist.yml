@@ -20,6 +20,17 @@
     [Link to Slides](/assets/presentations/Muhammad_Bassiouni-CRCon26_Missing_C_and_CXX_Features_in_Clang.pdf)
   highlight: 1
 
+- title: "Clad applied to likelihood fits with Minuit 2, RooFit, and CMS Combine"
+  description: |
+    Likelihood fits are at the core of every LHC measurement, and the gradients and Hessians that drive them are usually obtained by numerical differentiation, which is slow and fragile for fits with hundreds of parameters. Automatic differentiation (AD) is a natural remedy. This talk covers recent developments in using Clad across the ROOT-based likelihood-fit ecosystem: how analytical gradients are used in the Minuit 2 minimizer and what is still missing to avoid any fallback to numerical differentiation, the integration of Clad in RooFit and the recent milestone of generating analytical Hessians of RooFit likelihoods with Clad, and the effort to enable a full AD pipeline in Combine, the statistical analysis tool of the CMS Collaboration at the LHC, through which Clad can reach hundreds of users and save thousands of CPU hours.
+  location: "[CompilerResearchCon 2026](/crcon2026/)"
+  date: 2026-11-04
+  speaker: Jonas Rembser
+  id: "CRCON2026CLADLIKELIHOODFITS"
+  artifacts: |
+    [Link to Slides](/assets/presentations/2026-11-04-crcon-clad-likelihood-fits.pdf)
+  highlight: 1
+
 - title: "Compiler-Research: State of the Union"
   description: |
     A review of the Compiler Research group's year since CRCon25: code and releases, upstream work, organization health and risks, impact in high-energy physics, industry, life sciences and HPC, the people and programs behind the work, events, and the plan toward a Compiler Research Foundation.
