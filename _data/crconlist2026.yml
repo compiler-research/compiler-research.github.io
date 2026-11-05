@@ -186,6 +186,7 @@
         derivatives ahead of time automatically makes training
         faster, and which future optimizations fit naturally into Clad's existing
         framework.
+      slides: /assets/presentations/Kacent_Huang_CRCon2026_Clad_Meets_PyTorch.pdf
 
     - title: "Beyond the Benchmark: Finding Scientific Challenges for Computational Innovation"
       speaker:
