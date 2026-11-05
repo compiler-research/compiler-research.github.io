@@ -248,3 +248,12 @@ Illumina
 openlab
 flagstat
 htslib
+creativecommons
+dcmitype
+elementwise
+frontends
+kib
+mathrm
+mnist
+xtick
+ytick
