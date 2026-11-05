@@ -71,6 +71,7 @@
       speaker:
         name: "Ezzeldin Ibrahim"
       time_cest: "16:40 - 17:00"
+      slides: /assets/presentations/Ezzeldin_Ibrahim-CRCon26_Improving_Clang_Performance.pdf
       description: |
         In this talk, I will provide an overview of my fellowship work focused
         on Clang performance optimization. I will detail the tooling used
