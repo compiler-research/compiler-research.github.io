@@ -1,0 +1,899 @@
+{
+  "metadata": {
+    "date": "2026-11-04",
+    "binaries": {
+      "base": [
+        "mnist-mm-direct-comparison/reference/LibTorchMNISTBenchmark",
+        "e65dad0b748d33834afb1126047f91bec18b4bc4ee27f748da9669e45f011fea"
+      ],
+      "mm": [
+        "tensor-direct-accumulation/reference/LibTorchMNISTBenchmark",
+        "657cf38569faf757a9baeabcf0373aff6a9e106157fcc33adac9319451734524"
+      ],
+      "reuse": [
+        "mnist-matched/benchmark/LibTorch/LibTorchMNISTBenchmark",
+        "b5085d1b0f741717b562fc5790baab476fb9e952efe8f813da824348fe9238ba"
+      ],
+      "receiver": [
+        "mnist-receiver-fix-20261104-000049/benchmark/benchmark/LibTorch/LibTorchMNISTBenchmark",
+        "94a4112c58ac44a709f35a98df8a069cfd2e3c1b1f3a8fa55601d4ae136c7f3f"
+      ]
+    },
+    "cases": {
+      "s0": [
+        "base",
+        "clad",
+        "Direct Clad baseline"
+      ],
+      "s1": [
+        "base",
+        "clad-inactive",
+        "+ no_adjoint"
+      ],
+      "s2": [
+        "mm",
+        "clad-inactive",
+        "+ addmm_"
+      ],
+      "s3": [
+        "reuse",
+        "clad-inactive",
+        "+ buffer optimizations"
+      ],
+      "s4": [
+        "receiver",
+        "clad-inactive",
+        "+ unused-adjoint fix"
+      ],
+      "native": [
+        "receiver",
+        "torch",
+        "LibTorch reference"
+      ]
+    },
+    "timing_order": [
+      [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "native"
+      ],
+      [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "native",
+        "s0"
+      ],
+      [
+        "s2",
+        "s3",
+        "s4",
+        "native",
+        "s0",
+        "s1"
+      ],
+      [
+        "s3",
+        "s4",
+        "native",
+        "s0",
+        "s1",
+        "s2"
+      ],
+      [
+        "s4",
+        "native",
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      [
+        "native",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    ],
+    "repeats": 6,
+    "cpu": 0,
+    "threads": 1,
+    "optimization": "-O3",
+    "compiler": "Clang 21.1.3",
+    "torch": "LibTorch 2.11 CPU",
+    "dtype": "FP32",
+    "batch": 128,
+    "epochs": 10,
+    "seed": 7,
+    "learning_rate": 0.05,
+    "timing_scope": "Batch copies + forward + backward + SGD; exclude data loading, shuffle preparation, evaluation and serialization",
+    "memory_scope": "New CPU Tensor storage during training; exclude pre-existing dataset/model and C++ graph metadata",
+    "baseline": "Forward already inside the root loss; native ReLU backward and real-zero zero_like in all stages.",
+    "s3_scope": "Combined elementwise accumulating kernels, owned ReLU seed reuse, and copy propagation without redundant temporary; not a copy-only ablation.",
+    "s4_scope": "Same backend as s3, with the temporary-receiver unused-adjoint compiler fix.",
+    "forward_scope": "No isolated pre-inline binary in this experiment; baseline starts after that workload change.",
+    "parameter_comparisons": {
+      "s1": "FINAL_PARAMETER_MAX_ABS=0",
+      "s2": "FINAL_PARAMETER_MAX_ABS=0",
+      "s3": "FINAL_PARAMETER_MAX_ABS=0",
+      "s4": "FINAL_PARAMETER_MAX_ABS=0",
+      "native": "FINAL_PARAMETER_MAX_ABS=0"
+    }
+  },
+  "results": {
+    "s0": {
+      "label": "Direct Clad baseline",
+      "epochs": [
+        {
+          "epoch": 1,
+          "median_seconds": 0.210959239,
+          "min_seconds": 0.196607434,
+          "max_seconds": 0.278183199,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.8841,
+          "test_loss": 0.150175388718
+        },
+        {
+          "epoch": 2,
+          "median_seconds": 0.209050874,
+          "min_seconds": 0.199049705,
+          "max_seconds": 0.248252788,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.9057,
+          "test_loss": 0.118075890732
+        },
+        {
+          "epoch": 3,
+          "median_seconds": 0.202527941,
+          "min_seconds": 0.192324172,
+          "max_seconds": 0.261567108,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.9168,
+          "test_loss": 0.104048976517
+        },
+        {
+          "epoch": 4,
+          "median_seconds": 0.214623031,
+          "min_seconds": 0.193271631,
+          "max_seconds": 0.236745476,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.9228,
+          "test_loss": 0.0955115232468
+        },
+        {
+          "epoch": 5,
+          "median_seconds": 0.2100664915,
+          "min_seconds": 0.195277723,
+          "max_seconds": 0.223726681,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.9269,
+          "test_loss": 0.090834497261
+        },
+        {
+          "epoch": 6,
+          "median_seconds": 0.199575627,
+          "min_seconds": 0.197206254,
+          "max_seconds": 0.259762207,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.931,
+          "test_loss": 0.0861309297562
+        },
+        {
+          "epoch": 7,
+          "median_seconds": 0.20572405100000002,
+          "min_seconds": 0.191798437,
+          "max_seconds": 0.247656969,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.933,
+          "test_loss": 0.0828847244263
+        },
+        {
+          "epoch": 8,
+          "median_seconds": 0.203009188,
+          "min_seconds": 0.192089157,
+          "max_seconds": 0.329842718,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.9355,
+          "test_loss": 0.08058465271
+        },
+        {
+          "epoch": 9,
+          "median_seconds": 0.2025833775,
+          "min_seconds": 0.195595965,
+          "max_seconds": 0.267409185,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.9378,
+          "test_loss": 0.0785934623718
+        },
+        {
+          "epoch": 10,
+          "median_seconds": 0.2066162855,
+          "min_seconds": 0.195149185,
+          "max_seconds": 0.217830617,
+          "peak_bytes": 1454896.0,
+          "allocated_bytes": 814040896.0,
+          "allocations": 16415.0,
+          "accuracy": 0.939,
+          "test_loss": 0.0765282817841
+        }
+      ],
+      "seconds": 2.0647361055,
+      "total_seconds_per_run": [
+        2.054262026,
+        2.082702917,
+        2.047322408,
+        1.999204778,
+        2.443586357,
+        2.181985801
+      ],
+      "peak_bytes": 1454896.0,
+      "allocated_bytes_per_epoch": 814040896.0,
+      "allocations_per_batch": 35.0,
+      "final_accuracy": 0.939
+    },
+    "s1": {
+      "label": "+ no_adjoint",
+      "epochs": [
+        {
+          "epoch": 1,
+          "median_seconds": 0.14355444950000001,
+          "min_seconds": 0.133298323,
+          "max_seconds": 0.155978914,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.8841,
+          "test_loss": 0.150175388718
+        },
+        {
+          "epoch": 2,
+          "median_seconds": 0.13851235,
+          "min_seconds": 0.134288401,
+          "max_seconds": 0.147113493,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.9057,
+          "test_loss": 0.118075890732
+        },
+        {
+          "epoch": 3,
+          "median_seconds": 0.136824143,
+          "min_seconds": 0.132090066,
+          "max_seconds": 0.150720946,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.9168,
+          "test_loss": 0.104048976517
+        },
+        {
+          "epoch": 4,
+          "median_seconds": 0.13544424049999998,
+          "min_seconds": 0.13287438,
+          "max_seconds": 0.204751143,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.9228,
+          "test_loss": 0.0955115232468
+        },
+        {
+          "epoch": 5,
+          "median_seconds": 0.136917924,
+          "min_seconds": 0.132858729,
+          "max_seconds": 0.174544944,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.9269,
+          "test_loss": 0.090834497261
+        },
+        {
+          "epoch": 6,
+          "median_seconds": 0.13528111850000002,
+          "min_seconds": 0.130756852,
+          "max_seconds": 0.143934427,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.931,
+          "test_loss": 0.0861309297562
+        },
+        {
+          "epoch": 7,
+          "median_seconds": 0.138787792,
+          "min_seconds": 0.131326063,
+          "max_seconds": 0.147311217,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.933,
+          "test_loss": 0.0828847244263
+        },
+        {
+          "epoch": 8,
+          "median_seconds": 0.137130282,
+          "min_seconds": 0.13176443,
+          "max_seconds": 0.175787017,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.9355,
+          "test_loss": 0.08058465271
+        },
+        {
+          "epoch": 9,
+          "median_seconds": 0.13525758300000001,
+          "min_seconds": 0.132790701,
+          "max_seconds": 0.169655501,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.9378,
+          "test_loss": 0.0785934623718
+        },
+        {
+          "epoch": 10,
+          "median_seconds": 0.1355931555,
+          "min_seconds": 0.132164717,
+          "max_seconds": 0.174240834,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 432915268.0,
+          "allocations": 13601.0,
+          "accuracy": 0.939,
+          "test_loss": 0.0765282817841
+        }
+      ],
+      "seconds": 1.373303038,
+      "total_seconds_per_run": [
+        1.374545949,
+        1.344039504,
+        1.368548266,
+        1.405007291,
+        1.630352048,
+        1.36088334
+      ],
+      "peak_bytes": 847664.0,
+      "allocated_bytes_per_epoch": 432915268.0,
+      "allocations_per_batch": 29.0,
+      "final_accuracy": 0.939
+    },
+    "s2": {
+      "label": "+ addmm_",
+      "epochs": [
+        {
+          "epoch": 1,
+          "median_seconds": 0.1361013645,
+          "min_seconds": 0.132109531,
+          "max_seconds": 0.167409473,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.8841,
+          "test_loss": 0.150175388718
+        },
+        {
+          "epoch": 2,
+          "median_seconds": 0.136139238,
+          "min_seconds": 0.132747746,
+          "max_seconds": 0.169325983,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.9057,
+          "test_loss": 0.118075890732
+        },
+        {
+          "epoch": 3,
+          "median_seconds": 0.142585037,
+          "min_seconds": 0.13306544,
+          "max_seconds": 0.169167519,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.9168,
+          "test_loss": 0.104048976517
+        },
+        {
+          "epoch": 4,
+          "median_seconds": 0.1359237615,
+          "min_seconds": 0.133012446,
+          "max_seconds": 0.163257347,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.9228,
+          "test_loss": 0.0955115232468
+        },
+        {
+          "epoch": 5,
+          "median_seconds": 0.137291944,
+          "min_seconds": 0.133620316,
+          "max_seconds": 0.163247614,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.9269,
+          "test_loss": 0.090834497261
+        },
+        {
+          "epoch": 6,
+          "median_seconds": 0.136043113,
+          "min_seconds": 0.132868643,
+          "max_seconds": 0.169440168,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.931,
+          "test_loss": 0.0861309297562
+        },
+        {
+          "epoch": 7,
+          "median_seconds": 0.134310971,
+          "min_seconds": 0.132424889,
+          "max_seconds": 0.169966312,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.933,
+          "test_loss": 0.0828847244263
+        },
+        {
+          "epoch": 8,
+          "median_seconds": 0.13713656549999997,
+          "min_seconds": 0.132458592,
+          "max_seconds": 0.171938589,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.9355,
+          "test_loss": 0.08058465271
+        },
+        {
+          "epoch": 9,
+          "median_seconds": 0.136966957,
+          "min_seconds": 0.132086016,
+          "max_seconds": 0.170257041,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.9378,
+          "test_loss": 0.0785934623718
+        },
+        {
+          "epoch": 10,
+          "median_seconds": 0.136220744,
+          "min_seconds": 0.132913775,
+          "max_seconds": 0.167391236,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 417555268.0,
+          "allocations": 13132.0,
+          "accuracy": 0.939,
+          "test_loss": 0.0765282817841
+        }
+      ],
+      "seconds": 1.3687196954999998,
+      "total_seconds_per_run": [
+        1.40495043,
+        1.339078291,
+        1.373230007,
+        1.352625108,
+        1.681401282,
+        1.380794186
+      ],
+      "peak_bytes": 847664.0,
+      "allocated_bytes_per_epoch": 417555268.0,
+      "allocations_per_batch": 28.0,
+      "final_accuracy": 0.939
+    },
+    "s3": {
+      "label": "+ buffer optimizations",
+      "epochs": [
+        {
+          "epoch": 1,
+          "median_seconds": 0.1342036,
+          "min_seconds": 0.129646529,
+          "max_seconds": 0.169394159,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.8841,
+          "test_loss": 0.150175388718
+        },
+        {
+          "epoch": 2,
+          "median_seconds": 0.1361615295,
+          "min_seconds": 0.130750007,
+          "max_seconds": 0.16722113,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9057,
+          "test_loss": 0.118075890732
+        },
+        {
+          "epoch": 3,
+          "median_seconds": 0.137576442,
+          "min_seconds": 0.128471787,
+          "max_seconds": 0.163184846,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9168,
+          "test_loss": 0.104048976517
+        },
+        {
+          "epoch": 4,
+          "median_seconds": 0.1342545435,
+          "min_seconds": 0.132171434,
+          "max_seconds": 0.165316369,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9228,
+          "test_loss": 0.0955115232468
+        },
+        {
+          "epoch": 5,
+          "median_seconds": 0.133754691,
+          "min_seconds": 0.130035223,
+          "max_seconds": 0.169738376,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9269,
+          "test_loss": 0.090834497261
+        },
+        {
+          "epoch": 6,
+          "median_seconds": 0.13637886449999997,
+          "min_seconds": 0.128756517,
+          "max_seconds": 0.163701992,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.931,
+          "test_loss": 0.0861309297562
+        },
+        {
+          "epoch": 7,
+          "median_seconds": 0.139722584,
+          "min_seconds": 0.133145836,
+          "max_seconds": 0.166770457,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.933,
+          "test_loss": 0.0828847244263
+        },
+        {
+          "epoch": 8,
+          "median_seconds": 0.136086342,
+          "min_seconds": 0.133430908,
+          "max_seconds": 0.17274065,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9355,
+          "test_loss": 0.08058465271
+        },
+        {
+          "epoch": 9,
+          "median_seconds": 0.13666133800000002,
+          "min_seconds": 0.134012771,
+          "max_seconds": 0.201899811,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9378,
+          "test_loss": 0.0785934623718
+        },
+        {
+          "epoch": 10,
+          "median_seconds": 0.13831704449999999,
+          "min_seconds": 0.130887905,
+          "max_seconds": 0.166274848,
+          "peak_bytes": 847664.0,
+          "allocated_bytes": 415155268.0,
+          "allocations": 12663.0,
+          "accuracy": 0.939,
+          "test_loss": 0.0765282817841
+        }
+      ],
+      "seconds": 1.363116979,
+      "total_seconds_per_run": [
+        1.397323058,
+        1.3873123520000001,
+        1.337994973,
+        1.3650589069999999,
+        1.706242638,
+        1.353119855
+      ],
+      "peak_bytes": 847664.0,
+      "allocated_bytes_per_epoch": 415155268.0,
+      "allocations_per_batch": 27.0,
+      "final_accuracy": 0.939
+    },
+    "s4": {
+      "label": "+ unused-adjoint fix",
+      "epochs": [
+        {
+          "epoch": 1,
+          "median_seconds": 0.1354589865,
+          "min_seconds": 0.132947777,
+          "max_seconds": 0.147409102,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.8841,
+          "test_loss": 0.150175388718
+        },
+        {
+          "epoch": 2,
+          "median_seconds": 0.134908781,
+          "min_seconds": 0.13153067,
+          "max_seconds": 0.166371237,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.9057,
+          "test_loss": 0.118075890732
+        },
+        {
+          "epoch": 3,
+          "median_seconds": 0.13446509,
+          "min_seconds": 0.129883012,
+          "max_seconds": 0.166037471,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.9168,
+          "test_loss": 0.104048976517
+        },
+        {
+          "epoch": 4,
+          "median_seconds": 0.13382887,
+          "min_seconds": 0.13224152,
+          "max_seconds": 0.18052902,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.9228,
+          "test_loss": 0.0955115232468
+        },
+        {
+          "epoch": 5,
+          "median_seconds": 0.138549453,
+          "min_seconds": 0.131098694,
+          "max_seconds": 0.160325289,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.9269,
+          "test_loss": 0.090834497261
+        },
+        {
+          "epoch": 6,
+          "median_seconds": 0.14114046349999998,
+          "min_seconds": 0.130900873,
+          "max_seconds": 0.16192296,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.931,
+          "test_loss": 0.0861309297562
+        },
+        {
+          "epoch": 7,
+          "median_seconds": 0.1364633825,
+          "min_seconds": 0.128809214,
+          "max_seconds": 0.16745868,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.933,
+          "test_loss": 0.0828847244263
+        },
+        {
+          "epoch": 8,
+          "median_seconds": 0.132672036,
+          "min_seconds": 0.129159489,
+          "max_seconds": 0.190798608,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.9355,
+          "test_loss": 0.08058465271
+        },
+        {
+          "epoch": 9,
+          "median_seconds": 0.1350161345,
+          "min_seconds": 0.131732944,
+          "max_seconds": 0.155719005,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.9378,
+          "test_loss": 0.0785934623718
+        },
+        {
+          "epoch": 10,
+          "median_seconds": 0.1343613585,
+          "min_seconds": 0.132114413,
+          "max_seconds": 0.157011286,
+          "peak_bytes": 809772.0,
+          "allocated_bytes": 397393392.0,
+          "allocations": 11256.0,
+          "accuracy": 0.939,
+          "test_loss": 0.0765282817841
+        }
+      ],
+      "seconds": 1.3568645555,
+      "total_seconds_per_run": [
+        1.3570972159999999,
+        1.34223894,
+        1.324937392,
+        1.368094595,
+        1.650227367,
+        1.400844845
+      ],
+      "peak_bytes": 809772.0,
+      "allocated_bytes_per_epoch": 397393392.0,
+      "allocations_per_batch": 24.0,
+      "final_accuracy": 0.939
+    },
+    "native": {
+      "label": "LibTorch reference",
+      "epochs": [
+        {
+          "epoch": 1,
+          "median_seconds": 0.1599557225,
+          "min_seconds": 0.148755284,
+          "max_seconds": 0.197099222,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.8841,
+          "test_loss": 0.150175388718
+        },
+        {
+          "epoch": 2,
+          "median_seconds": 0.15551859499999998,
+          "min_seconds": 0.149815836,
+          "max_seconds": 0.174508949,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9057,
+          "test_loss": 0.118075890732
+        },
+        {
+          "epoch": 3,
+          "median_seconds": 0.15403385149999999,
+          "min_seconds": 0.149273743,
+          "max_seconds": 0.196947229,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9168,
+          "test_loss": 0.104048976517
+        },
+        {
+          "epoch": 4,
+          "median_seconds": 0.1587340625,
+          "min_seconds": 0.149956272,
+          "max_seconds": 0.19936774,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9228,
+          "test_loss": 0.0955115232468
+        },
+        {
+          "epoch": 5,
+          "median_seconds": 0.1583614705,
+          "min_seconds": 0.148403588,
+          "max_seconds": 0.19229027,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9269,
+          "test_loss": 0.090834497261
+        },
+        {
+          "epoch": 6,
+          "median_seconds": 0.1557253235,
+          "min_seconds": 0.150800974,
+          "max_seconds": 0.192517544,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.931,
+          "test_loss": 0.0861309297562
+        },
+        {
+          "epoch": 7,
+          "median_seconds": 0.168892137,
+          "min_seconds": 0.151519771,
+          "max_seconds": 0.197181298,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.933,
+          "test_loss": 0.0828847244263
+        },
+        {
+          "epoch": 8,
+          "median_seconds": 0.1655109335,
+          "min_seconds": 0.146034548,
+          "max_seconds": 0.193593153,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9355,
+          "test_loss": 0.08058465271
+        },
+        {
+          "epoch": 9,
+          "median_seconds": 0.16258036850000002,
+          "min_seconds": 0.153660054,
+          "max_seconds": 0.191815559,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.9378,
+          "test_loss": 0.0785934623718
+        },
+        {
+          "epoch": 10,
+          "median_seconds": 0.16361503300000002,
+          "min_seconds": 0.150104769,
+          "max_seconds": 0.195728576,
+          "peak_bytes": 642864.0,
+          "allocated_bytes": 377248400.0,
+          "allocations": 12663.0,
+          "accuracy": 0.939,
+          "test_loss": 0.0765282817841
+        }
+      ],
+      "seconds": 1.6029274975,
+      "total_seconds_per_run": [
+        1.602784573,
+        1.552627858,
+        1.52033444,
+        1.5833807579999999,
+        1.784166,
+        1.903444438
+      ],
+      "peak_bytes": 642864.0,
+      "allocated_bytes_per_epoch": 377248400.0,
+      "allocations_per_batch": 27.0,
+      "final_accuracy": 0.939
+    }
+  }
+}
