@@ -1,3 +1,18 @@
+- title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
+  description: |
+    clang-tidy and the Clang Static Analyzer both have a backlog of diagnostics
+    that are wrong in practice: false positives, missed bugs, and fix-its that
+    break code. The talk goes through the fixes that landed upstream, the
+    clangd work that brings custom checks into the editor, and three analyzer
+    patches still in review.
+  location: "[CompilerResearchCon 2026](/crcon2026/)"
+  date: 2026-11-03
+  speaker: Peiqi Li
+  id: "CRCON2026PEIQI"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Peiqi_Li-CRCon26_Process_High-Impact_clang-tidy_and_Clang_Static_Analyzer.pdf)
+  highlight: 1
+
 - title: "Improving Clang Performance"
   description: |
     An overview of my fellowship work focused on Clang performance optimization: the tooling used to benchmark compilation speeds, the approach to finding and fixing performance regressions, and how these discoveries created a feedback loop that exposed even more areas for optimization.
