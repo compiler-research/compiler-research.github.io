@@ -49,6 +49,7 @@
       speaker:
         name: "Peiqi Li"
       time_cest: "15:50 - 16:10"
+      slides: /assets/presentations/Peiqi_Li-CRCon26_Process_High-Impact_clang-tidy_and_Clang_Static_Analyzer.pdf
       description: |
         clang-tidy and the Clang Static Analyzer carry a long backlog of incorrect
         diagnostics: false positives in widely used checks, fix-its that produce

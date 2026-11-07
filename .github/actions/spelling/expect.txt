@@ -14,6 +14,7 @@ CALQ
 cblas
 ccache
 CLADEUROAD
+CLADLIKELIHOODFITS
 CLANGPERF
 CODASHEP
 copyable
@@ -70,6 +71,7 @@ NOLINT
 optimizing
 Peiqi
 peiqi
+PEIQI
 pld
 previndex
 pubtit
