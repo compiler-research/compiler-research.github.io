@@ -1,3 +1,18 @@
+- title: "Memory Ownership Design for Dynamic Python-C++ Interoperability"
+  description: |
+    CppInterOp did not expose the memory ownership behaviour of C++ functions,
+    so language binding tools such as CppJIT could not abstract memory
+    management when objects cross between Python and C++. The talk covers the
+    CppInterOp work that reflects ownership information of C++ functions in
+    different ways, and how CppJIT adopts these new APIs.
+  location: "[CompilerResearchCon 2026](/crcon2026/)"
+  date: 2026-11-06
+  speaker: Kerem Şahin
+  id: "CRCON2026KEREM"
+  artifacts: |
+    [Link to Slides](/assets/presentations/2026-11-06-crcon-kerem.pdf)
+  highlight: 1
+
 - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
   description: |
     clang-tidy and the Clang Static Analyzer both have a backlog of diagnostics
