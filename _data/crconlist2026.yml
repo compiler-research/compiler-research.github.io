@@ -250,6 +250,7 @@
       speaker:
         name: "Kerem Şahin"
       time_cest: "17:25 - 17:45"
+      slides: /assets/presentations/2026-11-06-crcon-kerem.pdf
       description: |
         One of the things CppInterOp did not expose is
         memory ownership behaviour of the C++ functions. Therefore
