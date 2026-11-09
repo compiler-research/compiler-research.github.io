@@ -1,3 +1,21 @@
+- date: 2026-11-09
+  codebase: "CppInterOp"
+  version: "v2.0.0"
+  description: |
+    CppInterOp 2.0.0 is a major release that makes the library's interface safer
+    and easier to bind. The whole public API is now defined once in TableGen,
+    which generates the C++ declarations, the dispatch table and the C API. The
+    untyped void* handles are replaced by distinct types such as DeclRef,
+    TypeRef and FuncRef, so passing the wrong kind of handle no longer compiles.
+    This change, along with a few signature updates such as Evaluate now
+    returning a typed Cpp::Box, requires existing clients to update their code.
+    The release adds MakeVTableOverlay, which lets bindings such as cppyy
+    override C++ virtual methods from another language at run time. It also
+    brings crash reproducers that record API calls into a compilable file when
+    CPPINTEROP_LOG is set, memory and ownership analysis, support for C++23
+    explicit object parameters, Clad as an interpreter plugin, and new
+    introspection queries for cppyy and numba. CppInterOp 2.0.0 supports LLVM
+    21 to 23 and comes from 227 commits by nine contributors.
 - date: 2026-10-14
   codebase: "RAMTools"
   version: "v0.1.0"
