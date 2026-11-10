@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "Final presentation: Optimize Usage of Source Locations in Clang Modules"
+      date: 2026-11-06 17:00:00 +0100
+      speaker: "Ayokunle Amodu"
+      link: "[Slides](/assets/presentations/Ayokunle_Amodu_CppAllliance_Final_Presentation.html)"
     - title: "Final presentation: Implement Missing C++26 Features in Clang"
       date: 2026-10-21 16:00:00 +0200
       speaker: "Muhammad Bassiouni"
