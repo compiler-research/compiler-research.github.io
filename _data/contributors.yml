@@ -514,18 +514,18 @@
       proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2025.pdf
       mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque, Tobias Duswald
     - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology"
-      status: Ongoing
+      status: Completed
       description: |
-        This project proposes a comprehensive strategy to extend the CARTopiaX platform within BioDynaMo to
-        replicate a wider range of in vitro observations relevant to CAR T-cell therapy in solid tumors. By
-        incorporating additional agents, microenvironmental factors and interaction rules, combined with
-        robust parameter calibration strategies such as Bayesian optimization and evolutionary algorithms,
-        the enhanced model aims to capture critical dynamics that influence therapeutic outcomes, providing
-        a flexible and powerful tool for in silico hypothesis testing. If successful, the extended CARTopiaX
-        model will serve as a reliable platform for exploring CAR T-cell therapies and has the potential to
-        generate high-impact insights in computational cancer biology. By bridging experimental data with
-        predictive modeling, the project could accelerate the translation of in silico findings into actionable
-        guidance for experimental and clinical research.
+        This project extended CARTopiaX, an agent-based model built on BioDynaMo, to reproduce a published
+        in vitro study of CAR T-cell therapy in a hypoxic 3D tumor model (Ando et al., 2019). The model was
+        extended with a new cylindrical tumor geometry, controllable oxygen gradients, glucose as a new
+        diffusing nutrient, and new cell behaviors, including metabolic competition between CAR T-cells and
+        cancer cells. A Bayesian optimization tool (Optuna, TPE) was also added to calibrate model parameters
+        against experimental data while minimizing the number of expensive simulations. The extended model
+        reproduces the key trends of the study, including emergent behaviors, and offers an in silico
+        explanation of the observed "non-contact mediated" CAR T-cell cytotoxicity using quantities that are
+        hard to measure in the lab, such as death causes per radius. This demonstrates CARTopiaX as a flexible
+        platform for fast, low-cost in silico hypothesis testing in CAR T-cell research.
       proposal: /assets/docs/de_la_torre_gonzalez_salvador_proposal_gsoc_2026.pdf
       mentors: Vassil Vassilev, Lukas Breitwieser, Luciana Melina Luque
 

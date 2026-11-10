@@ -1,7 +1,8 @@
 ---
-title: "CompilerResearchCon"
+title: "CompilerResearchCon 2026"
 layout: gridlay
-excerpt: "CompilerResearchCon"
+excerpt: "Online, November 3, 4 and 6, 2026: talks on Clang, C++ interop with Python and beyond, automatic differentiation with Clad, and scientific computing."
+image: /images/crcon26-banner.jpg
 sitemap: false
 permalink: /crcon2026/
 ---
@@ -42,9 +43,14 @@ or follow us on [LinkedIn](https://www.linkedin.com/groups/9579649/).</i>
     {% else %}
       {% assign talk_id = forloop.index | prepend: "_" | prepend: crcon.label %}
     {% endif %}
-    <li id="{{talk_id}}" style="scroll-margin-top: 80px;">
+    <li id="{{talk_id}}">
       <a style="text-decoration:none;" href="#{{talk_id}}">{{item.time_cest}}</a>
-      {% if item.title %} <strong>"{{item.title}}"</strong>{% endif %}
+      {% if item.speaker.first %}
+        {% assign speaker_name = item.speaker.name %}
+      {% else %}
+        {% assign speaker_name = item.speaker %}
+      {% endif %}
+      {% if item.title %} <strong>"{{item.title}}"</strong>{% endif %}{% if speaker_name %}, <em>{{ speaker_name }}</em>{% endif %}
       {% if item.description %}
         <br /> <i>Abstract:</i>{{item.description | markdownify }}
       {% endif %}

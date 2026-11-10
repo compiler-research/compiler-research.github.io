@@ -215,14 +215,6 @@ firstp {
   background-color: #292929c7 !important; /* Custom Button hover color */
 }
 
-/* fix in-page anchors to not be behind fixed header */
-:target:before {
-  content: "";
-  display: block;
-  height: 50px; /* navbar height */
-  margin: -50px 0 0;
-}
-
 .author-image {
   border-radius: 50%;
   width: 32px;

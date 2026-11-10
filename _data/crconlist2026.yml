@@ -2,49 +2,96 @@
   date: 2026-11-03 15:00:00 +0100
   time_cest: "15:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
-  label: crcon26_part_1
+  label: crcon26_day_1
   agenda:
-    - title: "Not available yet"
+    - title: "CppJIT: Automatic Python–C++ Interoperability, from Research to Production"
       speaker:
         name: "Aaron Jomy"
       time_cest: "15:00 - 15:20"
       description: |
-        Not available yet
+        CppJIT is an automatic Python–C++ interoperability layer and bindings
+        generator, built on Clang and LLVM. This talk presents my work over the
+        last three years on CppJIT, CppInterOp, ROOT, and LLVM: Numba support,
+        AST-based reflection, CPython extension modernization, wrapper code
+        generation (JitCall), runtime library dispatch, and recently,
+        enhancements to clang-repl's CUDA support. On the ROOT side, I was
+        responsible for migrating the legacy type system and Python
+        interoperability layer to CppInterOp and CppJIT, a major undertaking
+        delivered in the latest release.
 
-    - title: "Not available yet"
+        With the goal of developing the next generation of Python–C++
+        interoperability based on cppyy, CppJIT went from research to
+        production — into ROOT at CERN, where it now supports LHC experiment
+        code, and beyond to other sciences and communities as a general-purpose
+        Python library.
+
+        I'll walk through my ongoing work on the upcoming CppJIT GPU support for
+        HPC and scientific applications: kernel expression support, zero-copy
+        interoperability with foreign device arrays, CUDA streams, and graphs
+        from CuPy and cuda.core, demonstrated in a topological data analysis of
+        the cosmic web.
+
+    - title: "Advancing GPU infrastructure in Clad"
       speaker:
-        name: "Kerem Şahin"
+        name: "Vedant Goyal"
       time_cest: "15:25 - 15:45"
       description: |
-        Not available yet
+        This talk presents my GSoC work on Clad to build a unified and robust GPU 
+        automatic differentiation infrastructure in Clad. I will discuss integrating 
+        existing CUDA support, extending differentiation for NVIDIA Thrust through 
+        custom derivative handlers, and bringing GPU applications such as LULESH, 
+        XSBench, and the in-tree CUDA ray tracer into a unified framework. I will 
+        also cover benchmarking Clad against other AD tools. I will conclude with the 
+        key challenges and lessons learned in building a more robust and maintainable 
+        foundation for GPU automatic differentiation in Clad.
 
-    - title: "Not available yet"
+    - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
       speaker:
         name: "Peiqi Li"
       time_cest: "15:50 - 16:10"
+      slides: /assets/presentations/Peiqi_Li-CRCon26_Process_High-Impact_clang-tidy_and_Clang_Static_Analyzer.pdf
       description: |
-        Not available yet
+        clang-tidy and the Clang Static Analyzer carry a long backlog of incorrect
+        diagnostics: false positives in widely used checks, fix-its that produce
+        broken code, and an escape heuristic that silences real leak reports. This
+        talk walks through a series of upstream fixes for these issues, the
+        integration of query-based custom checks into clangd, and the analyzer
+        patches currently in review.
 
-    - title: "Not available yet"
+    - title: "Implementing Missing C and C++ Language Features in Clang"
       speaker:
         name: "Muhammad Bassiouni"
       time_cest: "16:15 - 16:35"
+      slides: /assets/presentations/Muhammad_Bassiouni-CRCon26_Missing_C_and_CXX_Features_in_Clang.pdf
       description: |
-        Not available yet
+        This talk covers my fellowship work on implementing missing C and C++
+        language features in Clang. I will walk through what landed upstream,
+        and what got blocked along the way and why, and how it impacted Clang.
 
-    - title: "Not available yet"
+    - title: "Improving Clang Performance"
       speaker:
         name: "Ezzeldin Ibrahim"
       time_cest: "16:40 - 17:00"
+      slides: /assets/presentations/Ezzeldin_Ibrahim-CRCon26_Improving_Clang_Performance.pdf
       description: |
-        Not available yet
+        In this talk, I will provide an overview of my fellowship work focused
+        on Clang performance optimization. I will detail the tooling used
+        to benchmark compilation speeds, my approach to finding and fixing
+        performance regressions, and how these discoveries created a feedback loop
+        that exposed even more areas for optimization.
 
-    - title: "Not available yet"
+    - title: "Cross-language Debugging Support"
       speaker:
         name: "Emery Conrad"
       time_cest: "17:05 - 17:25"
       description: |
-        Not available yet
+        At Chicago Trading Company, we are eagerly investing in the future of
+        `cppjit` and `CppInterOp`, and have built an ecosystem that makes use of these
+        technologies in non-trivial ways. To support users of this ecosystem, we have
+        added debugging support that attempts to make debugging "just work" across the
+        Python/C++ boundary, and have pushed an experimental version of this upstream
+        to `cppjit` and `CppInterOp`. Today we will walk through what that looks like
+        in VSCode.
 
     - title: "Compiler-Research: State of the Union"
       speaker:
@@ -61,6 +108,7 @@
           high-performance scientific computing while mentoring early-career
           researchers.
       time_cest: "17:30 - 17:55"
+      slides: /assets/presentations/V_Vassilev-CRCon26_State_of_the_Union.pdf
       description: |
         In this talk we will make an overview of the various activities around
         the compiler research initiative in terms of people, projects, code and
@@ -69,93 +117,196 @@
 - name: "CompilerResearchCon 2026 (day 2)"
   date: 2026-11-04 15:00:00 +0100
   time_cest: "15:00"
-  connect: "Not available yet"
-  label: crcon26_part_2
+  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
+  label: crcon26_day_2
   agenda:
-    - title: "Not available yet"
+    - title: "On-Demand Parsing in Clang"
       speaker:
         name: "Vipul Cariappa"
       time_cest: "15:00 - 15:20"
+      slides: /assets/presentations/VipulCariappa-CRCon26-OnDemandParsingInClang.pdf  
       description: |
-        Not available yet
+        A typical C++ translation unit includes a large number of headers, yet
+        only a small fraction of the declarations they contain is ever used.
+        Clang still parses all of it eagerly, spending time and memory on code
+        that never reaches the final binary. This talk presents a prototype of
+        on-demand parsing in Clang, where the bodies of function and class
+        definitions are skipped during the initial pass, their token ranges are
+        recorded on the declaration, and parsing is resumed lazily the first
+        time the definition is actually needed. I will walk through how this is
+        wired into the parser and problems faced during implementation,
+        the benchmarks used to measure compilation time and peak memory against
+        upstream Clang, the results the prototype achieves so far, and the work
+        still ahead.
 
-    - title: "Not available yet"
+    - title: "Clad applied to likelihood fits with Minuit 2, RooFit, and CMS Combine"
       speaker:
         name: "Jonas Rembser"
       time_cest: "15:25 - 15:45"
+      slides: /assets/presentations/2026-11-04-crcon-clad-likelihood-fits.pdf
       description: |
-        Not available yet
+        Likelihood fits are at the core of every LHC measurement, and the
+        gradients and Hessians that drive them are usually obtained by
+        numerical differentiation, which is slow and fragile for fits with
+        hundreds of parameters. Automatic differentiation (AD) is a natural
+        remedy. In this talk I will cover recent developments in using Clad
+        across the ROOT-based likelihood-fit ecosystem. First, I will show how
+        analytical gradients are used in the Minuit 2 minimizer, and what is
+        still missing to avoid any fallback to numerical differentiation.
+        Second, I will turn to the integration of Clad in RooFit, the
+        likelihood-building framework that uses Minuit 2 for minimization, and
+        the recent milestone of generating analytical Hessians of RooFit
+        likelihoods with Clad. Finally, I will report on the effort to enable a
+        full AD pipeline in Combine, the statistical analysis tool of the CMS
+        Collaboration at the LHC, through which Clad can reach hundreds of
+        users and save thousands of CPU hours.
 
-    - title: "Not available yet"
+    - title: "What Particle Physics Can Teach Genomics: Scaling RAMtools with ROOT's RNTuple"
       speaker:
         name: "Jeffrey Zhang"
       time_cest: "15:50 - 16:10"
       description: |
-        Not available yet
+        A single sequenced human genome can occupy hundreds of gigabytes, and
+        GeneROOT explores whether ROOT's columnar RNTuple format, built for LHC
+        data, can store and query genomic data at scale. This talk presents my
+        work on RAMtools, focusing on two questions: how do we measure it
+        fairly, and how small can we make it? I will first cover a reproducible
+        benchmark suite that replaces a single low-coverage sample with Genome
+        in a Bottle datasets, tracks memory usage, and compares RNTuple against
+        SAM, BAM, and CRAM. I will then discuss compressing quality scores,
+        evaluating modern schemes beyond Illumina 8-binning, and how they trade
+        accuracy for size.
 
-    - title: "Not available yet"
+    - title: "Same Reads, Fewer Bytes: RAMTools since 0.1.0"
       speaker:
         name: "Martin Vassilev"
       time_cest: "16:15 - 16:35"
       description: |
-        Not available yet
+        RAMTools stores aligned sequencing reads, the SAM and BAM files of genomics, in ROOT's RNTuple, so that a question about a few fields reads only those columns.
+        The talk briefly introduces the tool, from its start at CERN openlab to the 0.1.0 release, and then presents the work since.
+        Typed columns for tags and mate fields, together with CRAM 3.1's codecs for read names and quality scores, made files a third smaller.
+        Every read still comes back exactly as samtools prints it, and statistics such as flagstat run several times faster than on BAM or CRAM.
+        We show how the results are made reproducible on any machine and close with the next steps: reference-based sequence encoding, an htslib plugin, a stable 1.0 format, and a first experiment with Clad gradients.
 
-    - title: "Not available yet"
+    - title: "Clad Meets PyTorch: Gradients Ahead of Time"
       speaker:
         name: "Kacent Huang"
       time_cest: "16:40 - 17:00"
       description: |
-        Not available yet
+        Clad generates derivative code while compiling C++. Can those
+        derivatives become part of a PyTorch training loop, and how much
+        runtime work can they save? This talk follows a C++ tensor function
+        into torch::autograd::Function, connecting its backward pass to a
+        Clad-generated pullback. Along the way, I will explain how we separate
+        differentiation requests from Clad's usual entry points, provide
+        derivatives for tensor operations, and connect the generated code
+        to PyTorch's autograd system.
+        I will then use a small MNIST training example to examine execution
+        time and memory use against PyTorch autograd. We will look at where
+        allocations and repeated computation remain, whether generating
+        derivatives ahead of time automatically makes training
+        faster, and which future optimizations fit naturally into Clad's existing
+        framework.
+      slides: /assets/presentations/Kacent_Huang_CRCon2026_Clad_Meets_PyTorch.pdf
 
-    - title: "Not available yet"
+    - title: "Beyond the Benchmark: Finding Scientific Challenges for Computational Innovation"
       speaker:
         name: "Luciana Melina Luque"
       time_cest: "17:05 - 17:25"
       description: |
-        Not available yet
+        What does compiler optimisation have to do with cancer research? Perhaps
+        more than you might expect.
+
+        Imagine simulating the development of a tumour, where computational
+        performance determines which scientific questions we can realistically
+        investigate. Similar challenges arise across disciplines, where
+        increasingly complex data and models push the limits of existing
+        technologies.
+
+        Drawing on examples from cancer research, including our work on
+        CARTopiaX, I will explore how advances in computing can open new avenues
+        for scientific discovery, and how stepping beyond our areas of expertise
+        can reveal unexpected challenges, inspire new ideas and create
+        opportunities for collaboration.
 
 - name: "CompilerResearchCon 2026 (day 3)"
   date: 2026-11-06 17:00:00 +0100
   time_cest: "17:00"
-  connect: "Not available yet"
-  label: crcon26_part_3
+  connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
+  label: crcon26_day_3
   agenda:
-    - title: "Not available yet"
+    - title: "One Copy Is Enough: Deduplicating Source Locations in Clang Modules"
       speaker:
         name: "Ayokunle Amodu"
       time_cest: "17:00 - 17:20"
       description: |
-        Not available yet
+        Modular builds fill Clang's 32-bit source-location space with duplicate
+        entries for the same shared headers, and when large builds run out,
+        compilation fails. This talk covers an upstream patch I made that stops
+        writing the duplicates, redirecting a header's locations to the module
+        that already has them.
 
-    - title: "Not available yet"
+    - title: "Memory Ownership Design for Dynamic Python-C++ Interoperability"
       speaker:
-        name: "Vedant Goyal"
+        name: "Kerem Şahin"
       time_cest: "17:25 - 17:45"
       description: |
-        Not available yet
+        One of the things CppInterOp did not expose is
+        memory ownership behaviour of the C++ functions. Therefore
+        language binding tools such as CppJIT were not able to abstract
+        memory management when objects cross between Python and C++.
+        This talk will cover my work on CppInterOp to reflect memory ownership
+        information of C++ functions in different ways, and how we adapt these
+        new APIs in CppJIT.
 
-    - title: "Not available yet"
+    - title: "Enhancing Clang Diagnostics: Lessons from Landing Warnings Upstream"
       speaker:
         name: "Aditya Medhane"
       time_cest: "17:50 - 18:10"
       description: |
-        Not available yet
+        This talk covers my fellowship work on Clang diagnostics. It follows
+        the path of enabling -Wunused-template under -Wall, from a 20-PR
+        cleanup campaign across the LLVM monorepo to its downstream impact in
+        projects like Bitcoin Core, and the false positives that surfaced in
+        the wild (such as templates used only in C++20 requires clauses) along
+        with their fixes. It also covers diagnosing conflicting internal and
+        external linkage in C (WG14 N3410), handling _Atomic types in
+        __has_unique_object_representations to support -Wsuspicious-memcmp, and
+        fixing long-standing Sema false positives and negatives (including
+        C++20 destroying delete, VLA pointer subtraction, and function-reference
+        null comparisons). I will close with lessons learned about getting
+        diagnostics accepted and kept enabled upstream.
 
-    - title: "Not available yet"
+    - title: "Extending Clad for Parallel C++ and Differentiable Rendering"
       speaker:
         name: "Abdelrhman Elrawy"
       time_cest: "18:15 - 18:35"
       description: |
-        Not available yet
+        Parallel C++ and CUDA introduce challenges for automatic differentiation,
+        from concurrency to complex control flow. This talk covers my work
+        extending Clad’s support for these programs and applying it to
+        differentiable rendering. I’ll discuss threading support, compiler
+        correctness improvements, and integrating generated derivatives for
+        selected computations into a 3D Gaussian Splatting training pipeline,
+        including performance comparisons and remaining limitations.
 
-    - title: "Not available yet"
+    - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology"
       speaker:
         name: "Salvador de la Torre Gonzalez"
       time_cest: "18:40 - 19:00"
       description: |
-        Not available yet
+        CAR T-cell therapy has transformed the treatment of blood cancers, but it still struggles in solid tumors, 
+        where robust simulation models remain scarce. CARTopiaX is an open-source agent-based model built on BioDynaMo 
+        that simulates the interactions between tumor cells and CAR T-cells, enabling in silico hypothesis testing of 
+        CAR T-cell therapies. In this Google Summer of Code 2026 project, CARTopiaX was extended to replicate a 
+        state-of-the-art wet-lab experiment of CAR T-cell therapy in a hypoxic 3D tumor model. This required a new tumor 
+        geometry, glucose as a new nutrient, and new cell behaviors, together with a Bayesian optimization tool to 
+        calibrate the model against experimental data. The extended model reproduces the key trends of the experiment and 
+        offers an in silico explanation of the “non-contact” killing of cancer cells observed by the authors: competition 
+        between CAR T-cells and cancer cells for glucose and oxygen. These results demonstrate CARTopiaX as a flexible 
+        platform for fast, low-cost hypothesis testing in CAR T-cell research.
 
-    - title: "Not available yet"
+    - title: "jank - The native Clojure dialect with seamless C++ interop"
       speaker:
         name: "Jeaye Wilkerson"
         image: "https://avatars.githubusercontent.com/u/1057635"
@@ -164,4 +315,10 @@
           dialect of Clojure on LLVM.
       time_cest: "19:05 - 19:25"
       description: |
-        Not available yet
+        jank opens the world of C++ up to the world of Clojure. We
+        get to enjoy Lisp macros, functional programming, immutable data
+        structures, and world-class interactive development with REPL protocols.
+        All of this is now available in your C++ programs, or standalone, using
+        both JIT and AOT compilation. In this talk, you'll learn about jank and
+        how it's utilizing the underlying clang-repl and CppInterOp features to
+        build an unprecedented language.

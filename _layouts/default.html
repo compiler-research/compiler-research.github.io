@@ -15,6 +15,26 @@
 
     {% include footer.html %}
 
+    <script>
+      // Keep in-page anchors from scrolling under the fixed navbar. The navbar
+      // wraps to more rows on medium-sized screens, so offset the anchors by its
+      // actual height instead of a constant.
+      (function () {
+        function offsetAnchors() {
+          var navbar = document.querySelector('.navbar-fixed-top');
+          document.documentElement.style.scrollPaddingTop = (navbar ? navbar.offsetHeight : 0) + 'px';
+        }
+        offsetAnchors();
+        window.addEventListener('resize', offsetAnchors);
+        window.addEventListener('load', function () {
+          // The browser jumps to the anchor before the navbar has its final height.
+          offsetAnchors();
+          var target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+          if (target) target.scrollIntoView();
+        });
+      })();
+    </script>
+
   </body>
 
 </html>

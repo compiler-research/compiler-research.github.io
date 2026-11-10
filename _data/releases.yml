@@ -1,3 +1,43 @@
+- date: 2026-11-09
+  codebase: "CppInterOp"
+  version: "v2.0.0"
+  description: |
+    CppInterOp 2.0.0 is a major release that makes the library's interface safer
+    and easier to bind. The whole public API is now defined once in TableGen,
+    which generates the C++ declarations, the dispatch table and the C API. The
+    untyped void* handles are replaced by distinct types such as DeclRef,
+    TypeRef and FuncRef, so passing the wrong kind of handle no longer compiles.
+    This change, along with a few signature updates such as Evaluate now
+    returning a typed Cpp::Box, requires existing clients to update their code.
+    The release adds MakeVTableOverlay, which lets bindings such as cppyy
+    override C++ virtual methods from another language at run time. It also
+    brings crash reproducers that record API calls into a compilable file when
+    CPPINTEROP_LOG is set, memory and ownership analysis, support for C++23
+    explicit object parameters, Clad as an interpreter plugin, and new
+    introspection queries for cppyy and numba. CppInterOp 2.0.0 supports LLVM
+    21 to 23 and comes from 227 commits by nine contributors.
+- date: 2026-10-14
+  codebase: "RAMTools"
+  version: "v0.1.0"
+  description: |
+    RAMTools 0.1.0 is the first tagged release of RAMTools, which stores
+    aligned sequencing reads from SAM and BAM files in ROOT's RNTuple columnar
+    format. The project began in 2017 at CERN openlab as a format stored in
+    ROOT's TTree; this release is its rewrite on RNTuple, and the TTree backend
+    is gone. It ships `samtoramntuple` and `bamtoramntuple` (BAM through
+    htslib), both with `-threads N` and `-compression N`, and `-split` for one
+    file per reference; `ramdump`, which writes a file or a region of it back
+    out as SAM and takes the `samtools view` options `-h`, `-H`, `-c`, `-f`,
+    `-F` and `-o`; and `ramntupleview`, which times region queries. A region
+    query finds its records by binary search over the positions of a
+    coordinate-sorted file and decides overlap by each read's CIGAR span.
+    Opening a file no longer starts ROOT's interpreter: on 2 million records,
+    counting a 10 Mb region went from 0.59 s and 150 MB to 0.26 s and 19 MB.
+    ROOT 6.38 is the minimum version. The release is licensed under Apache 2.0
+    and archived on Zenodo (DOI 10.5281/zenodo.23362910). For details, please
+    refer to the release notes.
+  link: "https://github.com/compiler-research/ramtools/releases/tag/v0.1.0"
+
 - date: 2026-09-28
   codebase: "Clad"
   version: "v2.5"
