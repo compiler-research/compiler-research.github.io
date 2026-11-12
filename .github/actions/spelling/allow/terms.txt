@@ -257,3 +257,4 @@ mathrm
 mnist
 xtick
 ytick
+qubits
