@@ -560,6 +560,30 @@
       proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
       mentors: Vassil Vassilev, Alexander Penev
 
+- name: Sofia Domracheva
+  photo: Domracheva.jpg
+  info: "Research Intern"
+  email: firotss@gmail.com
+  education: "M.Sc. in High Performance Computing, Sofia University St. Kliment Ohridski, Bulgaria, 2026 - 2028"
+  github: "https://github.com/sofia-domracheva"
+  active: 1
+  projects:
+    - title: "Does quantum help at the LHC? Controlled re-assessment of quantum-kernel results"
+      status: Ongoing
+      description: |
+        Quantum kernel methods encode a collision event into a quantum state and use
+        the overlap of two states as the similarity measure of a support-vector
+        machine. Several studies on LHC data report that such kernels outperform
+        classical ones, while a large generic benchmark shows that tuned classical
+        models often win. This project re-runs published quantum-kernel studies on
+        LHC data under three controls: a tuned classical kernel, the same model
+        without entanglement, and the seed spread on a large test set. It builds on
+        a pilot study on ATLAS Open Data jets. To carry the controls to 16-20
+        qubits, the kernels run as C++ specialized at run time through cppjit. The
+        deliverables are a paper, a public benchmark repository, and a cppjit case
+        study.
+      mentors: Vassil Vassilev, Alexander Penev
+
 - name: "This could be you!"
   photo: rock.jpg
   info: See <a href="/careers">openings</a> for more info
