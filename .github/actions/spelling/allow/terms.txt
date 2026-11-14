@@ -261,4 +261,12 @@ idxstats
 ramstats
 ramdump
 DOI
+CPPINTEROP
+fclad
+fdisable
+fenable
+fgenerated
+Rclad
+VTable
+workaround
 qubits
