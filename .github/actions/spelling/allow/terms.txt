@@ -257,3 +257,7 @@ mathrm
 mnist
 xtick
 ytick
+idxstats
+ramstats
+ramdump
+DOI
