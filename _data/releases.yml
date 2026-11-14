@@ -16,7 +16,7 @@
     explicit object parameters, Clad as an interpreter plugin, and new
     introspection queries for cppyy and numba. CppInterOp 2.0.0 supports LLVM
     21 to 23 and comes from 227 commits by nine contributors.
-- date: 2026-11-07
+- date: 2026-11-08
   codebase: "RAMTools"
   version: "v0.2.0"
   description: |
