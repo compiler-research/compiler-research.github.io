@@ -261,3 +261,4 @@ idxstats
 ramstats
 ramdump
 DOI
+qubits
