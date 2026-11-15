@@ -53,6 +53,9 @@ code for bringing scalable Python practices back to your own HPC facility.
 
 ## Materials
 
+- **CppJIT, ROOT and the Higgs Analysis**: [live JupyterHub](/tutorials/sc26/cppjit-root/)
+  for the domain-science session, nothing to install.
+
 Slides, handouts, and notebooks will be posted here as the tutorial
 approaches. This page is the permanent home for the tutorial materials --
 bookmark it, or keep the QR code from the handouts.
