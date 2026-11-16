@@ -1,3 +1,24 @@
+- title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology"
+  description: |
+    CAR T-cell therapy has transformed the treatment of blood cancers, but it still struggles in solid tumors, 
+    where robust simulation models remain scarce. CARTopiaX is an open-source agent-based model built on BioDynaMo 
+    that simulates the interactions between tumor cells and CAR T-cells, enabling in silico hypothesis testing of 
+    CAR T-cell therapies. In this Google Summer of Code 2026 project, CARTopiaX was extended to replicate a 
+    state-of-the-art wet-lab experiment of CAR T-cell therapy in a hypoxic 3D tumor model. This required a new tumor 
+    geometry, glucose as a new nutrient, and new cell behaviors, together with a Bayesian optimization tool to 
+    calibrate the model against experimental data. The extended model reproduces the key trends of the experiment and 
+    offers an in silico explanation of the “non-contact” killing of cancer cells observed by the authors: competition 
+    between CAR T-cells and cancer cells for glucose and oxygen. These results demonstrate CARTopiaX as a flexible 
+    platform for fast, low-cost hypothesis testing in CAR T-cell research.
+  location: "[CompilerResearchCon 2026](/crcon2026/)"
+  date: 2026-11-06
+  speaker: Salvador de la Torre Gonzalez
+  id: "CRCON2026SALVA"
+  artifacts: |
+    [Link to Slides](/assets/presentations/Salva_CRCon2026.pdf)
+  highlight: 1
+
+
 - title: "Memory Ownership Design for Dynamic Python-C++ Interoperability"
   description: |
     CppInterOp did not expose the memory ownership behaviour of C++ functions,
