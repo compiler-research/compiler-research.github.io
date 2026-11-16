@@ -23,13 +23,16 @@ cppjit
 CRROOT
 csa
 CTAD
+cuphoton
 demangling
 DIFFPROG
+dragonhpc
 EDSLs
 elidable
 ellint
 Emscripten
 endunless
+exascale
 expint
 Ezz
 Ezzeldin
@@ -60,6 +63,7 @@ Loihi
 manyclangs
 Medhane
 medhane
+miniapp
 MLIR
 mpi
 Mtools
@@ -68,11 +72,14 @@ Nellamakada
 Neuromorphic
 neuromorphic
 NOLINT
+Nsight
 optimizing
+ORCv
 Peiqi
 peiqi
 PEIQI
 pld
+pldi
 previndex
 pubtit
 pushforwards
@@ -84,6 +91,7 @@ Reoptimization
 reoptimization
 Resugaring
 rootcling
+Rosenbrock
 rtti
 sgemm
 sema
@@ -98,6 +106,7 @@ TMVA
 transitioning
 triaging
 TUs
+tutorialslist
 Upstreaming
 upstreaming
 usecases
