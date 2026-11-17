@@ -3,6 +3,10 @@
   time_cest: "17:00"
   connect: "[Link to zoom](https://princeton.zoom.us/j/97915651167?pwd=MXJ1T2lhc3Z5QWlYbUFnMTZYQlNRdz09)"
   agenda:
+    - title: "One Copy is Enough: Deduplicating Source Locations in Clang's Modular Builds"
+      date: 2026-11-06 17:00:00 +0100
+      speaker: "Ayokunle Amodu"
+      link: "[Slides](/assets/presentations/Ayokunle_Amodu_CppAllliance_Final_Presentation.html)"
     - title: "CARTopiaX: Extending a Next-Generation Platform for Computational Cancer Biology. GSoC Wrap-Up"
       date: 2026-10-28 15:00:00 +0200
       speaker: "Salvador de la Torre Gonzalez"
