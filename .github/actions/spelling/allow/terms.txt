@@ -113,6 +113,7 @@ xjson
 xlldb
 xmagics
 xplugin
+XSBench
 youtu
 youtube
 zenodo
@@ -132,6 +133,7 @@ FFLLVM
 FOUNDSCIROOFIT
 FOURTHMODEBDM
 groundbreaking
+GradBench
 GSACAT
 GSCHEP
 GSMODE
@@ -230,6 +232,7 @@ SLoc
 rasterization
 DGS
 Splatting
+syncthreadk
 Bitcoin
 Wsuspicious
 Wunused
