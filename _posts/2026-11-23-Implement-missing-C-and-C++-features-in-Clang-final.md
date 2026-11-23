@@ -185,13 +185,11 @@ LLVM projects:
 | `LLVM libc` | `libc/shared/math.h` | Header-only, correctly rounded math, written once | Done |
 | `LLVM APFloat` | `llvm/Support` | Reuses the shared libc math for software floating point | - |
 | `Clang` | constant evaluator | Folds `__builtin_exp` and friends at compile time via `APFloat` | Waiting |
-| `LLVM libc++` | `<cmath>` | constexpr `std::exp`, `std::log`, ... on top of the built-ins | PR filed |
+| `LLVM libc++` | `<cmath>` | constexpr `std::exp`, `std::log`, ... on top of the built-ins | - |
 
 On the `libc` side, the math functions are qualified to be usable in constant
 evaluation (for example [#184745](https://github.com/llvm/llvm-project/pull/184745)
-and [#184948](https://github.com/llvm/llvm-project/pull/184948)). On the
-`libc++` side, I filed [#224690](https://github.com/llvm/llvm-project/pull/224690)
-to make `std::exp` constexpr for `float` and `double` since `C++23`.
+and [#184948](https://github.com/llvm/llvm-project/pull/184948)).
 
 However, the chain is held up at `Clang`: an open PR,
 [#199808](https://github.com/llvm/llvm-project/pull/199808), makes
@@ -260,7 +258,6 @@ I used AI as an assistant in two areas:
 | [#240376](https://github.com/llvm/llvm-project/pull/240376) | `[Clang]` Fix crash instantiating functions defaulted outside class templates | Merged |
 | [#193056](https://github.com/llvm/llvm-project/pull/193056) | `[Clang][C++17/20]` Add full support to deduction guides and CTAD alias templates | Blocked |
 | [#222215](https://github.com/llvm/llvm-project/pull/222215) | `[Clang][CTAD]` Implement deduction guides for alias templates with nested aliases | Blocked |
-| [#224690](https://github.com/llvm/llvm-project/pull/224690) | `[libc++]` Make `std::exp` constexpr for float and double since C++23 | Waiting on [#199808](https://github.com/llvm/llvm-project/pull/199808) |
 
 ## What's Next
 
