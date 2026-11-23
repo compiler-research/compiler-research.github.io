@@ -24,6 +24,7 @@ CRROOT
 csa
 CTAD
 cuphoton
+CWG
 demangling
 DIFFPROG
 dragonhpc
@@ -58,6 +59,7 @@ Kiril
 lang
 layernorm
 LBM
+libc
 llvmorg
 Loihi
 manyclangs
