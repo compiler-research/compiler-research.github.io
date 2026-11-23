@@ -241,14 +241,24 @@
   linkedin: "https://www.linkedin.com/in/bassiounix/"
   projects:
     - title: "Implement missing C++26 features in Clang"
-      status: Ongoing
+      status: Completed
       description: |
-        This project proposes a candidate-driven program to complete Clang's
+        This project proposed a candidate-driven program to complete Clang's
         support for selected C++26-era language papers and closely related C
-        proposals. The project provides a vehicle for applicants to propose a
-        standards paper that is not yet implemented in Clang and then implement
-        that paper within the scope of the project.
+        proposals. Two papers landed upstream: C2y N3356, which allows
+        declarations in if and switch conditions in every C mode from C89 to
+        C2y, and C++2d P3668R4, which allows defaulting the postfix increment
+        and decrement operators. The work also brought __extension__ to C++
+        conditions and a new approach to compatibility diagnostics in the
+        parser. Two other papers were blocked: CTAD for alias templates
+        (P1814R0) by an open core issue, and constexpr math by a pending design
+        decision on making Clang's math built-ins constant-evaluable.
       proposal: /assets/docs/Muhammad_Bassiouni_CppAlliance2026_Proposal.pdf
+      report: |
+        [Final blog post](/blogs/Implement_missing_C++26_features_in_Clang_Muhammad_Bassiouni_final_blog/){:target="_blank"},
+        [Midterm presentation](/assets/presentations/Muhammad_Bassiouni_CppAlliance_Fellowship2026_midterm_presentation.pdf){:target="_blank"},
+        [Final presentation](/assets/presentations/Muhammad_Bassiouni_CppAlliance_Fellowship2026_final_presentation.pdf){:target="_blank"},
+        [CRCon26 slides](/assets/presentations/Muhammad_Bassiouni-CRCon26_Missing_C_and_CXX_Features_in_Clang.pdf){:target="_blank"}
       mentors: Vassil Vassilev, Aaron Jomy
 
 - name: Vedant Goyal
