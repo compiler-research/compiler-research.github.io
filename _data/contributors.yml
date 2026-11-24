@@ -482,7 +482,7 @@
   active: 1
   projects:
     - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
-      status: Ongoing
+      status: Completed
       description: |
         The clang-tidy and Clang Static Analyzer issue trackers contain
         unresolved reports regarding false positives, false negatives,
@@ -497,7 +497,11 @@
         tests to ensure no new regressions are introduced before merging
         upstream.
       proposal: /assets/docs/Peiqi_Li_Proposal_2026.pdf
-      mentors: Vassil Vassilev, Aaron Ballman, Martin Vassilev
+      report: |
+        [Final blog post](/blogs/cppalliance26_peiqi_li_clang_tidy_wrapup/){:target="_blank"},
+        [Midterm presentation](/assets/presentations/Peiqi_CppAlliance_midterm_presentation.pdf){:target="_blank"},
+        [CRCon26 slides](/assets/presentations/Peiqi_Li-CRCon26_Process_High-Impact_clang-tidy_and_Clang_Static_Analyzer.pdf){:target="_blank"}
+      mentors: Vassil Vassilev, Aaron Jomy, Martin Vassilev
 
 
 - name: Salvador de la Torre Gonzalez
