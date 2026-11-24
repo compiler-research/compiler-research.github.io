@@ -10,6 +10,7 @@ backpropation
 Bassiouni
 bassiouni
 BASSIOUNI
+Callgrind
 CALQ
 cblas
 ccache
@@ -23,6 +24,7 @@ cppjit
 CRROOT
 csa
 CTAD
+CTRE
 cuphoton
 CWG
 demangling

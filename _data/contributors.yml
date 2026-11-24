@@ -224,10 +224,19 @@
   linkedin: "https://www.linkedin.com/in/ezz-eldean/"
   projects:
     - title: "Improve Clang Performance"
-      status: Ongoing
+      status: Completed
       description: |
-        This project aims to systematically improve Clang’s performance by identifying, understanding, and addressing common compilation bottlenecks across real-world codebases. While Clang is highly capable, performance regressions and inefficiencies can accumulate over time due to increasing language complexity, new features, and evolving usage patterns. These issues can impact compile time, peak memory usage, and overall memory pressure, especially in large projects.
+        Ezzeldin investigated why some C and C++ projects took longer to compile
+        across Clang releases. He built a benchmark harness that counted compiler
+        instructions and measured peak memory, then traced regressions to individual
+        changes in LLVM. His fixes cut compiler instructions by 1.2% on Boost.MPL
+        and reduced peak memory by 581 MB on a CTRE compilation.
+        The measured reductions in debug-build compiler instructions totaled about 3.1%.
       proposal: /assets/docs/Ezzeldin_Ibrahim_CppAlliance2026_Proposal.pdf
+      report: |
+        [Final blog post](/blogs/cppalliance26_ezzeldin_ibrahim_improve_clang_performance_final/){:target="_blank"},
+        [Midterm presentation](/assets/presentations/Ezzeldin_improve_clang_performance_midterm_presentation.pdf){:target="_blank"},
+        [CRCon26 slides](/assets/presentations/Ezzeldin_Ibrahim-CRCon26_Improving_Clang_Performance.pdf){:target="_blank"}
       mentors: Vassil Vassilev, Aaron Jomy
 
 - name: Muhammad Bassiouni
