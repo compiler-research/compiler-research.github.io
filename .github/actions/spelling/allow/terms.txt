@@ -270,3 +270,9 @@ Rclad
 VTable
 workaround
 qubits
+CStringChecker
+ExcludeMacroExpansionRegex
+libstdc
+LocAsInteger
+NewDeleteLeaks
+memset
