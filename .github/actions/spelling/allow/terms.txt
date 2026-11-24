@@ -276,3 +276,5 @@ libstdc
 LocAsInteger
 NewDeleteLeaks
 memset
+Fixits
+pointee
