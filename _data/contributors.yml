@@ -224,10 +224,19 @@
   linkedin: "https://www.linkedin.com/in/ezz-eldean/"
   projects:
     - title: "Improve Clang Performance"
-      status: Ongoing
+      status: Completed
       description: |
-        This project aims to systematically improve Clang’s performance by identifying, understanding, and addressing common compilation bottlenecks across real-world codebases. While Clang is highly capable, performance regressions and inefficiencies can accumulate over time due to increasing language complexity, new features, and evolving usage patterns. These issues can impact compile time, peak memory usage, and overall memory pressure, especially in large projects.
+        Ezzeldin investigated why some C and C++ projects took longer to compile
+        across Clang releases. He built a benchmark harness that counted compiler
+        instructions and measured peak memory, then traced regressions to individual
+        changes in LLVM. His fixes cut compiler instructions by 1.2% on Boost.MPL
+        and reduced peak memory by 581 MB on a CTRE compilation.
+        The measured reductions in debug-build compiler instructions totaled about 3.1%.
       proposal: /assets/docs/Ezzeldin_Ibrahim_CppAlliance2026_Proposal.pdf
+      report: |
+        [Final blog post](/blogs/cppalliance26_ezzeldin_ibrahim_improve_clang_performance_final/){:target="_blank"},
+        [Midterm presentation](/assets/presentations/Ezzeldin_improve_clang_performance_midterm_presentation.pdf){:target="_blank"},
+        [CRCon26 slides](/assets/presentations/Ezzeldin_Ibrahim-CRCon26_Improving_Clang_Performance.pdf){:target="_blank"}
       mentors: Vassil Vassilev, Aaron Jomy
 
 - name: Muhammad Bassiouni
@@ -241,14 +250,24 @@
   linkedin: "https://www.linkedin.com/in/bassiounix/"
   projects:
     - title: "Implement missing C++26 features in Clang"
-      status: Ongoing
+      status: Completed
       description: |
-        This project proposes a candidate-driven program to complete Clang's
+        This project proposed a candidate-driven program to complete Clang's
         support for selected C++26-era language papers and closely related C
-        proposals. The project provides a vehicle for applicants to propose a
-        standards paper that is not yet implemented in Clang and then implement
-        that paper within the scope of the project.
+        proposals. Two papers landed upstream: C2y N3356, which allows
+        declarations in if and switch conditions in every C mode from C89 to
+        C2y, and C++2d P3668R4, which allows defaulting the postfix increment
+        and decrement operators. The work also brought __extension__ to C++
+        conditions and a new approach to compatibility diagnostics in the
+        parser. Two other papers were blocked: CTAD for alias templates
+        (P1814R0) by an open core issue, and constexpr math by a pending design
+        decision on making Clang's math built-ins constant-evaluable.
       proposal: /assets/docs/Muhammad_Bassiouni_CppAlliance2026_Proposal.pdf
+      report: |
+        [Final blog post](/blogs/Implement_missing_C++26_features_in_Clang_Muhammad_Bassiouni_final_blog/){:target="_blank"},
+        [Midterm presentation](/assets/presentations/Muhammad_Bassiouni_CppAlliance_Fellowship2026_midterm_presentation.pdf){:target="_blank"},
+        [Final presentation](/assets/presentations/Muhammad_Bassiouni_CppAlliance_Fellowship2026_final_presentation.pdf){:target="_blank"},
+        [CRCon26 slides](/assets/presentations/Muhammad_Bassiouni-CRCon26_Missing_C_and_CXX_Features_in_Clang.pdf){:target="_blank"}
       mentors: Vassil Vassilev, Aaron Jomy
 
 - name: Vedant Goyal
@@ -463,7 +482,7 @@
   active: 1
   projects:
     - title: "Process High-Impact clang-tidy and Clang Static Analyzer Requests"
-      status: Ongoing
+      status: Completed
       description: |
         The clang-tidy and Clang Static Analyzer issue trackers contain
         unresolved reports regarding false positives, false negatives,
@@ -478,7 +497,11 @@
         tests to ensure no new regressions are introduced before merging
         upstream.
       proposal: /assets/docs/Peiqi_Li_Proposal_2026.pdf
-      mentors: Vassil Vassilev, Aaron Ballman, Martin Vassilev
+      report: |
+        [Final blog post](/blogs/cppalliance26_peiqi_li_clang_tidy_wrapup/){:target="_blank"},
+        [Midterm presentation](/assets/presentations/Peiqi_CppAlliance_midterm_presentation.pdf){:target="_blank"},
+        [CRCon26 slides](/assets/presentations/Peiqi_Li-CRCon26_Process_High-Impact_clang-tidy_and_Clang_Static_Analyzer.pdf){:target="_blank"}
+      mentors: Vassil Vassilev, Aaron Jomy, Martin Vassilev
 
 
 - name: Salvador de la Torre Gonzalez
@@ -558,6 +581,30 @@
         automatic differentiation and GPU acceleration, enabling efficient gradient
         computations in scientific computing and machine learning workloads.
       proposal: /assets/docs/Abdelrhman_Elrawy_Proposal_GSoC_2025.pdf
+      mentors: Vassil Vassilev, Alexander Penev
+
+- name: Sofia Domracheva
+  photo: Domracheva.jpg
+  info: "Research Intern"
+  email: firotss@gmail.com
+  education: "M.Sc. in High Performance Computing, Sofia University St. Kliment Ohridski, Bulgaria, 2026 - 2028"
+  github: "https://github.com/sofia-domracheva"
+  active: 1
+  projects:
+    - title: "Does quantum help at the LHC? Controlled re-assessment of quantum-kernel results"
+      status: Ongoing
+      description: |
+        Quantum kernel methods encode a collision event into a quantum state and use
+        the overlap of two states as the similarity measure of a support-vector
+        machine. Several studies on LHC data report that such kernels outperform
+        classical ones, while a large generic benchmark shows that tuned classical
+        models often win. This project re-runs published quantum-kernel studies on
+        LHC data under three controls: a tuned classical kernel, the same model
+        without entanglement, and the seed spread on a large test set. It builds on
+        a pilot study on ATLAS Open Data jets. To carry the controls to 16-20
+        qubits, the kernels run as C++ specialized at run time through cppjit. The
+        deliverables are a paper, a public benchmark repository, and a cppjit case
+        study.
       mentors: Vassil Vassilev, Alexander Penev
 
 - name: "This could be you!"

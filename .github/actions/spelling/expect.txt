@@ -13,6 +13,8 @@ Bassiouni
 bassiouni
 bottomup
 burow
+BASSIOUNI
+Callgrind
 CALQ
 cblas
 ccache
@@ -33,11 +35,18 @@ dedups
 demangling
 DIFFPROG
 dupblk
+CTRE
+cuphoton
+CWG
+demangling
+DIFFPROG
+dragonhpc
 EDSLs
 elidable
 ellint
 Emscripten
 endunless
+exascale
 expint
 Ezz
 Ezzeldin
@@ -71,6 +80,7 @@ Kiril
 lang
 layernorm
 LBM
+libc
 llvmorg
 Loihi
 manyclangs
@@ -81,6 +91,7 @@ medhane
 mgcell
 mgroup
 mgrow
+miniapp
 MLIR
 moddiv
 modstrip
@@ -113,10 +124,14 @@ pcmbox
 pcmflow
 pcmsrc
 PEIQI
+Nsight
+optimizing
+ORCv
 Peiqi
 peiqi
 pilebar
 pld
+pldi
 previndex
 pseg
 ptnote
@@ -132,6 +147,7 @@ reoptimization
 repoints
 Resugaring
 rootcling
+Rosenbrock
 rtti
 sema
 sgemm
@@ -159,6 +175,7 @@ triaging
 TUs
 twinbars
 uic
+tutorialslist
 Upstreaming
 upstreaming
 usecases

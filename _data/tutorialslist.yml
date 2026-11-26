@@ -4,10 +4,13 @@
     Full-day hands-on SC26 tutorial on writing, debugging, profiling, and
     optimizing multi-node GPU applications in Python: CuPy for drop-in GPU
     acceleration, Numba for custom kernels, mpi4py for multi-node scaling,
-    and DragonHPC for workflow acceleration -- taught through guided Jupyter
-    notebooks in a web-based environment (just a laptop and a browser).
+    DragonHPC with cuPhoton for workflow acceleration, and CppJIT for
+    Python/C++ interoperability including automatic differentiation with
+    Clad -- taught
+    through guided Jupyter notebooks in a web-based environment (just a
+    laptop and a browser).
   artifacts: |
-    [Tutorial landing page](/tutorials/sc26/)
+    [Tutorial landing page](/tutorials/sc26/) with slides and handouts
   url: "/tutorials/sc26/"
   date: 2026-11-16
 

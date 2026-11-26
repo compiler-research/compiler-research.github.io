@@ -16,27 +16,31 @@
     explicit object parameters, Clad as an interpreter plugin, and new
     introspection queries for cppyy and numba. CppInterOp 2.0.0 supports LLVM
     21 to 23 and comes from 227 commits by nine contributors.
-- date: 2026-10-14
+- date: 2026-11-08
   codebase: "RAMTools"
-  version: "v0.1.0"
+  version: "v0.2.0"
   description: |
-    RAMTools 0.1.0 is the first tagged release of RAMTools, which stores
-    aligned sequencing reads from SAM and BAM files in ROOT's RNTuple columnar
-    format. The project began in 2017 at CERN openlab as a format stored in
-    ROOT's TTree; this release is its rewrite on RNTuple, and the TTree backend
-    is gone. It ships `samtoramntuple` and `bamtoramntuple` (BAM through
-    htslib), both with `-threads N` and `-compression N`, and `-split` for one
-    file per reference; `ramdump`, which writes a file or a region of it back
-    out as SAM and takes the `samtools view` options `-h`, `-H`, `-c`, `-f`,
-    `-F` and `-o`; and `ramntupleview`, which times region queries. A region
-    query finds its records by binary search over the positions of a
-    coordinate-sorted file and decides overlap by each read's CIGAR span.
-    Opening a file no longer starts ROOT's interpreter: on 2 million records,
-    counting a 10 Mb region went from 0.59 s and 150 MB to 0.26 s and 19 MB.
-    ROOT 6.38 is the minimum version. The release is licensed under Apache 2.0
-    and archived on Zenodo (DOI 10.5281/zenodo.23362910). For details, please
-    refer to the release notes.
-  link: "https://github.com/compiler-research/ramtools/releases/tag/v0.1.0"
+    RAMTools 0.2.0 changes the RAM file format to make files smaller and the
+    common questions cheaper. The typed SAM tags, such as NM, AS, MD and RG,
+    get columns of their own; the mate's position and the template length are
+    stored as differences from what the record predicts; and the read names,
+    qualities and bases are stored in blocks of 10,000 records with the codecs
+    CRAM 3.1 uses. On chromosome 20 of NA12878 at 30x the file goes from
+    622.5 MB to 417.9 MB; CRAM 3.1 takes 302.5 MB. New are `ramstats idxstats`
+    and `ramstats flagstat`, which print what samtools prints from counts the
+    converters store while writing, so they read no record: `flagstat` takes
+    0.05 s on that chromosome, and as long on any file. `ramdump -@ N` reads a
+    whole file on N threads, and `ramdump` takes several regions in one
+    process. A region query opens only the columns it needs: a region of 1 kb
+    reads 1.0 MB of the file instead of 53.4 MB. Several RAM files can be open
+    in one process, and the SAM header is kept in the file's metadata, so
+    reading it no longer starts ROOT's interpreter. `bench/ramtools-bench.py`
+    reproduces the benchmarks against samtools on any Linux or macOS machine.
+    The format version is now 10, and files written by 0.1.0 must be converted
+    again. ROOT 6.38 is the minimum version. The release is licensed under
+    Apache 2.0 and archived on Zenodo (DOI 10.5281/zenodo.24038253). For
+    details, please refer to the release notes.
+  link: "https://github.com/compiler-research/ramtools/releases/tag/v0.2.0"
 
 - date: 2026-09-28
   codebase: "Clad"

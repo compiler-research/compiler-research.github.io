@@ -250,6 +250,7 @@
       speaker:
         name: "Kerem Şahin"
       time_cest: "17:25 - 17:45"
+      slides: /assets/presentations/2026-11-06-crcon-kerem.pdf
       description: |
         One of the things CppInterOp did not expose is
         memory ownership behaviour of the C++ functions. Therefore
@@ -294,6 +295,7 @@
       speaker:
         name: "Salvador de la Torre Gonzalez"
       time_cest: "18:40 - 19:00"
+      slides: /assets/presentations/Salva_CRCon2026.pdf
       description: |
         CAR T-cell therapy has transformed the treatment of blood cancers, but it still struggles in solid tumors, 
         where robust simulation models remain scarce. CARTopiaX is an open-source agent-based model built on BioDynaMo 
