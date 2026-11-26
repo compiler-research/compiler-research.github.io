@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One copy is enough. Deduplicating source locations in Clang modules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #FDFDFC;
+    --ink: #21252C;
+    --muted: #6B7280;
+    --faint: #E7E9ED;
+    --blue: #2F6BD8;
+    --blue-soft: #E8EFFC;
+    --red: #C5393B;
+    --red-soft: #FBEAEA;
+    --green: #1E8A5A;
+    --green-soft: #E6F4EC;
+    --amber: #B07B1E;
+    --amber-soft: #FBF3E2;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --sans: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      /* This deck is deliberately a light, printed-paper design. */
+      --paper: #FDFDFC; --ink: #21252C;
+    }
+  }
+  * { box-sizing: inherit; margin: 0; }
+  html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    height: 100%;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: clamp(15px, 1.35vw, 21px);
+    line-height: 1.55;
+    overflow: hidden;
+  }
+
+  /* ---------- deck chrome ---------- */
+  #progress {
+    position: fixed; top: env(safe-area-inset-top, 0px); left: 0; height: 3px;
+    background: var(--ink); width: 0%; z-index: 10;
+    transition: width .35s ease;
+  }
+  #counter {
+    position: fixed; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); right: 20px;
+    font-family: var(--mono); font-size: .72em; color: var(--muted); z-index: 10;
+    user-select: none;
+  }
+  #hint {
+    position: fixed; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); left: 20px;
+    font-family: var(--mono); font-size: .72em; color: var(--muted); z-index: 10;
+    transition: opacity .6s ease; user-select: none;
+  }
+  #hint.gone { opacity: 0; }
+
+  /* ---------- slides ---------- */
+  .slide {
+    position: absolute; inset: 0;
+    display: none;
+    padding: clamp(28px, 6vh, 64px) clamp(26px, 7vw, 110px);
+    flex-direction: column;
+  }
+  .slide.active { display: flex; }
+  .slide h2 {
+    font-size: 1.85em; font-weight: 700; letter-spacing: -0.015em;
+    line-height: 1.15; margin-bottom: .35em; max-width: 24ch;
+  }
+  .body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1.1em; max-width: 1150px; }
+  .body p, .body li { max-width: 62ch; }
+  .lede { font-size: 1.12em; }
+  .note { color: var(--muted); font-size: .88em; max-width: 68ch; }
+  .mono { font-family: var(--mono); }
+  .red   { color: var(--red); }
+  .blue  { color: var(--blue); }
+  .green { color: var(--green); }
+  em { font-style: normal; font-weight: 600; }
+  ul.plain { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .55em; }
+  ul.plain li { padding-left: 1.1em; position: relative; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: .62em; width: .45em; height: 2px; background: var(--ink); }
+
+  /* fragments */
+  .frag { opacity: 0; transform: translateY(6px); transition: opacity .45s ease, transform .45s ease; }
+  .frag.on { opacity: 1; transform: none; }
+
+  /* ---------- address-space strips ---------- */
+  .strip-wrap { display: flex; flex-direction: column; gap: .3em; }
+  .strip-label { font-family: var(--mono); font-size: .72em; color: var(--muted); }
+  .strip {
+    display: flex; align-items: stretch; height: 3.1em;
+    border: 1.5px solid var(--ink); border-radius: 4px; overflow: hidden;
+    background: #fff;
+  }
+  .blk {
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: .74em; white-space: nowrap;
+    border-right: 1.5px solid var(--ink); padding: 0 .6em; position: relative;
+    background: var(--faint); color: var(--ink);
+    transition: transform .6s ease, opacity .6s ease, background .4s ease, flex-grow .7s ease;
+    overflow: hidden;
+  }
+  .blk:last-child { border-right: 0; }
+  .blk.keep { background: var(--blue-soft); color: var(--blue); font-weight: 500; }
+  .blk.dup  { background: var(--red-soft); color: var(--red); font-weight: 500; }
+  .blk.win  { background: var(--green-soft); color: var(--green); font-weight: 500; }
+  .blk.gap  { background: repeating-linear-gradient(45deg, #fff 0 6px, var(--faint) 6px 12px); color: var(--muted); }
+  .offrow { position: relative; height: 1.3em; font-family: var(--mono); font-size: .66em; color: var(--muted); }
+  .offrow span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+  .offrow span.start { left: 0; transform: none; }
+  .offrow span.end { right: 0; left: auto; transform: none; }
+
+  /* ---------- tables ---------- */
+  table.data { border-collapse: collapse; font-size: .95em; }
+  table.data th, table.data td { text-align: left; padding: .45em 1.6em .45em 0; border-bottom: 1px solid var(--faint); }
+  table.data th { font-weight: 600; font-size: .85em; color: var(--muted); }
+  table.data td.num { font-family: var(--mono); }
+  td.todo {
+    font-family: var(--mono); color: var(--amber); background: var(--amber-soft);
+    border: 1.5px dashed var(--amber); border-radius: 4px; padding: .3em .7em;
+  }
+
+  /* ---------- records ---------- */
+  .record {
+    font-family: var(--mono); font-size: .9em; line-height: 1.8;
+    background: #fff; border: 1.5px solid var(--ink); border-radius: 6px;
+    padding: .9em 1.2em; width: fit-content;
+  }
+  .record .new { background: var(--green-soft); color: var(--green); padding: .1em .3em; border-radius: 3px; }
+  .record .dim { color: var(--muted); }
+
+  /* two-modules setup */
+  .setup { max-width: 760px; }
+  .setup .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 3.2em; }
+  .modcard { border: 1.5px solid var(--ink); border-radius: 6px; overflow: hidden; background: #fff; }
+  .modcard .mh { font-weight: 600; padding: .4em .9em; border-bottom: 1.5px solid var(--ink); background: var(--faint); font-size: .88em; }
+  .modcard .mb { font-family: var(--mono); font-size: .8em; padding: .65em .9em; line-height: 1.8; }
+  .modcard .dim { color: var(--muted); }
+  .setup .join { position: relative; height: 52px; }
+  .setup .join svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .setup .chiprow { display: flex; justify-content: center; }
+  .chip { border: 1.5px solid var(--blue); color: var(--blue); background: var(--blue-soft); border-radius: 6px; padding: .4em 1.1em; font-family: var(--mono); font-size: .88em; font-weight: 500; }
+
+  /* ---------- slide-specific ---------- */
+
+  /* s1 */
+  #s1 { justify-content: center; }
+  #s1 .body { justify-content: center; }
+  #s1 h1 { font-size: 3.1em; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; max-width: 14ch; }
+  #s1 .sub { font-size: 1.15em; color: var(--muted); margin-top: .6em; }
+  #s1 .who { margin-top: 2.2em; font-size: .95em; line-height: 1.7; }
+  #s1 .motif { margin-top: 2.4em; max-width: 560px; }
+
+  /* s5 / s9 / s10 arrows */
+  .diagram { position: relative; display: flex; flex-direction: column; gap: 1.6em; max-width: 980px; }
+  svg.overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+  .arrow-path { fill: none; stroke: var(--red); stroke-width: 2.5; stroke-dasharray: 420; stroke-dashoffset: 420; transition: stroke-dashoffset .9s ease; }
+  .arrow-path.blue { stroke: var(--blue); }
+  .frag.on .arrow-path, .arrow-path.on { stroke-dashoffset: 0; }
+  .arrow-head { fill: var(--red); opacity: 0; transition: opacity .3s ease .7s; }
+  .arrow-head.blue { fill: var(--blue); }
+  .frag.on .arrow-head, .arrow-head.on { opacity: 1; }
+
+  /* s5 shift */
+  #s5 .blk.freed { flex: 0.0001 1 0; padding: 0; border-right: 0; background: repeating-linear-gradient(45deg, #fff 0 6px, var(--faint) 6px 12px); color: var(--muted); }
+  #s5 .shift.go .blk.dying { flex: 0.0001 1 0 !important; padding: 0; border-right-width: 0; opacity: 0; }
+  #s5 .shift.go .blk.freed { flex: 2.4 1 0; padding: 0 .6em; }
+  #s5 .off-old { transition: opacity .5s ease; }
+  #s5 .shift.go ~ .offrow .off-old { opacity: .25; text-decoration: line-through; }
+
+  /* s10 math */
+  .math { font-family: var(--mono); font-size: 1.02em; line-height: 2.0; }
+  .math .pair { display: inline-block; border: 1.5px solid var(--blue); color: var(--blue); border-radius: 5px; padding: .05em .5em; font-weight: 500; }
+  .tick { position: absolute; top: -0.45em; width: 2px; height: 4em; background: var(--blue); opacity: 0; transition: opacity .4s ease; }
+  .frag.on .tick { opacity: 1; }
+
+  /* s12 seesaw */
+  .seesaw { width: 420px; max-width: 80%; }
+  .seesaw .beam { transform-origin: 50% 86px; transition: transform .8s ease; }
+  .seesaw.tip .beam { transform: rotate(-6deg); }
+
+  /* s13 bars */
+  .bars { display: flex; flex-direction: column; gap: 1.1em; max-width: 760px; }
+  .barrow { display: grid; grid-template-columns: 7.5em 1fr 7em; align-items: center; gap: 1em; font-family: var(--mono); font-size: .85em; }
+  .bar { height: 2.2em; border: 1.5px solid var(--ink); border-radius: 4px; background: var(--faint); position: relative; overflow: hidden; }
+  .bar > i { position: absolute; inset: 0; width: 100%; background: var(--red-soft); transition: width 1.1s ease .2s; }
+  .bar.after > i { background: var(--green-soft); width: 100%; }
+  .slide.active .bar.after > i { width: 81%; }
+
+  /* stability stats */
+  .stats { display: flex; gap: 3.5em; flex-wrap: wrap; }
+  .stat .k { font-family: var(--mono); font-size: .75em; color: var(--muted); }
+  .stat .v { font-size: 1.9em; font-weight: 600; letter-spacing: -0.01em; }
+  .stat .v.green { color: var(--green); }
+  .stat .d { font-size: .85em; color: var(--muted); max-width: 26ch; }
+
+  /* s16 summary */
+  #s16 .sumrow { display: grid; grid-template-columns: 9em 1fr; gap: 1.4em; align-items: baseline; padding: .9em 0; border-top: 1px solid var(--faint); max-width: 980px; }
+  #s16 .sumrow .t { font-weight: 600; }
+
+  @media (max-width: 760px) {
+    body { font-size: 14px; }
+    .slide { padding: 34px 20px; }
+    .slide h2 { font-size: 1.5em; }
+    .barrow { grid-template-columns: 5.5em 1fr 5em; }
+    #s16 .sumrow { grid-template-columns: 1fr; gap: .2em; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+  @media print {
+    body { overflow: visible; }
+    .slide { display: flex !important; position: relative; page-break-after: always; height: 100vh; }
+    #progress, #counter, #hint { display: none; }
+    .frag { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="counter">1 / 16</div>
+<div id="hint">&#8594; advance &nbsp; &#8592; back</div>
+
+<!-- ================= 1 · TITLE ================= -->
+<section class="slide" id="s1">
+  <div class="body">
+    <h1>One copy is enough</h1>
+    <p class="sub">Deduplicating source locations in Clang&rsquo;s modular builds</p>
+    <div class="motif strip-wrap">
+      <div class="strip-label">the source-location address space</div>
+      <div class="strip">
+        <div class="blk keep" style="flex:2.2">shared.h</div>
+        <div class="blk" style="flex:1.4">mod1.h</div>
+        <div class="blk gap" style="flex:2.6">shared.h &#8617; reuses the first</div>
+        <div class="blk" style="flex:1.4">mod2.h</div>
+      </div>
+      <div class="offrow"><span class="start">0</span><span class="end">2&#179;&#185;</span></div>
+    </div>
+    <div class="who">
+      Ayokunle Amodu<br>
+      <span class="note">C++ Alliance Fellowship, final presentation</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 · SLOC 101 ================= -->
+<section class="slide" id="s2">
+  <h2>Every token has an address</h2>
+  <div class="body">
+    <p class="lede">Clang encodes a source location as <em>one 32-bit integer</em>, an offset into a single address space. Every file the compiler enters is given a contiguous range in it, sized by the file.</p>
+    <div class="strip-wrap">
+      <div class="strip-label">the source-location address space</div>
+      <div class="strip">
+        <div class="blk" style="flex:1">&lt;built-ins&gt;</div>
+        <div class="blk keep" style="flex:2.6">shared.h, 4,890 B</div>
+        <div class="blk" style="flex:1.6">mod1.h</div>
+        <div class="blk" style="flex:1.8">tu.cc</div>
+        <div class="blk gap" style="flex:2.4">free</div>
+      </div>
+      <div class="offrow"><span class="start">0</span><span style="left:10.6%">1,000</span><span style="left:38.3%">5,890</span><span class="end">2&#179;&#185;</span></div>
+    </div>
+    <p class="frag">Diagnostics, fix-its, debug info: everything that names a line resolves through this space. It stays fast because a location is just a number.</p>
+    <p class="frag"><em>And it is finite.</em> About 2&nbsp;GB of addresses for every character of source the compilation ever sees.</p>
+  </div>
+</section>
+
+<!-- ================= 2b · THE SETUP ================= -->
+<section class="slide" id="s2b">
+  <h2>Two modules, one header</h2>
+  <div class="body">
+    <p class="lede">The whole talk starts from this shape: two modules, built separately, each one textually including the same header.</p>
+    <div class="setup">
+      <div class="cards">
+        <div class="modcard"><div class="mh">module A</div><div class="mb">#include "shared.h"<br><span class="dim">int a_fn();</span></div></div>
+        <div class="modcard"><div class="mh">module B</div><div class="mb">#include "shared.h"<br><span class="dim">int b_fn();</span></div></div>
+      </div>
+      <div class="join">
+        <svg viewBox="0 0 760 52" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M 190 2 C 190 34, 380 18, 380 48" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
+          <path d="M 570 2 C 570 34, 380 18, 380 48" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
+          <polygon points="380,50 374,40 386,40" fill="var(--muted)"/>
+        </svg>
+      </div>
+      <div class="chiprow"><div class="chip">shared.h, 4,890 B</div></div>
+    </div>
+    <p class="frag">Each module is a separate compiler invocation writing its own self-contained PCM. So each one enters <span class="mono">shared.h</span> itself, and serializes its own record of everything it saw.</p>
+  </div>
+</section>
+
+<!-- ================= 3 · THE PROBLEM ================= -->
+<section class="slide" id="s3">
+  <h2>Modules multiply the same file</h2>
+  <div class="body">
+    <p class="lede">One space serves the whole compilation. The current TU grows from the bottom; everything loaded from PCMs is carved from the top, down.</p>
+    <div class="strip-wrap">
+      <div class="strip-label" style="display:flex; justify-content:space-between"><span>local: this TU</span><span>loaded: every module&rsquo;s serialized entries</span></div>
+      <div class="strip">
+        <div class="blk" style="flex:1.7">tu.cc + its headers</div>
+        <div class="blk gap" style="flex:2">free</div>
+        <div class="blk dup" style="flex:1.4">shared.h</div>
+        <div class="blk" style="flex:.8">mod1.h</div>
+        <div class="blk dup" style="flex:1.4">shared.h</div>
+        <div class="blk" style="flex:.8">mod2.h</div>
+        <div class="blk dup" style="flex:1.4">shared.h</div>
+        <div class="blk" style="flex:.8">mod3.h</div>
+      </div>
+      <div class="offrow"><span class="start">0</span><span class="end">2&#179;&#185;</span></div>
+    </div>
+    <p class="frag">Alone, a TU barely dents the space: include guards enter a shared header <em>once</em>, and few TUs hold two billion characters.</p>
+    <p class="frag">But each PCM is self-contained, so each serialized its <em>own</em> entries for every header it included textually. Load N modules, and the same header is live N times at once.</p>
+    <p class="frag mono red" style="font-size:.9em">fatal error: ran out of source locations</p>
+    <p class="frag note">Reports of exactly this kept arriving from large module builds. The space runs out and the build stops.</p>
+  </div>
+</section>
+
+<!-- ================= 4 · READER IDEA ================= -->
+<section class="slide" id="s4">
+  <h2>First idea: fix it when loading</h2>
+  <div class="body">
+    <p class="lede">The duplicates meet each other <em>at load time</em>. So catch them there: deduplicate on the reader side.</p>
+    <ul class="plain">
+      <li>While loading module B, notice that <span class="mono">shared.h</span> was already loaded from module A.</li>
+      <li class="frag">Give B&rsquo;s copy <em>no new range</em>; resolve its locations against A&rsquo;s copy instead.</li>
+      <li class="frag">The address space only ever holds one copy per file.</li>
+    </ul>
+    <p class="frag">Easy to say. The hard part is what the files on disk already assume.</p>
+  </div>
+</section>
+
+<!-- ================= 5 · REMAPPING ================= -->
+<section class="slide" id="s5">
+  <h2>Reuse at load means remapping everything</h2>
+  <div class="body">
+    <div class="diagram">
+      <div class="strip-wrap">
+        <div class="strip-label">already loaded, module A</div>
+        <div class="strip" style="max-width:640px">
+          <div class="blk keep" id="a-target" style="flex:2.4">shared.h</div>
+          <div class="blk" style="flex:1.6">mod1.h</div>
+        </div>
+      </div>
+      <div class="strip-wrap">
+        <div class="strip-label">on disk, module B&rsquo;s PCM, written as if its copy owns a range</div>
+        <div class="strip shift" id="s5strip" style="max-width:640px">
+          <div class="blk" style="flex:1.4">mod2.h</div>
+          <div class="blk dup dying" id="b-dup" style="flex:2.4">shared.h</div>
+          <div class="blk mv" style="flex:1.6">diags.h</div>
+          <div class="blk freed">free</div>
+        </div>
+        <div class="offrow">
+          <span class="start">0</span>
+          <span style="left:25.9%">2,100</span>
+          <span style="left:70.4%" class="off-old">6,990</span>
+        </div>
+      </div>
+      <svg class="overlay" viewBox="0 0 980 260" preserveAspectRatio="none" aria-hidden="true">
+        <path class="arrow-path" id="s5arrow" d="M 350 185 C 330 120, 180 110, 120 62" />
+        <polygon class="arrow-head" id="s5head" points="120,62 136,64 128,76" />
+      </svg>
+    </div>
+    <p class="frag" data-act="s5-arrow">B&rsquo;s copy is collapsed onto A&rsquo;s, so every location that pointed into it must be <em>rewritten</em>&hellip;</p>
+    <p class="frag" data-act="s5-shift">&hellip;and everything after it <em>shifts back</em>. A forward map translates disk&nbsp;&#8594;&nbsp;memory, an inverse map must undo it when a module is re-serialized.</p>
+    <p class="frag note">The inverse of a piecewise map is not one subtraction. Getting that wrong corrupted locations on ROOT, found the hard way.</p>
+  </div>
+</section>
+
+<!-- ================= 6 · WHY IT FAILED ================= -->
+<section class="slide" id="s6">
+  <h2>The cost: nothing stays lazy</h2>
+  <div class="body">
+    <p class="lede">To compact the space <em>before allocating it</em>, the loader must read every location entry of every loaded module, up front.</p>
+    <table class="data">
+      <tr><th>Clang&rsquo;s design</th><td>an entry is materialized only when something touches it</td></tr>
+      <tr class="frag"><th>Reader-side dedup</th><td class="red">all of them, for all modules, at startup</td></tr>
+    </table>
+    <p class="frag">The eager scan showed up exactly where you&rsquo;d expect: slower interpreter startup and higher peak memory on ROOT, regressing the fundamentals the patch has no business touching.</p>
+    <p class="frag"><em>Saved the space, lost the fundamentals.</em></p>
+  </div>
+</section>
+
+<!-- ================= 7 · READER NUMBERS ================= -->
+<section class="slide" id="s7">
+  <h2>Reader side: it worked, and it cost too much</h2>
+  <div class="body">
+    <table class="data" style="font-size:1.05em">
+      <tr><th>address space</th><td class="green">reclaimed, the goal was met</td></tr>
+      <tr><th>PCM size</th><td>unchanged, a load-time change writes nothing new to disk</td></tr>
+      <tr><th>startup &amp; peak memory</th><td class="red">slower start, about +15 MB peak memory</td></tr>
+      <tr><th>scan</th><td class="num">+1.58%</td></tr>
+      <tr><th>complexity carried</th><td>forward map, inverse map, eager scan of every loaded module</td></tr>
+    </table>
+    <p class="frag">The space came back, but the fundamentals every compiler change must protect did not hold.</p>
+    <p class="frag"><em>Keep the goal, change the place.</em></p>
+  </div>
+</section>
+
+<!-- ================= 8 · THE PIVOT ================= -->
+<section class="slide" id="s8">
+  <h2>Prevent, don&rsquo;t repair</h2>
+  <div class="body">
+    <div style="display:flex; gap:2.5em; flex-wrap:wrap">
+      <div class="strip-wrap"><div class="strip-label">A.pcm</div>
+        <div class="strip" style="width:300px"><div class="blk" style="flex:1">mod1.h</div><div class="blk dup" style="flex:1.7">shared.h entries</div></div>
+      </div>
+      <div class="strip-wrap"><div class="strip-label">B.pcm</div>
+        <div class="strip" style="width:300px"><div class="blk" style="flex:1">mod2.h</div><div class="blk dup" style="flex:1.7">shared.h entries</div></div>
+      </div>
+    </div>
+    <p class="note">Two files on disk, carrying identical entries for the same header.</p>
+    <p class="lede frag">Clang already does something close to this: when writing a PCM, it <em>drops module-map files</em> that don&rsquo;t affect the build. That machinery came out of builds that were hitting exactly this problem.</p>
+    <p class="note frag">A module map is the file that declares which headers form a module. When one is dropped, its locations are simply never written.</p>
+    <p class="frag lede">Nothing written &nbsp;&#8658;&nbsp; nothing to remap later.</p>
+    <p class="frag">So generalize it: extend the same machinery from module maps to <em>the headers themselves</em>. Move deduplication to the writer, and make sure the second copy <em>never exists</em>.</p>
+  </div>
+</section>
+
+<!-- ================= 9 · WRITER APPROACH ================= -->
+<section class="slide" id="s9">
+  <h2>Writer side: skip the copy, keep a pointer</h2>
+  <div class="body">
+    <div class="diagram">
+      <div class="strip-wrap">
+        <div class="strip-label">A.pcm, already written, imported by B</div>
+        <div class="strip" style="max-width:640px">
+          <div class="blk keep" style="flex:2.4">shared.h</div>
+          <div class="blk" style="flex:1.6">mod1.h</div>
+        </div>
+      </div>
+      <div class="strip-wrap">
+        <div class="strip-label">B.pcm, being written now</div>
+        <div class="strip" style="max-width:640px">
+          <div class="blk" style="flex:1.4">mod2.h</div>
+          <div class="blk gap frag" id="s9gap" style="flex:2.4">no entries written</div>
+          <div class="blk" style="flex:1.6">diags.h</div>
+        </div>
+      </div>
+      <svg class="overlay" viewBox="0 0 980 260" preserveAspectRatio="none" aria-hidden="true">
+        <path class="arrow-path blue" id="s9arrow" d="M 335 185 C 315 120, 180 110, 120 62" />
+        <polygon class="arrow-head blue" id="s9head" points="120,62 136,64 128,76" />
+      </svg>
+    </div>
+    <ul class="plain">
+      <li>While writing B: <em>does a module I import already provide this file?</em></li>
+      <li class="frag" data-act="s9-arrow">Yes &#8594; write no location entries for it. Encode its locations <em>against A</em>.</li>
+      <li class="frag">Loading B allocates nothing for <span class="mono">shared.h</span>. No remapping, no inverse map, nothing eager.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 10 · THE ENCODING ================= -->
+<section class="slide" id="s10">
+  <h2>What a redirected location looks like</h2>
+  <div class="body">
+    <div class="strip-wrap" style="position:relative; max-width:640px">
+      <div class="strip-label">A&rsquo;s loaded copy of shared.h, range starts at 1,000</div>
+      <div class="strip">
+        <div class="blk keep" style="flex:2.4">shared.h &nbsp;[1,000 &#8211; 5,890)</div>
+        <div class="blk" style="flex:1.6">mod1.h</div>
+      </div>
+    </div>
+    <div class="math">
+      <div>B&rsquo;s local copy would start at <span class="mono">7,000</span>; a location inside it sits at <span class="mono">7,420</span></div>
+      <div class="frag">adjustment&nbsp;= 7,000 &#8722; 1,000 = <em>6,000</em></div>
+      <div class="frag">7,420 &#8722; 6,000 = 1,420 &nbsp;&nbsp;written as&nbsp;&nbsp;<span class="pair">{ module: A, offset: 1,420 }</span></div>
+    </div>
+    <p class="frag">Serialized locations were already <span class="mono">{module-file, offset}</span> pairs (0 = &ldquo;this module&rdquo;). The patch just lets that pair point at the module that <em>owns</em> the entries. The reader resolves it directly. No translation table, no fixup pass.</p>
+  </div>
+</section>
+
+<!-- ================= 11 · THE LOOKUP ================= -->
+<section class="slide" id="s11">
+  <h2>Finding A&rsquo;s copy without scanning</h2>
+  <div class="body">
+    <ul class="plain">
+      <li><em>Who has this file?</em> Candidates bucketed by <em>size</em>, filtered by file name, confirmed by real path. The key only narrows the search; the path check decides.</li>
+      <li class="frag"><em>Where exactly is their copy?</em> That used to need a scan of A&rsquo;s entries. Now <span class="mono">INPUT_FILE</span> records it directly:</li>
+    </ul>
+    <div class="record frag">
+      INPUT_FILE {<br>
+      &nbsp;&nbsp;<span class="dim">path: "shared.h", size: 4890, &hellip;</span> &nbsp;<span class="dim">// already there</span><br>
+      &nbsp;&nbsp;<span class="new">sloc_index: 6</span>, &nbsp;<span class="new">sloc_offset: 1000</span> &nbsp;<span class="dim">// new</span><br>
+      }
+    </div>
+    <ul class="plain">
+      <li class="frag"><span class="mono">index</span>, <em>which entry</em> in A&rsquo;s table it is: names the file without searching for it.</li>
+      <li class="frag"><span class="mono">offset</span>, <em>where its range starts</em>: the number the subtraction on the last slide needs.</li>
+    </ul>
+    <p class="frag note">Two integers per input file, a few bytes each, and the per-module scan they replaced was deleted outright.</p>
+  </div>
+</section>
+
+<!-- ================= 12 · EAGER VS LAZY ================= -->
+<section class="slide" id="s12">
+  <h2>A decision: eager map or lazy table</h2>
+  <div class="body">
+    <p class="lede">The lookup map is built once over the <em>loaded</em> modules, work proportional to the imports. The alternative raised in review: serialize a query table into every PCM, like <span class="mono">HeaderFileInfo</span>, work proportional to the module being <em>written</em>.</p>
+    <div style="display:flex; gap:3em; align-items:center; flex-wrap:wrap">
+      <svg class="seesaw" id="seesaw" viewBox="0 0 420 120" aria-hidden="true">
+        <polygon points="210,86 196,112 224,112" fill="none" stroke="var(--ink)" stroke-width="2"/>
+        <g class="beam">
+          <line x1="60" y1="86" x2="360" y2="86" stroke="var(--ink)" stroke-width="2.5"/>
+          <rect x="52" y="58" width="96" height="26" rx="4" fill="var(--blue-soft)" stroke="var(--blue)" stroke-width="1.5"/>
+          <text x="100" y="75" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--blue)">scan time</text>
+          <rect x="272" y="58" width="96" height="26" rx="4" fill="var(--amber-soft)" stroke="var(--amber)" stroke-width="1.5"/>
+          <text x="320" y="75" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="var(--amber)">PCM size</text>
+        </g>
+      </svg>
+      <ul class="plain" style="flex:1; min-width:300px">
+        <li class="frag">The table costs <span class="mono">~2&nbsp;KB per PCM</span>, written into <em>every</em> module, including leaves nobody ever queries. Those are exactly the bytes SDK vendors guard.</li>
+        <li class="frag" data-act="s12-tip">After keying by size and filtering by name, the eager build is cheap at every scale we could measure.</li>
+        <li class="frag"><em>Verdict: not worth it yet.</em> Revisit it if a workload ever shows the walk dominating.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 13 · THE WIN ================= -->
+<section class="slide" id="s13">
+  <h2>The win: address space back</h2>
+  <div class="body">
+    <p>Measured on ROOT: 88 dictionaries, runtime C++ modules enabled.</p>
+    <div class="bars">
+      <div class="barrow">
+        <span>baseline</span>
+        <div class="bar"><i></i></div>
+        <span>75.33 MB</span>
+      </div>
+      <div class="barrow">
+        <span>patched</span>
+        <div class="bar after"><i></i></div>
+        <span class="green">61.02 MB</span>
+      </div>
+    </div>
+    <p class="lede frag">Loaded source-location space down <em class="green">19%</em>, the thing builds were running out of.</p>
+    <table class="data frag">
+      <tr><th>largest single savers</th><td class="num">c++config.h &nbsp;4.75 MB</td><td class="num">features.h &nbsp;2.95 MB</td></tr>
+      <tr><th></th><td class="num">sys/cdefs.h &nbsp;2.72 MB</td><td class="num">assert.h &nbsp;0.93 MB</td></tr>
+    </table>
+    <p class="frag note">Exactly the shared, non-modular system headers the exhaustion reports point at.</p>
+  </div>
+</section>
+
+<!-- ================= 14 · FUNDAMENTALS ================= -->
+<section class="slide" id="s14">
+  <h2>The fundamentals held</h2>
+  <div class="body">
+    <p class="lede">These two have to hold, no matter what a change buys elsewhere.</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="k">compile time</div>
+        <div class="v green">stable</div>
+        <div class="d">module writing within measurement noise</div>
+      </div>
+      <div class="stat frag">
+        <div class="k">peak memory (RSS)</div>
+        <div class="v green">&#8722;3.9%</div>
+        <div class="d">slightly better at startup, fewer entries load at all</div>
+      </div>
+    </div>
+    <p class="frag">The reader-side version failed exactly this test. The writer-side version passes it, which is the whole reason it exists.</p>
+  </div>
+</section>
+
+<!-- ================= 15 · ECOSYSTEM ================= -->
+<section class="slide" id="s15">
+  <h2>The ecosystem metrics held</h2>
+  <div class="body">
+    <p class="lede">SDK vendors watch these closely, and everyone benefits when they stay flat.</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="k">PCM size</div>
+        <div class="v green">&#8722;4.4%</div>
+        <div class="d">on ROOT (embed-all-files amplifies it; ~0.4% without; ~flat on Apple SDK runs)</div>
+      </div>
+      <div class="stat frag">
+        <div class="k">dependency scanning</div>
+        <div class="v" style="color:var(--amber)">+~1.5%</div>
+        <div class="d">the one real cost, cut from +4.7% by re-keying the lookup and recording index + offset</div>
+      </div>
+    </div>
+    <p class="frag">The scan cost is small, understood to the instruction, and paid only where the feature actually fires.</p>
+    <p class="frag note">Apple&rsquo;s SDKs are modularized bottom-up, so they have little duplication left to reclaim. The savings show up where duplication actually exists, and nothing regresses where it doesn&rsquo;t.</p>
+  </div>
+</section>
+
+<!-- ================= 16 · SUMMARY ================= -->
+<section class="slide" id="s16">
+  <h2>One copy is enough</h2>
+  <div class="body" style="justify-content:center">
+    <div class="sumrow"><span class="t">Problem</span><span>Every module carries its own copy of shared headers; the 32-bit source-location space runs out, and builds crash.</span></div>
+    <div class="sumrow frag"><span class="t">Approach</span><span>Never write the second copy. When writing a module, redirect a shared file&rsquo;s locations to the module that already provides it.</span></div>
+    <div class="sumrow frag"><span class="t">Result</span><span><span class="green">&#8722;19%</span> loaded location space on ROOT; compile time and memory stable; one small, measured scanning cost.</span></div>
+    <div class="sumrow frag"><span class="t">Status</span><span>PR <span class="mono">#209795</span>, approved, awaiting one final benchmark before landing.</span></div>
+    <p style="margin-top:2.2em" class="frag">Thank you. <span class="note">Questions welcome.</span></p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var counter = document.getElementById('counter');
+  var progress = document.getElementById('progress');
+  var hint = document.getElementById('hint');
+  var cur = 0;
+  var interacted = false;
+
+  function frags(i) { return slides[i].querySelectorAll('.frag'); }
+
+  function resetFrags(i) {
+    frags(i).forEach(function (f) { f.classList.remove('on'); });
+    // slide-specific resets
+    if (slides[i].id === 's5') {
+      var strip = document.getElementById('s5strip');
+      if (strip) strip.classList.remove('go');
+      var a = document.getElementById('s5arrow'), h = document.getElementById('s5head');
+      if (a) a.classList.remove('on'); if (h) h.classList.remove('on');
+    }
+    if (slides[i].id === 's9') {
+      var a9 = document.getElementById('s9arrow'), h9 = document.getElementById('s9head');
+      if (a9) a9.classList.remove('on'); if (h9) h9.classList.remove('on');
+    }
+    if (slides[i].id === 's12') {
+      var sw = document.getElementById('seesaw');
+      if (sw) sw.classList.remove('tip');
+    }
+  }
+
+  function act(name) {
+    if (name === 's5-arrow') {
+      document.getElementById('s5arrow').classList.add('on');
+      document.getElementById('s5head').classList.add('on');
+    } else if (name === 's5-shift') {
+      document.getElementById('s5strip').classList.add('go');
+    } else if (name === 's9-arrow') {
+      document.getElementById('s9arrow').classList.add('on');
+      document.getElementById('s9head').classList.add('on');
+    } else if (name === 's12-tip') {
+      document.getElementById('seesaw').classList.add('tip');
+    }
+  }
+
+  function show(i) {
+    cur = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach(function (s, j) { s.classList.toggle('active', j === cur); });
+    resetFrags(cur);
+    counter.textContent = (cur + 1) + ' / ' + slides.length;
+    progress.style.width = ((cur + 1) / slides.length * 100) + '%';
+    if (history.replaceState) { try { history.replaceState(null, '', '#' + (cur + 1)); } catch (e) {} }
+  }
+
+  function next() {
+    var fs = frags(cur);
+    for (var k = 0; k < fs.length; k++) {
+      if (!fs[k].classList.contains('on')) {
+        fs[k].classList.add('on');
+        var a = fs[k].getAttribute('data-act');
+        if (a && a !== 'none') act(a);
+        return;
+      }
+    }
+    if (cur < slides.length - 1) show(cur + 1);
+  }
+  function prev() { if (cur > 0) show(cur - 1); }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); mark(); next(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); mark(); prev(); }
+    else if (e.key === 'Home') { mark(); show(0); }
+    else if (e.key === 'End') { mark(); show(slides.length - 1); }
+  });
+  document.addEventListener('click', function (e) {
+    mark();
+    if (e.clientX < window.innerWidth / 3) prev(); else next();
+  });
+  var tx = null;
+  document.addEventListener('touchstart', function (e) { tx = e.changedTouches[0].clientX; }, {passive:true});
+  document.addEventListener('touchend', function (e) {
+    if (tx === null) return;
+    var dx = e.changedTouches[0].clientX - tx;
+    mark();
+    if (dx < -40) next(); else if (dx > 40) prev();
+    tx = null;
+  }, {passive:true});
+
+  function mark() { if (!interacted) { interacted = true; hint.classList.add('gone'); } }
+
+  var h = parseInt((location.hash || '').replace('#', ''), 10);
+  try { show(isNaN(h) ? 0 : h - 1); } catch (e) { show(0); }
+})();
+</script>
+</body>
+</html>
