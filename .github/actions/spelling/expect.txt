@@ -189,3 +189,9 @@ Wextra
 wght
 xtl
 zoomsvg
+asio
+chiprow
+dedup
+hana
+modcard
+PCM

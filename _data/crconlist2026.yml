@@ -239,6 +239,7 @@
       speaker:
         name: "Ayokunle Amodu"
       time_cest: "17:00 - 17:20"
+      slides: /assets/presentations/Ayokunle_Amodu-CRCon26_One_Copy_Is_Enough.html
       description: |
         Modular builds fill Clang's 32-bit source-location space with duplicate
         entries for the same shared headers, and when large builds run out,
