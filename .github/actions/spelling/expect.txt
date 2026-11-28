@@ -198,3 +198,8 @@ PCM
 PCMs
 SLOC
 sloc
+defered
+Ondemand
+ondemand
+Pointee
+STDC

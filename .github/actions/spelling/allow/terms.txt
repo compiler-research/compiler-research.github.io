@@ -267,10 +267,14 @@ ramdump
 DOI
 CPPINTEROP
 fclad
+fdelayed
 fdisable
 fenable
 fgenerated
+fparse
+MSVC
 Rclad
+vtable
 VTable
 workaround
 qubits
